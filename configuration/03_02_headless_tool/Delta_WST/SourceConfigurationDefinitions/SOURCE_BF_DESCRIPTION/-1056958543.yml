@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1056958543'
+keys:
+  BF_DESCRIPTION_NO: PO.0062
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/event_gas_stream_data' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF will be used for Event Gas Stream Data where the rates can be calculated for Streams.</p>
+
+    <p>The output from these calculations are volume &amp; energy for a period. This volume is valid for the period. The period can be of any length of either by &lsquo;hourly&rsquo; or &lsquo;daily&rsquo;.</p>
+
+    <p>The save button saves any edited value to the database and calculates volume &amp; energy.</p>
+related: {}

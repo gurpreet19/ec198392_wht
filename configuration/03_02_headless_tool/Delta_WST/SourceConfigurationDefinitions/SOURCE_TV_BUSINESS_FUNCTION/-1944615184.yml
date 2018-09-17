@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1944615184'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/maintain_class_rel_property
+parentKeys: {}
+properties:
+  BF_CODE: CO.1043
+  NAME: Class Relations Configuration
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/maintain_class_rel_property
+related: {}

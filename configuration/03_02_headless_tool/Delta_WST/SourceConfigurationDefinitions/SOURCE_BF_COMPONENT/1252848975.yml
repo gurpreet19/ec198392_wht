@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1252848975'
+keys:
+  BF_CODE: TO.0032
+  T: BF_COMPONENT
+  URL: /ssa_nom_docs
+parentKeys: {}
+properties:
+  BF_CODE: TO.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0032' AND NVL(URL,'IS_NULL') = '/ssa_nom_docs')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/tab_harbour_menu' )
+  CLASS_NAME: STOR_LIFT_SAIL_ADVICE
+  COMP_CODE: ssa_nom_docs
+  NAME: SSA Nomination Table
+  SIGNING_REQ_IND: null
+  URL: /ssa_nom_docs
+related: {}

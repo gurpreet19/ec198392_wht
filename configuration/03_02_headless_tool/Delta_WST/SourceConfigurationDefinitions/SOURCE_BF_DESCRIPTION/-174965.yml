@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-174965'
+keys:
+  BF_DESCRIPTION_NO: SD.0019
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/within_day_target' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to monitor the expected deliveries against contracts within day. It is also used for acknowledging over-/under delivery and renominations.</p><p>The Calculations run within day will update the actual percent and projected quantity. These numbers can be compared to the previously set desired percent and&nbsp;desired qty.</p><p>If a contract allows for renomination the &lsquo;Pending Re-Nominaiton Qty&rsquo; is editable. When receiving a renomination the value will be displayed in &lsquo;Re-Nimonated Qty&rsquo;.&nbsp;If the contract does not allow for renomination the field &lsquo;Acknowledge Qty&rsquo; will be editable. If either Acknowledge Qty or Renomination Qty is not empty, then the&nbsp;Nominated Qty target will use that quantity instead of the Nominated Qty.</p><p>When pressing the &lsquo;Create Target&rsquo; button a new target for the day is created. The total &lsquo;Desired Qty&rsquo; is used as the target. The valid from and change reason will be&nbsp;used when creating the target.</p><p>The last delivery target will be displayed at the last data section for information purposes.</p>
+related: {}

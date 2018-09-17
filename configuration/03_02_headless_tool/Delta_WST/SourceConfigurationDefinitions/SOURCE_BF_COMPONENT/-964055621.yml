@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-964055621'
+keys:
+  BF_CODE: PO.0118
+  T: BF_COMPONENT
+  URL: /FromParentObject
+parentKeys: {}
+properties:
+  BF_CODE: PO.0118
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0118' AND NVL(URL,'IS_NULL') = '/FromParentObject')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_finder' )
+  CLASS_NAME: null
+  COMP_CODE: FromParentObject
+  NAME: From Parent Object
+  SIGNING_REQ_IND: null
+  URL: /FromParentObject
+related: {}

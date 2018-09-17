@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1097078350'
+keys:
+  COMPONENT_ID: ( SELECT 'VO_MO_SK_NO' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.vo/split_key/MONTHLY/TRUE/SPLIT_TYPE/STREAM_ITEM_CATEGORY?screentemplate=/com.ec.revn.vo/split_key
+  COMPONENT_EXT_NAV_NAME: /MONTHLY/TRUE/SPLIT_TYPE/STREAM_ITEM_CATEGORY?screentemplate=/com.ec.revn.vo/split_key
+  COMPONENT_ID: ( SELECT 'VO_MO_SK_NO' FROM DUAL )
+  COMPONENT_LABEL: Monthly Split Key Stream Item Categories
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'VO_MO_SK_REVN' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 4260.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

@@ -1,0 +1,53 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2300269'
+keys:
+  T: TV_UNIT
+  UNIT: KBOE
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Thousand Barrels of oil equivalent
+  FIN_CODE: null
+  LABEL: KBOE
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KBOE
+  UOM_GROUP: V
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KBOE
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BOE
+    parentKeys:
+      TV_UNIT.UNIT: KBOE
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KBOE
+      MULT_FACT: 1000.0
+      PRECISION: null
+      TO_UNIT: BOE
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KBOE
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MBOE
+    parentKeys:
+      TV_UNIT.UNIT: KBOE
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KBOE
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: MBOE
+      USER_EXIT: null
+      USE_UE: null

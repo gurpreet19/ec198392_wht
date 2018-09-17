@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-450109975'
+keys:
+  COMPONENT_ID: ( SELECT 'TANK_STATUS_MASS' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.po.screens/daily_tank_status_mass
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'TANK_STATUS_MASS' FROM DUAL )
+  COMPONENT_LABEL: Daily Tank Status - Mass
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FLD_PO_GRP_BY_DAY' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 110.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

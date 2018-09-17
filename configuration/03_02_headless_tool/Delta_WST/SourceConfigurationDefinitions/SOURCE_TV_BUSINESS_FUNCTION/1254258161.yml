@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1254258161'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_SEQUENCE/FROM_CLASS_NAME/DOC_SEQUENCE/TO_CLASS_NAME/DOC_SEQUENCE
+parentKeys: {}
+properties:
+  BF_CODE: CD.0125
+  NAME: Document Sequence Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_SEQUENCE/FROM_CLASS_NAME/DOC_SEQUENCE/TO_CLASS_NAME/DOC_SEQUENCE
+related: {}

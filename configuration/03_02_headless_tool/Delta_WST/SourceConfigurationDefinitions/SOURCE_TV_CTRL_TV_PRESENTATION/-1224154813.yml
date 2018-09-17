@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1224154813'
+keys:
+  COMPONENT_ID: ( SELECT 'IN_VA_VB' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.in/validation/LEVEL/BOOKED/MODE/SET_TO_NEXT?screentemplate=/com.ec.revn.in/validation&tquery=/com.ec.revn.in/query/get_validation_table.xml&tlayout=/com.ec.revn.in/layout/validation_booked_table.xml&DLC=TRANSFER
+  COMPONENT_EXT_NAV_NAME: /LEVEL/BOOKED/MODE/SET_TO_NEXT?screentemplate=/com.ec.revn.in/validation&tquery=/com.ec.revn.in/query/get_validation_table.xml&tlayout=/com.ec.revn.in/layout/validation_booked_table.xml&DLC=TRANSFER
+  COMPONENT_ID: ( SELECT 'IN_VA_VB' FROM DUAL )
+  COMPONENT_LABEL: Inventory Booked
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'IN_VA_REVN' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 4480.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

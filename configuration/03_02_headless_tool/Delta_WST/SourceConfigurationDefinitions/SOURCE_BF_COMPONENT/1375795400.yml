@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1375795400'
+keys:
+  BF_CODE: SD.0053
+  T: BF_COMPONENT
+  URL: /create_target
+parentKeys: {}
+properties:
+  BF_CODE: SD.0053
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0053' AND NVL(URL,'IS_NULL') = '/create_target')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_nomloc_target' )
+  CLASS_NAME: null
+  COMP_CODE: create_target
+  NAME: Create Target
+  SIGNING_REQ_IND: null
+  URL: /create_target
+related: {}

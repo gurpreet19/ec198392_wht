@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '52449454'
+keys:
+  BF_CODE: PO.0105
+  T: BF_COMPONENT
+  URL: /objects
+parentKeys: {}
+properties:
+  BF_CODE: PO.0105
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0105' AND NVL(URL,'IS_NULL') = '/objects')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/tank_finder' )
+  CLASS_NAME: TANK_FINDER_OBJECTS
+  COMP_CODE: objects
+  NAME: Objects
+  SIGNING_REQ_IND: null
+  URL: /objects
+related: {}

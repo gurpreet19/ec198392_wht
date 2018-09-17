@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-8076756'
+keys:
+  BF_CODE: MHM.0004
+  T: BF_COMPONENT
+  URL: /conversions
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0004' AND NVL(URL,'IS_NULL') = '/conversions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_distribution' )
+  CLASS_NAME: MSG_TYPE_UNIT_CONVERSION
+  COMP_CODE: conversions
+  NAME: Conversions
+  SIGNING_REQ_IND: null
+  URL: /conversions
+related: {}

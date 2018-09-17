@@ -1,0 +1,108 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_TOKENVARIABLEMAP
+cnstPrimaryKey:
+  columns:
+  - ID_
+  name: SYS_C0015691
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CONTEXTINSTANCE_:
+    columnName: CONTEXTINSTANCE_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  ID_:
+    columnName: ID_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  TOKEN_:
+    columnName: TOKEN_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  VERSION_:
+    columnName: VERSION_
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+cnstForeignKeys:
+  FK_TKVARMAP_CTXT:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_MODULEINSTANCE
+    columns:
+      CONTEXTINSTANCE_: ID_
+    name: FK_TKVARMAP_CTXT
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TKVARMAP_TOKEN:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_TOKEN
+    columns:
+      TOKEN_: ID_
+    name: FK_TKVARMAP_TOKEN
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_TKVARMAP_CTXT:
+    indexName: IDX_TKVARMAP_CTXT
+    columns:
+    - CONTEXTINSTANCE_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TKVVARMP_TOKEN:
+    indexName: IDX_TKVVARMP_TOKEN
+    columns:
+    - TOKEN_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

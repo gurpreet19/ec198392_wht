@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1503697822'
+keys:
+  BF_DESCRIPTION_NO: CO.2062
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/company_doc_instruction_templ' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain document instruction templates for a company.</p><p>The template and its receivers are created in Company Document Receiver Template (CO.2061). If Cargo Document Template is set in Company Document Receiver Template, the list of documents is configured in Cargo Document Template (CO.2033). If Cargo Document Template is not set the default list in the EC Code CARGO_DOCUMENT is used.</p><p>This template can be used (and overridden) in Document Receiver and Document Instruction in cargo planning.</p><p>The Instructions data section can be viewed either with Receivers as rows, or with Documents as rows. The second, optional view may be preferred if there is a significantly large number of documents per receiver. Please refer to the Business Functions URL section for details on how to activate this functionality.</p>
+related: {}

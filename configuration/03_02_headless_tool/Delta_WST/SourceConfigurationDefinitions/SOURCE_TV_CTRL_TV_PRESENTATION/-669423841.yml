@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-669423841'
+keys:
+  COMPONENT_ID: ( SELECT 'WELL_EQPM_MASTER_EVENT' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.pd.screens/well_eqpm_master_event
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'WELL_EQPM_MASTER_EVENT' FROM DUAL )
+  COMPONENT_LABEL: Master Events
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FLD_PROD_DEF' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 3.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

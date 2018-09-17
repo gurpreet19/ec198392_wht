@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '986949283'
+keys:
+  FROM_CLASS_NAME: AREA
+  MODEL: TRAN_OPERATIONAL
+  ROLE_NAME: OP_AREA
+  T: TV_NAV_MODEL
+  TO_CLASS_NAME: FCTY_CLASS_1
+parentKeys: {}
+properties:
+  DISABLED_IND: null
+  FORCE_NAV: null
+  FROM_CLASS_NAME: AREA
+  MODEL: TRAN_OPERATIONAL
+  MULTIPLICITY: 1:N
+  ROLE_NAME: OP_AREA
+  TO_CLASS_NAME: FCTY_CLASS_1
+related: {}

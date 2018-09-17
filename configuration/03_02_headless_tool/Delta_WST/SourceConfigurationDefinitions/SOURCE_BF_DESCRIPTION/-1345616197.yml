@@ -1,0 +1,21 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1345616197'
+keys:
+  BF_DESCRIPTION_NO: WR.0057
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_co2_injection_well_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used when daily well co2 injection data are available per well and the well is directly connected to a facility, without any intermediate flowline / pipeline systems. Data can be entered manually or automatically. The BF requires one entry per well per day, and Energy Components automatically creates new records for a new production day for all active co2 injection wells.</p>
+
+    <p>V_IWEL_DAY_STATUS view is available and it shows the injection data for any kind of injection well in a single view.</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1080530591'
+keys:
+  BF_CODE: WR.0066
+  T: BF_COMPONENT
+  URL: /activeGroupModels
+parentKeys: {}
+properties:
+  BF_CODE: WR.0066
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0066' AND NVL(URL,'IS_NULL') = '/activeGroupModels')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_finder' )
+  CLASS_NAME: null
+  COMP_CODE: activeGroupModels
+  NAME: Group Model
+  SIGNING_REQ_IND: null
+  URL: /activeGroupModels
+related: {}

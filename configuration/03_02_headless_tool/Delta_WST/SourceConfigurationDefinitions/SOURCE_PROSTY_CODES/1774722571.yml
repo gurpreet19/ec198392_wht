@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1774722571'
+keys:
+  CODE: REPORT_URL
+  CODE_TYPE: REPORT_SYSTEM_PARAM
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: REPORT_URL
+  CODE_TEXT: Jasper Definition Url
+  CODE_TYPE: REPORT_SYSTEM_PARAM
+  DESCRIPTION: Url to the main compiled jasper report file (.jasper).
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 60.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

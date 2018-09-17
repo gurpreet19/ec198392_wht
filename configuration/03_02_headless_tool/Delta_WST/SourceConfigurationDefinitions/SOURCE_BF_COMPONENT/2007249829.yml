@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2007249829'
+keys:
+  BF_CODE: GD.0084
+  T: BF_COMPONENT
+  URL: /nav
+parentKeys: {}
+properties:
+  BF_CODE: GD.0084
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0084' AND NVL(URL,'IS_NULL') = '/nav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/contract_quality_handling/CLASS/TRCN_QUALITY_HANDLING' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /nav
+related: {}

@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1898337712'
+keys:
+  BF_DESCRIPTION_NO: CO.0239
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0239
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/company_contact' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Company Contact lists the information for a contact and is tied to a company.</p>
+    <p>Company Contact is connected to a well/stream using Object Group Connection screen(CO.0167). One well/stream will have multiple Company contacts and the same Company contact can also be linked to many wells/streams. </p>
+related: {}

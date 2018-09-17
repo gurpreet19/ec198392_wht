@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-563316119'
+keys:
+  BF_DESCRIPTION_NO: CO.0221
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0221
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/intermed_stor_prod' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is normally used in connection with processing plants which need to track contents of multiple products inside a storage. In addition to the primary service product being stored, a set of other products may necessary as well in order to create so called blends (mix of products).</p>
+
+    <p>The intermediate products are directly connected to the storage but will not affect the primary storage product configured on the storage itself.</p>
+related: {}

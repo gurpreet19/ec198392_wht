@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-495134797'
+keys:
+  EC_CLIENT_OBJ: /com.ec.bpm.ext.ec.web/process_monitor_configuration
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.bpm.ext.ec.web/process_monitor_configuration
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

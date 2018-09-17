@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1247280922'
+keys:
+  BF_CODE: HA.0012
+  T: BF_COMPONENT
+  URL: /month_local_data_lock
+parentKeys: {}
+properties:
+  BF_CODE: HA.0012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='HA.0012' AND NVL(URL,'IS_NULL') = '/month_local_data_lock')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/mth_local_data_lock' )
+  CLASS_NAME: MONTHLY_LOCAL_DATA_LOCK
+  COMP_CODE: month_local_data_lock
+  NAME: Monthly_Local_Data_Lock
+  SIGNING_REQ_IND: null
+  URL: /month_local_data_lock
+related: {}

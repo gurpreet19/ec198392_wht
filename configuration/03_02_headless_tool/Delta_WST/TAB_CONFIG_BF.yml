@@ -1,0 +1,27 @@
+CP_TAB_MENU: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1317648251'
+  keys:
+    BF_CODE: CP_TAB_MENU
+    T: TAB_CONFIG_BF
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+TO_TAB_CARGO_DOCS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1738525260'
+  keys:
+    BF_CODE: TO_TAB_CARGO_DOCS
+    T: TAB_CONFIG_BF
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+TO_TAB_MENU: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1030759725'
+  keys:
+    BF_CODE: TO_TAB_MENU
+    T: TAB_CONFIG_BF
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED

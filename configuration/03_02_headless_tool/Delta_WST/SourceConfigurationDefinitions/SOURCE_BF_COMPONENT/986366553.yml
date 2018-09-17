@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '986366553'
+keys:
+  BF_CODE: PO.0114
+  T: BF_COMPONENT
+  URL: /derived
+parentKeys: {}
+properties:
+  BF_CODE: PO.0114
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0114' AND NVL(URL,'IS_NULL') = '/derived')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_ELE/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_ELE' )
+  CLASS_NAME: STRM_MTH_STREAM_DER_ELE
+  COMP_CODE: derived
+  NAME: Derived
+  SIGNING_REQ_IND: null
+  URL: /derived
+related: {}

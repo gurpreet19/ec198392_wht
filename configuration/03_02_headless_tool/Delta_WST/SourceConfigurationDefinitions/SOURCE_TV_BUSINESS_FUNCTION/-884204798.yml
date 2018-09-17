@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-884204798'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/rate_objects_definition
+parentKeys: {}
+properties:
+  BF_CODE: IN.0006
+  NAME: Inventory Rate Definition
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/rate_objects_definition
+related: {}

@@ -1,0 +1,36 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1604411521'
+keys:
+  BF_DESCRIPTION_NO: WR.0039
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/WELL/TARGET/WELL/OWNER/WELL' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to enter produced water ion analysis results from well samples. Typically, these samples are taken on the wellhead and sent off to a properly equipped laboratory facility for investigation. Sampling frequency could be e.g. once a week pr. producing well. Once analysis-results are obtained they will be entered and validated in this business function against baseline ion compositions of injection water and native formation water. The validation process includes the assessment of the quality of the analysis itself in addition to the estimated mixing ratio between formation water and injection water. This mixing ratio is imperative for predicting various scaling processes that could irreversibly clog and destroy critical production equipment when left untreated. The program for injection of scale inhibitor chemicals (batch squeeze and/or continuous) will typically be created based on observations made in this business function.</p>
+
+    <p>A closer explanation of some of the calculated attributes is presented below.</p>
+
+    <p><strong>TDS &ndash; total dissolved solids: </strong>This is a calculated field that aggregates the mass of all the dissolved ions found in the sample.</p>
+
+    <p><strong>Ion Balance: </strong>This is a calculated field that aggregates the electrical charge of the dissolved ions found in the sample. The sum of electrical charges will ideally be zero, but due to analysis uncertainty and inaccuracy a small deviation should be anticipated. Normally, this deviation will be less than &plusmn;5% and serves to indicate the quality of the analysis itself.</p>
+
+    <p><strong>Water Cut: </strong>This is the current water cut for the well based on the configured water cut method.</p>
+
+    <p><strong>Prod Water: </strong>The daily produced water volume based on most recent accepted well test result</p>
+
+    <p><strong>Calc. Inj. Water || SO4: </strong>Mixing ratio of injection water in formation water based on sulphate ion assessment. This is expressed as vol% injection water.</p>
+
+    <p><strong>Calc. Inj. Water || Mg: </strong>Mixing ratio of injection water in formation water based on magnesium ion assessment. This is expressed as vol% injection water. These two mixing ratios are competitive calculations, but at low mixing ratios the sulphate assessment is considered to yield the most reliable figure.</p>
+
+    <p><strong>Dilution level || Ba: </strong>This is the Barium concentration in the sample based on dilution by injection water, assuming no precipitation</p>
+
+    <p><strong>Dilution level || Sr: </strong>This is the Strontium concentration in the sample based on dilution by injection water, assuming no precipitation</p>
+
+    <p><strong>Scale potential || BaSO4: </strong>This is the calculated difference between actual Barium concentration and dilution level Barium concentration expressed as&nbsp;Barium Sulphate. This defines the Barium Sulphate scale potential.</p>
+
+    <p><strong>Scale potential || SrSO4: </strong>This is the calculated difference between actual Strontium concentration and dilution level Strontium concentration expressed as Strontium Sulphate. This defines the Strontium Sulphate scale potential.</p>
+related: {}

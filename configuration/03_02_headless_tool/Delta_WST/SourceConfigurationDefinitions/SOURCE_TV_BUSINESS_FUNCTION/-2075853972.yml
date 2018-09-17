@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2075853972'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_CATEGORY
+parentKeys: {}
+properties:
+  BF_CODE: CD.0016
+  NAME: Stream Item Category
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_CATEGORY
+related: {}

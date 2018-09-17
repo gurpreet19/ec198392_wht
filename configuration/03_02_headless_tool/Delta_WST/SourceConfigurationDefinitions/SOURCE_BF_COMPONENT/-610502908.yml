@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-610502908'
+keys:
+  BF_CODE: GD.0073
+  T: BF_COMPONENT
+  URL: /convertMolWtButton
+parentKeys: {}
+properties:
+  BF_CODE: GD.0073
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0073' AND NVL(URL,'IS_NULL') = '/convertMolWtButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/delivery_composition/CLASS/NP_DEL_ANALYSIS/TARGET/NOMINATION_POINT' )
+  CLASS_NAME: null
+  COMP_CODE: convertMolWtButton
+  NAME: Mol <-> Wt
+  SIGNING_REQ_IND: null
+  URL: /convertMolWtButton
+related: {}

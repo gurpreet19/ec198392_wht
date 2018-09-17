@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1298559623'
+keys:
+  BF_CODE: WR.0016
+  T: BF_COMPONENT
+  URL: /sub_daily_gas_injection_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0016
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0016' AND NVL(URL,'IS_NULL') = '/sub_daily_gas_injection_well_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_gas_injection_well_status' )
+  CLASS_NAME: IWEL_SUB_DAY_STATUS_GAS
+  COMP_CODE: subDailyGasInjectionWellStatusTable
+  NAME: Sub Daily Gas Injection Well Status
+  SIGNING_REQ_IND: null
+  URL: /sub_daily_gas_injection_well_status
+related: {}

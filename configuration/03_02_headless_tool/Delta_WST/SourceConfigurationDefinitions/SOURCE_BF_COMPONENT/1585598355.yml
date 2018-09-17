@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1585598355'
+keys:
+  BF_CODE: CO.0167
+  T: BF_COMPONENT
+  URL: /gm_navigator
+parentKeys: {}
+properties:
+  BF_CODE: CO.0167
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0167' AND NVL(URL,'IS_NULL') = '/gm_navigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/object_group_conn' )
+  CLASS_NAME: null
+  COMP_CODE: gm_nav
+  NAME: GroupModelNavigator
+  SIGNING_REQ_IND: null
+  URL: /gm_navigator
+related: {}

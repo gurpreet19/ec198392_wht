@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1872445887'
+keys:
+  BF_DESCRIPTION_NO: WR.0010.03
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0010.03
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_component_qa' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The purpose of this BF is to provide a procedure to run QA process for well component analysis that have Status &lt;&gt; &lsquo;ACCEPTED&rsquo;. This analysis is for both oil component analysis and gas component analysis. This QA process will check against class and object validations, as well as against each oil and gas component analysis for the same well and daytime.</p>
+
+    <p>If one of them fails, then both are set to &lsquo;REJECTED&rsquo;. If one of them is missing, then the record will be set to &lsquo;REJECTED&rsquo; as well.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1801946996'
+keys:
+  BF_CODE: CO.0148
+  T: BF_COMPONENT
+  URL: /updateRefValues
+parentKeys: {}
+properties:
+  BF_CODE: CO.0148
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0148' AND NVL(URL,'IS_NULL') = '/updateRefValues')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_orf_value' )
+  CLASS_NAME: STRM_ORF_COMPONENT
+  COMP_CODE: updateRefValues
+  NAME: Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /updateRefValues
+related: {}

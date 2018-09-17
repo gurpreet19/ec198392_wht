@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '165335160'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_copy_equipment
+parentKeys: {}
+properties:
+  BF_CODE: CO.0060
+  NAME: Maintain Equipment
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_copy_equipment
+related: {}

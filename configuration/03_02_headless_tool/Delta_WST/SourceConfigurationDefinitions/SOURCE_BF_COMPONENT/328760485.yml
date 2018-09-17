@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '328760485'
+keys:
+  BF_CODE: SP.0021
+  T: BF_COMPONENT
+  URL: /vendortable
+parentKeys: {}
+properties:
+  BF_CODE: SP.0021
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/vendortable')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/banking_details' )
+  CLASS_NAME: CONT_DOCUMENT_VENDOR
+  COMP_CODE: BankingDetailsVendorTable
+  NAME: Banking Details Vendor Table
+  SIGNING_REQ_IND: null
+  URL: /vendortable
+related: {}

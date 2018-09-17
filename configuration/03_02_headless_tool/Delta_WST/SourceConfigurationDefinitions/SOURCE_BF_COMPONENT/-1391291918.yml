@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1391291918'
+keys:
+  BF_CODE: LA.0002
+  T: BF_COMPONENT
+  URL: /acc_balance
+parentKeys: {}
+properties:
+  BF_CODE: LA.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='LA.0002' AND NVL(URL,'IS_NULL') = '/acc_balance')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.la.screens/monthly_account_status/BALANCE_QTY/EST_CLOSING_BALANCE' )
+  CLASS_NAME: LIFTING_ACC_MTH_BALANCE
+  COMP_CODE: acc_balance
+  NAME: Lifter Account Balance
+  SIGNING_REQ_IND: null
+  URL: /acc_balance
+related: {}

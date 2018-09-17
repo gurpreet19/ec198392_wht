@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '397771791'
+keys:
+  BF_CODE: SD.0049
+  T: BF_COMPONENT
+  URL: /nompnt_del_events
+parentKeys: {}
+properties:
+  BF_CODE: SD.0049
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0049' AND NVL(URL,'IS_NULL') = '/nompnt_del_events')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/nomloc_delivery_events/CLASS1/SLNL_PERIOD_DEL_EVENT/CLASS2/SLNP_PERIOD_DEL_EVENT_NL/CLASS_SUB/SLNP_SUBDAY_DEL_EVENT_NL/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0049' )
+  CLASS_NAME: SLNP_PERIOD_DEL_EVENT_NL
+  COMP_CODE: nompnt_del_events
+  NAME: Daily Nomination Point Events
+  SIGNING_REQ_IND: null
+  URL: /nompnt_del_events
+related: {}

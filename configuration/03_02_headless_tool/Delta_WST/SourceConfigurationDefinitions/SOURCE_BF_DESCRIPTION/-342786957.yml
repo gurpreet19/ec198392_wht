@@ -1,0 +1,55 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-342786957'
+keys:
+  BF_DESCRIPTION_NO: PO.0086
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0086
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_vent_flare' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function (BF) is used to register and calculate volume of gas that is flared (burnt) and volume of gas that is released into the atmosphere (vented).</p>
+
+    <p>This BF does also cater for routine and non routine release methods for streams with 3 corresponding tabs for each release method. The Save and Update button in the tabs does calculations and updates the volume on gas released on the parent data section.</p>
+
+    <p>The three folders in this BF that will be displayed when a Non Routine Stream is selected:-</p>
+
+    <p>1. Equipment</p>
+
+    <p>a. This is used to register equipments that contribute to the gas releases.</p>
+
+    <p>2. Well Work</p>
+
+    <p>a. This is used to register wells that contribute to the gas releases.</p>
+
+    <p>3. Other</p>
+
+    <p>a. This is used to register other assets that contribute to the gas releases.</p>
+
+    <p>The three folders in this BF that will be displayed when a Routine Stream is selected:-</p>
+
+    <p>1. Release Summary</p>
+
+    <p>a. This is used to update releases based on normal operating conditions and upset or failure.</p>
+
+    <p>2. Generated Vapors</p>
+
+    <p>a. This is a read only data section which is used to display assets that contribute to vapors being generated. Assets displayed here have a connection in Object Group Connection BF to the stream selected on parent data section as below :-</p>
+
+    <p>i. The routine stream is a child in a VF Release Streams connection. The same parent has child which are the assets connected through VF Non Routine connection.</p>
+
+    <p>ii. The routine stream is a child in a VF Release Streams connection. The same parent has child which are the assets connected through VF Vapor Recovery System connection.</p>
+
+    <p>3. Recovered Vapors</p>
+
+    <p>a. This is a read only data section which is used to display assets that contribute to vapors being recovered. Assets displayed here have a connection in Object Group Connection BF to the stream selected on parent data section as below :-</p>
+
+    <p>i. The routine stream is a child in a VF Release Streams connection. The same parent has child which are the assets connected through VF Vapor Recovery System connection.</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-285391471'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/manage_report_ref_item_setup
+parentKeys: {}
+properties:
+  BF_CODE: SP.0068
+  NAME: Report Reference Group Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/manage_report_ref_item_setup
+related: {}

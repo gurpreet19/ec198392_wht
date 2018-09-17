@@ -1,0 +1,114 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_BPM_OBJ_META
+cnstPrimaryKey:
+  columns:
+  - OWNER_GLOBAL_ID
+  - NAME
+  name: SYS_C008821
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CORRELATION_GLOBAL_ID:
+    columnName: CORRELATION_GLOBAL_ID
+    typeName: VARCHAR2(512 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  CORRELATION_REF_JSON:
+    columnName: CORRELATION_REF_JSON
+    typeName: VARCHAR2(2048 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: TIMESTAMP(6)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  NAME:
+    columnName: NAME
+    typeName: VARCHAR2(512 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  OWNER_GLOBAL_ID:
+    columnName: OWNER_GLOBAL_ID
+    typeName: VARCHAR2(512 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  OWNER_REF_JSON:
+    columnName: OWNER_REF_JSON
+    typeName: VARCHAR2(2048 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  VALUE:
+    columnName: VALUE
+    typeName: VARCHAR2(2048 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+indexes:
+  I_JBPM_BPM_OBJ_META_1:
+    indexName: I_JBPM_BPM_OBJ_META_1
+    columns:
+    - OWNER_GLOBAL_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_JBPM_BPM_OBJ_META_2:
+    indexName: I_JBPM_BPM_OBJ_META_2
+    columns:
+    - CORRELATION_GLOBAL_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

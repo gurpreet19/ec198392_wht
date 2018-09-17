@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '929988346'
+keys:
+  BF_CODE: CO.1060
+  T: BF_COMPONENT
+  URL: /objectdates
+parentKeys: {}
+properties:
+  BF_CODE: CO.1060
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1060' AND NVL(URL,'IS_NULL') = '/objectdates')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CALC_LIBRARY' )
+  CLASS_NAME: CALC_LIBRARY
+  COMP_CODE: objectdates
+  NAME: Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /objectdates
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1773092891'
+keys:
+  BF_CODE: CD.0114
+  T: BF_COMPONENT
+  URL: /setup
+parentKeys: {}
+properties:
+  BF_CODE: CD.0114
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0114' AND NVL(URL,'IS_NULL') = '/setup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/payment_scheme_setup' )
+  CLASS_NAME: PAYMENT_SCHEME_ITEM
+  COMP_CODE: setup
+  NAME: Setup
+  SIGNING_REQ_IND: null
+  URL: /setup
+related: {}

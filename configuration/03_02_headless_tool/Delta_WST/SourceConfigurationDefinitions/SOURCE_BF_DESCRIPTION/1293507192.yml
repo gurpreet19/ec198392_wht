@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1293507192'
+keys:
+  BF_DESCRIPTION_NO: FI.0007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FI.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/fin_item_calc_mth' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p><strong>Monthly Financial Item Calculation screen</strong> is used to run the Monthly Financial Item Calculations. The user selects the month for which the calculation is to be run, it could be a single month with only To Month as an input parameter, or a range of From Month and To Month for multiple months. A list of previous runs of the calculation for the selected month range and calculation job are displayed(if there are any) and the user can press the <strong>RUN CALCULATION</strong> button to invoke the calculation. All started calculations will be shown in Running Job, several calculations may run simultaneously, but only one for each calculation job. The user can also specify the time of choice to start the calculation, if it is not intended to start immediately. The Job Start Time is not mandatory.</p><p>Once a calculation run has been started, the details are displayed in new rows on the screen, one for each run, along with the outcome (e.g. Success or Failure). On selection of a row from the upper section of the screen, i.e. an individual calculation run, the associated log file summary from that run is displayed in the lower section of the screen and the user can press the <strong>Download</strong> button to examine the full log file.</p><p>The Calculation Job makes it possible to decide how the calculations will be performed, if several jobs exist then they will run the calculation with different input parameters. These input parameters can be used by the calculation rules to decide which equations to execute.</p><p>The <strong>Simulate</strong> tick box may be used to run the calculations and inspect the subsequent log file, however without writing any results back to the database.</p><p>All successful calculation runs are eligible for approval. Users with access to approved data may change the Status from Approve back to Provisional to run a new Financial Item Calculation.</p
+related: {}

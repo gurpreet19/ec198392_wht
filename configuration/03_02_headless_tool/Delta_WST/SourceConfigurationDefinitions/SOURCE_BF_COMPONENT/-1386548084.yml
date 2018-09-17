@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1386548084'
+keys:
+  BF_CODE: SD.0052
+  T: BF_COMPONENT
+  URL: /fcst_nompnt_del_events
+parentKeys: {}
+properties:
+  BF_CODE: SD.0052
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0052' AND NVL(URL,'IS_NULL') = '/fcst_nompnt_del_events')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/fcst_nomloc_delivery_events/CLASS1/FCST_SLNL_PRD_DEL_EVT/CLASS2/FCST_SLNP_PRD_DEL_EVT_NL/CLASS_SUB/FCST_SLNP_SUB_DEL_EVT_NL/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0052' )
+  CLASS_NAME: FCST_SLNP_PRD_DEL_EVT_NL
+  COMP_CODE: fcst_nompnt_del_events
+  NAME: Forecast Daily Nomination Point Events
+  SIGNING_REQ_IND: null
+  URL: /fcst_nompnt_del_events
+related: {}

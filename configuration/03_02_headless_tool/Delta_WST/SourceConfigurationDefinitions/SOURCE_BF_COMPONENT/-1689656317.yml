@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1689656317'
+keys:
+  BF_CODE: IS.0002
+  T: BF_COMPONENT
+  URL: /StandardNavigator
+parentKeys: {}
+properties:
+  BF_CODE: IS.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IS.0002' AND NVL(URL,'IS_NULL') = '/StandardNavigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_target_mapping' )
+  CLASS_NAME: null
+  COMP_CODE: StandardNavigator
+  NAME: Standard Navigator
+  SIGNING_REQ_IND: null
+  URL: /StandardNavigator
+related: {}

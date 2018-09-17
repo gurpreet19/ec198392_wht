@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1593510697'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.fc/fcst_revenue_setup/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST
+parentKeys: {}
+properties:
+  BF_CODE: FC.1005
+  NAME: Forecast Revenue Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fc/fcst_revenue_setup/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST
+related: {}

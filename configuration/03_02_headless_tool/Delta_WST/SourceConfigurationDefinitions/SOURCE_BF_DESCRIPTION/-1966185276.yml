@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1966185276'
+keys:
+  BF_DESCRIPTION_NO: CO.3021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.3021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRICE_GROUP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to configure price groups.</p><p>The price groups are used in Price Calculation. The calculation will only run for price objects connected to selected price group.</p><p>Use Price Group List to connect Price Objects to a price group.</p>
+related: {}

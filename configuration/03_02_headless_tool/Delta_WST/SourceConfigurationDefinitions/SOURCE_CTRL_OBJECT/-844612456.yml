@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-844612456'
+keys:
+  OBJECT_NAME: CARGO_LIFTING_DELAY
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: Y
+  OBJECT_NAME: CARGO_LIFTING_DELAY
+  PINC_TRIGGER_IND: N
+  VIEW_PK_TABLE_NAME: null
+related: {}

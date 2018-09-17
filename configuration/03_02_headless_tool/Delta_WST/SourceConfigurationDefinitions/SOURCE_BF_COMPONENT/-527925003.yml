@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-527925003'
+keys:
+  BF_CODE: CO.1021
+  T: BF_COMPONENT
+  URL: /unit
+parentKeys: {}
+properties:
+  BF_CODE: CO.1021
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1021' AND NVL(URL,'IS_NULL') = '/unit')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/unit' )
+  CLASS_NAME: UNIT
+  COMP_CODE: unit
+  NAME: Unit
+  SIGNING_REQ_IND: null
+  URL: /unit
+related: {}

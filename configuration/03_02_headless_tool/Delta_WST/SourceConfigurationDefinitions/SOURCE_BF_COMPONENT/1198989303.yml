@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1198989303'
+keys:
+  BF_CODE: PP.0047
+  T: BF_COMPONENT
+  URL: /compensation_event
+parentKeys: {}
+properties:
+  BF_CODE: PP.0047
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0047' AND NVL(URL,'IS_NULL') = '/compensation_event')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_event/CLASS_NAME/FCST_WELL_EVENT/CLASS_NAME_2/FCST_WELL_EVENT_CHILD/CLASS_NAME_3/FCST_COMPENSATION_EVENTS' )
+  CLASS_NAME: FCST_COMPENSATION_EVENTS
+  COMP_CODE: compensation_event
+  NAME: Compensation Event
+  SIGNING_REQ_IND: null
+  URL: /compensation_event
+related: {}

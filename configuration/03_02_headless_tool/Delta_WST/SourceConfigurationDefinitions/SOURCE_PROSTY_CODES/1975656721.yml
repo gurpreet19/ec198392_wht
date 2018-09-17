@@ -1,0 +1,371 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1975656721'
+keys:
+  CODE: LOG
+  CODE_TYPE: WELL_CHRON_CAT
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: LOG
+  CODE_TEXT: Logging
+  CODE_TYPE: WELL_CHRON_CAT
+  DESCRIPTION: null
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: N
+  SORT_ORDER: 50.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related:
+  CTRL_CODE_DEPENDENCY:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: CAL
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: CAL
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: CAM
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: CAM
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: CNL
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: CNL
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: CO
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: CO
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: COR
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: COR
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: GPP
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: GPP
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: GST
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: GST
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: GYR
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: GYR
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: HUD
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: HUD
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: KIN
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: KIN
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: LEA
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: LEA
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: PLT
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: PLT
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: RFT
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: RFT
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: RST
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: RST
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: SAN
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: SAN
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: STA
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: STA
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: TDT
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: TDT
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: LOG
+      CODE2: TEM
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: LOG
+      PROSTY_CODES.CODE_TYPE: WELL_CHRON_CAT
+    properties:
+      CODE1: LOG
+      CODE2: TEM
+      CODE3: null
+      CODE_TYPE1: WELL_CHRON_CAT
+      CODE_TYPE2: WELL_CHRON_CODE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER

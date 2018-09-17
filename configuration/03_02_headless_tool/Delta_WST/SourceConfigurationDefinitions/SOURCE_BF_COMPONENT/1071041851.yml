@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1071041851'
+keys:
+  BF_CODE: CO.1023
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CO.1023
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1023' AND NVL(URL,'IS_NULL') = '/table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/LANGUAGE' )
+  CLASS_NAME: LANGUAGE
+  COMP_CODE: table
+  NAME: Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

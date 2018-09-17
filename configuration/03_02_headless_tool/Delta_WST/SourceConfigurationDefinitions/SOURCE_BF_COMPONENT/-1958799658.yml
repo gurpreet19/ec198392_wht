@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1958799658'
+keys:
+  BF_CODE: MHM.0013
+  T: BF_COMPONENT
+  URL: /SelectAll
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0013' AND NVL(URL,'IS_NULL') = '/SelectAll')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_generation' )
+  CLASS_NAME: null
+  COMP_CODE: SelectAll
+  NAME: Select All
+  SIGNING_REQ_IND: null
+  URL: /SelectAll
+related: {}

@@ -1,0 +1,80 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1738525260'
+keys:
+  BF_CODE: TO_TAB_CARGO_DOCS
+  T: TAB_CONFIG_BF
+parentKeys: {}
+properties:
+  BF_CODE: TO_TAB_CARGO_DOCS
+  DATE_1: null
+  DATE_2: null
+  DATE_3: null
+  DATE_4: null
+  NAME: Cargo Documents
+  NAV_TYPE: HARBOUR_NAV
+  TEXT_1: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  URL: /com.ec.tran.tab.screens/cargo_docs
+  VALUE_1: null
+  VALUE_2: null
+  VALUE_3: null
+  VALUE_4: null
+related:
+  TAB_CONFIG_COMPONENT:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: TO_TAB_CARGO_DOCS
+      BF_NO_REF: (SELECT ECDP_BUSINESS_FUNCTION.GETBUSINESSFUNCTIONNO('TO.0009.01') FROM DUAL )
+      T: TAB_CONFIG_COMPONENT
+    parentKeys:
+      TAB_CONFIG_BF.BF_CODE: TO_TAB_CARGO_DOCS
+    properties:
+      BF_CODE: TO_TAB_CARGO_DOCS
+      BF_CODE_REF: TO.0009.01
+      BF_NO_REF: (SELECT ECDP_BUSINESS_FUNCTION.GETBUSINESSFUNCTIONNO('TO.0009.01') FROM DUAL )
+      DATE_1: null
+      DATE_2: null
+      DATE_3: null
+      DATE_4: null
+      SORT_ORDER: 10.0
+      TAB_ENABLE: Y
+      TAB_LABEL: Parcel Docs
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      TEXT_5: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: TO_TAB_CARGO_DOCS
+      BF_NO_REF: (SELECT ECDP_BUSINESS_FUNCTION.GETBUSINESSFUNCTIONNO('TO.0009.02') FROM DUAL )
+      T: TAB_CONFIG_COMPONENT
+    parentKeys:
+      TAB_CONFIG_BF.BF_CODE: TO_TAB_CARGO_DOCS
+    properties:
+      BF_CODE: TO_TAB_CARGO_DOCS
+      BF_CODE_REF: TO.0009.02
+      BF_NO_REF: (SELECT ECDP_BUSINESS_FUNCTION.GETBUSINESSFUNCTIONNO('TO.0009.02') FROM DUAL )
+      DATE_1: null
+      DATE_2: null
+      DATE_3: null
+      DATE_4: null
+      SORT_ORDER: 20.0
+      TAB_ENABLE: Y
+      TAB_LABEL: Other Cargo Docs
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      TEXT_5: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null

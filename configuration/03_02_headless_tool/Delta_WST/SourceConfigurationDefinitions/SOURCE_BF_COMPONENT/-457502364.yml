@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-457502364'
+keys:
+  BF_CODE: PO.0098
+  T: BF_COMPONENT
+  URL: /product_transactions
+parentKeys: {}
+properties:
+  BF_CODE: PO.0098
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0098' AND NVL(URL,'IS_NULL') = '/product_transactions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/product_transaction_overview' )
+  CLASS_NAME: STOR_PROD_EVENT_TRANS
+  COMP_CODE: product_transactions
+  NAME: Product Transaction
+  SIGNING_REQ_IND: null
+  URL: /product_transactions
+related: {}

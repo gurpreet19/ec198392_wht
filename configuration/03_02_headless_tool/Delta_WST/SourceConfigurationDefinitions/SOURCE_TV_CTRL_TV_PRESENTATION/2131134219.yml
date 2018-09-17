@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2131134219'
+keys:
+  COMPONENT_ID: ( SELECT 'FT_PR_BD' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.sp/banking_details
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'FT_PR_BD' FROM DUAL )
+  COMPONENT_LABEL: Banking Details
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FT_PR_REVN' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 5080.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

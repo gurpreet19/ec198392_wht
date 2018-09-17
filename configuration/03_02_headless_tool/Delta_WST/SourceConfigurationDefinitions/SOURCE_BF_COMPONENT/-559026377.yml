@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-559026377'
+keys:
+  BF_CODE: CO.1055
+  T: BF_COMPONENT
+  URL: /AttrPresConf
+parentKeys: {}
+properties:
+  BF_CODE: CO.1055
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1055' AND NVL(URL,'IS_NULL') = '/AttrPresConf')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_attr_pres_config' )
+  CLASS_NAME: CLASS_ATTR_PRES_CONFIG
+  COMP_CODE: AttrPresConf
+  NAME: Attribute Presentation Configuration
+  SIGNING_REQ_IND: null
+  URL: /AttrPresConf
+related: {}

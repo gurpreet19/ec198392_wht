@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1942840778'
+keys:
+  BF_DESCRIPTION_NO: CO.0079
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0079
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/CTRL_CHECK_GROUP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Check Group screen provides an interface for editing, adding and deleting check groups. Groups are connected to a Business Function and the user can select a check group and execute all rules associated with the group.</p>
+related: {}

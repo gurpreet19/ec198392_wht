@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1990832780'
+keys:
+  BF_DESCRIPTION_NO: CO.2039
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/DELIVERY_STREAM/CLASS_NAME/DELIVERY_STREAM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain Delivery Streams.</p><p>Delivery stream is used to further detail a delivery point. In simple cases keeping the information at delivery point level is good enough, but in other cases it is useful&nbsp;to detail the level of information. This can be hold different types of meter, handle both forward haul and backhaul.</p><p>When delivery stream is used the nomination points will typically be connected to the delivery stream instead of the delivery point.</p>
+related: {}

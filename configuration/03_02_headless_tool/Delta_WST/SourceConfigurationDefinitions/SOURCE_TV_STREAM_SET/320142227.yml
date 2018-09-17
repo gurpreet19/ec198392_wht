@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '320142227'
+keys:
+  CODE: PP.0038
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PP.0038
+  NAME: Monthly Stream Forecast
+related: {}

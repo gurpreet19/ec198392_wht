@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1884444066'
+keys:
+  BF_CODE: PP.0026
+  T: BF_COMPONENT
+  URL: /object_plan_budget
+parentKeys: {}
+properties:
+  BF_CODE: PP.0026
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0026' AND NVL(URL,'IS_NULL') = '/object_plan_budget')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/object_plan/GROUPMODEL/FIELD/TARGET/FIELD/DATA_CLASS_1/FIELD_PLAN_BUDGET/DATA_CLASS_2/FIELD_PLAN_POTENTIAL/DATA_CLASS_3/FIELD_PLAN_TARGET/DATA_CLASS_4/FIELD_PLAN_OTHER' )
+  CLASS_NAME: FIELD_PLAN_BUDGET
+  COMP_CODE: object_plan_budget
+  NAME: Budget
+  SIGNING_REQ_IND: null
+  URL: /object_plan_budget
+related: {}

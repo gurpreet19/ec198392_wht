@@ -1,0 +1,36 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2555904'
+keys:
+  T: TV_UNIT
+  UNIT: STON
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: US ton (short ton)
+  FIN_CODE: null
+  LABEL: US ton
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: STON
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: STON
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KG
+    parentKeys:
+      TV_UNIT.UNIT: STON
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: STON
+      MULT_FACT: 0.0011023
+      PRECISION: 7.0
+      TO_UNIT: KG
+      USER_EXIT: null
+      USE_UE: null

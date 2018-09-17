@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1574027187'
+keys:
+  NAME: ShowYaxisSeries2
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: TRAN_FCST_SCHLIFTCHART
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Minimum Level Y axis
+  MANDATORY_IND: N
+  NAME: ShowYaxisSeries2
+  PARAMETER_SUB_TYPE: BOOL
+  PARAMETER_TYPE: BASIC_TYPE
+  PARAMETER_VALUE: N
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 130.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: TRAN_FCST_SCHLIFTCHART
+related: {}

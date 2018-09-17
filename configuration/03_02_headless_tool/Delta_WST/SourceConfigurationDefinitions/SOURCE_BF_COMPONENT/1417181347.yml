@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1417181347'
+keys:
+  BF_CODE: CO.0234
+  T: BF_COMPONENT
+  URL: /copy_insert_new_button
+parentKeys: {}
+properties:
+  BF_CODE: CO.0234
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0234' AND NVL(URL,'IS_NULL') = '/copy_insert_new_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/well_seasonal_value' )
+  CLASS_NAME: null
+  COMP_CODE: copy_insert_new_button
+  NAME: Copy & Insert New
+  SIGNING_REQ_IND: null
+  URL: /copy_insert_new_button
+related: {}

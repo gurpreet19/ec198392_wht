@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1164340272'
+keys:
+  BF_CODE: PO.0120
+  T: BF_COMPONENT
+  URL: /TestDeviceParentObject
+parentKeys: {}
+properties:
+  BF_CODE: PO.0120
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0120' AND NVL(URL,'IS_NULL') = '/TestDeviceParentObject')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/test_device_finder' )
+  CLASS_NAME: null
+  COMP_CODE: TestDeviceParentObject
+  NAME: Test Device Parent Object
+  SIGNING_REQ_IND: null
+  URL: /TestDeviceParentObject
+related: {}

@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '188519575'
+keys:
+  ATTRIBUTE_TYPE: GAS_CONST_15_DEG_TO_K
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: GAS_CONST_15_DEG_TO_K
+  ATTRIBUTE_VALUE: 288.15
+  DESCRIPTION: 15°C converted to K.
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-524140556'
+keys:
+  BF_DESCRIPTION_NO: PR.0035
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PR.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/price_index_monthly/CLASS/PRICE_RATE_MTH_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_RATE/TARGET_TYPE/self' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to enter and display values for the monthly rates.</p><p>In EC, rates are financial benchmarks used when producing interest rates around the world. Typical examples can be LIBOR and EURIBOR. A rate can be used as input to Price Calculations or PSA Calculation. When long term contracts are negotiated they will typically agree on some rates to be used in the calculation for the contract or the PSA. This is to make sure that over time the calculated result will vary according to changes in the market.</p><p>This business function allows the user to select a period and rate from a list of those available. The associated rate value may then be entered. Data in this business function will be instantiated, so at the end of a month, a new (empty) row will be created in this business function for the next month, but it is still possible for the user to create new rows as required (using the + button). </p><p>In EC, rates are configured using the generic PRICE_INPUT_ITEM tables. This allows projects to create specific Price Input items and corresponding transactional business functions.</p>
+related: {}

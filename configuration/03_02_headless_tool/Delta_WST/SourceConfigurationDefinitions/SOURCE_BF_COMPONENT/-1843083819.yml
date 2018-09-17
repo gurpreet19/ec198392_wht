@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1843083819'
+keys:
+  BF_CODE: GD.0078
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: GD.0078
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0078' AND NVL(URL,'IS_NULL') = '/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/meter_event_fcst_quality/CLASS/METER_EVENT_FCST_QUALITY/NAV_MODEL/TRAN_OPERATIONAL' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Buttton
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

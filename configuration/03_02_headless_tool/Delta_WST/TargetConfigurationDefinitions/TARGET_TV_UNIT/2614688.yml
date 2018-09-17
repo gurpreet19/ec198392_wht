@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2614688'
+keys:
+  T: TV_UNIT
+  UNIT: USTV
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: US Tons in Vacuum
+  FIN_CODE: null
+  LABEL: UST (Vac)
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: USTV
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related: {}

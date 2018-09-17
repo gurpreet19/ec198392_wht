@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1163302484'
+keys:
+  BF_DESCRIPTION_NO: IN.0005
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/manage_inventory/CLASS_NAME/INVENTORY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Inventory properties screen</strong>    is used to create a new Inventory object and maintain attributes on existing Inventory objects.</p><p>    The screen is a standard EC Manage Object type of screen where the user can add versions to the object. <u>The screen is divided into three sections:</u></p><p>    <strong><em>- Static Navigator</em></strong><br>    Defines the search criteria for the Inventory.</p><p>    <strong><em>- Inventory List</em></strong><br>    Lists all the Inventories found matching the Static Navigator criteria.</p><p>    <strong><em>- Inventory Details and Versions</em></strong><br>    Lists details and version details for the Inventory selected in the Inventory List section.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1951679459'
+keys:
+  BF_CODE: SP.0015
+  T: BF_COMPONENT
+  URL: /report_reference_button_1
+parentKeys: {}
+properties:
+  BF_CODE: SP.0015
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0015' AND NVL(URL,'IS_NULL') = '/report_reference_button_1')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/transaction_mapping' )
+  CLASS_NAME: null
+  COMP_CODE: report_reference_button_1
+  NAME: report_reference_button_1
+  SIGNING_REQ_IND: null
+  URL: /report_reference_button_1
+related: {}

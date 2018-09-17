@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1202819211'
+keys:
+  BF_CODE: GD.0077.02
+  T: BF_COMPONENT
+  URL: /objectfactors
+parentKeys: {}
+properties:
+  BF_CODE: GD.0077.02
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0077.02' AND NVL(URL,'IS_NULL') = '/objectfactors')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_factors/TARGET/NOMINATION_POINT/CLASS/TRNP_FACTOR' )
+  CLASS_NAME: TRNP_FACTOR
+  COMP_CODE: objectfactors
+  NAME: Object Factors
+  SIGNING_REQ_IND: null
+  URL: /objectfactors
+related: {}

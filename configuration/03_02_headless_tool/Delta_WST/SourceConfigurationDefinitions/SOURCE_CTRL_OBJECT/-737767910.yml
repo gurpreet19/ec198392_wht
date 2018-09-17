@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-737767910'
+keys:
+  OBJECT_NAME: FCTY_DAY_HSE
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: Y
+  OBJECT_NAME: FCTY_DAY_HSE
+  PINC_TRIGGER_IND: N
+  VIEW_PK_TABLE_NAME: null
+related: {}

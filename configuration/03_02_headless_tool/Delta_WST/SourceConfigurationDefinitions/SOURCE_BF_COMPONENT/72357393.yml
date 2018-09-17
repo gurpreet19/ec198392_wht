@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '72357393'
+keys:
+  BF_CODE: WR.0040
+  T: BF_COMPONENT
+  URL: /event_waste_injection_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0040
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0040' AND NVL(URL,'IS_NULL') = '/event_waste_injection_well_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_waste_injection_well_status' )
+  CLASS_NAME: WELL_WASTE_INJ
+  COMP_CODE: event_waste_injection_well_status
+  NAME: Event Waste Injection Well Status
+  SIGNING_REQ_IND: null
+  URL: /event_waste_injection_well_status
+related: {}

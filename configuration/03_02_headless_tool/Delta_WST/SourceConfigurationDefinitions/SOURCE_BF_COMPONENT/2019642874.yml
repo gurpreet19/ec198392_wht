@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2019642874'
+keys:
+  BF_CODE: CO.0164
+  T: BF_COMPONENT
+  URL: /alloc_network_list_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.0164
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0164' AND NVL(URL,'IS_NULL') = '/alloc_network_list_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/alloc_network_job_conn' )
+  CLASS_NAME: ALLOC_NETWORK_JOB_CONN
+  COMP_CODE: Calculation Job
+  NAME: Allocation Network List
+  SIGNING_REQ_IND: null
+  URL: /alloc_network_list_table
+related: {}

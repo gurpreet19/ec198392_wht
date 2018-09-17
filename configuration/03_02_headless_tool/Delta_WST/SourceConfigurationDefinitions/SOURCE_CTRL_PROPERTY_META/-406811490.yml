@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-406811490'
+keys:
+  KEY: /com/ec/prod/ha/screens/LOCAL_LOCK_LEVEL
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: FCTY_CLASS_1
+  DESCRIPTION: Defines the Monthly Local Lock level. Must be an object class in the operational group model.
+  KEY: /com/ec/prod/ha/screens/LOCAL_LOCK_LEVEL
+  LABEL: Monthly Local Lock Level
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

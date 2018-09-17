@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-978406073'
+keys:
+  NAME: ColSeriesNames
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: AREA_TOP5_MTH_OIL_PROD
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: null
+  MANDATORY_IND: null
+  NAME: ColSeriesNames
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: MTH_OIL_SUM
+  RESOLVE_TYPE: null
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: AREA_TOP5_MTH_OIL_PROD
+related: {}

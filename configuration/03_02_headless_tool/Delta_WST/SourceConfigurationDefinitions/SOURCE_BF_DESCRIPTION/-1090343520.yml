@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1090343520'
+keys:
+  BF_DESCRIPTION_NO: WL.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WL.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/task_list' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a business function to keep track of a user&rsquo;s tasks in Energy Components. Tasks can be data approval or generated from either a Control Point or from a Task Process. The &quot;Go to Approval&quot; button will take you to the four eye approval screen to either accept or reject approval tasks. It is also possible to close tasks in this screen. When ringfencing is activated the user will only be able to view tasks that he or she has access to.</p>
+related: {}

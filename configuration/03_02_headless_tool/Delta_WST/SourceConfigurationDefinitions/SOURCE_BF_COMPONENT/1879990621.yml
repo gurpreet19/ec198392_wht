@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1879990621'
+keys:
+  BF_CODE: CO.0230
+  T: BF_COMPONENT
+  URL: /tank_taps_daytime
+parentKeys: {}
+properties:
+  BF_CODE: CO.0230
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0230' AND NVL(URL,'IS_NULL') = '/tank_taps_daytime')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/tank_tap' )
+  CLASS_NAME: TANK_TAPS_DAYTIME
+  COMP_CODE: tank_taps_daytime
+  NAME: Tank Taps Daytime
+  SIGNING_REQ_IND: null
+  URL: /tank_taps_daytime
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '993815148'
+keys:
+  BF_DESCRIPTION_NO: CO.2028
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2028
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CURRENCY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function covers create and maintain functionality for Currency objects</p>
+related: {}

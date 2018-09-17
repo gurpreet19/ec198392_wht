@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1517334163'
+keys:
+  ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+  FROM_DATE: 2011-10-30T01:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+  ATTRIBUTE_VALUE: 0.0
+  DESCRIPTION: Change to wintertime 2011
+  FROM_DATE: 2011-10-30T01:00:00Z
+related: {}

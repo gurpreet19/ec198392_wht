@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-486341696'
+keys:
+  BF_DESCRIPTION_NO: MHM.0002
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: MHM.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/edi_address' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The EDI Address business function provides an interface to maintain EDI (Electronic Data Interchange) addresses. An EDI address is connected to a Message Contact.</p>
+related: {}

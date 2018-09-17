@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-618474034'
+keys:
+  BF_DESCRIPTION_NO: CO.0237
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0237
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/manage_equipment' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Equipment  screen in EC is used to create and maintain all types of equipment objects (i.e Compressor, Pump, Separator and etc.) except for Test Device(CO.0123 Test Device).  Before an equipment can be added, please ensure that the equipment type exist in EC Codes for Code Type = &lsquo;EQPM_TYPE&rsquo;.</p>
+    <p>New equipment type is added in EC Codes(CO.1011).</p>
+
+    <p>Equipments are not used to store production data. Flow meters are not equipment, but streams.</p>
+related: {}

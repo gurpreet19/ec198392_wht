@@ -1,0 +1,116 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2313285'
+keys:
+  T: TV_UNIT
+  UNIT: KPAA
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Kilopascal absolute
+  FIN_CODE: null
+  LABEL: kPa(a)
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KPAA
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPAA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BARA
+    parentKeys:
+      TV_UNIT.UNIT: KPAA
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPAA
+      MULT_FACT: 0.01
+      PRECISION: null
+      TO_UNIT: BARA
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPAA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KPAG
+    parentKeys:
+      TV_UNIT.UNIT: KPAA
+    properties:
+      ADD_NUMB: -101.325
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPAA
+      MULT_FACT: 1.0
+      PRECISION: 6.0
+      TO_UNIT: KPAG
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPAA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MPAA
+    parentKeys:
+      TV_UNIT.UNIT: KPAA
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPAA
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: MPAA
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPAA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: PSIA
+    parentKeys:
+      TV_UNIT.UNIT: KPAA
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPAA
+      MULT_FACT: 0.145038
+      PRECISION: 6.0
+      TO_UNIT: PSIA
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: PRESS_DIFF
+      T: TV_UOM_SETUP
+      UNIT: KPAA
+    parentKeys:
+      TV_UNIT.UNIT: KPAA
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: PRESS_DIFF
+      REPORT_UNIT: Y
+      UNIT: KPAA
+      VIEW_UNIT: N
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: PRESS_ABS
+      T: TV_UOM_SETUP
+      UNIT: KPAA
+    parentKeys:
+      TV_UNIT.UNIT: KPAA
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: PRESS_ABS
+      REPORT_UNIT: Y
+      UNIT: KPAA
+      VIEW_UNIT: N

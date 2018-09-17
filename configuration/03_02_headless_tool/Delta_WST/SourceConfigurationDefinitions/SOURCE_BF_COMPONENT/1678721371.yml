@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1678721371'
+keys:
+  BF_CODE: WR.0066
+  T: BF_COMPONENT
+  URL: /WellParentObject
+parentKeys: {}
+properties:
+  BF_CODE: WR.0066
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0066' AND NVL(URL,'IS_NULL') = '/WellParentObject')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_finder' )
+  CLASS_NAME: null
+  COMP_CODE: WellParentObject
+  NAME: Well Parent Object
+  SIGNING_REQ_IND: null
+  URL: /WellParentObject
+related: {}

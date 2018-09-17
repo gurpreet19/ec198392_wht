@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '62294789'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/well_product_analysis
+parentKeys: {}
+properties:
+  BF_CODE: WR.0072
+  NAME: Well Product Yield Factors
+  PROFILE_CLASS_NAME: WELL
+  URL: /com.ec.prod.wr.screens/well_product_analysis
+related: {}

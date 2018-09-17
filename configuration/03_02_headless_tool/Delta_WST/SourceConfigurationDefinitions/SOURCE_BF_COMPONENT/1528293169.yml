@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1528293169'
+keys:
+  BF_CODE: GD.0110
+  T: BF_COMPONENT
+  URL: /daycntrtransfnom_tab2
+parentKeys: {}
+properties:
+  BF_CODE: GD.0110
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0110' AND NVL(URL,'IS_NULL') = '/daycntrtransfnom_tab2')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/monthly_contract_balance/BF_PROFILE/GD.0110/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT/CLASS/TRCN_MTH_NOM_BAL/CLASS_2/TRNP_MTH_NOM_BAL_CNT_IN/CLASS_3/TRNP_MTH_NOM_TRANSF_BAL/CLASS_4/TRNP_MTH_NOM_BAL_CN_OUT/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNP_MTH_NOM_TRANSF_BAL
+  COMP_CODE: daycntrtransfnom_tab2
+  NAME: transfer Nomination Balance tab2
+  SIGNING_REQ_IND: null
+  URL: /daycntrtransfnom_tab2
+related: {}

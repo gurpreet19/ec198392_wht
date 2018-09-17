@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '282136759'
+keys:
+  BF_DESCRIPTION_NO: GD.0033
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_contract_loc_swap/CLASS_NAME/CNTR_DAY_INV_SWAP/BF_PROFILE/GD.0033' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to swap inventory on a contract or between contracts.</p><p>Many pipeline operators allow the Shippers to store part of their gas in the pipeline itself. If they do that the shipper have an inventory on the pipeline. This can be&nbsp;achieved in different ways, but the most common one is to deliver more into the pipeline that what is taken out. Another way of getting an increase or decrease in the&nbsp;inventory is to trade or swap inventory. The process trading/swapping is often individual to each pipeline.</p>
+related: {}

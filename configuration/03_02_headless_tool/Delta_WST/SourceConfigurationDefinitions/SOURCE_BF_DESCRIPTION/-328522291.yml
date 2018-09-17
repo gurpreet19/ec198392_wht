@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-328522291'
+keys:
+  BF_DESCRIPTION_NO: CD.0082
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0082
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/inputlist_management' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Input List Setup screen</strong>    is used to connect Stream Items to a List (defined in Input List screen - BF CD.0035).</p><p>    The lists are used in the Daily / Monthly List Input / Overview screens in    the Volume module for EC Revenue.</p>
+related: {}

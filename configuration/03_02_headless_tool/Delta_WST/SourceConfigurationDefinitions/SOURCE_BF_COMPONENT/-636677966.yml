@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-636677966'
+keys:
+  BF_CODE: CO.2085
+  T: BF_COMPONENT
+  URL: /tran_zone
+parentKeys: {}
+properties:
+  BF_CODE: CO.2085
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2085' AND NVL(URL,'IS_NULL') = '/tran_zone')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/transport_zone_connection/NAV_MODEL/TRAN_OPERATIONAL/TARGET/TRANSPORT_SYSTEM' )
+  CLASS_NAME: TRANSPORT_ZONE_LIST
+  COMP_CODE: tran_zone
+  NAME: Transport Zone List
+  SIGNING_REQ_IND: null
+  URL: /tran_zone
+related: {}

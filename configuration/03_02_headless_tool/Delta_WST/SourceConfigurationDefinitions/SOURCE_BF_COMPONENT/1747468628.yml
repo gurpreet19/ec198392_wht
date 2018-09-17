@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1747468628'
+keys:
+  BF_CODE: SP.0041
+  T: BF_COMPONENT
+  URL: /cost_mapping_documents
+parentKeys: {}
+properties:
+  BF_CODE: SP.0041
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0041' AND NVL(URL,'IS_NULL') = '/cost_mapping_documents')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/N' )
+  CLASS_NAME: CONT_MAPPING_DOC
+  COMP_CODE: cost_mapping_documents
+  NAME: Data Mapping Documents
+  SIGNING_REQ_IND: null
+  URL: /cost_mapping_documents
+related: {}

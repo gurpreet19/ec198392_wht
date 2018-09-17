@@ -1,0 +1,47 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1480408045'
+keys:
+  BF_DESCRIPTION_NO: CO.0027
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0027
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STREAM/TARGET/STREAM/CLASS_NAME/STREAM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>The stream concept in EC is very central to the entire functional\
+    \ operation of the Energy Component system.  It represents movement of all sorts\
+    \ of entities (e.g oil, water, NLG, flare gas, power fluid) between junction points,\
+    \ called &ldquo;nodes&rdquo;, in a logical flow schematic, called a &ldquo;stream\
+    \ node diagram&rdquo;.  The stream concept is represented in the system by a dedicated\
+    \ and highly configurable object class &ldquo;STREAM&rdquo;.  Together with nodes,\
+    \ streams form the core set-up for creating allocation networks in EC.</p>\n\n\
+    <p>Streams can represent:\n<p>-\tReal physical measurements, where data for one\
+    \ physical meter is transferred directly from the DSC system and stored as data\
+    \ for the stream.</p>\n<p>-\tReal physical measurements, where data for many parallel\
+    \ physical meters are captured and averaged by DCS system before transfer and\
+    \ storage as data for a stream.</p>\n<p>-\tDerived measurements that do not exist\
+    \ in the DCS system, but can be produced by applying mathematical and/or logical\
+    \ operations to a group of physical measurements.  A simple example is total flare,\
+    \ which might be calculated as the sum of low pressure and high pressure flare.\
+    \ Data for derived streams are not stored, but calculated on the fly whenever\
+    \ required.  Depending on the complexity of the logic and calculations, the derived\
+    \ streams can be implemented as &ldquo;formula&rdquo; -streams (CO.0081) or &ldquo;derived&rdquo;\
+    \ -streams.  The latter involves PL/SQL package programming.</p>\n<p>-\tDerived\
+    \ theoretical data can also be represented by streams.  In this case, there is\
+    \ no physical rate-meter providing input, but rather a collection of sensor data\
+    \ that is interpreted by EC in order to produce a theoretical flow rate.  Various\
+    \ Aggregates of such theoretical rates may be combined in a derived stream.</p>\n\
+    <p>-\tCalculated measurements, where data is calculated by the allocation program\
+    \ and stored in the database. Data for calculated measurements cannot be edited\
+    \ by the end user.</p>\n\n<p>Stream objects are mostly defined for measurements\
+    \ or theoretical rates occurring between various gathering points in the configured\
+    \ system.  It is not common practice to define stream objects for the flow between\
+    \ a single well and the well flowline gathering station (e.g. the test station).\
+    \  Often, this would require the asset configuration team to create thousands\
+    \ of streams initially, and perhaps 60 pr. week on a regular basis (1 pr. phase\
+    \ pr. new well).  Fortunately, this is handled automatically be the system.  The\
+    \ allocation process is creating all the necessary well streams in memory on the\
+    \ fly as virtual streams, thus eliminating the need for manual creation of individual\
+    \ well flowline streams</p>\n"
+related: {}

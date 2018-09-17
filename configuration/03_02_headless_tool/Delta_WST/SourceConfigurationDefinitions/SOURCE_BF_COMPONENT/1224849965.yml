@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1224849965'
+keys:
+  BF_CODE: MHM.0007
+  T: BF_COMPONENT
+  URL: /ResendInboundButton/Cancel
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0007
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0007' AND NVL(URL,'IS_NULL') = '/ResendInboundButton/Cancel')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_journal' )
+  CLASS_NAME: null
+  COMP_CODE: ResendInboundButton/Cancel
+  NAME: Resend Inbound/Cancel
+  SIGNING_REQ_IND: null
+  URL: /ResendInboundButton/Cancel
+related: {}

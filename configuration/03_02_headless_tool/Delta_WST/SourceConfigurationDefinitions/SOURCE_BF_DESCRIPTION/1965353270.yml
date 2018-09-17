@@ -1,0 +1,70 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1965353270'
+keys:
+  BF_DESCRIPTION_NO: CD.0014
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/COMPANY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The Company object defines the companies in use in EC in general. The Company object is shared among all the different EC product areas. The object belongs to the EC Framework but there are some additional attributes and relations added to the class by EC Revenue.</p>
+
+    <p>In the EC Revenue context the Company object is used for the following:</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;STREAM_ITEM</p>
+
+    <p>Each Stream Item has a connection to a Company Object, either a specific company or the XX_FULL Company. This relation tells the ownership of the hydrocarbon quantities stored at the Stream Item in question.</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;SPLIT_COMPANY</p>
+
+    <p>The Company Split Key objects for splitting between Company objects has a relation to the Company object.</p>
+
+    <p>Stream Items of type SK (Split Key) can use a Company Split Key where the split is among one or more Company Objects.</p>
+
+    <p>&middot; SPLIT_COMPANY: COMPANY-&gt;STREAM_ITEM</p>
+
+    <p>For Stream Items of type SK where the Split Key in use is a Company Split Key there is also an additional relation to the Company object telling which Company to pick the share for. This means that one can technically pick a different Company compared to the Company of the Stream Item itself (not normal!).</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;SPLIT_KEY_SETUP_COMPANY</p>
+
+    <p>Transaction Templates has relations to Stream Items for distribution to Company level.</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;CONTRACT</p>
+
+    <p>Each Contract has a relation to a Company object telling which Company that owns the Contract &ndash; Contract Owner Company.</p>
+
+    <p>&middot; SELF_COMPANY: COMPANY-&gt;CUSTOMER</p>
+
+    <p>Each Customer will have a relation to a Company object for telling which Company the Customer is linked to. This is used for finding the Customer corresponding to the Contract Owner Company of the contract. This is then used for inserting automatically the Customer into the Company Splits for Purchase, Tariff Income, and Journal Entry contracts. So for each Company object that can own contracts there should be a corresponding Customer object which has the Company relation set to the Company object.</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;INVENTORY</p>
+
+    <p>Each Inventory object has a relation to Company telling which Company that owns the Inventory Object.</p>
+
+    <p>&middot; OPERATOR: COMPANY-&gt;FIELD</p>
+
+    <p>Each Field object may have a relation to a Company object telling which Company that is the Operator of the Field.</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;FIN_ACCOUNT_MAPPING</p>
+
+    <p>An Account Mapping object may have a relation to Company if the Account Mapping in question is Company-specific.</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;FIN_COST_OBJECT</p>
+
+    <p>A Cost object will have a relation to Company to tell which Company the Cost Object in question is for.</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;FORECAST</p>
+
+    <p>Then defining Forecast object there is also a relation to Company telling which company the Forecast case is for.</p>
+
+    <p>&middot; COMPANY: COMPANY-&gt;PRODUCT_SALES_ORDER</p>
+
+    <p>The Product Sales Order object has a relation to Company telling which Company the Product Sales Order belongs to.</p>
+
+    <p>&middot; SELF_COMPANY: COMPANY-&gt;VENDOR</p>
+
+    <p>Each Vendor will have a relation to a Company object for telling which Company the Vendor is linked to. This is used for finding the Vendor corresponding to the Contract Owner Company of the contract. This is then used for inserting automatically the Vendor into the Company Splits for Sales, Tariff Cost, and Journal Entry contracts. So for each Company object that can own contracts there should be a corresponding Vendor object which has the Company relation set to the Company object.</p>
+related: {}

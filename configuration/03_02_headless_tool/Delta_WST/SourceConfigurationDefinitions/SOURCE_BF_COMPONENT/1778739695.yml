@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1778739695'
+keys:
+  BF_CODE: CO.2070
+  T: BF_COMPONENT
+  URL: /canal_transit_penalty
+parentKeys: {}
+properties:
+  BF_CODE: CO.2070
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2070' AND NVL(URL,'IS_NULL') = '/canal_transit_penalty')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/canal_transit' )
+  CLASS_NAME: CANAL_TRANSIT_PENALTY
+  COMP_CODE: canal_transit_penalty
+  NAME: Canal Transit Penalty
+  SIGNING_REQ_IND: null
+  URL: /canal_transit_penalty
+related: {}

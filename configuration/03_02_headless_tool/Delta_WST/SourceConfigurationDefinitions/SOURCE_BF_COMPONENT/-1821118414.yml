@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1821118414'
+keys:
+  BF_CODE: FC.0020
+  T: BF_COMPONENT
+  URL: /dailyOpRestriction
+parentKeys: {}
+properties:
+  BF_CODE: FC.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.0020' AND NVL(URL,'IS_NULL') = '/dailyOpRestriction')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_daily_operational_restriction/DATA_CLASS/FCST_OPRES_DAY_RESTRICT' )
+  CLASS_NAME: FCST_OPRES_DAY_RESTRICT
+  COMP_CODE: dailyOpRestriction
+  NAME: Daily Operational Restriction
+  SIGNING_REQ_IND: null
+  URL: /dailyOpRestriction
+related: {}

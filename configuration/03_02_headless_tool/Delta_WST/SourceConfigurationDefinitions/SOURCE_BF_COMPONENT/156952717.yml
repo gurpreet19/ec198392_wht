@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '156952717'
+keys:
+  BF_CODE: CO.0154
+  T: BF_COMPONENT
+  URL: /well_bore_intervals
+parentKeys: {}
+properties:
+  BF_CODE: CO.0154
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0154' AND NVL(URL,'IS_NULL') = '/well_bore_intervals')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/perf_interval_split' )
+  CLASS_NAME: WELL_BORE_INTERVAL
+  COMP_CODE: well_bore_intervals
+  NAME: Well Bores Intervals
+  SIGNING_REQ_IND: null
+  URL: /well_bore_intervals
+related: {}

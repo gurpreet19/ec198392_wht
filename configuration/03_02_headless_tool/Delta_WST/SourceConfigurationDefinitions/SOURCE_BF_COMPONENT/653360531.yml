@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '653360531'
+keys:
+  BF_CODE: IN.0034
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: IN.0034
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0034' AND NVL(URL,'IS_NULL') = '/table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/manage_template_inventory' )
+  CLASS_NAME: TRANS_INV_TMPL_SET_SETUP
+  COMP_CODE: Trans_Inv_Set_List_table
+  NAME: Transaction Inventory Set List
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2053930612'
+keys:
+  BF_CODE: CP.0023
+  T: BF_COMPONENT
+  URL: /events
+parentKeys: {}
+properties:
+  BF_CODE: CP.0023
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0023' AND NVL(URL,'IS_NULL') = '/events')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/process_train_event' )
+  CLASS_NAME: PROCESS_TRAIN_EVENT
+  COMP_CODE: events
+  NAME: events
+  SIGNING_REQ_IND: null
+  URL: /events
+related: {}

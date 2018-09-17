@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1362994917'
+keys:
+  BF_CODE: PR.0032
+  T: BF_COMPONENT
+  URL: /fcst_monthly_price_index
+parentKeys: {}
+properties:
+  BF_CODE: PR.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PR.0032' AND NVL(URL,'IS_NULL') = '/fcst_monthly_price_index')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/fcst_monthly_price_index' )
+  CLASS_NAME: FCST_PRICE_INDEX_MTH
+  COMP_CODE: fcst_monthly_price_index
+  NAME: Forecast Monthly Price Index
+  SIGNING_REQ_IND: null
+  URL: /fcst_monthly_price_index
+related: {}

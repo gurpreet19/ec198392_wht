@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1620842371'
+keys:
+  BF_CODE: PP.0042
+  T: BF_COMPONENT
+  URL: /component_set
+parentKeys: {}
+properties:
+  BF_CODE: PP.0042
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0042' AND NVL(URL,'IS_NULL') = '/component_set')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/well_component_forecast/CLASS_NAME/FCST_WELL_OIL/PHASE/OIL/COMPONENT_SET_CLASS/FCST_WELL_OIL_COMPONENT/COMP_SET/WELL_OIL_COMP' )
+  CLASS_NAME: FCST_WELL_OIL_COMPONENT
+  COMP_CODE: component_set
+  NAME: Component Set
+  SIGNING_REQ_IND: null
+  URL: /component_set
+related: {}

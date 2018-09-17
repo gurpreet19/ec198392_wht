@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-703541541'
+keys:
+  NAME: showTickLabels
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: GAS_RECONCILIATION_FACTOR
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Show Tick Labels
+  MANDATORY_IND: N
+  NAME: showTickLabels
+  PARAMETER_SUB_TYPE: BOOL
+  PARAMETER_TYPE: BASIC_TYPE
+  PARAMETER_VALUE: Y
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 90.0
+  USER_EDITABLE_IND: Y
+  WIDGET_CODE: GAS_RECONCILIATION_FACTOR
+related: {}

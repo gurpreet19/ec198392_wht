@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '435959504'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/prod_forecast
+parentKeys: {}
+properties:
+  BF_CODE: PP.0023
+  NAME: Production Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/prod_forecast
+related: {}

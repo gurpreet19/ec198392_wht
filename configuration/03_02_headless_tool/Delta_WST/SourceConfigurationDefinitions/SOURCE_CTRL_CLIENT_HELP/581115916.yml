@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '581115916'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/daily_prod_unit_forecast/CLASS_NAME/FCST_PRODUNIT_DAY_STATUS
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/daily_prod_unit_forecast/CLASS_NAME/FCST_PRODUNIT_DAY_STATUS
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

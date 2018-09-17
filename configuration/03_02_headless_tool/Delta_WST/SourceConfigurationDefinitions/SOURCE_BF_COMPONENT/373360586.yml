@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '373360586'
+keys:
+  BF_CODE: GD.0116
+  T: BF_COMPONENT
+  URL: /sub_daily_np_summary_matrix
+parentKeys: {}
+properties:
+  BF_CODE: GD.0116
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0116' AND NVL(URL,'IS_NULL') = '/sub_daily_np_summary_matrix')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_summary_matrix/TARGET/NOMINATION_LOCATION/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0116/CLASS1/TRNL_SUB_DAY_NOM_MATRIX/CLASS2/TRNP_SUB_DAY_LOC_MATRIX/NOMINATION_CYCLE/FALSE' )
+  CLASS_NAME: TRNP_SUB_DAY_LOC_MATRIX
+  COMP_CODE: sub_daily_np_summary_matrix
+  NAME: Sub Daily Nomination Point Summary Matrix
+  SIGNING_REQ_IND: null
+  URL: /sub_daily_np_summary_matrix
+related: {}

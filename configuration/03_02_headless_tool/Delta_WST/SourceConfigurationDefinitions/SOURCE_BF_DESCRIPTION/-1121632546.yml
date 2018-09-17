@@ -1,0 +1,21 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1121632546'
+keys:
+  BF_DESCRIPTION_NO: SP.0029
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0029
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/general_price_object/CLASS_NAME/PRICE_OBJECT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>General Price Object Setup screen</strong>    is used
+    to connect one or more General Price Objects (CD.0011) to a Contract.<br>    The
+    General Price Objects are available to any number of Contracts.</p><p>    <strong>
+    <em> The screen is divided into following sections: </em> </strong></p><p>    <strong><em>-
+    Filter Navigator:</em></strong><br>    The Filter Navigator lists all the contracts
+    being valid at the date and Business Unit selected in the Filter Navigator.</p><p>    <strong><em>-
+    Contract Table:</em></strong><br>    This section lists all the Contracts.</p><p>    <strong><em>-
+    General Price Object Table:</em></strong><br>    This section lists all the General
+    Price objects connected to the selected Contract.</p>'
+related: {}

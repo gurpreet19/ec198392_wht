@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-979101312'
+keys:
+  BF_CODE: SP.0039
+  T: BF_COMPONENT
+  URL: /SetupButton/preview
+parentKeys: {}
+properties:
+  BF_CODE: SP.0039
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0039' AND NVL(URL,'IS_NULL') = '/SetupButton/preview')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_cost_mapping' )
+  CLASS_NAME: null
+  COMP_CODE: SetupButton/preview
+  NAME: SetupButton/preview
+  SIGNING_REQ_IND: null
+  URL: /SetupButton/preview
+related: {}

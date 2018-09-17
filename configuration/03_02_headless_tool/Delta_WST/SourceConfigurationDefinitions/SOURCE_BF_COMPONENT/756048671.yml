@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '756048671'
+keys:
+  BF_CODE: SP.0055
+  T: BF_COMPONENT
+  URL: /unapprove_button
+parentKeys: {}
+properties:
+  BF_CODE: SP.0055
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0055' AND NVL(URL,'IS_NULL') = '/unapprove_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/ifac_journal_entry/NAV_MODEL/DATA_INTERFACE/NAV_TARGET/BUSINESS_UNIT' )
+  CLASS_NAME: null
+  COMP_CODE: unapprove_button
+  NAME: UnApprove Button
+  SIGNING_REQ_IND: null
+  URL: /unapprove_button
+related: {}

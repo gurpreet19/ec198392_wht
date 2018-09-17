@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '69925876'
+keys:
+  BF_CODE: TO.0013
+  T: BF_COMPONENT
+  URL: /batch
+parentKeys: {}
+properties:
+  BF_CODE: TO.0013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0013' AND NVL(URL,'IS_NULL') = '/batch')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/batch_quantity' )
+  CLASS_NAME: CARGO_STOR_BATCH
+  COMP_CODE: batch
+  NAME: Cargo Batch
+  SIGNING_REQ_IND: null
+  URL: /batch
+related: {}

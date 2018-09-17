@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '235435664'
+keys:
+  COMPONENT_ID: ( SELECT 'GD_CP_TRAN_FACTOR' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.gd.screens/component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/TRNP_EVENT_CP_TRAN_FAC/BF_PROFILE/GD.0085/CLASS_DAY/TRNL_EVENT_TRAN_FAC_DAY?screentemplate=/com.ec.tran.gd.screens/component_recovery_factors
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'GD_CP_TRAN_FACTOR' FROM DUAL )
+  COMPONENT_LABEL: Period Component Recovery Factors
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'TRAN_GD_SC' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 100.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

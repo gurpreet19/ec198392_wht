@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1571128504'
+keys:
+  T: TV_UNIT
+  UNIT: MBBLS15
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Million Barrels at 15C
+  FIN_CODE: null
+  LABEL: MBbls @15C
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MBBLS15
+  UOM_GROUP: V
+  UOM_SUBGROUP: null
+related: {}

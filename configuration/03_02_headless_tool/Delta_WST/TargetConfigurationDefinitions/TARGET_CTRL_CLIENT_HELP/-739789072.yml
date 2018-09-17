@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-739789072'
+keys:
+  EC_CLIENT_OBJ: /com.ec.sale.pr.screens/price_index_daily_with_dim/CLASS/PRICE_IDX_DS_PO_DAY_VAL
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.sale.pr.screens/price_index_daily_with_dim/CLASS/PRICE_IDX_DS_PO_DAY_VAL
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,56 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_TASKACTORPOOL
+cnstPrimaryKey:
+  columns:
+  - TASKINSTANCE_
+  - POOLEDACTOR_
+  name: SYS_C0015695
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  POOLEDACTOR_:
+    columnName: POOLEDACTOR_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  TASKINSTANCE_:
+    columnName: TASKINSTANCE_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+cnstForeignKeys:
+  FK_TASKACTPL_TSKI:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_TASKINSTANCE
+    columns:
+      TASKINSTANCE_: ID_
+    name: FK_TASKACTPL_TSKI
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TSKACTPOL_PLACT:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_POOLEDACTOR
+    columns:
+      POOLEDACTOR_: ID_
+    name: FK_TSKACTPOL_PLACT
+    type: FOREIGNKEY
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

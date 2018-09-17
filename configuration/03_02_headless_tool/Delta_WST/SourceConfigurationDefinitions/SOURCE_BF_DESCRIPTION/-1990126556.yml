@@ -1,0 +1,37 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1990126556'
+keys:
+  BF_DESCRIPTION_NO: CO.1030
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/xsd_downloads' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>The XSD Downloads screen allows users to generate and download
+    XML Schema Design (XSD) files for EC classes. This can either be done for single
+    classes selected by the user, or for all the classes in EC.</p><p>The XSD functionality
+    is used exclusively together with the EC Web Services.</p><p>XSDs are used to
+    describe the structure of the XML documents returned from the GetClassData web
+    service function. Since each class has a different structure, the documents generated
+    by this function will vary depending on the class queried. Therefore, there is
+    one XSD document corresponding to each class. As a convenience, all of the XSDs
+    (one for each class) can be downloaded as a single zip file.</p><p>The XSDs can
+    be used in the Web Service client either for validating data or for code generation
+    of client data structures. Users may also utilize XSDs within other XML technologies,
+    such as Web Services Description Language (WSDL) files, for further creation and
+    implementation of web services.</p><p>Note that since EC classes are dynamic and
+    changeable by configuration, any generated XSD code would need to be updated (i.e.
+    regenerated) whenever a class is changed.</p><p>The navigator at the top of the
+    screen consists of a dropdown for supported class types (e.g. DATA, OBJECT, etc),
+    and another one for the corresponding classes. Below this navigator are two buttons:
+    ‘Get Class XSD’ is used to generate and download a single XSD for the selected
+    class; ‘Get All XSDs in Zip Format’ generates XSDs for all EC classes, and zips
+    them into a downloadable file.</p><p>If either one of the above buttons is clicked,
+    a download window appears, allowing the user to select the target location of
+    the download. The name of the download file will either be the name of the selected
+    class (e.g. WELL.xsd), or ‘EcXSDs.zip’, which should include XSDs for all classes.</p><p>The
+    ‘Get Class XSD’ button requires a class to be selected in the navigator. An error
+    appears if the Class Name field is empty.</p>'
+related: {}

@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '320142250'
+keys:
+  CODE: PP.0040
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PP.0040
+  NAME: Stream Gas Component Forecast
+related: {}

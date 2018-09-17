@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-404456347'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/split_key/SPLIT_TYPE/SPLIT_ITEM_OTHER
+parentKeys: {}
+properties:
+  BF_CODE: CD.0047
+  NAME: Other Split Key Shares
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/split_key/SPLIT_TYPE/SPLIT_ITEM_OTHER
+related: {}

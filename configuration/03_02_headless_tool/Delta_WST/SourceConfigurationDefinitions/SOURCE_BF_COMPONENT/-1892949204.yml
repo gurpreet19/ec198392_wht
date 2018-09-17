@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1892949204'
+keys:
+  BF_CODE: RP.0006
+  T: BF_COMPONENT
+  URL: /purge_report_btn
+parentKeys: {}
+properties:
+  BF_CODE: RP.0006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0006' AND NVL(URL,'IS_NULL') = '/purge_report_btn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_queue_status' )
+  CLASS_NAME: null
+  COMP_CODE: purge_report_btn
+  NAME: Purge Report
+  SIGNING_REQ_IND: null
+  URL: /purge_report_btn
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '235950834'
+keys:
+  BF_CODE: TO.0009
+  T: BF_COMPONENT
+  URL: /merge_cargo_docs
+parentKeys: {}
+properties:
+  BF_CODE: TO.0009
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0009' AND NVL(URL,'IS_NULL') = '/merge_cargo_docs')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_document/COLUMN_SORT/RUN_DATE/SORT_TYPE/DESC' )
+  CLASS_NAME: null
+  COMP_CODE: merge_cargo_docs
+  NAME: MergeCargoDocuments
+  SIGNING_REQ_IND: null
+  URL: /merge_cargo_docs
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1040494700'
+keys:
+  BF_CODE: FI.0005
+  T: BF_COMPONENT
+  URL: /entry_list
+parentKeys: {}
+properties:
+  BF_CODE: FI.0005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0005' AND NVL(URL,'IS_NULL') = '/entry_list')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_entry/TIME_SPAN/DAY' )
+  CLASS_NAME: FIN_ITEM_ENTRY
+  COMP_CODE: entry_list
+  NAME: FINANCIAL ITEM
+  SIGNING_REQ_IND: null
+  URL: /entry_list
+related: {}

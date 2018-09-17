@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '927560633'
+keys:
+  BF_DESCRIPTION_NO: SP.0035
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_company_details' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Document Vendors screen</strong>    defines the various Vendor payment information that can be generated for a document.</p><p>    <strong><em>The BF is divided into following sections:</em></strong></p><p>    <strong><em>- Filter Navigator:</em></strong><br>    The Filter Navigator lists all the contracts being valid at the date and Business Unit selected in the Filter Navigator.</p><p>    <strong><em>- Contract Table:</em></strong><br>    This section lists all the Contracts.</p><p>    <strong><em>- Document List:</em></strong><br>    This section lists all the documents defined for the selected Contract.</p><p>    <strong><em>- Vendor Payment Details:</em></strong><br>    This section lists all the attributes and defined for a vendor payment information.</p>
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-499872329'
+keys:
+  BF_DESCRIPTION_NO: PP.0058
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_quota_nomination/CLASS_NAME/FCST_QUOTA_NOM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This is a Business Function for capturing Quotas and Nominations for a Scenario. This screen is used to enter quotas and nominations for Oil, Condensate and Gas.</p>
+    <p>The data in this screen is displayed based on &quot;Valid From&quot; which means that each value is valid until there is a new value entered.</p>
+    <p>The data in this screen can be used for forecast calculations.</p>
+related: {}

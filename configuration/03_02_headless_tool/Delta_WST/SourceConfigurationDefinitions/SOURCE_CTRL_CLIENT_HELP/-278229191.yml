@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-278229191'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.wr.screens/sub_daily_validation/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_SUB_DAY_VALID
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.wr.screens/sub_daily_validation/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_SUB_DAY_VALID
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

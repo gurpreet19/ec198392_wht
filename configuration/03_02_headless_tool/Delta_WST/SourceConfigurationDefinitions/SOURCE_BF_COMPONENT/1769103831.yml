@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1769103831'
+keys:
+  BF_CODE: CO.0246
+  T: BF_COMPONENT
+  URL: /objectdates_fin_item_group
+parentKeys: {}
+properties:
+  BF_CODE: CO.0246
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0246' AND NVL(URL,'IS_NULL') = '/objectdates_fin_item_group')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/calculation_group' )
+  CLASS_NAME: FIN_ITEM_GROUP
+  COMP_CODE: objectdates
+  NAME: Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /objectdates_fin_item_group
+related: {}

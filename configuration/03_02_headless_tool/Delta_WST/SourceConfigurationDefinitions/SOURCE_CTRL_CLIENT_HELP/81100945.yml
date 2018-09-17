@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '81100945'
+keys:
+  EC_CLIENT_OBJ: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_RATE_DS_MTH_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_RATE/TARGET_TYPE/self
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_RATE_DS_MTH_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_RATE/TARGET_TYPE/self
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

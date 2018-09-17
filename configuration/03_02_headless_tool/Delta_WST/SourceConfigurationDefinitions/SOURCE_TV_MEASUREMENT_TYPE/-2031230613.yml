@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2031230613'
+keys:
+  MEASUREMENT_TYPE: METER_RUN_SIZE
+  T: TV_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: Meter Run Diameter
+  FORMAT_MASK: '###,###,##0.0'
+  MEASUREMENT_TYPE: METER_RUN_SIZE
+related: {}

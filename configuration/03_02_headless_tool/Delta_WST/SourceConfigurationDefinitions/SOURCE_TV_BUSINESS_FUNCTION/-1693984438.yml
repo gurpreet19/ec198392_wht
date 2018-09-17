@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1693984438'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_SALES_ORDER
+parentKeys: {}
+properties:
+  BF_CODE: CD.0033
+  NAME: Sales Order
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_SALES_ORDER
+related: {}

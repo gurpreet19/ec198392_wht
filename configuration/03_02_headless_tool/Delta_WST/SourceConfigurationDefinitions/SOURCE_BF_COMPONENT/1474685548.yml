@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1474685548'
+keys:
+  BF_CODE: IN.0026
+  T: BF_COMPONENT
+  URL: /trans_msg
+parentKeys: {}
+properties:
+  BF_CODE: IN.0026
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0026' AND NVL(URL,'IS_NULL') = '/trans_msg')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inv_line' )
+  CLASS_NAME: TRANS_INV_MSG
+  COMP_CODE: trans_msg
+  NAME: Trans Inventory Message
+  SIGNING_REQ_IND: null
+  URL: /trans_msg
+related: {}

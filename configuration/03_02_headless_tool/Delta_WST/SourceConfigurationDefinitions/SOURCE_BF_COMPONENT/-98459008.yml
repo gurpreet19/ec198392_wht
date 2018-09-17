@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-98459008'
+keys:
+  BF_CODE: PO.0035
+  T: BF_COMPONENT
+  URL: /maintainStreamProfitCentreSplitTable
+parentKeys: {}
+properties:
+  BF_CODE: PO.0035
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0035' AND NVL(URL,'IS_NULL') = '/maintainStreamProfitCentreSplitTable')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_profit_centre_split' )
+  CLASS_NAME: STRM_PC_SPLIT
+  COMP_CODE: maintainStreamProfitCentreSplitTable
+  NAME: Maintain Stream Profit Centre Split
+  SIGNING_REQ_IND: null
+  URL: /maintainStreamProfitCentreSplitTable
+related: {}

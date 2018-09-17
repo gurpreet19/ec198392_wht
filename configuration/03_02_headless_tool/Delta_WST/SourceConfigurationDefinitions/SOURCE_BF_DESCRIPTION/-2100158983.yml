@@ -1,0 +1,30 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2100158983'
+keys:
+  BF_DESCRIPTION_NO: CA.0003
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CA.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ca.screens/port_log' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<div class="WordSection1"><p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;line-height:normal;background:white"><span
+    style="font-size: 10pt; font-family: Arial, sans-serif;">This screen is used to
+    record when a certain set of defined events occurred during a lifting operation,
+    from when the vessel arrives until it departs</span><span style="font-size: 10.5pt;
+    font-family: Arial, sans-serif;">.<o:p></o:p></span></p><p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;line-height:normal;background:white"><span
+    style="font-size: 10.5pt; font-family: Arial, sans-serif;">&nbsp;</span><span
+    style="font-size: 10pt; font-family: Arial, sans-serif;">A port log, sometimes
+    also referred to as ''''time sheet'''', is a required activity when lifting to
+    tankers, and forms part of the official document set associated with a cargo lifting.
+    A subset of these data is also used in the Sailing Advice - another document that
+    the vessel must have before harboring</span></p><p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;line-height:normal;background:white"></p><p
+    class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;line-height:normal;background:white"><span
+    style="font-size: 10.5pt; font-family: Arial, sans-serif;">&nbsp;</span><span
+    style="font-size: 10pt; font-family: Arial, sans-serif;">The set of events to
+    be recorded is normally defined in the lifting procedure for the terminal</span><span
+    style="font-size: 10.5pt; font-family: Arial, sans-serif;">,</span><span style="font-size:
+    10pt; font-family: Arial, sans-serif;">&nbsp;and quite often consists of 19 pre-defined
+    events.</span><span style="font-size: 10.5pt; font-family: Arial, sans-serif;"><o:p></o:p></span></p></div>'
+related: {}

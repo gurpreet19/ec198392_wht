@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '512572311'
+keys:
+  BF_DESCRIPTION_NO: RP.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The purpose of the Report Template screen is to specify the interface to reports in the report system. The interface is defined by a set of parameters for the report. In this context, a report parameter has a <em>name, type,</em> <em>sub type </em>and<em> description</em>. There is a predefined set of parameter types and sub types to choose from. The report templates will be used by the Report Definition BF where the values of the parameters can be specified.</p><p>When creating a new template in the upper table and storing this, the system parameters will be populated based on the selected system. The connection between system and system parameters is defined by using EC codes.</p><p>The Access Check flag on Report Parameters indicates if the system should control the access to reports, generated reports and published reports, based on the parameter value. This flag is only applicable to parameters of type EC Object Type. The partitioning rules on objects will be used to control access.</p><p>Different types of reports have different parameters. Here is the list of some of them.</p><h4>EXCEL REPORT PARAMETERS</h4><table><tbody><tr><th>Parameter Name</th><th>Description</th></tr><tr><td>EC_SHEET_REMOVAL</td><td>Normally when a report is generated, an EC sheet is part of the report. If the user wants to remove the EC sheet from the generated report, In the Report Template Screen add a parameter named "EC_SHEET_REMOVAL" with "Basic Object" type and Boolean subtype. Then in the Report Administration screen, enable this parameter by ticking the checkbox and generate the report.</td></tr></tbody></table>
+related: {}

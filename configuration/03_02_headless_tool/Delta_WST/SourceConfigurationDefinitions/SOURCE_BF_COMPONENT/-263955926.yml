@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-263955926'
+keys:
+  BF_CODE: SP.0068
+  T: BF_COMPONENT
+  URL: /Class_tab
+parentKeys: {}
+properties:
+  BF_CODE: SP.0068
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0068' AND NVL(URL,'IS_NULL') = '/Class_tab')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_report_ref_item_setup' )
+  CLASS_NAME: null
+  COMP_CODE: Class_tab
+  NAME: Class Tab
+  SIGNING_REQ_IND: null
+  URL: /Class_tab
+related: {}

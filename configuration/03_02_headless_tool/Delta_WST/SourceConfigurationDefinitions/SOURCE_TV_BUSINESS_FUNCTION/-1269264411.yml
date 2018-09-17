@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1269264411'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/setup_object_relations_basic/CLASS_NAME/FIELD_GROUP
+parentKeys: {}
+properties:
+  BF_CODE: CD.0120
+  NAME: Field Group Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/setup_object_relations_basic/CLASS_NAME/FIELD_GROUP
+related: {}

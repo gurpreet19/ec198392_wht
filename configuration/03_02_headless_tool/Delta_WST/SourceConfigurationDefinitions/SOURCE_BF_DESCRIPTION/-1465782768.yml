@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1465782768'
+keys:
+  BF_DESCRIPTION_NO: PP.0062
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_field_forecast/CLASS_NAME/FCST_FIELD_DAY_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This business function is used to define available Daily Field Forecast data, based on date and the selected scenario object. A scenario data can be created using insert functionality, and existing scenario data can be modified as per requirement. It is also possible to delete scenario data records that are no longer required.</p>
+        <p>The same field may also have monthly scenario data and it is registered in a separate business function Monthly Field Forecast (PP.0063) . </p>
+related: {}

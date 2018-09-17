@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '725634702'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: REVN_INV_CNT_CO_BU
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: REVN
+  DESCRIPTION: Inventory Validation Status - Business Unit and Inventory Owner Company
+  LABEL: Inventory Validation Status - Business Unit and Inventory Owner Company
+  NAME: Inventory Validation Status - Business Unit and Inventory Owner Company
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: REVN_INV_CNT_CO_BU
+related: {}

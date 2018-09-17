@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-74250969'
+keys:
+  BF_CODE: PO.0020
+  T: BF_COMPONENT
+  URL: /wt_to_mol_btn
+parentKeys: {}
+properties:
+  BF_CODE: PO.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0020' AND NVL(URL,'IS_NULL') = '/wt_to_mol_btn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_gas_component_analysis/STRM_SET/PO.0020/COMP_SET/STRM_GAS_COMP' )
+  CLASS_NAME: null
+  COMP_CODE: wt_to_mol_button
+  NAME: Wt to Mol Button
+  SIGNING_REQ_IND: null
+  URL: /wt_to_mol_btn
+related: {}

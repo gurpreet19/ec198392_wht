@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-494301825'
+keys:
+  BF_CODE: CD.0072
+  T: BF_COMPONENT
+  URL: /customercountry
+parentKeys: {}
+properties:
+  BF_CODE: CD.0072
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0072' AND NVL(URL,'IS_NULL') = '/customercountry')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/vatregno/CLASS_NAME/VENDOR/SETUP_CLASS/VENDOR_COUNTRY_SETUP' )
+  CLASS_NAME: VENDOR_COUNTRY_SETUP
+  COMP_CODE: CustomerCountry
+  NAME: Customer Country
+  SIGNING_REQ_IND: null
+  URL: /customercountry
+related: {}

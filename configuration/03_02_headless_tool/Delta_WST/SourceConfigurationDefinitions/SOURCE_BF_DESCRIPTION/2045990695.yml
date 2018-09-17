@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2045990695'
+keys:
+  BF_DESCRIPTION_NO: CO.2023
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/shipper_pair' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is for setting up sets of downstream shippers against a (upstream shipper&#39;s) contract.</p><p>The user selects date, contract and delivery point. Any associated downstream shippers are displayed. The user can add new rows (i.e. associated new<br />downstream shippers with the contract), and set date ranges for which the association is valid. There is a &quot;match&quot; flag that is checked for contract-shipper pairs&nbsp;where a matching service is requested. This flag is used during the exit point matching process. If a contract has more than one shipper-pair, the priority column is used to specify in which priority the shipper-pair nomination is changed, if the contract nomination&nbsp;is changed. The shipper-pair with highest priority will be changed first. If two or more shipper-pair have the same priority, then they will be changed pro rata.</p>
+related: {}

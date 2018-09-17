@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1737278074'
+keys:
+  BF_DESCRIPTION_NO: RP.0015
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RP.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_publishing_read_only' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This BF will display all reports which are published at the current time. Typically this screen will be available on an EBB and will give users access to a limited amount of generated or uploaded reports. The screen can be filtered on FUNCTIONAL_AREA when there is a parameter on the tree view url.</p><p>The From Date and To Date in the navigator filter reports based on the Report Date. If the report does not have a report date it will always be displayed.</p><p>The screen supports ring fencing based on the parameter selected for Access Check.</p><p>The View button opens the report in the associated viewer.</p>
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1049027784'
+keys:
+  BF_DESCRIPTION_NO: CO.1001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_access_roles' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>A role is an operational function, such as system custodian or field operator, that can be allocated to each user. This role dictates which screens the particular user will see and what functions he or she can perform.</p><p>The Role Maintenance screen is used to maintain roles and connect them to existing objects, e.g. URLs. It is possible to assign new or remove existing objects to the role and to update the access level for objects. Only predefined access levels can be selected.</p><p>To insert a new role, click the "Insert" icon in the toolbar and choose <em>Roles. </em></p><p>By selecting a role in the role table, all objects assigned to this role will be listed in the objects table.</p><p>New objects can be assigned to a role by clicking the "Insert" icon in the toolbar and choosing <em>Objects</em>. Choose an object in the popup list, choose the appropriate access level and click the "Save" icon in the toolbar to save.</p><p>To change the access level on an object for a role, select a new access level for this object and press "Save".</p><p>Objects can also be deleted from a role. Select the object that is to be deleted, click the "Delete" icon in the toolbar and choose <em>Objects</em>. The selected object will be marked for deletion. Then click the "Save" icon in the toolbar to actually perform the deletion.</p><p>To delete a role, all objects must first be deleted from the role.</p><p>When a role has no objects connected to it, it can be deleted. Select the role that is to be deleted, click the "Delete" icon in the toolbar and choose <em>Roles. </em>Click the "Save" icon in the toolbar to actually perform the deletion.</p><p>It is possible to copy role settings from an existing role using the "<em>Source Role" </em>dropdown and the <em>"Copy Settings from this Role" </em>button.</p><p>This is convenient when creating a new role that is almost identical to an existing role.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1908933456'
+keys:
+  BF_CODE: CO.0067
+  T: BF_COMPONENT
+  URL: /FlowlineWellConn
+parentKeys: {}
+properties:
+  BF_CODE: CO.0067
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0067' AND NVL(URL,'IS_NULL') = '/FlowlineWellConn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/flowline_well_conn' )
+  CLASS_NAME: FLOWLINE_WELL_CONN
+  COMP_CODE: FlowlineWellConn
+  NAME: Flowline Well Connection
+  SIGNING_REQ_IND: null
+  URL: /FlowlineWellConn
+related: {}

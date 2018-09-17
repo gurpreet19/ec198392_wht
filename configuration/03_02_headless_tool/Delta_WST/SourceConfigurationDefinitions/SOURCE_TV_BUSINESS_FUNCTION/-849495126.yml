@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-849495126'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/test_device_event
+parentKeys: {}
+properties:
+  BF_CODE: PO.0121
+  NAME: Test Device Event Data
+  PROFILE_CLASS_NAME: TEST_DEVICE
+  URL: /com.ec.prod.po.screens/test_device_event
+related: {}

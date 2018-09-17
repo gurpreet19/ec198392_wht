@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-802234931'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_WBS
+parentKeys: {}
+properties:
+  BF_CODE: CD.0127
+  NAME: WBS
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_WBS
+related: {}

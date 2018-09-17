@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-176860356'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/constant_standard/CLASS_NAME/CONST_STD_K_INTERPOL
+parentKeys: {}
+properties:
+  BF_CODE: CO.0166
+  NAME: K1 & K2 Interpolation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens/constant_standard/CLASS_NAME/CONST_STD_K_INTERPOL
+related: {}

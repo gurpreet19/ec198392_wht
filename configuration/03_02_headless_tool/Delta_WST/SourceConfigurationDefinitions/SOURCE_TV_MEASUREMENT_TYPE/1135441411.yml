@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1135441411'
+keys:
+  MEASUREMENT_TYPE: WATER_MASS_RATE
+  T: TV_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: Water mass rate per day
+  FORMAT_MASK: '###,###,##0.0'
+  MEASUREMENT_TYPE: WATER_MASS_RATE
+related: {}

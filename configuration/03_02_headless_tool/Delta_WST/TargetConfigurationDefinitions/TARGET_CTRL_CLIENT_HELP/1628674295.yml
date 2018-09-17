@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1628674295'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/event_gas_stream_data_cp
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/event_gas_stream_data_cp
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

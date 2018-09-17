@@ -1,0 +1,76 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_WORKITEMINFO
+cnstPrimaryKey:
+  columns:
+  - WORKITEMID
+  name: SYS_C008728
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CREATIONDATE:
+    columnName: CREATIONDATE
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  NAME:
+    columnName: NAME
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  OPTLOCK:
+    columnName: OPTLOCK
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  PROCESSINSTANCEID:
+    columnName: PROCESSINSTANCEID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  STATE:
+    columnName: STATE
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  WORKITEMBYTEARRAY:
+    columnName: WORKITEMBYTEARRAY
+    typeName: BLOB
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  WORKITEMID:
+    columnName: WORKITEMID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

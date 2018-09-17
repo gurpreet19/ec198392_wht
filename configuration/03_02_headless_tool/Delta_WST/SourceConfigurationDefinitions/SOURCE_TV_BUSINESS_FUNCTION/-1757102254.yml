@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1757102254'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/N
+parentKeys: {}
+properties:
+  BF_CODE: SP.0041
+  NAME: Project Data Mapping
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/N
+related: {}

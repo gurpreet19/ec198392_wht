@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2072526492'
+keys:
+  BF_DESCRIPTION_NO: RC.0056
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RC.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/manage_object_navmodel_nav/CLASS_NAME/TRACT/NAVMODEL/WELL_SETUP/TARGET/TRACT/TARGET_TYPE/parent' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Tract screen</strong>    is used to define Tract Objects.</p><p>    Each Tract is connected to an Unit Agreement and the user has to select the Unit Agreement first in order to access the Tract Objects.</p><p>    In general:<br>    <strong><em>- Tract</em></strong>    is a parcel of land within the Unit area that has a common lessor (royalty owner) and common lessees (WIOs).<br>    <strong><em>- The tract</em></strong>    may provide ownership of only gas rights, only oil rights or both gas and oil rights within that tract.<br>    <strong><em>- A unit</em></strong>    will typically contain many tracts that make up all of the land area of the    Unit.<br><strong><em>- A tract</em></strong>    in a unit may contain only one WIO and varied of royalty owners.</p>
+related: {}

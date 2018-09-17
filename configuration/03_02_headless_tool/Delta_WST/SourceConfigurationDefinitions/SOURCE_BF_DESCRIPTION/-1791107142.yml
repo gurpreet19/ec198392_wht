@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1791107142'
+keys:
+  BF_DESCRIPTION_NO: GD.0058
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_internal/CLASS/CAPACITY_BID_LOC_INTER' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is intended for internal users on a pipeline and list all capacity releases and bids.</p><p>The first data section will list all capacity releases for the selected period.</p><p>By selecting a capacity release the next data section will list all bids for the selected release. The bid value is calculated when the bid is submitted and can be seen here. If it was not possible to calculate the bid value by the system, a user can manually enter a calculated value. A calculated value can also be adjusted if required.</p><p>When the bid status is pending user interaction may be required<ul style="list-style-type:disc"><li>The shipper must be validated if it is credit worthy.</li><li>Sometime terms and condition, on a release or a bid, makes is impossible for the system to calculate a bid value. This business function then allows a user to enter the bid value.</li><li>Confirming a prearranged trade can only be done in the bid business function.</li></ul></p><p>The award process can be manually triggered from this business function by selecting a release and press the Award button. Additional a release can be cancelled by pressing the Cancel button.</p>
+related: {}

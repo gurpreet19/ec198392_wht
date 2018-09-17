@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '4398307'
+keys:
+  BF_CODE: CD.0126
+  T: BF_COMPONENT
+  URL: /detail_table
+parentKeys: {}
+properties:
+  BF_CODE: CD.0126
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0126' AND NVL(URL,'IS_NULL') = '/detail_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/intergr_boe_conversion' )
+  CLASS_NAME: null
+  COMP_CODE: iuc_boe_table_detail
+  NAME: Detail Table
+  SIGNING_REQ_IND: null
+  URL: /detail_table
+related: {}

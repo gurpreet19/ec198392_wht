@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '773183488'
+keys:
+  BF_DESCRIPTION_NO: CO.2071
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2071
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_seasonality' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Contract Seasonality screen details out the AACQ (Annual Adjust Contract Quantity) requirements for LNG (or other) delivery contracts. The main function is for the user to enter a delivery profile apportioned on a monthly basis per contract. This profile is used by EC when automatically generating a lifting program and to steward the deliveries through the year. The data is part of planning assumptions in long term delivery planning and is part of all scenarios as well as the official plans. The user may choose to make modifications to different versions (in scenarios) to this data to do what-if scenarios. Data entry is done manually or possibly via an import interface. There is no automatic function to apportion an AACQ entry over the year as the distribution is based on contract specific knowledge.The stored unit is a contract attribute. However, the user may choose to view data in different units. Contract delivery obligations for LNG are typically viewed in MMBTU or GJ depending on the sales unit used. The lower section provides an automated conversion section where the delivery profile is viewed in the selected secondary UOM.</p>
+related: {}

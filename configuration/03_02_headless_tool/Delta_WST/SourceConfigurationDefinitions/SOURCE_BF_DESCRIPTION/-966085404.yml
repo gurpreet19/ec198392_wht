@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-966085404'
+keys:
+  BF_DESCRIPTION_NO: SD.0023
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/monthly_profit_centre_delivery' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Monthly Profit Centre Delivery business function has a similar function to SD.0008 &ndash; Monthly Delivery, but incorporates Profit Centres per monthly delivery.</p><p>This is a screen for entering/viewing actual gas quantity deliveries for a given contract, delivery point and profit centre. After selecting Month, Contract and Delivery&nbsp;Point, all monthly delivery quantities for profit centre wil be listed. When selecting a profit centre in the first data section, all daily data for that profti centre will be&nbsp;listed in the second datasection. The days in the bottom half of the screen is the same found in Daily Profit Centre Delivery (SD.0022). The data in this section are&nbsp;displayed in ascending order - e.g. the first day of the month is displayed at the top.</p><p>It is possible for the user to create new monthly deliveries rows for entry (by clicking the button for each new row required).</p><p>Data will be stored (independently) at both monthly and daily (if available) level. This means that when they daily values are changed, the monthly Delivered Qty are&nbsp;not updated (but the Aggregated Delivered Qty will reflect the update). Similarly, updates at monthly level will not influence the daily values.</p>
+related: {}

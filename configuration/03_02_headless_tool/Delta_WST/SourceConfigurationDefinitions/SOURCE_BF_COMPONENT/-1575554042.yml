@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1575554042'
+keys:
+  BF_CODE: RC.0060
+  T: BF_COMPONENT
+  URL: /reclist
+parentKeys: {}
+properties:
+  BF_CODE: RC.0060
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RC.0060' AND NVL(URL,'IS_NULL') = '/reclist')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/N' )
+  CLASS_NAME: RECIPIENT
+  COMP_CODE: reclist
+  NAME: Recipients
+  SIGNING_REQ_IND: null
+  URL: /reclist
+related: {}

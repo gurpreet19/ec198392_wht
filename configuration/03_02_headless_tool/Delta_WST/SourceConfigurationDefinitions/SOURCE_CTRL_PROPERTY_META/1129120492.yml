@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1129120492'
+keys:
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/navmodel/FINANCIAL_PRODUCT/PRICE_OBJECT/PRICE_OBJECT
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: NAV_DEF_VALUE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Default values in nav model for price determination price object navigators
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/navmodel/FINANCIAL_PRODUCT/PRICE_OBJECT/PRICE_OBJECT
+  LABEL: Default values in nav model for PR Price Object navigators
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

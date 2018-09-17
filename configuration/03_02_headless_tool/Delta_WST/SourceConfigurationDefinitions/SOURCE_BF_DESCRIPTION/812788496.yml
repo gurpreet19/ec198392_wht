@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '812788496'
+keys:
+  BF_DESCRIPTION_NO: CP.0009
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/monthly_stor_pc_forecast' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>In order to forecast the inflow (production) into each storage, forecasts are prepared by all sources/producers (here referred to as &ldquo;profit centers&rdquo;). This business function deals with a yearly plan, divided into months.</p><p>Typical usage of this business function is to enter the yearly total forecast quantity. This quantity will be apportioned to month level when pressing the Apportion button. When doing this, the numbers will also be further apportioned to day level (visible in CP.0010 &ndash; Daily Storage Profit Centre Forecast).</p><p>The Profit Centre navigator popup will show profit centre which are mapped with the storage selected in the navigator. This relation can be configured in Storage Profit Centre Connection (CO.2083).</p><p>It is also possible to update monthly numbers. If doing so, Planned Monthly Average and Planned Year Total fields will be updated accordingly. Please note that when doing updates at month level, the underlying daily numbers will not be updated.</p><p>Further, the screen does not prevent the user from performing the Apportion operation several times. Be aware that when doing so, all underlying numbers, both at monthly and daily level will be overwritten.</p>
+related: {}

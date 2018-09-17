@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '66883286'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/berth_slot_calendar/CLASS/CARGO_CALENDAR/SORT_TYPE/DESC
+parentKeys: {}
+properties:
+  BF_CODE: CP.0065
+  NAME: Berth Slot Calendar
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/berth_slot_calendar/CLASS/CARGO_CALENDAR/SORT_TYPE/DESC
+related: {}

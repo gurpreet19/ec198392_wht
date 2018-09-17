@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '46731086'
+keys:
+  T: TV_UNIT
+  UNIT: 100MJ
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Hundreds of Mega Joules
+  FIN_CODE: null
+  LABEL: 100MJ
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: 100MJ
+  UOM_GROUP: E
+  UOM_SUBGROUP: null
+related: {}

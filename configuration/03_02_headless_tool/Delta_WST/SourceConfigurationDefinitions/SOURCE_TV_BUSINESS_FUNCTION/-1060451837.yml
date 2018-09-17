@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1060451837'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/manage_object_list
+parentKeys: {}
+properties:
+  BF_CODE: CD.0132
+  NAME: Object List Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/manage_object_list
+related: {}

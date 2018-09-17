@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-83301342'
+keys:
+  BF_CODE: SP.0044
+  T: BF_COMPONENT
+  URL: /summary_setup
+parentKeys: {}
+properties:
+  BF_CODE: SP.0044
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0044' AND NVL(URL,'IS_NULL') = '/summary_setup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_summary_setup' )
+  CLASS_NAME: CONTRACT_SUMMARY_SETUP
+  COMP_CODE: summary_setup
+  NAME: Journal Extract Setup
+  SIGNING_REQ_IND: null
+  URL: /summary_setup
+related: {}

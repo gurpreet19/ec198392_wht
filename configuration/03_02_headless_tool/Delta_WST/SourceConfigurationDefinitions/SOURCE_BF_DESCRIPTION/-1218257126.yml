@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1218257126'
+keys:
+  BF_DESCRIPTION_NO: PO.0115
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0115
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/event_tank_tap_analysis' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen will be used to record analysis results from samples taken from different taps. Each sample can be analyzed for bsw and density. BSW and density will vary for different heights in a tank having a blend of diluent and bitumen liquid. These samples will be used to calculate a height/volume weighted average of bsw and density. The average result can then be used to calculate the % diluent and % bitumen in the tank. There will also be input fields to override the calc BSW% and Density.</p>
+related: {}

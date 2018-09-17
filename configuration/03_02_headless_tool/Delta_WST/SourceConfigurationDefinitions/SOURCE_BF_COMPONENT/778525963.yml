@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '778525963'
+keys:
+  BF_CODE: PO.0010
+  T: BF_COMPONENT
+  URL: /pob_summary
+parentKeys: {}
+properties:
+  BF_CODE: PO.0010
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0010' AND NVL(URL,'IS_NULL') = '/pob_summary')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_personnel_on_board' )
+  CLASS_NAME: POB_SUMMARY
+  COMP_CODE: pob_summary
+  NAME: Personnel onboard calculation attributes Summary
+  SIGNING_REQ_IND: null
+  URL: /pob_summary
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1366738931'
+keys:
+  BF_CODE: TO.0035
+  T: BF_COMPONENT
+  URL: /parcelList
+parentKeys: {}
+properties:
+  BF_CODE: TO.0035
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0035' AND NVL(URL,'IS_NULL') = '/parcelList')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/port_resource_usage' )
+  CLASS_NAME: STOR_PORT_RES_USAGE_LIST
+  COMP_CODE: parcelList
+  NAME: Port Resource Usage Parcel List
+  SIGNING_REQ_IND: null
+  URL: /parcelList
+related: {}

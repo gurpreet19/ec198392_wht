@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1973866562'
+keys:
+  BF_CODE: PA.0007
+  T: BF_COMPONENT
+  URL: /commandOperations
+parentKeys: {}
+properties:
+  BF_CODE: PA.0007
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PA.0007' AND NVL(URL,'IS_NULL') = '/commandOperations')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/process_action' )
+  CLASS_NAME: BPM_EC_GCOMMAND_OP
+  COMP_CODE: commandOperations
+  NAME: Action Operations
+  SIGNING_REQ_IND: null
+  URL: /commandOperations
+related: {}

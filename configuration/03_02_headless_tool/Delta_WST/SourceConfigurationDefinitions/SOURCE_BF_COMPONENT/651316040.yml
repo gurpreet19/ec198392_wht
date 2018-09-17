@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '651316040'
+keys:
+  BF_CODE: PD.0022
+  T: BF_COMPONENT
+  URL: /moveToGroup
+parentKeys: {}
+properties:
+  BF_CODE: PD.0022
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PD.0022' AND NVL(URL,'IS_NULL') = '/moveToGroup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/equip_downtime' )
+  CLASS_NAME: null
+  COMP_CODE: moveToGroup
+  NAME: Move to Group
+  SIGNING_REQ_IND: null
+  URL: /moveToGroup
+related: {}

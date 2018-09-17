@@ -1,0 +1,281 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-545179503'
+keys:
+  BF_DESCRIPTION_NO: WR.0080
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0080
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_blowdown' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<div class="WordSection1"><p class="MsoNormal"><span style="font-size:10.5pt;mso-fareast-font-family:&quot;Times
+    New Roman&quot;;color:#333333;background:white">Well Blowdown screen is used to
+    manage Well Blowdown events related to venting of gas from a well or production
+    system. Wells that have been shut in for a period frequently develop a gas cap
+    caused by gas percolating through the fluid column in the wellbore. It is often
+    desirable to remove or vent the free gas before starting well intervention work.</span><span
+    style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif;mso-fareast-font-family:&quot;Times
+    New Roman&quot;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-top:8.0pt"><span
+    style="font-size:10.5pt;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333;background:white">This
+    BF will help user in following aspects:</span><span style="font-size:12.0pt;font-family:&quot;Times
+    New Roman&quot;,serif;mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p><ol
+    style="margin-top:0in" start="1" type="1"> <li class="MsoNormal" style="color:#333333;mso-pagination:widow-orphan;     mso-list:l2
+    level1 lfo3;tab-stops:list .5in;background:white;vertical-align:     baseline"><span
+    style="font-size: 10.5pt; background-image: initial; background-position: initial;
+    background-size: initial; background-repeat: initial; background-attachment: initial;
+    background-origin: initial; background-clip: initial;">To achieve a consistent
+    blowdown activity/process in     order to ensure the value from blowdowns are
+    being maximized across the     organization.</span><span style="font-size:10.5pt;mso-fareast-font-family:     &quot;Times
+    New Roman&quot;"><o:p></o:p></span></li> <li class="MsoNormal" style="color:#333333;mso-pagination:widow-orphan;     mso-list:l2
+    level1 lfo3;tab-stops:list .5in;background:white;vertical-align:     baseline"><span
+    style="font-size: 10.5pt; background-image: initial; background-position: initial;
+    background-size: initial; background-repeat: initial; background-attachment: initial;
+    background-origin: initial; background-clip: initial;">To systematically record
+    the Blowdown information and     make it available for further decision analysis.</span><span
+    style="font-size:10.5pt;mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></li>
+    <li class="MsoNormal" style="color:#333333;mso-pagination:widow-orphan;     mso-list:l2
+    level1 lfo3;tab-stops:list .5in;background:white;vertical-align:     baseline"><span
+    style="font-size: 10.5pt; background-image: initial; background-position: initial;
+    background-size: initial; background-repeat: initial; background-attachment: initial;
+    background-origin: initial; background-clip: initial;">To be able to tie a well
+    blowdown event with an entered     well test</span><span style="font-size:10.5pt;mso-fareast-font-family:     &quot;Times
+    New Roman&quot;"><o:p></o:p></span></li> <li class="MsoNormal" style="color:#333333;mso-pagination:widow-orphan;     mso-list:l2
+    level1 lfo3;tab-stops:list .5in;background:white;vertical-align:     baseline"><span
+    style="font-size: 10.5pt; background-image: initial; background-position: initial;
+    background-size: initial; background-repeat: initial; background-attachment: initial;
+    background-origin: initial; background-clip: initial;">To capture the value of
+    blowdown activities on RTP     (Return to Production) wells</span><span style="font-size:10.5pt;     mso-fareast-font-family:&quot;Times
+    New Roman&quot;"><o:p></o:p></span></li></ol><p class="MsoNormal" style="margin-top:8.0pt"><span
+    style="font-size:10.5pt;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333;background:white">This
+    functionality will ensure that data is available for further decision analysis,
+    for example, for plug and abandon purpose, well production potential identification
+    and optimization.</span><span style="font-size:12.0pt;font-family:&quot;Times
+    New Roman&quot;,serif;mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p><p
+    class="MsoNormal" style="margin-top:8.0pt"><span style="font-size:10.5pt;mso-fareast-font-family:&quot;Times
+    New Roman&quot;;color:#333333;background:white">Well Blowdown Screen has two data
+    sections:</span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif;mso-fareast-font-family:&quot;Times
+    New Roman&quot;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-left:.5in;mso-pagination:widow-orphan;background:white;vertical-align:baseline"><span
+    style="font-size: 10.5pt; color: rgb(51, 51, 51); background-image: initial; background-position:
+    initial; background-size: initial; background-repeat: initial; background-attachment:
+    initial; background-origin: initial; background-clip: initial;">Well Blowdown
+    Event: To capture overall date and time of the event, reason for blowdown, well
+    test date, etc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:10.5pt;mso-fareast-font-family:&quot;Times
+    New Roman&quot;;color:#333333"><o:p></o:p></span></p><p class="MsoNormal" style="margin-left:.5in;mso-pagination:widow-orphan;background:white;vertical-align:baseline"><span
+    style="font-size: 10.5pt; color: rgb(51, 51, 51); background-image: initial; background-position:
+    initial; background-size: initial; background-repeat: initial; background-attachment:
+    initial; background-origin: initial; background-clip: initial;">Well Blowdown
+    Data: To capture data for the well blowdown event.</span><span style="font-size:10.5pt;mso-fareast-font-family:&quot;Times
+    New Roman&quot;;color:#333333"><o:p></o:p></span></p><p class="MsoNormal" style="margin-top:8.0pt"><span
+    style="font-size:10.5pt;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333;background:white">Well
+    blowdown event is inserted manually while well blowdown data is automatically
+    generated based on the start time and end time of the event and blowdown frequency.
+    Manual inserts are also allowed for well blowdown data.</span><span style="font-size:12.0pt;font-family:&quot;Times
+    New Roman&quot;,serif;mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p><h3><a
+    name="_Toc485233167">SCREEN EVENTS</a><o:p></o:p></h3><p class="MsoListParagraph"
+    style="margin-left:0in;mso-add-space:auto"><span style="font-size:10.5pt;mso-fareast-font-family:&quot;Times
+    New Roman&quot;;color:#333333;background:white">Well Blowdown screen will support
+    following events with mentioned functionality:<o:p></o:p></span></p><p class="MsoNormal"><o:p>&nbsp;</o:p></p><table
+    class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="980"
+    style="margin-left:-5.4pt;border-collapse:collapse;mso-table-layout-alt:fixed;
+    border:none;mso-border-alt:solid black .75pt;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+    mso-border-insideh:.75pt solid black;mso-border-insidev:.75pt solid black"> <tbody><tr
+    style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:11.0pt">  <td width="197"
+    rowspan="2" valign="top" style="width:147.85pt;border:solid black 1.0pt;  mso-border-alt:solid
+    black .75pt;background:black;padding:0in 5.4pt 0in 5.4pt;  height:11.0pt">  <p
+    class="MsoNormal" align="center" style="text-align:center"><span style="color:white">Event<o:p></o:p></span></p>  </td>  <td
+    width="783" colspan="4" valign="top" style="width:587.5pt;border:solid black 1.0pt;  border-left:none;mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  background:black;padding:0in 5.4pt
+    0in 5.4pt;height:11.0pt">  <p class="MsoNormal" align="center" style="text-align:center"><span
+    style="color:white">Description<o:p></o:p></span></p>  </td> </tr> <tr style="mso-yfti-irow:1;height:11.0pt">  <td
+    width="197" valign="top" style="width:147.85pt;border-top:none;border-left:  none;border-bottom:solid
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-alt:solid black .75pt;background:black;padding:0in 5.4pt
+    0in 5.4pt;  height:11.0pt">  <p class="MsoNormal" align="center" style="text-align:center"><span
+    style="color:white">Data section<o:p></o:p></span></p>  </td>  <td width="197"
+    valign="top" style="width:147.9pt;border-top:none;border-left:  none;border-bottom:solid
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-alt:solid black .75pt;background:black;padding:0in 5.4pt
+    0in 5.4pt;  height:11.0pt">  <p class="MsoNormal" align="center" style="text-align:center"><span
+    style="color:white">Pre Condition / Validation<o:p></o:p></span></p>  </td>  <td
+    width="192" valign="top" style="width:2.0in;border-top:none;border-left:none;  border-bottom:solid
+    black 1.0pt;border-right:solid black 1.0pt;mso-border-top-alt:  solid black .75pt;mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  background:black;padding:0in 5.4pt
+    0in 5.4pt;height:11.0pt">  <p class="MsoNormal" align="center" style="text-align:center"><span
+    style="color:white">Description<o:p></o:p></span></p>  </td>  <td width="197"
+    valign="top" style="width:147.75pt;border-top:none;border-left:  none;border-bottom:solid
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-alt:solid black .75pt;background:black;padding:0in 5.4pt
+    0in 5.4pt;  height:11.0pt">  <p class="MsoNormal" align="center" style="text-align:center"><span
+    style="color:white">Result<o:p></o:p></span></p>  </td> </tr> <tr>  <td width="197"
+    rowspan="2" valign="top" style="width:147.85pt;border:solid black 1.0pt;  border-top:none;mso-border-top-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 5.4pt 0in 5.4pt">  <p
+    class="MsoNormal" align="center" style="text-align:center">INSERT<o:p></o:p></p>  </td>  <td
+    width="197" valign="top" style="width:147.85pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:dashed black 1.0pt;  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:solid .75pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:dashed .5pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt">  <p class="MsoNormal">Well Blowdown Event<o:p></o:p></p>  </td>  <td
+    width="197" valign="top" style="width:147.9pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:dashed black 1.0pt;  mso-border-top-alt:solid black .75pt;mso-border-left-alt:dashed
+    black .5pt;  mso-border-alt:dashed black .5pt;mso-border-top-alt:solid black .75pt;  padding:0in
+    5.4pt 0in 5.4pt">  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>  </td>  <td width="192"
+    valign="top" style="width:2.0in;border-top:none;border-left:none;  border-bottom:dashed
+    black 1.0pt;border-right:dashed black 1.0pt;mso-border-top-alt:  solid black .75pt;mso-border-left-alt:dashed
+    black .5pt;mso-border-alt:dashed black .5pt;  mso-border-top-alt:solid black .75pt;padding:0in
+    5.4pt 0in 5.4pt">  <p class="MsoNormal">Add an event to Well Blowdown Event Data
+    Section.<o:p></o:p></p>  </td>  <td width="197" valign="top" style="width:147.75pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:solid black .75pt;mso-border-left-alt:dashed
+    black .5pt;  mso-border-top-alt:solid .75pt;mso-border-left-alt:dashed .5pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt">  <p class="MsoNormal">New row added to Data Section 1<o:p></o:p></p>  <p
+    class="MsoNormalCxSpMiddle" style="margin-left:.5in;mso-add-space:auto;  text-indent:-.25in;mso-list:l0
+    level1 lfo2"><!--[if !supportLists]-->1.<span style="font-variant-numeric: normal;
+    font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times
+    New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;  </span><!--[endif]-->If Well is not
+    selected in Navigator, none of the  attributes are filled in, except Blowdown
+    Date and Start Daytime which is  default based on To date. Attributes Frequency
+    and Reason will be auto  populated if default setting for corresponding EC Code
+    is configured.<o:p></o:p></p>  <p class="MsoNormalCxSpMiddle" style="margin-left:.5in;mso-add-space:auto;  text-indent:-.25in;mso-list:l0
+    level1 lfo2"><!--[if !supportLists]-->2.<span style="font-variant-numeric: normal;
+    font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times
+    New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;  </span><!--[endif]-->If Well is an
+    input in the Navigator, then attribute  Well will show the corresponding well
+    name.<o:p></o:p></p>  </td> </tr> <tr>  <td width="197" valign="top" style="width:147.85pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:dashed black 1.0pt;  mso-border-top-alt:dashed black
+    .5pt;mso-border-left-alt:solid black .75pt;  mso-border-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  padding:0in 5.4pt 0in 5.4pt">  <p class="MsoNormal">Well Blowdown
+    Data<o:p></o:p></p>  </td>  <td width="197" valign="top" style="width:147.9pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:dashed black 1.0pt;  mso-border-top-alt:dashed black
+    .5pt;mso-border-left-alt:dashed black .5pt;  mso-border-alt:dashed black .5pt;padding:0in
+    5.4pt 0in 5.4pt">  <p class="MsoNormal">Well Blowdown event is selected by user
+    prior to clicking  the Well Insert button<o:p></o:p></p>  </td>  <td width="192"
+    valign="top" style="width:2.0in;border-top:none;border-left:none;  border-bottom:dashed
+    black 1.0pt;border-right:dashed black 1.0pt;mso-border-top-alt:  dashed black
+    .5pt;mso-border-left-alt:dashed black .5pt;mso-border-alt:dashed black .5pt;  padding:0in
+    5.4pt 0in 5.4pt">  <p class="MsoNormal">Add a new row to Wells Blowdown Data Section
+    for the  parent selected in Data Section 1.<o:p></o:p></p>  </td>  <td width="197"
+    valign="top" style="width:147.75pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:dashed
+    black .5pt;  mso-border-alt:dashed black .5pt;mso-border-right-alt:solid black
+    .75pt;  padding:0in 5.4pt 0in 5.4pt">  <p class="MsoNormal">New row is added to
+    Data Section 2.<o:p></o:p></p>  </td> </tr> <tr style="mso-yfti-irow:4;height:17.0pt">  <td
+    width="197" rowspan="2" valign="top" style="width:147.85pt;border:solid black
+    1.0pt;  border-top:none;mso-border-top-alt:solid black .75pt;mso-border-alt:solid
+    black .75pt;  padding:0in 5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal"
+    align="center" style="text-align:center">SAVE<o:p></o:p></p>  </td>  <td width="197"
+    valign="top" style="width:147.85pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal">Well Blowdown Event<o:p></o:p></p>  </td>  <td
+    width="197" valign="top" style="width:147.9pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>  </td>  <td
+    width="192" valign="top" style="width:2.0in;border-top:none;border-left:none;  border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;mso-border-top-alt:  dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;mso-border-top-alt:  dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:dashed
+    .5pt;  mso-border-right-alt:solid .75pt;mso-border-color-alt:black;padding:0in
+    5.4pt 0in 5.4pt;  height:17.0pt">  <p class="MsoNormal">Delete an event from Well
+    Blowdown Event data section<o:p></o:p></p>  </td>  <td width="197" valign="top"
+    style="width:147.75pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormalCxSpMiddle" style="margin-left:.5in;mso-add-space:auto;  text-indent:-.25in;mso-list:l1
+    level1 lfo1"><!--[if !supportLists]-->1.<span style="font-variant-numeric: normal;
+    font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times
+    New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;  </span><!--[endif]-->If the event
+    has no child records, the well blown  down event will be deleted. <o:p></o:p></p>  <p
+    class="MsoNormalCxSpMiddle" style="margin-left:.5in;mso-add-space:auto;  text-indent:-.25in;mso-list:l1
+    level1 lfo1"><!--[if !supportLists]-->2.<span style="font-variant-numeric: normal;
+    font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times
+    New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;  </span><!--[endif]-->If  an event
+    has child records, a warning popup will appear asking for  confirmation to delete
+    all child records along with parent record to ensure  successful deletion.<o:p></o:p></p>  </td>
+    </tr> <tr style="mso-yfti-irow:5;height:17.0pt">  <td width="197" valign="top"
+    style="width:147.85pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal">Well Blowdown Data<o:p></o:p></p>  </td>  <td
+    width="197" valign="top" style="width:147.9pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>  </td>  <td
+    width="192" valign="top" style="width:2.0in;border-top:none;border-left:none;  border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;mso-border-top-alt:  dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;mso-border-top-alt:  dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:dashed
+    .5pt;  mso-border-right-alt:solid .75pt;mso-border-color-alt:black;padding:0in
+    5.4pt 0in 5.4pt;  height:17.0pt">  <p class="MsoNormal">Delete Well Blowdown Data
+    from Data Section 2<o:p></o:p></p>  </td>  <td width="197" valign="top" style="width:147.75pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal">Selected Well Blowdown Data
+    record is deleted.<o:p></o:p></p>  </td> </tr> <tr style="mso-yfti-irow:6;height:17.0pt">  <td
+    width="197" rowspan="2" valign="top" style="width:147.85pt;border:solid black
+    1.0pt;  border-top:none;mso-border-top-alt:solid black .75pt;mso-border-alt:solid
+    black .75pt;  padding:0in 5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal"
+    align="center" style="text-align:center">DELETE<o:p></o:p></p>  </td>  <td width="197"
+    valign="top" style="width:147.85pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal">Well Blowdown Event<o:p></o:p></p>  </td>  <td
+    width="197" valign="top" style="width:147.9pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>  </td>  <td
+    width="192" valign="top" style="width:2.0in;border-top:none;border-left:none;  border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;mso-border-top-alt:  dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;mso-border-top-alt:  dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:dashed
+    .5pt;  mso-border-right-alt:solid .75pt;mso-border-color-alt:black;padding:0in
+    5.4pt 0in 5.4pt;  height:17.0pt">  <p class="MsoNormal">Save changes to database.<o:p></o:p></p>  </td>  <td
+    width="197" valign="top" style="width:147.75pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <ol style="margin-top:0in" start="1" type="1">   <li
+    class="MsoNormal" style="mso-pagination:widow-orphan;mso-list:l3 level1 lfo4;       tab-stops:list
+    .5in;vertical-align:baseline">In case of save event for new Well Blowdown Event,       corresponding
+    records are auto-generated in Well Blowdown data section       based on preferred
+    frequency configured for the well blowdown event.       Records in Well Blowdown
+    data section are created with increments       starting from the frequency of
+    minutes after Blowdown start time up to       and including the Blowdown end time.<o:p></o:p></li>   <li
+    class="MsoNormal" style="mso-pagination:widow-orphan;mso-list:l3 level1 lfo4;       tab-stops:list
+    .5in;vertical-align:baseline">In case of save event for deletion of Well Blowdown       Event,
+    If an event has child records, a warning popup will appear asking       for confirmation
+    to delete all child records along with the event record       to ensure successful
+    deletion. <o:p></o:p></li>  </ol>  </td> </tr> <tr style="mso-yfti-irow:7;mso-yfti-lastrow:yes;height:17.0pt">  <td
+    width="197" valign="top" style="width:147.85pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal">Well Blowdown Data<o:p></o:p></p>  </td>  <td
+    width="197" valign="top" style="width:147.9pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>  </td>  <td
+    width="192" valign="top" style="width:2.0in;border-top:none;border-left:none;  border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;mso-border-top-alt:  dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;mso-border-top-alt:  dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:dashed
+    .5pt;  mso-border-right-alt:solid .75pt;mso-border-color-alt:black;padding:0in
+    5.4pt 0in 5.4pt;  height:17.0pt">  <p class="MsoNormal">Save changes to database<o:p></o:p></p>  </td>  <td
+    width="197" valign="top" style="width:147.75pt;border-top:none;border-left:  none;border-bottom:dashed
+    black 1.0pt;border-right:solid black 1.0pt;  mso-border-top-alt:dashed black .5pt;mso-border-left-alt:solid
+    black .75pt;  mso-border-top-alt:dashed .5pt;mso-border-left-alt:solid .75pt;mso-border-bottom-alt:  dashed
+    .5pt;mso-border-right-alt:solid .75pt;mso-border-color-alt:black;  padding:0in
+    5.4pt 0in 5.4pt;height:17.0pt">  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>  </td>
+    </tr></tbody></table><p class="MsoNormal"><span style="display:none;mso-hide:all"><o:p>&nbsp;</o:p></span></p></div><b><span
+    style="font-size: 10pt; font-family: Arial, sans-serif; font-variant-numeric:
+    normal; font-variant-caps: small-caps;"><br clear="all"></span></b><p class="MsoNormal"
+    style="text-align:justify"><a name="_3rdcrjn"></a><o:p>&nbsp;</o:p></p><span style="font-size:
+    10pt; font-family: Arial, sans-serif;"><br clear="all"></span><p class="MsoNormal"><b><span
+    style="font-variant-numeric: normal; font-variant-caps: small-caps;">&nbsp;</span></b></p>'
+related: {}

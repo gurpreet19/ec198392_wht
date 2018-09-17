@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '911773338'
+keys:
+  FUNCTIONAL_AREA_ID: null
+  NAME: Deleting
+  T: BUSINESS_ACTION
+parentKeys: {}
+properties:
+  ACTION_CLASS_NAME: com.ec.frmw.jbpm.action.JbpmBusinessAction
+  BA_TYPE: JBPM
+  FUNCTIONAL_AREA_ID: null
+  JBPM_DEPLOYMENT_ID: null
+  JBPM_PROCESS_NAME: null
+  JBPM_PROCESS_VERSION: null
+  NAME: Deleting
+related: {}

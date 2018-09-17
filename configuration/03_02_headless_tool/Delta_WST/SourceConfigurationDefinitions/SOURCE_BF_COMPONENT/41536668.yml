@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '41536668'
+keys:
+  BF_CODE: RC.0052
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.tab/tab
+parentKeys: {}
+properties:
+  BF_CODE: RC.0052
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RC.0052' AND NVL(URL,'IS_NULL') = '/com.ec.pf.screenlet.tab/tab')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/ROYALTY_DEPOSITOR' )
+  CLASS_NAME: null
+  COMP_CODE: tab
+  NAME: Tab control
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.tab/tab
+related: {}

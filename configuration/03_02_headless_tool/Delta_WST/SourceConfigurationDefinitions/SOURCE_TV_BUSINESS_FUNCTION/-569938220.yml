@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-569938220'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_INDEX_DS_MTH_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self
+parentKeys: {}
+properties:
+  BF_CODE: PR.0017
+  NAME: Monthly Price Index - Dataset
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_INDEX_DS_MTH_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self
+related: {}

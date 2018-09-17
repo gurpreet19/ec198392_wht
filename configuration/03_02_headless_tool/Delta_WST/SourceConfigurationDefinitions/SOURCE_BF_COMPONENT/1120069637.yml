@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1120069637'
+keys:
+  BF_CODE: CP.0071
+  T: BF_COMPONENT
+  URL: /PopulateStorage
+parentKeys: {}
+properties:
+  BF_CODE: CP.0071
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0071' AND NVL(URL,'IS_NULL') = '/PopulateStorage')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_day_stor_prod' )
+  CLASS_NAME: null
+  COMP_CODE: PopulateStorage
+  NAME: Populate Storage Button
+  SIGNING_REQ_IND: null
+  URL: /PopulateStorage
+related: {}

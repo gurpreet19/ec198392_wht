@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '846567533'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: REVN_VAL_BP_GC_CO_CA
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: REVN
+  DESCRIPTION: Document Values - Booking Period - Group Currency - Company/Contract Area
+  LABEL: Document Values - Booking Period - Group Currency - Company/Contract Area
+  NAME: Document Values - Booking Period - Group Currency - Company/Contract Area
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: REVN_VAL_BP_GC_CO_CA
+related: {}

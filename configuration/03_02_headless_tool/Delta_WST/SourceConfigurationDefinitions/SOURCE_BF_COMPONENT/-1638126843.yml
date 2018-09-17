@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1638126843'
+keys:
+  BF_CODE: MHM.0015
+  T: BF_COMPONENT
+  URL: /message_out
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0015
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0015' AND NVL(URL,'IS_NULL') = '/message_out')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/manage_outgoing_messages' )
+  CLASS_NAME: MOM_MESSAGE_OUT
+  COMP_CODE: message_out
+  NAME: Message Out
+  SIGNING_REQ_IND: null
+  URL: /message_out
+related: {}

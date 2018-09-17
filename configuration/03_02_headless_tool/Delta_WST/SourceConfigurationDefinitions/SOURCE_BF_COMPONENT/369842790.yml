@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '369842790'
+keys:
+  BF_CODE: PP.0039
+  T: BF_COMPONENT
+  URL: /deleteforecast_button
+parentKeys: {}
+properties:
+  BF_CODE: PP.0039
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0039' AND NVL(URL,'IS_NULL') = '/deleteforecast_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast' )
+  CLASS_NAME: null
+  COMP_CODE: deleteforecast_button
+  NAME: DeleteForcastButton
+  SIGNING_REQ_IND: null
+  URL: /deleteforecast_button
+related: {}

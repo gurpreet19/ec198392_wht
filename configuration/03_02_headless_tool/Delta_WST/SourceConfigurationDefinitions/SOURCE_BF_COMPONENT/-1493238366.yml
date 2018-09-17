@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1493238366'
+keys:
+  BF_CODE: GD.0072
+  T: BF_COMPONENT
+  URL: /normalizeButton
+parentKeys: {}
+properties:
+  BF_CODE: GD.0072
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0072' AND NVL(URL,'IS_NULL') = '/normalizeButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/meter_comp_analysis/CLASS/METER_COMP_ANALYSIS' )
+  CLASS_NAME: null
+  COMP_CODE: normalizeButton
+  NAME: Normalize
+  SIGNING_REQ_IND: null
+  URL: /normalizeButton
+related: {}

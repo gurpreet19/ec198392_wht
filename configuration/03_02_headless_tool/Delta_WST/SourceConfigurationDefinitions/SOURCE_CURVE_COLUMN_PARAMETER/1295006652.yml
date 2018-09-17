@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1295006652'
+keys:
+  AXIS_PARAMETER: AVG_DP_VENTURI
+  CLASS_NAME: WELL
+  T: CURVE_COLUMN_PARAMETER
+parentKeys: {}
+properties:
+  AXIS_LABEL: dP Venturi
+  AXIS_PARAMETER: AVG_DP_VENTURI
+  AXIS_UNIT: PRESS_ABS
+  CLASS_NAME: WELL
+  COMMENTS: null
+  SORT_ORDER: 200.0
+  VALID_X: Y
+  VALID_Y: N
+  VALID_Z: N
+related: {}

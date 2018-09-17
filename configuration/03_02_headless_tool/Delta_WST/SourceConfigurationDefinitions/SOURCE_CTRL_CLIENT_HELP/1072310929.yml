@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1072310929'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_test_device_status
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_test_device_status
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

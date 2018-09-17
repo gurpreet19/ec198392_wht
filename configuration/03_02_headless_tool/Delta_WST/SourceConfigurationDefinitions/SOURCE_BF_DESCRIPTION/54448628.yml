@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '54448628'
+keys:
+  BF_DESCRIPTION_NO: GD.0030
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_location_matching/NOMINATION_CYCLE/false' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used for matching the input and output nominations on the contract with the input and output nomination from the upstream and<br />downstream shipper(s).</p><p>When crossing pipeline interconnects, both gas entitlements and gas transport operatorship are subject to change. In order to maintain proper balance at these&nbsp;locations, all flowing quantities of the contracts must be matched and confirmed with their respective adjacent parties. The main purpose for this business function is&nbsp;to view and control the current status of the ongoing matching and confirmation processes. It is also possible to use this business function to view details regarding&nbsp;the processed and matched/confirmed nominations at each side of the interconnect locations.</p><p>The typical use case for this business function is for the transportation service provider to enter this screen and view internally processed nominations for a selected&nbsp;interconnect location. The transportation service provider will then see which adjacent operators he needs to send a request for confirmation to.</p><p>If there is a mismatch between the externally confirmed flowing nomination and the internal flowing nomination, the lesser of the two will be used as internally&nbsp;confirmed. This is displayed in the Confirmed column on the screen.</p><p>The first data section will display external, internal and matched/confirmed quantities for each interconnect location. The second data section will show external,&nbsp;internal and matched/confirmed quantities for each contract on the selected location.</p><p>Electronic messaging are in many cases used to communicate statuses, quantities etc.</p>
+related: {}

@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '320142226'
+keys:
+  CODE: PP.0037
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PP.0037
+  NAME: Daily Stream Forecast
+related: {}

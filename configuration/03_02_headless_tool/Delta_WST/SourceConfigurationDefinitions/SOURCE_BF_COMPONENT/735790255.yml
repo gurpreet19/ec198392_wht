@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '735790255'
+keys:
+  BF_CODE: WR.0036
+  T: BF_COMPONENT
+  URL: /summarizeWbiSubToDailyButtonID
+parentKeys: {}
+properties:
+  BF_CODE: WR.0036
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0036' AND NVL(URL,'IS_NULL') = '/summarizeWbiSubToDailyButtonID')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_well_bore_interval_status' )
+  CLASS_NAME: null
+  COMP_CODE: summarizeWbiSubToDailyButtonID
+  NAME: Aggregate Current
+  SIGNING_REQ_IND: null
+  URL: /summarizeWbiSubToDailyButtonID
+related: {}

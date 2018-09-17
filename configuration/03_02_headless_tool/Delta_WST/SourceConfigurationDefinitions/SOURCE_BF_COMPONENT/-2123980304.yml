@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2123980304'
+keys:
+  BF_CODE: PP.0044
+  T: BF_COMPONENT
+  URL: null
+parentKeys: {}
+properties:
+  BF_CODE: PP.0044
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0044' AND NVL(URL,'IS_NULL') = 'IS_NULL')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/calculate_forecast' )
+  CLASS_NAME: /buttonPDC
+  COMP_CODE: buttonPDC
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: null
+related: {}

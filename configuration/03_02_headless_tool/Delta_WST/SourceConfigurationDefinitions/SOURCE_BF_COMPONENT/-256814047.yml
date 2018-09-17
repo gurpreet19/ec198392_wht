@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-256814047'
+keys:
+  BF_CODE: CP.0063
+  T: BF_COMPONENT
+  URL: /tab50
+parentKeys: {}
+properties:
+  BF_CODE: CP.0063
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0063' AND NVL(URL,'IS_NULL') = '/tab50')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/tab_cargo_menu/CARGO_NAV_CLASS/CARGO_PLANNING_NAVIGATOR/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT' )
+  CLASS_NAME: CARGO_ANALYSIS
+  COMP_CODE: tab50
+  NAME: Analysis Information
+  SIGNING_REQ_IND: null
+  URL: /tab50
+related: {}

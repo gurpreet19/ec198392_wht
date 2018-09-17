@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '607321631'
+keys:
+  BF_DESCRIPTION_NO: GD.0107
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0107
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_renomination/CLASS/TRNP_DAY_RENOM_LIST/CLASS_SUB/TRNP_DAY_RENOMINATION/TARGET/NOMINATION_POINT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain renomination when using the cycle approach is not adequate.</p><p>The benefit of using this business for doing renominations instead of the Nomination Cycle approach, is that all the previously stored daily nominations will be listed&nbsp;in table showing related renominations. The system supports to automatically copy the value of the re-nomination qty columns to the corresponding daily nomination.&nbsp;Anyhow it will be up to the implementation project to include any required validation and handling of the renominations.</p><p>For more information about the nomination process pls. See Daily Input Nomination / Daily Input Nomination.</p>
+related: {}

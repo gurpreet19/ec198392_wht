@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1894241780'
+keys:
+  BF_DESCRIPTION_NO: GD.0151
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0151
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to enter and modify requested path nominations for contract, entry and exit location.</p><p>Shippers need the ability to enter path nominations meaning nominations that are entering the pipeline at an entry nomination point and exiting the pipeline at an exit nomination point.</p><p>The shipper will enter a path nomination that will consist of a valid contract, entry nomination point (entry location), exit nomination point (exit location) upstream shipper (optional) and requested quantity (nominated path quantity).</p><p>The business function will validate the path nominations based upon a predefined set of validation rules when the records are saved to the database.</p><p>Once successfully saved and validated in this business function the nomination’s status will be set to Requested. If the nomination does not pass validation, the status will be set to Rejected.</p>
+related: {}

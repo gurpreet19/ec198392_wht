@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '387560950'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/system_messages
+parentKeys: {}
+properties:
+  BF_CODE: CO.0194
+  NAME: System Messages
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/system_messages
+related: {}

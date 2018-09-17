@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '796332162'
+keys:
+  BF_CODE: CO.1062
+  T: BF_COMPONENT
+  URL: /flowchart
+parentKeys: {}
+properties:
+  BF_CODE: CO.1062
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1062' AND NVL(URL,'IS_NULL') = '/flowchart')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/maintain_calculation/CALC_SCOPE/PUBLIC_SUB' )
+  CLASS_NAME: CALC_PROCESS_ELEMENT
+  COMP_CODE: flowchart
+  NAME: Flowchart
+  SIGNING_REQ_IND: null
+  URL: /flowchart
+related: {}

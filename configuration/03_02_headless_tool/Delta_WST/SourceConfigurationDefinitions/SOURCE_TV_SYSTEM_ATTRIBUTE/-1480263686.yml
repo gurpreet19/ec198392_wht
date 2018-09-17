@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1480263686'
+keys:
+  ATTRIBUTE_TYPE: VAT_REG_NO_MANDATORY_IND
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: Y
+  ATTRIBUTE_TYPE: VAT_REG_NO_MANDATORY_IND
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Indicates the default validation for VAT Reg No when setting document level to Valid1
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

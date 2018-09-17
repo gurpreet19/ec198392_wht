@@ -1,0 +1,26 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1891232015'
+keys:
+  BF_DESCRIPTION_NO: CD.0097
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0097
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/BALANCE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>HCB System screen</strong>    is used to show if the
+    System is in balance or imbalance. The output of the HCB process is a Report.</p><p><span
+    style="color: rgb(0, 0, 153);">    The HCB (Hydrocarbon Balance) is a feature
+    for giving an overview of the    whole value chain in terms of hydrocarbons taking
+    into account production,    inventory, fuel/flare, injection, sales and purchases
+    values.</span></p><p>    HCB is a key component of EC Revenue functionality. It
+    is the means by    which quantities collected through each of the modules and
+    are compared for    consistency, on a daily, monthly, or other period basis.<br>    Although
+    the quantities may be registered through any of the transactional    modules,
+    the HCB functionality belongs to QTY, since this is where all    Stream Item Values
+    ultimately reside.</p><p>    <u>The screen is divided into two sections:</u></p><p><strong><em>HCB
+    Systems Section</em></strong><br>The section lists existing HCB Systems</p><p><strong><em>HCB
+    System Details Section</em></strong><br>    The section contains details for each
+    HCB System such as Units of    measurement and Category.</p>'
+related: {}

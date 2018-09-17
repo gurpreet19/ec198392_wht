@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1660469484'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/capacity_release_internal/CLASS/CAPACITY_BID_LOC_INTER
+parentKeys: {}
+properties:
+  BF_CODE: GD.0058
+  NAME: Capacity Release - Internal
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.gd.screens/capacity_release_internal/CLASS/CAPACITY_BID_LOC_INTER
+related: {}

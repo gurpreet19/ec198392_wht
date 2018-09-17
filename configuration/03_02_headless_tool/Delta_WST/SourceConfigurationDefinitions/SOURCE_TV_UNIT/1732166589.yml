@@ -1,0 +1,116 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1732166589'
+keys:
+  T: TV_UNIT
+  UNIT: SM3PERMTH
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Standard cubic meter per month
+  FIN_CODE: null
+  LABEL: Sm³/m
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: SM3PERMTH
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERMTH
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BBLSPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERMTH
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERMTH
+      MULT_FACT: 6.2898107704321
+      PRECISION: null
+      TO_UNIT: BBLSPERMTH
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERMTH
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MMSCFPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERMTH
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERMTH
+      MULT_FACT: 3.5383251E-5
+      PRECISION: 7.0
+      TO_UNIT: MMSCFPERMTH
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERMTH
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MSCFPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERMTH
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERMTH
+      MULT_FACT: 0.035383251
+      PRECISION: 7.0
+      TO_UNIT: MSCFPERMTH
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERMTH
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: NM3PERMTH
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERMTH
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERMTH
+      MULT_FACT: 1.054915
+      PRECISION: 7.0
+      TO_UNIT: NM3PERMTH
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_LIQ_VOL_RATE_MTH
+      T: TV_UOM_SETUP
+      UNIT: SM3PERMTH
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERMTH
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_LIQ_VOL_RATE_MTH
+      REPORT_UNIT: Y
+      UNIT: SM3PERMTH
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_GAS_VOL_RATE_MTH
+      T: TV_UOM_SETUP
+      UNIT: SM3PERMTH
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERMTH
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_GAS_VOL_RATE_MTH
+      REPORT_UNIT: Y
+      UNIT: SM3PERMTH
+      VIEW_UNIT: Y

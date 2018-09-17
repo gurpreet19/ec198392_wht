@@ -1,0 +1,37 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-805219690'
+keys:
+  BF_DESCRIPTION_NO: PO.0034
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0034
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_company_split' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>In this business function, the user can add a split to companies
+    in a stream. How the split is used is up to allocation but one example is that
+    a company can decide&nbsp;how much of an output from a node should go on one stream
+    and how much should go on another.</p><p>All streams that should be available
+    on this screen must be added to the stream set "Maintain Stream Company Split".</p><p>A
+    split for a company is valid from the Start Date until the End Date. If no End
+    Date is given, the split is still valid. When a new split is added for a company
+    and a split already exists there are some rules.</p><ul style="list-style-type:disc;margin-left:40px;"><li>Overlapping
+    periods is not allowed for the same company</li><li>Holes in the periods are allowed
+    for a company. (If not, it must be handled by allocation)</li><li>If a new row
+    is inserted for a company and a period already exists, the end date is set equal
+    to the new start date on the existing split if end date is empty.</li></ul><p>If
+    there exists addition validation rules, these must be handled by allocation.</p><p><u><em>Example
+    1: </em></u></p><p><em>Assuming that there are N streams from the given node then
+    a percentage is added to N-1 of the streams in this screen. The final stream need
+    not have a split. </em></p><p><em>Rules within allocation: </em></p><ul style="list-style-type:disc;margin-left:40px;"><li><em>If
+    any of the splits are &lt; 0 for the current node, report this as a configuration
+    error.</em></li><li><em>If the splits for a given company totals more than 100
+    across the current node, report this as a configuration error.</em></li><li><em>If
+    a given company has a valid, non-zero outgoing mass for any component on the current
+    node, but does not have at least 1 valid, non-zero split, report this as a configuration
+    error.</em></li><li><em>Assuming the above, if a given company has a valid, non-zero
+    outgoing mass for any component on the current node, the allocation will calculate
+    the final streams split request as 100 - sum(split requests for that company for
+    the current node).</em></li></ul>'
+related: {}

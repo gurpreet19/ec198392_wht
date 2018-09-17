@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '644123124'
+keys:
+  BF_CODE: GD.0074
+  T: BF_COMPONENT
+  URL: /meterMeas
+parentKeys: {}
+properties:
+  BF_CODE: GD.0074
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0074' AND NVL(URL,'IS_NULL') = '/meterMeas')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/monthly_meter_measurement/CLASS/METER_MTH_MEASUREMENT' )
+  CLASS_NAME: METER_MTH_MEASUREMENT
+  COMP_CODE: meterMeas
+  NAME: Meter Measurement
+  SIGNING_REQ_IND: null
+  URL: /meterMeas
+related: {}

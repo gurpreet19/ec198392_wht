@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1768869496'
+keys:
+  BF_CODE: CO.2084
+  T: BF_COMPONENT
+  URL: /port_resource_usage_template
+parentKeys: {}
+properties:
+  BF_CODE: CO.2084
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2084' AND NVL(URL,'IS_NULL') = '/port_resource_usage_template')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/port_resource_usage_template' )
+  CLASS_NAME: PORT_RES_USAGE_TEMPLATE
+  COMP_CODE: port_resource_usage_template
+  NAME: Port Resource Usage Template
+  SIGNING_REQ_IND: null
+  URL: /port_resource_usage_template
+related: {}

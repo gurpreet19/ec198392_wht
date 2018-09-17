@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1786543868'
+keys:
+  BF_DESCRIPTION_NO: CO.2075
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2075
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_group_job_conn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p> Contract Group Calculation Job Connection is used to configure which Calculation Jobs can be executed for which Contract Group. One Calculation Job may be executed by many Contract Group and one Contract Group may run many Calculation Jobs. This screen allow users to add, delete and edit calculation jobs connected to the given contract group. </p>
+related: {}

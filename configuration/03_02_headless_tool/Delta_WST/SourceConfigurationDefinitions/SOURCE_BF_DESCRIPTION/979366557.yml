@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '979366557'
+keys:
+  BF_DESCRIPTION_NO: WR.0004
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/maintain_production_well_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function supports end users in registration of well status data for wells of class P (Producer), PI (Producer and Injector) or O (Other). A well can change status many times per day. This screen allows for data registration on an event basis.</p>
+
+    <p>The lower part of the screen is a report listing latest available status for all wells prior the date in the navigator. If a well has been chosen in the navigator, only that well will be shown in the data windows. Additional data items can be added to the data class. The relation between Status and Active status must be configured using screen <em>EC Codes </em>(CO.1011). Customer controls Status (EC Code = WELL_STATUS), but Active Status (EC Code = CTIVE_WELL_STATUS) can only be OPEN, CLOSED or CLOSED_LT. Each customer status must be mapped to the correct active status used EC configuration screen for EC Codes.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-537873462'
+keys:
+  BF_CODE: CO.0143
+  T: BF_COMPONENT
+  URL: /format
+parentKeys: {}
+properties:
+  BF_CODE: CO.0143
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0143' AND NVL(URL,'IS_NULL') = '/format')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_format' )
+  CLASS_NAME: MESSAGE_FORMAT
+  COMP_CODE: format
+  NAME: Message Format
+  SIGNING_REQ_IND: null
+  URL: /format
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '958602043'
+keys:
+  BF_CODE: CD.0088
+  T: BF_COMPONENT
+  URL: /interface
+parentKeys: {}
+properties:
+  BF_CODE: CD.0088
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0088' AND NVL(URL,'IS_NULL') = '/interface')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/interface_contents' )
+  CLASS_NAME: null
+  COMP_CODE: interface_contents
+  NAME: Interface Conents
+  SIGNING_REQ_IND: null
+  URL: /interface
+related: {}

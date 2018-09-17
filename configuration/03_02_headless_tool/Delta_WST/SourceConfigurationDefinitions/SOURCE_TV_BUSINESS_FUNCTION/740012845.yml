@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '740012845'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/manage_stream_item/CLASS_NAME/STREAM_ITEM
+parentKeys: {}
+properties:
+  BF_CODE: CD.0008
+  NAME: Stream Item
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/manage_stream_item/CLASS_NAME/STREAM_ITEM
+related: {}

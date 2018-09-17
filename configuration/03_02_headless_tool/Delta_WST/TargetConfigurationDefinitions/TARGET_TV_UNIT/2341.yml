@@ -1,0 +1,141 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2341'
+keys:
+  T: TV_UNIT
+  UNIT: IN
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Inch
+  FIN_CODE: null
+  LABEL: in
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: IN
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: IN
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: 64THS
+    parentKeys:
+      TV_UNIT.UNIT: IN
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: IN
+      MULT_FACT: 64.0
+      PRECISION: null
+      TO_UNIT: 64THS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: IN
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: M
+    parentKeys:
+      TV_UNIT.UNIT: IN
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: IN
+      MULT_FACT: 0.0254
+      PRECISION: 3.0
+      TO_UNIT: M
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: IN
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MM
+    parentKeys:
+      TV_UNIT.UNIT: IN
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: IN
+      MULT_FACT: 25.4
+      PRECISION: 3.0
+      TO_UNIT: MM
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: DIAMETER
+      T: TV_UOM_SETUP
+      UNIT: IN
+    parentKeys:
+      TV_UNIT.UNIT: IN
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: DIAMETER
+      REPORT_UNIT: Y
+      UNIT: IN
+      VIEW_UNIT: N
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: ORIFICE_SIZE
+      T: TV_UOM_SETUP
+      UNIT: IN
+    parentKeys:
+      TV_UNIT.UNIT: IN
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: ORIFICE_SIZE
+      REPORT_UNIT: Y
+      UNIT: IN
+      VIEW_UNIT: N
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: PULLEY_SIZE
+      T: TV_UOM_SETUP
+      UNIT: IN
+    parentKeys:
+      TV_UNIT.UNIT: IN
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: PULLEY_SIZE
+      REPORT_UNIT: Y
+      UNIT: IN
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: SAMPLE_POT_LEVEL
+      T: TV_UOM_SETUP
+      UNIT: IN
+    parentKeys:
+      TV_UNIT.UNIT: IN
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: SAMPLE_POT_LEVEL
+      REPORT_UNIT: Y
+      UNIT: IN
+      VIEW_UNIT: N
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STROKE_LENGTH
+      T: TV_UOM_SETUP
+      UNIT: IN
+    parentKeys:
+      TV_UNIT.UNIT: IN
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STROKE_LENGTH
+      REPORT_UNIT: Y
+      UNIT: IN
+      VIEW_UNIT: N

@@ -1,0 +1,1 @@
+CREATE OR REPLACE TYPE qstrm_pmass_rec as object (indx INT, qstrm_id varchar2(32), hc_mass number);

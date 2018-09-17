@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1482028147'
+keys:
+  BF_CODE: TO.0002
+  T: BF_COMPONENT
+  URL: /loadingDelay
+parentKeys: {}
+properties:
+  BF_CODE: TO.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0002' AND NVL(URL,'IS_NULL') = '/loadingDelay')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_loading_delays' )
+  CLASS_NAME: CARGO_LIFTING_DELAY
+  COMP_CODE: loadingDelay
+  NAME: Cargo Loading Delay
+  SIGNING_REQ_IND: null
+  URL: /loadingDelay
+related: {}

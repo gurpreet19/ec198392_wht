@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1706023388'
+keys:
+  BF_CODE: SP.0054
+  T: BF_COMPONENT
+  URL: /processinput
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/processinput')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: FIN_CARGO_DOC_SIMPLE
+  COMP_CODE: processinput
+  NAME: Process Input
+  SIGNING_REQ_IND: null
+  URL: /processinput
+related: {}

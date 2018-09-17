@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-974766099'
+keys:
+  BF_DESCRIPTION_NO: CO.0148
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0148
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_orf_value' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Component oil recovery factors define the tendency for each hydrocarbon component to contribute in the oil phase after a given degree of processing. The oil recovery factors are often used in order to generate estimated oil and gas masses from a measured or estimated feed into the process. This normally requires the availability of component mass data for the stream in question.</p>
+
+    <p>The purpose of this configuration screen, <em>Stream ORF Values, </em>is to provide a way of maintaining oil recovery factors in Energy Components. A separate set of oil recovery factors pr. hydrocarbon component can be defined for each stream. Multiple sets for the same stream can be created over time. All created sets will be retained by EC, and the correct set will automatically become effective at the configured daytime.</p>
+
+    <p>This business function will only list streams which are oil, gas, condensate or reservoir phase in the navigator. The subset of hydrocarbon components that will be available in this business function is defined by the component set <em>Stream ORF Components </em>(STRM_ORF_COMP). Each component can be assigned an oil recovery factor defined as the fraction of the component mass that will end up in the oil phase. Each factor can have a separate comment attached. Each set of component factors will have a daytime and an &quot;ORF Type&quot; assigned. The <em>Daytime </em>set the date from which the set of factors becomes effective, and the <em>ORF Type </em>is an information attribute selected from a set of EC codes that can be defined by the customer. It often describes the source/destination/purpose of the factor set.</p>
+related: {}

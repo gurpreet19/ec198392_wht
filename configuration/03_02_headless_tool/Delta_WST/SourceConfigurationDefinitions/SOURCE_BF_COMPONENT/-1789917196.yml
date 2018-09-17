@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1789917196'
+keys:
+  BF_CODE: CO.1007
+  T: BF_COMPONENT
+  URL: /prop_hist_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.1007
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1007' AND NVL(URL,'IS_NULL') = '/prop_hist_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/personal_settings' )
+  CLASS_NAME: VALUES
+  COMP_CODE: prop_hist_table
+  NAME: Property History Table
+  SIGNING_REQ_IND: null
+  URL: /prop_hist_table
+related: {}

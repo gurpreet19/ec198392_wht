@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291513161'
+keys:
+  CODE: PO.0060
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PO.0060
+  NAME: Daily Gas Stream Status, by Stream
+related: {}

@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1996093019'
+keys:
+  NAME: LegendPosition
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: REVN_INV_CL_VAL_CO
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Legend Position
+  MANDATORY_IND: null
+  NAME: LegendPosition
+  PARAMETER_SUB_TYPE: STRING
+  PARAMETER_TYPE: BASIC_TYPE
+  PARAMETER_VALUE: se
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 60.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: REVN_INV_CL_VAL_CO
+related: {}

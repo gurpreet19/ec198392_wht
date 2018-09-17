@@ -1,0 +1,18 @@
+STRM_GC_COMP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-505934929'
+  keys:
+    CODE: STRM_GC_COMP
+    T: TV_COMPONENT_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+STRM_LPG_COMP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-388947186'
+  keys:
+    CODE: STRM_LPG_COMP
+    T: TV_COMPONENT_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

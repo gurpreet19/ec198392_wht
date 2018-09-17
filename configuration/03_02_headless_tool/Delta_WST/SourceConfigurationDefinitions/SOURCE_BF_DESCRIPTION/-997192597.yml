@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-997192597'
+keys:
+  BF_DESCRIPTION_NO: SD.0008
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/monthly_delivery' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Monthly Delivery business function is a screen for entering/viewing actual gas quantity deliveries for a given contract / delivery point. Basic nomination and&nbsp;delivery information will be listed for selected months, and contracts and delivery points satisfying the navigator selection. When selecting one month, daily values&nbsp;for this month will be listed, if available. The days in the bottom half of the screen is the same found in Daily Delivery (SD.0003) and same rules apply. The data in&nbsp;this section are displayed in ascending order - e.g. the first day of the month is displayed at the top.</p><p>Delivery data in this business function will normally be &ldquo;instantiated&rdquo; by the system, i.e. empty rows are periodically written automatically. Alternatively, the delivery&nbsp;data can be automatically populated from interface, for instance from another EC product. When receiving data from an interface, the interface source will be the&nbsp;master. This means that if updated set of data is delivered from the interface, existing delivery data for the given period (month or day) is overwritten.</p><p>It will still be possible for the user to create new rows for entry (by clicking the button for each new row required).</p><p>Data will be stored (independently) at both monthly and daily (if available) level. This means that when they daily values are changed, the monthly Delivered Qty are&nbsp;not updated (but the Aggregated Delivered Qty will reflect the update). Similarly, updates at monthly level will not influence the daily values.</p>
+related: {}

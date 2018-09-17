@@ -1,0 +1,92 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_EXCEPTIONHANDLER
+cnstPrimaryKey:
+  columns:
+  - ID_
+  name: SYS_C0015711
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  EXCEPTIONCLASSNAME_:
+    columnName: EXCEPTIONCLASSNAME_
+    typeName: VARCHAR2(4000 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  GRAPHELEMENTINDEX_:
+    columnName: GRAPHELEMENTINDEX_
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  GRAPHELEMENT_:
+    columnName: GRAPHELEMENT_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  ID_:
+    columnName: ID_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  NODE_:
+    columnName: NODE_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  PROCESSDEFINITION_:
+    columnName: PROCESSDEFINITION_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  TASK_:
+    columnName: TASK_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  TRANSITION_:
+    columnName: TRANSITION_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  TYPE_:
+    columnName: TYPE_
+    typeName: CHAR(1 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

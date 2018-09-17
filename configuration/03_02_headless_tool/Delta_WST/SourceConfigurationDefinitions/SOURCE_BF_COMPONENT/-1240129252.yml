@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1240129252'
+keys:
+  BF_CODE: SA.0008
+  T: BF_COMPONENT
+  URL: /DCAE
+parentKeys: {}
+properties:
+  BF_CODE: SA.0008
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SA.0008' AND NVL(URL,'IS_NULL') = '/DCAE')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/daily_contract_account_events' )
+  CLASS_NAME: SCTR_ACC_DAY_EVENT
+  COMP_CODE: DCAE
+  NAME: Daily Contract Account Events
+  SIGNING_REQ_IND: null
+  URL: /DCAE
+related: {}

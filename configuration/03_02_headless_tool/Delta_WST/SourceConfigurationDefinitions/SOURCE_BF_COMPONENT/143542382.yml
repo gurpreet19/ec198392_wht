@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '143542382'
+keys:
+  BF_CODE: TO.0030
+  T: BF_COMPONENT
+  URL: /request
+parentKeys: {}
+properties:
+  BF_CODE: TO.0030
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0030' AND NVL(URL,'IS_NULL') = '/request')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/daily_contract_capacity_request' )
+  CLASS_NAME: CNTR_DAY_CAP_REQUEST
+  COMP_CODE: request
+  NAME: daily contract capacity request
+  SIGNING_REQ_IND: null
+  URL: /request
+related: {}

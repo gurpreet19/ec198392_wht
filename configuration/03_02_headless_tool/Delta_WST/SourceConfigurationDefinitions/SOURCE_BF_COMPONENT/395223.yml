@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '395223'
+keys:
+  BF_CODE: IN.0026
+  T: BF_COMPONENT
+  URL: /CopyProducts
+parentKeys: {}
+properties:
+  BF_CODE: IN.0026
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0026' AND NVL(URL,'IS_NULL') = '/CopyProducts')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inv_line' )
+  CLASS_NAME: null
+  COMP_CODE: CopyProductsButton
+  NAME: CopyProducts
+  SIGNING_REQ_IND: null
+  URL: /CopyProducts
+related: {}

@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-207553126'
+keys:
+  CODE: MATCHING_UOM
+  CODE_TYPE: SOURCE_SPLIT_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: MATCHING_UOM
+  CODE_TEXT: Matching UOM
+  CODE_TYPE: SOURCE_SPLIT_METHOD
+  DESCRIPTION: Transaction UOM 1, fallback to Stream Item Master UOM
+  IS_ACTIVE: Y
+  IS_DEFAULT: Y
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 10.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

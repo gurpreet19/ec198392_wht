@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-6856656'
+keys:
+  BF_CODE: CO.2038
+  T: BF_COMPONENT
+  URL: /objectdates
+parentKeys: {}
+properties:
+  BF_CODE: CO.2038
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2038' AND NVL(URL,'IS_NULL') = '/objectdates')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CONTRACT_AREA_SETUP' )
+  CLASS_NAME: CONTRACT_AREA_SETUP
+  COMP_CODE: objectdates
+  NAME: Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /objectdates
+related: {}

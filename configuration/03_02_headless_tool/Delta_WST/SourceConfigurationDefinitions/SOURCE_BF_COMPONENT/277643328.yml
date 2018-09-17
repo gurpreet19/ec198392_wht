@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '277643328'
+keys:
+  BF_CODE: SA.0018
+  T: BF_COMPONENT
+  URL: /MonthlyCAS
+parentKeys: {}
+properties:
+  BF_CODE: SA.0018
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SA.0018' AND NVL(URL,'IS_NULL') = '/MonthlyCAS')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/contract_account_company_status_monthly' )
+  CLASS_NAME: SCTR_ACC_MTH_CPY_STATUS
+  COMP_CODE: MonthlyCAS
+  NAME: Monthly Contract Account Company Status
+  SIGNING_REQ_IND: null
+  URL: /MonthlyCAS
+related: {}

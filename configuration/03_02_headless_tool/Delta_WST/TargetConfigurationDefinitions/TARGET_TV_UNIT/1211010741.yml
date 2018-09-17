@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1211010741'
+keys:
+  T: TV_UNIT
+  UNIT: LTONNES
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Long tons (British)
+  FIN_CODE: null
+  LABEL: lton
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: LTONNES
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related: {}

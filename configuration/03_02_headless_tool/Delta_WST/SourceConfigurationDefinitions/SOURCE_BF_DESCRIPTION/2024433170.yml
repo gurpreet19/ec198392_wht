@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2024433170'
+keys:
+  BF_DESCRIPTION_NO: GD.0083
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0083
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_matching/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT/CLASS/TRNL_DAY_NOM_MATCH2/DAY_CLASS/TRNP_DAY_LOC_MATCHING/SUB_DAY/TRNP_SUB_DAY_LOC_MATCH' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to view nomination data for a location in the system, check if the upstream shipper has nominated the same exit stream figures to be&nbsp;delivered as the downstream shipper has nominated at each exit stream.</p><p>This screen supports matching process. A total overview of the Exit Points and indications of any errors is presented location level and shipper pair level &ndash; to make it&nbsp;easier for the user to find out where the investigation should start.</p><p>The 1st Data section will list nomination location of the selected Contract in the Navigator, The 2nd Data section will list nominations that are connected to the 1st Data&nbsp;section selected Nomination Location, and the 3rd Data section will list sub daily nominations of the selected 2nd Data section nomination.</p><p>The navigator is mandatory up to Contract, but this can be changed by the project, by including FORCE_NAV_CLASS/BUSINESS_UNIT in the treeview URL.</p>
+related: {}

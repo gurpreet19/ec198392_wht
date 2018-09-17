@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '263921683'
+keys:
+  BF_CODE: CP.0019
+  T: BF_COMPONENT
+  URL: /log_list
+parentKeys: {}
+properties:
+  BF_CODE: CP.0019
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0019' AND NVL(URL,'IS_NULL') = '/log_list')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/calc_lifting_program' )
+  CLASS_NAME: CALC_TRAN_CP_LOG
+  COMP_CODE: log_list
+  NAME: Log List
+  SIGNING_REQ_IND: null
+  URL: /log_list
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2037471040'
+keys:
+  BF_CODE: IN.0002
+  T: BF_COMPONENT
+  URL: /form
+parentKeys: {}
+properties:
+  BF_CODE: IN.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0002' AND NVL(URL,'IS_NULL') = '/form')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/validation/LEVEL/UNTRANSFER/MODE/SET_TO_PREV' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Validation Form
+  SIGNING_REQ_IND: null
+  URL: /form
+related: {}

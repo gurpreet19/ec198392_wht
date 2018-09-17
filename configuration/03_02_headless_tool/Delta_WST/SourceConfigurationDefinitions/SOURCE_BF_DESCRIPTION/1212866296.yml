@@ -1,0 +1,30 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1212866296'
+keys:
+  BF_DESCRIPTION_NO: PO.0025
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0025
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_oil_stream_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is part of the Business Process to gather and QA sub daily oil stream data. It should be used when SCADA systems provide records each 2nd hour / hourly / 30min or at other fixed intervals.</p>
+
+    <p>If the original data has occasional &quot;missing rows&quot; (that is, not every half hour when the fixed interval is 30 min), the &quot;<em>Generate Missing Rows</em>&quot; -button will insert any missing rows so that every half hour is accounted for. For these newly inserted rows, an existing period&rsquo;s data will be used as the row&rsquo;s initial value. EC will support copy forward, copy backwards and interpolate methods for generating missing row field values; the customer may select the desired method from a screen popup list.</p>
+
+    <p>The &quot;Aggregate Current&quot; &ndash;button will aggregate all sub-daily oil stream data (except calculated read only fields) for the day and stream chosen in the navigator.</p>
+
+    <p>The &quot;Aggregate Facility All&quot; &ndash;button will aggregate all sub-daily oil stream data (except calculated read only fields) for all type of streams which have the stream set equal to PO.0025 for the day and facility chosen in the navigator.</p>
+
+    <p>In addition to the columns shown on the sample screen above, the customer may select to configure and display one or more additional columns. A list of available attributes is found in Section 1.1.5.2. The column &quot;Is Active&quot; indicates whether they are activated in the initial product setup or not. Non activated attributes can be activated from <em>Class Attributes (CO.1014</em>) configuration screen<em>. </em></p>
+
+    <p>If aggregation of sub daily data for all streams in one is desirable this must be defined as a dbms_scheduler job and is to be implemented by the individual project.</p>
+
+    <p>The <strong>navigator </strong>section enables the selection of specific date for which the oil stream sub day measurement data will be displayed. The navigator is based on thed group model down to the stream level. All levels are mandatory and can be defaulted.</p>
+
+    <p><strong>Data section 1 </strong>has two buttons and a dropdown that enables the operator to fill inn blank records or trigger an aggregation of sub-day data to daily representative values.</p>
+
+    <p><strong>Data section 2 </strong>lists all sub day measurement data available for the stream.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1163823604'
+keys:
+  BF_CODE: IN.0028
+  T: BF_COMPONENT
+  URL: /to_class
+parentKeys: {}
+properties:
+  BF_CODE: IN.0028
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0028' AND NVL(URL,'IS_NULL') = '/to_class')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='' )
+  CLASS_NAME: TRANS_DIM_SET_ITEM
+  COMP_CODE: to_class
+  NAME: To_Class
+  SIGNING_REQ_IND: null
+  URL: /to_class
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1905543261'
+keys:
+  BF_CODE: CO.1054
+  T: BF_COMPONENT
+  URL: /objects
+parentKeys: {}
+properties:
+  BF_CODE: CO.1054
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1054' AND NVL(URL,'IS_NULL') = '/objects')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/component_report' )
+  CLASS_NAME: null
+  COMP_CODE: objects
+  NAME: Template Objects
+  SIGNING_REQ_IND: null
+  URL: /objects
+related: {}

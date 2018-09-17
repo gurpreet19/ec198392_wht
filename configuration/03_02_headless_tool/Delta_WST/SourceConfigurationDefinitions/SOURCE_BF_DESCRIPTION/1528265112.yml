@@ -1,0 +1,47 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1528265112'
+keys:
+  BF_DESCRIPTION_NO: CD.0126
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0126
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/intergr_boe_conversion' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>BOE Conversion screen</strong>    defines the BOE conversion
+    factors to be used.</p><p>    <u>The conversion can be done on three different
+    levels: </u><br>    <strong>- Country</strong>    as the highest level,<br>    <strong>-
+    Node</strong>    and<br>    <strong>- Field</strong>    as the lowest level.<br>    Lower
+    levels will always override higher level.</p><p>    If any BOE units are configured
+    on a Stream Item, the instantiation will    pick up these factors and apply them
+    to applicable quantities records.</p><p>    <u> The screen is divided into these
+    sections: </u></p><p>    <strong><em>- Navigator</em></strong><br>    Section
+    where Year and Conversion level have to be chosen.</p><p>    <strong><em>- Master
+    Section</em></strong><br>    Section shows the latest version of the object for
+    the selected Year.<br>    If there is no version starting in the year given by
+    the Year set in the    Navigator then the newest version having a version start
+    date prior to this    year is listed.<br>    The Master section is read-only for
+    all data elements except the End Date,    so for changing the actual conversion
+    factors and UOM FROM the user has to    set the year selector such that the version
+    in question is listed in the    Detail section.<br>    <u>Note:</u>    a side-effect
+    of this is that the user will not be able to change the Code    / Name / Product
+    / (Country/Field/Node) once it has been set.<br>    <u>Also note:</u>    It is
+    NOT allowed to add a New Version for a Daytime where there is already    one,
+    i.e. when adding a New Version of the object the version Daytime hasto be AFTER
+    the latest existing one. If the user needs to add a New Version    <em>in between</em>
+    then the user has to delete the versions having Version    Date after the one
+    you want to add, and then add the New Version. Then add    back the ones just
+    deleted.<br>    <u>Also note:</u>    if the user set an end-date to the object
+    then it is not allowed to add new    versions.</p><p>    <strong><em>- Detail
+    Section</em></strong><br>    Section shows all versions having a version start
+    date after the 1st of    January of the Year set in the navigator.</p><p>    The
+    BOE conversion will take the quantity given by the UOM FROM unit and    MULTIPLY
+    with the Factor to get to the BOE number.<br>    <u>Example: </u><br>    BOE factor
+    = 40<br>    From UOM = MJ.<br>    MJ quantity number for the given Stream Item:
+    = 2.000 MJ<br>    BOE Unit for the given Stream Item: KBOE<br>    Then the KBOE
+    number will be 2.000 X 40 X 0.001 = 80 KBOE.</p><p>    <u>Note</u>    : BOE unit
+    in use for the Stream Item may be BOE | KBOE | MBOE | GBOE. The    unit conversion
+    will take the actual BOE unit at the Stream Item into    account when doing the
+    conversion as illustrated in the example above.</p>'
+related: {}

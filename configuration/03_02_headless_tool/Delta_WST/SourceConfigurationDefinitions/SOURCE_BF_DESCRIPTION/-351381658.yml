@@ -1,0 +1,30 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-351381658'
+keys:
+  BF_DESCRIPTION_NO: PD.0006
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PD.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/well_eqpm_master_event' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Master Events are associated with incidents that may be caused by human, mechanical or natural causes. They may be assigned to other object events such as:-</p>
+
+    <p>Well downtime</p>
+
+    <p>Well constraints</p>
+
+    <p>Equipment downtime</p>
+
+    <p>Environmental events</p>
+
+    <p>For example, if you had a hurricane pass through a facility, you would record the Master Event as the Hurricane and would identify when it happened where and perhaps other comments. Then you would create and associate with that Master Event other well and equipment events and perhaps environment events, if there was a release of hydrocarbons.</p>
+
+    <p>A Master Event is given a unique ID, visible to the user that is made up of a 5 digit code plus year, month and day, plus a sequence number. It is system generated.</p>
+
+    <p>In our example above, if the event occurred on November 12, 2006 and the Event code was Natural Disaster (NATUR), and it was the only event on that day, the event ID might be: NATUR20061112001. This code will be used a display which Master Event other well, equipment and environmental events are linked to. However, it is the Master Event ID that is physical copied and used to refer the Master Event.</p>
+
+    <p>(See the Business Logic section for more details)</p>
+related: {}

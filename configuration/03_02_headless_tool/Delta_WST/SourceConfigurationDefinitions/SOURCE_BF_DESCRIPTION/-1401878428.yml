@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1401878428'
+keys:
+  BF_DESCRIPTION_NO: CP.0030
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_cargo_planning' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to create and maintain forecast objects for the cargo planning module.</p><p>This business functions works in the same way as other maintain object business functions. The only difference is the buttons that can be used to copy data from the&nbsp;original data set and other forecasts. Additional there is a button that can copy the data back to the original dataset.</p><p><strong>Copy From Forecast:</strong><br />This button copies data from an existing forecast into the new forecast, but only for the date period selected and the selected storage (if set). This means that if the&nbsp;start date and end date of the two forecasts don&rsquo;t overlap, no data will be copied. No data will be copied if they don&rsquo;t have the same storage.</p><p><strong>Copy From Original:</strong><br />This button copies data from the original dataset for the forecast start and end date. If storage is selected, only data for that storage will be copied.</p><p><strong>Copy To Original:</strong><br />This button copies the forecast data back to the original dataset. If data exist, they will be overridden and potentially deleted, if deleted in the forecast. This means&nbsp;that if a nomination is created in the original data set and then deleted in the forecast, it will be deleted when forecast is copied back.</p><p>Data that are copied behind the different buttons are<br />&middot; Cargos<br />&middot; Nominations (Parcels)<br />&middot; Storage forecast (Official figures if they exists)<br />&middot; Lifting Account forecast (Official figures if they exists)</p><p>Note that the above button implementation are an example implementation and can be changed in user exists for different projects.</p>
+related: {}

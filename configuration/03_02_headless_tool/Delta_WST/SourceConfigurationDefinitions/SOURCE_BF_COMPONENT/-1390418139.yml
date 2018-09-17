@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1390418139'
+keys:
+  BF_CODE: SP.0020
+  T: BF_COMPONENT
+  URL: /table3
+parentKeys: {}
+properties:
+  BF_CODE: SP.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0020' AND NVL(URL,'IS_NULL') = '/table3')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_information' )
+  CLASS_NAME: CONT_DOCUMENT_TEXT_ITEM
+  COMP_CODE: table3
+  NAME: Footer section, multi column
+  SIGNING_REQ_IND: null
+  URL: /table3
+related: {}

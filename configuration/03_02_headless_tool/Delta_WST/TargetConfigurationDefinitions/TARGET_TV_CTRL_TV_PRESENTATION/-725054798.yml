@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-725054798'
+keys:
+  COMPONENT_ID: ( SELECT 'CAP_DAY_OPER_REST' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.gd.screens/daily_operational_restriction/CLASS/OPRES_DAY_RESTRICTION?screentemplate=/com.ec.tran.gd.screens/daily_operational_restriction
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'CAP_DAY_OPER_REST' FROM DUAL )
+  COMPONENT_LABEL: Daily Operational Restriction
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'TRAN_GD_CA' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 20.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

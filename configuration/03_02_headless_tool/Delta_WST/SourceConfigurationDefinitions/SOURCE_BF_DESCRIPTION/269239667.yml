@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '269239667'
+keys:
+  BF_DESCRIPTION_NO: PR.0012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PR.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/contract_cargo_elements' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business function is used to list combinations of Contract and Cargo/Parcel in the first data section for selection in navigator, second data section is used to&nbsp;list stored elements for contract and cargo. The generate button is used to add missing element codes for selected contract and cargo/parcel. Element for contract is&nbsp;configured in <strong>BF CO.3023 &ndash;Cargo Price Element Setup.</strong></p>
+related: {}

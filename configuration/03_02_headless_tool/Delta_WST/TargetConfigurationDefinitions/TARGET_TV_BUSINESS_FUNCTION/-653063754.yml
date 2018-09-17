@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-653063754'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/MERCURY_REMOVAL_UNIT/TARGET/MERCURY_REMOVAL_UNIT/CLASS_NAME/MERCURY_REMOVAL_UNIT
+parentKeys: {}
+properties:
+  BF_CODE: CO.0177
+  NAME: Mercury Removal Unit
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/MERCURY_REMOVAL_UNIT/TARGET/MERCURY_REMOVAL_UNIT/CLASS_NAME/MERCURY_REMOVAL_UNIT
+related: {}

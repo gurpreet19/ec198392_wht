@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1335409813'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.wr.screens/daily_well_tank_data_cp
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.wr.screens/daily_well_tank_data_cp
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

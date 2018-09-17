@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '881637031'
+keys:
+  BF_CODE: RP.0015
+  T: BF_COMPONENT
+  URL: /view_btn
+parentKeys: {}
+properties:
+  BF_CODE: RP.0015
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0015' AND NVL(URL,'IS_NULL') = '/view_btn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_publishing_read_only' )
+  CLASS_NAME: null
+  COMP_CODE: view_btn
+  NAME: View
+  SIGNING_REQ_IND: null
+  URL: /view_btn
+related: {}

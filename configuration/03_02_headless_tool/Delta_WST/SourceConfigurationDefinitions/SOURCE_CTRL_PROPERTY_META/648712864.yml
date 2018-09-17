@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '648712864'
+keys:
+  KEY: /com/ec/tran/cargo/storage_level/use_production_day
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: N
+  DESCRIPTION: Read Lifting Account Adjustments according to the production day into the entitlement calculations
+  KEY: /com/ec/tran/cargo/storage_level/use_production_day
+  LABEL: Read Lifting account adjustments in Entitlement calculation
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

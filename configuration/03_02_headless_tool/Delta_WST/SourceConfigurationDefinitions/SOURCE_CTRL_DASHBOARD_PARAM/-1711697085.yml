@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1711697085'
+keys:
+  NAME: colors
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: WAT_RECONCILIATION_FACTOR
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Colors
+  MANDATORY_IND: Y
+  NAME: colors
+  PARAMETER_SUB_TYPE: STRING
+  PARAMETER_TYPE: BASIC_TYPE
+  PARAMETER_VALUE: cc6666,f9e10b,8eb245,f9e10b,cc6666
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 110.0
+  USER_EDITABLE_IND: Y
+  WIDGET_CODE: WAT_RECONCILIATION_FACTOR
+related: {}

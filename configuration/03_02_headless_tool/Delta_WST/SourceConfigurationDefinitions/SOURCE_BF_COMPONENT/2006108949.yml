@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2006108949'
+keys:
+  BF_CODE: CP.0039
+  T: BF_COMPONENT
+  URL: /entitlement
+parentKeys: {}
+properties:
+  BF_CODE: CP.0039
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0039' AND NVL(URL,'IS_NULL') = '/entitlement')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_daily_entitlement' )
+  CLASS_NAME: FCST_STOR_DAY_ENT
+  COMP_CODE: entitlement
+  NAME: Enitlement
+  SIGNING_REQ_IND: null
+  URL: /entitlement
+related: {}

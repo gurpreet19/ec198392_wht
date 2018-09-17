@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '791500392'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/SO2_SCRUBBER/TARGET/SO2_SCRUBBER/CLASS_NAME/SO2_SCRUBBER
+parentKeys: {}
+properties:
+  BF_CODE: CO.0173
+  NAME: So2 Scrubber
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/SO2_SCRUBBER/TARGET/SO2_SCRUBBER/CLASS_NAME/SO2_SCRUBBER
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1990181277'
+keys:
+  BF_DESCRIPTION_NO: CO.2041
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2041
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/TRANSPORT_ZONE/CLASS_NAME/TRANSPORT_ZONE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to create and maintain transport zones.</p><p>A pipeline can be divided into several transport zones. Within each zone there can be several pipeline segments and delivery points.</p>
+related: {}

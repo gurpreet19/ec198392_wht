@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1180163530'
+keys:
+  BF_CODE: PO.0006
+  T: BF_COMPONENT
+  URL: /inventory
+parentKeys: {}
+properties:
+  BF_CODE: PO.0006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0006' AND NVL(URL,'IS_NULL') = '/inventory')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_tank_status' )
+  CLASS_NAME: TANK_MTH_INV_OIL
+  COMP_CODE: inventory
+  NAME: Monthly Tank Inventory
+  SIGNING_REQ_IND: null
+  URL: /inventory
+related: {}

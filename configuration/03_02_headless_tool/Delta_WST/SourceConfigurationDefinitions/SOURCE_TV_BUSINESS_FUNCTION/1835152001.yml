@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1835152001'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/field_splits
+parentKeys: {}
+properties:
+  BF_CODE: SP.0026
+  NAME: Transaction Distribution Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/field_splits
+related: {}

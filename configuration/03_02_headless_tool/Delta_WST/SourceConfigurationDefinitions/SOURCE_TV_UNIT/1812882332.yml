@@ -1,0 +1,102 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1812882332'
+keys:
+  T: TV_UNIT
+  UNIT: MJPERKG
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Megajoule per kg
+  FIN_CODE: null
+  LABEL: MJ/kg
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MJPERKG
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERKG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BTUPERLBS
+    parentKeys:
+      TV_UNIT.UNIT: MJPERKG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERKG
+      MULT_FACT: 429.923
+      PRECISION: 6.0
+      TO_UNIT: BTUPERLBS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERKG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GBTUPERLBS
+    parentKeys:
+      TV_UNIT.UNIT: MJPERKG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERKG
+      MULT_FACT: 4.29923E-7
+      PRECISION: 6.0
+      TO_UNIT: GBTUPERLBS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERKG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KCALPERNM3
+    parentKeys:
+      TV_UNIT.UNIT: MJPERKG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERKG
+      MULT_FACT: 0.238902957618615
+      PRECISION: 6.0
+      TO_UNIT: KCALPERNM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERKG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MJPERLBS
+    parentKeys:
+      TV_UNIT.UNIT: MJPERKG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERKG
+      MULT_FACT: 0.453593
+      PRECISION: 6.0
+      TO_UNIT: MJPERLBS
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: CALORIFIC_VALUE
+      T: TV_UOM_SETUP
+      UNIT: MJPERKG
+    parentKeys:
+      TV_UNIT.UNIT: MJPERKG
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: CALORIFIC_VALUE
+      REPORT_UNIT: Y
+      UNIT: MJPERKG
+      VIEW_UNIT: N

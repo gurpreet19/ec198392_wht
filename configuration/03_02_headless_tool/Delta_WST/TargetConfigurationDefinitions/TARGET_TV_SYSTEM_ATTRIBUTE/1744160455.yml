@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1744160455'
+keys:
+  ATTRIBUTE_TYPE: DEFERMENT_VERSION
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: PD.0001.02
+  ATTRIBUTE_TYPE: DEFERMENT_VERSION
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Choose between PD.0001 / PD.0001.02 / PD.0004 / PD.0006
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

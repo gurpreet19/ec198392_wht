@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-259504611'
+keys:
+  BF_DESCRIPTION_NO: GD.0028
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0028
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_balancing/CLASS/TRCN_DAY_NOM_BAL/NOMINATION_CYCLE/false' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>In order to properly balance their nominations, the shipper will be able to use this business function to verify that each contract is properly balanced. When that is&nbsp;done the shipper can submit the nominations.</p><p>Typical usage of this business function is to allow the shipper to view total requested input and total requested output quantities on contracts. The shipper then&nbsp;needs to press the submit button to run validations that, if passed, will accept the nominations. This screen will also be used to view scheduled and any pipeline&nbsp;imposed adjustments to the nominations.</p><p>The user can view the individual input and output nominations in the lower section of the screen. The shipper can use this view to determine where the imbalance&nbsp;exists.</p><p>The business function is read only. If nominations do not balance, the shipper needs to correct his nominations in the Input Nomination or Output Nomination&nbsp;business functions.</p>
+related: {}

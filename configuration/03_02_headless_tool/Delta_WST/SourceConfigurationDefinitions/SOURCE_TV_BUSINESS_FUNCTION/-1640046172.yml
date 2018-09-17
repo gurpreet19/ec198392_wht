@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1640046172'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/forecast_scenarios_graphs/CLASS_NAME/FCST_SCENARIO_GRAPHS/DAILY_CLASS_NAME/FCST_SUMM_VAR_DAY/MONTHLY_CLASS_NAME/FCST_SUMM_VAR_MTH
+parentKeys: {}
+properties:
+  BF_CODE: PP.0066
+  NAME: Forecast Compare Scenario - Graphical
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/forecast_scenarios_graphs/CLASS_NAME/FCST_SCENARIO_GRAPHS/DAILY_CLASS_NAME/FCST_SUMM_VAR_DAY/MONTHLY_CLASS_NAME/FCST_SUMM_VAR_MTH
+related: {}

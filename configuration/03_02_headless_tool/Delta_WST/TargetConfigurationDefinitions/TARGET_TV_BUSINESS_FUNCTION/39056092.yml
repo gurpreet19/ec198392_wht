@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '39056092'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/EMULSIFIER/TARGET/EMULSIFIER/CLASS_NAME/EMULSIFIER
+parentKeys: {}
+properties:
+  BF_CODE: CO.0175
+  NAME: Emulsifier
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/EMULSIFIER/TARGET/EMULSIFIER/CLASS_NAME/EMULSIFIER
+related: {}

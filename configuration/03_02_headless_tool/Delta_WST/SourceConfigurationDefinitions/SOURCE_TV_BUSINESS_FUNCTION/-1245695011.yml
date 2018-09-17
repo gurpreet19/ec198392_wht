@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1245695011'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.bs.calc.screens/maintain_calculation
+parentKeys: {}
+properties:
+  BF_CODE: CO.1040
+  NAME: Maintain Calculation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.bs.calc.screens/maintain_calculation
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1052000582'
+keys:
+  BF_DESCRIPTION_NO: SD.0014
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/ngl_export' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is similar to the business function Wet gas export and fuel (SC.0013), but this applies to NGL streams only.</p><p>The first data section list all objects defined in Maintain Stream Mapping (CO.3018).</p><p>The second data section is the hourly details for selected object. This section may be used to view hourly PI measurements, estimated values for end of day and&nbsp;correct hourly predictions of export values. The starting point of the day is picked from the system attribute &lsquo;PROD_DAY_START&rsquo;.</p>
+related: {}

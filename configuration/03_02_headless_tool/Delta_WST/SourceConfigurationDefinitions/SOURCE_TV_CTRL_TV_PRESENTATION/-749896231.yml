@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-749896231'
+keys:
+  COMPONENT_ID: ( SELECT 'GD_MTH_CNTR_LOC_INV' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.gd.screens/monthly_contract_location_inventory/TARGET/CONTRACT_INVENTORY/CLASS/CNTR_MTH_LOC_INVENTORY/SUB_CLASS/CNTR_DAY_LOC_INV_SUMMARY/NAV_MODEL/TRAN_COMMERCIAL?screentemplate=/com.ec.tran.gd.screens/monthly_contract_location_inventory
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'GD_MTH_CNTR_LOC_INV' FROM DUAL )
+  COMPONENT_LABEL: Monthly Contract Location Inventory
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'TRAN_GD_IN' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 70.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

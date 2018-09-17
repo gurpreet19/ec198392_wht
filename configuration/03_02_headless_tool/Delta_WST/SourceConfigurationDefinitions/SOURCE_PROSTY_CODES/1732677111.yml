@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1732677111'
+keys:
+  CODE: N
+  CODE_TYPE: REPORT_PUBLICATION_TYPE
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: Y
+  CODE: N
+  CODE_TEXT: Generated Report
+  CODE_TYPE: REPORT_PUBLICATION_TYPE
+  DESCRIPTION: Generated Report
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 20.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

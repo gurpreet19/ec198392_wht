@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '316006161'
+keys:
+  BF_CODE: PT.0013
+  T: BF_COMPONENT
+  URL: /accept_no_alloc
+parentKeys: {}
+properties:
+  BF_CODE: PT.0013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0013' AND NVL(URL,'IS_NULL') = '/accept_no_alloc')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/single_pwel_test_result' )
+  CLASS_NAME: null
+  COMP_CODE: accept2
+  NAME: Accept, no alloc
+  SIGNING_REQ_IND: null
+  URL: /accept_no_alloc
+related: {}

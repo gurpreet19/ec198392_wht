@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-301698731'
+keys:
+  BF_CODE: FC.0023
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: FC.0023
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.0023' AND NVL(URL,'IS_NULL') = '/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_period_product_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/FCST_TRNL_PRD_CP_REC_FAC/BF_PROFILE/FC.0023/CLASS_DAY/FCST_TRNL_PRD_CP_REC_DAY/DIM1/PRODUCT_ID_POPUP/FCST_CLASS/FORECAST_TRAN_FC' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

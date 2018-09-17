@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1774471703'
+keys:
+  BF_COMPONENT_ACTION_NO: '(SELECT A.BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION
+    A WHERE A.BF_COMPONENT_NO = (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE
+    =''IN.0007'' AND NVL(URL,''IS_NULL'') = ''/prod_stim_table_detail'') AND NVL(A.URL,
+    ''IS_NULL'') = ''/save'') '
+  T: BF_COMPONENT_ACTION
+parentKeys: {}
+properties:
+  BF_COMPONENT_ACTION_NO: '(SELECT A.BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION
+    A WHERE A.BF_COMPONENT_NO = (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE
+    =''IN.0007'' AND NVL(URL,''IS_NULL'') = ''/prod_stim_table_detail'') AND NVL(A.URL,
+    ''IS_NULL'') = ''/save'') '
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0007' AND NVL(URL,'IS_NULL') = '/prod_stim_table_detail')
+  COMMENTS: null
+  NAME: Production Source Stream Item /save
+  URL: /save
+related: {}

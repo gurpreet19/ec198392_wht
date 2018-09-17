@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '736794825'
+keys:
+  BF_CODE: CP.0034
+  T: BF_COMPONENT
+  URL: /cargo
+parentKeys: {}
+properties:
+  BF_CODE: CP.0034
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0034' AND NVL(URL,'IS_NULL') = '/cargo')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_cargo_info' )
+  CLASS_NAME: FCST_CARGO_INFO
+  COMP_CODE: cargo
+  NAME: Cargo Information
+  SIGNING_REQ_IND: null
+  URL: /cargo
+related: {}

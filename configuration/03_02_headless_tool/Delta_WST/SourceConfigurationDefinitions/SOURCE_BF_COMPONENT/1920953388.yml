@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1920953388'
+keys:
+  BF_CODE: PO.0030
+  T: BF_COMPONENT
+  URL: /dataGenerationMethodPopup
+parentKeys: {}
+properties:
+  BF_CODE: PO.0030
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0030' AND NVL(URL,'IS_NULL') = '/dataGenerationMethodPopup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_production_separator_status' )
+  CLASS_NAME: null
+  COMP_CODE: dataGenerationMethodPopup
+  NAME: Data Generation Method Popup
+  SIGNING_REQ_IND: null
+  URL: /dataGenerationMethodPopup
+related: {}

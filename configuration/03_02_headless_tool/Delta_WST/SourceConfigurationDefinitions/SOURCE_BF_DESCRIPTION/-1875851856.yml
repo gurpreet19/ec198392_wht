@@ -1,0 +1,26 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1875851856'
+keys:
+  BF_DESCRIPTION_NO: IN.0034
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0034
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/manage_template_inventory' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <span style="color: rgb(0, 0, 153);"><em>        Transactional
+    Inventory module in EC Revenue allows complex        inventory valuations using
+    the EC calculation engine. It is a standard        calculation where minimal calculation
+    knowledge is required and can be        fully configured through creating EC objects
+    and configuration. It has        been designed with the intention of creating
+    templates with standard        functionality. And for the cases that do not conform
+    to the normal        rules, overrides can be created to cater for the exceptions.    </em></span></p><p>    <strong>Transactional
+    Inventory Layout Set Setup screen</strong>    allows adding a template to a Transactional
+    Layout Set screen (BF IN.0033)    that can be available when viewing an inventory
+    in the Transactional    Inventory Overview screen (BF IN.0024).</p><p>    By choosing
+    a different template the lower section of the screen will be    updated showing
+    different columns dependent on the Template Setup done at    Transactional Inventory
+    Layout screen (BF IN.0022).</p><p>    This set can be chosen for the Inventory
+    and Product Stream in the    Transactional Inventory Setup screen (BF IN.0036).</p>'
+related: {}

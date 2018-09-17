@@ -1,0 +1,36 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2538201'
+keys:
+  T: TV_UNIT
+  UNIT: SBBL
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: 'Barrel - Std Conditions '
+  FIN_CODE: null
+  LABEL: bbl
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: SBBL
+  UOM_GROUP: V
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SBBL
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: SBBL
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SBBL
+      MULT_FACT: 1.0
+      PRECISION: 6.0
+      TO_UNIT: BBLS
+      USER_EXIT: null
+      USE_UE: null

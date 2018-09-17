@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1342003170'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/FIELD/TARGET/FIELD/DATA_CLASS/PROD_FIELD_FORECAST
+parentKeys: {}
+properties:
+  BF_CODE: PP.0013
+  NAME: Field Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/FIELD/TARGET/FIELD/DATA_CLASS/PROD_FIELD_FORECAST
+related: {}

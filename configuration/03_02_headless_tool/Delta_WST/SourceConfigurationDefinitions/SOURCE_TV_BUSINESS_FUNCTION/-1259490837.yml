@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1259490837'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/monthly_validation_list
+parentKeys: {}
+properties:
+  BF_CODE: VO.0028
+  NAME: Monthly List Validation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/monthly_validation_list
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1300437575'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/schedule_lifting_jsf
+parentKeys: {}
+properties:
+  BF_CODE: CP.0002.01
+  NAME: Schedule Lifting Chart
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/schedule_lifting_jsf
+related: {}

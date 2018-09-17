@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-163315376'
+keys:
+  BF_DESCRIPTION_NO: SA.0001.01
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0001.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/sale_calc_day_contract' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to run the daily sales calculations. This is basically the same as Daily Contract Calculation (SA.0001), but with a main difference.&nbsp;<span style=""line-height:1.6"">Instead of running the same calculation for selected contracts, this BF will look up what calculation to run for the individual contracts.</span></p><p>On the Contract object there is an attribute &lsquo;Daily Contract Calculation&rsquo; that will hold the information about what calculation should be run for this contract. If this&nbsp;value is empty the contract is ignored. If the calculation fails for one contract the rest of the calculations will not be executed.</p><p>The order on how the contract are run when part of Contract Groups is defined by the &lsquo;Calculation Sequence&rsquo; attribute on Contract.</p>
+related: {}

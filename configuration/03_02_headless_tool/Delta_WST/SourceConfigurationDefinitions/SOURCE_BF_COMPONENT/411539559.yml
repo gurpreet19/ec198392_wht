@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '411539559'
+keys:
+  BF_CODE: PA.0005
+  T: BF_COMPONENT
+  URL: /exceptionalTasks
+parentKeys: {}
+properties:
+  BF_CODE: PA.0005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PA.0005' AND NVL(URL,'IS_NULL') = '/exceptionalTasks')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_todo_list' )
+  CLASS_NAME: null
+  COMP_CODE: exceptionalTasks
+  NAME: Exceptional Tasks
+  SIGNING_REQ_IND: null
+  URL: /exceptionalTasks
+related: {}

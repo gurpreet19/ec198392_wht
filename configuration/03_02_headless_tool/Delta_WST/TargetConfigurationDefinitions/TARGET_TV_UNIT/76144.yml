@@ -1,0 +1,51 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '76144'
+keys:
+  T: TV_UNIT
+  UNIT: MCF
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Thousand cubic feet (M=1000)
+  FIN_CODE: null
+  LABEL: mcf
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MCF
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MCF
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: M3
+    parentKeys:
+      TV_UNIT.UNIT: MCF
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MCF
+      MULT_FACT: 28.31682
+      PRECISION: 6.0
+      TO_UNIT: M3
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: GAS_VOL
+      T: TV_UOM_SETUP
+      UNIT: MCF
+    parentKeys:
+      TV_UNIT.UNIT: MCF
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: GAS_VOL
+      REPORT_UNIT: Y
+      UNIT: MCF
+      VIEW_UNIT: null

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-870705710'
+keys:
+  BF_CODE: CP.0037
+  T: BF_COMPONENT
+  URL: /monthlyForecast
+parentKeys: {}
+properties:
+  BF_CODE: CP.0037
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0037' AND NVL(URL,'IS_NULL') = '/monthlyForecast')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_monthly_stor_pc_forecast' )
+  CLASS_NAME: FCST_STOR_MTH_PC_FCAST
+  COMP_CODE: monthlyForecast
+  NAME: Monthly Forecast
+  SIGNING_REQ_IND: null
+  URL: /monthlyForecast
+related: {}

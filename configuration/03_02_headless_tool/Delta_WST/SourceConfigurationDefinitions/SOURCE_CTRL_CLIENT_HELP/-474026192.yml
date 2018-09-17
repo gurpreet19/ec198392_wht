@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-474026192'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

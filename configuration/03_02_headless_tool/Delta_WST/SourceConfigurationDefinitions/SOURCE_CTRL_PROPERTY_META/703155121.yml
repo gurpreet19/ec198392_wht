@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '703155121'
+keys:
+  KEY: /com.ec.tran.to.screens/blmr_light/tab/account_split
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: 'true'
+  DESCRIPTION: ON/OFF by Using true/false
+  KEY: /com.ec.tran.to.screens/blmr_light/tab/account_split
+  LABEL: BL/MR Light - Account Split Tab
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

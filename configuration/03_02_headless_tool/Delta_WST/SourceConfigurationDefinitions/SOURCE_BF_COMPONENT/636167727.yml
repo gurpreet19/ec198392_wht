@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '636167727'
+keys:
+  BF_CODE: TO.0016
+  T: BF_COMPONENT
+  URL: /apportion
+parentKeys: {}
+properties:
+  BF_CODE: TO.0016
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0016' AND NVL(URL,'IS_NULL') = '/apportion')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/batch_quantity_unload' )
+  CLASS_NAME: null
+  COMP_CODE: apportion
+  NAME: Apportion
+  SIGNING_REQ_IND: null
+  URL: /apportion
+related: {}

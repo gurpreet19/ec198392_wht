@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1020059961'
+keys:
+  CODE: NO_DATE
+  CODE_TYPE: DOC_RECEIVED_BASE_CODE
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: NO_DATE
+  CODE_TEXT: No Date
+  CODE_TYPE: DOC_RECEIVED_BASE_CODE
+  DESCRIPTION: For Document Received Date not in use
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 9.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

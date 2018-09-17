@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '434353567'
+keys:
+  BF_CODE: SD.0023
+  T: BF_COMPONENT
+  URL: /daily_data
+parentKeys: {}
+properties:
+  BF_CODE: SD.0023
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0023' AND NVL(URL,'IS_NULL') = '/daily_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/monthly_profit_centre_delivery' )
+  CLASS_NAME: SCTR_DAY_PC_DEL
+  COMP_CODE: daily_data
+  NAME: Daily Data
+  SIGNING_REQ_IND: null
+  URL: /daily_data
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1032907821'
+keys:
+  BF_DESCRIPTION_NO: PO.0031
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_production_separator_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is part of the Business Process to gather and QA daily production separator status. These data are for information only, there are currently no business logic to pick up oil e.g. gas measurements stored against production separators. These meters must be modeled as Streams if the purpose is to use the numbers in e.g. the allocation.</p>
+
+    <p>The navigator section enables the selection of specific date for which the production separator measurement data will be displayed. The navigator is based on the configured group model down to the facility class 1 level. All levels are mandatory and can be defaulted.</p>
+related: {}

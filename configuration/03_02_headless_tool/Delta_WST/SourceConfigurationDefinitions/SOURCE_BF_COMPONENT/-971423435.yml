@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-971423435'
+keys:
+  BF_CODE: IN.0007
+  T: BF_COMPONENT
+  URL: /prod_stim_table_detail
+parentKeys: {}
+properties:
+  BF_CODE: IN.0007
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0007' AND NVL(URL,'IS_NULL') = '/prod_stim_table_detail')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/inv_setup_item_selection/STREAM_CATEGORY_CODE/INV' )
+  CLASS_NAME: INVENTORY_STIM_SETUP
+  COMP_CODE: prod_stim_table
+  NAME: Production Source Stream Item
+  SIGNING_REQ_IND: null
+  URL: /prod_stim_table_detail
+related: {}

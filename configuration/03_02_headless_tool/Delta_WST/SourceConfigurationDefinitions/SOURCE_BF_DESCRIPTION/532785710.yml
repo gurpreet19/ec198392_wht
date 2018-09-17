@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '532785710'
+keys:
+  BF_DESCRIPTION_NO: CO.0149
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0149
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DEFERMENT_GROUP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>Deferment Group is an object class only used in the Deferment Business Functions. The purpose is to group wells and attach them to a Deferment Group to allow for a fast way to select a group of wells which are all invovled in a deferment event. The Deferment Group could be a physical pice of equipment but it don&lsquo;t have to be physical it could also be e.g. &ldquo;gas lift system&rdquo;. One well can be included in many Deferment Groups and one Deferment Group could have many wells.</p>
+
+    <p>The configuration screen for Deferment Groups and Wells is CO.0147</p>
+related: {}

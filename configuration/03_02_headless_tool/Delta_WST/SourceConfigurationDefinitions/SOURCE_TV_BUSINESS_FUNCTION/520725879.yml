@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '520725879'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  NAME: Period Document
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD
+related: {}

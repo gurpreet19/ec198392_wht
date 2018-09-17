@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-51303928'
+keys:
+  BF_DESCRIPTION_NO: CO.2079
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2079
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STORAGE/TARGET/STORAGE/CLASS_NAME/PILOT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to configure Pilot objects. Pilot will implement port resources interface class in product.</p>
+related: {}

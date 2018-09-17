@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '159343379'
+keys:
+  BF_CODE: CO.2082
+  T: BF_COMPONENT
+  URL: /CopyOpportunity
+parentKeys: {}
+properties:
+  BF_CODE: CO.2082
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2082' AND NVL(URL,'IS_NULL') = '/CopyOpportunity')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/maintain_opportunities' )
+  CLASS_NAME: null
+  COMP_CODE: CopyOpportunity
+  NAME: Copy
+  SIGNING_REQ_IND: null
+  URL: /CopyOpportunity
+related: {}

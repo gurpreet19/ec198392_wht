@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '339078584'
+keys:
+  ATTRIBUTE_TYPE: PROD_FCST_PERIOD
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: SHORT_TERM
+  ATTRIBUTE_TYPE: PROD_FCST_PERIOD
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Indicates system default production forecast period
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

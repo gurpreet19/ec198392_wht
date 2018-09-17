@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1268354622'
+keys:
+  BF_CODE: CP.0030
+  T: BF_COMPONENT
+  URL: /CopyToOriginalButton
+parentKeys: {}
+properties:
+  BF_CODE: CP.0030
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0030' AND NVL(URL,'IS_NULL') = '/CopyToOriginalButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_cargo_planning' )
+  CLASS_NAME: null
+  COMP_CODE: CopyToOriginalButton
+  NAME: CopyToOriginalButton
+  SIGNING_REQ_IND: null
+  URL: /CopyToOriginalButton
+related: {}

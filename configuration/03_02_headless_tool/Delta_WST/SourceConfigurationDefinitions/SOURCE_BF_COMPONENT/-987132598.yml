@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-987132598'
+keys:
+  BF_CODE: PT.0009
+  T: BF_COMPONENT
+  URL: /graph
+parentKeys: {}
+properties:
+  BF_CODE: PT.0009
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0009' AND NVL(URL,'IS_NULL') = '/graph')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_stable_periods_summarise' )
+  CLASS_NAME: null
+  COMP_CODE: stable_period_graph
+  NAME: Graph
+  SIGNING_REQ_IND: null
+  URL: /graph
+related: {}

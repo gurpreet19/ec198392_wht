@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1244626977'
+keys:
+  BF_CODE: CP.0005
+  T: BF_COMPONENT
+  URL: /search
+parentKeys: {}
+properties:
+  BF_CODE: CP.0005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0005' AND NVL(URL,'IS_NULL') = '/search')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/loading_instruction' )
+  CLASS_NAME: CARGO_PLANNING_NAVIGATOR
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /search
+related: {}

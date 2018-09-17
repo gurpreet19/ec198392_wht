@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-550881173'
+keys:
+  BF_CODE: CP.0068
+  T: BF_COMPONENT
+  URL: /fcst_list
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0068' AND NVL(URL,'IS_NULL') = '/fcst_list')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: FCST_MNGR_FCST_LIST
+  COMP_CODE: fcst_list
+  NAME: Forecast List
+  SIGNING_REQ_IND: null
+  URL: /fcst_list
+related: {}

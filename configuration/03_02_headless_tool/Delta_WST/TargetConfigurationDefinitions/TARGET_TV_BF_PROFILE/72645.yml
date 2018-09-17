@@ -1,0 +1,386 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '72645'
+keys:
+  PROFILE_CODE: INJ
+  T: TV_BF_PROFILE
+parentKeys: {}
+properties:
+  NAME: Injection Well Profile
+  PROFILE_CLASS_NAME: WELL
+  PROFILE_CODE: INJ
+related:
+  TV_BF_PROFILE_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: PT.0016
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: PT.0016
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/event_gas_injection_well_data')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: PT.0017
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: PT.0017
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/event_steam_injection_well_data')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: PT.0018
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: PT.0018
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/event_water_injection_well_data')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0002
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0002
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/daily_gas_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0003
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0003
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/daily_water_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0005
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0005
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/maintain_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0007
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0007
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/daily_gas_injection_flowline_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0008
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0008
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/daily_water_injection_flowline_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0010.02
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0010.02
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/well_gas_inj_analysis/COMP_SET/WELL_INJ_COMP')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0016
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0016
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/sub_daily_gas_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0017
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0017
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/sub_daily_water_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0018
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0018
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/sub_daily_water_injection_flowline_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0019
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0019
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/sub_daily_gas_injection_flowline_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0025
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0025
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/period_gas_injection_well_totalizer')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0026
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0026
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/period_water_injection_well_totalizer')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0029
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0029
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/daily_steam_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0037
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0037
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/sub_daily_steam_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0040
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0040
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/event_waste_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0046
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0046
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/monthly_gas_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0047
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0047
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/monthly_water_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0048
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0048
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/injection_well_active_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0051
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0051
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/daily_air_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0054
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0054
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/period_water_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0055
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0055
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/period_gas_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0056
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0056
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/period_steam_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0057
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0057
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/daily_co2_injection_well_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0063
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0063
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/event_well_status_3')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0021
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0021
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/well_sample_analysis')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0021.01
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0021.01
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/well_sample_analysis_1')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0035
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0035
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/daily_well_bore_interval_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0036
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0036
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/sub_daily_well_bore_interval_status')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0058
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0058
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/webo_interval_plt_test')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0059
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0059
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/webo_interval_pressure_test')
+      PROFILE_CODE: INJ
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: WR.0011
+      PROFILE_CODE: INJ
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: INJ
+    properties:
+      BF_CODE: WR.0011
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.prod.wr.screens/maintain_well_chronology')
+      PROFILE_CODE: INJ

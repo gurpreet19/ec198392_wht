@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1930769537'
+keys:
+  BF_CODE: FI.0008
+  T: BF_COMPONENT
+  URL: /FinItemCalculationButton
+parentKeys: {}
+properties:
+  BF_CODE: FI.0008
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0008' AND NVL(URL,'IS_NULL') = '/FinItemCalculationButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/fin_item_calc_daily' )
+  CLASS_NAME: null
+  COMP_CODE: FinItemCalculationButton
+  NAME: Calculation Button
+  SIGNING_REQ_IND: null
+  URL: /FinItemCalculationButton
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1158176014'
+keys:
+  BF_CODE: WR.0058
+  T: BF_COMPONENT
+  URL: /detail_well_bore_plt_test
+parentKeys: {}
+properties:
+  BF_CODE: WR.0058
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0058' AND NVL(URL,'IS_NULL') = '/detail_well_bore_plt_test')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/webo_interval_plt_test' )
+  CLASS_NAME: WEBO_PLT_TEST_RESULT
+  COMP_CODE: detail_well_bore_plt_test
+  NAME: Well Bore Interval PLT Test Details
+  SIGNING_REQ_IND: null
+  URL: /detail_well_bore_plt_test
+related: {}

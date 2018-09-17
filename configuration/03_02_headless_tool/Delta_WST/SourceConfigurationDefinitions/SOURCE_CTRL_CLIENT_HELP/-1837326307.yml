@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1837326307'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_COST_OBJECT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_COST_OBJECT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

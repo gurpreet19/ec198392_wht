@@ -1,0 +1,27 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1770201120'
+keys:
+  BF_DESCRIPTION_NO: CO.2082
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2082
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/maintain_opportunities' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This screen will hold all communication related to opportunity
+    and can be used to track any negotiations related to the individual opportunity.</p><p>First
+    data section holds all the list of opportunities with Opportunity Name, Daytime,
+    End date as mandatory columns. An opportunity can be of one-off or period type,
+    this can be indicated by the selecting the Period checkbox.</p><p>It is possible
+    to copy opportunity details from an existing opportunity to a new opportunity.
+    User can select the opportunity they want to copy in the first data section, enter
+    a new opportunity name in the textbox next to the "Copy Opportunity" button and
+    select this button.</p><p>The screen comprises of three tabs. <br/><b>General
+    Terms:</b> This tab allows to modify opportunity details. <br/><b>Documents :</b>
+    This tab will hold the file attachment for this opportunity. Supported document
+    upload formats can be configured using the system property &quot;Maintain Opportunities
+    Allowed File Extensions&quot. <br/><b>Other Terms:</b> Any special terms and notes
+    will be mentioned here.<br/><b>Misc.: </b>This tab is hidden by default. Any attributes
+    required by the project can be added in this tab.</p>'
+related: {}

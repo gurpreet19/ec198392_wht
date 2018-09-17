@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '592156836'
+keys:
+  BF_DESCRIPTION_NO: CP.0052
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0052
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/sub_day_entitlement_lift_acc' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to view daily and sub daily entitlements for Lifting Accounts.</p>
+related: {}

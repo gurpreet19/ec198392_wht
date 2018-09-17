@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '231651560'
+keys:
+  BF_DESCRIPTION_NO: CO.0044
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/VESSEL' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Vessel is a list of standby and supply vessels. There might be requirement to track when a vessel arrives and when it leaves the offshore platform.</p>
+related: {}

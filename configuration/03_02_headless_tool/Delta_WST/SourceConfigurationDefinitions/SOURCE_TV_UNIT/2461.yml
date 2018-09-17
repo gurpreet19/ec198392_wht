@@ -1,0 +1,529 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2461'
+keys:
+  T: TV_UNIT
+  UNIT: MJ
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Mega Joule
+  FIN_CODE: MJ
+  LABEL: MJ
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MJ
+  UOM_GROUP: E
+  UOM_SUBGROUP: JO
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BTU
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 947.82
+      PRECISION: null
+      TO_UNIT: BTU
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GBTU
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 9.4782E-7
+      PRECISION: null
+      TO_UNIT: GBTU
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: GJ
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GTHERMS
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 9.4782E-12
+      PRECISION: null
+      TO_UNIT: GTHERMS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GWH
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 2.7777778E-7
+      PRECISION: null
+      TO_UNIT: GWH
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: J
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 1000000.0
+      PRECISION: null
+      TO_UNIT: J
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KBTU
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.94782
+      PRECISION: null
+      TO_UNIT: KBTU
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 1000.0
+      PRECISION: null
+      TO_UNIT: KJ
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KTHERMS
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 9.4782E-6
+      PRECISION: null
+      TO_UNIT: KTHERMS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KWH
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.27777778
+      PRECISION: null
+      TO_UNIT: KWH
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MBTU
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 9.4782E-4
+      PRECISION: null
+      TO_UNIT: MBTU
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: GJ
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KWH
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.277777777777778
+      PRECISION: 9.0
+      TO_UNIT: KWH
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BTU
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 947.8170777
+      PRECISION: 6.0
+      TO_UNIT: BTU
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GBTU
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 9.478170777E-7
+      PRECISION: 6.0
+      TO_UNIT: GBTU
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: M3GE
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.0284340353127971
+      PRECISION: 6.0
+      TO_UNIT: M3GE
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: M3GEOLD
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.0284333238555587
+      PRECISION: 4.0
+      TO_UNIT: M3GEOLD
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MCAL
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.238903
+      PRECISION: 6.0
+      TO_UNIT: MCAL
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MMBTU
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 9.4782E-4
+      PRECISION: 6.0
+      TO_UNIT: MMBTU
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: TJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 1.0E-6
+      PRECISION: null
+      TO_UNIT: TJ
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 1.0
+      PRECISION: null
+      TO_UNIT: MJ
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MTHERMS
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 9.4782E-9
+      PRECISION: null
+      TO_UNIT: MTHERMS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MWH
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 2.7777778E-4
+      PRECISION: null
+      TO_UNIT: MWH
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: THERMS
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 0.0094782
+      PRECISION: null
+      TO_UNIT: THERMS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: DTHERMS
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 2003-01-01T00:00:00Z
+      FROM_UNIT: MJ
+      MULT_FACT: 9.4782E-4
+      PRECISION: null
+      TO_UNIT: DTHERMS
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: GAS_EXIT_POINT
+      T: TV_UOM_SETUP
+      UNIT: MJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: GAS_EXIT_POINT
+      REPORT_UNIT: Y
+      UNIT: MJ
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_ENERGY_QTY
+      T: TV_UOM_SETUP
+      UNIT: MJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0'
+      MEASUREMENT_TYPE: REV_ENERGY_QTY
+      REPORT_UNIT: null
+      UNIT: MJ
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      T: TV_UOM_SETUP
+      UNIT: MJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0'
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      REPORT_UNIT: null
+      UNIT: MJ
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      T: TV_UOM_SETUP
+      UNIT: MJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0'
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      REPORT_UNIT: null
+      UNIT: MJ
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      T: TV_UOM_SETUP
+      UNIT: MJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0'
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      REPORT_UNIT: null
+      UNIT: MJ
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: ENERGY
+      T: TV_UOM_SETUP
+      UNIT: MJ
+    parentKeys:
+      TV_UNIT.UNIT: MJ
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: ENERGY
+      REPORT_UNIT: Y
+      UNIT: MJ
+      VIEW_UNIT: Y

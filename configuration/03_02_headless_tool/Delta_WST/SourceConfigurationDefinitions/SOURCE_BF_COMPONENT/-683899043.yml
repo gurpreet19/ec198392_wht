@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-683899043'
+keys:
+  BF_CODE: GD.0060
+  T: BF_COMPONENT
+  URL: /RecallNotific
+parentKeys: {}
+properties:
+  BF_CODE: GD.0060
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0060' AND NVL(URL,'IS_NULL') = '/RecallNotific')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_recall_reput' )
+  CLASS_NAME: CAPACITY_REL_RCL_RPT
+  COMP_CODE: RecallNotific
+  NAME: Recall Notification
+  SIGNING_REQ_IND: null
+  URL: /RecallNotific
+related: {}

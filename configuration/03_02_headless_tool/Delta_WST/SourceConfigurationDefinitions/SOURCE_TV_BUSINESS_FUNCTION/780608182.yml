@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '780608182'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.co.screens/nompnt_code_connection
+parentKeys: {}
+properties:
+  BF_CODE: CO.2072
+  NAME: Nomination Point - Code Connection
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.co.screens/nompnt_code_connection
+related: {}

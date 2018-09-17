@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2065555217'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.ecdm.co.screens/imp_staging
+parentKeys: {}
+properties:
+  BF_CODE: IS.0003
+  NAME: Staging Data
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.ecdm.co.screens/imp_staging
+related: {}

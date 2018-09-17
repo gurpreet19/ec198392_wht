@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '404218572'
+keys:
+  BF_CODE: CO.0131
+  T: BF_COMPONENT
+  URL: /monitor_nav
+parentKeys: {}
+properties:
+  BF_CODE: CO.0131
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0131' AND NVL(URL,'IS_NULL') = '/monitor_nav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/schedule_history' )
+  CLASS_NAME: null
+  COMP_CODE: monitor_nav
+  NAME: Monitor Navigator
+  SIGNING_REQ_IND: null
+  URL: /monitor_nav
+related: {}

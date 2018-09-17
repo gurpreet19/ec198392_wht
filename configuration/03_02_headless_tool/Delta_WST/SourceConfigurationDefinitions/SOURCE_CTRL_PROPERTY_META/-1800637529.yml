@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1800637529'
+keys:
+  KEY: /com/ec/revn/sp/calc/defaultvalue/loglevel
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: NODETAIL
+  DESCRIPTION: EC Revenue Calculation Engine Log Level
+  KEY: /com/ec/revn/sp/calc/defaultvalue/loglevel
+  LABEL: EC Revenue Calculation Engine Log Level
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

@@ -1,0 +1,135 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-93507721'
+keys:
+  BF_DESCRIPTION_NO: SP.0055
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/ifac_journal_entry/NAV_MODEL/DATA_INTERFACE/NAV_TARGET/BUSINESS_UNIT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Data Entry Interface screen</strong>    is used to
+    view and approve Data Entries being interfaced from a financial system.</p><h3>    <strong
+    style="color: rgb(0, 0, 153);">Navigator</strong></h3><p>    The navigator lets
+    the user set these values as search criteria for the Source Documents section:<br>    <strong><em>-
+    Uploaded Date-From:</em></strong>    Uploads executed after this date will be
+    listed,<br>    <strong><em>- Uploaded Date-To:</em></strong>    Uploads executed
+    before this date will be listed,<br>    <strong><em>- Business Unit:</em></strong>    Uploads
+    having the selected Business Unit will be listed,<br>    <strong><em>- Document:</em></strong>    Uploads
+    having the selected Document Name will be listed,<br>    <strong><em>- Status:</em></strong>    Uploads
+    having the selected Status will be listed.</p><h3>    <strong style="color: rgb(0,
+    0, 153);">Source Documents</strong></h3><p>    The Source Documents section of
+    the screen contains a table that lists all the Source Documents that fit the search
+    criteria given by the navigator values.<br>    <u>The table has these columns:
+    </u><br>    <strong><em>- Name:</em></strong>    The name of the upload - typically
+    coming from the uploaded source data,<br>    <strong><em>- Period:</em></strong>    The
+    financial period the upload refers to,<br>    <strong><em>- Status:</em></strong>    The
+    status of the upload,<br>    <strong><em>- Data Entry Count:</em></strong>    The
+    number of Data Entries in the upload,<br>    <strong><em>- Upload Date:</em></strong>    The
+    date of the upload into EC,<br>    <strong><em>- Version:</em></strong>    The
+    version of the upload. When the same source is uploaded again for the same financial
+    period the Version number will automatically increase.</p><p>    The section has
+    the following buttons:</p><p>    <strong>Button <span style="color: rgb(0, 153,
+    0);">Approve Document</span></strong><br>    For a Source Document to be available
+    to the subsequent process steps in EC it must be set to Approved. This button
+    will approve the selected source    document.</p><p>    <strong>Button <span style="color:
+    rgb(0, 153, 0);">Un-Approve Document</span></strong><span style="color: rgb(0,
+    153, 0);"></span><br>    A document that has been approved can be set to un-approved
+    by this button. Note that if the source document has already been used as an input
+    document in    the subsequent process it can''t be un-approved. Also, if there
+    is a new version of the upload for the same period it is not allowed to un-approve.</p><p>    <strong>Button
+    <span style="color: rgb(0, 153, 0);">Trace Document</span></strong><br>    The
+    Trace Document button will open a popup window showing the Tracing information
+    for the selected source document. In most of the cases a Data Entry    Interface
+    document will be the ''first'' entity in a chain of process steps. Because of
+    this there will normally be no ''Trace Backwards'' for these documents.    The
+    ''Trace Forwards'' tab in the Document Tracing screen will typically show the
+    document that has been created based on the selected Data Entry document.</p><h3>    <strong
+    style="color: rgb(0, 0, 153);">The Second Navigator</strong></h3><p>    The second
+    navigator is to view all the interfaced entries for current source document. By
+    default, the entries does not retrieve to the screen. This to    speed up the
+    Source Document section. The entries can be filtered by these search criteria:<br>    <strong><em>-
+    Layout:</em></strong>    To filter on a specific dataset. Will also set the table
+    layout accordingly.<br>    <strong><em>- Account:</em></strong>    To filter on
+    a specific account. A value can be selected or a new value can be entered directly
+    into the drop-down list.<br>    <strong><em>- WBS</em></strong>    : To filter
+    on a specific WBS. A value can be selected or a new value can be entered directly
+    into the drop-down list.<br>    <strong><em>- Cost Center:</em></strong>    To
+    filter on a specific cost center. A value can be selected or a new value can be
+    entered directly into the drop-down list.<br>    <strong><em>- Revenue Order:</em></strong>    To
+    filter on a specific revenue order. A value can be selected or anew value can
+    be entered directly into the drop-down list.<br>    <strong><em>- Project:</em></strong>    To
+    filter on a specific project. A value can be selected or a new value can be entered
+    directly into the drop-down list.<br>    <strong><em>- Dataset:</em></strong>    To
+    filter on a specific dataset.</p><h3>    <strong style="color: rgb(0, 0, 153);">Entries
+    Tab</strong></h3><p>    This section will display by the second navigator and
+    shows the data Entries in the selected Source Document. In order to populate this
+    section you need to    select a source document and then click the Go-button (green
+    arrow).</p><p>    <u>Note </u>    that you are not obliged to set any filters
+    in the second navigator - but if the Source Document contains a large number of
+    records it is recommended to    set a filter before retrieving the data.</p><h3>    <strong
+    style="color: rgb(0, 0, 153);">Pending Items Tab</strong></h3><p>    This section
+    will display by the second navigator and shows all items for current source document
+    which is unknown to EC.</p><p>    <strong>Profit Center</strong><br>    This is
+    an overview of the profit centers and the numbers of pending, ignored and generated
+    items of each profit center.</p><p>    <strong>Button <span style="color: rgb(0,
+    153, 0);">Generate List</span></strong>    will generate the pending list for
+    current source document. The table in this section will be updated and all unknown
+    objects from current document will be    listed in the Pending Items section below.</p><p>    <strong>Pending
+    Items</strong><br>    - This table will list all unknown items for current source
+    document.<br>    - The table can be generated/updated by the <strong> ''Generate
+    List'' </strong> button.<br>    - The items can be ignored (not to be generated
+    by EC) by setting the <strong> Ignore column </strong>:<br>    <u>Always:</u>    -
+    This item will be ignored for current source document and all new source document
+    having this item.<br>    <u>Once: </u>    - This item will be ignored for current
+    source document only.<br>    <u>Ignored </u>items will be moved to the ''Ignored
+    Items'' tab.<br>    - The items can be generated as new objects in EC by the <strong>''Generate
+    Objects'' button</strong>:<br>    - The items can be selected and generated one
+    by one, or can be selected all in one go by the <strong>''Toggle Tick Boxes''
+    button</strong>.<br>    - The items to be generated as new objects in EC needs
+    to have a Start Date. The navigator <strong> ''Uploaded Date - From'' </strong>
+    will be suggested as default. The End    Date is not mandatory.<br>    - Generated
+    items will be moved to the <strong> ''Generated Items'' </strong> tab.</p><h3>    <strong
+    style="color: rgb(0, 0, 153);">Ignored Items Tab</strong></h3><p>    This section
+    will display by the second navigator and shows all ignored items for current source
+    document. These items will not be generated in EC.</p><p>    <strong>Profit Center</strong><br>    This
+    is an overview of the profit centers and the numbers of pending, ignored and generated
+    items of each profit center.</p><p>    <strong>Ignored Items</strong><br>    This
+    table will list all ignored items for current source document.<br>    - The ignore
+    type can be changed to a permanent ignore by changing it to "Always''. Then this
+    item it will affect all new source documents.<br>    - The ignored item can be
+    un-ignored by removing the ignore type from current item. In that case it will
+    re-appear in the ''Pending Items'' tab.</p><p>    <strong>Generated Items Tab</strong><br>    This
+    section will display by the second navigator and shows all generated items for
+    current source document. From here the generated items can be added to    an object
+    list if needed.</p><p>    <strong>Profit Center</strong><br>    This is an overview
+    of the profit centers and the numbers of pending, ignored and generated items
+    of each profit center.</p><p>    <strong>Generated Items</strong><br>    This
+    table will list all items which is generated from the ''Pending Items'' tab for
+    current source document:<br>    - The current generated item can be viewed/edited
+    in a pop-up by the ''View Object "button.<br>    - One (or several) generated
+    items can be added to an object list:<br>    ------ The items can be selected
+    one by one, or can be selected all in one go by the ''Toggle Tick Boxes'' button.<br>    ------
+    The target object list can be selected in the ''Object List'' selector, and be
+    viewed/edited in a pop-up by the ''View List'' button.<br>    ------ The ''Add
+    To List'' button will add all selected items to the target Object List.</p><h3>    <strong
+    style="color: rgb(0, 0, 153);">Additional Information</strong></h3><p>    Journal
+    Entries from Financial Systems can be imported to EC through class view TV_IFAC_JOURNAL_ENTRY.
+    The interfacing can be done by inserting records to    TV_IFAC_JOURNAL_ENTRY directly,
+    using Data Uploader, or by ECIS.</p><p>    It is possible to keep data entry source
+    information by setting the SOURCE_DOC_NAME column in the interfaced records. Data
+    entries from the same source    document can be interfaced multiple times for
+    a specific period, and EC keeps track of each upload by assigning source document
+    version. Data entries with    an old version is considered being replaced by new
+    version in the same period. The Data Mapping process picks up only Data Entries
+    with latest source    document version.</p><p>    Note that source document version
+    won''t be assigned automatically as the system receives Data Entries one by one
+    rather than as a whole upload at a time.    To trigger the system to assign source
+    document versions, two methods can be used:</p><p>    - By calling procedure ECDP_RR_REVN_MAPPING_INTERFACE.
+    Approve All Latest Upload<br>    - By clicking the button "Approve" on this Business
+    Function</p><p>    To un-approve an uploaded document, select the document and
+    click Un-Approve button. Please note that it is not possible to un-approve a document
+    where    there is new upload on the same document.</p><p>    Source Document Name
+    is mandatory for Data Entry.</p>'
+related: {}

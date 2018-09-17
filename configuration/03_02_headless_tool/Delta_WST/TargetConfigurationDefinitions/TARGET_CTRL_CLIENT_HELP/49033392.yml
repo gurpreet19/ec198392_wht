@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '49033392'
+keys:
+  EC_CLIENT_OBJ: /com.ec.sale.co.screens/price_index_factor
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.sale.co.screens/price_index_factor
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

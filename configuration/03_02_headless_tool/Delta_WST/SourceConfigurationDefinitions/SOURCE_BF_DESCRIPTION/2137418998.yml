@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2137418998'
+keys:
+  BF_DESCRIPTION_NO: TO.0009.02
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0009.02
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_document_other' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to upload cargo documents. Uploaded documents can be downloaded from this screen.</p><p>Third-party documents can be uploaded on either a nomination or on the cargo itself. Supported document upload formats can be configured using the system property &quot;Allowed File Extensions for Other Cargo Documents Upload&quot. Only pdf files can be merged.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-720067903'
+keys:
+  BF_CODE: LA.0002
+  T: BF_COMPONENT
+  URL: /closeAccount
+parentKeys: {}
+properties:
+  BF_CODE: LA.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='LA.0002' AND NVL(URL,'IS_NULL') = '/closeAccount')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.la.screens/monthly_account_status/BALANCE_QTY/EST_CLOSING_BALANCE' )
+  CLASS_NAME: null
+  COMP_CODE: closeAccount
+  NAME: Close Lifting Account
+  SIGNING_REQ_IND: null
+  URL: /closeAccount
+related: {}

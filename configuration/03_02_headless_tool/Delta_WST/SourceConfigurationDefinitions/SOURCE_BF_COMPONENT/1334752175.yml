@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1334752175'
+keys:
+  BF_CODE: IS.0009
+  T: BF_COMPONENT
+  URL: /agentdownload
+parentKeys: {}
+properties:
+  BF_CODE: IS.0009
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IS.0009' AND NVL(URL,'IS_NULL') = '/agentdownload')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_agent_config' )
+  CLASS_NAME: null
+  COMP_CODE: agentdownload
+  NAME: Download Agent
+  SIGNING_REQ_IND: null
+  URL: /agentdownload
+related: {}

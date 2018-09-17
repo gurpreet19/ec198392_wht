@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1491955106'
+keys:
+  BF_CODE: WR.0010.03
+  T: BF_COMPONENT
+  URL: /well_oil_qa
+parentKeys: {}
+properties:
+  BF_CODE: WR.0010.03
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0010.03' AND NVL(URL,'IS_NULL') = '/well_oil_qa')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_component_qa' )
+  CLASS_NAME: WELL_OIL_COMP_QA
+  COMP_CODE: well_oil_qa
+  NAME: Oil component analysis
+  SIGNING_REQ_IND: null
+  URL: /well_oil_qa
+related: {}

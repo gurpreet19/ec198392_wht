@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '901374948'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: REVN_INV_CNT_CO
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: REVN
+  DESCRIPTION: Inventory Validation Status - Inventory Owner Company
+  LABEL: Inventory Validation Status - Inventory Owner Company
+  NAME: Inventory Validation Status - Inventory Owner Company
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: REVN_INV_CNT_CO
+related: {}

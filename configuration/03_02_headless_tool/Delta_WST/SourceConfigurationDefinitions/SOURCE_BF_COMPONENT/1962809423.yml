@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1962809423'
+keys:
+  BF_CODE: PR.0033
+  T: BF_COMPONENT
+  URL: /PriceCalculationButton
+parentKeys: {}
+properties:
+  BF_CODE: PR.0033
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PR.0033' AND NVL(URL,'IS_NULL') = '/PriceCalculationButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/fcst_price_calc' )
+  CLASS_NAME: null
+  COMP_CODE: PriceCalculationButton
+  NAME: Price Calculation Button
+  SIGNING_REQ_IND: null
+  URL: /PriceCalculationButton
+related: {}

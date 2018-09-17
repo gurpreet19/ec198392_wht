@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2035746300'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: FCTY_TOP5_MTH_OIL_PROD
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Top 5 Monthly Oil Producers at Facility
+  LABEL: Top 5 Monthly Oil Producers at Facility
+  NAME: FctyTop5MthOilProducers
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: FCTY_TOP5_MTH_OIL_PROD
+related: {}

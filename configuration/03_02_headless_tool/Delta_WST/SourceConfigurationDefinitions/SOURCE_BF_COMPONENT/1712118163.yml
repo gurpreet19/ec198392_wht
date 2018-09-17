@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1712118163'
+keys:
+  BF_CODE: PR.0010
+  T: BF_COMPONENT
+  URL: /cargo_price_list
+parentKeys: {}
+properties:
+  BF_CODE: PR.0010
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PR.0010' AND NVL(URL,'IS_NULL') = '/cargo_price_list')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/cargo_price_list' )
+  CLASS_NAME: CARGO_PRICE_LIST
+  COMP_CODE: cargo_price_list
+  NAME: Cargo Price List
+  SIGNING_REQ_IND: null
+  URL: /cargo_price_list
+related: {}

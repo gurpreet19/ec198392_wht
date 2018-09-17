@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1327137698'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/daily_query_input_quantities
+parentKeys: {}
+properties:
+  BF_CODE: VO.0026
+  NAME: Daily Quantity Input
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/daily_query_input_quantities
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2014122557'
+keys:
+  BF_DESCRIPTION_NO: CO.0050
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_copy_object_well/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/WELL' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>This screen retrieves records from the Well class. The version that is valid within the specified values in the navigator will be displayed. It displays all enabled attributes of Well object. The screen provides the ease to update more than one record at the same time. It also allows creation of a new Well as a copy of an existing Well. To copy a well, select the well to copy from and then enter the new Well Name, Well Code, and Start Date, then hit Create a Copy button. If the well has sub-surface configuration down to reservoir, it will automatically be included in the copy job.</p>
+related: {}

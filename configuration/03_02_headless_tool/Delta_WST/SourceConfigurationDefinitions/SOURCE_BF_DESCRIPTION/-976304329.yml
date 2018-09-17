@@ -1,0 +1,27 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-976304329'
+keys:
+  BF_DESCRIPTION_NO: CD.0114
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0114
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/payment_scheme_setup' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Payment Scheme Setup screen</strong>    is used to
+    define the Payment Dates (due dates) for a given Booking Period    and Payment
+    Scheme and for each of these Payment.<br>    Dates define how to calculate the
+    payment for that given Payment Date.</p><p>    <u> The payment can be one of the
+    following variants: </u><br>    - a fixed Value<br>    - a Share fraction (e.g.
+    0.4 = 40%)<br>    - a Share Fraction and a Fixed Value<br>    - a Fraction (e.g.
+    14/31)<br>    - a Fraction and a Fixed Value.</p><p>    <u>Note:</u>    It is
+    not allowed to have both Share and Fraction for the same Payment    Date.</p><p>    For
+    any given combination of Booking Period and Payment Scheme the sum of    shares
+    must add to 1 (100%) and the sum of Fractions must also add to 1    (e.g. 14/31
+    and 17/31 = 31/31 = 1).</p><p>    <u>Also note:</u>    It is allowed to have Payment
+    Dates in a different month compared to the    selected Booking Period. The Add
+    Year function instantiates a year with new    Booking Periods for this purpose
+    - <u>note</u> that it will NOT generate    the Booking Periods in use with the
+    ordinary Booking Period Close / Reopen    Business Functions.</p>'
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1048321560'
+keys:
+  BF_DESCRIPTION_NO: CO.2068
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2068
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/process_train_storage_yield_factor' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function enables registration of process train storage yield factors. A yield factors is a ratio indicating how much of a specific product can be obtained&nbsp;from the inlet gas stream feeding into the process train&rsquo;s liquefaction and purification process. The inlet gas stream for a process train is configured in the Period&nbsp;Process Train Storage Yield business function.</p><p>The first data section simply list process trains connected to the facility selected in the navigator. The second data section enables registration of yield factors&nbsp;applicable for the selected process train in data section one. A yield factor can be configured for each storage related to the facility selected in the navigator.</p>
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1859282557'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pd.screens/low_off_deferments
+parentKeys: {}
+properties:
+  BF_CODE: PD.0011
+  NAME: Low and Off - set end date
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pd.screens/low_off_deferments
+related: {}

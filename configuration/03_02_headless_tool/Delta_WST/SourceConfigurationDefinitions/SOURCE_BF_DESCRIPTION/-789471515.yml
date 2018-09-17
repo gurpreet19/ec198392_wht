@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-789471515'
+keys:
+  BF_DESCRIPTION_NO: CO.1075
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1075
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/xhtml/pages/app-server-analytics' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Analytics business function is used to monitor and collect runtime information about the Energy Component application and application server. Monitoring can be enabled and disabled from this screen.</p>
+related: {}

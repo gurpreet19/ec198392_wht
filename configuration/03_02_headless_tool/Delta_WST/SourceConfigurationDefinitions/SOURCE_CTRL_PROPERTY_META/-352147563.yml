@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-352147563'
+keys:
+  KEY: GR_TR_DIMLIGHT_TEXT_COLOR
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: A6A6A6
+  DESCRIPTION: This is the color for the text for the Visual Tracing for the non-traced data entities. Given in RGB as HEX
+  KEY: GR_TR_DIMLIGHT_TEXT_COLOR
+  LABEL: Visual Tracing dimlight text color
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

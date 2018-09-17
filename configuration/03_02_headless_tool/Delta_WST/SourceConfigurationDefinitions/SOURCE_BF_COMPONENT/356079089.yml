@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '356079089'
+keys:
+  BF_CODE: SP.0042
+  T: BF_COMPONENT
+  URL: /manual_journal_entry
+parentKeys: {}
+properties:
+  BF_CODE: SP.0042
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0042' AND NVL(URL,'IS_NULL') = '/manual_journal_entry')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cont_journal_entry' )
+  CLASS_NAME: CONT_JOURNAL_ENTRY
+  COMP_CODE: manual_journal_entry
+  NAME: Manual Data Entries
+  SIGNING_REQ_IND: null
+  URL: /manual_journal_entry
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '922576848'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CALC_GRP_CONTEXT
+parentKeys: {}
+properties:
+  BF_CODE: CO.0245
+  NAME: Calculation Group Context
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CALC_GRP_CONTEXT
+related: {}

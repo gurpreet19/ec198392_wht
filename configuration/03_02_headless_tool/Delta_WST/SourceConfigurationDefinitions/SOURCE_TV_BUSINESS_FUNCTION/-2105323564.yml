@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2105323564'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.fc/fcst_value_by_field/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST
+parentKeys: {}
+properties:
+  BF_CODE: FC.1016
+  NAME: Forecast Quantities By Field
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fc/fcst_value_by_field/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST
+related: {}

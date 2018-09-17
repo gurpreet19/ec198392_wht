@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2140030763'
+keys:
+  COMPONENT_ID: ( SELECT 'OIL_WELL_SUB_DAY_STATUS_2_PRD' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('2')
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'OIL_WELL_SUB_DAY_STATUS_2_PRD' FROM DUAL )
+  COMPONENT_LABEL: Sub Daily Production Well Status 2 - by Period
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FLD_WELL_RES_SUB_DAY' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 25.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

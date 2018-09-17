@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '158410213'
+keys:
+  BF_CODE: CO.1037
+  T: BF_COMPONENT
+  URL: /filteringAttr
+parentKeys: {}
+properties:
+  BF_CODE: CO.1037
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1037' AND NVL(URL,'IS_NULL') = '/filteringAttr')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/db_object_type' )
+  CLASS_NAME: CALC_OBJECT_FILTER
+  COMP_CODE: filteringAttr
+  NAME: Filtering Attribute
+  SIGNING_REQ_IND: null
+  URL: /filteringAttr
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '194347060'
+keys:
+  BF_CODE: IS.0003
+  T: BF_COMPONENT
+  URL: /last_imported_data
+parentKeys: {}
+properties:
+  BF_CODE: IS.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IS.0003' AND NVL(URL,'IS_NULL') = '/last_imported_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_staging' )
+  CLASS_NAME: null
+  COMP_CODE: last_imported_data
+  NAME: Last Imported Data
+  SIGNING_REQ_IND: null
+  URL: /last_imported_data
+related: {}

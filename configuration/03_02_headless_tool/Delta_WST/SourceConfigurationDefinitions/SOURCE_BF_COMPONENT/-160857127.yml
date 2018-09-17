@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-160857127'
+keys:
+  BF_CODE: CO.0220
+  T: BF_COMPONENT
+  URL: /currentEffectiveSplit
+parentKeys: {}
+properties:
+  BF_CODE: CO.0220
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0220' AND NVL(URL,'IS_NULL') = '/currentEffectiveSplit')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/blend_content_split' )
+  CLASS_NAME: BLEND_CONTENT
+  COMP_CODE: currentEffectiveSplit
+  NAME: Current Effective Split
+  SIGNING_REQ_IND: null
+  URL: /currentEffectiveSplit
+related: {}

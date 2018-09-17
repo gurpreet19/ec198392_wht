@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1509121650'
+keys:
+  BF_CODE: WR.0044
+  T: BF_COMPONENT
+  URL: /table_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0044
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0044' AND NVL(URL,'IS_NULL') = '/table_well_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/production_well_active_status' )
+  CLASS_NAME: PWEL_PERIOD_STATUS
+  COMP_CODE: table_well_status
+  NAME: Well Status
+  SIGNING_REQ_IND: null
+  URL: /table_well_status
+related: {}

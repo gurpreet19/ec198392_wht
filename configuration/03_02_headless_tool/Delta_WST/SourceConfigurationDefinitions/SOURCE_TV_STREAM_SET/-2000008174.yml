@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2000008174'
+keys:
+  CODE: WR.0076
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: WR.0076
+  NAME: Monthly Steam Injection Well Status
+related: {}

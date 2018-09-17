@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1335817432'
+keys:
+  BF_CODE: PO.0096
+  T: BF_COMPONENT
+  URL: /dailyStreamProfitCentreStatussplitbycpy
+parentKeys: {}
+properties:
+  BF_CODE: PO.0096
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0096' AND NVL(URL,'IS_NULL') = '/dailyStreamProfitCentreStatussplitbycpy')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_strm_profit_centre_splitby_co' )
+  CLASS_NAME: STRM_DAY_PC_CPY_STATUS
+  COMP_CODE: dailyStreamProfitCentreStatussplitbycpy
+  NAME: daily Stream Profit Centre Splitby Company
+  SIGNING_REQ_IND: null
+  URL: /dailyStreamProfitCentreStatussplitbycpy
+related: {}

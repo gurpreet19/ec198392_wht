@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '972083750'
+keys:
+  CODE: PO.0123_T
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PO.0123_T
+  NAME: Monthly Balancing Adjustment - To Object
+related: {}

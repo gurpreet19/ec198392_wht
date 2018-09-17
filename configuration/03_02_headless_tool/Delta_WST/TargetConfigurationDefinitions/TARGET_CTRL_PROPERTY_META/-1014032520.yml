@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1014032520'
+keys:
+  KEY: /com/ec/frmw/mhm/screens/incoming_messages/REFRESH_RATE
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: '60'
+  DESCRIPTION: Set number of sec. between incoming messages page refresh
+  KEY: /com/ec/frmw/mhm/screens/incoming_messages/REFRESH_RATE
+  LABEL: Refreshrate for incoming messages
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '796354331'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/document_validation/MODE/UNTRANSFER
+parentKeys: {}
+properties:
+  BF_CODE: SP.0005
+  NAME: Document Un-transfer
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/document_validation/MODE/UNTRANSFER
+related: {}

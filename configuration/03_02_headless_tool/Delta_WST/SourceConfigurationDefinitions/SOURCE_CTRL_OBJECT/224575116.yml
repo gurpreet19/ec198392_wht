@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '224575116'
+keys:
+  OBJECT_NAME: T_TEMPTEXT
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: N
+  MATH: null
+  OBJECT_NAME: T_TEMPTEXT
+  PINC_TRIGGER_IND: N
+  VIEW_PK_TABLE_NAME: null
+related: {}

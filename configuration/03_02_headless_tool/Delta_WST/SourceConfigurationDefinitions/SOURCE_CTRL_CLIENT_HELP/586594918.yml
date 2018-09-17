@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '586594918'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/split_key/SPLIT_TYPE/PRODUCT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/split_key/SPLIT_TYPE/PRODUCT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

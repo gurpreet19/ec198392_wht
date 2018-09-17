@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1597862065'
+keys:
+  BF_CODE: SP.0007
+  T: BF_COMPONENT
+  URL: /newobjectdates
+parentKeys: {}
+properties:
+  BF_CODE: SP.0007
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0007' AND NVL(URL,'IS_NULL') = '/newobjectdates')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_contract/CLASS_NAME/CONTRACT' )
+  CLASS_NAME: null
+  COMP_CODE: newobjectdates
+  NAME: New Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /newobjectdates
+related: {}

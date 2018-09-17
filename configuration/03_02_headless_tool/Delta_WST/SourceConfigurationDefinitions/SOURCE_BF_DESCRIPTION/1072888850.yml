@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1072888850'
+keys:
+  BF_DESCRIPTION_NO: CD.0120
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0120
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/setup_object_relations_basic/CLASS_NAME/FIELD_GROUP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Field Group Setup screen</strong>    is used to define the Field membership in Field Groups.</p><p>    Each Field may be a member of more than one Field Group.</p><p>    The Field membership is dated such that the membership for each field may    have different start dates.</p><p>    For each Field being member of a Field Group the user can define whether or    not the Field in question will be part of the reporting by setting the    Reporting indicator to on/off.</p>
+related: {}

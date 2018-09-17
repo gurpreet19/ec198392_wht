@@ -1,0 +1,162 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_BPM_PROCESS_INSTANCE_STA_
+cnstPrimaryKey:
+  columns:
+  - ID
+  name: SYS_C008833
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  COMPLETION_TIME:
+    columnName: COMPLETION_TIME
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  ID:
+    columnName: ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  PARENT_PI_ROOT_NODE_ID:
+    columnName: PARENT_PI_ROOT_NODE_ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  PI_REF_GLOBAL_ID:
+    columnName: PI_REF_GLOBAL_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  PI_REF_JSON:
+    columnName: PI_REF_JSON
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  PI_ROOT_NODE_ID:
+    columnName: PI_ROOT_NODE_ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  P_REF_GLOBAL_ID:
+    columnName: P_REF_GLOBAL_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  START_TIME:
+    columnName: START_TIME
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  STATE:
+    columnName: STATE
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  TREE_ID:
+    columnName: TREE_ID
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+cnstUniqueKeys:
+  UK_JBPM_BPM_PROCESS_INS_STA_1:
+    columns:
+    - PI_REF_GLOBAL_ID
+    name: UK_JBPM_BPM_PROCESS_INS_STA_1
+    type: UNIQUEKEY
+    status: UNDEFINED
+indexes:
+  I_BPM_PROCESS_INSTANCE_STATE_1:
+    indexName: I_BPM_PROCESS_INSTANCE_STATE_1
+    columns:
+    - TREE_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_BPM_PROCESS_INSTANCE_STATE_2:
+    indexName: I_BPM_PROCESS_INSTANCE_STATE_2
+    columns:
+    - PI_ROOT_NODE_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_BPM_PROCESS_INSTANCE_STATE_4:
+    indexName: I_BPM_PROCESS_INSTANCE_STATE_4
+    columns:
+    - P_REF_GLOBAL_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

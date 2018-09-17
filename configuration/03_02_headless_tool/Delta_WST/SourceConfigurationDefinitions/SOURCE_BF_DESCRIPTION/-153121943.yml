@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-153121943'
+keys:
+  BF_DESCRIPTION_NO: CP.0013
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/document_instruction' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The cargo documents are bundle of documents that are printed for a set of receivers. Each receiver can get a different set of documents.</p><p>For each document the scheduler must decide which receiver should get the original. All the others get a copy (if copiers &gt; 1). For the Bill of Lading document there is three originals (First, Second and Third).</p><p>The list of documents should be configured in EC Codes for the code type CARGO_DOCUMENT. The same list of documents must be defined in the Report Template (RP.0001) and Report Definition (RP.0002). See list below for document configuration that is part of the product<br />&middot; Bill of Lading<br />&middot; Certificate of Origin<br />&middot; Certificate of Quality<br />&middot; Certificate of Quantity<br />&middot; Cargo Manifest<br />&middot; Cargo Timesheet (Port Log)<br />&middot; Ullage Report</p><p>The Instructions data section can be viewed either with Receivers as rows, or with Documents as rows. The second, optional view may be preferred if there is a significantly large number of documents per receiver. Please refer to the Business Functions URL section for details on how to activate this functionality.</p>
+related: {}

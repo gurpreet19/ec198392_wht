@@ -1,0 +1,343 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: RECONCILE_TILP_SRC_DIFF
+cnstPrimaryKey:
+  columns:
+  - RECON_TILP_SRC_NO
+  name: PK_RECONCILE_TILP_SRC_DIFF
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  ACCEPTED_IND:
+    columnName: ACCEPTED_IND
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  APPROVAL_BY:
+    columnName: APPROVAL_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '24'
+  APPROVAL_DATE:
+    columnName: APPROVAL_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '25'
+  APPROVAL_STATE:
+    columnName: APPROVAL_STATE
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '26'
+  COMMENTS:
+    columnName: COMMENTS
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  CREATED_BY:
+    columnName: CREATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+  DFD_ID:
+    columnName: DFD_ID
+    typeName: VARCHAR2(1000)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  DIFF_TYPE:
+    columnName: DIFF_TYPE
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  DIRECTION:
+    columnName: DIRECTION
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  LAST_UPDATED_BY:
+    columnName: LAST_UPDATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '20'
+  LAST_UPDATED_DATE:
+    columnName: LAST_UPDATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '21'
+  MAPPING_ID:
+    columnName: MAPPING_ID
+    typeName: VARCHAR2(4000)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  MAPPING_TYPE:
+    columnName: MAPPING_TYPE
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  RECONCILIATION_NO:
+    columnName: RECONCILIATION_NO
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  RECON_TILP_NO:
+    columnName: RECON_TILP_NO
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  RECON_TILP_SRC_NO:
+    columnName: RECON_TILP_SRC_NO
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  RECON_TIP_NO:
+    columnName: RECON_TIP_NO
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  RECORD_STATUS:
+    columnName: RECORD_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  REC_ID:
+    columnName: REC_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '27'
+  REFERENCE_ID:
+    columnName: REFERENCE_ID
+    typeName: VARCHAR2(4000)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  REFERENCE_TYPE:
+    columnName: REFERENCE_TYPE
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  REV_NO:
+    columnName: REV_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '22'
+  REV_TEXT:
+    columnName: REV_TEXT
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '23'
+  RUN_TIME:
+    columnName: RUN_TIME
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  TYPE:
+    columnName: TYPE
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  VALUE:
+    columnName: VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+cnstUniqueKeys:
+  UK_RECONCILE_TILP_SRC_DIFF_1:
+    columns:
+    - RECONCILIATION_NO
+    - RECON_TIP_NO
+    - RECON_TILP_NO
+    - RECON_TILP_SRC_NO
+    name: UK_RECONCILE_TILP_SRC_DIFF_1
+    type: UNIQUEKEY
+    status: UNDEFINED
+  UK_RECONCILE_TILP_SRC_DIFF_2:
+    columns:
+    - RECONCILIATION_NO
+    - RECON_TIP_NO
+    - RECON_TILP_NO
+    - RECON_TILP_SRC_NO
+    - DIRECTION
+    - DIFF_TYPE
+    - REFERENCE_ID
+    - REFERENCE_TYPE
+    - DFD_ID
+    name: UK_RECONCILE_TILP_SRC_DIFF_2
+    type: UNIQUEKEY
+    status: UNDEFINED
+cnstForeignKeys:
+  FK_RECONCILE_TILP_SRC_DIFF_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: RECONCILE_DOC
+    columns:
+      RECONCILIATION_NO: RECONCILIATION_NO
+    name: FK_RECONCILE_TILP_SRC_DIFF_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_RECONCILE_TILP_SRC_DIFF_2:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: RECONCILE_TIP_DIFF
+    columns:
+      RECON_TIP_NO: RECON_TIP_NO
+    name: FK_RECONCILE_TILP_SRC_DIFF_2
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_RECONCILE_TILP_SRC_DIFF_3:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: RECONCILE_TILP_DIFF
+    columns:
+      RECON_TILP_NO: RECON_TILP_NO
+    name: FK_RECONCILE_TILP_SRC_DIFF_3
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IFK_RECONCILE_TILP_SRC_DIFF_2:
+    indexName: IFK_RECONCILE_TILP_SRC_DIFF_2
+    columns:
+    - RECON_TIP_NO
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IFK_RECONCILE_TILP_SRC_DIFF_3:
+    indexName: IFK_RECONCILE_TILP_SRC_DIFF_3
+    columns:
+    - RECON_TILP_NO
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IR_RECONCILE_TILP_SRC_DIFF:
+    indexName: IR_RECONCILE_TILP_SRC_DIFF
+    columns:
+    - REC_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 262144
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

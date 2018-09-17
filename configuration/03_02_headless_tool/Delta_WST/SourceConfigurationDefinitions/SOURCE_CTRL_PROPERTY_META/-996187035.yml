@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-996187035'
+keys:
+  KEY: GR_TR_BOX_WIDTH
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: '200'
+  DESCRIPTION: This is the text box width in pixels for the Visual Tracing component
+  KEY: GR_TR_BOX_WIDTH
+  LABEL: Visual Tracing Data Entity Box Width
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

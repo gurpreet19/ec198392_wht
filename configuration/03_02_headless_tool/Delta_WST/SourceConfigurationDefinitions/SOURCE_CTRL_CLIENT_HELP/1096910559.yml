@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1096910559'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/stream_sample_analysis_1/STRM_SET/PO.0032.01
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/stream_sample_analysis_1/STRM_SET/PO.0032.01
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1997647570'
+keys:
+  BF_CODE: WR.0010.01
+  T: BF_COMPONENT
+  URL: /copy_button
+parentKeys: {}
+properties:
+  BF_CODE: WR.0010.01
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0010.01' AND NVL(URL,'IS_NULL') = '/copy_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_gas_component_analysis/COMP_SET/WELL_GAS_COMP' )
+  CLASS_NAME: null
+  COMP_CODE: copy_button
+  NAME: Copy Analysis Button
+  SIGNING_REQ_IND: null
+  URL: /copy_button
+related: {}

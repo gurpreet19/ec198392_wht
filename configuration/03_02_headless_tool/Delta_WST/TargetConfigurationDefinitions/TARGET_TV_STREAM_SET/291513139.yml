@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291513139'
+keys:
+  CODE: PO.0059
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PO.0059
+  NAME: Period Oil Stream Status
+related: {}

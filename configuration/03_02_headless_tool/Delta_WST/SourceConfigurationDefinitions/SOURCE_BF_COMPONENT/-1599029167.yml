@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1599029167'
+keys:
+  BF_CODE: PA.0003
+  T: BF_COMPONENT
+  URL: /getLogButton
+parentKeys: {}
+properties:
+  BF_CODE: PA.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PA.0003' AND NVL(URL,'IS_NULL') = '/getLogButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_process_execution' )
+  CLASS_NAME: null
+  COMP_CODE: getLogButton
+  NAME: Get Detailed Log
+  SIGNING_REQ_IND: null
+  URL: /getLogButton
+related: {}

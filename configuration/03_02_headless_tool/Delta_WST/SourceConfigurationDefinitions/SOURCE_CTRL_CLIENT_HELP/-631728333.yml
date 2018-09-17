@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-631728333'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.rty/prod_group_setup/CLASS_NAME/PRODUCT_GROUP/DATA_CLASS/PRODUCT_GROUP_SETUP/NAVMODEL/PROD_GROUP_SETUP/TARGET/PRODUCT_GROUP
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.rty/prod_group_setup/CLASS_NAME/PRODUCT_GROUP/DATA_CLASS/PRODUCT_GROUP_SETUP/NAVMODEL/PROD_GROUP_SETUP/TARGET/PRODUCT_GROUP
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

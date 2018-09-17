@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1796745039'
+keys:
+  BF_DESCRIPTION_NO: GD.0080
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0080
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_nomination_point_share/CLASS_SHARE/TRNP_EVENT_SHARE/CLASS_SHARE_SPLIT/TRNP_EVENT_SHARE_SPLIT/BF_PROFILE_2/DEF_TRAN/CATEGORY/ENTRY_EXIT_PATH/SHOW_OPERATIONAL/N' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to enter share values for connected nomination points. The screen consists of a standard navigator and two tables. The left table will hold nomination points based on the contract from the navigator, and the right table will hold nomination points which are linked to the nomination point selected in the left table and is to be configured in nomination point connection (CO.2052).</p><p>End Date handling:</p><p>When saving a new row, the end_date is set automatically</p><p>[ue_nompnt_share.set_end_date()]</p><p>Copy Current Split handling:</p><p>When saving a new row, the connections configured in nomination_point_connection is inserted, and the previous share values are copied (if present)</p><p>[ue_nompnt_share.copy_current_split()]</p><p><strong>Navigator</strong></p><p>The navigation model uses by default is TRAN_COMMERCIAL, but a different navigational model can be used by sending the navigational model as an argument from the tree view (argument NAV_MODEL). The contract popup must be limited to a BF_PROFILE that is part of the screen arguments.</p><p>Mandatory arguments which are needed in the url are only CLASS.</p>
+related: {}

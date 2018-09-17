@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '436322868'
+keys:
+  ATTRIBUTE_TYPE: GAS_CONST_MOL_MASS_AIR
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: GAS_CONST_MOL_MASS_AIR
+  ATTRIBUTE_VALUE: 28.9626
+  DESCRIPTION: Average molecular mass of air
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

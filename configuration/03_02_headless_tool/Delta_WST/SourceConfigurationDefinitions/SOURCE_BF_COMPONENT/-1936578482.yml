@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1936578482'
+keys:
+  BF_CODE: SP.0021
+  T: BF_COMPONENT
+  URL: /open_period_form
+parentKeys: {}
+properties:
+  BF_CODE: SP.0021
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/open_period_form')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/banking_details' )
+  CLASS_NAME: null
+  COMP_CODE: OpenPeriodForm
+  NAME: Open Period Form
+  SIGNING_REQ_IND: null
+  URL: /open_period_form
+related: {}

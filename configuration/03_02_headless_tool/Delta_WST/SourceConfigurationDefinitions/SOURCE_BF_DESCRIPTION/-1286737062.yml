@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1286737062'
+keys:
+  BF_DESCRIPTION_NO: FC.0014
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FC.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_analysis_contract/CLASS/FCST_CNTR_ANALYSIS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This screen is used to maintain compositions for contracts. The
+    user selects a date range, Business Unit and [or Contract Area or Contract] and
+    Forecast and&nbsp;Series from the navigator at the top of the screen and presses
+    the &ldquo;Go&hellip;&rdquo; button. The existing planning period are displayed
+    in Planning Periods table. The user&nbsp;then selects a planning period in the
+    Planning Period table and the compositions for the selected planning period are
+    listed in the Components table. It is now&nbsp;possible to add, edit or delete
+    individual planning periods in Planning Periods table. The components in the Components
+    table are defined in a component set, and&nbsp;can not be modified in this screen.</p><p>For
+    each event (date) there must be one value for all components. It is not necessary
+    to have a composition for each planning period, since data is valid from the&nbsp;time
+    from which is relates until it is superseded by a new value, generally, it is
+    only necessary to have a single composition valid from the forecast date. This&nbsp;composition
+    will then be &ldquo;carried forward&rdquo; for each planning period in the forecast.
+    Note: There is only one set of forecast analysis per forecast type for each period&nbsp;for
+    which it is defined, i.e. there are no separate high, medium and low values.</p>'
+related: {}

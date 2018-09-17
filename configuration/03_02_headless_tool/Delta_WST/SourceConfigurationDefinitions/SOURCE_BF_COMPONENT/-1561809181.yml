@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1561809181'
+keys:
+  BF_CODE: FI.0006
+  T: BF_COMPONENT
+  URL: /matrix
+parentKeys: {}
+properties:
+  BF_CODE: FI.0006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0006' AND NVL(URL,'IS_NULL') = '/matrix')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_entry/TIME_SPAN/YR' )
+  CLASS_NAME: null
+  COMP_CODE: matrix
+  NAME: Matrix Dataset
+  SIGNING_REQ_IND: null
+  URL: /matrix
+related: {}

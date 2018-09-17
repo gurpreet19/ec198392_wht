@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1730241826'
+keys:
+  COMPONENT_ID: ( SELECT 'FC_RV_LQ_RV' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.fc/fcst_revn_value_liquid/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/LIQUID?screentemplate=/com.ec.revn.fc/fcst_revn_value_liquid
+  COMPONENT_EXT_NAV_NAME: /FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/LIQUID?screentemplate=/com.ec.revn.fc/fcst_revn_value_liquid
+  COMPONENT_ID: ( SELECT 'FC_RV_LQ_RV' FROM DUAL )
+  COMPONENT_LABEL: Forecast Liquid Revenues
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FC_RV_LQ' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 5260.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

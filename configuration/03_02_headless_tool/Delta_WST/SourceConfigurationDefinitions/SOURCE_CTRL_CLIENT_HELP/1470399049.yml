@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1470399049'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_REVENUE_ORDER
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_REVENUE_ORDER
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

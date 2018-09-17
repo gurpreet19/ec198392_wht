@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1127684130'
+keys:
+  BF_CODE: CO.2048
+  T: BF_COMPONENT
+  URL: /cntr_attr_dim_type
+parentKeys: {}
+properties:
+  BF_CODE: CO.2048
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2048' AND NVL(URL,'IS_NULL') = '/cntr_attr_dim_type')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/cntr_attr_dim_type' )
+  CLASS_NAME: CNTR_ATTR_DIM_TYPE
+  COMP_CODE: cntr_attr_dim_type
+  NAME: Contract Attribute Dimension Type
+  SIGNING_REQ_IND: null
+  URL: /cntr_attr_dim_type
+related: {}

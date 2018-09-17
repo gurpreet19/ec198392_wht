@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1314513125'
+keys:
+  BF_CODE: PO.0111
+  T: BF_COMPONENT
+  URL: /copy_button
+parentKeys: {}
+properties:
+  BF_CODE: PO.0111
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0111' AND NVL(URL,'IS_NULL') = '/copy_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_stream_component_analysis/CLASS_NAME/STRM_OIL_ANALYSIS_EVENT/STRM_SET/PO.0111/CLASS_NAME_DETAIL/STRM_OIL_ANA_EVENT_COMP/COMP_SET/STRM_OIL_COMP/PHASE/OIL' )
+  CLASS_NAME: null
+  COMP_CODE: copy_button
+  NAME: Copy Analysis Button
+  SIGNING_REQ_IND: null
+  URL: /copy_button
+related: {}

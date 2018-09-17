@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '380039086'
+keys:
+  FROM_CLASS_NAME: UNIT_AGR
+  MODEL: WELL_SETUP
+  ROLE_NAME: UNIT_AGR
+  T: TV_NAV_MODEL
+  TO_CLASS_NAME: TRACT
+parentKeys: {}
+properties:
+  DISABLED_IND: null
+  FORCE_NAV: null
+  FROM_CLASS_NAME: UNIT_AGR
+  MODEL: WELL_SETUP
+  MULTIPLICITY: 1:N
+  ROLE_NAME: UNIT_AGR
+  TO_CLASS_NAME: TRACT
+related: {}

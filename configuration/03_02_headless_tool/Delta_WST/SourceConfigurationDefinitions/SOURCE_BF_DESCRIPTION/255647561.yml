@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '255647561'
+keys:
+  BF_DESCRIPTION_NO: CO.1024
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/text_translation' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to configure actual translations used by the multilingual support. The “Language” dropdown is used to select target language. The “Source” and “Target” fields are used to select elements from the underlying dictionary. One may use Oracle wildcards like “%” and “_”. The “List Only Missing Targets” checkbox is useful if you need to check for missing translations.</p><p>The main focus for this screen is for the user to edit or add a new target for a given source. There will be an advanced navigator at the top with different criteria. Here are some examples:</p><p></p><ul><li>Wildcard search on sources for a language.</li><li>Wildcard search on targets for a language.</li><li>List all sources that have no targets for a language.</li></ul><p></p><p>Wildcards are valid wildcards in Oracle. Note that the search is case sensitive.</p><p>These criteria must be validated to avoid bad searches that will result in too many rows.</p><p></p><ul><li>Either source or target must be filled out.</li></ul><p></p>
+related: {}

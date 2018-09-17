@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '71296146'
+keys:
+  T: TV_UNIT
+  UNIT: KBBLS
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Thousand Barrels at 60F
+  FIN_CODE: null
+  LABEL: KBbls @60F
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KBBLS
+  UOM_GROUP: V
+  UOM_SUBGROUP: null
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '161950707'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/DAY
+parentKeys: {}
+properties:
+  BF_CODE: FI.0005
+  NAME: Daily Financial Item
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/DAY
+related: {}

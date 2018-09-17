@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-20087293'
+keys:
+  BF_DESCRIPTION_NO: CO.0072
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CHEM_PRODUCT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>Chemical products are chemicals used in conjunction with production or injection of hydrocarbons. It is not produced products and it will not be accounted for in the allocation. Chemical products can be used at many facilities and it can be associated with chemical tanks. It is possible to calculate total inventory of a chemical product for a particular facility. This number can then be used to flag a need to reorder chemical products.</p>
+
+    <p>Total inventory for a chemical product can be reported in one unit, even if tanks having the product are measured in other units.</p>
+related: {}

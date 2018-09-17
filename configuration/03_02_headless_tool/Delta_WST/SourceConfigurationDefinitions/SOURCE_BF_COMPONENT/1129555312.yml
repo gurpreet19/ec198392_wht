@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1129555312'
+keys:
+  BF_CODE: WR.0050
+  T: BF_COMPONENT
+  URL: /injection_water
+parentKeys: {}
+properties:
+  BF_CODE: WR.0050
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0050' AND NVL(URL,'IS_NULL') = '/injection_water')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE' )
+  CLASS_NAME: FLWL_INJ_ION_ANALYSIS
+  COMP_CODE: injection_water
+  NAME: Injection Water Baseline
+  SIGNING_REQ_IND: null
+  URL: /injection_water
+related: {}
