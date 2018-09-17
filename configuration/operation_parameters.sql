@@ -16,23 +16,23 @@ define ec_reporting_password='energy'
 -- ## Enter the Database name
 -- ## This argument defines the connect string to use.
 -- ## For example: define database_name='ec_db.myCompany.world'
-define database_name='db.gornci.chevron.eccloud-tieto.com:1521/gornci'
-define db_hostname='db.gornci.chevron.eccloud-tieto.com'
+define database_name='db.wstci.chevron.eccloud-tieto.com:1521/wstci'
+define db_hostname='db.wstci.chevron.eccloud-tieto.com'
 define db_port='1521'
-define db_service_name='gornci'
+define db_service_name='wstci'
 
 -- ## Enter the Operation name
 -- ## This will create a user called: "eckernel_<operation>"
 -- ## For example: define operation='EC-8_0_0'
-define operation='GORGON'
+define operation='WST'
 
 -- ## Enter name for data table space
 -- ## For example: define ts_data='DATA01'
-define ts_data='DATA01_GORGON'
+define ts_data='DATA01_WST'
 
 -- ## Enter name for index table space
 -- ## For example: define ts_index='INDEX02'
-define ts_index='INDEX02_GORGON'
+define ts_index='INDEX02_WST'
 
 -- ## Set Oracle edition (Enterprice Edition is required for the upgrade)
 -- ## For example: EE
@@ -43,9 +43,9 @@ define environment='CI'
 
 -- ## Main configuration for the upgrade script
 define NLS_LANG='AMERICAN'
-define version_from='10.3.SP06_GORGON'
-define version_to='12'
-define DELTA_FOLDER_NAME='Delta_Gorgon'
+define version_from='10.3.SP06_WST'
+define version_to='12.0'
+define DELTA_FOLDER_NAME='Delta_WST'
 define headlesstool='headless-5.0.0'
 
 -- ## Parameters how to run the upgrade script
