@@ -1,0 +1,10 @@
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('BOEPERKSM3','boe/kSm³',null,'V',null,'Barrel of oil equivalent for Gas');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('MJPERMTH','MJ/m',null,null,null,'Megajoule per month');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('KGPERKWH','kg/kWh',null,null,null,'Kilogram per kilowatt hours');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('MILLISIEMENSPERM','mS/m',null,null,null,'Milli Siemens per meter');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('SM3PERDAYPERBAR','Sm³/d/bar',null,null,null,'Standard Cubic meter per day per bar');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('NANOMPERMONTH','nm/m',null,null,null,'Nanometer per month');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('MDM','mD·m',null,null,null,'MilliDarcy meter (kH-product)');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('MPERS','M/s',null,null,null,'Meter per second');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('BTUPERMTH','Btu/m',null,null,null,'British thermal unit per month');
+Insert into CTRL_UNIT (UNIT,LABEL,FIN_CODE,UOM_GROUP,UOM_SUBGROUP,DESCRIPTION) values ('GBTUPERMTH','GBtu/m',null,null,null,'Giga British Thermal Unit per month');
