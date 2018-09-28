@@ -1,0 +1,1287 @@
+ACCESSCONTROL: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
+  displayText: Access Control
+  groups:
+    TV_T_BASIS_APPLICATION:
+      displayText: Application
+      filterCondition: ''
+      groupKeyColumn: APP_ID
+      keyColumns: APP_ID
+      related:
+        TV_T_BASIS_ACCESS:
+          callableColumns:
+          - column: T_BASIS_ACCESS_ID
+            query: '''( SELECT T_BASIS_ACCESS_ID FROM TV_T_BASIS_ACCESS WHERE CLASS_NAME
+              '' || (CASE WHEN CLASS_NAME IS NULL THEN ''IS NULL'' ELSE ''=''''''
+              || CLASS_NAME ||'''''''' END)|| '' AND ROLE_ID ''|| (CASE WHEN ROLE_ID
+              IS NULL THEN ''IS NULL'' ELSE ''='''''' || ROLE_ID ||'''''''' END)||
+              '' AND OBJECT_ID =''|| (SELECT ''(SELECT X.OBJECT_ID FROM TV_T_BASIS_OBJECT
+              X WHERE X.OBJECT_NAME='''''' || Z.OBJECT_NAME || '''''' AND X.APP_ID=''
+              || Z.APP_ID || '' AND ROWNUM < 2)'' FROM TV_T_BASIS_OBJECT Z WHERE Z.OBJECT_ID
+              = TV_T_BASIS_ACCESS.OBJECT_ID) || '' AND LEVEL_ID ''|| (CASE WHEN LEVEL_ID
+              IS NULL THEN ''IS NULL'' ELSE ''='''''' || LEVEL_ID ||'''''''' END)||
+              '' AND APP_ID ''|| (CASE WHEN APP_ID IS NULL THEN ''IS NULL'' ELSE ''=''''''
+              || APP_ID ||'''''''' END)|| '' )'''
+          - column: OBJECT_ID
+            query: '''(SELECT X.OBJECT_ID FROM TV_T_BASIS_OBJECT X WHERE X.OBJECT_NAME=''''''
+              || (SELECT Z.OBJECT_NAME FROM TV_T_BASIS_OBJECT Z WHERE Z.OBJECT_ID
+              = TV_T_BASIS_ACCESS.OBJECT_ID AND ROWNUM <2) || '''''' AND X.APP_ID=''
+              || APP_ID || '' AND ROWNUM < 2)'''
+          dependsOn:
+          - TV_T_BASIS_LEVEL
+          - TV_T_BASIS_ROLE
+          displayText: Basis Access
+          filterCondition: ''
+          groupKeyColumn: APP_ID
+          groupKeyColumnSubQuery: ''
+          keyColumns: T_BASIS_ACCESS_ID
+          mapping:
+            APP_ID: APP_ID
+            OBJECT_ID: OBJECT_ID
+          parent: TV_T_BASIS_OBJECT
+          selfReferencingColumns: ''
+          specialColumns: ''
+        TV_T_BASIS_OBJECT:
+          callableColumns:
+          - column: OBJECT_ID
+            query: '''(SELECT X.OBJECT_ID FROM TV_T_BASIS_OBJECT X WHERE X.OBJECT_NAME=''''''
+              || OBJECT_NAME || '''''' AND X.APP_ID='' || APP_ID || '' AND ROWNUM
+              < 2)'''
+          displayText: Object
+          filterCondition: ''
+          groupKeyColumn: APP_ID
+          groupKeyColumnSubQuery: ''
+          keyColumns: OBJECT_ID,APP_ID
+          mapping:
+            APP_ID: APP_ID
+          parent: TV_T_BASIS_APPLICATION
+        TV_T_BASIS_OBJECT_PARTITION:
+          callableColumns:
+          - column: T_BASIS_ACCESS_ID
+            query: (SELECT '( SELECT T_BASIS_ACCESS_ID FROM TV_T_BASIS_ACCESS WHERE CLASS_NAME ' || (CASE WHEN CLASS_NAME IS NULL THEN 'IS NULL' ELSE '=''' || CLASS_NAME ||'''' END)|| ' AND ROLE_ID '|| (CASE WHEN ROLE_ID IS NULL THEN 'IS NULL' ELSE '=''' || ROLE_ID ||'''' END)|| ' AND OBJECT_ID '|| (CASE WHEN OBJECT_ID IS NULL THEN 'IS NULL' ELSE '=''' || OBJECT_ID ||'''' END)|| ' AND LEVEL_ID '|| (CASE WHEN LEVEL_ID IS NULL THEN 'IS NULL' ELSE '=''' || LEVEL_ID ||'''' END)|| ' AND APP_ID '|| (CASE WHEN APP_ID IS NULL THEN 'IS NULL' ELSE '=''' || APP_ID ||'''' END)|| ' )' T_BASIS_ACCESS_ID FROM TV_T_BASIS_ACCESS WHERE T_BASIS_ACCESS_ID = TV_T_BASIS_OBJECT_PARTITION.T_BASIS_ACCESS_ID)
+          - column: ATTRIBUTE_TEXT
+            query: '(CASE WHEN OPERATOR = ''ALL'' THEN NULL  WHEN OPERATOR = ''IN''
+              AND ATTRIBUTE_TEXT IS NULL THEN    ''ERROR: OPERATOR IS IN AND ATTRIBUTE_TEXT
+              IS NULL'' WHEN ATTRIBUTE_TEXT IS NULL THEN    ''ERROR: ATTRIBUTE_TEXT
+              IS NULL''  WHEN (LENGTH(ATTRIBUTE_TEXT)-1)/35 = 1 THEN    ''''''(''''''''''''
+              || ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3, 32)) ||'''''') || '''''''''''')''''''  WHEN (LENGTH(ATTRIBUTE_TEXT)-1)/35
+              = 2 THEN   ''''''('''''''''''' || ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3,      32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3,      32))
+              ||'''''') || '''''''''''','''''''''''' || ''             || '' ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3 + 35, 32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3
+              + 35, 32)) ||'''''') || '''''''''''')''''''  WHEN (LENGTH(ATTRIBUTE_TEXT)-1)/35
+              = 3 THEN   ''''''('''''''''''' || ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3,        32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3,        32))
+              ||'''''') || '''''''''''','''''''''''' || ''             || '' ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3 + 1*35, 32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3
+              + 1*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 2*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 2*35, 32)) ||'''''') || '''''''''''')''''''  WHEN (LENGTH(ATTRIBUTE_TEXT)-1)/35
+              = 4 THEN   ''''''('''''''''''' || ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3,        32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3,        32))
+              ||'''''') || '''''''''''','''''''''''' || ''             || '' ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3 + 1*35, 32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3
+              + 1*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 2*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 2*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 3*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 3*35, 32)) ||'''''') || '''''''''''')''''''  WHEN (LENGTH(ATTRIBUTE_TEXT)-1)/35
+              = 5 THEN   ''''''('''''''''''' || ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3,        32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3,        32))
+              ||'''''') || '''''''''''','''''''''''' || ''             || '' ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3 + 1*35, 32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3
+              + 1*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 2*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 2*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 3*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 3*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 4*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 4*35, 32)) ||'''''') || '''''''''''')''''''  WHEN (LENGTH(ATTRIBUTE_TEXT)-1)/35
+              = 6 THEN   ''''''('''''''''''' || ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3,        32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3,        32))
+              ||'''''') || '''''''''''','''''''''''' || ''             || '' ECDP_OBJECTS.GETOBJIDFROMCODE(''''''
+              || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT, 3 + 1*35, 32))
+              || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT, 3
+              + 1*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 2*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 2*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 3*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 3*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 4*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 4*35, 32)) ||'''''') || '''''''''''','''''''''''' || ''             ||
+              '' ECDP_OBJECTS.GETOBJIDFROMCODE('''''' || ECDP_OBJECTS.GETOBJCLASSNAME(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 5*35, 32)) || '''''','''''' || ECDP_OBJECTS.GETOBJCODE(SUBSTR(ATTRIBUTE_TEXT,
+              3 + 5*35, 32)) ||'''''') || '''''''''''')''''''   ELSE     ''MANY OBJECTS!
+              ONLY 6 ARE SUPPORTED BY THIS SPREADSHEET!''  END)'
+          displayText: Basis Object Partition
+          filterCondition: ''
+          groupKeyColumn: APP_ID
+          groupKeyColumnSubQuery: (SELECT APP_ID FROM TV_T_BASIS_ACCESS WHERE T_BASIS_ACCESS_ID = TV_T_BASIS_OBJECT_PARTITION.T_BASIS_ACCESS_ID)
+          keyColumns: T_BASIS_ACCESS_ID
+          mapping:
+            T_BASIS_ACCESS_ID: T_BASIS_ACCESS_ID
+          parent: TV_T_BASIS_ACCESS
+        TV_T_BASIS_ROLE:
+          displayText: Role
+          filterCondition: ''
+          groupKeyColumn: APP_ID
+          keyColumns: ROLE_ID,APP_ID
+          mapping:
+            APP_ID: APP_ID
+          parent: TV_T_BASIS_APPLICATION
+        TV_T_BASIS_USER:
+          displayText: User
+          filterCondition: ''
+          groupKeyColumn: APP_ID
+          keyColumns: USER_ID
+          mapping:
+            APP_ID: APP_ID
+          parent: TV_T_BASIS_APPLICATION
+        TV_T_BASIS_USERROLE:
+          displayText: User Role
+          filterCondition: ''
+          groupKeyColumn: APP_ID
+          keyColumns: USER_ID,ROLE_ID,APP_ID
+          mapping:
+            USER_ID: USER_ID
+          parent: TV_T_BASIS_USER
+    TV_T_BASIS_LEVEL:
+      displayText: Access Level
+      filterCondition: ''
+      groupKeyColumn: LEVEL_ID
+      keyColumns: LEVEL_ID
+BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
+  displayText: Basis Configuration
+  groups:
+    ACTION_INSTANCE:
+      callableColumns:
+      - column: SCHEDULE_NO
+        query: (SELECT '(SELECT SCHEDULE_NO FROM SCHEDULE WHERE NAME =''' ||  A.NAME || ''' AND (CASE WHEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) ELSE SCHEDULE_GROUP END) = ''' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) ELSE SCHEDULE_GROUP END) FROM SCHEDULE A WHERE A.SCHEDULE_NO = ACTION_INSTANCE.SCHEDULE_NO) || ''' )'
+      - column: BUSINESS_ACTION_NO
+        query: (SELECT '(SELECT BUSINESS_ACTION_NO FROM BUSINESS_ACTION WHERE NAME =''' || A.NAME || ''' AND (CASE WHEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID) ELSE NVL(FUNCTIONAL_AREA_ID, ''IS_NULL'') END) = ''' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) ELSE NVL(A.FUNCTIONAL_AREA_ID, 'IS_NULL') END) || ''' )' FROM BUSINESS_ACTION A WHERE A.BUSINESS_ACTION_NO = ACTION_INSTANCE.BUSINESS_ACTION_NO)
+      - column: ACTION_INSTANCE_NO
+        query: (SELECT '(SELECT ACTION_INSTANCE_NO FROM ACTION_INSTANCE WHERE EXEC_ORDER=''' || EXEC_ORDER || ''' AND SCHEDULE_NO = (SELECT SCHEDULE_NO FROM SCHEDULE WHERE NAME =''' ||  A.NAME || ''' AND (CASE WHEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) ELSE SCHEDULE_GROUP END) = ''' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) ELSE SCHEDULE_GROUP END) FROM SCHEDULE A WHERE A.SCHEDULE_NO = ACTION_INSTANCE.SCHEDULE_NO) || ''' ))'
+      dependsOn:
+      - SCHEDULE
+      - BUSINESS_ACTION
+      displayText: Action Instance
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: (SELECT 'SCHEDULE=' || X.NAME || ' GROUP=' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(X.SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(X.SCHEDULE_GROUP) ELSE X.SCHEDULE_GROUP END) || ' ORDER=' || ACTION_INSTANCE.EXEC_ORDER  FROM SCHEDULE X WHERE X.SCHEDULE_NO = ACTION_INSTANCE.SCHEDULE_NO)
+      keyColumns: SCHEDULE_NO,EXEC_ORDER
+      selfReferencingColumns: ''
+      specialColumns: ''
+    ACTION_INSTANCE_VALUE:
+      callableColumns:
+      - column: ACTION_INSTANCE_NO
+        query: (SELECT '(SELECT ACTION_INSTANCE_NO FROM ACTION_INSTANCE WHERE EXEC_ORDER=''' || (SELECT X.EXEC_ORDER FROM ACTION_INSTANCE X WHERE X.ACTION_INSTANCE_NO = ACTION_INSTANCE_VALUE.ACTION_INSTANCE_NO) || ''' AND SCHEDULE_NO = (SELECT SCHEDULE_NO FROM SCHEDULE WHERE NAME =''' ||  A.NAME || ''' AND (CASE WHEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) ELSE SCHEDULE_GROUP END) = ''' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) ELSE SCHEDULE_GROUP END) FROM SCHEDULE A WHERE A.SCHEDULE_NO = (SELECT X.SCHEDULE_NO FROM ACTION_INSTANCE X WHERE X.ACTION_INSTANCE_NO = ACTION_INSTANCE_VALUE.ACTION_INSTANCE_NO)) || ''' ))'
+      - column: ACTION_PARAMETER_NO
+        query: ( SELECT '( SELECT X.ACTION_PARAMETER_NO FROM ACTION_PARAMETER X WHERE X.NAME = ''' || Z.NAME || ''' AND X.BUSINESS_ACTION_NO =' || (SELECT '(SELECT V.BUSINESS_ACTION_NO FROM BUSINESS_ACTION V WHERE V.NAME= ''' || Y.NAME ||  ''' AND (CASE WHEN ECDP_OBJECTS.GETOBJCODE(V.FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(V.FUNCTIONAL_AREA_ID) ELSE NVL(V.FUNCTIONAL_AREA_ID, ''IS_NULL'') END) = '''|| (CASE WHEN ECDP_OBJECTS.GETOBJCODE(Y.FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(Y.FUNCTIONAL_AREA_ID) ELSE NVL(Y.FUNCTIONAL_AREA_ID, 'IS_NULL') END)  || ''' )' || ' )' FROM BUSINESS_ACTION Y WHERE Y.BUSINESS_ACTION_NO = Z.BUSINESS_ACTION_NO )  FROM ACTION_PARAMETER Z WHERE Z.ACTION_PARAMETER_NO = ACTION_INSTANCE_VALUE.ACTION_PARAMETER_NO)
+      dependsOn:
+      - ACTION_INSTANCE
+      - ACTION_PARAMETER
+      - BUSINESS_ACTION
+      - OV_FUNCTIONAL_AREA
+      displayText: Action Instance Value
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: (SELECT 'EXEC_ORDER='|| X.EXEC_ORDER || ' SCHEDULE_NAME=' || Y.NAME ||  ' SCHEDULE_GROUP=' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(Y.SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(Y.SCHEDULE_GROUP) ELSE   Y.SCHEDULE_GROUP END) || ' PARAM_NAME=' || Z.NAME || ' BUSINESS_NAME=' || BF.NAME || ' FUNCTION_AREA=' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(BF.FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(BF.FUNCTIONAL_AREA_ID) ELSE BF.FUNCTIONAL_AREA_ID END) FROM ACTION_INSTANCE_VALUE AV INNER JOIN ACTION_INSTANCE X ON X.ACTION_INSTANCE_NO= AV.ACTION_INSTANCE_NO INNER JOIN SCHEDULE Y ON Y.SCHEDULE_NO=X.SCHEDULE_NO INNER JOIN ACTION_PARAMETER Z ON Z.ACTION_PARAMETER_NO= AV.ACTION_PARAMETER_NO INNER JOIN BUSINESS_ACTION BF ON BF.BUSINESS_ACTION_NO = Z.BUSINESS_ACTION_NO WHERE AV.ACTION_INSTANCE_NO=ACTION_INSTANCE_VALUE.ACTION_INSTANCE_NO AND AV.ACTION_PARAMETER_NO=ACTION_INSTANCE_VALUE.ACTION_PARAMETER_NO)
+      keyColumns: ACTION_INSTANCE_NO,ACTION_PARAMETER_NO
+      selfReferencingColumns: ''
+      specialColumns: ''
+    ACTION_PARAMETER:
+      callableColumns:
+      - column: BUSINESS_ACTION_NO
+        query: (SELECT '(SELECT BUSINESS_ACTION_NO FROM BUSINESS_ACTION WHERE NAME =''' || A.NAME || ''' AND (CASE WHEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID) ELSE NVL(FUNCTIONAL_AREA_ID, ''IS_NULL'') END) = ''' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) ELSE NVL(A.FUNCTIONAL_AREA_ID, 'IS_NULL') END) || ''' )' FROM BUSINESS_ACTION A WHERE A.BUSINESS_ACTION_NO = ACTION_PARAMETER.BUSINESS_ACTION_NO)
+      - column: ACTION_PARAMETER_NO
+        query: '''(SELECT A.ACTION_PARAMETER_NO FROM ACTION_PARAMETER A WHERE A.NAME
+          ='''''' || ACTION_PARAMETER.NAME || '''''' AND BUSINESS_ACTION_NO = '' ||
+          (SELECT''(SELECT BUSINESS_ACTION_NO FROM BUSINESS_ACTION WHERE NAME =''''''
+          || A.NAME || '''''' AND (CASE WHEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID)
+          IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID) ELSE NVL(FUNCTIONAL_AREA_ID,
+          ''''IS_NULL'''') END) = '''''' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID)
+          IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) ELSE NVL(A.FUNCTIONAL_AREA_ID,
+          ''IS_NULL'') END) || '''''' ))'' FROM BUSINESS_ACTION A WHERE A.BUSINESS_ACTION_NO
+          = ACTION_PARAMETER.BUSINESS_ACTION_NO)'
+      dependsOn:
+      - BUSINESS_ACTION
+      - OV_FUNCTIONAL_AREA
+      displayText: Action Parameter
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: (SELECT 'NAME= ' || A.NAME || ' FUNCTIONAL_AREA=' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) ELSE NVL(A.FUNCTIONAL_AREA_ID, 'IS_NULL') END) || ' PARAM_NAME=' || ACTION_PARAMETER.NAME FROM BUSINESS_ACTION A WHERE A.BUSINESS_ACTION_NO = ACTION_PARAMETER.BUSINESS_ACTION_NO)
+      keyColumns: BUSINESS_ACTION_NO, NAME
+      selfReferencingColumns: ''
+      specialColumns: ''
+    ALLOC_JOB_DEFINITION:
+      dependsOn:
+      - CALC_CONTEXT
+      displayText: Allocation Job Definition
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('CODE=' || CODE || ' VALID_FROM_DATE=' || TO_CHAR(VALID_FROM_DATE,'DD-MM-YYYY'))
+      keyColumns: CODE,VALID_FROM_DATE
+      objectIdColumns:
+      - column: CALC_CONTEXT_ID
+        query: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    BF_COMPONENT:
+      callableColumns:
+      - column: BF_COMPONENT_NO
+        query: '''(SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE =''''''
+          ||BF_COMPONENT.BF_CODE || '''''' AND NVL(URL,''''IS_NULL'''') = '''''' ||
+          NVL(BF_COMPONENT.URL, ''IS_NULL'') || '''''')'''
+      - column: BUSINESS_FUNCTION_NO
+        query: '''(SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL =''''''
+          || (SELECT URL FROM BUSINESS_FUNCTION WHERE BUSINESS_FUNCTION.BUSINESS_FUNCTION_NO
+          = BF_COMPONENT.BUSINESS_FUNCTION_NO) || '''''' )'''
+      dependsOn:
+      - TV_BUSINESS_FUNCTION
+      - BUSINESS_FUNCTION
+      displayText: Business Function Component
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('CODE=' || BF_CODE || ' URL=' || URL)
+      keyColumns: BF_CODE,URL
+      selfReferencingColumns: ''
+      specialColumns: ''
+    BF_COMPONENT_ACTION:
+      callableColumns:
+      - column: BF_COMPONENT_NO
+        query: '''(SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE =''''''
+          || (SELECT BF_CODE FROM BF_COMPONENT WHERE BF_COMPONENT.BF_COMPONENT_NO
+          = BF_COMPONENT_ACTION.BF_COMPONENT_NO)|| '''''' AND NVL(URL,''''IS_NULL'''')
+          = '''''' || NVL((SELECT URL FROM BF_COMPONENT WHERE BF_COMPONENT.BF_COMPONENT_NO
+          = BF_COMPONENT_ACTION.BF_COMPONENT_NO), ''IS_NULL'') || '''''')'''
+      - column: BF_COMPONENT_ACTION_NO
+        query: '''(SELECT A.BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION A WHERE
+          A.BF_COMPONENT_NO = '' || ''(SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE
+          BF_CODE ='''''' || (SELECT BF_CODE FROM BF_COMPONENT WHERE BF_COMPONENT.BF_COMPONENT_NO
+          = BF_COMPONENT_ACTION.BF_COMPONENT_NO)|| '''''' AND NVL(URL,''''IS_NULL'''')
+          = '''''' || NVL((SELECT URL FROM BF_COMPONENT WHERE BF_COMPONENT.BF_COMPONENT_NO
+          = BF_COMPONENT_ACTION.BF_COMPONENT_NO), ''IS_NULL'') || '''''') AND NVL(A.URL,
+          ''''IS_NULL'''') = '''''' || NVL(URL, ''IS_NULL'') || '''''') '''
+      dependsOn:
+      - BF_COMPONENT
+      - TV_BUSINESS_FUNCTION
+      - BUSINESS_FUNCTION
+      displayText: Business Function Component Action
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: (SELECT 'CODE=' || BF_CODE || ' URL=' || NVL(URL, 'IS_NULL') FROM BF_COMPONENT WHERE BF_COMPONENT.BF_COMPONENT_NO = BF_COMPONENT_ACTION.BF_COMPONENT_NO) || NVL(URL, 'IS_NULL')
+      keyColumns: BF_COMPONENT_ACTION_NO
+      selfReferencingColumns: ''
+      specialColumns: ''
+    BUSINESS_ACTION:
+      dependsOn:
+      - OV_FUNCTIONAL_AREA
+      displayText: Business Action
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: '(''NAME='' || NAME || '' FUNCTIONAL_AREA='' ||(CASE
+        WHEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID)
+        ELSE FUNCTIONAL_AREA_ID END)) '
+      keyColumns: NAME,FUNCTIONAL_AREA_ID
+      objectIdColumns:
+      - column: FUNCTIONAL_AREA_ID
+        query: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CLASS_PROPERTY_CODES:
+      displayText: Class Property Codes
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('PROPERTY_TABLE_NAME='|| PROPERTY_TABLE_NAME || ' PROPERTY_CODE=' || PROPERTY_CODE || ' PROPERTY_TYPE=' || PROPERTY_TYPE)
+      keyColumns: PROPERTY_TABLE_NAME,PROPERTY_CODE,PROPERTY_TYPE
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CONTROL_POINT:
+      displayText: Control Point
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+      keyColumns: OBJECT_ID
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        CONTROL_POINT_LINK:
+          callableColumns:
+          - column: BF_COMPONENT_ACTION_NO
+            query: (SELECT '(SELECT A.BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION A WHERE NVL(A.URL, ''IS_NULL'') = ''' || (SELECT NVL(B.URL,'IS_NULL') FROM BF_COMPONENT_ACTION B WHERE B.BF_COMPONENT_ACTION_NO = CONTROL_POINT_LINK.BF_COMPONENT_ACTION_NO) || ''' AND A.BF_COMPONENT_NO = (SELECT X.BF_COMPONENT_NO FROM BF_COMPONENT X WHERE X.BF_CODE =''' || A.BF_CODE || ''' AND NVL(X.URL,''IS_NULL'') = ''' || NVL(A.URL, 'IS_NULL') || ''' ))' FROM BF_COMPONENT A WHERE A.BF_COMPONENT_NO = (SELECT B.BF_COMPONENT_NO FROM BF_COMPONENT_ACTION B WHERE B.BF_COMPONENT_ACTION_NO = CONTROL_POINT_LINK.BF_COMPONENT_ACTION_NO))
+          - column: BUSINESS_ACTION_NO
+            query: (SELECT '(SELECT BUSINESS_ACTION_NO FROM BUSINESS_ACTION WHERE NAME =''' || A.NAME || ''' AND (CASE WHEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(FUNCTIONAL_AREA_ID) ELSE NVL(FUNCTIONAL_AREA_ID, ''IS_NULL'') END) = ''' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(A.FUNCTIONAL_AREA_ID) ELSE NVL(A.FUNCTIONAL_AREA_ID, 'IS_NULL') END) || ''' )' FROM BUSINESS_ACTION A WHERE A.BUSINESS_ACTION_NO = CONTROL_POINT_LINK.BUSINESS_ACTION_NO)
+          dependsOn:
+          - BUSINESS_ACTION
+          - TV_BUSINESS_ACTION
+          - TV_BUSINESS_ACTION_JBPM
+          - PROSTY_CODES
+          - TV_EC_CODES
+          - OV_FUNCTIONAL_AREA
+          displayText: Control Point Link
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,BF_COMPONENT_ACTION_NO,BUSINESS_ACTION_NO
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CONTROL_POINT
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CONTROL_POINT_VERSION:
+          dependsOn:
+          - BUSINESS_ACTION
+          - TV_BUSINESS_ACTION
+          - TV_BUSINESS_ACTION_JBPM
+          - PROSTY_CODES
+          - TV_EC_CODES
+          - OV_FUNCTIONAL_AREA
+          displayText: Control Point Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CONTROL_POINT
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CTRL_CLIENT_HELP:
+      displayText: Client Help
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('EC_CLIENT_OBJ='|| EC_CLIENT_OBJ || ' HELP_TYPE=' || HELP_TYPE)
+      keyColumns: EC_CLIENT_OBJ,HELP_TYPE
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CTRL_DASHBOARD:
+      displayText: Dashboard
+      filterCondition: ''
+      groupKeyColumn: WIDGET_CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: WIDGET_CODE 
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CTRL_DASHBOARD_PARAM:
+      displayText: Dashboard Param
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('WIDGET_CODE='|| WIDGET_CODE || ' NAME=' || NAME)
+      keyColumns: WIDGET_CODE,NAME
+      selfReferencingColumns: ''
+      specialColumns: ''  
+    CTRL_OBJECT:
+      displayText: Control Object
+      filterCondition: ''
+      groupKeyColumn: OBJECT_NAME
+      keyColumns: OBJECT_NAME
+      related:
+        CTRL_GEN_FUNCTION:
+          displayText: Control Generation Function
+          filterCondition: ''
+          groupKeyColumn: TABLE_NAME
+          groupKeyColumnSubQuery: ''
+          keyColumns: TABLE_NAME,COLUMN_NAME
+          mapping:
+            OBJECT_NAME: TABLE_NAME
+          parent: CTRL_OBJECT
+          selfReferencingColumns: ''
+          specialColumns: ''
+    CTRL_PROPERTY_META:
+      displayText: Control Property Meta
+      filterCondition: ''
+      groupKeyColumn: KEY
+      groupKeyColumnSubQuery: ''
+      keyColumns: KEY
+      related:
+        CTRL_PROPERTY:
+          dependsOn:
+          - TV_T_BASIS_ROLE
+          - TV_T_BASIS_USER
+          displayText: Control Property
+          filterCondition: ''
+          groupKeyColumn: KEY
+          groupKeyColumnSubQuery: ''
+          keyColumns: KEY,USER_ID,ROLE_ID
+          mapping:
+            KEY: KEY
+          parent: CTRL_PROPERTY_META
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CURVE_COLUMN_PARAMETER:
+      displayText: Curve Column Parameter
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('AXIS_PARAMETER='|| AXIS_PARAMETER || ' CLASS_NAME=' || CLASS_NAME)
+      keyColumns: AXIS_PARAMETER,CLASS_NAME
+      selfReferencingColumns: ''
+      specialColumns: ''
+    DUMMY_OBJECT:
+      displayText: Dummy Object
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+      keyColumns: OBJECT_ID
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        DUMMY_OBJECT_VERSION:
+          displayText: Dummy Object Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: DUMMY_OBJECT
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    PROSTY_CODES:
+      displayText: EC / Prosty Code
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('CODE_TYPE='||CODE_TYPE||' CODE='||CODE)
+      keyColumns: CODE,CODE_TYPE
+      related:
+        CTRL_CODE_DEPENDENCY:
+          displayText: EC / Prosty Code Dependancy
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ('CODE_TYPE='||CODE_TYPE1||' CODE='||CODE1)
+          keyColumns: DEPENDENCY_TYPE,CODE_TYPE1,CODE1,CODE_TYPE2,CODE2,
+          mapping:
+            CODE: CODE1
+            CODE_TYPE: CODE_TYPE1
+          parent: PROSTY_CODES
+    HYDROCARBON_COMPONENT:
+      displayText: Hydro-Carbon Component
+      filterCondition: ''
+      groupKeyColumn: COMPONENT_NO
+      groupKeyColumnSubQuery: ''
+      keyColumns: COMPONENT_NO
+      selfReferencingColumns: PART_OF_COMPONENT
+      specialColumns: ''
+    LOB_TEMPLATE:
+      displayText: Lob Template
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('TEMPLATE_TYPE=' || TEMPLATE_TYPE || ' TEMPLATE_CODE=' || TEMPLATE_CODE)
+      keyColumns: TEMPLATE_TYPE,TEMPLATE_CODE
+      selfReferencingColumns: ''
+      specialColumns: BLOB_VALUE,CLOB_VALUE
+    OV_FUNCTIONAL_AREA:
+      displayText: Functional Area
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ( ' CODE=' || CODE || ' DAYTIME=' || TO_CHAR(DAYTIME,'DD-MM-YYYY') )
+      keyColumns: DAYTIME,CODE
+      selfReferencingColumns: ''
+      specialColumns: ''
+    SCHEDULE:
+      dependsOn:
+      - OV_FUNCTIONAL_AREA
+      - PROSTY_CODES
+      - TV_EC_CODES
+      - TV_T_BASIS_USER
+      - TV_T_BASIS_ROLE
+      displayText: Schedule
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('NAME=' || NAME || ' SCHEDULE_GROUP=' ||(CASE WHEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(SCHEDULE_GROUP) ELSE SCHEDULE_GROUP END))
+      keyColumns: SCHEDULE_GROUP,NAME
+      objectIdColumns:
+      - column: SCHEDULE_GROUP
+        query: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    TAB_CONFIG_BF:
+      dependsOn:
+      - BUSINESS_FUNCTION
+      - TV_BUSINESS_FUNCTION
+      displayText: Tab Configuration
+      filterCondition: ''
+      groupKeyColumn: BF_CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: BF_CODE
+      related:
+        TAB_CONFIG_COMPONENT:
+          callableColumns:
+          - column: BF_NO_REF
+            query: '''(SELECT ECDP_BUSINESS_FUNCTION.GETBUSINESSFUNCTIONNO(''''''||
+              BF_CODE_REF || '''''') FROM DUAL )'''
+          dependsOn:
+          - BUSINESS_FUNCTION
+          - TV_BUSINESS_FUNCTION
+          displayText: Tab Configuration Component
+          filterCondition: ''
+          groupKeyColumn: BF_CODE
+          groupKeyColumnSubQuery: ''
+          keyColumns: BF_NO_REF,BF_CODE
+          mapping:
+            BF_CODE: BF_CODE
+          parent: TAB_CONFIG_BF
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    TV_BF_PROFILE:
+      displayText: Business Profile
+      filterCondition: ''
+      groupKeyColumn: PROFILE_CODE
+      keyColumns: PROFILE_CODE
+      related:
+        TV_BF_PROFILE_SETUP:
+          callableColumns:
+          - column: BUSINESS_FUNCTION_NO
+            query: '''(SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE
+              URL = '''''' || (SELECT URL FROM TV_BUSINESS_FUNCTION  WHERE TV_BUSINESS_FUNCTION.BUSINESS_FUNCTION_NO
+              = TV_BF_PROFILE_SETUP.BUSINESS_FUNCTION_NO) || '''''')'''
+          dependsOn:
+          - TV_BUSINESS_FUNCTION
+          displayText: Profile Setup
+          filterCondition: ''
+          groupKeyColumn: PROFILE_CODE
+          keyColumns: BF_CODE,PROFILE_CODE
+          mapping:
+            PROFILE_CODE: PROFILE_CODE
+          parent: TV_BF_PROFILE
+    BF_DESCRIPTION:
+      callableColumns:
+       - column: BUSINESS_FUNCTION_NO
+         query: '''(SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL =''''''
+           || (SELECT URL FROM BUSINESS_FUNCTION WHERE BUSINESS_FUNCTION.BUSINESS_FUNCTION_NO
+           = BF_DESCRIPTION.BUSINESS_FUNCTION_NO) || '''''' )'''
+      dependsOn:
+       - TV_BUSINESS_FUNCTION
+       - BUSINESS_FUNCTION
+      displayText: Online Help
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('BF_DESCRIPTION_NO=' || BF_DESCRIPTION_NO || ' DATA_LEVEL =' || DATA_LEVEL)
+      keyColumns: BF_DESCRIPTION_NO,DATA_LEVEL
+      selfReferencingColumns: ''
+      specialColumns: DESCRIPTION
+    TV_BUSINESS_FUNCTION:
+      displayText: Business Function
+      filterCondition: ''
+      groupKeyColumn: URL
+      keyColumns: URL
+    TV_COMPONENT_SET:
+      displayText: Component Set
+      filterCondition: ''
+      groupKeyColumn: CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: CODE
+      selfReferencingColumns: ''
+      specialColumns: ''
+    TV_CONTRACT_TEMPLATE:
+      displayText: Contract Template
+      filterCondition: ''
+      groupKeyColumn: CODE
+      keyColumns: CODE
+      related:
+        TV_CNTR_TEMPLATE_ATTRIBUTE:
+          displayText: Contract Template Attribute
+          filterCondition: ''
+          groupKeyColumn: TEMPLATE_CODE
+          keyColumns: TEMPLATE_CODE,ATTRIBUTE_NAME
+          mapping:
+            CODE: TEMPLATE_CODE
+          parent: TV_CONTRACT_TEMPLATE
+    TV_CTRL_CHECK_GROUP:
+      dependsOn:
+      - PROSTY_CODES
+      - TV_EC_CODES
+      displayText: Ctrl Check Group
+      filterCondition: ''
+      groupKeyColumn: CHECK_GROUP
+      groupKeyColumnSubQuery: ''
+      keyColumns: CHECK_GROUP
+      selfReferencingColumns: PARENT_GROUP
+      specialColumns: ''
+    TV_CTRL_TV_PRESENTATION:
+      displayText: Tree View
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ( ' COMPONENT_ID=' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(COMPONENT_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(COMPONENT_ID) ELSE COMPONENT_ID END) || ' WINDOW_ID=' || (CASE WHEN ECDP_OBJECTS.GETOBJCODE(WINDOW_ID) IS NOT NULL THEN ECDP_OBJECTS.GETOBJCODE(WINDOW_ID) ELSE WINDOW_ID END) )
+      keyColumns: WINDOW_ID,COMPONENT_ID
+      objectIdColumns:
+      - column: WINDOW_ID
+      - column: COMPONENT_ID
+      - column: PARENT_WINDOW_ID
+      - column: PARENT_COMPONENT_ID
+      selfReferencingColumns: PARENT_WINDOW_ID,PARENT_COMPONENT_ID
+      specialColumns: ''
+    TV_LANGUAGE_SOURCE:
+      displayText: Language Source
+      filterCondition: ''
+      groupKeyColumn: SOURCE_ID
+      keyColumns: SOURCE_ID
+      related:
+        TV_LANGUAGE_TARGET:
+          dependsOn:
+          - T_BASIS_LANGUAGE
+          displayText: Language Target
+          filterCondition: ''
+          groupKeyColumn: SOURCE_ID
+          keyColumns: LANGUAGE_ID,SOURCE_ID
+          mapping:
+            SOURCE_ID: SOURCE_ID
+          parent: TV_LANGUAGE_SOURCE
+    TV_MEASUREMENT_TYPE:
+      displayText: Measurement Type
+      filterCondition: ''
+      groupKeyColumn: MEASUREMENT_TYPE
+      keyColumns: MEASUREMENT_TYPE
+    TV_NAV_MODEL:
+      displayText: Navigation Models
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ( ' FROM_CLASS_NAME=' || FROM_CLASS_NAME || ' MODEL=' || MODEL || ' ROLE_NAME=' || ROLE_NAME || ' TO_CLASS_NAME=' || TO_CLASS_NAME )
+      keyColumns: MODEL,TO_CLASS_NAME,FROM_CLASS_NAME,ROLE_NAME
+      selfReferencingColumns: ''
+      specialColumns: ''
+    TV_STREAM_SET:
+      displayText: Stream Set
+      filterCondition: ''
+      groupKeyColumn: CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: CODE
+      selfReferencingColumns: ''
+      specialColumns: ''
+    TV_SYSTEM_ATTRIBUTE:
+      displayText: System Attribute
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('ATTRIBUTE_TYPE=' || ATTRIBUTE_TYPE || ' FROM_DATE=' || TO_CHAR(FROM_DATE,'DD-MM-YYYY HH:MM:SS'))
+      keyColumns: ATTRIBUTE_TYPE,FROM_DATE
+    TV_UNIT:
+      displayText: Unit
+      filterCondition: ''
+      groupKeyColumn: UNIT
+      keyColumns: UNIT
+      related:
+        TV_UNIT_CONVERSION:
+          displayText: Unit Conversion
+          filterCondition: ''
+          groupKeyColumn: FROM_UNIT
+          keyColumns: FROM_UNIT,TO_UNIT,DAYTIME
+          mapping:
+            UNIT: FROM_UNIT
+          parent: TV_UNIT
+        TV_UOM_SETUP:
+          dependsOn:
+          - TV_MEASUREMENT_TYPE
+          displayText: UOM Setup
+          filterCondition: ''
+          groupKeyColumn: UNIT
+          keyColumns: MEASUREMENT_TYPE,UNIT
+          mapping:
+            UNIT: UNIT
+          parent: TV_UNIT
+    T_BASIS_LANGUAGE:
+      displayText: Language
+      filterCondition: ''
+      groupKeyColumn: LANGUAGE_ID
+      keyColumns: LANGUAGE_ID
+CALCULATION: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
+  displayText: Calculation Configuration
+  groups:
+    CALCULATION:
+      dependsOn:
+      - CALC_CONTEXT
+      - CALC_LIBRARY
+      displayText: Calculation
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+      keyColumns: OBJECT_ID
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      - column: CALC_CONTEXT_ID
+        query: ''
+      - column: CALC_LIBRARY_ID
+        query: ''
+      related:
+        CALCULATION_VERSION:
+          displayText: Calculation Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: MAIN_CALCULATION_ID
+            query: ''
+          - column: OBJECT_ID
+            query: ''
+          - column: IMPL_CALCULATION_ID
+            query: ''
+          parent: CALCULATION
+          selfReferencingColumns: ''
+          specialColumns: XLS_TEMPLATE
+        CALC_EQUATION:
+          displayText: Calculation Equation
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME,SEQ_NO
+          mapping:
+            DAYTIME: DAYTIME
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALCULATION_VERSION
+          selfReferencingColumns: ''
+          specialColumns: DESCRIPTION,ITERATIONS,CONDITION,EQUATION
+        CALC_PROCESS_ELEMENT:
+          displayText: Calculation Process Element
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(CALCULATION_ID)
+          keyColumns: OBJECT_ID
+          mapping:
+            OBJECT_ID: CALCULATION_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          - column: CALCULATION_ID
+            query: ''
+          parent: CALCULATION
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_PROCESS_ELM_VERSION:
+          displayText: Calculation Process Element Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE((SELECT X.CALCULATION_ID FROM CALC_PROCESS_ELEMENT X WHERE X.OBJECT_ID = CALC_PROCESS_ELM_VERSION.OBJECT_ID AND ROWNUM<2))
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          - column: IMPLEMENTING_CALC_ID
+            query: ''
+          parent: CALC_PROCESS_ELEMENT
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_PROC_ELM_ITERATION:
+          displayText: Calculation Process Element Iteration
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE((SELECT X.CALCULATION_ID FROM CALC_PROCESS_ELEMENT X WHERE X.OBJECT_ID = CALC_PROC_ELM_ITERATION.OBJECT_ID AND ROWNUM<2))
+          keyColumns: OBJECT_ID,DAYTIME,SEQ_NO
+          mapping:
+            OBJECT_ID: OBJECT_ID
+            DAYTIME: DAYTIME            
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_PROCESS_ELM_VERSION
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_PROCESS_TRANSITION:
+          displayText: Calculation Process Transition
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(CALCULATION_ID)
+          keyColumns: OBJECT_ID
+          mapping:
+            OBJECT_ID: CALCULATION_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          - column: CALCULATION_ID
+            query: ''
+          parent: CALCULATION
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_PROC_TRAN_VERSION:
+          displayText: Calculation Process Transition Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE((SELECT X.CALCULATION_ID FROM CALC_PROCESS_TRANSITION X WHERE X.OBJECT_ID = CALC_PROC_TRAN_VERSION.OBJECT_ID AND ROWNUM<2))
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          - column: FROM_ELEMENT_ID
+            query: ''
+          - column: TO_ELEMENT_ID
+            query: ''
+          parent: CALC_PROCESS_TRANSITION
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_SET:
+          dependsOn:
+          - CALC_OBJECT_TYPE
+          - CALC_CONTEXT
+          displayText: Calculation Set
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME,CALC_SET_NAME
+          mapping:
+            DAYTIME: DAYTIME
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: CALC_CONTEXT_ID
+            query: ''
+          - column: OBJECT_ID
+            query: ''
+          parent: CALCULATION_VERSION
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_SET_COMBINATION:
+          displayText: Calculation Set Combination
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME,CALC_SET_NAME,SEQ_NO
+          mapping:
+            CALC_SET_NAME: CALC_SET_NAME
+            DAYTIME: DAYTIME
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_SET
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_SET_CONDITION:
+          displayText: Calculation Set Condition
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME,CALC_SET_NAME,SEQ_NO
+          mapping:
+            CALC_SET_NAME: CALC_SET_NAME
+            DAYTIME: DAYTIME
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_SET
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_SET_EQUATION:
+          displayText: Calculation Set Equation
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME,CALC_SET_NAME,SEQ_NO
+          mapping:
+            CALC_SET_NAME: CALC_SET_NAME
+            DAYTIME: DAYTIME
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_SET
+          selfReferencingColumns: ''
+          specialColumns: DESCRIPTION,ITERATIONS,CONDITION,EQUATION
+        CALC_VARIABLE_LOCAL:
+          dependsOn:
+          - CALC_OBJECT_TYPE
+          - CALC_CONTEXT
+          displayText: Calculation Variable Local
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME,CALC_VAR_SIGNATURE
+          mapping:
+            DAYTIME: DAYTIME
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          - column: CALC_CONTEXT_ID
+            query: ''
+          parent: CALCULATION_VERSION
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CALC_CONTEXT:
+      displayText: Calculation Context
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+      keyColumns: OBJECT_ID
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        CALC_CONTEXT_VERSION:
+          displayText: Calculation Context Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_CONTEXT
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_OBJECT_ATTRIBUTE:
+          displayText: Calculation Object Attribute
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE,NAME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+            OBJECT_TYPE_CODE: OBJECT_TYPE_CODE
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_OBJECT_TYPE
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_OBJECT_FILTER:
+          displayText: Calculation Object Filter
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE,IMPL_CLASS_NAME,SQL_SYNTAX
+          mapping:
+            OBJECT_ID: OBJECT_ID
+            OBJECT_TYPE_CODE: OBJECT_TYPE_CODE
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_OBJECT_TYPE
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_OBJECT_TYPE:
+          displayText: Calculation Object Type
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_CONTEXT
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_OBJ_ATTR_DB_MAPPING:
+          displayText: Calculation Object Attribute Db Mapping
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE,IMPL_CLASS_NAME,NAME
+          mapping:
+            NAME: NAME
+            OBJECT_ID: OBJECT_ID
+            OBJECT_TYPE_CODE: OBJECT_TYPE_CODE
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_OBJECT_ATTRIBUTE
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_VARIABLE:
+          dependsOn:
+          - CALC_OBJECT_TYPE
+          displayText: Calculation Variable
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_CONTEXT
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_VAR_KEY_READ_MAPPING:
+          displayText: Calculation Variable Key Read Mapping
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE,CALC_DATASET,CLS_NAME,SQL_SYNTAX
+          mapping:
+            CALC_DATASET: CALC_DATASET
+            CALC_VAR_SIGNATURE: CALC_VAR_SIGNATURE
+            CLS_NAME: CLS_NAME
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_VAR_READ_MAPPING
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_VAR_KEY_WRITE_MAPPING:
+          displayText: Calculation Variable Key Write Mapping
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE,CALC_DATASET,CLS_NAME,SQL_SYNTAX
+          mapping:
+            CALC_DATASET: CALC_DATASET
+            CALC_VAR_SIGNATURE: CALC_VAR_SIGNATURE
+            CLS_NAME: CLS_NAME
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_VAR_WRITE_MAPPING
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_VAR_READ_MAPPING:
+          displayText: Calculation Variable Read Mapping
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE,CALC_DATASET,CLS_NAME
+          mapping:
+            CALC_VAR_SIGNATURE: CALC_VAR_SIGNATURE
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_VARIABLE
+          selfReferencingColumns: ''
+          specialColumns: ''
+        CALC_VAR_WRITE_MAPPING:
+          displayText: Calculation Variable Write Mapping
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE,CALC_DATASET,CLS_NAME
+          mapping:
+            CALC_VAR_SIGNATURE: CALC_VAR_SIGNATURE
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CALC_VARIABLE
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CALC_LIBRARY:
+      displayText: Calculation Library
+      filterCondition: ''
+      groupKeyColumn: OBJECT_CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: OBJECT_CODE
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CALC_LOG_PROFILE:
+      displayText: Calculation Log Profile
+      filterCondition: ''
+      groupKeyColumn: CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: CODE
+      related:
+        CALC_LOG_PROFILE_PARAM:
+          displayText: Calculation Log Profile Param
+          filterCondition: ''
+          groupKeyColumn: PROFILE_CODE
+          groupKeyColumnSubQuery: ''
+          keyColumns: PROFILE_CODE,PARAM_CODE
+          mapping:
+            CODE: PROFILE_CODE
+          parent: CALC_LOG_PROFILE
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CALC_RULE:
+      displayText: Calculation Rule
+      filterCondition: ''
+      groupKeyColumn: OBJECT_CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: OBJECT_CODE
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        CALC_RULE_VERSION:
+          dependsOn:
+          - CALC_CONTEXT
+          displayText: Calculation Rule Version
+          filterCondition: ''
+          groupKeyColumn: OBJECT_CODE
+          groupKeyColumnSubQuery: ''
+          keyColumns: OBJECT_CODE,DAYTIME
+          mapping:
+            OBJECT_CODE: OBJECT_CODE
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          - column: CALC_CONTEXT_ID
+            query: ''
+          parent: CALC_RULE
+          selfReferencingColumns: ''
+          specialColumns: CALC_RULE_DEFINITION,CALC_RULE_DOCUMENT
+      selfReferencingColumns: ''
+      specialColumns: ''
+REPORTING: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
+  displayText: Reporting Configuration
+  groups:
+    OV_REPT_CONTEXT:
+      displayText: Reporting Context
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ( ' CODE=' || CODE || ' DAYTIME=' || TO_CHAR(DAYTIME,'DD-MM-YYYY') )
+      keyColumns: DAYTIME,CODE
+      selfReferencingColumns: ''
+      specialColumns: ''
+    REPORT_DEFINITION_GROUP:
+      dependsOn:
+      - FUNCTIONAL_AREA
+      - OV_FUNCTIONAL_AREA
+      displayText: Report Definition Group
+      filterCondition: ''
+      groupKeyColumn: REP_GROUP_CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: REP_GROUP_CODE
+      objectIdColumns:
+      - column: FUNCTIONAL_AREA_ID
+        query: ''
+      related:
+        REPORT_DEF_GRP_VERSION:
+          displayText: Report Definition Group Version
+          filterCondition: ''
+          groupKeyColumn: REP_GROUP_CODE
+          groupKeyColumnSubQuery: ''
+          keyColumns: REP_GROUP_CODE,DAYTIME
+          mapping:
+            REP_GROUP_CODE: REP_GROUP_CODE
+          parent: REPORT_DEFINITION_GROUP
+          selfReferencingColumns: ''
+          specialColumns: ''
+        REPORT_RUNABLE:
+          callableColumns:
+          - column: REPORT_RUNABLE_NO
+            query: (SELECT '(SELECT A.REPORT_RUNABLE_NO FROM REPORT_RUNABLE A WHERE A.REP_GROUP_CODE='''|| REPORT_RUNABLE.REP_GROUP_CODE || ''' AND A.NAME=''' || REPORT_RUNABLE.NAME || ''' AND ROWNUM = 1)' FROM DUAL)
+          displayText: Report Runable
+          filterCondition: ''
+          groupKeyColumn: REP_GROUP_CODE
+          groupKeyColumnSubQuery: ''
+          keyColumns: REPORT_RUNABLE_NO
+          mapping:
+            REP_GROUP_CODE: REP_GROUP_CODE
+          parent: REPORT_DEFINITION_GROUP
+          selfReferencingColumns: ''
+          specialColumns: ''
+        REPORT_RUNABLE_PARAM:
+          callableColumns:
+          - column: REPORT_RUNABLE_NO
+            query: (SELECT '(SELECT A.REPORT_RUNABLE_NO FROM REPORT_RUNABLE A WHERE A.REP_GROUP_CODE='''|| A.REP_GROUP_CODE || ''' AND A.NAME=''' || A.NAME || ''' AND ROWNUM = 1)' FROM REPORT_RUNABLE A WHERE A.REPORT_RUNABLE_NO = REPORT_RUNABLE_PARAM.REPORT_RUNABLE_NO)
+          displayText: Report Runable Param
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: (SELECT A.REP_GROUP_CODE FROM REPORT_RUNABLE A WHERE A.REPORT_RUNABLE_NO = REPORT_RUNABLE_PARAM.REPORT_RUNABLE_NO)
+          keyColumns: REPORT_RUNABLE_NO,DAYTIME,PARAMETER_NAME
+          mapping:
+            REPORT_RUNABLE_NO: REPORT_RUNABLE_NO
+          parent: REPORT_RUNABLE
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: PARENT_REP_GROUP_CODE
+      specialColumns: ''
+    REPORT_TEMPLATE:
+      displayText: Report Template
+      filterCondition: ''
+      groupKeyColumn: TEMPLATE_CODE
+      groupKeyColumnSubQuery: ''
+      keyColumns: TEMPLATE_CODE
+      related:
+        REPORT_TEMPLATE_PARAM:
+          displayText: Report Template Param
+          filterCondition: ''
+          groupKeyColumn: TEMPLATE_CODE
+          groupKeyColumnSubQuery: ''
+          keyColumns: TEMPLATE_CODE,PARAMETER_NAME
+          mapping:
+            TEMPLATE_CODE: TEMPLATE_CODE
+          parent: REPORT_TEMPLATE
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: TEMPLATE_BLOB
+    REPT_OBJECT_TYPE:
+      dependsOn:
+      - OV_REPT_CONTEXT
+      displayText: Report Object Type
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('CODE= ' || ECDP_OBJECTS.GETOBJCODE(OBJECT_ID) || ' OBJ_TYPE= ' || OBJECT_TYPE_CODE)
+      keyColumns: OBJECT_ID,OBJECT_TYPE_CODE
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        REPT_OBJECT_ATTRIBUTE:
+          displayText: Report Object Attribute
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ('CODE= ' || ECDP_OBJECTS.GETOBJCODE(OBJECT_ID) || ' OBJ_TYPE= ' || OBJECT_TYPE_CODE)
+          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE,SQL_SYNTAX
+          mapping:
+            OBJECT_ID: OBJECT_ID
+            OBJECT_TYPE_CODE: OBJECT_TYPE_CODE
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: REPT_OBJECT_TYPE
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
