@@ -1,1 +1,0 @@
-execute  upg_class_migration_support.deleteprevecproperties;
