@@ -1,1 +1,0 @@
-CREATE OR REPLACE TYPE sumry_doc_cont_t IS TABLE OF sumry_doc_cont_o;
