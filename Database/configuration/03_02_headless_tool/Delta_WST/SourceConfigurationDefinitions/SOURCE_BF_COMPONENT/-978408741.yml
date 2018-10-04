@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-978408741'
+keys:
+  BF_CODE: PO.0047
+  T: BF_COMPONENT
+  URL: /recfac
+parentKeys: {}
+properties:
+  BF_CODE: PO.0047
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0047' AND NVL(URL,'IS_NULL') = '/recfac')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/maintain_process_train_recovery_factors' )
+  CLASS_NAME: PRTR_PC_CP_REC_FAC
+  COMP_CODE: recfac
+  NAME: Recovery Factors
+  SIGNING_REQ_IND: null
+  URL: /recfac
+related: {}

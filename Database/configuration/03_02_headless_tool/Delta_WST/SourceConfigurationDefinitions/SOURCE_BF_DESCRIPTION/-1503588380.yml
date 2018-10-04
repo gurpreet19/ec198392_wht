@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1503588380'
+keys:
+  BF_DESCRIPTION_NO: CO.0040
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0040
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/TESTSEPARATOR/TARGET/TESTSEPARATOR/CLASS_NAME/TESTSEPARATOR' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>Test separator is used to test a well or a set of wells. It is used to determine the well potential, as most well normally are not metered. The test separator is a one stage separation and there are normally three outgoing metered streams, oil, gas and water. Because the test separator normally operates under pressure much higher than atmosphere, some of the gas remains in the oil phase. This is compensated for using shrinkage factors to shrink the oil and gas in solution factors to increase the gas amount to derive results as close to standard conditions as possible.</p>
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1348727875'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/inv_validation/LEVEL/BOOKED/MODE/SET_TO_NEXT
+parentKeys: {}
+properties:
+  BF_CODE: IN.0019
+  NAME: Inventory Booked
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/inv_validation/LEVEL/BOOKED/MODE/SET_TO_NEXT
+related: {}

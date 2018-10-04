@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1328928480'
+keys:
+  BF_CODE: WR.0070
+  T: BF_COMPONENT
+  URL: /daily_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0070
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0070' AND NVL(URL,'IS_NULL') = '/daily_well_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_well_hookup_and_well_status/CLASS_NAME/PWEL_DAY_STATUS' )
+  CLASS_NAME: PWEL_DAY_STATUS
+  COMP_CODE: daily_well_status
+  NAME: Daily Well Status
+  SIGNING_REQ_IND: null
+  URL: /daily_well_status
+related: {}

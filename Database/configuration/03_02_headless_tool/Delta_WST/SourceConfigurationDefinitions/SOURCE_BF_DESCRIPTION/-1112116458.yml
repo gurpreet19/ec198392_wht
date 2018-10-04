@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1112116458'
+keys:
+  BF_DESCRIPTION_NO: PO.0078
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0078
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/calc_mth_composite_analysis/STRM_SET/PO.0078/COMP_SET/CALC_MTH_COMP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is used to display and calculate monthly composite analysis.</p>
+
+    <p>A composite analysis is an analysis which represents the best composition for a stream for a month. It can be either</p>
+
+    <p>- Directly sampled by the lab is using monthly sampler. Analysis calculation is not needed.</p>
+
+    <p>- Calculated based on spot samples taken during the month and actual mass flowing every day. This will give a weighted average analysis based on one or many SPOT analysis.</p>
+
+    <p>- If there is no analysis taken during the month, previous monthly composite analysis to be displayed.</p>
+
+    <p>Note; In EC 9.4, these calculations must be implemented as user exit calculations.</p>
+related: {}

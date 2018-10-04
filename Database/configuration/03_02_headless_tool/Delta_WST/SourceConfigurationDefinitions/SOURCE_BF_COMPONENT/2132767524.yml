@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2132767524'
+keys:
+  BF_CODE: IS.0006
+  T: BF_COMPONENT
+  URL: /preview_interface_btn
+parentKeys: {}
+properties:
+  BF_CODE: IS.0006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IS.0006' AND NVL(URL,'IS_NULL') = '/preview_interface_btn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_upload' )
+  CLASS_NAME: null
+  COMP_CODE: preview_interface_btn
+  NAME: PreviewInterface
+  SIGNING_REQ_IND: null
+  URL: /preview_interface_btn
+related: {}

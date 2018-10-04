@@ -1,0 +1,164 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1732157368'
+keys:
+  T: TV_UNIT
+  UNIT: SM3PERDAY
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Standard cubic meter per day
+  FIN_CODE: null
+  LABEL: Sm³/d
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: SM3PERDAY
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BBLSPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      MULT_FACT: 6.2898107704321
+      PRECISION: null
+      TO_UNIT: BBLSPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KSM3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: KSM3PERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MMSCFPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      MULT_FACT: 3.53147E-5
+      PRECISION: 6.0
+      TO_UNIT: MMSCFPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MSCFPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      MULT_FACT: 0.0353147
+      PRECISION: 7.0
+      TO_UNIT: MSCFPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: NM3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      MULT_FACT: 1.054915
+      PRECISION: 7.0
+      TO_UNIT: NM3PERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: SCFPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3PERDAY
+      MULT_FACT: 35.3829
+      PRECISION: 6.0
+      TO_UNIT: SCFPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_OIL_RATE
+      T: TV_UOM_SETUP
+      UNIT: SM3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_OIL_RATE
+      REPORT_UNIT: Y
+      UNIT: SM3PERDAY
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_GAS_RATE
+      T: TV_UOM_SETUP
+      UNIT: SM3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_GAS_RATE
+      REPORT_UNIT: Y
+      UNIT: SM3PERDAY
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_LIQ_VOL_RATE
+      T: TV_UOM_SETUP
+      UNIT: SM3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SM3PERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_LIQ_VOL_RATE
+      REPORT_UNIT: Y
+      UNIT: SM3PERDAY
+      VIEW_UNIT: Y

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-311915105'
+keys:
+  BF_DESCRIPTION_NO: RP.0009
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RP.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/xls_report_set_definition' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Excel Report Sets determine which groups of data for the attributes defined in the Excel Report Objects will be used to return data to the Excel report.</p><p>Like EC Calculations, well defined sets are important when creating an Excel Report.</p><p>Filtering at this level gives the user the most flexibility in determining what data is returned to the report.</p><p>Set Types can be one of four Object Types:</p><ol><li>DB Object Set – returns all objects</li><li>Filtered Set – filters objects in a DB Object Set using parameters</li><li>Combined Set – filters objects in a DB Object Set using another DB Object Set.</li><li>Daytime Set – filters objects by a date range rule</li></ol><p>With all of these ways of filtering Sets, you can see why filtering at the Sets level is the most flexible.</p>
+related: {}

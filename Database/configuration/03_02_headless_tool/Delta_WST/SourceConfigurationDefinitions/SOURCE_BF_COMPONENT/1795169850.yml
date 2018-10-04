@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1795169850'
+keys:
+  BF_CODE: FI.0002
+  T: BF_COMPONENT
+  URL: /templ
+parentKeys: {}
+properties:
+  BF_CODE: FI.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0002' AND NVL(URL,'IS_NULL') = '/templ')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_template' )
+  CLASS_NAME: FINANCIAL_ITEM_TEMPLATE
+  COMP_CODE: templ
+  NAME: Template
+  SIGNING_REQ_IND: null
+  URL: /templ
+related: {}

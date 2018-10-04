@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2016925634'
+keys:
+  BF_CODE: CO.2039
+  T: BF_COMPONENT
+  URL: /tab
+parentKeys: {}
+properties:
+  BF_CODE: CO.2039
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2039' AND NVL(URL,'IS_NULL') = '/tab')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/DELIVERY_STREAM/CLASS_NAME/DELIVERY_STREAM' )
+  CLASS_NAME: null
+  COMP_CODE: tab
+  NAME: Tab control
+  SIGNING_REQ_IND: null
+  URL: /tab
+related: {}

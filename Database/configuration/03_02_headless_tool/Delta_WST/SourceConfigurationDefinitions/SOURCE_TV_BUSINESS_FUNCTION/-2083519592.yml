@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2083519592'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.co.screens/maintain_opportunities
+parentKeys: {}
+properties:
+  BF_CODE: CO.2082
+  NAME: Maintain Opportunities
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.co.screens/maintain_opportunities
+related: {}

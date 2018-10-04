@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-911013298'
+keys:
+  BF_CODE: PP.0024
+  T: BF_COMPONENT
+  URL: /chokempp_drawdailygraphbtn
+parentKeys: {}
+properties:
+  BF_CODE: PP.0024
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0024' AND NVL(URL,'IS_NULL') = '/chokempp_drawdailygraphbtn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/prod_object_potential/GROUPMODEL/CHOKE_MODEL/TARGET/CHOKE_MODEL/DATA_CLASS/CHOKE_MODEL_MPP' )
+  CLASS_NAME: null
+  COMP_CODE: chokempp_drawdailygraphbtn
+  NAME: Draw Daily Graph
+  SIGNING_REQ_IND: null
+  URL: /chokempp_drawdailygraphbtn
+related: {}

@@ -1,0 +1,73 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '189338325'
+keys:
+  BF_DESCRIPTION_NO: SP.0042
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cont_journal_entry' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong> Project Data Entry screen </strong> is used to manage
+    Data Entry Documents.<br> <br>    <span style="color: rgb(0, 0, 153);"><strong>Navigator</strong></span><br>    -
+    Navigator is used to filter Data Entry Documents.<br>    - The Navigator has these
+    data fields:<br>    <strong><em>Daytime:</em></strong>    This attribute sets
+    the Period for the filtering of the Data Entry Documents<br>    <strong><em>Business
+    Unit:</em></strong>    This is the Business unit the Property is for<br>    <strong><em>Property:</em></strong>    This
+    attribute sets the Property for the filtering of the Data Entry Documents<br>    <strong><em>Project:</em></strong>    This
+    attribute sets the Project for the filtering of the Data Entry Documents<br>    <strong><em>Data
+    Extract:</em></strong>    This is the Extract that will be generated or found.<br>    <strong><em>Inventory:</em></strong>    This
+    allows specifying an extract for a given inventory. If the extract does not have
+    an inventory this needs to be blank. When generating an extract if an    inventory
+    is to be used this must be populated.<br>    <strong><em>Reporting Period:</em></strong>    This
+    allows limiting the result to only those with a given reporting period<br>    <strong><em>Last
+    Only:</em></strong>    This will display only the most recent document</p><p>    <span
+    style="color: rgb(0, 0, 153);"><strong>Documents</strong></span><br>    The Documents
+    section will list the Data Entry Documents found according to the navigator settings.<br>    The
+    screen has 3 tabs:<br>    <strong><em>Tab Mapped Data Entries</em></strong><br>    This
+    tab lists all the entries from the source that was successfully mapped from the
+    source<br>    <strong><em>Tab Excluded Data Entries</em></strong><br>    This
+    tab lists all the entries in the source that have been excluded from the Data
+    Mapping Document<br>    <strong><em>Tab Manual Data Entries</em></strong><br>    This
+    tab allows for adding additional manual entries into the Data Mapping Document.
+    Should a number need to be adjusted the adjustment should be inserted    here
+    to keep the original value separated to allow tracing the values to it original
+    un manipulated value.</p><p>    <strong style="color: rgb(0, 0, 153);">Buttons</strong><br>    There
+    are 4 buttons in the screen:<br>    <strong>Button <span style="color: rgb(0,
+    153, 0);">Verify Document</span></strong><br>    This button will set the selected
+    Data Mapping Document to Verified<br>    <strong>Button <span style="color: rgb(0,
+    153, 0);">Un-Verify Document</span></strong><br>    This button will set the selected
+    Data Mapping Document back to Provisional<br>    <strong>Button <span style="color:
+    rgb(0, 153, 0);">Trace Document</span></strong><br>    This button will open another
+    modal popup window containing the Tracing information for the selected Data Mapping
+    Document.<br>    <strong>Button <span style="color: rgb(0, 153, 0);">Reconcile
+    Document</span></strong><br>    This button will launch a modal popup window where
+    all the data elements from the source are reconciled against the values in the
+    Data Mapping Document.</p><p>    <span style="color: rgb(0, 0, 153);"><strong>Additional
+    Navigator</strong></span><br>    There is an additional navigator section that
+    allows filtering down values before retrieving as the document could have several
+    thousand records. The first    dropdown in the screen is the Layout dropdown that
+    is controlled by EC codes. This allows creating a specific layout for the result
+    section. In order to    use the layout there must be a corresponding class that
+    starts with CONT_JOURNAL_XXXX and the XXXX is replaced with the code from the
+    chosen EC Code    layout. (The EC Code is JOURNAL_ENTRY_CLASSES).</p><p>    <strong
+    style="color: rgb(0, 0, 153);">Reconcile Document (Popup Screen)</strong><br>    The
+    screen has two tabs and two buttons:<br>    <strong><em>Tab Amount</em></strong><br>    For
+    reconciling monetary values<br>    <strong><em>Tab Quantity</em></strong><br>    For
+    reconciling quantities<br>    <strong>Button <span style="color: rgb(0, 153, 0);">Reconcile
+    Selected</span></strong><span style="color: rgb(0, 153, 0);"></span><br>    This
+    button will launch a modal popup window Data Mapping Reconciliation - for more
+    details see section Data Mapping Reconciliation<br>    <strong>Button <span style="color:
+    rgb(0, 153, 0);">View Other Entries</span></strong><span style="color: rgb(0,
+    153, 0);"></span><br>    This button will launch a modal popup window Other Data
+    Entries - for more details see section Other Data Entries</p><p>    <span style="color:
+    rgb(0, 0, 153);"><strong>Data Mapping Reconciliation (Popup Screen)</strong></span><br>    For
+    more details please see the Online Help for business function Data Entry Reconciliation
+    (BF SP.0056).</p><p>    <strong style="color: rgb(0, 0, 153);">Other Data Entries
+    (Popup Screen)</strong><br>    For more details please see the Online Help for
+    business function Data Entry Reconciliation (BF SP.0056).</p><p>    <span style="color:
+    rgb(0, 0, 153);"><strong>Trace Document (Popup Screen)</strong></span><br>    For
+    more details please see the Online Help for business function Document Tracing
+    (BF CD.0151).</p>'
+related: {}

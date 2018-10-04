@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1048973063'
+keys:
+  BF_DESCRIPTION_NO: CO.2012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/BERTH' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business function is used to create and maintain berths; a cargo can be assigned to a berth. Normally there are additional properties added to the berth object&nbsp;to capture product (-type), loading rate etc. which can be utilised in other calculations (estimating the laytime) or optimisation plans. Berth will implement port resources interface class in product.</p>
+related: {}

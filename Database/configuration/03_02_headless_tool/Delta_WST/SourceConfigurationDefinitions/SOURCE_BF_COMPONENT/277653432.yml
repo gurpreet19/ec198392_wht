@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '277653432'
+keys:
+  BF_CODE: PT.0010
+  T: BF_COMPONENT
+  URL: /pre_process_button
+parentKeys: {}
+properties:
+  BF_CODE: PT.0010
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0010' AND NVL(URL,'IS_NULL') = '/pre_process_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_result' )
+  CLASS_NAME: null
+  COMP_CODE: pre_process
+  NAME: Pre Process Button
+  SIGNING_REQ_IND: null
+  URL: /pre_process_button
+related: {}

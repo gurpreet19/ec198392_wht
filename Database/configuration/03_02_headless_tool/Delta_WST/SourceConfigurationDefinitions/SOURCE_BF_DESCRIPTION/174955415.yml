@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '174955415'
+keys:
+  BF_DESCRIPTION_NO: CD.0026
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_account_mapping/CLASS_NAME/FIN_ACCOUNT_MAPPING' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Account Mapping screen</strong>    is used by the system to find the correct Accounts for the ERP posting    based on a set of selection data.</p><p>    The concept is using a <em>best match</em> approach where EC tries to find    the Account Mapping that fits best based on the selection criteria.    <br> Technically this is done by executing a SQL query and then ordering the    result set from <em>best match</em> to <em>poorest match</em>. <br> EC will    execute the Account Mapping lookup for the Credit and the Debit posting    separately.</p>
+related: {}

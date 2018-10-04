@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1572881092'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/CUSTOMER/FROM_CLASS_NAME/CUSTOMER/TO_CLASS_NAME/CUSTOMER
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/CUSTOMER/FROM_CLASS_NAME/CUSTOMER/TO_CLASS_NAME/CUSTOMER
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

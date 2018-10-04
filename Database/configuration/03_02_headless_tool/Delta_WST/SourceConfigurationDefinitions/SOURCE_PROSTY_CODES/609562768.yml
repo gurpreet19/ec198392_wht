@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '609562768'
+keys:
+  CODE: VALIDATE_DEPENDENT_UPDATE_PRICE
+  CODE_TYPE: SYSTEM_DOC_ACTION
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: VALIDATE_DEPENDENT_UPDATE_PRICE
+  CODE_TEXT: Validate / Create dependent for price update
+  CODE_TYPE: SYSTEM_DOC_ACTION
+  DESCRIPTION: The booked document has updated prices available. Recommended to validate current document and them create a dependent document to reinvoice with updated prices.
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 70.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '783785277'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/GAS_PROC_EQPM/TARGET/GAS_PROC_EQPM/CLASS_NAME/GAS_PROC_EQPM
+parentKeys: {}
+properties:
+  BF_CODE: CO.0112
+  NAME: Gas Processing Equipment
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/GAS_PROC_EQPM/TARGET/GAS_PROC_EQPM/CLASS_NAME/GAS_PROC_EQPM
+related: {}

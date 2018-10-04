@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '830585259'
+keys:
+  BF_CODE: PP.0027
+  T: BF_COMPONENT
+  URL: /object_plan_target
+parentKeys: {}
+properties:
+  BF_CODE: PP.0027
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0027' AND NVL(URL,'IS_NULL') = '/object_plan_target')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/object_plan/GROUPMODEL/WELL/TARGET/WELL/DATA_CLASS_1/WELL_PLAN_BUDGET/DATA_CLASS_2/WELL_PLAN_POTENTIAL/DATA_CLASS_3/WELL_PLAN_TARGET/DATA_CLASS_4/WELL_PLAN_OTHER' )
+  CLASS_NAME: WELL_PLAN_TARGET
+  COMP_CODE: object_plan_target
+  NAME: Target
+  SIGNING_REQ_IND: null
+  URL: /object_plan_target
+related: {}

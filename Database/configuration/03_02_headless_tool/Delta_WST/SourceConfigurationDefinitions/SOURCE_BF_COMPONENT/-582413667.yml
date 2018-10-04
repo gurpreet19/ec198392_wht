@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-582413667'
+keys:
+  BF_CODE: CO.0236
+  T: BF_COMPONENT
+  URL: /tab
+parentKeys: {}
+properties:
+  BF_CODE: CO.0236
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0236' AND NVL(URL,'IS_NULL') = '/tab')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_func_area/CLASS_NAME/MESSAGE_GROUP/FUNC_AREA_FK/FUNCTIONAL_AREA_ID' )
+  CLASS_NAME: null
+  COMP_CODE: tab
+  NAME: Tab control
+  SIGNING_REQ_IND: null
+  URL: /tab
+related: {}

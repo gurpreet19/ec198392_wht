@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1719406444'
+keys:
+  ATTRIBUTE_TYPE: API_CALC_BIT_DENSITY_MAX
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: API_CALC_BIT_DENSITY_MAX
+  ATTRIBUTE_VALUE: 1050.0
+  DESCRIPTION: Default max bitumen density
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

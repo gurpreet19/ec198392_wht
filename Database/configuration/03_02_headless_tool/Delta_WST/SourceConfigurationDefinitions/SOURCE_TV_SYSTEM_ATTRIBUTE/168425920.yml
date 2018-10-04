@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '168425920'
+keys:
+  ATTRIBUTE_TYPE: DEFAULT_EC_RPT_SET_DATE
+  FROM_DATE: 2010-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: '2010-01-01T00:00:00'
+  ATTRIBUTE_TYPE: DEFAULT_EC_RPT_SET_DATE
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Indicates the default value for "Default ec report set date"
+  FROM_DATE: 2010-01-01T00:00:00Z
+related: {}

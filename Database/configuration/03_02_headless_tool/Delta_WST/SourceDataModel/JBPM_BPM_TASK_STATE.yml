@@ -1,0 +1,84 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_BPM_TASK_STATE
+cnstPrimaryKey:
+  columns:
+  - GLOBAL_ID
+  name: SYS_C008839
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  ASSIGNEE:
+    columnName: ASSIGNEE
+    typeName: VARCHAR2(512 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  CORRELATION_GLOBAL_ID:
+    columnName: CORRELATION_GLOBAL_ID
+    typeName: VARCHAR2(512 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  CORRELATION_REF_JSON:
+    columnName: CORRELATION_REF_JSON
+    typeName: VARCHAR2(2048 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  GLOBAL_ID:
+    columnName: GLOBAL_ID
+    typeName: VARCHAR2(512 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  LAST_UPDATED:
+    columnName: LAST_UPDATED
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  REF_JSON:
+    columnName: REF_JSON
+    typeName: VARCHAR2(2048 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  STATE:
+    columnName: STATE
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  STATE_DEFINITION:
+    columnName: STATE_DEFINITION
+    typeName: VARCHAR2(64 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

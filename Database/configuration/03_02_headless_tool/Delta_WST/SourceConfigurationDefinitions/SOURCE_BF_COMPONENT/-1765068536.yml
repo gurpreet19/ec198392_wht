@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1765068536'
+keys:
+  BF_CODE: SP.0013
+  T: BF_COMPONENT
+  URL: /table2
+parentKeys: {}
+properties:
+  BF_CODE: SP.0013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0013' AND NVL(URL,'IS_NULL') = '/table2')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_document_information' )
+  CLASS_NAME: CONTRACT_TEXT_ITEM
+  COMP_CODE: table2
+  NAME: Header section, single column
+  SIGNING_REQ_IND: null
+  URL: /table2
+related: {}

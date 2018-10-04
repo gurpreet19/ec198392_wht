@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-864439269'
+keys:
+  BF_CODE: GD.0105
+  T: BF_COMPONENT
+  URL: /nav
+parentKeys: {}
+properties:
+  BF_CODE: GD.0105
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0105' AND NVL(URL,'IS_NULL') = '/nav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_delivery/CLASS/TRNP_DAY_DELIVERY/TARGET/NOMINATION_POINT' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /nav
+related: {}

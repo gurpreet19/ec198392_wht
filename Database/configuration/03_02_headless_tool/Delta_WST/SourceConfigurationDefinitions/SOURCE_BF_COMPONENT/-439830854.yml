@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-439830854'
+keys:
+  BF_CODE: CD.0102
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button
+parentKeys: {}
+properties:
+  BF_CODE: CD.0102
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0102' AND NVL(URL,'IS_NULL') = '/com.ec.pf.screenlet.button/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/stream_node_diagram' )
+  CLASS_NAME: null
+  COMP_CODE: navbutton
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button
+related: {}

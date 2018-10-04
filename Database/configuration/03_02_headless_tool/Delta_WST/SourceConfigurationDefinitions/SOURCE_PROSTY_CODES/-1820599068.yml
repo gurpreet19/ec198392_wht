@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1820599068'
+keys:
+  CODE: FINAL
+  CODE_TYPE: SET_TO_ZERO_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: FINAL
+  CODE_TEXT: Set to zero and Final
+  CODE_TYPE: SET_TO_ZERO_METHOD
+  DESCRIPTION: null
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 20.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

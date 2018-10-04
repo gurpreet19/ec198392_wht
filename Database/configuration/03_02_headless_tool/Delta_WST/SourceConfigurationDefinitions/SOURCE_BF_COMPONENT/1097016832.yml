@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1097016832'
+keys:
+  BF_CODE: FC.0012
+  T: BF_COMPONENT
+  URL: /nav
+parentKeys: {}
+properties:
+  BF_CODE: FC.0012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.0012' AND NVL(URL,'IS_NULL') = '/nav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_input_delivery_point/CLASS/FCST_DP_DAY_STATUS' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /nav
+related: {}

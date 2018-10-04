@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '351540438'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: AREA_TOP5_YR_GAS_PROD
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Top 5 Yearly Gas Producers at Area
+  LABEL: Top 5 Yearly Gas Producers at Area
+  NAME: AreaTop5YrGasProducers
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: AREA_TOP5_YR_GAS_PROD
+related: {}

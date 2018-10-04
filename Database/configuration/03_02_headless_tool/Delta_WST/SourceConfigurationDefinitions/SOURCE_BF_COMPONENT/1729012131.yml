@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1729012131'
+keys:
+  BF_CODE: CO.2036
+  T: BF_COMPONENT
+  URL: /calc_group_list_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.2036
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2036' AND NVL(URL,'IS_NULL') = '/calc_group_list_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/manage_contract_group_list/OBJ_CLASS/CONTRACT_GROUP/DATA_CLASS/CONTRACT_GROUP_LIST' )
+  CLASS_NAME: CONTRACT_GROUP_LIST
+  COMP_CODE: calc_group_list_table
+  NAME: Calc Group List
+  SIGNING_REQ_IND: null
+  URL: /calc_group_list_table
+related: {}

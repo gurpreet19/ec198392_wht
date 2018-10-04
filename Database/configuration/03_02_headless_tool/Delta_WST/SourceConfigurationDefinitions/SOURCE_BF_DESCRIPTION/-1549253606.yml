@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1549253606'
+keys:
+  BF_DESCRIPTION_NO: WR.0023
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_well_hole_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This BF is used to enter event based well hole pressure data, primarily casing pressures. The BF is event based and all records within from and to date in the navigator are listed. Pressing Insert, a new row will be created open for input. Default date is similar to "To Date" in the navigator. The list of events is sorted on date (descending). There is no more functionality behind this BF.&nbsp;</p><p>It&apos;s a simple data registration BF.</p>
+related: {}

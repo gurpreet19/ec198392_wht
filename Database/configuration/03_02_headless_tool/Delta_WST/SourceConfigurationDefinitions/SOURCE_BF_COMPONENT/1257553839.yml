@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1257553839'
+keys:
+  BF_CODE: GD.0088
+  T: BF_COMPONENT
+  URL: /daycntrcheck4
+parentKeys: {}
+properties:
+  BF_CODE: GD.0088
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0088' AND NVL(URL,'IS_NULL') = '/daycntrcheck4')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_location_contract_balance/NAV_MODEL/TRAN_OPERATIONAL/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_NOM_CNTR_BAL/CLASS_2/TRCN_DAY_NOM_BAL_IN_OUT/CLASS_3/TRCN_DAY_NOM_SUPP_BAL/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRCN_DAY_NOM_BAL_IN_OUT
+  COMP_CODE: daycntrcheck4
+  NAME: Contract Check Tab4
+  SIGNING_REQ_IND: null
+  URL: /daycntrcheck4
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '922728891'
+keys:
+  BF_CODE: PT.0005
+  T: BF_COMPONENT
+  URL: /active_flowline
+parentKeys: {}
+properties:
+  BF_CODE: PT.0005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0005' AND NVL(URL,'IS_NULL') = '/active_flowline')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_define' )
+  CLASS_NAME: FLOWLINE_TEST_DEF
+  COMP_CODE: active_flowline
+  NAME: Flowlines on Test
+  SIGNING_REQ_IND: null
+  URL: /active_flowline
+related: {}

@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '166599938'
+keys:
+  ATTRIBUTE_TYPE: API_CALC_BIT_DENSITY_MIN
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: API_CALC_BIT_DENSITY_MIN
+  ATTRIBUTE_VALUE: 950.0
+  DESCRIPTION: Default min bitumen density
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

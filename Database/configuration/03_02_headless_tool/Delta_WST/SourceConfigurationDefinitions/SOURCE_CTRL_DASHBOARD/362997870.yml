@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '362997870'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: PROD_DAILY_AREA_OIL
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Daily Actual Vs Planned Oil Production For Area
+  LABEL: Daily Actual Vs Planned Oil Production For Area
+  NAME: DailyOilProdArea
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: PROD_DAILY_AREA_OIL
+related: {}

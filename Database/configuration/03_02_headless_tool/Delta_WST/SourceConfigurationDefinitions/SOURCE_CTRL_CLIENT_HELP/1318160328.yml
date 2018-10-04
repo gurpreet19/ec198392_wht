@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1318160328'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.to.screens/tab_harbour_menu
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.to.screens/tab_harbour_menu
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

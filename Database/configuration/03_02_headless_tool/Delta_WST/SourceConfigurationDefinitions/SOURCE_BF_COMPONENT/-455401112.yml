@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-455401112'
+keys:
+  BF_CODE: CO.1047
+  T: BF_COMPONENT
+  URL: /calcLogProfileOvrd
+parentKeys: {}
+properties:
+  BF_CODE: CO.1047
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1047' AND NVL(URL,'IS_NULL') = '/calcLogProfileOvrd')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/maintain_calc_log_profile' )
+  CLASS_NAME: CALC_LOG_PROFILE_OVRD
+  COMP_CODE: calcLogProfileOvrd
+  NAME: Specific Profiles
+  SIGNING_REQ_IND: null
+  URL: /calcLogProfileOvrd
+related: {}

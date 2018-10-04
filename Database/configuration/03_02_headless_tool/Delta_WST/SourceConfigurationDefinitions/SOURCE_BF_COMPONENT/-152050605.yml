@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-152050605'
+keys:
+  BF_CODE: CO.0231
+  T: BF_COMPONENT
+  URL: /collection_point_data_to
+parentKeys: {}
+properties:
+  BF_CODE: CO.0231
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0231' AND NVL(URL,'IS_NULL') = '/collection_point_data_to')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/collection_point_hierarchy_reorganization' )
+  CLASS_NAME: null
+  COMP_CODE: collection_point_data_to
+  NAME: Collection Point Data To
+  SIGNING_REQ_IND: null
+  URL: /collection_point_data_to
+related: {}

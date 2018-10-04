@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1245805373'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: DAYGASUTLAREA
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Gas Utilization For Area
+  LABEL: Gas Utilization For Area
+  NAME: Gas Utilization Widget
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.PieChartWidget
+  WIDGET_CODE: DAYGASUTLAREA
+related: {}

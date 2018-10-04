@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1770372675'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/SUMMARY_SETUP
+parentKeys: {}
+properties:
+  BF_CODE: SP.0043
+  NAME: Data Extract Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/SUMMARY_SETUP
+related: {}

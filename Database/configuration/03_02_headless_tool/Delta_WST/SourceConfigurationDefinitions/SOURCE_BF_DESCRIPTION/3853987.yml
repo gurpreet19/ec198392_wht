@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '3853987'
+keys:
+  BF_DESCRIPTION_NO: CO.2063
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2063
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/carrier_cooldown' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business function is used to configure cool down tables for LNG vessels. Each of the vessel tanks have a specific cool down table that are provided with the&nbsp;ship from the manufacturer. Typically a vessel have 4 tanks and each of the tank tables must be entered in this screen. The cool down tables are used to calculate&nbsp;the amount of LNG that is used to cool down the ship at any given temperature.</p>
+related: {}

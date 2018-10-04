@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '108379978'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/fcst_sub_daily_receipts_details
+parentKeys: {}
+properties:
+  BF_CODE: CP.0069
+  NAME: Forecast - Sub Daily Receipts Details
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/fcst_sub_daily_receipts_details
+related: {}

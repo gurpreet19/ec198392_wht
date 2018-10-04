@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1441724271'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/manage_inventory/CLASS_NAME/INVENTORY
+parentKeys: {}
+properties:
+  BF_CODE: IN.0005
+  NAME: Inventory Properties
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/manage_inventory/CLASS_NAME/INVENTORY
+related: {}

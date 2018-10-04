@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2074400751'
+keys:
+  BF_CODE: CD.0024
+  T: BF_COMPONENT
+  URL: /set_to_holiday
+parentKeys: {}
+properties:
+  BF_CODE: CD.0024
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/set_to_holiday')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar' )
+  CLASS_NAME: CALENDAR_SETUP
+  COMP_CODE: setToHolidayButton
+  NAME: Set to Holiday
+  SIGNING_REQ_IND: null
+  URL: /set_to_holiday
+related: {}

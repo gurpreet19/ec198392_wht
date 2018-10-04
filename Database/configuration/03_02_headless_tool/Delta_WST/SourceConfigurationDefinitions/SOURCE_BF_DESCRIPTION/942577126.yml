@@ -1,0 +1,25 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '942577126'
+keys:
+  BF_DESCRIPTION_NO: RC.0058
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RC.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/royalty_contract_us/CLASS_NAME/CONTRACT/DATA_CLASS/DIVISION_ORDER/NAVMODEL/DIV_ORDER/BF_PROFILE/RC.0058/ACCESS_COLUMN/REVN_CODE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Division Order screen</strong>    defines the Division
+    Order object.</p><p>    <strong style="color: rgb(0, 0, 153);">Tab General Properties</strong><br>    This
+    tab has two sections:</p><p>    <strong>1. Contract Object attributes/relations</strong><br>    -
+    This part is using the standard object versioning in EC.<br>    - The attributes
+    defined here will be common to all Division Order objects.<br>    - The Contract
+    Template setting defines the contract template to use which is then reflected
+    on the right hand side of the screen</p><p>    <strong>2. Contract Attributes
+    </strong><br>    - This part is using the standard Contract Attribute concept
+    in EC.<br>    - Please note that these attributes are individually date versioned.</p><p>    <strong
+    style="color: rgb(0, 0, 153);">Tab Owners/Bearer/Burdens</strong></p><p>    This
+    tab shows the exploded DOI with all the Owners and Burdens.<br>    For each Royalty
+    Owner there is a list of legal entities that will be the bearers of the royalty
+    (burden)</p>'
+related: {}

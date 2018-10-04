@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-593958429'
+keys:
+  KEY: /com/ec/eccommon/genericmodel/navigator/CO_GEN_UNIT
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: GROUP_MODEL_TYPE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: operational
+  DESCRIPTION: Group Model type to be applied on Co Gen Unit navigators
+  KEY: /com/ec/eccommon/genericmodel/navigator/CO_GEN_UNIT
+  LABEL: Group Model Type - Co Gen Unit
+  LIST_OF_VALUES: PopupURL=/FrontController/com.ec.frmw.co.screens/group_model_type_popup;PopupReturnColumn=1;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.GROUP_TYPE
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

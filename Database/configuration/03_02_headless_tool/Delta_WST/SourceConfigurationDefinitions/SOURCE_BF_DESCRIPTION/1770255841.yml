@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1770255841'
+keys:
+  BF_DESCRIPTION_NO: CO.1071
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1071
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/xhtml/pages/flushcache' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Flush Cache business function is used to view and manage internal Energy Component application server caches.</p>
+related: {}

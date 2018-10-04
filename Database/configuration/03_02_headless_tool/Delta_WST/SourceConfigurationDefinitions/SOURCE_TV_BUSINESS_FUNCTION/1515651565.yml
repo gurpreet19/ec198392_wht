@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1515651565'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/fin_posting_setup
+parentKeys: {}
+properties:
+  BF_CODE: CD.0119
+  NAME: Financial Posting Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/fin_posting_setup
+related: {}

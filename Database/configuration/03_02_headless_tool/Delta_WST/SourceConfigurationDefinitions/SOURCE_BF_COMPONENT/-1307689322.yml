@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1307689322'
+keys:
+  BF_CODE: PO.0026
+  T: BF_COMPONENT
+  URL: /table_period_gas_stream_data_aga
+parentKeys: {}
+properties:
+  BF_CODE: PO.0026
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0026' AND NVL(URL,'IS_NULL') = '/table_period_gas_stream_data_aga')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_gas_stream_data_aga' )
+  CLASS_NAME: PERIOD_GAS_STRM_DATA_AGA
+  COMP_CODE: table_period_gas_stream_data_aga
+  NAME: Period Gas Stream Data
+  SIGNING_REQ_IND: null
+  URL: /table_period_gas_stream_data_aga
+related: {}

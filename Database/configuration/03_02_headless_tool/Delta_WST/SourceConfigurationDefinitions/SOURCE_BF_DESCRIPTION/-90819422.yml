@@ -1,0 +1,23 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-90819422'
+keys:
+  BF_DESCRIPTION_NO: PA.0010
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PA.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/viewer_tag' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>The purpose of this screen is to define viewer tags for highlighting
+    process instance correlated information. By default, viewer tags regarding node
+    status, process action status and task status are provided. Users can edit the
+    properties of default viewer tags or define new viewer tags. These viewer tags
+    are applied to each process instance and displayed on the process instance diagram
+    and process monitor if the applying process instance tag is enabled.</p><p>A viewer
+    tag contains the following properties:</p><ul><li>text:&nbsp;Text to be displayed
+    on Process Monitor and Process Diagram.</li><li>text_color: Color of the display
+    text.</li><li>primary_color:&nbsp;Primary color used to distinguish nodes with
+    this tag, e.g. background color of the viewer tag.</li><li>secondary_color: Secondary
+    color used to distinguish nodes if needed, e.g. edge color of the viewer tag.</li></ul>'
+related: {}

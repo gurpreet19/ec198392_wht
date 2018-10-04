@@ -1,0 +1,42 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2028479876'
+keys:
+  BF_DESCRIPTION_NO: CD.0119
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0119
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/fin_posting_setup' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Financial Posting Setup screen</strong>    is used
+    to configure and maintain the Financial Posting for each of the    five types
+    of Financial Transactions.</p><p>    In the Navigator the user can choose the
+    Financial Code: Sales / Purchase /    Tariff Income / Tariff Cost / Journal Entry
+    - and for each of these define    how to do the posting by adding Posting Definitions.</p><p>    There
+    must be at least one Debit and one Credit Posting Definition for each    of the
+    Financial Codes.</p><p>    <u>The columns in a Posting Definition record have
+    this meaning:</u><br>    <strong><em>- Credit or Debit:</em></strong>    This
+    column tells whether this Posting Definition is for the Credit posting    or the
+    Debit posting.<br>    <u>Note</u>    : For the posting configuration to be completed
+    there must be at least one    Credit and one Debit Posting Definition.<br>    <strong><em>-
+    Account Category:</em></strong>    This column tells what type of Account to use
+    for the posting. This will    match the Account Type defined for each Account.<br>    <strong><em>-
+    Value Type:</em></strong>    This column tells whether the posting is for Value
+    Ex VAT or the VAT    itself.<br>    It is possible to have completely different
+    posting rules for the VAT value    vs the Value Ex VAT.<br>    <strong><em>- Copy
+    VAT Code:</em></strong>    Tells whether or not the VAT code should be copied
+    into the posting    records.<br>    <strong><em>- Payment:</em></strong>    This
+    tells which of the postings represent a payment.<br>    <strong><em>- Status:</em></strong>    Tells
+    whether the Posting Definition applies to Accrual, Final, or Both    Final and
+    Accrual postings.<br>    <strong><em>- Company Scope:</em></strong>    This determines
+    which company to use for the lookup into the Account    Mapping and Cost Object:
+    Contract Owner, Vendor, or Customer.<br>    <strong><em>- Vendor Scope:</em></strong>    This
+    determines if there will be a posting for All Vendors, the Contract    Owner Vendor,
+    or the vendors except the Contract Owner Vendor.<br>    <strong><em>- Item:</em></strong>    Posting
+    number to be used together with Counter Item to distribute rounding    to make
+    it balance at cent-level.<br>    <strong><em>- Counter Item:</em></strong>    Tells
+    which Item (see above) to use as counter item when doing rounding    distribution.<br>    <strong><em>-
+    Master Item:</em></strong>    Not in use for now.<br>    <strong><em>- Comments:</em></strong>    Any
+    comment about the Posting Definition</p>'
+related: {}

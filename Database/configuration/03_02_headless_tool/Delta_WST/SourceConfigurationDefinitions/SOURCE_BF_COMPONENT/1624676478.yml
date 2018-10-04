@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1624676478'
+keys:
+  BF_CODE: PA.0006
+  T: BF_COMPONENT
+  URL: /notifications_ack
+parentKeys: {}
+properties:
+  BF_CODE: PA.0006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PA.0006' AND NVL(URL,'IS_NULL') = '/notifications_ack')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_process_notification' )
+  CLASS_NAME: PROCESS_NOTIFICATION_ACK
+  COMP_CODE: notifications_ack
+  NAME: Notifications Ack
+  SIGNING_REQ_IND: null
+  URL: /notifications_ack
+related: {}

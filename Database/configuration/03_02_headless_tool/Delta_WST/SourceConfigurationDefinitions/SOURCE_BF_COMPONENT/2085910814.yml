@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2085910814'
+keys:
+  BF_CODE: IN.0014
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button
+parentKeys: {}
+properties:
+  BF_CODE: IN.0014
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0014' AND NVL(URL,'IS_NULL') = '/com.ec.pf.screenlet.button/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/rate_objects_selection/STREAM_CATEGORY_CODE/INV' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-910471114'
+keys:
+  BF_CODE: PO.0040
+  T: BF_COMPONENT
+  URL: /toProfitCentre
+parentKeys: {}
+properties:
+  BF_CODE: PO.0040
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0040' AND NVL(URL,'IS_NULL') = '/toProfitCentre')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_ownership_reassignment' )
+  CLASS_NAME: STRM_DAY_PC_CPY_PC_REAS
+  COMP_CODE: toProfitCentre
+  NAME: From Profit Centre to Profit Centre
+  SIGNING_REQ_IND: null
+  URL: /toProfitCentre
+related: {}

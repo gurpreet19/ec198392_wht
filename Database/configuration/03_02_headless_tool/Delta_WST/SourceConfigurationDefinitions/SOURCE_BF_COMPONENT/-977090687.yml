@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-977090687'
+keys:
+  BF_CODE: SA.0002.01
+  T: BF_COMPONENT
+  URL: /batch_log
+parentKeys: {}
+properties:
+  BF_CODE: SA.0002.01
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SA.0002.01' AND NVL(URL,'IS_NULL') = '/batch_log')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/sale_calc_mth_contract' )
+  CLASS_NAME: CALC_SALE_CNTR_BATCH_LOG
+  COMP_CODE: batch_log
+  NAME: Batch Log
+  SIGNING_REQ_IND: null
+  URL: /batch_log
+related: {}

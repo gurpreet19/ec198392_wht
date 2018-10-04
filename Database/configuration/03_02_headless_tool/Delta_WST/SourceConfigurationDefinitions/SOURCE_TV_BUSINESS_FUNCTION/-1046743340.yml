@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1046743340'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/tab_cargo_menu/CARGO_NAV_CLASS/CARGO_PLANNING_NAVIGATOR/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT
+parentKeys: {}
+properties:
+  BF_CODE: CP.0063
+  NAME: Tab Cargo Menu
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/tab_cargo_menu/CARGO_NAV_CLASS/CARGO_PLANNING_NAVIGATOR/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT
+related: {}

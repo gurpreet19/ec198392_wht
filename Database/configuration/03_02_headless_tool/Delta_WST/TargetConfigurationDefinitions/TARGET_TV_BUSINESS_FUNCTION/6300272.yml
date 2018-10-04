@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '6300272'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/period_factors/TARGET/CONTRACT/CLASS/TRCN_FACTOR
+parentKeys: {}
+properties:
+  BF_CODE: GD.0077
+  NAME: Period Contract Factors
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/period_factors/TARGET/CONTRACT/CLASS/TRCN_FACTOR
+related: {}

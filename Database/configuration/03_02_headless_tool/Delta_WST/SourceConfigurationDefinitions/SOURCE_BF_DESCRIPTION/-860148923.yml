@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-860148923'
+keys:
+  BF_DESCRIPTION_NO: PA.0002
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PA.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_process_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The Process Template screen maps together a process definition and a set of parameters into an executable EC business action.</p>
+
+    <p>The process template business action is identified by the Process Template column, and can be executed by the Process Execution screen or by the EC Scheduler as normal EC business actions. In the same manner as other EC business actions, object partitioning is achieved through assigning a Functional Area.</p>
+
+    <p>Some process definitions rely on in parameters to be executed. In the same manner as the business action screen in the EC Scheduler and the Report Template screen it is possible to add either normal parameters or static parameters. Normal parameters are subject to change for each execution and hence are prompted for before initiation of the business action. Static parameters are defined once and are hidden for users initiating the process.</p>
+related: {}

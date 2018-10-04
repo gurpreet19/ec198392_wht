@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '264199876'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/vatregno/CLASS_NAME/VENDOR/SETUP_CLASS/VENDOR_COUNTRY_SETUP
+parentKeys: {}
+properties:
+  BF_CODE: CD.0072
+  NAME: Vendor VAT Reg No
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/vatregno/CLASS_NAME/VENDOR/SETUP_CLASS/VENDOR_COUNTRY_SETUP
+related: {}

@@ -1,0 +1,33 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1102071452'
+keys:
+  T: TV_UNIT
+  UNIT: NANOMPERMONTH
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Nanometer per month
+  FIN_CODE: null
+  LABEL: nm/m
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: NANOMPERMONTH
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: EROSION_RATE_MTH
+      T: TV_UOM_SETUP
+      UNIT: NANOMPERMONTH
+    parentKeys:
+      TV_UNIT.UNIT: NANOMPERMONTH
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: EROSION_RATE_MTH
+      REPORT_UNIT: Y
+      UNIT: NANOMPERMONTH
+      VIEW_UNIT: Y

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1840696080'
+keys:
+  BF_CODE: FC.1013
+  T: BF_COMPONENT
+  URL: /annual_average_price_section
+parentKeys: {}
+properties:
+  BF_CODE: FC.1013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.1013' AND NVL(URL,'IS_NULL') = '/annual_average_price_section')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_price_value_gpurch/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_PURCHASE' )
+  CLASS_NAME: FCST_GPURCH_MEMBER_PRIC
+  COMP_CODE: AnnualAveragePrices
+  NAME: annual_average_prices
+  SIGNING_REQ_IND: null
+  URL: /annual_average_price_section
+related: {}

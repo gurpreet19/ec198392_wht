@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1814441773'
+keys:
+  BF_CODE: SP.0047
+  T: BF_COMPONENT
+  URL: /add_acu_form
+parentKeys: {}
+properties:
+  BF_CODE: SP.0047
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0047' AND NVL(URL,'IS_NULL') = '/add_acu_form')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cost_of_service' )
+  CLASS_NAME: null
+  COMP_CODE: addACUForm
+  NAME: Recalculate Year Form
+  SIGNING_REQ_IND: null
+  URL: /add_acu_form
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '896183472'
+keys:
+  BF_DESCRIPTION_NO: CD.0096
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0096
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/split_key/SPLIT_TYPE/FIELD' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Field Split Key Shares screen</strong>    is used to create and maintain Field Split Key Shares.</p><p>    The Field Split Key is used by the cascade logic to calculate values in the    Volume module when a value should be split into values for different    fields.</p><p>    The cascade logic is run after saving in this business function and .e.g.    might influence all instantiated stream items for the timespan valid for    the share that uses this Split Key.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1831079271'
+keys:
+  BF_CODE: SD.0020
+  T: BF_COMPONENT
+  URL: /hourly_profile
+parentKeys: {}
+properties:
+  BF_CODE: SD.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0020' AND NVL(URL,'IS_NULL') = '/hourly_profile')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_dry_gas_profile' )
+  CLASS_NAME: DRY_GAS_HOUR_PROFILE
+  COMP_CODE: hourly_profile
+  NAME: Hourly Profile
+  SIGNING_REQ_IND: null
+  URL: /hourly_profile
+related: {}

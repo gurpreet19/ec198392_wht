@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1552936802'
+keys:
+  OBJECT_NAME: FCST_CNTR_DAY_DP_CP_AL
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: N
+  OBJECT_NAME: FCST_CNTR_DAY_DP_CP_AL
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

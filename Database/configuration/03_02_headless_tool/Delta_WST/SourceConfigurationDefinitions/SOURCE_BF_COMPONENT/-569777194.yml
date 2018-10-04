@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-569777194'
+keys:
+  BF_CODE: SP.0032
+  T: BF_COMPONENT
+  URL: /logcontent
+parentKeys: {}
+properties:
+  BF_CODE: SP.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0032' AND NVL(URL,'IS_NULL') = '/logcontent')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/revn_calc_log' )
+  CLASS_NAME: null
+  COMP_CODE: logcontent
+  NAME: LogContent
+  SIGNING_REQ_IND: null
+  URL: /logcontent
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '839682478'
+keys:
+  BF_DESCRIPTION_NO: CO.0105
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0105
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/SUB_FIELD/TARGET/SUB_FIELD/CLASS_NAME/SUB_FIELD' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>The Sub Field object class is included in the group model between the well class and the field class. Sub field have the same attributes as field. The generic create and maintain screens will be applied to this class in the application.</p>
+related: {}

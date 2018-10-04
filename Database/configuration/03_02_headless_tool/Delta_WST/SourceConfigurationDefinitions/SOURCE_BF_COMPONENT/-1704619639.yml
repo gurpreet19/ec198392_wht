@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1704619639'
+keys:
+  BF_CODE: SP.0047
+  T: BF_COMPONENT
+  URL: /monthlyCostOfService
+parentKeys: {}
+properties:
+  BF_CODE: SP.0047
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0047' AND NVL(URL,'IS_NULL') = '/monthlyCostOfService')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cost_of_service' )
+  CLASS_NAME: COST_ASSET_COS_MTH
+  COMP_CODE: monthlyCostOfService
+  NAME: Monthly Cost of Service
+  SIGNING_REQ_IND: null
+  URL: /monthlyCostOfService
+related: {}

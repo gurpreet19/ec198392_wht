@@ -1,0 +1,111 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '623855795'
+keys:
+  PROFILE_CODE: DEF_NOM_LOC
+  T: TV_BF_PROFILE
+parentKeys: {}
+properties:
+  NAME: Default Nomination Location Profile
+  PROFILE_CLASS_NAME: NOMINATION_LOCATION
+  PROFILE_CODE: DEF_NOM_LOC
+related:
+  TV_BF_PROFILE_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: GD.0062
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: GD.0062
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/sub_daily_location_capacity/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_CAP/SUB_CLASS/TRNL_SUB_DAY_CAP/GRAPH_CLASS/TRNL_SUB_DAY_CAP_GRAPH/PROFILE_GRAPH/TRNL_SUB_DAY_CAP_PROFILE/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0062')
+      PROFILE_CODE: DEF_NOM_LOC
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: GD.0085
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: GD.0085
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/TRNP_EVENT_CP_TRAN_FAC/BF_PROFILE/GD.0085/CLASS_DAY/TRNL_EVENT_TRAN_FAC_DAY')
+      PROFILE_CODE: DEF_NOM_LOC
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: GD.0088
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: GD.0088
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/daily_location_contract_balance/NAV_MODEL/TRAN_OPERATIONAL/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_NOM_CNTR_BAL/CLASS_2/TRCN_DAY_NOM_BAL_IN_OUT/CLASS_3/TRCN_DAY_NOM_SUPP_BAL/NOMINATION_CYCLE/false')
+      PROFILE_CODE: DEF_NOM_LOC
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: GD.0091
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: GD.0091
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/sub_daily_location_summary/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_NOM_AGG/SUB_CLASS/TRNL_SUB_DAY_NOM_AGG/GRAPH_CLASS/TRNL_SUB_DAY_NOM_AGG_GRA/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0091/NOMINATION_CYCLE/false')
+      PROFILE_CODE: DEF_NOM_LOC
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: GD.0091.01
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: GD.0091.01
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/sub_daily_location_summary_details/CLASS/TRNL_DAY_NOM_AGG/SUB_CLASS/TRNL_SUB_DAY_NOM_AGG/NP_CLASS/TRNP_SUB_DAY_LOC_NOM/GRAPH_CLASS/TRNL_SUB_DAY_NOM_AGG_GRA/NOMINATION_CYCLE/false')
+      PROFILE_CODE: DEF_NOM_LOC
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: GD.0111
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: GD.0111
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/product_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/TRNL_EVENT_PROD_CP_FAC/BF_PROFILE/GD.0111/CLASS_DAY/TRNL_EVENT_PROD_FAC_DAY/DIM1/PRODUCT_ID_POPUP')
+      PROFILE_CODE: DEF_NOM_LOC
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: FC.0017
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: FC.0017
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.fc.screens/forecast_input_nom_loc/CLASS/FCST_NOMLOC_DAY_STATUS')
+      PROFILE_CODE: DEF_NOM_LOC
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: FC.0018
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: FC.0018
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.fc.screens/forecast_input_nom_loc_month/CLASS/FCST_NOMLOC_MTH_STATUS')
+      PROFILE_CODE: DEF_NOM_LOC
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BF_CODE: FC.0022
+      PROFILE_CODE: DEF_NOM_LOC
+      T: TV_BF_PROFILE_SETUP
+    parentKeys:
+      TV_BF_PROFILE.PROFILE_CODE: DEF_NOM_LOC
+    properties:
+      BF_CODE: FC.0022
+      BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM TV_BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.fc.screens/forecast_period_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/FCST_RECOVERY_FACTOR/BF_PROFILE/FC.0022/CLASS_DAY/FCST_RECOVERY_FACTOR_DAY')
+      PROFILE_CODE: DEF_NOM_LOC

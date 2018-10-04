@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-700737540'
+keys:
+  BF_CODE: CO.0077
+  T: BF_COMPONENT
+  URL: /dateStartJob
+parentKeys: {}
+properties:
+  BF_CODE: CO.0077
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0077' AND NVL(URL,'IS_NULL') = '/dateStartJob')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/initiate_day' )
+  CLASS_NAME: null
+  COMP_CODE: dateStartJob
+  NAME: Date Start Job
+  SIGNING_REQ_IND: null
+  URL: /dateStartJob
+related: {}

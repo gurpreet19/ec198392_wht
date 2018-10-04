@@ -1,0 +1,87 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1166623957'
+keys:
+  T: TV_UNIT
+  UNIT: SCFPERDAY
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Standard cubic feet per day
+  FIN_CODE: null
+  LABEL: scf/d
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: SCFPERDAY
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCFPERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KSM3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SCFPERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCFPERDAY
+      MULT_FACT: 2.82622E-5
+      PRECISION: 6.0
+      TO_UNIT: KSM3PERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCFPERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MMSCFPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SCFPERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCFPERDAY
+      MULT_FACT: 1.0E-6
+      PRECISION: null
+      TO_UNIT: MMSCFPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCFPERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MSCFPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SCFPERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCFPERDAY
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: MSCFPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCFPERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: SM3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: SCFPERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCFPERDAY
+      MULT_FACT: 0.0282622
+      PRECISION: 6.0
+      TO_UNIT: SM3PERDAY
+      USER_EXIT: null
+      USE_UE: null

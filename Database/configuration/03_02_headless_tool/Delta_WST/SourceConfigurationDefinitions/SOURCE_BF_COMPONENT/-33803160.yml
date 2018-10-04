@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-33803160'
+keys:
+  BF_CODE: WR.0019
+  T: BF_COMPONENT
+  URL: /summarizeIflwSubToDailyButtonID
+parentKeys: {}
+properties:
+  BF_CODE: WR.0019
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0019' AND NVL(URL,'IS_NULL') = '/summarizeIflwSubToDailyButtonID')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_gas_injection_flowline_status' )
+  CLASS_NAME: null
+  COMP_CODE: summarizeIflwSubToDailyButtonID
+  NAME: Aggregate Current
+  SIGNING_REQ_IND: null
+  URL: /summarizeIflwSubToDailyButtonID
+related: {}

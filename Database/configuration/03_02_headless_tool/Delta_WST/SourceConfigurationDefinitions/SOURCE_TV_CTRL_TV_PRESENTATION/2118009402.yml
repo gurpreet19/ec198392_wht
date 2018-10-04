@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2118009402'
+keys:
+  COMPONENT_ID: ( SELECT 'FC_RV_GS_QT' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.fc/fcst_qty_value_gsales/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES?screentemplate=/com.ec.revn.fc/fcst_qty_value_gsales
+  COMPONENT_EXT_NAV_NAME: /FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES?screentemplate=/com.ec.revn.fc/fcst_qty_value_gsales
+  COMPONENT_ID: ( SELECT 'FC_RV_GS_QT' FROM DUAL )
+  COMPONENT_LABEL: Forecast Gas Sales Quantities
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FC_RV_GS' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 5280.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

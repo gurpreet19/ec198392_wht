@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '880805593'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/manage_report_ref_group/CLASS_NAME/REPORT_REF_GROUP
+parentKeys: {}
+properties:
+  BF_CODE: CD.0137
+  NAME: Report Reference Group
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/manage_report_ref_group/CLASS_NAME/REPORT_REF_GROUP
+related: {}

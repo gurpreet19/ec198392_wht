@@ -1,0 +1,88 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-83839909'
+keys:
+  BF_DESCRIPTION_NO: CD.0008
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_stream_item/CLASS_NAME/STREAM_ITEM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Stream Item screen</strong>    is used to maintain
+    Stream Item objects.</p><p>    <strong>Stream Item object</strong>    is the data
+    entity holding the quantities in the Quantity module. It is    also used in the
+    Financial Transaction module where the Stream Item is also    used for defining
+    which Fields objects to allocate the monetary values to    for the posting to
+    the financial system.</p><p>    <u>        Each Stream Item has a Calculation
+    Method attribute set which tells how        to calculate the Stream Item:    </u><br>    <strong>IP:</strong>    Input<br>    <strong>SK:</strong>    Calculated
+    by a Split Key<br>    - The Formula attribute tells which Stream Item will be
+    the basis for the    calculation<br>    - A reference to a Split Key object to
+    use as basis for the calculation<br>    - A reference to which object in the Split
+    Key to use for the calculation:<br> <em>    Which Company to pick for a Company
+    Split Key,<br>    Which Field to pick for a Field Split Key,<br>    Which Product
+    to pick for a Product Split Key,<br>    Which Stream Item to pick for a Stream
+    Item Split Key,<br>    Which Other object to pick for an Other Split Key. </em><br>    <strong>FO:</strong>    Calculated
+    by a Formula consisting of other Stream Items. The formula uses    normal operators
+    such as +, -, *, / , constants and brackets. A formula can    have no more than
+    2000 characters. Please note that you can either enter    the formula directly
+    in the Formula edit field or use the Formula builder    through the popup associated
+    with the Formula edit field.<br>    <strong>CO: </strong>    Defined as a constant
+    value that can have the same value from day to day    and month to month. The
+    instantiation process will copy the value from the    previous day / month for
+    these Stream Items.</p><p>    <u> Stream Item is uniquely identified by its object
+    ID and Code as for any    other object in EC. In addition a Stream Item has four
+    attributes set which    are used in filtering in popups. <br> These attributes
+    are:</u><br>    <strong>Stream Item category:</strong>    a stream item category
+    defined for the stream category of the stream. The    Stream Item Categories are
+    separate objects.<br>    <strong>Product</strong>    given by the product defined
+    at the Stream Item<br>    <strong>Field</strong>    which Field the quantity belongs
+    to:<br>    - A specific Field object when the quantity is for a given Field<br>    -
+    The SUM field when the quantity is for multiple fields.<br>    <strong>Company</strong>    which
+    Company the quantity belongs to:<br>    - A specific Company object when the quantity
+    is for a given Company<br>    - The FULL Company when the quantity is for multiple
+    companies.</p><p>    <u> Each Stream Item object has attributes for controlling
+    the instantiation    and behavior of the Stream Item: </u><br>    <strong>Measurement
+    Node:</strong>    Tells whether the quantity is measured at the From Node or the
+    To Node of    the Stream associated with the Stream Item.<br>    <strong>Master
+    UOM Group:</strong>    Defines whether it is the Volume, Energy, or Mass quantity
+    that is the    master quantity. When changing the master quantity the other quantities
+    are    recalculated using conversion factors.<br>    <strong>Daily Accrual Method:</strong>    Defines
+    a method for creating an Accrual daily quantity for the Stream Item    in the
+    Quantity module.<br>    - <u>Last available daily actual:</u> Copies the value
+    form the latest day    prior to the day in question<br>    <u>- Months average
+    daily actual:</u>    Calculates an average number based on the existing daily
+    numbers for the    month in question<br>    <u>- Manual entry:</u>    User will
+    manually enter the accrual values<br>    <strong>Monthly Accrual Method:</strong>    Defines
+    a method for creating an Accrual monthly quantity for the Stream    Item in the
+    Quantity module.<br>    - Previous months available value: Copies the value for
+    the month prior to    the month in question<br>    - Average daily number in month
+    and multiply with number of days in month:    Calculates an average of the daily
+    quantities and multiplies with the    number of days of the month in question<br>    -
+    Manual entry: User will manually enter the accrual values<br>    <strong>Reporting
+    Category</strong>    defines whether the quantity is Unique or a Duplicate. Useful
+    for reporting    purposes where one can omit duplicate quantities to avoid double-counting    the
+    quantities.<br>    <strong>Conversion Method:</strong><br>    <u>- Calculated:</u>    No
+    conversion is taking place when changing the quantities for the various    UOMs
+    such as Volume, Energy, or Mass<br>    <u>- Conversion Factor:</u>    The conversion
+    factors are used to calculate the other quantities when    changing one quantity.<br>    <strong>Enable
+    Volume/Mass/Energy/Extra1/Extra2/Extra3:</strong>    defines which of these quantity
+    elements that are going to be enabled or    not in the screens in the Quantity
+    module.<br>    <strong>Default UOM for Volume/Mass/Energy/Extra1/Extra2/Extra3:</strong>    defines
+    the UOM to set for the instantiated Stream Items. Please note that    if the Stream
+    Item has been instantiated for the preceding day or month    then the UOM of the
+    Stream Item for that day / month is used instead.<br>    <strong>Set to Zero instantiation
+    Method    Daily: </strong><br>    <u>NULL:</u>    The Stream Item gets a NULL
+    value for the quantities when instantiated<br>    <u>Set to Zero and Accrual:</u>    The
+    Stream Item will be set to zero (0) and Accrual when instantiated.<br>    <u>Set
+    to Zero and Final:</u>    The Stream Item will be set to zero (0) and Final when
+    instantiated.</p><p>    <u> Please note </u> that when changing the core attributes
+    of a Stream Item object    the system can run a scheduler job in the background
+    to find all the    instantiated Stream Items affected by the change and then calculate
+    new    quantity values for these Stream Items. For more details on this feature,    please
+    see BF VO.0031 - Daily SI Pending Calculation screen.</p><p>    <u> Changing one
+    or more of these attributes will kick off this job:</u><br>    - Calculation Method,<br>    -
+    Formula,<br>    - Split Key object,<br>    - Split Key basis (defined in the Formula
+    field),<br>    - Split Key object (Company/Product/Field/Stream Item/Other),<br>    -
+    Conversion Method.</p>'
+related: {}

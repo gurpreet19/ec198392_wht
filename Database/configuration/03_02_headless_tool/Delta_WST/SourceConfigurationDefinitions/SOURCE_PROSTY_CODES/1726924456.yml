@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1726924456'
+keys:
+  CODE: CUSTOM
+  CODE_TYPE: DURATION_CODE
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: CUSTOM
+  CODE_TEXT: Custom
+  CODE_TYPE: DURATION_CODE
+  DESCRIPTION: Custome code allows user to enter planned duration in port resource usage
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: N
+  SORT_ORDER: 110.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

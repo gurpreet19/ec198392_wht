@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2121010425'
+keys:
+  BF_CODE: RC.0056
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: RC.0056
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RC.0056' AND NVL(URL,'IS_NULL') = '/daytimes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/manage_object_navmodel_nav/CLASS_NAME/TRACT/NAVMODEL/WELL_SETUP/TARGET/TRACT/TARGET_TYPE/parent' )
+  CLASS_NAME: TRACT
+  COMP_CODE: daytimes
+  NAME: New Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

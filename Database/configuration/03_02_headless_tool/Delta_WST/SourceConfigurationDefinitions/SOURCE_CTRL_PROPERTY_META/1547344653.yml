@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1547344653'
+keys:
+  KEY: /com/ec/pf/mainframe/defaultscreen
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: /xhtml/pages/dashboard.jsf?top=false&statusArea=false&toolbar=false
+  DESCRIPTION: Path on application server to screen that should appear after the user has logged on
+  KEY: /com/ec/pf/mainframe/defaultscreen
+  LABEL: Default Screen
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

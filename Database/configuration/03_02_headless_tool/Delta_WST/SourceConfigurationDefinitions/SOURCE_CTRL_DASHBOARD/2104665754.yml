@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2104665754'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: REVN_DOC_CNT_DD_CO
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: REVN
+  DESCRIPTION: Document Validation Status - Contract Owner Company - By Document Date
+  LABEL: Document Validation Status - Contract Owner Company - By Document Date
+  NAME: Document Validation Status - Contract Owner Company - By Document Date
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: REVN_DOC_CNT_DD_CO
+related: {}

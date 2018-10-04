@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '420524519'
+keys:
+  BF_CODE: CP.0020
+  T: BF_COMPONENT
+  URL: /cargo_split
+parentKeys: {}
+properties:
+  BF_CODE: CP.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0020' AND NVL(URL,'IS_NULL') = '/cargo_split')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/nomination_split/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT' )
+  CLASS_NAME: STORAGE_LIFT_NOM_SPLIT
+  COMP_CODE: cargo_split
+  NAME: Nomination Split
+  SIGNING_REQ_IND: null
+  URL: /cargo_split
+related: {}

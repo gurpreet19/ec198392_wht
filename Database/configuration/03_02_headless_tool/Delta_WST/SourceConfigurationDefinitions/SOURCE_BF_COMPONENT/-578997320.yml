@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-578997320'
+keys:
+  BF_CODE: GD.0059
+  T: BF_COMPONENT
+  URL: /locations
+parentKeys: {}
+properties:
+  BF_CODE: GD.0059
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0059' AND NVL(URL,'IS_NULL') = '/locations')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_result/CLASS/CAP_REL_RESULT_LOCATION' )
+  CLASS_NAME: CONTRACT_CAPACITY_RESULT
+  COMP_CODE: locations
+  NAME: Result Locaitons
+  SIGNING_REQ_IND: null
+  URL: /locations
+related: {}

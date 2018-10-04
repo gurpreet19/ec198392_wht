@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-380312996'
+keys:
+  BF_CODE: CO.0054
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CO.0054
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0054' AND NVL(URL,'IS_NULL') = '/daytimes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/well_bore_maintain' )
+  CLASS_NAME: WELL_BORE
+  COMP_CODE: daytimes
+  NAME: New Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

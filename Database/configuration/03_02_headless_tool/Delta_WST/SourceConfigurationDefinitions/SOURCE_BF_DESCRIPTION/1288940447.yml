@@ -1,0 +1,48 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1288940447'
+keys:
+  BF_DESCRIPTION_NO: TO.0017
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/blmr_light/CLASS/CARGO_INFO_LIGHT/SUB_CLASS/STOR_LIFT_NOM_LIGHT/TAB2_NOM_DETAILS/STORAGE_LIFT_NOM_DETAIL/TAB4_ACCOUNT_SPLIT/STOR_LIFT_NOM_CPY_SPLIT/TAB6_ACTUAL_LIFTED/STORAGE_LIFTING' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This business function is used when the complete cargo administration
+    process is not required, typically the operation only require to capture the actual
+    lifting figures to be used as basis for calculations like mass balance etc.The
+    end users has the option of inserting a new cargo in data section 1 and then associate
+    one or more parcels (nominations) by inserting rows in the data section 2.Cargo
+    Status process is simplified by a few steps, upon inserting the cargo status should
+    be default be set to a status of &ldquo;Ready for harbour&rdquo; (or equivalent).
+    Then the next process step would be to forward this to &ldquo;Closed&rdquo; and
+    finally &ldquo;Approved&rdquo;.</p><p>There are three tabs in this business function:
+    Nomination Details, Nomination Company List and Parcel Load. By default the name
+    of the tab will be taken based on the class name. It is possible to disable or
+    enable these tabs in Maintain System Settings. The information displayed in the
+    tabs are based on the selected parcel in second data section. The classes for
+    both data sections and tabs are configurable.</p><p>Tab 1: Nomination Detail<br
+    />The tab is used to view the information required on each cargo nomination on
+    consignor (the lifter from which lift account the quantities will be drawn) and
+    consignee (the buyer of the cargo) and the port (if multiple, only the first port
+    is recorded for each cargo nomination). A nomination can be connected to a contract
+    using this section. For more information please read CP.0004.</p><p>Tab 2: Nomination
+    Company List<br />The tab is used to view the override and default split on Lifting
+    Agreements. If The Lifting Account is set up to be connected to a Contract and
+    that contract got more than one customer a default split is created when the nomination
+    is created.The navigator will list the nomination for selected cargo . If the
+    nomination is connected to a Lifting Agreement the split data section will list
+    all customer companies associated to the Lifting Agreement (Contract).For more
+    information, please read CP.0020.Default Split button is not added to this tab
+    as this can be implemented by using context menu in the project.</p><p>Tab 3:
+    Parcel Load<br />In this tab it shows the product measurements for each nomination.
+    The Product Measurement is instantiated (when cargo was set to Official and Ready
+    for Harbour), making it possible to enter lifted values for different measurement
+    types and units. One of the measurement types is used as the nominated lifted
+    value (nominated unit), meaning this is the value used in further calculations.
+    Note that the lifted value is not editable unless the B/L Date is set. Measurement
+    types and units are configured for each product (export quality) in Product Measurement
+    Setup (CO.2002).For more information please read TO.0005.</p><p>Calculate button
+    is not added to this tab as lifting data is coming from the terminal.</p>'
+related: {}

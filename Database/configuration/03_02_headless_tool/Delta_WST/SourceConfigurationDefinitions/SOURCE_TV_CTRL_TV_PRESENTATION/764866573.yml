@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '764866573'
+keys:
+  COMPONENT_ID: ( SELECT 'FT_VA_VA_UT' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.sp/document_validation/MODE/UNTRANSFER?screentemplate=/com.ec.revn.sp/document_validation&tlayout=/com.ec.revn.sp/layout/document_untransfer_table.xml&flayout=/com.ec.revn.sp/layout/document_validation_form.xml&DLC=TRANSFER
+  COMPONENT_EXT_NAV_NAME: /MODE/UNTRANSFER?screentemplate=/com.ec.revn.sp/document_validation&tlayout=/com.ec.revn.sp/layout/document_untransfer_table.xml&flayout=/com.ec.revn.sp/layout/document_validation_form.xml&DLC=TRANSFER
+  COMPONENT_ID: ( SELECT 'FT_VA_VA_UT' FROM DUAL )
+  COMPONENT_LABEL: Document Un-transfer
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FT_VA_REVN' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 4840.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

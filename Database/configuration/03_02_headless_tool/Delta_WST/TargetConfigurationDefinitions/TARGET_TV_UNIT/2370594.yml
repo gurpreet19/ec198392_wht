@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2370594'
+keys:
+  T: TV_UNIT
+  UNIT: MMTV
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Million Metric (Mass) Tons in Vacuum
+  FIN_CODE: null
+  LABEL: MMT (Vac)
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MMTV
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related: {}

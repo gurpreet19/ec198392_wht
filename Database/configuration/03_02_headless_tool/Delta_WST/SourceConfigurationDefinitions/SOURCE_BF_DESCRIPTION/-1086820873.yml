@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1086820873'
+keys:
+  BF_DESCRIPTION_NO: WR.0075
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0075
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_validation/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_SUB_DAY_VALID' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is used to display and update invalid sub-daily data based on configuration in class validation or object validation.</p>
+    <p>The first data section will display records that failed either class validation or object validation.</p>
+    <p>The graph in the second data section will visualize the data based on DAILY_CLASS_NAME class defined. The width of the graph will resize according to the total viewwidth of the first data section with the minimum base width of 1400 pixel.</br></br><b>Note:</b></br>The timelapse in the graph can be configured by defining the column name of the class in Maintain User Settings(CO.1008) under Custom Settings dropdown(Property Name:Sub Daily Prod. Well Status 1 - Validation: Column used for timelapse) .</p>
+    <p>Colors for phase-related attributes(Oil,Gas,Water,Condensate etc.) will now follow configuration in  Maintain System Settings(CO.1006) under Custom Settings dropdown(Property Name:Phase-name stream colour) e.g for Oil, Property Name is 'Oil Stream Colour', the colour values are case insensitive and are rendered based on HTML colors.</p>
+    <p>The attribute &quot;On Test&quot; gives an indication whether or not a well is currently on test and this is only applicable for wells configured in PT.0005:Production Test Define.</p>
+related: {}

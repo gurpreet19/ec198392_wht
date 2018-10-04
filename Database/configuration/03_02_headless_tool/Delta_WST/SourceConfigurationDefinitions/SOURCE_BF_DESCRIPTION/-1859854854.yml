@@ -1,0 +1,30 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1859854854'
+keys:
+  BF_DESCRIPTION_NO: SP.0036
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0036
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/derived_price_object/CLASS_NAME/PRICE_OBJECT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Factor Price Object screen</strong>    is used to insert
+    and maintain Factor Price Objects.    The purpose of the Factor Price Object is
+    to make a simple way to have a price calculated from another price as an alternative
+    to use Price Calculation    Engine.</p><p>- In this BF the Factor Price Object
+    is added as a <em>Target Price Object / Target Price Element</em> and together
+    with it there is a    <em>Source Price Object / Source Price Element</em> defined.</p><p>    -
+    In addition you define the Factor and optionally an Offset:     <strong>Target
+    Price value = Factor X Source Price value + Offset</strong></p><p>    <strong>
+    Example: </strong><br>    Factor = 2<br>    Offset = 0.4<br>    Source Price Value
+    = 5<br>    Then the Target Price Value = (2 x 5) + 0.4 = 10.4</p><p>    <strong>Note</strong>    :
+    <em>Target Price Object</em> entry needs to be added in BF SP.0011 (Contract Price
+    List screen).<br>    For the Target Price Object the "Adjusted Price" data entry
+    field is read-only.</p><p>    <strong>The screen is divided into following sections:</strong><br>    <strong><em>-
+    Filter Navigator:</em></strong><br>    The Filter Navigator lists all the contracts
+    being valid at the date and Business Unit selected in the Filter Navigator.<br>    <strong><em>-
+    Contract Table:</em></strong><br>    This section lists all the Contracts.<br>    <strong><em>-
+    Target Price Object Table:</em></strong><br>    This section lists all the Target
+    Price objects connected to the selected Contract.</p>'
+related: {}

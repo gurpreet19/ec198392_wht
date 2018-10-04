@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-996754530'
+keys:
+  BF_CODE: GD.0058
+  T: BF_COMPONENT
+  URL: /capacity_bid_loc
+parentKeys: {}
+properties:
+  BF_CODE: GD.0058
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0058' AND NVL(URL,'IS_NULL') = '/capacity_bid_loc')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_internal/CLASS/CAPACITY_BID_LOC_INTER' )
+  CLASS_NAME: CAPACITY_BID_LOC_INTER
+  COMP_CODE: capacity_bid_loc
+  NAME: Capacity Bid Location Internal
+  SIGNING_REQ_IND: null
+  URL: /capacity_bid_loc
+related: {}

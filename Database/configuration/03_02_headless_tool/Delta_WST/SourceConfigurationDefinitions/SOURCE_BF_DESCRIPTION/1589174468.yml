@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1589174468'
+keys:
+  BF_DESCRIPTION_NO: CP.0063
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0063
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/tab_cargo_menu/CARGO_NAV_CLASS/CARGO_PLANNING_NAVIGATOR/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is a tab based screen where the tabs consist of 4 existing Cargo Planning business functions and 5 existing Terminal Operation business functions in EC.</p><p>The navigator in this BF is the Cargo Planning/Terminal Operation filter navigator. The information in these tabs will be retrieved based on the cargo selected in this filter navigator.</p><p>For more information on the functionality of the screens in these tabs please refer to the following business functions.</p><p>Tab 1:<br>&nbsp;&nbsp;&nbsp;&nbsp;Cargo Information<br>&nbsp;&nbsp;&nbsp;&nbsp;CP.0003 - Cargo Information</p><p>Tab 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;Nomination Details<br>&nbsp;&nbsp;&nbsp;&nbsp;CP.0004 - Nomination Details</p><p>Tab 3:<br>&nbsp;&nbsp;&nbsp;&nbsp;Account Split<br>&nbsp;&nbsp;&nbsp;&nbsp;CP.0020 - Nomination Company Split</p><p>Tab 4:<br>&nbsp;&nbsp;&nbsp;&nbsp;Document Instruction<br>&nbsp;&nbsp;&nbsp;&nbsp;CP.0013 - Document Instruction</p><p>Tab 5:<br>&nbsp;&nbsp;&nbsp;&nbsp;Analysis Information<br>&nbsp;&nbsp;&nbsp;&nbsp;TO.0006 - Cargo Analysis</p><p>Tab 6:<br>&nbsp;&nbsp;&nbsp;&nbsp;Timesheet<br>&nbsp;&nbsp;&nbsp;&nbsp;TO.0001 - Cargo Activity Timesheet</p><p>Tab 7:<br>&nbsp;&nbsp;&nbsp;&nbsp;Timesheet Delays<br>&nbsp;&nbsp;&nbsp;&nbsp;TO.0002 - Terminal Operation Delays</p><p>Tab 8:<br>&nbsp;&nbsp;&nbsp;&nbsp;Letter of Protest<br>&nbsp;&nbsp;&nbsp;&nbsp;TO.0020 - Letter of Protest</p><p>Tab 9:<br>&nbsp;&nbsp;&nbsp;&nbsp;Demurrage<br>&nbsp;&nbsp;&nbsp;&nbsp;TO.0007 - Demurrage</p>
+related: {}

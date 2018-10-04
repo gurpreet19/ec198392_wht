@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2085974316'
+keys:
+  BF_CODE: CO.3001
+  T: BF_COMPONENT
+  URL: /dim_attribute
+parentKeys: {}
+properties:
+  BF_CODE: CO.3001
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.3001' AND NVL(URL,'IS_NULL') = '/dim_attribute')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE' )
+  CLASS_NAME: null
+  COMP_CODE: dim_attribute
+  NAME: Dimension Attribute
+  SIGNING_REQ_IND: null
+  URL: /dim_attribute
+related: {}

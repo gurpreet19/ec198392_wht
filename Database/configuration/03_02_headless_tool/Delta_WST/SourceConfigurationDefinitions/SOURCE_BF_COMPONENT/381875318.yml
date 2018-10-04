@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '381875318'
+keys:
+  BF_CODE: SD.0045
+  T: BF_COMPONENT
+  URL: /sub_day_np_data
+parentKeys: {}
+properties:
+  BF_CODE: SD.0045
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0045' AND NVL(URL,'IS_NULL') = '/sub_day_np_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_np_data/CLASS/SLNP_DAY_DELIVERY/CLASS_SUB/SLNP_SUB_DAY_DELIVERY/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0045' )
+  CLASS_NAME: SLNP_SUB_DAY_DELIVERY
+  COMP_CODE: sub_day_np_data
+  NAME: Sub Daily Nominations
+  SIGNING_REQ_IND: null
+  URL: /sub_day_np_data
+related: {}

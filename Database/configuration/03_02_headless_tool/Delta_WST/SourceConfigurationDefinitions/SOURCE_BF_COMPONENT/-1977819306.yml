@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1977819306'
+keys:
+  BF_CODE: CO.0190
+  T: BF_COMPONENT
+  URL: /cpConnection
+parentKeys: {}
+properties:
+  BF_CODE: CO.0190
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0190' AND NVL(URL,'IS_NULL') = '/cpConnection')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/control_point_connection' )
+  CLASS_NAME: CONTROL_POINT_LINK
+  COMP_CODE: cpConnection
+  NAME: cpConnection
+  SIGNING_REQ_IND: null
+  URL: /cpConnection
+related: {}

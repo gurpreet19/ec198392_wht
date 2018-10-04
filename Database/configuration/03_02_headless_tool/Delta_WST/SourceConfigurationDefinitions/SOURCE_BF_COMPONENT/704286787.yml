@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '704286787'
+keys:
+  BF_CODE: RP.0013
+  T: BF_COMPONENT
+  URL: /runable_reports_params
+parentKeys: {}
+properties:
+  BF_CODE: RP.0013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0013' AND NVL(URL,'IS_NULL') = '/runable_reports_params')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_administration/MODE/GENERATE' )
+  CLASS_NAME: REPORT_RUNABLE_PARAM
+  COMP_CODE: runable_report_params
+  NAME: Report Parameters
+  SIGNING_REQ_IND: null
+  URL: /runable_reports_params
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1506356292'
+keys:
+  BF_CODE: GD.0120
+  T: BF_COMPONENT
+  URL: /subdayrenom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0120
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0120' AND NVL(URL,'IS_NULL') = '/subdayrenom')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_renomination/NOM_CLASS/TRNP_DAY_RENOM_LIST/RENOM_CLASS/TRNP_DAY_RENOMINATION/RENOM_SUB_CLASS/TRNP_SUB_DAY_RENOM/TARGET/NOMINATION_POINT' )
+  CLASS_NAME: TRNP_SUB_DAY_RENOM
+  COMP_CODE: subdayrenom
+  NAME: Sub Daily Renominations
+  SIGNING_REQ_IND: null
+  URL: /subdayrenom
+related: {}

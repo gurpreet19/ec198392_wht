@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '137486884'
+keys:
+  BF_CODE: CD.0114
+  T: BF_COMPONENT
+  URL: /year_form
+parentKeys: {}
+properties:
+  BF_CODE: CD.0114
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0114' AND NVL(URL,'IS_NULL') = '/year_form')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/payment_scheme_setup' )
+  CLASS_NAME: null
+  COMP_CODE: year_form
+  NAME: year_form
+  SIGNING_REQ_IND: null
+  URL: /year_form
+related: {}

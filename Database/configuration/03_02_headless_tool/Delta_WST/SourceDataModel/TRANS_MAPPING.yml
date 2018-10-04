@@ -1,0 +1,483 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: TRANS_MAPPING
+cnstPrimaryKey:
+  columns:
+  - MAPPING_NO
+  name: PK_TRANS_MAPPING
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  ACTIVE:
+    columnName: ACTIVE
+    typeName: VARCHAR2(1)
+    columnDefault: "'Y'\n "
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '29'
+  APPROVAL_BY:
+    columnName: APPROVAL_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '41'
+  APPROVAL_DATE:
+    columnName: APPROVAL_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '42'
+  APPROVAL_STATE:
+    columnName: APPROVAL_STATE
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '43'
+  ATTRIBUTE:
+    columnName: ATTRIBUTE
+    typeName: VARCHAR2(24)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  CREATED_BY:
+    columnName: CREATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '35'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '36'
+  DATA_CLASS:
+    columnName: DATA_CLASS
+    typeName: VARCHAR2(24)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  DESCRIPTION:
+    columnName: DESCRIPTION
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '31'
+  FROM_TIME:
+    columnName: FROM_TIME
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '32'
+  FROM_UNIT:
+    columnName: FROM_UNIT
+    typeName: VARCHAR2(16)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  LAST_UPDATED_BY:
+    columnName: LAST_UPDATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '37'
+  LAST_UPDATED_DATE:
+    columnName: LAST_UPDATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '38'
+  MAPPING_NO:
+    columnName: MAPPING_NO
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  PK_ATTR_1:
+    columnName: PK_ATTR_1
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  PK_ATTR_10:
+    columnName: PK_ATTR_10
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '27'
+  PK_ATTR_2:
+    columnName: PK_ATTR_2
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  PK_ATTR_3:
+    columnName: PK_ATTR_3
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  PK_ATTR_4:
+    columnName: PK_ATTR_4
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  PK_ATTR_5:
+    columnName: PK_ATTR_5
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  PK_ATTR_6:
+    columnName: PK_ATTR_6
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+  PK_ATTR_7:
+    columnName: PK_ATTR_7
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '21'
+  PK_ATTR_8:
+    columnName: PK_ATTR_8
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '23'
+  PK_ATTR_9:
+    columnName: PK_ATTR_9
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '25'
+  PK_VAL_1:
+    columnName: PK_VAL_1
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  PK_VAL_10:
+    columnName: PK_VAL_10
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '28'
+  PK_VAL_2:
+    columnName: PK_VAL_2
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  PK_VAL_3:
+    columnName: PK_VAL_3
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  PK_VAL_4:
+    columnName: PK_VAL_4
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  PK_VAL_5:
+    columnName: PK_VAL_5
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+  PK_VAL_6:
+    columnName: PK_VAL_6
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '20'
+  PK_VAL_7:
+    columnName: PK_VAL_7
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '22'
+  PK_VAL_8:
+    columnName: PK_VAL_8
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '24'
+  PK_VAL_9:
+    columnName: PK_VAL_9
+    typeName: VARCHAR2(100)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '26'
+  RECORD_STATUS:
+    columnName: RECORD_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '34'
+  REC_ID:
+    columnName: REC_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '44'
+  REV_NO:
+    columnName: REV_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '39'
+  REV_TEXT:
+    columnName: REV_TEXT
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '40'
+  SOURCE_ID:
+    columnName: SOURCE_ID
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  TAG_ID:
+    columnName: TAG_ID
+    typeName: VARCHAR2(100)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  TEMPLATE_NO:
+    columnName: TEMPLATE_NO
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  TO_TIME:
+    columnName: TO_TIME
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '33'
+  TO_UNIT:
+    columnName: TO_UNIT
+    typeName: VARCHAR2(16)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  VALID:
+    columnName: VALID
+    typeName: VARCHAR2(1)
+    columnDefault: "'Y'\n "
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '30'
+cnstUniqueKeys:
+  UK_TRANS_MAPPING_1:
+    columns:
+    - TAG_ID
+    name: UK_TRANS_MAPPING_1
+    type: UNIQUEKEY
+    status: UNDEFINED
+cnstForeignKeys:
+  FK_TRANS_MAPPING_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: TRANS_TEMPLATE
+    columns:
+      TEMPLATE_NO: TEMPLATE_NO
+    name: FK_TRANS_MAPPING_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+cnstChecks:
+  CHK_TRANS_MAPPING_1:
+    searchCondition: |-
+      NOT ((PK_ATTR_1 IS NULL
+      AND PK_VAL_1 IS NOT NULL) OR (PK_ATTR_1 IS NOT NULL
+      AND PK_VAL_1 IS NULL) OR (PK_ATTR_2 IS NULL
+      AND PK_VAL_2 IS NOT NULL) OR (PK_ATTR_2 IS NOT NULL
+      AND PK_VAL_2 IS NULL) OR (PK_ATTR_3 IS NULL
+      AND PK_VAL_3 IS NOT NULL) OR (PK_ATTR_3 IS NOT NULL
+      AND PK_VAL_3 IS NULL) OR (PK_ATTR_4 IS NULL
+      AND PK_VAL_4 IS NOT NULL) OR (PK_ATTR_4 IS NOT NULL
+      AND PK_VAL_4 IS NULL) OR (PK_ATTR_5 IS NULL
+      AND PK_VAL_5 IS NOT NULL) OR (PK_ATTR_5 IS NOT NULL
+      AND PK_VAL_5 IS NULL) OR (PK_ATTR_6 IS NULL
+      AND PK_VAL_6 IS NOT NULL) OR (PK_ATTR_6 IS NOT NULL
+      AND PK_VAL_6 IS NULL) OR (PK_ATTR_7 IS NULL
+      AND PK_VAL_7 IS NOT NULL) OR (PK_ATTR_7 IS NOT NULL
+      AND PK_VAL_7 IS NULL) OR (PK_ATTR_8 IS NULL
+      AND PK_VAL_8 IS NOT NULL) OR (PK_ATTR_8 IS NOT NULL
+      AND PK_VAL_8 IS NULL) OR (PK_ATTR_9 IS NULL
+      AND PK_VAL_9 IS NOT NULL) OR (PK_ATTR_9 IS NOT NULL
+      AND PK_VAL_9 IS NULL) OR (PK_ATTR_10 IS NULL
+      AND PK_VAL_10 IS NOT NULL) OR (PK_ATTR_10 IS NOT NULL
+      AND PK_VAL_10 IS NULL))
+    columns:
+    - PK_VAL_3
+    - PK_VAL_10
+    - PK_ATTR_10
+    - PK_VAL_9
+    - PK_ATTR_9
+    - PK_VAL_8
+    - PK_ATTR_8
+    - PK_VAL_7
+    - PK_ATTR_7
+    - PK_VAL_6
+    - PK_ATTR_6
+    - PK_ATTR_1
+    - PK_VAL_1
+    - PK_ATTR_2
+    - PK_VAL_2
+    - PK_ATTR_3
+    - PK_ATTR_4
+    - PK_VAL_4
+    - PK_ATTR_5
+    - PK_VAL_5
+    name: CHK_TRANS_MAPPING_1
+    type: CHECK
+    status: UNDEFINED
+  CHK_TRANS_MAPPING_2:
+    searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')
+    columns:
+    - APPROVAL_STATE
+    name: CHK_TRANS_MAPPING_2
+    type: CHECK
+    status: UNDEFINED
+indexes:
+  IFK_TRANS_MAPPING_1:
+    indexName: IFK_TRANS_MAPPING_1
+    columns:
+    - TEMPLATE_NO
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IR_TRANS_MAPPING:
+    indexName: IR_TRANS_MAPPING
+    columns:
+    - REC_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

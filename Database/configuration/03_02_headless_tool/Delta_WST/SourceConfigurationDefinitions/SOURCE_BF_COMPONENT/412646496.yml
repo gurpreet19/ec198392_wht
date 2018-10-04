@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '412646496'
+keys:
+  BF_CODE: GD.0108
+  T: BF_COMPONENT
+  URL: /nompnttransfer
+parentKeys: {}
+properties:
+  BF_CODE: GD.0108
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0108' AND NVL(URL,'IS_NULL') = '/nompnttransfer')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_point_transfer/CLASS/TRNP_DAY_NOM_TRANSFER/NOMINATION_CYCLE/false/CATEGORY/ENTRY_EXIT_PATH/SHOW_OPERATIONAL/N' )
+  CLASS_NAME: TRNP_DAY_NOM_TRANSFER
+  COMP_CODE: nompnttransfer
+  NAME: Nom Point Transfers
+  SIGNING_REQ_IND: null
+  URL: /nompnttransfer
+related: {}

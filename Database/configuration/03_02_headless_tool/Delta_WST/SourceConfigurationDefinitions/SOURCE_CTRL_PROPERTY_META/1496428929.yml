@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1496428929'
+keys:
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/navmodel/TRAN_COMMERCIAL/CONTRACT_CAPACITY/CONTRACT_CAPACITY
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: NAV_DEF_VALUE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Default values in nav model for GD Nom Point Contract capacity navigators
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/navmodel/TRAN_COMMERCIAL/CONTRACT_CAPACITY/CONTRACT_CAPACITY
+  LABEL: Default values in nav model for GD Nom Point Contract Capacity navigators
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

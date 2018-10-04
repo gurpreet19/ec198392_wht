@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-861444275'
+keys:
+  CODE: USE_LIST_ADD_ALL
+  CODE_TYPE: JE_RECONCIL_HANDLE_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: USE_LIST_ADD_ALL
+  CODE_TEXT: Add all code to existing object list
+  CODE_TYPE: JE_RECONCIL_HANDLE_METHOD
+  DESCRIPTION: null
+  IS_ACTIVE: N
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 20.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

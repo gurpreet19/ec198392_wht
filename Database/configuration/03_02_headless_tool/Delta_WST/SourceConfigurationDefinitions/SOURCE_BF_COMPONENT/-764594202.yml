@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-764594202'
+keys:
+  BF_CODE: CD.0037
+  T: BF_COMPONENT
+  URL: /form
+parentKeys: {}
+properties:
+  BF_CODE: CD.0037
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0037' AND NVL(URL,'IS_NULL') = '/form')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/split_key/SPLIT_TYPE/PRODUCT' )
+  CLASS_NAME: null
+  COMP_CODE: SplitkeyForm
+  NAME: Splitkey Form
+  SIGNING_REQ_IND: null
+  URL: /form
+related: {}

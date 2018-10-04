@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2067342874'
+keys:
+  BF_CODE: SP.0045
+  T: BF_COMPONENT
+  URL: /create_summary_list_details
+parentKeys: {}
+properties:
+  BF_CODE: SP.0045
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0045' AND NVL(URL,'IS_NULL') = '/create_summary_list_details')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_summary_list' )
+  CLASS_NAME: SUMMARY_SETUP_LIST
+  COMP_CODE: create_summary_list_details
+  NAME: Create Data Extract List Details
+  SIGNING_REQ_IND: null
+  URL: /create_summary_list_details
+related: {}

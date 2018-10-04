@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2004286553'
+keys:
+  BF_CODE: CP.0068
+  T: BF_COMPONENT
+  URL: /official_flags
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0068' AND NVL(URL,'IS_NULL') = '/official_flags')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: FCST_MAN_STOR_FC_ACT_FLG
+  COMP_CODE: official_flags
+  NAME: Graph
+  SIGNING_REQ_IND: null
+  URL: /official_flags
+related: {}

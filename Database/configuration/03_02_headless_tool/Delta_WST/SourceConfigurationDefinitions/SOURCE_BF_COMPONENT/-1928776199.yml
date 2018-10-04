@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1928776199'
+keys:
+  BF_CODE: GD.0054
+  T: BF_COMPONENT
+  URL: /capRelRecall
+parentKeys: {}
+properties:
+  BF_CODE: GD.0054
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0054' AND NVL(URL,'IS_NULL') = '/capRelRecall')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release' )
+  CLASS_NAME: CAPACITY_REL_RECALL
+  COMP_CODE: capRelRecall
+  NAME: Recall / Reput
+  SIGNING_REQ_IND: null
+  URL: /capRelRecall
+related: {}

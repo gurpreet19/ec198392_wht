@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-199968604'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/monthly_oba_status/TARGET/CONTRACT_INVENTORY/CLASS/CNTR_INV_MTH_BAL_OBA/SUB_CLASS/CNTR_INV_DAY_BAL_OBA/NAV_MODEL/TRAN_COMMERCIAL
+parentKeys: {}
+properties:
+  BF_CODE: GD.0047
+  NAME: Monthly OBA Status
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/monthly_oba_status/TARGET/CONTRACT_INVENTORY/CLASS/CNTR_INV_MTH_BAL_OBA/SUB_CLASS/CNTR_INV_DAY_BAL_OBA/NAV_MODEL/TRAN_COMMERCIAL
+related: {}

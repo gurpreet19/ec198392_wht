@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-663656120'
+keys:
+  BF_DESCRIPTION_NO: CP.0023
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/process_train_event' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used by the scheduler/plant operator to plan for maintenance periods and other events that have an impact on the production to each&nbsp;storage. Typical usage of this business function is to enter a start and end date/time for the event and choose from a predefined list of events. The events are&nbsp;configured in a separate configuration function (CO.2058 &ndash; Process Train Event Profile).</p><p>The Event Details will be initiated based on the selected event type. The user may select Storage to see the impact. The impact will be represented as a reduced&nbsp;rundown to the storage. The user will not be able to change the rundown. The figures are calculated based on the Train Storage Yield and the maintenance event.</p><p>By entering an event for a process train the underlying production forecasts on daily and sub-daily level for the storage(s) that the process train produces to will be&nbsp;affected.</p><p>Further, the screen does not prevent the user from changing the event type for an existing event or to delete events.</p>
+related: {}

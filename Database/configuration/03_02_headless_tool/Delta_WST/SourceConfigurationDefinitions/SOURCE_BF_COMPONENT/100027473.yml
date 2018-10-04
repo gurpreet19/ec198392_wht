@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '100027473'
+keys:
+  BF_CODE: CD.0103
+  T: BF_COMPONENT
+  URL: /tableSetup
+parentKeys: {}
+properties:
+  BF_CODE: CD.0103
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0103' AND NVL(URL,'IS_NULL') = '/tableSetup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/setup_report' )
+  CLASS_NAME: DOC_TEMPL_REPORT_SETUP
+  COMP_CODE: documentTemplateReportSetup
+  NAME: Document Table Report Setup
+  SIGNING_REQ_IND: null
+  URL: /tableSetup
+related: {}

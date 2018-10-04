@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-909384157'
+keys:
+  CODE: MANUAL
+  CODE_TYPE: COST_MAPPING_JE_SOURCE
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: MANUAL
+  CODE_TEXT: Manual Data Entry
+  CODE_TYPE: COST_MAPPING_JE_SOURCE
+  DESCRIPTION: Indicates a Cost Mappings are inserted Manually.
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 40.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

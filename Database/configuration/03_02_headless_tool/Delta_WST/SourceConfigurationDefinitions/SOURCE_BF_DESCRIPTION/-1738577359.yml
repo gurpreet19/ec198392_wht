@@ -1,0 +1,119 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1738577359'
+keys:
+  BF_DESCRIPTION_NO: CD.0152
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0152
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/visual_tracing/DATA_CLASS/VISUAL_TR_ALL_DATA/HIGHLIGHT_CLASS/VISUAL_TR_HIGHLIGHT/CONFIG_CLASS/VISUAL_TR_CONFIG/YEAR_STATUS_CLASS/VISUAL_TR_YEAR_STATUS/TR_AREA_CODE/OIL_SANDS/PROJECT_HIDE_IND/Y/PROCESS_HIDE_IND/Y' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Visual Tracing screen</strong> provides a visual overview
+    of the tracing information. The screen will show all data entities that are being
+    traced for the selected navigator settings and a selected month.</p><p>The user
+    can click the tracing icon for a data entity and EC will show which other data
+    entities that are linked to the selected data entity through the tracing.<br>The
+    user can also add / delete / modify the Notes attached to a data entity.</p><h2><strong
+    style="color: rgb(0, 0, 153);">Navigator</strong></h2><p><u>The Navigator has
+    these elements:</u><br><strong>- Year: </strong>The year to view the tracing data
+    for. This data element is mandatory.<br><strong>- Property: </strong>The Property
+    to view the tracing data for.&nbsp;This data element is mandatory.<br><strong>-
+    Actual/Accrual: </strong>Filter to show tracing data of Actual data entities or
+    Accrual data entities. When left blank the screen will show both Actual and Accrual
+    data entities. This parameter is optional.<br><strong>- Show Deprecated: </strong>Parameter
+    to show/hide deprecated data entities. When left blank the screen will show deprecated
+    data entities. When set to ''No'' the deprecated data entities will be hidden.
+    This parameter is optional</p><h2><strong style="color: rgb(0, 0, 153);">Year
+    Status Table</strong></h2><p>This table shows the data entity status for all of
+    the months of the selected year. </p><p> <strong>Button <span style="color: rgb(0,
+    153, 0);">Refresh</span></strong><br>The button is used to populate the table
+    and also to update the Year Status table to reflect the current status of the
+    system.<br><u>Note: </u>there will be separate Year Status data for each combination
+    of Year / Property / Actual/Accrual setting in the Navigator.</p><p>The icons
+    used are as follows:</p><p><img src="/javax.faces.resource/images/icon/tracing/OK.png.jsf?ln=primefaces-ECSkin01">&nbsp;
+    Data is existing for the month and all the data entities are set to Approved.</p><p><img
+    src="/javax.faces.resource/images/icon/tracing/WARNING.png.jsf?ln=primefaces-ECSkin01">&nbsp;&nbsp;Data
+    is existing for the month and one or more data entities is not set to Approved.</p><p><img
+    src="/javax.faces.resource/images/icon/tracing/NODATA.png.jsf?ln=primefaces-ECSkin01">&nbsp;
+    There is no data entities for the month.</p><p>By clicking a month entry in the
+    Year Status table the screen will load the data entities for the selected month
+    / navigator settings.<br>The data entities will load in the Tracing Data section
+    (see below).</p><h2><strong style="color: rgb(0, 0, 153);">Tracing Data Section</strong></h2><p>The
+    main working area of the screen shows the data entities for the selected month
+    and navigator settings.&nbsp;</p><p><u>The data entities are listed in separate
+    columns as follows:</u><br>- Data Uploads,<br>- Data Mapping Documents,<br>- Data
+    Extract Documents,<br>- Calculations,<br>- Financial Documents,<br>- Reports.</p><p>For
+    each data entity there is a number of icons displayed inside each data entity
+    ''box'':</p><p><img src="/javax.faces.resource/images/icon/tracing/OK.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that&nbsp;there are other data entities referring to the data entity through the
+    Document Tracing.</p><p><img src="/javax.faces.resource/images/icon/tracing/WARNING.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that there are no other data entities referring to the data entity through the
+    Document Tracing. This is typically the case for a newly uploaded or generated
+    data entity.</p><p><img src="/javax.faces.resource/images/icon/tracing/LOCK.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity has been used as input to another data entity and any changes
+    to the data entity should be handled carefully.&nbsp;</p><p><img src="/javax.faces.resource/images/icon/tracing/NOTES.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity has one or more Notes attached.</p><p><img src="/javax.faces.resource/images/icon/tracing/P.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity is in Provisional state.</p><p><img src="/javax.faces.resource/images/icon/tracing/V.png.jsf?ln=primefaces-ECSkin01">
+    Indicates that the data entity is in Verified state.</p><p><img src="/javax.faces.resource/images/icon/tracing/A.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity is in Approved state.</p><p><img src="/javax.faces.resource/images/icon/tracing/OPEN.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity is in Open state.</p><p><img src="/javax.faces.resource/images/icon/tracing/VALID1.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity is in Valid 1 state.</p><p><img src="/javax.faces.resource/images/icon/tracing/VALID2.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity is in Valid 2 state.</p><p><img src="/javax.faces.resource/images/icon/tracing/TRANSFER.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity is in Transfer state.</p><p><img src="/javax.faces.resource/images/icon/tracing/BOOKED.png.jsf?ln=primefaces-ECSkin01">&nbsp;Indicates
+    that the data entity is in Booked state.</p><p>When initially loading the data
+    entities they will all have a blue border. This blue border indicates that there
+    is no data entity selected for showing the data entity tracing.</p><p>By clicking
+    the tracing icon inside a data entity (<img src="/javax.faces.resource/images/icon/tracing/TRACE.png.jsf?ln=primefaces-ECSkin01">)
+    the screen will highlight the selected data entity with a green border.<br>All
+    other data entities that are connected to the selected data entity through the
+    data tracing will be highlighted with a brown border.<br>The data entities that
+    are not linked by the tracing are dimmed to grey border / grey text.</p><p>When
+    a data entity is selected for tracing the Notes section for the selected data
+    entity is displayed at the bottom of the screen - see below.</p><p> <strong>Button
+    <span style="color: rgb(0, 153, 0);">Trace Document</span></strong><br>The Trace
+    Document button will open the standard Trace Document popup window for showing
+    the Document Tracing for the selected data entity.<br>Please see on-line help
+    for the Document Tracing screen (BF CD.0151) for more details on the functionality
+    of the popup screen.&nbsp;</p><h2><strong style="color: rgb(0, 0, 153);">Notes</strong></h2><p>Each
+    data entity may have one or more Notes attached. The Notes section of the screen
+    allows for adding/modifying/deleting Notes entries for the selected data entity.<br><u>Note:
+    </u>when saving changes to the Notes entries the selected data entity will be
+    <strong>deselected</strong>.&nbsp;<br>If the user just <strong>added the first</strong>
+    Notes entity to the selected data entity then the information icon (<img src="/javax.faces.resource/images/icon/tracing/NOTES.png.jsf?ln=primefaces-ECSkin01">)
+    will be shown for the data entity.<br>If you just <strong>deleted the last</strong>&nbsp;Notes
+    entity to the selected data entity then the information icon (<img src="/javax.faces.resource/images/icon/tracing/NOTES.png.jsf?ln=primefaces-ECSkin01">)
+    will be hidden for the data entity.</p><h2><strong style="color: rgb(0, 0, 153);">Personalization</strong></h2><p>The
+    colors of the data entity boxes can be adjusted to your personal favorites by
+    setting user-specific settings for the following properties in screen Configuration
+    -&gt; Preferences -&gt; Maintain User Settings:</p><p><strong>- Visual Tracing
+    non-selected color: </strong>The box color when there are no data entities selected.
+    By default this is a blue color: <span style="background-color: rgb(123,187,226);">&nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br><strong>- Visual Tracing
+    selected color: </strong>This is the box color for the data entity selected for
+    tracing. By default this is a green color:&nbsp;<span style="background-color:
+    rgb(146,208,80);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br><strong>-
+    Visual Tracing highlight color: </strong>This is the box color for the data entities
+    that are linked to the selected tracing data entity. By default this is a orange
+    color: <span style="background-color: rgb(237, 125, 49);">&nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp;&nbsp;</span><br><strong>- Visual Tracing dimlight color:
+    </strong>This is the box color for the data entities that are NOT linked to the&nbsp;selected
+    tracing data entity. By default this is a grey color: <span style="background-color:
+    rgb(217,217,217);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br><strong>-
+    Visual Tracing dimlight text color: </strong>This is the color of the text inside
+    the data entity box for the&nbsp;data entities that are NOT linked to the&nbsp;selected
+    tracing data entity. By default this is a dark grey color: <span style="background-color:
+    rgb(166,166,166);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br><strong>-
+    Visual Tracing dimlight text background color:&nbsp;</strong>This is the color
+    of the background of the text inside the data entity box for the&nbsp;data entities
+    that are NOT linked to the&nbsp;selected tracing data entity. By default this
+    is a grey color: <span style="background-color: rgb(217,217,217);">&nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p>It is also possible to personalize
+    the size of the visual tracing component in the screen:</p><p><strong>- Visual
+    Tracing Component Height:</strong> The total height of the tracing component.
+    Given in pixels. Default is 800.<br><strong>- Visual Tracing Component Width:&nbsp;</strong>The
+    total width of the tracing component. Given in pixels. Default is 1500.</p><p>The
+    width of the data entity box is also configurable:<br><strong>Visual Tracing Data
+    Entity Box Width:</strong>&nbsp;This is the text box width in pixels for the Visual
+    Tracing component. Given in pixels. Default is 200.</p>'
+related: {}

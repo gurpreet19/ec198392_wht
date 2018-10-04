@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1202641178'
+keys:
+  BF_CODE: FC.0003
+  T: BF_COMPONENT
+  URL: /logcontent
+parentKeys: {}
+properties:
+  BF_CODE: FC.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.0003' AND NVL(URL,'IS_NULL') = '/logcontent')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/calculate_forecast' )
+  CLASS_NAME: CALC_FCST_LOG
+  COMP_CODE: logcontent
+  NAME: LogContent
+  SIGNING_REQ_IND: null
+  URL: /logcontent
+related: {}

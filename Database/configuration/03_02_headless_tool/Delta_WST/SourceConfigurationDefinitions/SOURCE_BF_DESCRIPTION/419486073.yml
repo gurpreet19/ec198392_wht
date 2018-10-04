@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '419486073'
+keys:
+  BF_DESCRIPTION_NO: PO.0048
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/gas_proc_restrictions' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The screen may be used to input actual capacity for gas processing equipment for periods where the equipment has restricted capacity. If agreed production was not reached due to e.g. problems with gas processing equipment, the actual capacity for that sub daily interval can be registered against the given equipment. There will be one record per sub daily interval the restriction lasts. Data is representative from the daytime given by <em>Date </em>and lasts for the fixed sub daily interval specified on the individual Gas Processing Equipment.</p>
+
+    <p>The screen will list any restricted capacity records belonging to productions days between <em>From Date </em>and <em>To </em>Date. Production day start is based on the setting on the individual gas processing equipment object.</p>
+
+    <p>The New Capacity number can either be a mass figure, volume, energy etc, it depends on the equipment it is registered on. Each Gas Processing Equipment has a UOM. The New Capacity is registered per equipment object, which represent on which stage in the process the restriction occurred.</p>
+
+    <p>Data in this screen can be used as input to the allocation, which will calculate how the distribution that day is based on project specific calculation rules.</p>
+related: {}

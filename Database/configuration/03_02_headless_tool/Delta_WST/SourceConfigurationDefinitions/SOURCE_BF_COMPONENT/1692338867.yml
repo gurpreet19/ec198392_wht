@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1692338867'
+keys:
+  BF_CODE: TO.0009
+  T: BF_COMPONENT
+  URL: /upload_cargo_docs/uploadbutton
+parentKeys: {}
+properties:
+  BF_CODE: TO.0009
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0009' AND NVL(URL,'IS_NULL') = '/upload_cargo_docs/uploadbutton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_document/COLUMN_SORT/RUN_DATE/SORT_TYPE/DESC' )
+  CLASS_NAME: null
+  COMP_CODE: upload_cargo_docs/uploadbutton
+  NAME: UploadCargoDocuments/Upload Button
+  SIGNING_REQ_IND: null
+  URL: /upload_cargo_docs/uploadbutton
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-869657826'
+keys:
+  COMPONENT_ID: ( SELECT 'DOC_TEMPLATE' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_TEMPLATE?screentemplate=/com.ec.frmw.co.screens/manage_object
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'DOC_TEMPLATE' FROM DUAL )
+  COMPONENT_LABEL: Document Template
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'REVENUE_DOC_OBJECTS' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 10.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

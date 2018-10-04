@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1884192477'
+keys:
+  BF_CODE: CO.1053
+  T: BF_COMPONENT
+  URL: /templ_row
+parentKeys: {}
+properties:
+  BF_CODE: CO.1053
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1053' AND NVL(URL,'IS_NULL') = '/templ_row')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/component_template' )
+  CLASS_NAME: CALC_COMPONENT_ROW
+  COMP_CODE: templ_row
+  NAME: Template Row
+  SIGNING_REQ_IND: null
+  URL: /templ_row
+related: {}

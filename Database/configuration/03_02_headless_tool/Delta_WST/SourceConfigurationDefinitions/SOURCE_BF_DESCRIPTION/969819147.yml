@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '969819147'
+keys:
+  BF_DESCRIPTION_NO: CO.1048
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/pday_dst' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Daylight saving time (DST; also summer time in British English) is the convention of advancing clocks so that afternoons have more daylight and mornings have less. Typically clocks are adjusted forward one hour near the start of spring and are adjusted backward in autumn.</p>
+
+    <p>This screen is used in conjunction with Production Day screen to offer the user to configure the multiple time zones for the production day.</p>
+
+    <p>The configuration method for this screen is to set the correct local standard time to the field [Daytime [hh:mm]] based on the DST information in the website http://timeanddate.com/worldclock/city.html?n=165.</p>
+related: {}

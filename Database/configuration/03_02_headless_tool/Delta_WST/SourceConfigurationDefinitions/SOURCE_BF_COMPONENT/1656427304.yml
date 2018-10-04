@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1656427304'
+keys:
+  BF_CODE: CO.1003
+  T: BF_COMPONENT
+  URL: /roles
+parentKeys: {}
+properties:
+  BF_CODE: CO.1003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1003' AND NVL(URL,'IS_NULL') = '/roles')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/view_access_roles_users' )
+  CLASS_NAME: T_BASIS_ROLE
+  COMP_CODE: roles
+  NAME: Roles
+  SIGNING_REQ_IND: null
+  URL: /roles
+related: {}

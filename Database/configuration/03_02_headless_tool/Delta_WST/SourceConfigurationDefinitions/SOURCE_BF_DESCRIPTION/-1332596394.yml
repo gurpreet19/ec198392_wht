@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1332596394'
+keys:
+  BF_DESCRIPTION_NO: CD.0025
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0025
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_ACCOUNT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Account screen</strong>    is used to hold all the financial Accounts in use by the system.</p><p>    Each financial Account is in use by several combinations of Account    Mapping.</p><p>    New financial Accounts can be generated from Interfaced Data Entries from    the Project Data Mapping screen (BF SP.0041).</p>
+related: {}

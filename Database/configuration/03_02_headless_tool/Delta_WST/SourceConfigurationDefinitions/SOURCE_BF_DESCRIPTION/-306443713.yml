@@ -1,0 +1,110 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-306443713'
+keys:
+  BF_DESCRIPTION_NO: VO.0026
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: VO.0026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/daily_query_input_quantities' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Daily Quantity Input screen</strong>    shows a list
+    of all IP (Input) type of Stream Items for a particular day based on a set of
+    query parameters. The result of the query will list all stream    items matching
+    the selection criteria.<br>    - To see all types of SI matching the set of query
+    parameters use Daily Quantity Overview screen (BF VO.0018).</p><p>    <u>For each
+    stream item up to 6 different quantities may be entered:</u><br>    - One Volume
+    quantity<br>    - One Energy quantity<br>    - One Mass quantity<br>    - 3 Extra
+    quantities, any UOM</p><p>    <u>Each stream item is defined with a master UOM
+    group. That is V for Volume, M for Mass or E for Energy.</u><br>    The quantity
+    is normally entered in the master UOM and other quantities are calculated by the
+    system using conversion logic and cascade logic. The    following will describe
+    the calculations the save operation does.</p> <h3>    <strong style="color: rgb(0,
+    0, 153);"> Navigator </strong></h3> <p>    The date parameter has to be filled
+    out. Also some of the other parameters have to be set in order to avoid download
+    of too many stream items. Leaving a    parameter blank will act as a wildcard
+    for the parameter.<br>     - The user should be sure the Instantiation is done
+    for the chosen Date.</p><h3>    <strong style="color: rgb(0, 0, 153);"> Overview
+    Table Tab</strong></h3><p>    In this section the user is able to view and modify
+    Conversion Factors for any Stream Item matching parameters chosen in Navigator.<br>    -
+    The conversion factors will be stored at Stream Item Value level.<br>    - A change
+    in the Conversion Factors here will generate updates on the quantities entered
+    in Daily Quantity Overview screen (BF.VO0018).<br>    - The cascade logic will
+    start to update relevant stream items.</p><p>    <u>Definition of the conversion
+    factors</u><br>    <strong><em>- Gross Calorific Value Energy per Volume</em></strong><br>    GCV
+    is the factor used to convert between Energy and Volume.<br>    <strong><em> -
+    Density Mass per Volume</em></strong><br>    DENSITY is the factor used to convert
+    between Mass and Volume.<br>    <strong><em> - Mass Calorific Value Energy per
+    Mass</em></strong><br>    MCV is the factor used to convert between Energy and
+    Mass.</p><p>    <strong>Button <span style="color: rgb(0, 153, 0);">RESET SELECTED
+    CONVERSION FACTORS</span></strong><br>    The button enables to reset the Conversion
+    Factor for the selected Stream Item.<br>    - If a quantity, other than the master
+    UOM quantity, is overwritten for a Stream Item, the system deletes the Conversion
+    Factor that was used to calculate    the quantity.<br>    - If a user has changed
+    a conversion factor or changed a non-master quantity it is possible to bring back
+    the originally Conversion Factor on the selected    Stream Item by pressing the
+    button. The quantity will then be recalculated.</p><p>    <strong>CONVERSION LOGIC</strong><br>    Each
+    stream item is defined with a master UOM group and a corresponding master UOM.
+    The 5 additional quantities are optional to use. If a UOM is defined    for one
+    of the non-master quantities the conversion logic calculates the quantity based
+    on a conversion factor. This conversion factor can be either a    standard conversion
+    factor within a UOM group or a inter group conversion factor used across UOM groups
+    i.e. a calculation from a Volume UOM to a Mass UOM.</p><p>    <u>UOM group conversions
+    for a stream item takes place in the following situations:</u><br>    1. When
+    the master UOM Group quantity changes; for all UOM Groups unless at the same time
+    other quantities are provided for such UOM groups. This will    overwrite any
+    previous calculated or manually entered quantities.<br>    2. When any of conversion
+    the factors defined for a stream item is changed at stream item level. This will
+    overwrite any previous calculated or manually    entered quantities.<br>    3.
+    When any of the UOM Group quantities other than the master are NULL provided that
+    a valid UOM is defined. If no UOM is defined the conversion will not    take place.</p><p>    An
+    inter-UOM group conversion is always calculated from the master UOM Group quantity
+    to any other UOM Group as long as a valid conversion factor is    available. This
+    is independent of any enabling / disabling of data entry fields.<br>    Standard
+    conversions are always within a UOM group and apply a set of standard conversion
+    factors, which will apply to all such calculations in the system.</p><p>    <u>        Whenever
+    a stream item is configured to use one or more of the Extra fields, the system
+    will automatically perform standard UOM conversions for the        following situations:    </u><br>    1.
+    When the master UOM Group quantity changes unless at the same time other quantities
+    are provided for such Extra fields. This will overwrite any previous    calculated
+    or manually entered quantities.<br>    2. When any of the Extra quantities are
+    NULL provided that a valid UOM is defined. If no UOM is defined the conversion
+    will not take place.</p><p>    The cascade logic starts also the conversion calculations
+    if the other involved stream items are defined with other UOMs.</p><p>        <strong>Button
+    <span style="color: rgb(0, 153, 0);">    ACCRUAL TO FINAL FOR ALL SI IN SCREEN&lt;
+    /span&gt; </span></strong><br>    The button will bring back all Stream Items
+    in the screen from Accrual to Final.</p><p>    <strong>Button <span style="color:
+    rgb(0, 153, 0);"> VIEW CASCADE </span></strong><br>    The button explains how
+    the selected number was calculated using other numbers.</p><p>    <strong>CASCADE
+    LOGIC</strong><br>    A stream item is defined with a calculation method (STIM_DAY_VALUE.CALC_METHOD).</p><p>    <u>Valid
+    values for STIM_DAY_VALUE.CALC_METHOD</u><br>    <strong><em>- IP</em></strong>    :
+    Manual input or by interface.<br>    <strong><em>- SK</em></strong>    Calculated
+    using a split key. The split keys are defined in the CD module.<br>    <strong><em>-
+    FO:</em></strong>    Calculated using a formula. The formula is defined on the
+    stream item in the CD module.<br>    <strong><em>- EK:</em></strong>    Calculated
+    using an exceptional split key, i.e. the number has been calculated based on a
+    new split key share entered by the user.<br>    <strong><em>- OW:</em></strong>    The
+    user has overwritten the master quantity on a FO or a SK stream item. This means
+    the cascade will not include the stream item again in any new cascade    operation.<br>    <strong><em>-
+    CO:</em></strong>    The number is a constant.<br>    <strong><em>- SP:</em></strong>    The
+    number is coming from SP (Sales and Purchases module) and is a sum of quantities
+    from one or more SP documents.</p><p>    <u>The cascade operation for a stream
+    item will run automatically by the following situations:</u><br>    1. If any
+    quantity in the volume/mass/energy fields has been changed by user.<br>    2.
+    If the split share changes (calc_method SK to EK).<br>    3. If the conversion
+    factors changes.</p><p>    The cascade operation will calculate all numbers depending
+    on the number entered. The cascade calculation process is a recursive operation
+    where each    number that has been recalculated may lead to recalculation of other
+    stream item values as well. The cascade process will calculate only those stream
+    item    values having STIM_DAY_VALUE.CALC_METHOD / STIM_MTH_VALUE.CALC_METHOD
+    set to SK, EK or FO.</p><p>    The cascade logic itself will only calculate the
+    master UOM group quantity of a stream item. Upon saving the calculated figure
+    further conversion logic    will apply, i.e. across to other quantities, either
+    within same UOM group or a different one.</p><h3>    <strong style="color: rgb(0,
+    0, 153);"> Conversion Table Tab</strong></h3><p>    This section enables the user
+    to view / modify all conversion factors for each Stream Item.</p><h3>    <strong
+    style="color: rgb(0, 0, 153);"> Actual Table Tab</strong></h3><p>    This section
+    is mostly used for reporting purposes. It lists all Stream Items and their conversion
+    result of a master-quantity to different units.</p>'
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-446299493'
+keys:
+  BF_DESCRIPTION_NO: TO.0013
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/batch_quantity' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to record lifted quantities in batch(s) for a cargo from a given storage. Further it allows the user to Apportion the total quantity down on&nbsp;the nominations connected to the cargo.</p><p>In many cases there is more than one nomination connected to a cargo even though they are of the same storage/product. Reasons for this can be that there are&nbsp;different shippers or different receivers. Another example is that a lifting needs to be stopped/re-started for a reason, e.g. lift from a new tank, bad weather.</p><p>This business function allows the user to record as many batches as required. When a batch is created the measurements associated to the storage (product) will&nbsp;be instantiated. These can be configured in Product Measurement Setup (CO.2002).</p><p>The aggregated batch quantity for a product (i.e. total lifted product quantity) derived from either a meter, through tank dips or similar then needs to be apportioned&nbsp;down to the individual nominations.</p><p><span style=""line-height:1.6"">Default in the product there is an apportion rule. This rule is described here, but if another rule is required, it can be overridden in package&nbsp;</span><span style=""line-height:1.6"">ue_cargo_batch.apportionBatchQty.</span></p><p>The apportion business logic that is part of the product uses the balance indicator set in Lifting Instruction (CP.0005). Only one nomination for each storage can&nbsp;have the balance indicator set. This means that other nominations will get the quantity that they have nominated, and the one with balance indicator set will get the&nbsp;rest. For other units than the &lsquo;Nomination Unit&rsquo;, the quantity is prorated from the nominated quantity. If the unit that holds the &lsquo;Nomination Unit&rsquo; is empty, the&nbsp;Apportion button will return an error.</p><p>If there are more than one nomination for a storage and balance indicator is not set for one of nomination for each storage then Apportion button will return an error.</p>
+related: {}

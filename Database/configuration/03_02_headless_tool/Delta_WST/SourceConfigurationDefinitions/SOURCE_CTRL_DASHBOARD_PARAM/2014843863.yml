@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2014843863'
+keys:
+  NAME: YaxisMinSeries1
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: PROD_MONTH_ACT_PLAN_COND
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Y axis Min
+  MANDATORY_IND: N
+  NAME: YaxisMinSeries1
+  PARAMETER_SUB_TYPE: NUMBER
+  PARAMETER_TYPE: BASIC_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 90.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: PROD_MONTH_ACT_PLAN_COND
+related: {}

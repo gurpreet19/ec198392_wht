@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '731468391'
+keys:
+  BF_CODE: RC.0058
+  T: BF_COMPONENT
+  URL: /version
+parentKeys: {}
+properties:
+  BF_CODE: RC.0058
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RC.0058' AND NVL(URL,'IS_NULL') = '/version')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/royalty_contract_us/CLASS_NAME/CONTRACT/DATA_CLASS/DIVISION_ORDER/NAVMODEL/DIV_ORDER/BF_PROFILE/RC.0058/ACCESS_COLUMN/REVN_CODE' )
+  CLASS_NAME: null
+  COMP_CODE: version
+  NAME: Attribute Version
+  SIGNING_REQ_IND: null
+  URL: /version
+related: {}

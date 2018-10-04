@@ -1,0 +1,164 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1488379048'
+keys:
+  T: TV_UNIT
+  UNIT: KGPERSM3
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Kilogram per standard cubic meter
+  FIN_CODE: null
+  LABEL: kg/Sm³
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KGPERSM3
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LBSPERBBLS
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      MULT_FACT: 0.35037
+      PRECISION: null
+      TO_UNIT: LBSPERBBLS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GPERSM3
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      MULT_FACT: 1000.0
+      PRECISION: null
+      TO_UNIT: GPERSM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LBSPERMSCF
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      MULT_FACT: 62.30688
+      PRECISION: 6.0
+      TO_UNIT: LBSPERMSCF
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LBSPERSBBL
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      MULT_FACT: 0.350507
+      PRECISION: 6.0
+      TO_UNIT: LBSPERSBBL
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GPERCM3
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      MULT_FACT: 0.001
+      PRECISION: 6.0
+      TO_UNIT: GPERCM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: SG
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERSM3
+      MULT_FACT: 0.82987
+      PRECISION: 4.0
+      TO_UNIT: SG
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_OIL_DENS
+      T: TV_UOM_SETUP
+      UNIT: KGPERSM3
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_OIL_DENS
+      REPORT_UNIT: Y
+      UNIT: KGPERSM3
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_GAS_DENS
+      T: TV_UOM_SETUP
+      UNIT: KGPERSM3
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_GAS_DENS
+      REPORT_UNIT: Y
+      UNIT: KGPERSM3
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_LNG_DENS
+      T: TV_UOM_SETUP
+      UNIT: KGPERSM3
+    parentKeys:
+      TV_UNIT.UNIT: KGPERSM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_LNG_DENS
+      REPORT_UNIT: Y
+      UNIT: KGPERSM3
+      VIEW_UNIT: Y

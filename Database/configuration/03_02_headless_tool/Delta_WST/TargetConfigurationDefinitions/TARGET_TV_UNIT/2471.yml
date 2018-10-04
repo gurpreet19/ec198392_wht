@@ -1,0 +1,75 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2471'
+keys:
+  T: TV_UNIT
+  UNIT: MT
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Metric Tons in Air
+  FIN_CODE: null
+  LABEL: MT (Air)
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MT
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_MASS_QTY
+      T: TV_UOM_SETUP
+      UNIT: MT
+    parentKeys:
+      TV_UNIT.UNIT: MT
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0'
+      MEASUREMENT_TYPE: REV_MASS_QTY
+      REPORT_UNIT: null
+      UNIT: MT
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      T: TV_UOM_SETUP
+      UNIT: MT
+    parentKeys:
+      TV_UNIT.UNIT: MT
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0'
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      REPORT_UNIT: null
+      UNIT: MT
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      T: TV_UOM_SETUP
+      UNIT: MT
+    parentKeys:
+      TV_UNIT.UNIT: MT
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0'
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      REPORT_UNIT: null
+      UNIT: MT
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      T: TV_UOM_SETUP
+      UNIT: MT
+    parentKeys:
+      TV_UNIT.UNIT: MT
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0'
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      REPORT_UNIT: null
+      UNIT: MT
+      VIEW_UNIT: null

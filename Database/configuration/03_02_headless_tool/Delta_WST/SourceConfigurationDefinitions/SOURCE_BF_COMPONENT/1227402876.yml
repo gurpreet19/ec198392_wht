@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1227402876'
+keys:
+  BF_CODE: CO.2067
+  T: BF_COMPONENT
+  URL: /stor_port_res_map_view
+parentKeys: {}
+properties:
+  BF_CODE: CO.2067
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2067' AND NVL(URL,'IS_NULL') = '/stor_port_res_map_view')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/storage_port_resource_mapping' )
+  CLASS_NAME: STOR_PORT_RES_MAP_VIEW
+  COMP_CODE: stor_port_res_map_view
+  NAME: Other Storages on Port Resource
+  SIGNING_REQ_IND: null
+  URL: /stor_port_res_map_view
+related: {}

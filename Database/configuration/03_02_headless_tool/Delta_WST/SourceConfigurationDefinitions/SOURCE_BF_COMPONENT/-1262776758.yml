@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1262776758'
+keys:
+  BF_CODE: TO.0020
+  T: BF_COMPONENT
+  URL: /search
+parentKeys: {}
+properties:
+  BF_CODE: TO.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0020' AND NVL(URL,'IS_NULL') = '/search')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/letter_of_protest' )
+  CLASS_NAME: TERM_OPERATION_NAVIGATOR
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /search
+related: {}

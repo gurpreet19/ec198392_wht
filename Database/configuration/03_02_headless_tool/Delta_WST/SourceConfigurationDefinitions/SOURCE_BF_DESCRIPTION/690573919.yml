@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '690573919'
+keys:
+  BF_DESCRIPTION_NO: VO.0037
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: VO.0037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/monthly_cascade_popup' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>See the main screen</p>
+related: {}

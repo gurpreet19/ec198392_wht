@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1336329750'
+keys:
+  ATTRIBUTE_TYPE: ALLOW_ALLOC_LOCK_MONTH
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: ALLOW_ALLOC_LOCK_MONTH
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Indicates whether monthly allocation is allowed on locked months
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

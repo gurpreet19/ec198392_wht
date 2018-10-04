@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1233476892'
+keys:
+  BF_DESCRIPTION_NO: HA.0012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: HA.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/mth_local_data_lock' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function can be used to lock down a certain level in the operational group model before the global monthly lock is turned on. Once the monthly global lock is turned on, the local lock isn&rsquo;t used at all, the global takes precedence. The level the local locking is working for is configured in the preferences Maintain System Preferences, customise Category: Custom Settings</p>
+
+    <p>The local locking process is based on the daytime and operational group model, and will run procedures invoked from the screen event associated with the given month and the object id associated with the record checked for locking. Only a full month can be locked.</p>
+
+    <p>Trigger logic will be checking for global lock first, and only if not found, will the trigger test for local lock. E.g. if Facilty_A has a local lock and a Stream_X under Facility_A is attempted updated, the locking will be tested for a global lock and when global is off, the local lock will be tested at all levels of the operational hierarchy of Stream_X. Only objects linked to the operational group model can be included in local monthly locking.</p>
+
+    <p>If a local lock violation is detected during an operation, the view layer will raise an application error, stating what object and period was validated, and the first month lock that caused the exception.</p>
+related: {}

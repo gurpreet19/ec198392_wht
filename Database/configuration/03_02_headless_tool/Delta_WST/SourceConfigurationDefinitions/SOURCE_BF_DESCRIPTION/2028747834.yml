@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2028747834'
+keys:
+  BF_DESCRIPTION_NO: PP.0039
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This business function is used to create, update and delete forecast and scenario objects.</p>
+        <p><b>Below are the details of buttons available on the screen:</b></br></p><p><b>Delete Forecast:</b><br>This button will delete the selected forecast and all its dependent data. If the forecast has an official scenario, the forecast is not allowed to be deleted. It also supports user exit functionality: Ue_Forecast_Prod.DeleteForecast. </p><p><b>Delete Scenario:</b><br>This button will delete the selected scenario and all its dependant data. Official scenario is not allowed to be deleted. It also supports user exit functionality: Ue_forecast_prod.DeleteScenario.</p><p><b>Promote To Official:</b><br>This button will promote the selected scenario to official. Any scenario found for the same period,forecast_type and parent object will be set to unofficial. It also supports user exit functionality: Ue_forecast_prod.SetOfficialScenario.</p><p><b>Demote To Unofficial:</b><br>This button will demote the selected scenario&nbsp;to unofficial.It also supports user exit functionality: Ue_forecast_prod.DemoteToUnofficial.</p><p><b>Copy To A New Scenario:</b><br>This button will create a new scenario copied from the selected scenario. By default, the new scenario will be unofficial. It also supports user exit functionality: Ue_forecast_prod.CopyScenarioToNewScenario. </p><p><b>Copy Actual Data:</b><br>This button will copy the actual data from the selected scenario and period. Currently only user exit is supported: Ue_forecast_prod.CopyActualsToScenario.</p>
+        <p><b>Copy Scenario Data:</b><br>This button will copy the data from a different scenario into the selected scenario. Currently only user exit is supported: Ue_forecast_prod.CopyScenarioToScenario.</p>
+related: {}

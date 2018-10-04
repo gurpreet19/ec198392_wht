@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '274967241'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.sale.co.screens/price_index_factor
+parentKeys: {}
+properties:
+  BF_CODE: CO.3020
+  NAME: Price Index Factor
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.co.screens/price_index_factor
+related: {}

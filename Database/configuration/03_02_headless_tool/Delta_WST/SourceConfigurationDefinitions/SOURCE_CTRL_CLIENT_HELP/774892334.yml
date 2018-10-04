@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '774892334'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.fc/fcst_quantity_setup/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.fc/fcst_quantity_setup/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

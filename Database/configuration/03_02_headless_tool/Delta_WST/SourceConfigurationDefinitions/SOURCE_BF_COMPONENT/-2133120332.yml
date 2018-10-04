@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2133120332'
+keys:
+  BF_CODE: PD.0024
+  T: BF_COMPONENT
+  URL: /proposed_deferment_events
+parentKeys: {}
+properties:
+  BF_CODE: PD.0024
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PD.0024' AND NVL(URL,'IS_NULL') = '/proposed_deferment_events')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/automatic_deferment_raw_data' )
+  CLASS_NAME: DEFERMENT_CANDIDATE
+  COMP_CODE: proposed_deferment_events
+  NAME: Proposed Deferment Events
+  SIGNING_REQ_IND: null
+  URL: /proposed_deferment_events
+related: {}

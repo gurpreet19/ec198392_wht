@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1504349325'
+keys:
+  BF_DESCRIPTION_NO: CO.2018
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_parties' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business function is used to associate contract parties (customers and vendors) to a contract with an equity share. This screen should not be used if Revenue (SP.0009 - Contract Company Splits) is implemented.</p><p>Equity share for parties are valid from a date until a new equity is created. The &lsquo;Copy Current Split&rsquo; button will create a new equity share on the date selected in&nbsp;navigator. The rows from previous equity share are copied and the end date is set to the new start date.</p><p>The last row in the screen contains a sum row. If the sum is more or less than 100 an error message is shown to the user. 0 should be used instead of NULL if no&nbsp;equity on a company.</p><p>To validate equity share the rounding is set to 9 decimals.</p>
+related: {}

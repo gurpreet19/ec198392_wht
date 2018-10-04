@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-821730845'
+keys:
+  BF_CODE: FI.0005
+  T: BF_COMPONENT
+  URL: /approve_selected_button
+parentKeys: {}
+properties:
+  BF_CODE: FI.0005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0005' AND NVL(URL,'IS_NULL') = '/approve_selected_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_entry/TIME_SPAN/DAY' )
+  CLASS_NAME: null
+  COMP_CODE: approve_selected_button
+  NAME: Approve Selected Button
+  SIGNING_REQ_IND: null
+  URL: /approve_selected_button
+related: {}

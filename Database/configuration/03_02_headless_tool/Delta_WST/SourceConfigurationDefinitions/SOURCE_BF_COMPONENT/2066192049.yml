@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2066192049'
+keys:
+  BF_CODE: CO.0029
+  T: BF_COMPONENT
+  URL: /stream_set_head_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.0029
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0029' AND NVL(URL,'IS_NULL') = '/stream_set_head_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_set_head' )
+  CLASS_NAME: STREAM_SET
+  COMP_CODE: stream_set_head_table
+  NAME: Stream Set Head table
+  SIGNING_REQ_IND: null
+  URL: /stream_set_head_table
+related: {}

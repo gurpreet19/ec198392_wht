@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '386066934'
+keys:
+  BF_CODE: GD.0071
+  T: BF_COMPONENT
+  URL: /dailyMeterMeas
+parentKeys: {}
+properties:
+  BF_CODE: GD.0071
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0071' AND NVL(URL,'IS_NULL') = '/dailyMeterMeas')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/subday_meter_measurement/CLASS/METER_DAY_MEASUREMENT/CLASS_SUBDAY/METER_SUB_DAY_MEAS' )
+  CLASS_NAME: METER_DAY_MEASUREMENT
+  COMP_CODE: dailyMeterMeas
+  NAME: Meter Measurement
+  SIGNING_REQ_IND: null
+  URL: /dailyMeterMeas
+related: {}

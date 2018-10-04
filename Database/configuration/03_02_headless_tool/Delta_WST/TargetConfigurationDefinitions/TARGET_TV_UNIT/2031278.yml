@@ -1,0 +1,153 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2031278'
+keys:
+  T: TV_UNIT
+  UNIT: BARA
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Bar absolute
+  FIN_CODE: null
+  LABEL: bara
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: BARA
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BARG
+    parentKeys:
+      TV_UNIT.UNIT: BARA
+    properties:
+      ADD_NUMB: -1.01325
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      MULT_FACT: 1.0
+      PRECISION: null
+      TO_UNIT: BARG
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: PAA
+    parentKeys:
+      TV_UNIT.UNIT: BARA
+    properties:
+      ADD_NUMB: 100000.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      MULT_FACT: 1.0
+      PRECISION: null
+      TO_UNIT: PAA
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KPAA
+    parentKeys:
+      TV_UNIT.UNIT: BARA
+    properties:
+      ADD_NUMB: 100.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      MULT_FACT: 1.0
+      PRECISION: null
+      TO_UNIT: KPAA
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MPAA
+    parentKeys:
+      TV_UNIT.UNIT: BARA
+    properties:
+      ADD_NUMB: 0.1
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      MULT_FACT: 1.0
+      PRECISION: null
+      TO_UNIT: MPAA
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MBARA
+    parentKeys:
+      TV_UNIT.UNIT: BARA
+    properties:
+      ADD_NUMB: 1000.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      MULT_FACT: 1.0
+      PRECISION: null
+      TO_UNIT: MBARA
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MBAR
+    parentKeys:
+      TV_UNIT.UNIT: BARA
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      MULT_FACT: 1000.0
+      PRECISION: null
+      TO_UNIT: MBAR
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: PSIA
+    parentKeys:
+      TV_UNIT.UNIT: BARA
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BARA
+      MULT_FACT: 14.50382
+      PRECISION: null
+      TO_UNIT: PSIA
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: PRESS_ABS
+      T: TV_UOM_SETUP
+      UNIT: BARA
+    parentKeys:
+      TV_UNIT.UNIT: BARA
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: PRESS_ABS
+      REPORT_UNIT: Y
+      UNIT: BARA
+      VIEW_UNIT: Y

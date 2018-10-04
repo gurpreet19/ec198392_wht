@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '244517875'
+keys:
+  BF_CODE: GD.0120
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: GD.0120
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0120' AND NVL(URL,'IS_NULL') = '/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_renomination/NOM_CLASS/TRNP_DAY_RENOM_LIST/RENOM_CLASS/TRNP_DAY_RENOMINATION/RENOM_SUB_CLASS/TRNP_SUB_DAY_RENOM/TARGET/NOMINATION_POINT' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Buttton
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

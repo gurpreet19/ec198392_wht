@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '833564185'
+keys:
+  BF_DESCRIPTION_NO: TO.0011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_analysis_unload' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to view / maintain unload analysis values for each parcel on a cargo. The screen is similar to TO.0006, but will only show &lsquo;Lifting Event&rsquo; of type&nbsp;&lsquo;Unload&rsquo;.</p>
+related: {}

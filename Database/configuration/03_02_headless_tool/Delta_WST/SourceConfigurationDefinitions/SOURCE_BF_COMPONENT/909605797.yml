@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '909605797'
+keys:
+  BF_CODE: CO.2083
+  T: BF_COMPONENT
+  URL: /storage_profit_centre_conn
+parentKeys: {}
+properties:
+  BF_CODE: CO.2083
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2083' AND NVL(URL,'IS_NULL') = '/storage_profit_centre_conn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/storage_profit_centre_conn' )
+  CLASS_NAME: STORAGE_PC_CONN
+  COMP_CODE: storage_profit_centre_conn
+  NAME: Storage Profit Centre Mapping
+  SIGNING_REQ_IND: null
+  URL: /storage_profit_centre_conn
+related: {}

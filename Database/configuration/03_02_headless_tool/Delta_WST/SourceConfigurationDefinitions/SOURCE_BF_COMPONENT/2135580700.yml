@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2135580700'
+keys:
+  BF_CODE: IN.0029
+  T: BF_COMPONENT
+  URL: /versions
+parentKeys: {}
+properties:
+  BF_CODE: IN.0029
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0029' AND NVL(URL,'IS_NULL') = '/versions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='' )
+  CLASS_NAME: TRANS_PROD_SET
+  COMP_CODE: versions
+  NAME: versions
+  SIGNING_REQ_IND: null
+  URL: /versions
+related: {}

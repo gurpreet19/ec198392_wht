@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '850952160'
+keys:
+  BF_DESCRIPTION_NO: CP.0070
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0070
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_cp_finder' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to search for cargo planning forecast available in the system. Further it can take you to Cargo Planning Forecast business function.</p><p>In the navigator, there is a free text field which is used as the search target string. User can search for the right cargo planning forecast objects where its code or name matched with the defined search target string. The search is not case sensitive in this context.<br>The data section below will then list all cargo planning forecast for the defined search criteria matched with (or like) the search target string.</p><p>By choosing a cargo planning forecast, it will show you the active group models associated with the selected cargo planning forecast object. After you selected the active group model, the third column will populate the group model relations with the objects and its value.<br>It will show storage related to the selected cargo planning forecast object.</p><p>In the second data-section, it will list out all the business functions belonged in cargo planning forecast.<br>By selecting a business function and pressing the "Go to BF" button, a new window will be opened with the navigator values pre-populated based on selected cargo planning forecast.</p>
+related: {}

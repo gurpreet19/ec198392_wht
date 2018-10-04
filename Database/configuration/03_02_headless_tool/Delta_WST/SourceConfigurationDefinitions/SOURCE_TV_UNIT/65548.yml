@@ -1,0 +1,68 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '65548'
+keys:
+  T: TV_UNIT
+  UNIT: BBL
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Barrel (flow conditions)
+  FIN_CODE: null
+  LABEL: bbl
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: BBL
+  UOM_GROUP: V
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBL
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LITER
+    parentKeys:
+      TV_UNIT.UNIT: BBL
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBL
+      MULT_FACT: 158.9873
+      PRECISION: 7.0
+      TO_UNIT: LITER
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBL
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: M3
+    parentKeys:
+      TV_UNIT.UNIT: BBL
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBL
+      MULT_FACT: 0.1589873
+      PRECISION: 7.0
+      TO_UNIT: M3
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LIQ_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBL
+    parentKeys:
+      TV_UNIT.UNIT: BBL
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LIQ_VOL
+      REPORT_UNIT: Y
+      UNIT: BBL
+      VIEW_UNIT: N

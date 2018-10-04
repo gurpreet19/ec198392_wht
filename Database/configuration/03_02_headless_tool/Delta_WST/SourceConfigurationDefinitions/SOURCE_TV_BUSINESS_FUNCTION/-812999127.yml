@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-812999127'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/edit_daily_alloc_revn
+parentKeys: {}
+properties:
+  BF_CODE: VO.0034
+  NAME: Daily Quantity Allocation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/edit_daily_alloc_revn
+related: {}

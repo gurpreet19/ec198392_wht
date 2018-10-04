@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1868325373'
+keys:
+  ATTRIBUTE_TYPE: ENABLE_VISUAL_TRACING
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: ENABLE_VISUAL_TRACING
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: 'Alternatives Y (Visual Tracing enabled) or N (No Visual Tracing) '
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

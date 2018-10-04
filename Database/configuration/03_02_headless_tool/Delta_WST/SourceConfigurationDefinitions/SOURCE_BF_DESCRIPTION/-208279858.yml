@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-208279858'
+keys:
+  BF_DESCRIPTION_NO: CP.0029
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0029
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/carrier_availability' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function gives a day-to-day overview of when a carrier is available to be scheduled for a cargo. This information will be used as input when calculating&nbsp;the Annual Delivery Program (ADP). A carrier is unavailable if it is already en route to a destination or if it is undergoing some type of Maintenance /Dry dock&nbsp;activities.</p><p>This Business function will have daily records for each carrier indicating if it is available or not. When a carrier is not available, the Unavailable flag will be set and an&nbsp;unavailable reason is displayed. The next available date is also displayed for informational purposes.</p><p>There are two main types of unavailable reasons for a carrier<br />&middot; The carrier is en route to a destination<br />&middot; The carrier is undergoing Maintenance or has other restrictions</p><p>The period of time a carrier is en Route is calculated based on the Round Trip Times configured in Carrier Port Acceptance together with actual nomination date.</p><p>Carrier Maintenance and restrictions can be entered into the Operation Restriction screens (Period and Daily). Please note that to enable registration of carrier&nbsp;restriction some configuration changes must be done to the carrier object enabling it to implement the operational location interface.</p>
+related: {}

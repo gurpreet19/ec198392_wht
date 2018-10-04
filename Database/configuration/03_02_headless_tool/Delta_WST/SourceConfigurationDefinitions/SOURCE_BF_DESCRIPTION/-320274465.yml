@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-320274465'
+keys:
+  BF_DESCRIPTION_NO: PD.0021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PD.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/well_deferment_by_well' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF displays all deferment events for Wells that was entered in Deferment BF.</p>
+
+    <p>Insert and deletes are not allowed. Updates are only allowed for single well events.</p>
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '728722193'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.to.screens/send_sailing_advice
+parentKeys: {}
+properties:
+  BF_CODE: TO.0028
+  NAME: Send Sailing Advice
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.to.screens/send_sailing_advice
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1611397917'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/MERCURY_REMOVAL_UNIT/TARGET/MERCURY_REMOVAL_UNIT/CLASS_NAME/MERCURY_REMOVAL_UNIT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/MERCURY_REMOVAL_UNIT/TARGET/MERCURY_REMOVAL_UNIT/CLASS_NAME/MERCURY_REMOVAL_UNIT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

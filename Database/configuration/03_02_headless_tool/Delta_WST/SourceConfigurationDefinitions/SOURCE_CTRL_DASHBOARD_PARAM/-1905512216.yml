@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1905512216'
+keys:
+  NAME: gaugeLabelPlacement
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: GAS_RECONCILIATION_FACTOR
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Gas Factor Position
+  MANDATORY_IND: N
+  NAME: gaugeLabelPlacement
+  PARAMETER_SUB_TYPE: GAUGE_LABEL_PLACEMENT
+  PARAMETER_TYPE: EC_CODE_TYPE
+  PARAMETER_VALUE: BOTTOM
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 70.0
+  USER_EDITABLE_IND: Y
+  WIDGET_CODE: GAS_RECONCILIATION_FACTOR
+related: {}

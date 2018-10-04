@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1990249581'
+keys:
+  BF_CODE: GD.0103
+  T: BF_COMPONENT
+  URL: /linepack
+parentKeys: {}
+properties:
+  BF_CODE: GD.0103
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0103' AND NVL(URL,'IS_NULL') = '/linepack')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_linepack' )
+  CLASS_NAME: PIPE_DAY_LINEPACK
+  COMP_CODE: linepack
+  NAME: Linepack
+  SIGNING_REQ_IND: null
+  URL: /linepack
+related: {}

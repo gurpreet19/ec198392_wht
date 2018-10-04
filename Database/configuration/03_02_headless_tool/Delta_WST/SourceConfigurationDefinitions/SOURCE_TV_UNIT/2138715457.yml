@@ -1,0 +1,93 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2138715457'
+keys:
+  T: TV_UNIT
+  UNIT: LBSPERMTH
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Pounds per month
+  FIN_CODE: null
+  LABEL: lb/m
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: LBSPERMTH
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBSPERMTH
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KGPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERMTH
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBSPERMTH
+      MULT_FACT: 0.45359290943564
+      PRECISION: 9.0
+      TO_UNIT: KGPERMTH
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LIQ_MASS_RATE_MTH
+      T: TV_UOM_SETUP
+      UNIT: LBSPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERMTH
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LIQ_MASS_RATE_MTH
+      REPORT_UNIT: N
+      UNIT: LBSPERMTH
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: GAS_MASS_RATE_MTH
+      T: TV_UOM_SETUP
+      UNIT: LBSPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERMTH
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: GAS_MASS_RATE_MTH
+      REPORT_UNIT: Y
+      UNIT: LBSPERMTH
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: WATER_MASS_RATE_MTH
+      T: TV_UOM_SETUP
+      UNIT: LBSPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERMTH
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: WATER_MASS_RATE_MTH
+      REPORT_UNIT: N
+      UNIT: LBSPERMTH
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STEAM_MASS_RATE_MTH
+      T: TV_UOM_SETUP
+      UNIT: LBSPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERMTH
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STEAM_MASS_RATE_MTH
+      REPORT_UNIT: N
+      UNIT: LBSPERMTH
+      VIEW_UNIT: null

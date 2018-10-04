@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2119030250'
+keys:
+  BF_CODE: SA.0036
+  T: BF_COMPONENT
+  URL: /alarms
+parentKeys: {}
+properties:
+  BF_CODE: SA.0036
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SA.0036' AND NVL(URL,'IS_NULL') = '/alarms')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/fcst_sale_calc_yr' )
+  CLASS_NAME: CALC_SALE_FCST_LOG
+  COMP_CODE: alarms
+  NAME: Alarms
+  SIGNING_REQ_IND: null
+  URL: /alarms
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-255637332'
+keys:
+  BF_CODE: SP.0054
+  T: BF_COMPONENT
+  URL: /tabitem3
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/tabitem3')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: REVN_CARGO_DG_LOG
+  COMP_CODE: tab_log
+  NAME: Log
+  SIGNING_REQ_IND: null
+  URL: /tabitem3
+related: {}

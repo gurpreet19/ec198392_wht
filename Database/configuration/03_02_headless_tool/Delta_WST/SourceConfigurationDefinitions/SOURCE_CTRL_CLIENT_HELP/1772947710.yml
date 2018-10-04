@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1772947710'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/payment_scheme_setup
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/payment_scheme_setup
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

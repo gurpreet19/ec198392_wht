@@ -1,0 +1,105 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '838130930'
+keys:
+  BF_DESCRIPTION_NO: FI.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FI.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_definition' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>    <strong>Financial Item Definition screen</strong>    is used\
+    \ to create and maintain Financial Item objects and their    datasets. Financial\
+    \ Item itself is a financial (and quantitative) value    that can be connected\
+    \ to any object in EC.</p><h2><strong style=\"color: rgb(0, 0, 153);\">Navigator</strong></h2><p>\
+    \    Navigator settings allow user to define the search criteria for the    Financial\
+    \ Item objects and list them in the table.</p><p>    <u>Navigator has these selection\
+    \ options:</u></p><p>    <strong>- Date</strong>    -  Auto filled with the first\
+    \ day of the current month. This is the date Financial Item objects are Valid\
+    \ to.</p><p>    <strong>- Business Unit</strong>    - Optional - This is the Business\
+    \ Unit the Financial Item belongs to.</p><p>    <strong>- Contract Area</strong>\
+    \    - Optional - This is the Contract Area the Financial Item belongs to.</p><p>\
+    \    <strong>- Item Code</strong>    - Optional - This is the code of the Financial\
+    \ Item or part of the code in case of using    wildcard search by *code*.</p><p>\
+    \    <strong>- Item Name</strong>    - Optional - This is the name of the Financial\
+    \ Item or part of the name in case of using    wildcard search by *name*.</p><p>\
+    \    <strong>- Unit Type</strong>    -  Optional - This is a unit type of the\
+    \ Financial Item that can be either Currency or UOM. It is    dependent on the\
+    \ Item Type selected for the FI object.</p><p>    <strong>- Cost Object Type</strong>\
+    \    -  Optional - This is a type of a Cost Object the Financial Item can be linked\
+    \ to.</p><p>    <strong>- Pre-defined Object Link Type</strong>    - Optional\
+    \ - This is a type of the Object the Financial Item can be linked to.</p><p> \
+    \   <strong>- Pre-defined Object Link</strong>    - Optional - This is a certain\
+    \ Object the Financial Item can be linked to.</p><h3><strong style=\"color: rgb(0,\
+    \ 0, 153);\">Financial Item List Section</strong></h3><p>    This section displays\
+    \ all Financial Item objects matching Navigator    criteria.</p><h2><strong style=\"\
+    color: rgb(0, 0, 153);\">Tab Setup</strong></h2><p>    This Tab is used to create\
+    \ a new Financial Item object or to amend an    existing one (create new versions).</p><p>\
+    \    <u>Creating a new FI object will have these features:</u>    </p><p></p>\
+    \    <p><strong>- Item Code </strong>    - Mandatory - This is the code of the\
+    \ Financial Item. Should be unique.   </p>   <p> <strong>- Item Name </strong>\
+    \    - Mandatory - This is the name of the Financial Item.    </p>   <p><strong>-\
+    \ Contract Area</strong>    - Optional - This is the Contract Area the Financial\
+    \ Item belongs to.    </p>   <p>    <strong>- Start Date </strong>    - Mandatory\
+    \ - This is the date Financial Item object is Valid from.    </p>\t <p>    <strong>-\
+    \ End Date </strong>    - Optional - This is the date Financial Item object is\
+    \ Valid to.    </p>\t\t<p>    <strong>- Description</strong>    -  Optional -\
+    \ This is a voluntary description of the Financial Item object.    </p><p>   \
+    \ <strong>- Comment </strong>    -  Optional - This is a comment for the Financial\
+    \ Item object.    </p><p>    <strong>- Item Type</strong>    -  Mandatory - This\
+    \ is a type of the Financial Item that can be either Cost, Income or Quantity.\
+    \    </p>\t<p>    <strong>- Unit Type</strong>    -  Prefilled - When Item Type\
+    \ is defined, Unit Type is auto populated with Currency / Currency or UOM accordingly.\
+    \ The field is always read-only.    </p>\t\t<p>    <strong>- Currency / UOM&nbsp;</strong>-\
+    \  Optional - This is a predefined currency or UOM (unit of measure) that can\
+    \ be set for the Financial Item object.   </p>      <p>    <strong>- Default Cost\
+    \ Object Type </strong>    - Mandatory - This is a type of a Cost Object the Financial\
+    \ Item can be linked to. If FI    object has no link to the cost object, \"None\"\
+    \ option should be chosen in    the dropdown.   </p>   <p>    <strong>- Pre-defined\
+    \ Object Link Type </strong>    - Optional - This is a type of the Object the\
+    \ Financial Item can be linked to.   </p><p>    <strong>- Pre-defined Object Link</strong>\
+    \    - Optional - This is a certain Object the Financial Item can be linked to.\
+    \    </p><p>    <strong>- Format Mask</strong>    -  Mandatory - This is a number\
+    \ of decimal digits displayed for transactional data.     </p><p>    <strong>-\
+    \ Data Fallback Method </strong>    - Mandatory - This is a method defining a\
+    \ way Financial Item transactional data will be    processed at transactional\
+    \ level in Daily / Monthly / Yearly FI screens.    </p><p>    There are two methods\
+    \ telling what value is the Boss if the previous value    would be missing. Override\
+    \ Value is always the Boss if present:   </p><p>    1. Overridden - Calculated\
+    \ - Interfaced    <br>    This method is approaching to proceed with <em>Calculated</em>\
+    \ FI data in    case of both Interfaced and Calculated values present.    </p><p>\
+    \    2. Overridden - Interfaced - Calculated    <br>    This method is approaching\
+    \ to proceed with <em>Interfaced</em> FI data in    case of both Interfaced and\
+    \ Calculated values present.</p><p>    <strong>Button <span style=\"color: rgb(0,\
+    \ 153, 0);\">Copy to New </span></strong>     </p><p>     <u>Each Financial Item\
+    \ object can be copied by following steps: </u></p><p>    1. Assigning a new Code\
+    \ and Name,<br>    2. Typing a new Start Date (and if needed -  End Date),<br>\
+    \    3. Clicking Copy to New button.</p><p>    Note: FI object will be copied\
+    \ together with Dataset configuration (if it    exists).</p><h3><strong style=\"\
+    color: rgb(0, 0, 153);\">Deleting the FI object</strong></h3><p>    <u>There are\
+    \ a few steps to delete FI Object:</u>   </p><p>    1. Delete all Datasets (child\
+    \ records) of the selected FI object,    <br>    2. Type End Date of the FI object\
+    \ the same as Start Date,    <br>    3. Click Save button.</p><h3><strong style=\"\
+    color: rgb(0, 0, 153);\">Creating a new version of the FI object</strong></h3><p>\
+    \    By default, a latest version of the FI object is displayed in the screen.</p><p>\
+    \    <u>Creating a new version of the FI Object will have these features:</u>\
+    \   </p><p>    <strong>- Daytime </strong>    - Mandatory - This is the date a\
+    \ new version of the FI object is Valid from.    <br>    <strong>- Left side of\
+    \ the Main Section at Setup Tab </strong>    - will show Daytime of current and\
+    \ previous versions.    <br>    <strong>- Right side of the Main Section at Setup\
+    \ Tab </strong>    - will display the changes made to the selected row of FI object\
+    \ settings    (if any has been ever done).</p><h2><strong style=\"color: rgb(0,\
+    \ 0, 153);\">Tab Dataset</strong></h2><p>    Tab is used to create Datasets for\
+    \ the Financial Item object. The reason is to    have different sets of transactional\
+    \ data that can come in a different time    -  in the beginning of the month,\
+    \ forecasted long ago or finalized in the    end of the month. By default, there\
+    \ are 5 available Datasets to choose from: Actual, Provisional, Forecast, Estimated\
+    \ 1, Estimated 2.</p><p>    FI can have different datasets for the same time period\
+    \ thought one type of    Datasets can not having overlapping dates.</p><p>   \
+    \ <strong>Dataset priority </strong>    is not a sort order in the screen. It\
+    \ is in a way fallback method to    establish a priority for the FI dataset values\
+    \ in the Daily / Monthly /    Yearly FI screens, calculation and reporting purposes.\
+    \ By default, 10 is taken as highest level of priority, and all others, such as\
+    \ 20, 30, 40.... are lower.</p>"
+related: {}

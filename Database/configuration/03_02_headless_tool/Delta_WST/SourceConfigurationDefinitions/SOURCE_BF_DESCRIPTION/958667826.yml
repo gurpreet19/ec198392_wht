@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '958667826'
+keys:
+  BF_DESCRIPTION_NO: SP.0050
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_summary_set_setup' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Data Extract Set Setup screen</strong>    is used to link existing Data Extracts to Data Extract Set version.</p><p>    The sets are used in the Data Mapping Screens to allow displaying Extracts within the set. (Such as all the inventory extract documents for a project).</p><p><img src="/onlinehelp/img?type=description&amp;bfDescNo=SP.0050&amp;imgNo=5&amp;dataLevel=2&amp;pfdrid_c=true" class="ecImg"></p>
+related: {}

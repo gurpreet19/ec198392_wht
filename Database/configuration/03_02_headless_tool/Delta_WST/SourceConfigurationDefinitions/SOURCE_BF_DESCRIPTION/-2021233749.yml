@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2021233749'
+keys:
+  BF_DESCRIPTION_NO: CO.1015
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/group_model' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The EC product contains a hierarchical tree structure to implement relations between classes in the system. The tree structure is called the Group Model.</p><p>The Group Model screen provides an interface for viewing group relations in the group model. The screen is read-only. There is no support for inserting, updating or deleting group model relations.</p><p>At the top of the screen is a navigator where the user can select from existing group types. The table below is the list of all the connections for selected group type.</p>
+related: {}

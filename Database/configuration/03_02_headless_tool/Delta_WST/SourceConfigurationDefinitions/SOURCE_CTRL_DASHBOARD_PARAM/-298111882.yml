@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-298111882'
+keys:
+  NAME: valuePropertyName
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: OIL_RECONCILIATION_FACTOR
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Name of value property
+  MANDATORY_IND: Y
+  NAME: valuePropertyName
+  PARAMETER_SUB_TYPE: STRING
+  PARAMETER_TYPE: BASIC_TYPE
+  PARAMETER_VALUE: NET_OIL_FACTOR
+  RESOLVE_TYPE: null
+  SORT_ORDER: 120.0
+  USER_EDITABLE_IND: N
+  WIDGET_CODE: OIL_RECONCILIATION_FACTOR
+related: {}

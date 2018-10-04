@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1552544981'
+keys:
+  BF_CODE: CO.0192
+  T: BF_COMPONENT
+  URL: /processItem
+parentKeys: {}
+properties:
+  BF_CODE: CO.0192
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0192' AND NVL(URL,'IS_NULL') = '/processItem')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/task_process_item' )
+  CLASS_NAME: TASK_PROCESS_ITEM
+  COMP_CODE: processItem
+  NAME: processItem
+  SIGNING_REQ_IND: null
+  URL: /processItem
+related: {}

@@ -1,0 +1,229 @@
+STEAM_MASS_RATE_MTH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2097230914'
+  keys:
+    MEASUREMENT_TYPE: STEAM_MASS_RATE_MTH
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EROSION_RATE_MTH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2087408618'
+  keys:
+    MEASUREMENT_TYPE: EROSION_RATE_MTH
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+KH_PRODUCT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-374580243'
+  keys:
+    MEASUREMENT_TYPE: KH_PRODUCT
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+VELOCITY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1378079523'
+  keys:
+    MEASUREMENT_TYPE: VELOCITY
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+POWER_CON: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-661927160'
+  keys:
+    MEASUREMENT_TYPE: POWER_CON
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties:
+    FORMAT_MASK: '###,###,##0.0'
+  related: {}
+  status: MODIFIED
+LIQ_RATE_VOL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1450925631'
+  keys:
+    MEASUREMENT_TYPE: LIQ_RATE_VOL
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+STEAM_RATE_CWE_MTH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1557669149'
+  keys:
+    MEASUREMENT_TYPE: STEAM_RATE_CWE_MTH
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+METER_RUN_SIZE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2031230613'
+  keys:
+    MEASUREMENT_TYPE: METER_RUN_SIZE
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WATER_RATE_MTH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2040317462'
+  keys:
+    MEASUREMENT_TYPE: WATER_RATE_MTH
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+STEAM_MASS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-785507165'
+  keys:
+    MEASUREMENT_TYPE: STEAM_MASS
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+GAS_BOE_FACTOR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-879496420'
+  keys:
+    MEASUREMENT_TYPE: GAS_BOE_FACTOR
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+RATIO_LIQ_GAS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1632236058'
+  keys:
+    MEASUREMENT_TYPE: RATIO_LIQ_GAS
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties:
+    FORMAT_MASK: '#0.000000'
+  related: {}
+  status: MODIFIED
+ENERGY_RATE_MTH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1345262457'
+  keys:
+    MEASUREMENT_TYPE: ENERGY_RATE_MTH
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+PRODUCTIVITY_INDEX: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1658984699'
+  keys:
+    MEASUREMENT_TYPE: PRODUCTIVITY_INDEX
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+RATIO_WAT_LIQ: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1716382933'
+  keys:
+    MEASUREMENT_TYPE: RATIO_WAT_LIQ
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+RATIO_GAS_LIQ: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1262503834'
+  keys:
+    MEASUREMENT_TYPE: RATIO_GAS_LIQ
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties:
+    FORMAT_MASK: '#0.000000'
+  related: {}
+  status: MODIFIED
+WATER_MASS_RATE_MTH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '609818437'
+  keys:
+    MEASUREMENT_TYPE: WATER_MASS_RATE_MTH
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WATER_RATE_HR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '626919809'
+  keys:
+    MEASUREMENT_TYPE: WATER_RATE_HR
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+RATIO_GAS_GAS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1262498783'
+  keys:
+    MEASUREMENT_TYPE: RATIO_GAS_GAS
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties:
+    FORMAT_MASK: '#0.000000'
+  related: {}
+  status: MODIFIED
+GAS_RATE_VOL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1903194010'
+  keys:
+    MEASUREMENT_TYPE: GAS_RATE_VOL
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WATER_MASS_RATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1135441411'
+  keys:
+    MEASUREMENT_TYPE: WATER_MASS_RATE
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+MASS_ENERGY_FACTOR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '204763355'
+  keys:
+    MEASUREMENT_TYPE: MASS_ENERGY_FACTOR
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+PRESS_OBS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1878082244'
+  keys:
+    MEASUREMENT_TYPE: PRESS_OBS
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+STEAM_MASS_RATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1630908676'
+  keys:
+    MEASUREMENT_TYPE: STEAM_MASS_RATE
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WATER_RATE_VOL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2040308964'
+  keys:
+    MEASUREMENT_TYPE: WATER_RATE_VOL
+    T: TV_MEASUREMENT_TYPE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

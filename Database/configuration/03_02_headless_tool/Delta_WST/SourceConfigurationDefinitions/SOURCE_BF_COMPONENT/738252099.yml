@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '738252099'
+keys:
+  BF_CODE: CO.0105
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CO.0105
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0105' AND NVL(URL,'IS_NULL') = '/daytimes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/SUB_FIELD/TARGET/SUB_FIELD/CLASS_NAME/SUB_FIELD' )
+  CLASS_NAME: SUB_FIELD
+  COMP_CODE: daytimes
+  NAME: New Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

@@ -1,0 +1,53 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2463'
+keys:
+  T: TV_UNIT
+  UNIT: ML
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Milli Liter
+  FIN_CODE: null
+  LABEL: ml
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: ML
+  UOM_GROUP: V
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: ML
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LITER
+    parentKeys:
+      TV_UNIT.UNIT: ML
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: ML
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: LITER
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: ML
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: M3
+    parentKeys:
+      TV_UNIT.UNIT: ML
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: ML
+      MULT_FACT: 1.0E-6
+      PRECISION: null
+      TO_UNIT: M3
+      USER_EXIT: null
+      USE_UE: null

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '236459260'
+keys:
+  BF_DESCRIPTION_NO: HA.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: HA.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/daily_data_status_process' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This BF is used to start jobs that verify or approve daily data sets or reversely. The jobs (process IDs) are configured in a hierarchical structure. Running a parent job runs all tasks defined for that job plus child jobs and their tasks. Parameters from the parent job are passed to the child jobs, replacing their default parameter list.</p><p>The upper section of the screen lists all jobs the user is allowed to run. The parent-child relation is not displayed, but should be understood reading the text.</p><p>The second section lists all jobs executed for the date in the navigator. This is a report log and all users are able to see this list even if they are not allowed to run a process. The list shows current status of daily data set, when it was last executed, how many rows were updated and who ran the process. If a parent job is run, the report will also list child jobs. Jobs should be configured so that they cover all data a role within the system is responsible for.</p><p>This BF will only list processes having the interval set to DAY.</p><p>A setting has been introduced in &quot;Maintain System Settings&quot; (CO.1006) to either allow or prevent users from running current or future dates. The custom setting property is &quot;Allow status process on current and future production day in Data Status Processes - Daily (HA.0001) and Monthly (HA.0004) Data Status Processes&quot; and the behaviour is as below:</p><p> - If the property is set to &quot;N&quot;, an error message will be prompted and prevent the process from being executed.</p><p> - If the property is set to &quot;Y&quot;, a confirmation message will be prompted to get user&rsquo;s approval to run the current and future dates.</p>
+related: {}

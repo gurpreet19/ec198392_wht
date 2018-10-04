@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1860734303'
+keys:
+  COMPONENT_ID: ( SELECT 'GAS_STRM_CPY_STATUS' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.po.screens/daily_gas_stream_company_status
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'GAS_STRM_CPY_STATUS' FROM DUAL )
+  COMPONENT_LABEL: Daily Gas Stream Company Status
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FLD_PO_GRP_BY_DAY' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 50.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

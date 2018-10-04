@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1272352224'
+keys:
+  BF_CODE: GD.0150
+  T: BF_COMPONENT
+  URL: /bundle
+parentKeys: {}
+properties:
+  BF_CODE: GD.0150
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0150' AND NVL(URL,'IS_NULL') = '/bundle')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/contract_bundle_transfer' )
+  CLASS_NAME: CNTR_BUNDLE_XFER
+  COMP_CODE: bundle
+  NAME: Bundle
+  SIGNING_REQ_IND: null
+  URL: /bundle
+related: {}

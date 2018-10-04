@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-193514774'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.to.screens/cargo_document
+parentKeys: {}
+properties:
+  BF_CODE: TO.0009
+  NAME: Cargo Document
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.to.screens/cargo_document
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1903042786'
+keys:
+  BF_CODE: PO.0108
+  T: BF_COMPONENT
+  URL: /attachFileBtn/attachFile
+parentKeys: {}
+properties:
+  BF_CODE: PO.0108
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0108' AND NVL(URL,'IS_NULL') = '/attachFileBtn/attachFile')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_stream_status_extended' )
+  CLASS_NAME: null
+  COMP_CODE: attachFileBtn/attachFile
+  NAME: Attach File/Attach File
+  SIGNING_REQ_IND: null
+  URL: /attachFileBtn/attachFile
+related: {}

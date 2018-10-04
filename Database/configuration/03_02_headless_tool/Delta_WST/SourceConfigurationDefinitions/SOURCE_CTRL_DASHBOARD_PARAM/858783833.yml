@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '858783833'
+keys:
+  NAME: FROMDATE
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: REVN_QTY_BBLS
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: From Date
+  MANDATORY_IND: Y
+  NAME: FROMDATE
+  PARAMETER_SUB_TYPE: MACRO_TYPE
+  PARAMETER_TYPE: EC_CODE_TYPE
+  PARAMETER_VALUE: FIRST_OF_YEAR
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 40.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: REVN_QTY_BBLS
+related: {}

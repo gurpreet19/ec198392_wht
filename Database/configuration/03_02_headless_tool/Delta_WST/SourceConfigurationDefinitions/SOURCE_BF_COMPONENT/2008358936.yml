@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2008358936'
+keys:
+  BF_CODE: PO.0100
+  T: BF_COMPONENT
+  URL: /truck_ticket_single_transfer_object_stream_data
+parentKeys: {}
+properties:
+  BF_CODE: PO.0100
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0100' AND NVL(URL,'IS_NULL') = '/truck_ticket_single_transfer_object_stream_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_single_transfer_object' )
+  CLASS_NAME: OBJECT_SINGLE_TRANSFER
+  COMP_CODE: truck_ticket_single_transfer_object_stream_data
+  NAME: Truck Ticket Single Transfer Object Stream Data
+  SIGNING_REQ_IND: null
+  URL: /truck_ticket_single_transfer_object_stream_data
+related: {}

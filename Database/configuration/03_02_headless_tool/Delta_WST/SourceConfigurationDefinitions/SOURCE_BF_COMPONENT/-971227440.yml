@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-971227440'
+keys:
+  BF_CODE: CO.1017
+  T: BF_COMPONENT
+  URL: /templateList
+parentKeys: {}
+properties:
+  BF_CODE: CO.1017
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1017' AND NVL(URL,'IS_NULL') = '/templateList')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/trans_template' )
+  CLASS_NAME: TRANS_TEMPLATE_LIST
+  COMP_CODE: templateList
+  NAME: Template List
+  SIGNING_REQ_IND: null
+  URL: /templateList
+related: {}

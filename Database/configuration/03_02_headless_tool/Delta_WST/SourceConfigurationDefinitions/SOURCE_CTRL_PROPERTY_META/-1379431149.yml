@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1379431149'
+keys:
+  KEY: REFRESH_RATE_GRAPH
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: '0'
+  DESCRIPTION: Graph Refresh Interval Time for Stable Period And Summarise(PT.0009).
+  KEY: REFRESH_RATE_GRAPH
+  LABEL: Graph Refresh Interval Time
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

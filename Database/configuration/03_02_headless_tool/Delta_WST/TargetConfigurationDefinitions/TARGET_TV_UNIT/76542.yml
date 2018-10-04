@@ -1,0 +1,36 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '76542'
+keys:
+  T: TV_UNIT
+  UNIT: MPA
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Mega pascal (1,000,000 pascal)
+  FIN_CODE: null
+  LABEL: MPa
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MPA
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MPA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: PSIA
+    parentKeys:
+      TV_UNIT.UNIT: MPA
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MPA
+      MULT_FACT: 145.0382
+      PRECISION: null
+      TO_UNIT: PSIA
+      USER_EXIT: null
+      USE_UE: null

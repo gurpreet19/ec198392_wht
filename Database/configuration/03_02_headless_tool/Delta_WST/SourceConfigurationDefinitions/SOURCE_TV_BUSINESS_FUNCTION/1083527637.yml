@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1083527637'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM
+parentKeys: {}
+properties:
+  BF_CODE: CD.0107
+  NAME: Document Date Term
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM
+related: {}

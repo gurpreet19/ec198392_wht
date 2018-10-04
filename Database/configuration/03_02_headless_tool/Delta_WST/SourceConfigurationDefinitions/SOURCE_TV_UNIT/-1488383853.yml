@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1488383853'
+keys:
+  T: TV_UNIT
+  UNIT: KGPERNM3
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Kilogram per normal cubic meter
+  FIN_CODE: null
+  LABEL: kg/Nm³
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KGPERNM3
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related: {}

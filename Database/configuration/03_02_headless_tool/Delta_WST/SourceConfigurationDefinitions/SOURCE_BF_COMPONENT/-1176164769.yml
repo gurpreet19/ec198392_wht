@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1176164769'
+keys:
+  BF_CODE: PO.0123
+  T: BF_COMPONENT
+  URL: /balancing_adj
+parentKeys: {}
+properties:
+  BF_CODE: PO.0123
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0123' AND NVL(URL,'IS_NULL') = '/balancing_adj')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_fcty_balancing_adj' )
+  CLASS_NAME: BALANCING_ADJ_MTH
+  COMP_CODE: balancing_adj
+  NAME: Balancing Adjustment
+  SIGNING_REQ_IND: null
+  URL: /balancing_adj
+related: {}

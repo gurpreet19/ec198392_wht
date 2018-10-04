@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '731103253'
+keys:
+  ATTRIBUTE_TYPE: JOURNAL_MAP_TRAC_MODE
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: FULL
+  ATTRIBUTE_TYPE: JOURNAL_MAP_TRAC_MODE
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Indicates the mode in which journal mapping tracing reports should be generated. Options are FULL | WBS_ACCOUNT | MAPPING_CODE.
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

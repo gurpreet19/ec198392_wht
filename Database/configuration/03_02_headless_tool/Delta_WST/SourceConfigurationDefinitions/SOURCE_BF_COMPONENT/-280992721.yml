@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-280992721'
+keys:
+  BF_CODE: PO.0092
+  T: BF_COMPONENT
+  URL: /summarizeStrmSubToDailyButtonID
+parentKeys: {}
+properties:
+  BF_CODE: PO.0092
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0092' AND NVL(URL,'IS_NULL') = '/summarizeStrmSubToDailyButtonID')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_water_stream_status_by_period' )
+  CLASS_NAME: null
+  COMP_CODE: summarizeStrmSubToDailyButtonID
+  NAME: Aggregate Current
+  SIGNING_REQ_IND: null
+  URL: /summarizeStrmSubToDailyButtonID
+related: {}

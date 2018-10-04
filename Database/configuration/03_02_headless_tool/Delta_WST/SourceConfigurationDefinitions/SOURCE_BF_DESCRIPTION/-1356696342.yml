@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1356696342'
+keys:
+  BF_DESCRIPTION_NO: CO.0244
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0244
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/OPERATOR_ROUTE/TARGET/OPERATOR_ROUTE/CLASS_NAME/OPERATOR_ROUTE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+    <p>Operator Route is part of the collection point group model. Operator Route is parent to Collection Point. This group model is typically used for big onshore operations where operators have a route to drive to collect data for a set of wells. Operator may not necessarily know which facility the wells belongs to, they just have a route.</p>
+    <p>Above Operator Route in the collection point tree, we can typically find area or production unit. Below Operator Route are collection points connected in the group model.</p>
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1510754293'
+keys:
+  BF_DESCRIPTION_NO: CO.2016
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2016
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/CONTRACT/TARGET/CONTRACT/CLASS_NAME/CONTRACT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business function is used to create and maintain a contract.</p><p>For a contract, a set of base attributes must be registered. Examples are contract period and in what module(s) the contract should be available.</p>
+related: {}

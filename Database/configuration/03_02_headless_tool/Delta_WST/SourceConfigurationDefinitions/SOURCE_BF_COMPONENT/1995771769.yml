@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1995771769'
+keys:
+  BF_CODE: CD.0011
+  T: BF_COMPONENT
+  URL: /versions
+parentKeys: {}
+properties:
+  BF_CODE: CD.0011
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0011' AND NVL(URL,'IS_NULL') = '/versions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/general_price_object/CLASS_NAME/PRICE_OBJECT' )
+  CLASS_NAME: PRICE_OBJECT
+  COMP_CODE: versions
+  NAME: versions
+  SIGNING_REQ_IND: null
+  URL: /versions
+related: {}

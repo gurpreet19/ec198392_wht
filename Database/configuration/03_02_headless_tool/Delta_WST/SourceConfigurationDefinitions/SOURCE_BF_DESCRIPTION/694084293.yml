@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '694084293'
+keys:
+  BF_DESCRIPTION_NO: CO.0096
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0096
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/PIPELINE/TARGET/PIPELINE/CLASS_NAME/PIPELINE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>Pipeline is an object class for long pipes transporting oil or gas over a long distance. The object class can hold attributes like coordinates, length, diameter and other related attributes. There is no functionality associated with pipelines. If the pipeline volume is important for accounting purposes, a tank must be created for the pipeline.</p>
+related: {}

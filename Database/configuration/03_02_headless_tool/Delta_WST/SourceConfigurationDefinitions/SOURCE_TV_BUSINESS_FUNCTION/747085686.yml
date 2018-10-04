@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '747085686'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/daily_list_input
+parentKeys: {}
+properties:
+  BF_CODE: VO.0002
+  NAME: Daily List Input
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/daily_list_input
+related: {}

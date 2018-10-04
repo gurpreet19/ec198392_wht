@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1387400274'
+keys:
+  BF_CODE: PO.0074
+  T: BF_COMPONENT
+  URL: /sum
+parentKeys: {}
+properties:
+  BF_CODE: PO.0074
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0074' AND NVL(URL,'IS_NULL') = '/sum')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_stream_profit_centre_component' )
+  CLASS_NAME: null
+  COMP_CODE: sum
+  NAME: Sum per Component
+  SIGNING_REQ_IND: null
+  URL: /sum
+related: {}

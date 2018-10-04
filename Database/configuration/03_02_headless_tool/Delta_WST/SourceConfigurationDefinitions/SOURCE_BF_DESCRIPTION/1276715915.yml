@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1276715915'
+keys:
+  BF_DESCRIPTION_NO: CO.1004
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_access_partitions' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Object Partition screen is used to limit access to classes. It is only allowed to limit access to classes of type OBJECT. These are typically used in navigators.</p><p>The navigator at the top allows you to select an OBJECT class. To make a class available in this dropdown, the ACCESS_CONTROL_IND class property must be set to 'Y' and the class view regenerated.</p><p>The second section will list all roles with limited access.</p><p>The third section is the operator used.</p><p>The fourth section is a list of all objects for the selected class that the role, dependent on the operator, does or does not have access to.</p><p>After saving configuration changes in this screen, click the "Refresh ACL" button to make the changes take effect immediately.</p>
+related: {}

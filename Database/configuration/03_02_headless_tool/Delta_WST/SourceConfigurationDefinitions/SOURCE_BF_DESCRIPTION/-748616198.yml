@@ -1,0 +1,21 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-748616198'
+keys:
+  BF_DESCRIPTION_NO: CD.0117
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0117
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/setup_company_relations_basic/CLASS_NAME/CUST' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p><span style="color: rgb(0, 0, 153);">    EC Revenue has support
+    for restricting which Customers a given Contract    Owner Company can select as
+    Customers for use in a Sale / Tariff Income /    Journal Entry Contract.</span></p><p>    <strong>Restricted
+    Customer Setup screen</strong>    is used to define this set of Customers for
+    a given Contract Owner Company.</p><p>    By selecting the Contract Owner Company
+    in the Navigator section the user    can add which customers the selected Contract
+    Owner Company will have    access to.<br>    <u>Note:</u>    To use the restriction
+    on which Customers a Contract Owner Company can use    the system attribute RESTRICT_CUSTOMERS
+    - must be set to Y.</p>'
+related: {}

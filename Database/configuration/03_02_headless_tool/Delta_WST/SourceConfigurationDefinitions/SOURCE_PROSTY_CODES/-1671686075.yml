@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1671686075'
+keys:
+  CODE: VALIDATION
+  CODE_TYPE: SYSTEM_DOC_ACTION
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: VALIDATION
+  CODE_TEXT: Manual validation
+  CODE_TYPE: SYSTEM_DOC_ACTION
+  DESCRIPTION: The document is Valid 1, Valid 2 or Transfer and should be validated up to booked.
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 100.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1022264979'
+keys:
+  BF_CODE: SP.0062
+  T: BF_COMPONENT
+  URL: /summary_log
+parentKeys: {}
+properties:
+  BF_CODE: SP.0062
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0062' AND NVL(URL,'IS_NULL') = '/summary_log')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/Y' )
+  CLASS_NAME: null
+  COMP_CODE: summary_log
+  NAME: Data Extract Log
+  SIGNING_REQ_IND: null
+  URL: /summary_log
+related: {}

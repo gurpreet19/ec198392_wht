@@ -1,0 +1,116 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_TASK_COMMENT
+cnstPrimaryKey:
+  columns:
+  - ID
+  name: SYS_C008732
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  ADDEDAT:
+    columnName: ADDEDAT
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  ADDEDBY_ID:
+    columnName: ADDEDBY_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  ID:
+    columnName: ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  TASKDATA_COMMENTS_ID:
+    columnName: TASKDATA_COMMENTS_ID
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  TEXT:
+    columnName: TEXT
+    typeName: CLOB
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+cnstForeignKeys:
+  FK_JBPM_TASK_COMMENT_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_ORGANIZATIONALENTITY
+    columns:
+      ADDEDBY_ID: ID
+    name: FK_JBPM_TASK_COMMENT_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_JBPM_TASK_COMMENT_2:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_TASK
+    columns:
+      TASKDATA_COMMENTS_ID: ID
+    name: FK_JBPM_TASK_COMMENT_2
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_TASKCOMMENTS_CREATEDBY:
+    indexName: IDX_TASKCOMMENTS_CREATEDBY
+    columns:
+    - ADDEDBY_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TASKCOMMENTS_ID:
+    indexName: IDX_TASKCOMMENTS_ID
+    columns:
+    - TASKDATA_COMMENTS_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

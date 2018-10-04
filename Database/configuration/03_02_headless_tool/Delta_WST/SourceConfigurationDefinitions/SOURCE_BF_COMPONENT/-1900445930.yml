@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1900445930'
+keys:
+  BF_CODE: HA.0001
+  T: BF_COMPONENT
+  URL: /statusProcess
+parentKeys: {}
+properties:
+  BF_CODE: HA.0001
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='HA.0001' AND NVL(URL,'IS_NULL') = '/statusProcess')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/daily_data_status_process' )
+  CLASS_NAME: DAILY_STATUS_PROCESS
+  COMP_CODE: statusProcess
+  NAME: Log of Executed Processes
+  SIGNING_REQ_IND: null
+  URL: /statusProcess
+related: {}

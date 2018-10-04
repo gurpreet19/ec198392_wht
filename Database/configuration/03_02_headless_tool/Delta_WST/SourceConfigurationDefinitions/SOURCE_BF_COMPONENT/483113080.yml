@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '483113080'
+keys:
+  BF_CODE: CO.1047
+  T: BF_COMPONENT
+  URL: /cspNav
+parentKeys: {}
+properties:
+  BF_CODE: CO.1047
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1047' AND NVL(URL,'IS_NULL') = '/cspNav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/maintain_calc_log_profile' )
+  CLASS_NAME: null
+  COMP_CODE: cspNav
+  NAME: Calculation Specific Profiles
+  SIGNING_REQ_IND: null
+  URL: /cspNav
+related: {}

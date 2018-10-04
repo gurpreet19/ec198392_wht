@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1590385413'
+keys:
+  BF_CODE: RP.0003
+  T: BF_COMPONENT
+  URL: /accept_status
+parentKeys: {}
+properties:
+  BF_CODE: RP.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0003' AND NVL(URL,'IS_NULL') = '/accept_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_administration' )
+  CLASS_NAME: EC_CODES_POPUP
+  COMP_CODE: accept_status
+  NAME: Report Status
+  SIGNING_REQ_IND: null
+  URL: /accept_status
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1988612393'
+keys:
+  KEY: /com/ec/tran/cargo/storage_level/show_negative_value
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: N
+  DESCRIPTION: Set to Y to display negative values on graph Y-axis
+  KEY: /com/ec/tran/cargo/storage_level/show_negative_value
+  LABEL: Display negative values on graph Y-axis
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

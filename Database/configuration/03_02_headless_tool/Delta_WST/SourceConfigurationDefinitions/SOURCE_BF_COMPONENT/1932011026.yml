@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1932011026'
+keys:
+  BF_CODE: SP.0026
+  T: BF_COMPONENT
+  URL: /companysplitkeytable
+parentKeys: {}
+properties:
+  BF_CODE: SP.0026
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0026' AND NVL(URL,'IS_NULL') = '/companysplitkeytable')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/field_splits' )
+  CLASS_NAME: SPLIT_KEY_SETUP_COMPANY
+  COMP_CODE: companysplitkeytable
+  NAME: Company Split Key
+  SIGNING_REQ_IND: null
+  URL: /companysplitkeytable
+related: {}

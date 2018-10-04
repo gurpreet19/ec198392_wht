@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '954070972'
+keys:
+  BF_DESCRIPTION_NO: PO.0007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_safety_health_environment' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to keep track of daily Safety Health and Environment (SHE) data. The list is configurable and Energy Components automatically create new SHE event records for all facilities for a new production date.</p>
+
+    <p>To create new SHE codes, enter a new code using the EC Codes screen, code type = &quot;HSE_CODE&quot;. The new code will automatically be included the next day.</p>
+related: {}

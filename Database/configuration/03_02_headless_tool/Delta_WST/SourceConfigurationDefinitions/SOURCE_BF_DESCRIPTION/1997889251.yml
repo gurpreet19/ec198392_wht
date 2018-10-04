@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1997889251'
+keys:
+  BF_DESCRIPTION_NO: CO.2085
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2085
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/transport_zone_connection/NAV_MODEL/TRAN_OPERATIONAL/TARGET/TRANSPORT_SYSTEM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to connect operational locations with different transport zones. The operational locations is implemented by delivery point, delivery streams, pipeline and pipeline segments in the product. More objects can implement IV_OPERATIONAL_LOCATIONS if required.</p><p>The transport zones can be created in &quot;Transport Zone(CO.2041)&quot; screen. The zone type can be configured in Transport Zone screen.</p><p>The standard Zone Type codes shipped with EC are Imbalance, Entry and Exit.</p>
+related: {}

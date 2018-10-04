@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1127918309'
+keys:
+  BF_DESCRIPTION_NO: GD.0103
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0103
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_linepack' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to view and maintain linepack data for a location in the system. Different locations can be used, but the most common is Pipeline.</p><p>Typically the linepack is measured in a SCADA system. In transport dispatching those numbers would be stored against a meter object. In many cases this will be&nbsp;on a pipeline level and can be copied into the pipeline linepack table. In other cases it may be on pipeline segment or against another object. Then the value for&nbsp;pipeline needs to be calculated.</p><p>The navigator uses the navigation model to drill down to the target class, in this case the PIPELINE object. It will be mandatory for the user to select a value from the&nbsp;PIPELINE popup. The first tab is a tabular representation of the linepack. The second tab is a graphical view of the linepack for selected period. The third data tab is&nbsp;for attributes/arguments that can be used for linepack calculations or to compare the linepack against target linepack etc. This data is event based and is typically&nbsp;valid until a new value is inserted.</p>
+related: {}

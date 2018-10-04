@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1883380254'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/create_and_maintain_business_trigger_action
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/create_and_maintain_business_trigger_action
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

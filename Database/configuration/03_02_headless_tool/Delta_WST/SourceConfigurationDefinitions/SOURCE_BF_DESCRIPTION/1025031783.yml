@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1025031783'
+keys:
+  BF_DESCRIPTION_NO: CO.0021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/FCTY_CLASS_2/TARGET/FCTY_CLASS_2/CLASS_NAME/FCTY_CLASS_2' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>Facility Class 2 is a class that can be used if the operation covers many facilities and some of them are terminals without wells. Facility class 2 should not have wells connected but can have streams, tanks and other classes.</p>
+related: {}

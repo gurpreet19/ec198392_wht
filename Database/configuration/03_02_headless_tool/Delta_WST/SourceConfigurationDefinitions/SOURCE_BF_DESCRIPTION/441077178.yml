@@ -1,0 +1,47 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '441077178'
+keys:
+  BF_DESCRIPTION_NO: SP.0014
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_transaction_general' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Transaction Properties screen</strong>    defines and
+    manages all Transaction Templates for each Document Setup in a Contract. Each
+    Document Setup must have at least one Transaction Template    defined, but may
+    have a number of Transaction Templates defined. When processing the Contract,
+    Documents are created containing Transactions based on the    Transaction Templates
+    defined by the Contract / Document Setup.</p><p>    The key information defined
+    for each Transaction Template is the Product, Price Concept and Profit Center.
+    In addition there are several other attributes    defined for each Transaction
+    Template.</p><p>    The transaction name will be determined by transaction template
+    name being defined in this screen. The template name may contain static texts
+    as well as    placeholders which will be replaced with the real values on transaction.
+    A placeholder starts with "$". For example, template name "Journal Entry Posting
+    -    $PRICE_OBJECT_NAME" might become "Journal Entry Posting - Normal" on new
+    transactions.</p><p>    Supported placeholders are:<br>    - $PRODUCT_NAME: Product
+    name<br>    - $PRICE_OBJECT_NAME: Price object name<br>    - $DELIVERY_POINT_NAME:
+    Delivery point name<br>    - $PRICE_CONCEPT: Price<br>    - $RGE_PORT_NAME: Discharge
+    port name<br>    - $QTY_TYPE: Quantity type</p><p>    The origin country will
+    be determined by Loading Port on a Cargo based Contract, and by Delivery Point
+    on a Period based Contract. The destination country    will be determined by discharge
+    port on a cargo based contract, and by delivery point on a period based contract.
+    This logic can be overwritten by using    the user exists ue_cont_transaction.GetOriginCountryForTrans
+    and ue_cont_transaction.GetDestinationCountryForTrans.</p><p>    The screen is
+    divided into following sections:<br>        <strong><em>Filter Navigator:</em></strong><br>    The
+    Filter Navigator lists all the contracts being valid at the date selected in the
+    Filter Navigator. By clicking a contract object in the Filter    Navigator all
+    the documents defined for the contract will be listed in the Document List section.<br>        <strong><em>Document
+    List:</em></strong><br>    The Document List lists all the documents defined for
+    the selected contract. By clicking a Document the Transaction Templates for the
+    selected Document    will be listed in the Transaction Template List.<br>       <strong><em>
+    Transaction Template List:</em></strong><br>    This section lists all the Transaction
+    Templates defined for the selected Contract / Document Setup..<br>        <strong><em>
+    Create/Delete section:</em></strong><br>    This section provides buttons for
+    creating new Transaction Templates and deleting existing Transaction Templates<br>        <strong><em>
+    Transaction Template Details:</em></strong><br>    This section lists all the
+    Transaction Template</p>'
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-484154027'
+keys:
+  BF_CODE: CO.2008
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CO.2008
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2008' AND NVL(URL,'IS_NULL') = '/table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/ANALYSIS_ITEM' )
+  CLASS_NAME: ANALYSIS_ITEM
+  COMP_CODE: table
+  NAME: Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

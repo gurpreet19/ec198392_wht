@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-681883864'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/manage_report_ref_item_setup
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/manage_report_ref_item_setup
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

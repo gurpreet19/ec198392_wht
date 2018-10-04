@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '13679204'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INVENTORY
+parentKeys: {}
+properties:
+  BF_CODE: IN.0023
+  NAME: Transactional Inventory Properties
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INVENTORY
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1919817548'
+keys:
+  BF_CODE: MHM.0003
+  T: BF_COMPONENT
+  URL: /map
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0003' AND NVL(URL,'IS_NULL') = '/map')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/value_map' )
+  CLASS_NAME: null
+  COMP_CODE: map
+  NAME: Mapping Table
+  SIGNING_REQ_IND: null
+  URL: /map
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-715373674'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/manage_template_inventory
+parentKeys: {}
+properties:
+  BF_CODE: IN.0034
+  NAME: Transactional Inventory Layout Set Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/manage_template_inventory
+related: {}

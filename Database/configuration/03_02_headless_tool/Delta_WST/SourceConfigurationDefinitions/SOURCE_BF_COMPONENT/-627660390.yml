@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-627660390'
+keys:
+  BF_CODE: CP.0069
+  T: BF_COMPONENT
+  URL: /ent_detail
+parentKeys: {}
+properties:
+  BF_CODE: CP.0069
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0069' AND NVL(URL,'IS_NULL') = '/ent_detail')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_sub_daily_receipts_details' )
+  CLASS_NAME: FCST_STOR_NOM_RECEIPT
+  COMP_CODE: ent_detail
+  NAME: Forecast - Lifting Account Entitlement Detail
+  SIGNING_REQ_IND: null
+  URL: /ent_detail
+related: {}

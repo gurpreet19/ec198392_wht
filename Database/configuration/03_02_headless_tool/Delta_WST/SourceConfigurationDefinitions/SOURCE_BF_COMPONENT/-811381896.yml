@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-811381896'
+keys:
+  BF_CODE: PR.0012
+  T: BF_COMPONENT
+  URL: /cargo_elements
+parentKeys: {}
+properties:
+  BF_CODE: PR.0012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PR.0012' AND NVL(URL,'IS_NULL') = '/cargo_elements')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/contract_cargo_elements' )
+  CLASS_NAME: SCTR_CARGO_PRICE_ELEMENT
+  COMP_CODE: cargo_elements
+  NAME: Cargo Elements
+  SIGNING_REQ_IND: null
+  URL: /cargo_elements
+related: {}

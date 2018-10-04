@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1619510477'
+keys:
+  BF_CODE: SP.0012
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: SP.0012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0012' AND NVL(URL,'IS_NULL') = '/daytimes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_setup/CLASS_NAME/CONTRACT_DOC' )
+  CLASS_NAME: CONTRACT_DOC
+  COMP_CODE: daytimes
+  NAME: New Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

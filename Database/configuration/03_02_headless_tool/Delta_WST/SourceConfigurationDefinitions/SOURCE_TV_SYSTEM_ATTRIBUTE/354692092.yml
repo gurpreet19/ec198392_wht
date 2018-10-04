@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '354692092'
+keys:
+  ATTRIBUTE_TYPE: API_CALC_DIL_DENSITY_MIN
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: API_CALC_DIL_DENSITY_MIN
+  ATTRIBUTE_VALUE: 500.0
+  DESCRIPTION: Default min diluent density
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

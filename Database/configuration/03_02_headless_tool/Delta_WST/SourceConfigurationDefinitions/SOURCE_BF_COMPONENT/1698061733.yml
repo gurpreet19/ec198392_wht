@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1698061733'
+keys:
+  BF_CODE: CO.0070
+  T: BF_COMPONENT
+  URL: /insert
+parentKeys: {}
+properties:
+  BF_CODE: CO.0070
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0070' AND NVL(URL,'IS_NULL') = '/insert')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CHEM_TANK/TARGET/CHEM_TANK/CLASS_NAME/CHEM_TANK' )
+  CLASS_NAME: CHEM_TANK
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /insert
+related: {}

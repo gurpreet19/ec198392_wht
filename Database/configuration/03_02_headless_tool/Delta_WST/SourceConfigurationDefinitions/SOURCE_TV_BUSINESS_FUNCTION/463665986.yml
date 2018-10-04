@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '463665986'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/monthly_alloc_well_data/CLASS_NAME/IWEL_MTH_ALLOC
+parentKeys: {}
+properties:
+  BF_CODE: WR.0079
+  NAME: Monthly Allocated Injection Well Data
+  PROFILE_CLASS_NAME: WELL
+  URL: /com.ec.prod.wr.screens/monthly_alloc_well_data/CLASS_NAME/IWEL_MTH_ALLOC
+related: {}

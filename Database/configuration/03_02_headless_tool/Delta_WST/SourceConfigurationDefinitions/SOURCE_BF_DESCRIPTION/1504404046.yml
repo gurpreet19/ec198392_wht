@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1504404046'
+keys:
+  BF_DESCRIPTION_NO: CO.1007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/personal_settings' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The "Personal Settings" screen provides an interface for maintaining user customisable preferences.</p><p>The preferences are resolved runtime. In the screen the logged in user can create their own personal override values for the user preferences. The screen also provides information on the fallback value for the selected preference.</p>
+related: {}

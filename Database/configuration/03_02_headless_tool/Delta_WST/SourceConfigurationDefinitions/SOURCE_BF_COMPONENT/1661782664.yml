@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1661782664'
+keys:
+  BF_CODE: PO.0079
+  T: BF_COMPONENT
+  URL: /measured
+parentKeys: {}
+properties:
+  BF_CODE: PO.0079
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0079' AND NVL(URL,'IS_NULL') = '/measured')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_ELE/STRM_SET/PO.0079' )
+  CLASS_NAME: STRM_DAY_STREAM_MEAS_ELE
+  COMP_CODE: measured
+  NAME: Measured Figures
+  SIGNING_REQ_IND: null
+  URL: /measured
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '25643626'
+keys:
+  BF_CODE: GD.0091
+  T: BF_COMPONENT
+  URL: /day_loc_summary
+parentKeys: {}
+properties:
+  BF_CODE: GD.0091
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0091' AND NVL(URL,'IS_NULL') = '/day_loc_summary')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_summary/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_NOM_AGG/SUB_CLASS/TRNL_SUB_DAY_NOM_AGG/GRAPH_CLASS/TRNL_SUB_DAY_NOM_AGG_GRA/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0091/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNL_DAY_NOM_AGG
+  COMP_CODE: day_loc_summary
+  NAME: Daily Location Summary
+  SIGNING_REQ_IND: null
+  URL: /day_loc_summary
+related: {}

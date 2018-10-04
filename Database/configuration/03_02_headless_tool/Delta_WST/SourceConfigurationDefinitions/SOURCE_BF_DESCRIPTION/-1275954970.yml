@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1275954970'
+keys:
+  BF_DESCRIPTION_NO: CO.1054
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/component_report' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business functions is used to view a component report.</p>
+
+    <p>A component template is specific for a Calculation Context and the component report is used to view intermediate calculation result. One example of such a report is a Price Component Report found in EC Sale.</p>
+
+    <p>The first data section shows a list of all objects that have component result for selected date and context.</p>
+
+    <p>The second data section combines the result of a calculation with the template selected for a given object.</p>
+
+    <p>When writing calculations the class OBJECT_CALC_COMPONENT can be used for the variable mappings. It may be considered to have a specific class for each context and class.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1712959037'
+keys:
+  BF_CODE: SD.0012
+  T: BF_COMPONENT
+  URL: /delivery_restrictions
+parentKeys: {}
+properties:
+  BF_CODE: SD.0012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0012' AND NVL(URL,'IS_NULL') = '/delivery_restrictions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/planned_delivery_restrictions' )
+  CLASS_NAME: SCTR_DEL_RESTRICT
+  COMP_CODE: delivery_restrictions
+  NAME: Planned Delivery Restrictions
+  SIGNING_REQ_IND: null
+  URL: /delivery_restrictions
+related: {}

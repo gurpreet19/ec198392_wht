@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1339991810'
+keys:
+  NAME: ShowPointLabels
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: PROD_MONTH_ACT_PLAN_GAS
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Show Point Labels
+  MANDATORY_IND: N
+  NAME: ShowPointLabels
+  PARAMETER_SUB_TYPE: BOOL
+  PARAMETER_TYPE: BASIC_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 60.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: PROD_MONTH_ACT_PLAN_GAS
+related: {}

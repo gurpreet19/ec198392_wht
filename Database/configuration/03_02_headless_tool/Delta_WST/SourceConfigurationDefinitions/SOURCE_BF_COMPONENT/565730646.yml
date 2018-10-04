@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '565730646'
+keys:
+  BF_CODE: CD.0024
+  T: BF_COMPONENT
+  URL: /add_year_button
+parentKeys: {}
+properties:
+  BF_CODE: CD.0024
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/add_year_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar' )
+  CLASS_NAME: CALENDAR_SETUP
+  COMP_CODE: addYearButton
+  NAME: Add Year To Calendar Button
+  SIGNING_REQ_IND: null
+  URL: /add_year_button
+related: {}

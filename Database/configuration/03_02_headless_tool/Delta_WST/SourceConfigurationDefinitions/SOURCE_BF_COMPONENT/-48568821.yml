@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-48568821'
+keys:
+  BF_CODE: PO.0080
+  T: BF_COMPONENT
+  URL: /monthly_operational_comments
+parentKeys: {}
+properties:
+  BF_CODE: PO.0080
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0080' AND NVL(URL,'IS_NULL') = '/monthly_operational_comments')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_operational_comments' )
+  CLASS_NAME: OBJECT_ITEM_MTH_COMMENT
+  COMP_CODE: monthly_operational_comments
+  NAME: Monthly Operational Comments
+  SIGNING_REQ_IND: null
+  URL: /monthly_operational_comments
+related: {}

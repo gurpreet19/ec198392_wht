@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1678908715'
+keys:
+  BF_DESCRIPTION_NO: IS.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IS.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_src_mapping_setup' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The mapping configuration screen contains four sections. Below is a description of each of the sections starting from the top.</p><h4>Source Interface</h4><p>This is the navigator showing all the configured interfaces in the system. There is insert possibility here, new interfaces can be defined.</p><h4>Source Mapping</h4><p>This section is used for each of the sections in the source file. One section is for example one specific value. Another section in the source file could be a key list.</p><p>Data must also be defined in this section. Further description is found in the advanced excel import documentation.</p><p>The ecKey column is crucial in this section; this is the link to EC and the target mapping.</p><h4>Source Mapping Commands</h4><p>This is the commands for identification in the source file for the selected source mapping. The commands in use are “FindHorisontal”, “FindVertical” and “Move”. These commands are sufficient for basic navigation in the source files.</p><h4>Target Mapping</h4><p>This is the link from the imported data to an EC class and attribute. The link is based on the ecKey in use from the source mapping section.</p><h4>Preview button</h4><p>Pressing the preview button will prompt the user for an input file. Once a source file is selected and sent over to the application server, it will respond with the same file with highlighting of the current mapping. This should be used for verification of the configuration.</p>
+related: {}

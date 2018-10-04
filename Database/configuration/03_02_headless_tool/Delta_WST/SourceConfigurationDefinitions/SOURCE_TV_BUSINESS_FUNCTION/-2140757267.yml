@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2140757267'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/uoplist_management
+parentKeys: {}
+properties:
+  BF_CODE: CD.0100
+  NAME: UOP Key Items
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/uoplist_management
+related: {}

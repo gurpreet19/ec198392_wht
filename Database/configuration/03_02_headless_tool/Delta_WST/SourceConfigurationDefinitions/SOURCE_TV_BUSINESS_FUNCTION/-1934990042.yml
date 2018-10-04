@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1934990042'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/fin_documents_simple/TYPE/CARGO
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  NAME: Cargo Document
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/fin_documents_simple/TYPE/CARGO
+related: {}

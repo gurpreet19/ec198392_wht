@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '709388590'
+keys:
+  BF_DESCRIPTION_NO: PO.0081
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0081
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_STM/STRM_SET/PO.0081' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to list steam stream data for a Period (From &ndash; To Date) and for only one Stream. Data can be entered manually or loaded automatically. The BF requires one entry per stream per day, and Energy Components automatically creates new records for a new production day for all steam streams that are part of a stream set for this screen. Thus, this BF has value instantiation for the Day start where blank line for all measured steam streams will be inserted.</p>
+
+    <p>A separate measurement type for steam volume, STEAM_VOL_CWE, has been introduced. In this context, &ldquo;CWE&rdquo; is short for Cold Water Equivalents and represents the volume of cold water that would condense from any given volume of steam upon cooling.</p>
+related: {}

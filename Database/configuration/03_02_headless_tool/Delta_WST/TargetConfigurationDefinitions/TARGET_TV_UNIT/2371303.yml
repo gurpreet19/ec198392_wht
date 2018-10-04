@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2371303'
+keys:
+  T: TV_UNIT
+  UNIT: MNM3
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Million Normal cubic meter at 0 degC
+  FIN_CODE: null
+  LABEL: MNm³
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MNM3
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related: {}

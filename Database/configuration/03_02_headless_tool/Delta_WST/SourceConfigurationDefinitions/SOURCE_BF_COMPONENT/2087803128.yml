@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2087803128'
+keys:
+  BF_CODE: CP.0070
+  T: BF_COMPONENT
+  URL: /activeGroupModels
+parentKeys: {}
+properties:
+  BF_CODE: CP.0070
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0070' AND NVL(URL,'IS_NULL') = '/activeGroupModels')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_cp_finder' )
+  CLASS_NAME: null
+  COMP_CODE: activeGroupModels
+  NAME: Group Model
+  SIGNING_REQ_IND: null
+  URL: /activeGroupModels
+related: {}

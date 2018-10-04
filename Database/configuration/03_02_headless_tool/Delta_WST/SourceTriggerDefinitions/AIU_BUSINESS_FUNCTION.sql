@@ -1,0 +1,8 @@
+CREATE OR REPLACE EDITIONABLE TRIGGER "AIU_BUSINESS_FUNCTION" 
+AFTER UPDATE ON BUSINESS_FUNCTION
+BEGIN
+  -- $Revision: 1.3 $
+  -- Common
+  EcDp_Business_function.updateBFList();
+
+END;

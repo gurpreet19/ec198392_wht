@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1774983668'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/monthly_forecast/GROUPMODEL/SUB_AREA/TARGET/SUB_AREA/CLASS_NAME/FCST_SUB_AREA_MTH_STATUS
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/monthly_forecast/GROUPMODEL/SUB_AREA/TARGET/SUB_AREA/CLASS_NAME/FCST_SUB_AREA_MTH_STATUS
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

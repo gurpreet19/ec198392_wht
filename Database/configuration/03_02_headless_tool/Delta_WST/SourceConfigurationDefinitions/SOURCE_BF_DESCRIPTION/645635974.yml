@@ -1,0 +1,47 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '645635974'
+keys:
+  BF_DESCRIPTION_NO: PD.0017
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PD.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/deferment_corrective_action' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p style="font-family: Arial, sans-serif; font-size: 10pt; font-style:
+    normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight:
+    normal; margin: 10px 0px 0px; padding: 0px; color: rgb(51, 51, 51); background-color:
+    rgb(255, 255, 255);"><span style="font-size: small;">The purpose of this screen
+    is to follow up corrective actions and thus minimize the duration of the deferment.
+    For each event, there will be one or more actions, with a&nbsp;corresponding responsible
+    unit that can be registered. The goal is to reduce time spent to end the deferment
+    event.</span></p><p style="margin: 10px 0px 0px; padding: 0px; background-color:
+    rgb(255, 255, 255);"><span style="font-family: Arial, sans-serif; font-size: small;
+    font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal;
+    font-weight: normal; color: rgb(51, 51, 51);">All events that have been registered
+    as either&nbsp;</span><span style="font-family: Arial, sans-serif; font-size:
+    small; font-style: normal; font-variant-ligatures: normal; font-variant-caps:
+    normal; font-weight: normal; color: rgb(51, 51, 51);">Daily Deferment Master (PD.0004)
+    or&nbsp;</span><font color="#333333" face="Arial, sans-serif" size="2" style="font-family:
+    Arial, Verdana; font-size: 10pt; font-style: normal; font-variant-ligatures: normal;
+    font-variant-caps: normal; font-weight: normal;">Master Events (PD.0006)</font><span
+    style="font-family: Arial, sans-serif; font-size: small; font-style: normal; font-variant-ligatures:
+    normal; font-variant-caps: normal; font-weight: normal; color: rgb(51, 51, 51);">&nbsp;or
+    Deferment (PD.0020) will be available on this screen, in order to configure this
+    go to&nbsp;</span><font color="#333333" face="Arial, sans-serif" size="2">System
+    Attributes (CO.1012) and set value of&nbsp;</font><span style="font-family: Arial,
+    sans-serif; font-size: small; font-style: normal; font-variant-ligatures: normal;
+    font-variant-caps: normal; font-weight: normal; color: rgb(51, 51, 51);">"DEFERMENT_VERSION",&nbsp;</span><span
+    style="font-family: Arial, sans-serif; font-size: 10pt; font-style: normal; font-variant-ligatures:
+    normal; font-variant-caps: normal; font-weight: normal; color: rgb(51, 51, 51);">default
+    version will be&nbsp;</span><span style="font-family: Arial, sans-serif; font-size:
+    13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps:
+    normal; font-weight: normal; color: rgb(51, 51, 51);">PD.0020 in case no value
+    is specified.</span></p><p style="font-family: Arial, Verdana; font-size: 10pt;
+    font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal;
+    font-weight: normal; margin: 10px 0px 0px; padding: 0px; background-color: rgb(255,
+    255, 255);"><br></p><p style="font-family: Arial, Verdana; font-size: 10pt; font-style:
+    normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight:
+    normal; margin: 10px 0px 0px; padding: 0px;"><br></p>'
+related: {}

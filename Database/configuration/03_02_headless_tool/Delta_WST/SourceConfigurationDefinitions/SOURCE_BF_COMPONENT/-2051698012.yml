@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2051698012'
+keys:
+  BF_CODE: CD.0069
+  T: BF_COMPONENT
+  URL: /table1
+parentKeys: {}
+properties:
+  BF_CODE: CD.0069
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0069' AND NVL(URL,'IS_NULL') = '/table1')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/CUSTOMER/FROM_CLASS_NAME/CUSTOMER/TO_CLASS_NAME/CUSTOMER' )
+  CLASS_NAME: null
+  COMP_CODE: createRelationsTable1
+  NAME: Create Relations - Main Table
+  SIGNING_REQ_IND: null
+  URL: /table1
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '790587481'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/STREAM_CATEGORY/FROM_CLASS_NAME/STREAM_CATEGORY/TO_CLASS_NAME/STREAM_CATEGORY
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/STREAM_CATEGORY/FROM_CLASS_NAME/STREAM_CATEGORY/TO_CLASS_NAME/STREAM_CATEGORY
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

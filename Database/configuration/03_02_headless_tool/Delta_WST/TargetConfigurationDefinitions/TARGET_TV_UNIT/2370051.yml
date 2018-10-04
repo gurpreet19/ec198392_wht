@@ -1,0 +1,36 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2370051'
+keys:
+  T: TV_UNIT
+  UNIT: MMCF
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Million standard cubic feet
+  FIN_CODE: null
+  LABEL: MMcf
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MMCF
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MMCF
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: M3
+    parentKeys:
+      TV_UNIT.UNIT: MMCF
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MMCF
+      MULT_FACT: 28316.85
+      PRECISION: null
+      TO_UNIT: M3
+      USER_EXIT: null
+      USE_UE: null

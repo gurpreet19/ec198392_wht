@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '113668831'
+keys:
+  BF_CODE: CP.0018
+  T: BF_COMPONENT
+  URL: /apportion
+parentKeys: {}
+properties:
+  BF_CODE: CP.0018
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0018' AND NVL(URL,'IS_NULL') = '/apportion')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/daily_stor_forecast' )
+  CLASS_NAME: null
+  COMP_CODE: apportion
+  NAME: Production Forecast
+  SIGNING_REQ_IND: null
+  URL: /apportion
+related: {}

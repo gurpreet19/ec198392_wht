@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1843096305'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DAY_NOM_PATH_MATRIX
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DAY_NOM_PATH_MATRIX
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

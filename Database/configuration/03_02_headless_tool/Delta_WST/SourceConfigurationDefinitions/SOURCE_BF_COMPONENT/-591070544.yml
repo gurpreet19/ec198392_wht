@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-591070544'
+keys:
+  BF_CODE: PA.0003
+  T: BF_COMPONENT
+  URL: /processIns
+parentKeys: {}
+properties:
+  BF_CODE: PA.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PA.0003' AND NVL(URL,'IS_NULL') = '/processIns')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_process_execution' )
+  CLASS_NAME: null
+  COMP_CODE: processIns
+  NAME: Process Instance
+  SIGNING_REQ_IND: null
+  URL: /processIns
+related: {}

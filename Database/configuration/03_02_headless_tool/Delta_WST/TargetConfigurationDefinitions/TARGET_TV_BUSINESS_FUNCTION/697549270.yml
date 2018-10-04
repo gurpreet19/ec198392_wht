@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '697549270'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/fcst_schedule_lifting
+parentKeys: {}
+properties:
+  BF_CODE: CP.0033
+  NAME: Forecast - Schedule Lifting
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/fcst_schedule_lifting
+related: {}

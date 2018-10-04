@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-897607299'
+keys:
+  BF_CODE: FC.1012
+  T: BF_COMPONENT
+  URL: /forecast_comment
+parentKeys: {}
+properties:
+  BF_CODE: FC.1012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.1012' AND NVL(URL,'IS_NULL') = '/forecast_comment')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_qty_value_gpurch/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_PURCHASE' )
+  CLASS_NAME: FCST_GPURCH_COMMENT
+  COMP_CODE: forecast_comment
+  NAME: forecast_comment
+  SIGNING_REQ_IND: null
+  URL: /forecast_comment
+related: {}

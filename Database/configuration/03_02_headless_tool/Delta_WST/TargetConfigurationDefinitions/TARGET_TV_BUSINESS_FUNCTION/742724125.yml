@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '742724125'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/STORAGE/TARGET/STORAGE/DATA_CLASS/PROD_STORAGE_FORECAST
+parentKeys: {}
+properties:
+  BF_CODE: PP.0015
+  NAME: Storage Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/STORAGE/TARGET/STORAGE/DATA_CLASS/PROD_STORAGE_FORECAST
+related: {}

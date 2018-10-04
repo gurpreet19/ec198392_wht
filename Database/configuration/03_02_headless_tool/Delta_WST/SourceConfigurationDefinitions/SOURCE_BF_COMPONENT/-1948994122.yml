@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1948994122'
+keys:
+  BF_CODE: PT.0016
+  T: BF_COMPONENT
+  URL: /event_gas_inj_well_data
+parentKeys: {}
+properties:
+  BF_CODE: PT.0016
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0016' AND NVL(URL,'IS_NULL') = '/event_gas_inj_well_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_gas_injection_well_data' )
+  CLASS_NAME: IWEL_EVENT_GAS
+  COMP_CODE: event_gas_inj_well_data
+  NAME: Event Gas Injection Well Data
+  SIGNING_REQ_IND: null
+  URL: /event_gas_inj_well_data
+related: {}

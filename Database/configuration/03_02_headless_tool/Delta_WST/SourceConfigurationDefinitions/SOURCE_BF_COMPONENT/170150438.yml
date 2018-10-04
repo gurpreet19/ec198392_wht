@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '170150438'
+keys:
+  BF_CODE: GD.0028
+  T: BF_COMPONENT
+  URL: /submittButton
+parentKeys: {}
+properties:
+  BF_CODE: GD.0028
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0028' AND NVL(URL,'IS_NULL') = '/submittButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_balancing/CLASS/TRCN_DAY_NOM_BAL/NOMINATION_CYCLE/false' )
+  CLASS_NAME: null
+  COMP_CODE: submittButton
+  NAME: Submitt
+  SIGNING_REQ_IND: null
+  URL: /submittButton
+related: {}

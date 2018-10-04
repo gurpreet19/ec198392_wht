@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '805661445'
+keys:
+  BF_CODE: CO.1026
+  T: BF_COMPONENT
+  URL: /classAttrNameNav
+parentKeys: {}
+properties:
+  BF_CODE: CO.1026
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1026' AND NVL(URL,'IS_NULL') = '/classAttrNameNav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_class_attr_property' )
+  CLASS_NAME: null
+  COMP_CODE: classAttrNameNav
+  NAME: Class Navigator
+  SIGNING_REQ_IND: null
+  URL: /classAttrNameNav
+related: {}

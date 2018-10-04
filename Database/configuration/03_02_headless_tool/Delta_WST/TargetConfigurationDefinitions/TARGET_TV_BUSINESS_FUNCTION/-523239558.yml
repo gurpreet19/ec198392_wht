@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-523239558'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.sale.sa.screens/sale_calc_mth
+parentKeys: {}
+properties:
+  BF_CODE: SA.0002
+  NAME: Monthly Sale Calculation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.sa.screens/sale_calc_mth
+related: {}

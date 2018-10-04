@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1803355020'
+keys:
+  BF_CODE: PR.0005
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: PR.0005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PR.0005' AND NVL(URL,'IS_NULL') = '/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/price_index_yearly/CLASS/PRICE_INDEX_YR_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

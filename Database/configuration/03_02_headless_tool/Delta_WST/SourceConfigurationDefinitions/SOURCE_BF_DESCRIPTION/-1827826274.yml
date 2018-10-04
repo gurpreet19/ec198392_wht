@@ -1,0 +1,198 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1827826274'
+keys:
+  BF_DESCRIPTION_NO: PD.0020
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PD.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/well_deferment' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>A deferment is an event that leads to production or injection not
+    meeting the planned production or injection numbers. The Deferment screen (PD.0020)
+    is used to enter and calculate deferment losses.</p><p>A deferment can affect
+    one single well only or multiple wells. The deferment can lead to a full shut-in
+    (Downtime deferment) of the well(s) or just a reduction (Constraint deferment)
+    of the well(s) flow rate. Deferments are classified and categorized to be able
+    to create reports explaining why production or injection plans were not met.</p><p>This
+    BF is used to enter both downtime and constraint deferments as defined below:</p><ul
+    style="list-style-type: disc; margin-left: 40px;"><li>A Downtime deferment means
+    that the production is shut-in, not only reduced.</li><li>A Constraint deferment
+    means that the production is not shut-in, only reduced.</li></ul><p>''Deferment''
+    data section will filter the records based on the selected navigator. Meanwhile,
+    records in ''Wells in Group'' are showed based on the parent group. Navigator
+    will only filter records in ''Deferment'' data section.</p><p>Both downtime and
+    constraint deferments can be recorded against:</p><ul style="list-style-type:
+    disc; margin-left: 40px;"><li><p><em>Single well only</em></p></li><li><p><em>Group
+    events (Not well deferments)</em><br>These events are used where the constraints
+    are not on the well, rather on the Facility, Well Hookup, Equipment, or Tank level.
+    For such events, event losses will be calculated as mentioned below:</p><ul style="list-style-type:circle;margin-left:40px;"><li>If
+    Loss Volume is null and Loss Rate is not null then Event Loss will be Loss Rate
+    * Period for which deferment occurred.</li><li>If both Loss Rate and Loss Volume
+    are not null then Event Loss will be equal to Loss Volume.</li></ul></li><li><p><em>Group</em><br>A
+    set of well deferment events for a set of wells can be grouped using ''Parent''
+    which are Facility, Well Hookup, Equipment, and Tank.</p></li></ul><div class="ui-widget-header
+    ui-corner-top"><span class="ecTextHeader">Configuration in Maintain System Settings
+    (CO.1006)</span><ol type="1" style="font-weight:bold"><li><p>Deferment: Allow
+    overlapping events</p><div style="font-weight:normal"><p>Setting between Yes,
+    No, Costraint and Down Constraints</p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
+    role="grid" cellpadding="10"><thead><tr role="row"><th width="350" class="ui-state-default"
+    role="columnheader" aria-label="Value" scope="col"><span><center>Value</center></span></th><th
+    class="ui-state-default" role="columnheader" aria-label="Scenario" scope="col"
+    colspan="2"><span><center>Scenario</center></span></th></tr></thead><tbody class="ui-datatable-data
+    ui-widget-content"><tr><td>Y</td><td>Allow all types of overlapping.</td></tr><tr><td>N</td><td>Do
+    not allow any types of overlapping.</td></tr><tr><td>CONSTRAINT</td><td><ul style="list-style-type:
+    disc; margin-left: 10px;"><li>Allow constraints overlapping only.</li><li>Overlapping
+    between down events are not allowed.</li><li>Overlapping between down and constraint
+    events are not allowed.</li></ul></td></tr><tr><td>DOWN_CONSTRAINT</td><td><ul
+    style="list-style-type: disc; margin-left: 10px;"><li>Allow overlapping between
+    down-constraints events.</li><li>Allow overlapping between constraints overlapping.</li><li>Don''t
+    allow overlapping between down-down events.</li></ul></td></tr></tbody></table></div></div></div></li><li><p>Deferment:
+    Apply common reason code in Deferments </p><div style="font-weight:normal"><p>Setting
+    to Yes will populate common EC Codes where code type = WELL_DT_REAS_1 for the
+    Reason Code attributes regardless of object type. By default, there are 10 common
+    reason codes which are WELL_DT_REAS.</p><p>Setting to No will populate different
+    EC Codes for different object type as below:</p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
+    role="grid" cellpadding="10"><thead><tr role="row"><th width="350" class="ui-state-default"
+    role="columnheader" aria-label="Object" scope="col"><span><center>Object Type</center></span></th><th
+    class="ui-state-default" role="columnheader" aria-label="Code" scope="col" colspan="2"><span><center>Code
+    Type</center></span></th></tr></thead><tbody class="ui-datatable-data ui-widget-content"><tr><td>Well</td><td>DEFER_WELL_REAS_1
+    to 10</td></tr><tr><td>Equipment</td><td>DEFER_EQPM_REAS_1 to 10</td></tr><tr><td>Well
+    Hookup</td><td>DEFER_WELL_HOOKUP_REAS_1 to 10</td></tr><tr><td>Tank</td><td>DEFER_TANK_REAS_1
+    to 10</td></tr><tr><td>Facility Class</td><td>DEFER_FCTY_REAS_1 to 10</td></tr></tbody></table></div></div></div></li><li><p>Deferment:
+    Allow auto insert well records in Deferments </p><div style="font-weight:normal"><p>Setting
+    to Yes will enable auto inserting of wells as child events depending on the parent
+    object type and rules as below:-</p><ul style="list-style-type:disc;margin-left:40px;"><li><p><em>Parent
+    Object Type = Equipment</em><br>The system will first check if any Equipment Connections
+    (CO.0238) have been configured for the selected equipment. If such connection(s)
+    exists, wells will be inserted automatically based on the configuration. If no
+    such connection(s) exists, the system will check whether the equipment has the
+    ''Allocation Network Node'' set in Equipment (CO.0237). If so, wells will be inserted
+    based on the network configured in the Stream Node Diagram (CO.00941).</p></li><li><p><em>Parent
+    Object Type = Tank (Single Battery Tank)</em><br>The dedicated well will be inserted
+    automatically.</p></li><li><p><em>Parent object Type = Well Hookup or Facility
+    Class 1</em><br>Wells will be automatically inserted based on the network configured
+    in the Stream Node Diagram (CO.00941).</p></li></ul><p>Auto insert will check
+    on the overlapping event based on the Maintain System Settings (CO.1006) under
+    ''Deferment: Allow overlapping events''. If the setting does not allow the overlapping
+    events, it will exclude those wells without prompting any message.</p></div></li><li><p>Deferment:
+    Idle Well Days Popup </p><div style="font-weight:normal"><p>Setting to true will
+    enable the Idle Well Days popup in the Deferment screen. This is to filter the
+    open event(s) based on the selection from the drop down.</p></div></li><li><p>Deferment:
+    Open Event Calculation </p><div style="font-weight:normal"><p>Setting to Yes will
+    enable calculation for an open event. Losses will be calculated until the current
+    system date minus one.</p><p>Setting to No will exclude open event from event
+    loss calculation.</p></div></li></ol><div class="ui-widget-header ui-corner-top"><span
+    class="ecTextHeader">Configuration in Maintain User Settings (CO.1008)</span><p>This
+    screen has a configurable mandatory level for navigator. It enables the user to
+    define mandatory level for the given group model. This can be configured in Maintain
+    User Settings (CO.1008):</p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
+    role="grid" cellpadding="10"><thead><tr role="row"><th width="350" class="ui-state-default"
+    role="columnheader" aria-label="Property" scope="col"><span>Property</span></th><th
+    class="ui-state-default" role="columnheader" aria-label="Value" scope="col"><span>Value</span></th></tr></thead><tbody
+    class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-even"
+    role="row"><td role="gridcell"><span>Deferment: Custom Mandatory Navigation -
+    Operational</span></td><td role="gridcell"><span>Mandatory level in Operational
+    group model navigator. Options:PRODUCTIONUNIT|SUB_UNIT|AREA|SUB_AREA|FCTY_CLASS_2|FCTY_CLASS_1</span></td></tr><tr><td>Deferment:Custom
+    Mandatory Navigation - Collection Point</td><td role="gridcell""><span>Mandatory
+    level in Collection Point group model navigator. Options: PRODUCTIONUNIT|AREA|OPERATOR_ROUTE|COLLECTION_POINT</span></td></tr><tr><td>Deferment:Custom
+    Mandatory Navigation - Geographical</td><td role="gridcell""><span>Mandatory level
+    in Geographical group model navigator. Options: AREA|FIELD</span></td></tr></tbody></table></div></div></div><div
+    class="ui-widget-header ui-corner-top"><span class="ecTextHeader">Deferment Calculation</span><p>Deferment
+    losses can be calculated using:</p><ul style="list-style-type: disc; margin-left:
+    40px;"><li><p><em>Calculate Deferment Button</em><br>Calculate Deferment button
+    will run the scheduler event ''DefermentRecalculation'' which is defined in Business
+    Actions (CO.0127).</p></li><li><p><em>Scheduler job</em><br>Deferred volumes can
+    also be calculated using a scheduler job to avoid performance issues. User can
+    configure the scheduler job in Business Actions screen (CO.0127) for DailyDefermentCalculation
+    and DefermentRecalculation actions.</p></li></ul><p>The calculations shipped with
+    the product has the precedence as below:</p><ol><li>Downtime events take precedence
+    over Constraint events.</li><li>Deferments that has earlier start time takes precedence.</li><li>Unscheduled
+    events take precedence over Scheduled events. </li><li>Single event takes precedence
+    over Group events.</li></ol><p>The deferment will be allocated on a daily basis,
+    based on the deferment events. This means that for each deferment, the deferred
+    volume will be allocated back to wells, based on event and day in WELL_DAY_DEFER_ALLOC
+    table.</p><p>Event loss volume calculation for open ended event will be calculated
+    until the current system date minus one. If there is any locked month within the
+    deferment event period, the event loss volume will not be calculated. The calculation
+    will take the below into consideration:</p><ul style="list-style-type: disc; margin-left:
+    40px;"><li>Daylight Saving</li><li>Production Day</li><li>Parent(Group) event
+    loss volume with child event(s)</li><li>Parent(Group) event loss volume without
+    child event(s)</li></ul><p>In addition, there is also the possibility of creating
+    project/customer specific calculations in the UE_WELL_DEFERMENT package.</p><p>For
+    deferment calculation on Mass, it only supports on Oil, Gas, Condensate and Water
+    production phase.</p></div><div class="ui-widget-header ui-corner-top"><span class="ecTextHeader">Buttons
+    in Deferment</span><p></p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
+    role="grid" cellpadding="10"><thead><tr role="row"><th scope="col" aria-label="Button"
+    role="columnheader" class="ui-state-default" width="200"><span>Button</span></th><th
+    class="ui-state-default" role="columnheader" aria-label="Description" scope="col"><span>Description</span></th></tr></thead><tbody
+    class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-even"
+    role="row"><td role="gridcell"><span>Allocate to Wells</span></td><td role="gridcell"><span>This
+    button is used to allocate the loss rate stored in parent events to its child
+    events.</span></td></tr><tr class="ui-widget-content ui-datatable-even" role="row"><td
+    role="gridcell"><span>Verify Record</span></td><td role="gridcell"><span>This
+    button is used to maintain the approval status of the deferment event and will
+    update the Record Status from Provision to Verified.</span></td></tr><tr class="ui-widget-content
+    ui-datatable-even" role="row"><td role="gridcell"><span>Approve Record</span></td><td
+    role="gridcell"><span>This button is used to maintain the approval status of the
+    deferment event and will update the Record Status from Verified/Provision to Approved.</span></td></tr><tr
+    class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell"><span>New
+    Master Event</span></td><td role="gridcell"><span>This button will open Master
+    Events(PD.0006) in a new window to allow user to create a new master event which
+    can then be used in Events column.</span></td></tr><tr class="ui-widget-content
+    ui-datatable-even" role="row"><td role="gridcell"><span>Calculate Deferment</span></td><td
+    role="gridcell"><span>This button is used to calculate deferred volumes for all
+    deferment events that have been filtered based on navigator selection. The object
+    selected on the navigator can either be a Production Unit, a Facility or a Well
+    object.<br>If the user selects only a Production Unit in the navigator and other
+    navigator values are empty, deferred volumes will be calculated for all the wells
+    that belong to the Production Unit. If another user navigates to a selected well,
+    deferred volumes will only be calculated for the well.  Similar logic applies
+    when a user selects until Area, Collection Point or Field.</span></td></tr><tr
+    class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell"><span>Move
+    To Group</span></td><td role="gridcell"><span>This button is used to move a checked
+    single well event to the selected group event. A Start Date validation which yields
+    an error when trying to move a single well record to a group and the start Daytime
+    is earlier than the group event. This can be configured at Maintain System Settings
+    BF (CO.1008), using the "Move to Group" property. This is used to control the
+    validation of the date of single well record(s) prior to moving to the group.
+    Value "Y" indicates validation is turned on whilst value "N" indicates validation
+    is turned off. The default value is "Y". To turn off the validation, add a new
+    version of daytime and set the value to "N".</span></td></tr><tr class="ui-widget-content
+    ui-datatable-even" role="row"><td role="gridcell"><span>Remove From Group</span></td><td
+    role="gridcell"><span>This button is used to remove the selected wells from the
+    group and those wells will become single deferment events.</span></td></tr><tr
+    class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell"><span>Add
+    To Group</span></td><td role="gridcell"><span><p>This button will open a pop-up
+    window with list of wells which can be added to the group. There are 3 sections
+    in this pop-up window. The ''Objects'' section will list all the wells that could
+    be added. The ''Wells to Insert'' section will list all the selected wells that
+    will be added to the parent event. ''Existing Wells in Group'' section lists all
+    the wells that have been added to the parent event.</p><p>Mandatory fields in
+    the navigator will follow the parent object type in Deferment screen (for example,
+    if the parent object type is ''Facility Class 1'', then the mandatory fields would
+    be until ''Facility Class 1''). User will also be able to narrow down the search
+    up until ''Well Hookup''.</p><p>Details of the buttons available in the pop-up
+    window:</p><ul style="list-style-type:disc;margin-left:40px;"><li>Move Selected
+    - This button will move all the selected wells from ''Objects'' to ''Wells to
+    Insert''.</li><li>Move All - This button will move all the wells that are available
+    in ''Objects'' to ''Wells to Insert''.</li><li>Remove Selected - This button will
+    remove all the selected wells from ''Wells to Insert'' to ''Objects''.</li><li>Remove
+    All - This button will remove all the wells that has been listed in ''Wells to
+    Insert'' to ''Objects''.</li><li>Insert All - This button will insert all the
+    wells from ''Wells to Insert'' and update ''Existing Wells in Group''. For overlapping
+    event, the setting in Maintain System Settings (CO.1006) will be adhered. If the
+    setting does not allow for overlapping events, a warning message will be prompted
+    after clicking the ''Insert All'' button and overlapped wells will be not inserted
+    and not displayed in ''Existing Wells in Group''. </li><li>Close - This button
+    will close the pop-up window, refresh the parent screen and displayed the recently
+    added well(s) under ''Wells in Group''. User may also click on this button to
+    cancel any selection without clicking on the ''Insert All'' button. Clicking on
+    the pop-up window close icon directly will results in closing the pop-up window
+    without refreshing the parent screen and the newly added wells will not show under
+    ''Wells in Group''. User will then need to click on ''Refresh'' button manually
+    to see the changes.</li></ul></span></td></tr><tr cass="ui-widget-content ui-datatable-even"
+    role="row"><td role="gridcell"><span>Sum From Wells</span></td><td role="gridcell"><span>This
+    button is used to sum up the child''s event loss rates to its parent''s loss rate.</span></td></tr></tbody></table></div></div></div>'
+related: {}

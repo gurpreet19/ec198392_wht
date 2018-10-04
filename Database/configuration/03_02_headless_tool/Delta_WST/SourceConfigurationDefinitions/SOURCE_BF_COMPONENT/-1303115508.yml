@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1303115508'
+keys:
+  BF_CODE: PT.0017
+  T: BF_COMPONENT
+  URL: /event_steam_inj_well_data
+parentKeys: {}
+properties:
+  BF_CODE: PT.0017
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0017' AND NVL(URL,'IS_NULL') = '/event_steam_inj_well_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_steam_injection_well_data' )
+  CLASS_NAME: IWEL_EVENT_STEAM
+  COMP_CODE: event_steam_inj_well_data
+  NAME: Event Steam Injection Well Data
+  SIGNING_REQ_IND: null
+  URL: /event_steam_inj_well_data
+related: {}

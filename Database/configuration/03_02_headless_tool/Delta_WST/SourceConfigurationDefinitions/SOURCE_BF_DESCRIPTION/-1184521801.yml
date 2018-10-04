@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1184521801'
+keys:
+  BF_DESCRIPTION_NO: TO.0020
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/letter_of_protest' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen register types of protests connected to a cargo. The type is selected at insert time.<br />The protest type has predefined items which are applicable in the second data section. The items belonging to the protest type is configured in Letter of Protest<br />Template (CO.2053).</p><p>The second data section will be populated with items belonging to the protest type upon saving the protest type.<br />These inserts are handled by a user exit package (ue_letter_protest.create_protest_list) and can be modified by the project if wanted.</p>
+related: {}

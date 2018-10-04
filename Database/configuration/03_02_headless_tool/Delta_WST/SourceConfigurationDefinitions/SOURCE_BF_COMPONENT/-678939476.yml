@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-678939476'
+keys:
+  BF_CODE: CD.0092
+  T: BF_COMPONENT
+  URL: /standard_navigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0092
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0092' AND NVL(URL,'IS_NULL') = '/standard_navigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/FIELD/FROM_CLASS_NAME/FIELD/TO_CLASS_NAME/FIELD' )
+  CLASS_NAME: null
+  COMP_CODE: StandardNavigator
+  NAME: Standard Navigator
+  SIGNING_REQ_IND: null
+  URL: /standard_navigator
+related: {}

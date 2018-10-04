@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1259273482'
+keys:
+  BF_CODE: PP.0044
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/ForecastCalculationButton
+parentKeys: {}
+properties:
+  BF_CODE: PP.0044
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0044' AND NVL(URL,'IS_NULL') = '/com.ec.pf.screenlet.button/ForecastCalculationButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/calculate_forecast' )
+  CLASS_NAME: null
+  COMP_CODE: ForecastCalculationButton
+  NAME: Forecast Calculation Button
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/ForecastCalculationButton
+related: {}

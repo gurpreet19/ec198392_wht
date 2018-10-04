@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-937674592'
+keys:
+  CODE: POLYNOM_4
+  CODE_TYPE: CURVE_FORMULA
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: POLYNOM_4
+  CODE_TEXT: 4. Order Polynomial
+  CODE_TYPE: CURVE_FORMULA
+  DESCRIPTION: y=c4*x^4+c3*x^3+c2*x^2+c1*x+c0
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 60.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

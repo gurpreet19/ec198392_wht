@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1260582319'
+keys:
+  BF_CODE: FC.1014
+  T: BF_COMPONENT
+  URL: /annual_average_revn_section
+parentKeys: {}
+properties:
+  BF_CODE: FC.1014
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.1014' AND NVL(URL,'IS_NULL') = '/annual_average_revn_section')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_revn_value_gpurch/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_PURCHASE' )
+  CLASS_NAME: FCST_GPURCH_MEMBER_REVN
+  COMP_CODE: AnnualAverageRevn
+  NAME: annual_average_revn
+  SIGNING_REQ_IND: null
+  URL: /annual_average_revn_section
+related: {}

@@ -1,0 +1,86 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_NOTIFICATION_BAS
+columns:
+  ENTITY_ID:
+    columnName: ENTITY_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  TASK_ID:
+    columnName: TASK_ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+cnstForeignKeys:
+  FK_JBPM_NOTIFICATION_BAS_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_ORGANIZATIONALENTITY
+    columns:
+      ENTITY_ID: ID
+    name: FK_JBPM_NOTIFICATION_BAS_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_JBPM_NOTIFICATION_BAS_2:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_NOTIFICATION
+    columns:
+      TASK_ID: ID
+    name: FK_JBPM_NOTIFICATION_BAS_2
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_NOTBAS_ENTITY:
+    indexName: IDX_NOTBAS_ENTITY
+    columns:
+    - ENTITY_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_NOTBAS_TASK:
+    indexName: IDX_NOTBAS_TASK
+    columns:
+    - TASK_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

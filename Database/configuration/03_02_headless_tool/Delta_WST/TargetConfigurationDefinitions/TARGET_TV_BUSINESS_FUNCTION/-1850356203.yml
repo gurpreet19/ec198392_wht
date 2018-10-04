@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1850356203'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/collection_point_conn
+parentKeys: {}
+properties:
+  BF_CODE: CO.0206
+  NAME: Collection Point Connection
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens/collection_point_conn
+related: {}

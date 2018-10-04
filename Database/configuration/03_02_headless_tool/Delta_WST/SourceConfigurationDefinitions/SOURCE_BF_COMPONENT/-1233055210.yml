@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1233055210'
+keys:
+  BF_CODE: WR.0025
+  T: BF_COMPONENT
+  URL: /period_gas_injection_well_totalizer
+parentKeys: {}
+properties:
+  BF_CODE: WR.0025
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0025' AND NVL(URL,'IS_NULL') = '/period_gas_injection_well_totalizer')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/period_gas_injection_well_totalizer' )
+  CLASS_NAME: IWEL_TOTALIZER_GAS
+  COMP_CODE: period_gas_injection_well_totalizer
+  NAME: Period Gas Injection Well Totalizer
+  SIGNING_REQ_IND: null
+  URL: /period_gas_injection_well_totalizer
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1318763903'
+keys:
+  BF_CODE: PP.0062
+  T: BF_COMPONENT
+  URL: /daily_field_forecast
+parentKeys: {}
+properties:
+  BF_CODE: PP.0062
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0062' AND NVL(URL,'IS_NULL') = '/daily_field_forecast')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_field_forecast/CLASS_NAME/FCST_FIELD_DAY_STATUS' )
+  CLASS_NAME: FCST_FIELD_DAY_STATUS
+  COMP_CODE: daily_field_forecast
+  NAME: Daily Field Forecast
+  SIGNING_REQ_IND: null
+  URL: /daily_field_forecast
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-799791628'
+keys:
+  BF_CODE: GD.0002
+  T: BF_COMPONENT
+  URL: /daynom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0002' AND NVL(URL,'IS_NULL') = '/daynom')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/input_nomination' )
+  CLASS_NAME: TCTR_DAY_DP_IN_NOM
+  COMP_CODE: daynom
+  NAME: Daily Nominations
+  SIGNING_REQ_IND: null
+  URL: /daynom
+related: {}

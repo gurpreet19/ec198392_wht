@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-955377389'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/facility_asset_analysis
+parentKeys: {}
+properties:
+  BF_CODE: PO.0116
+  NAME: Facility Object Analysis
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.po.screens/facility_asset_analysis
+related: {}

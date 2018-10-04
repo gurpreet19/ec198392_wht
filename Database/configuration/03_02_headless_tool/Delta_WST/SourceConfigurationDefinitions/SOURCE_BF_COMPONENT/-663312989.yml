@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-663312989'
+keys:
+  BF_CODE: PR.0001
+  T: BF_COMPONENT
+  URL: /contracts
+parentKeys: {}
+properties:
+  BF_CODE: PR.0001
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PR.0001' AND NVL(URL,'IS_NULL') = '/contracts')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/unit_price' )
+  CLASS_NAME: SALE_CONTRACT
+  COMP_CODE: contracts
+  NAME: Contracts
+  SIGNING_REQ_IND: null
+  URL: /contracts
+related: {}

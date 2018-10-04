@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2038173279'
+keys:
+  BF_DESCRIPTION_NO: CO.0081
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0081
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_formula_editor' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>Stream Formula Editor is an editor where simple equations can be configured for stream methods. This is often used to set up virtual streams not directly metered but to be calculated by taking the sum of other streams. As an example, &ldquo;Total Flare&rdquo; can be the sum of the metered &ldquo;LP Flare&rdquo; and &ldquo;HP Flare&rdquo;. Another example is &ldquo;Total facility gas produced&rdquo; = &ldquo;Gas export&rdquo; + &ldquo;Fuel&rdquo; + &ldquo;Flare&rdquo; &ndash; &ldquo;Gas Import&rdquo;</p>
+
+    <p>The editor supports calculation of both net and gross volume and mass. Objects that can be included in the editor are Stream, Tank, Storage, Facility Class 1 and Well Hookup. The formulas are date effective and can change over time. It is also supported to add constants within the formula.</p>
+
+    <p>When the client or reporting layer queries for net or gross volume or mass for a stream having xx_method = FORMULA, the business logic will read the configuration, create a SQL statement and execute it. The result will only be displayed and will never be stored. Because of the dynamic compile and execution, there is a small performance penalty to be payed.</p>
+
+    <p>Streams are displayed on this screen only when Stream-All (CD.0007), Stream - by Group Model (CO.0027) configuration screens has any of net/gross volume/mass methods, energy method, GCV method for Streams set to &ldquo;FORMULA&rdquo; or &ldquo;Include in Stream Formula Editor&rdquo;  checkbox is checked/clicked.</p>
+related: {}

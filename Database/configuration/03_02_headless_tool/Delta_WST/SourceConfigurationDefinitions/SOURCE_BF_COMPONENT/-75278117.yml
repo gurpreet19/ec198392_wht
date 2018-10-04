@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-75278117'
+keys:
+  BF_CODE: PD.0017
+  T: BF_COMPONENT
+  URL: /corr_actions
+parentKeys: {}
+properties:
+  BF_CODE: PD.0017
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PD.0017' AND NVL(URL,'IS_NULL') = '/corr_actions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/deferment_corrective_action' )
+  CLASS_NAME: WELL_DEF_CORR_ACTION
+  COMP_CODE: def_corr_actions
+  NAME: Corrective Actions for Deferment (PD.0020)
+  SIGNING_REQ_IND: null
+  URL: /corr_actions
+related: {}

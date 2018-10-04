@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1880520169'
+keys:
+  BF_CODE: MHM.0014
+  T: BF_COMPONENT
+  URL: /message_group
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0014
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0014' AND NVL(URL,'IS_NULL') = '/message_group')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_group' )
+  CLASS_NAME: MESSAGE_GROUP
+  COMP_CODE: message_group
+  NAME: Message Group
+  SIGNING_REQ_IND: null
+  URL: /message_group
+related: {}

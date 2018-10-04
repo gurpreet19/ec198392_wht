@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '751322913'
+keys:
+  BF_CODE: TO.0004
+  T: BF_COMPONENT
+  URL: /ullages
+parentKeys: {}
+properties:
+  BF_CODE: TO.0004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0004' AND NVL(URL,'IS_NULL') = '/ullages')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/ship_info_and_ullages' )
+  CLASS_NAME: CARRIER_INSPECTION
+  COMP_CODE: ullages
+  NAME: Tank Inspection
+  SIGNING_REQ_IND: null
+  URL: /ullages
+related: {}

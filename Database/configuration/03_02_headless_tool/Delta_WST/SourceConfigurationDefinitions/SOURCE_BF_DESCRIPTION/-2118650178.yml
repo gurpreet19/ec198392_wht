@@ -1,0 +1,88 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2118650178'
+keys:
+  BF_DESCRIPTION_NO: SP.0018
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/transaction_quantities' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Transaction Quantities screen</strong>    handles the
+    Hydrocarbon Quantities for each Transaction for a Document. These quantities will
+    be used by the Hydrocarbon Quantity-based Line Items where    the financial value
+    is calculated by Hydrocarbon Quantity times a Unit Price.</p><p>    <strong>Each
+    transaction can hold four sets of quantities:</strong><br>    1. Net Quantities
+    for the current transaction.<br>    2. Gross Quantities for the current transaction<br>    3.
+    Preceding Net Quantities copied from a corresponding transaction from a preceding
+    Document / Transaction. These quantities will be NULL if there is no    Preceding
+    Document for the Document. Preceding Document / Transaction quantities are typically
+    used together with two-step invoicing where the sales    quantity changes from
+    the first step (Provisional Invoice) to the second step (Final Invoice) and the
+    Final Invoice need to show both the initial quantity    and the final quantity.<br>    4.
+    Preceding Gross Quantities copied from a corresponding transaction from a preceding
+    Document / Transaction. These quantities will be NULL if there is no    Preceding
+    Document for the Document.</p><p>    Normally only the Net quantities are in use
+    as the Gross quantities are mainly for handling Crude quantities where the Gross
+    quantity includes the water in    the oil and the Net quantities are without water.
+    Each set of quantities can hold up to 4 Units of Measure (UOM) as defined by the
+    Contract.</p><p>    <strong>The rules for enabling / disabling the various quantity
+    entry fields are as follows:</strong><br>    - All quantity entry fields are protected
+    if the Document Level of the Document is set to VALID1, VALID2, TRANSFER, or BOOKED.<br>    -
+    All the Preceding quantity fields are always protected.<br>    - The NET QTY quantity
+    entry fields are protected if there are no Line Items for the Transaction where
+    the Net/Gross indicator is set to NET_CURRENT.<br>    - The GROSS QTY quantity
+    entry fields are protected if there are no Line Items for the Transaction where
+    the Net/Gross indicator is set to GROSS_CURRENT.<br>    - The NET QTY / GROSS
+    QTY quantity entry fields are only enabled for those UOMs which are defined at
+    the Contract.</p><p>    <strong>Supply Period Logic:</strong><br>    Period based
+    sales quantities can be interfaced into EC Revenue and will then be stored in
+    a Contract Quantities Interface Table (STIM_MTH_CONTRACT_VALUE).    When setting
+    the <em>Supply From</em> date and <em>Supply To</em> date and these dates matches
+    a complete month the system will look into the Contract    Quantities Interface
+    Table to see if there are any sales quantity data available matching the Product,
+    Price Concept, and Delivery Point of the current    Transaction. If any such is
+    found, the sales quantity will be copied to the Transaction and the record in
+    the Contract Quantities Interface Table will be    marked as used by this Transaction.
+    If not found, the next step is to look into the VO monthly table to pick up VO
+    quantities for the Stream Item defined    for the Transaction. If there are any
+    quantities not used by any other Sales document, the quantities are copied to
+    the Transaction and at the same time    the Calculation Method is set to <em>SP</em>
+    for the Stream Item in VO. The quantity is also set to NULL in VO. When the document
+    is set to BOOKED the    Transaction quantity will be moved back into VO.</p><p>    <strong>Accrual
+    Logic:</strong><br>For ACCRUAL type of Documents it is also possible to pick quantities
+    from VO based on a number of Daily quantities added together by selecting    <em>Accrual
+    quantities based on x days of VO quantities</em> in the popup for the UOM1 quantity.</p><p>    <strong>Use
+    of quantities:</strong><br>    The quantities will be copied to the Quantity based
+    Line Items when saving. The quantity copied to the Line Item will be multiplied
+    with the Line Item    Contribution Factor. The Contribution Factor is a factor
+    defined at the Price Element level Trigger logic at the Line Item Table (CONT_LINE_ITEM)
+    will    recalculate the value of the Line Items whenever there is a change in
+    the UOM1 quantity. The quantities will also be converted to all the different
+    UOM    sub-groups and saved in the CONT_LINE_ITEM_UOM table. See <em>Conversion
+    to all UOM sub-groups</em> sub-section for details on which UOMs the quantities    are
+    converted to.</p><p>    <strong>The screen is divided into these sections:</strong><br>    <strong><em>-
+    Filter Navigator:</em></strong><br>    The Filter Navigator lists all the contracts
+    being valid at the date selected in the Filter Navigator. By clicking a contract
+    object in the Filter    Navigator all the Documents already created will be listed
+    in the Document List section.<br>    <strong><em>- Document List:</em></strong><br>    The
+    Document List section lists all the documents created for the selected contract.
+    By clicking a Document the Transaction List will be populated with the    Transactions
+    for the selected Document. The first Document will be selected by default.<br>    <strong><em>-
+    Transaction List:</em></strong><br>    This section lists the Transactions for
+    the selected Document. By clicking a Transaction the Quantity details will be
+    listed in the Quantity Details    section.<br>    <strong><em>- Quantity Details:</em></strong><br>    This
+    section lists the four sets of quantities for the Transaction.</p><p>    <strong>Conversion
+    to all UOM sub-groups:</strong><br>    The Transaction Net Quantity numbers are
+    converted for reporting purposes to all UOM sub-groups using standard conversion
+    factors and/or inter-group    conversion factors. Conversions will not take place
+    if there are no conversion factors available. In this case the number will be
+    set to NULL in the    CONT_TRANSACTION_UOM table.</p><p>    <strong>The conversion
+    is done to the following units:</strong><br>    - Joule: 100MJ<br>    - British
+    Therms: THERMS<br>    - Watt Hours: KWH<br>    - Mass in Air: MT<br>    - Mass
+    in Vacuum: MTV<br>    - Mass in US Tonnes in Air: UST<br>    - Mass in US Tonnes
+    in Vacuum: USTV<br>    - Barrels Imperial: BBLS60<br>    - Barrels Metric: BBLS15<br>    -
+    Barrels of Oil Equivalents: BOE<br>    - Standard Cubic Feet: KSCF<br>    - Normal
+    Cubic Meters: MNCM<br>    - Standard Cubic Meters: MSCM</p>'
+related: {}

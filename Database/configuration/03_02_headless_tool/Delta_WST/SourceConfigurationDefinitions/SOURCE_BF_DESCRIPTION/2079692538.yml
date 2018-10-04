@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2079692538'
+keys:
+  BF_DESCRIPTION_NO: PO.0104
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0104
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/equipment_finder' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used to search among equipment. Further it can take you to Equipment business functions.</p>
+
+    <p>In the navigator, there is a free text field which is used as the search target string.</p>
+
+    <p>By default, EC shipped with search criteria on Code and Name, user can search for the right equipment objects where its Code and Name matched with the defined search target string.</p>
+
+    <p>The search is not case sensitive in this context and no wildcards needed.</p>
+
+    <p>In addition, EC also provides user with the flexibility to re-define the search criteria on other equipment attributes, such as CLASS_NAME. Search criteria can be reduced to a single attribute or can be increased to more than one attribute, but it has to be delimited with a keyboard character &ldquo;|&rdquo;, which is the vertical bar (or DOS pipe character).</p>
+
+    <p>The data section below will then list all equipment for the defined search criteria matched with (or like) the search target string.</p>
+
+    <p>By choosing the equipment, it will show you the active group models associated with the selected equipment object. After you selected the active group model, the third column will populate the group model relations with the objects and its value.</p>
+
+    <p>By selecting a related business function and pressing the &lsquo;Go to BF&rsquo; button, a new window will be opened with the navigator values pre-populated based on selected equipment.</p>
+related: {}

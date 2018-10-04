@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2098552241'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/EC_CODE_OBJECT
+parentKeys: {}
+properties:
+  BF_CODE: CD.0135
+  NAME: EC Code Object
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/EC_CODE_OBJECT
+related: {}

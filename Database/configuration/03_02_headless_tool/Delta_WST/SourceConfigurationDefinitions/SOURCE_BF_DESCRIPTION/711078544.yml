@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '711078544'
+keys:
+  BF_DESCRIPTION_NO: CO.0019
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/FCTY_CLASS_1/TARGET/FCTY_CLASS_1/CLASS_NAME/FCTY_CLASS_1' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>Facility class 1 is the first of two generic facility classes in EC. Facility class 1 is always used, while facility class 2 might not be used. Facility class 1 should represent facilities near the wells. It can be a steel jacket production facility, FPSO vessel, onshore area with processing capabilities or another area covering production wells. The objects of facility class 1 do not need to be real physical facilities, but they often are.</p>
+
+    <p>Access to data in EC is often controlled by facility class 1 objects. This is implemented in the group model navigator where staff for a facility only can access their own data. Facility class 1 is only included in the operational group model and not in the geographical group model. Above facility class 1 in the operational tree, we can typically find facility class 2, area or production unit. Below facility class 1 we will find wells, streams, tanks, pumps, compressors and other classes connected in the group model.</p>
+
+    <p>In addition to data for wells, streams and equipment, EC also stores data for personnel onboard, environmental events, chemical consumption, weather, health safety and environment, alarms and operational comments for objects of facility class 1. Therefore facility class 1 can be seen as a very important class in EC. It is a mandatory class that cannot be removed.</p>
+related: {}

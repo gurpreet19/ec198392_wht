@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-792662814'
+keys:
+  BF_DESCRIPTION_NO: RC.0054
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RC.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/prod_group_setup/CLASS_NAME/PRODUCT_GROUP/DATA_CLASS/PRODUCT_GROUP_SETUP/NAVMODEL/PROD_GROUP_SETUP/TARGET/PRODUCT_GROUP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Product Group Setup screen</strong>    is used to connect Products to a Product Group.</p><p>    - Each Product will have a <strong><em>Start Date</em></strong> from which the connection is valid.<br>    - Each connection can also have an <strong><em>End Date</em></strong> from which the connection is no longer valid.<br>    - The <strong><em>Sort Order</em></strong> defines the sorting of the Products when listed in the Royalty Contract screen (BF RC.0059).</p>
+related: {}

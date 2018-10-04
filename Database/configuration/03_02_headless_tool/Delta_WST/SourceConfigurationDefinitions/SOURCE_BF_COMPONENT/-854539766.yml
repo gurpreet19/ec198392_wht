@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-854539766'
+keys:
+  BF_CODE: CO.1027
+  T: BF_COMPONENT
+  URL: /manage_object_nav_nav
+parentKeys: {}
+properties:
+  BF_CODE: CO.1027
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1027' AND NVL(URL,'IS_NULL') = '/manage_object_nav_nav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCTION_DAY' )
+  CLASS_NAME: PRODUCTION_DAY
+  COMP_CODE: manage_object_nav_nav
+  NAME: Manage Object Navigator
+  SIGNING_REQ_IND: null
+  URL: /manage_object_nav_nav
+related: {}

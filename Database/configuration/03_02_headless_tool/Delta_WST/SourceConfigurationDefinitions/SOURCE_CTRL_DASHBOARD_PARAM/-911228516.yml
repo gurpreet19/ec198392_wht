@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-911228516'
+keys:
+  NAME: RowYColName
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: REVN_INV_CNT_ALL
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: null
+  MANDATORY_IND: null
+  NAME: RowYColName
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: INV_COUNT
+  RESOLVE_TYPE: null
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: REVN_INV_CNT_ALL
+related: {}

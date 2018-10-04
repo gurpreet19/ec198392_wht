@@ -1,0 +1,111 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1454819093'
+keys:
+  BF_DESCRIPTION_NO: CD.0024
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Calendar screen</strong> is used for managing    the
+    Calendar functionality in EC Revenue, including defining default    business days
+    of the week and recurring holidays.    <br>    The Calendar BF is also managing
+    the instantiated calendar for a given    year.</p><p>    EC has functionality
+    for automatically determining dates for Document Date,    Document Received Date,
+    and Payment Date for the Financial Documents. In    case the determination of
+    such dates involves Business Days vs Holidays    then EC requires that there is
+    a Calendar for defining each date of the    year as a Business Day or a Holiday.</p><p>    The
+    screen is organized with these key components:<br>    - Navigator    <br>    -
+    List of Calendar objects    <br>    - Tabs for Calendar Object / Recurring Holidays
+    / Calendar Setup / Calendar    Usage</p><h2>    <strong style="color: rgb(0, 0,
+    153);">Navigator</strong></h2><p>    Navigator settings allow a user to define
+    the search criteria for Calendar    and list them in the table below:</p><p>    <u>Navigator
+    has one selection option:</u></p><p>    <strong>1. Date </strong>    - Auto-filled
+    with the current date.    <br>    When pressing the Go button all Calendar object
+    being valid for the    selected date will be listed in the Calendar List section</p><h3>    <strong
+    style="color: rgb(0, 0, 153);">Calendar List Section</strong></h3><p>    This
+    section displays all Calendars matching Navigator criteria. The list    is a standard
+    EC table supporting features like filtering, searching,    paging, etc.</p><h2>    <strong
+    style="color: rgb(0, 0, 153);">Tab Calendar</strong></h2><p>    This tab is used
+    to create a new Calendar object or to amend an existing    one. The user can also
+    create new versions of the Calendar in this tab.</p><p>    <u>Creating a new Calendar
+    Object will have these columns/attributes:</u></p><p>    <strong>1. Calendar Code
+    - </strong>    Mandatory    <br>    This is the code of the Calendar. Must be
+    unique.</p><p>    <strong>2. Calendar Name -</strong>    Mandatory    <br/>    This
+    is the name the Calendar. Should be unique.</p><p>    <strong>3. Start Date -
+    </strong>    Mandatory    <br/>    This is the date Calendar is valid from.</p><p>    <strong>4.
+    End Date -</strong>    Optional    <br/>    This is the date Calendar is valid
+    to.</p><p>    <strong>5. Description -</strong>    Optional    <br/>    This is
+    a description of the Calendar object.</p><p>    <strong>6. Comment - </strong>    Optional    <br/>    This
+    is a comment for the Calendar object</p><p>    <strong>7. Checkboxes - </strong>    Optional    <br/>    One
+    checkbox for each day of the week to indicate the default Business Days    of
+    the week. This setting will be used when instantiating a calendar object    for
+    a year.</p><h2>    <strong style="color: rgb(0, 0, 153);">Tab Recurring Holidays</strong></h2><p>    This
+    tab allows for defining any recurring holidays that applies to a given    Calendar.
+    The user can specify recurring holidays using a fixed month/date,    OR based
+    on a date function for moving recurring holidays such as Easter.</p><p>    <u>Creating
+    a new recurring holiday will have these columns/attributes:</u></p><p>    <strong>1.
+    Holidays and Observations - </strong>    Mandatory    <br/>    A very brief description
+    of the holiday. E.g. New Year Day, Good Friday,    etc.    <br/>    This text
+    will be shown as a tooltip text when hoovering over the date in    the Calendar
+    Setup tab.</p><p>    <strong>2. Fixed Date Holiday - Month - </strong>    Optional    <br/>    Determines
+    the Month of a recurring holiday that is in the same month every    year.</p><p>    <strong>3.
+    Fixed Date Holiday - Day - </strong>    Optional    <br/>    Determines the Day
+    of the month of a recurring holiday that is in the same    date every year.</p><p>    <strong>4.
+    Date Function - </strong>    Optional    <br/>    This allows for selecting a
+    date function supporting moving, recurring    holidays. The date functions available
+    are:</p><ol>    <li>        Easter Sunday    </li>    <li>        Easter Monday    </li>    <li>        Maundy
+    Thursday    </li>    <li>        Good Friday    </li>    <li>        Whit Sunday    </li>    <li>        Whit
+    Monday    </li>    <li>        Ascension Day    </li></ol><p>    <strong>5. Comment
+    -</strong>    Optional    <br/>    This is a comment for the Recurring holiday.</p><p>    The
+    observations and holidays that we add here will be reflected in the    Calendar
+    Setup Tab when instantiating the calendar for a new year.</p><h2>    <strong style="color:
+    rgb(0, 0, 153);">Tab Calendar Setup</strong></h2><p>    This tab allows for instantiating
+    a calendar for a new year as well as    managing Business Days, Holidays, and
+    Holidays and Observances for a given    calendar year.</p><p>    When entering
+    the tab EC will by default show the calendar for the year    that is selected
+    in the Date field of the Navigator. If the selected    calendar has not been instantiated
+    for the year given by the navigator    date, then the year closest to the navigator
+    date will be shown.</p><p>    The tab has these data elements:</p><p>    Dropdown
+    <strong>Select Year to Show - </strong>This dropdown lists all the    years the
+    selected calendar has been instantiated for.</p><p>    <strong>Button <span style="color:
+    rgb(0, 153, 0);">Show </span></strong> <br>A view of a full calendar year for
+    the year selected in the    ''Select Year to Show'' dropdown will be shown in
+    Calendar widget when    clicking this button.</p><p>    Dropdown <strong>Add Year
+    to Calendar - </strong>Dropdown for selecting a    year to instantiate the selected
+    calendar.</p><p>    <strong>Button <span style="color: rgb(0, 153, 0);">Generate
+    </span></strong> <br>The Calendar is instantiated for the year selected in the    ''Add
+    Year to Calendar'' dropdown.</p><p>    Date field  <strong>Selected Date </strong>
+    - This date field shows the date selected in the    Calendar widget. This date
+    will be updated when clicking a date in the    Calendar widget.</p><p>    <strong>Button
+    <span style="color: rgb(0, 153, 0);">Set to Holiday </span></strong> <br>This
+    button will set the date given by the Selected    Date as a Holiday.</p><p>    <strong>Button
+    <span style="color: rgb(0, 153, 0);">Set to Business Day </span></strong> <br>This
+    button will set the date given by the    Selected Date as a Business Day.</p><p>    <strong>Text
+    field Holidays and Observances</strong> - This field allows for adding a new    ''Holidays
+    and Observances'' entry to the calendar for the date given by the    Selected
+    Date.</p><p>    <strong>Button <span style="color: rgb(0, 153, 0);">Create </span></strong><br>
+    This button will add the new ''Holidays and Observances''    entry to the calendar
+    for the date given by the Selected Date. If there is    already an existing ''Holidays
+    and Observances'' entry for the selected date    then an error message is displayed
+    and the user is informed to make any    changes to an exiting ''Holidays and Observances''
+    entry at the bottom    section of the screen</p><h3>    <strong style="color:
+    rgb(0, 0, 153);">Calendar Widget Section</strong></h3><p>    This sections shows
+    the instantiated calendar for a given year.    <br>    <u>The color coding is
+    as follows:</u></p><p>    - Black text for the date: This is a Business Day.    <p/><p>    -
+    Red text for the date: This is a Holiday.    <p/><p>    - Light blue background:
+    This date has a ''Holidays and Observances'' entry.    The ''Holidays and Observances''
+    entry is shown as a tooltip when hoovering    over the date.     <p/><p>    -
+    Green background: Selected date with no Holidays and Observances'' entry.     <p/><p>    -
+    Red border around the date: This is the Selected Date.</p><h3>    <strong style="color:
+    rgb(0, 0, 153);">Holidays and Observation Section</strong></h3><p>    The list
+    of Holidays and Observances for the calendar are displayed here.    The user can
+    update or delete entries here. For adding entries, please see    the ''Text field
+    Holidays and Observances'' above.</p><h2>    <strong style="color: rgb(0, 0, 153);">Tab
+    Calendar Usage</strong></h2><p>    This is used to see in which Calendar Collection
+    the selected Calendar is    used. A single calendar can be used in multiple calendar
+    collections. Thus,    here we may find multiple rows of data. Inserting new data
+    here is not    possible.</p>'
+related: {}

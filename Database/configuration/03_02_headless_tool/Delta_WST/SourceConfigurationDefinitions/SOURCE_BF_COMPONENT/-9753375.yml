@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-9753375'
+keys:
+  BF_CODE: GD.0008
+  T: BF_COMPONENT
+  URL: /tranfact
+parentKeys: {}
+properties:
+  BF_CODE: GD.0008
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0008' AND NVL(URL,'IS_NULL') = '/tranfact')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/monthly_transport_factors' )
+  CLASS_NAME: TCTR_MTH_DP_TRAN_FACTOR
+  COMP_CODE: tranfact
+  NAME: Transport Factors
+  SIGNING_REQ_IND: null
+  URL: /tranfact
+related: {}

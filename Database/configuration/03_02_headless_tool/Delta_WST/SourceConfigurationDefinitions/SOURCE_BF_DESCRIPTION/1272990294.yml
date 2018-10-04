@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1272990294'
+keys:
+  BF_DESCRIPTION_NO: FC.0010
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FC.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to create and maintain forecast objects.</p><p>This business functions works in a similar way as other maintain object business functions. The only difference is the button which can be used to copy data from&nbsp;other forecasts.</p><p>Copy From Forecast:<br />This button copies data from an existing forecast into the new forecast. This means that if the start date and end date of the two forecasts don&rsquo;t overlap, no data will&nbsp;be copied.</p><p>Note that the above button implementation are an example implementation and can be changed in user exists for different implementation projects.</p>
+related: {}

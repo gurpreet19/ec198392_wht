@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1416423726'
+keys:
+  KEY: /com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD/nav_model/defaultvalue/TODATE
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: NAV_DEF_VALUE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: TOMORROW
+  DESCRIPTION: Default values in nav model for Date in navigators
+  KEY: /com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD/nav_model/defaultvalue/TODATE
+  LABEL: Default values in nav model for Date in navigators
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1856475578'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/fcst_nomination_split
+parentKeys: {}
+properties:
+  BF_CODE: CP.0073
+  NAME: Nomination Split
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/fcst_nomination_split
+related: {}

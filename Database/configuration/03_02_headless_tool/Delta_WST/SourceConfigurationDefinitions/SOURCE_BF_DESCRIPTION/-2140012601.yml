@@ -1,0 +1,70 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2140012601'
+keys:
+  BF_DESCRIPTION_NO: PA.0004
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PA.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/process_overview' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>The main purpose of this screen is to provide an overview of all
+    process instances including active, aborted and completed. It consists of four
+    sections: a list providing overview info of each process instance, a graphical
+    representation of a selected process instance and its progress, a detailed section
+    providing info for each node in the process instance, and an extra data panel
+    for presenting other process related data.&nbsp;</p><p>The instance list section
+    includes the following information for each instance: Instance ID, the overall
+    State of the process, Process Template / Definition used to create the instance,
+    Start / End (Execution period). The State field is common for all process instances
+    and has one of the following values: active, aborted, completed.</p><p>As there
+    might be quite a lot of process instances the list can be filtered in several
+    ways. It is possible to filter by execution time, process template and/or date
+    parameters given into the instance. Typically processes are executed at a different
+    time than the period context it uses for data reading and data manipulation. For
+    example an allocation process can be run the first of month manipulating data
+    for the previous month. If the previous month time period is assigned to the process
+    by an input parameter named START_OF_CALC, this parameter can be selected in the
+    Date param dropdown. The list will then display all process instances with the
+    input parameter START_OF_CALC between the selected From Date and To Date in the
+    navigator. The selected input parameter will be added as a property to the list
+    and process instances are sorted by this property.</p><p>If full privileges are
+    granted to the user, this screen will also provide the possibility to manipulate
+    the process instance with the following actions:</p><ul><li>Abort Process: Terminate
+    the execution of a process. The process instance will finish execution of the
+    current active action (if any) and set the state to aborted. Note that this action
+    is irreversible and only an active instance can be aborted.</li><li>Delete Process:
+    Delete process instance and remove all BPM logs related to this process. Note
+    that only aborted and completed process instances can be deleted. This action
+    is irreversible but it will not manipulate data created by delegating actions.</li></ul><p>An
+    interactive graphical representation will display when a process instance is selected.
+    It shows the execution overview of the process instance. The diagram can be moved
+    and zoomed in/out for better viewing.&nbsp;</p><p>The right panel shows detail
+    information about the process instance. The DETAIL tab by default shows information
+    about the process such as the process id, deployment id etc, when a node in the
+    diagram is clicked, the DETAIL tab shows the node information. The VARIABLE tab
+    lists variables on the selected node instance/process instance. Variables that
+    hold data sets are annotated with icon before its name. To view all data sets
+    generated in the selected process instance, select "All Items". The section below
+    the variable list displays all data sets held by the selected variable. The data
+    set can be downloaded or viewed by clicking the buttons under this section. Note
+    that not all variables in the selected node/process instance are listed. To include
+    a variable in this section, it must be assigned with a label. Label assignation
+    can be done by calling ECBPM In-Process API from a node''s On-Entry Script or
+    On-Exit Script. The TASK tab by default shows all available tasks of current process
+    instance, when a user task node is clicked, the TASK tab will show the specific
+    task related to this node. There is a button in the TASK tab which navigates to
+    the TO DO LIST screen for further processing the task. The LOGS on the right panel
+    shows process event logs and node property details. The details will provide information
+    about the impact the node has had on the process instance. The content will differ
+    based on the type of node and the actions the node execute; a start node is part
+    of the initialization of the instance and will display all input variables to
+    the process, a node executing a business action will typically show the result
+    of the business action and the output variables configured to be applied to the
+    context of the process instance. Certain return values/properties may connect
+    additional resources. For example the calculation business action will expose
+    a link to a detailed calculation log.</p><p><br></p><p>The Extra section is designed
+    for user to present concerned data which might be affected by the process instance.
+    The configuration of this section is done on Process Overview Configuration Screen.&nbsp;</p>'
+related: {}

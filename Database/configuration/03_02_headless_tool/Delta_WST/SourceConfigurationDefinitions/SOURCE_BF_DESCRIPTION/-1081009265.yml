@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1081009265'
+keys:
+  BF_DESCRIPTION_NO: PO.0093
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0093
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_strm_ownership_adj' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen is used to keep stock adjustment on a monthly basis. The screen consists of one section. The navigator is mandatory up to stream. Profit Centre dropdown in the navigator is optional.</p>
+
+    <p>All streams that should be available in this screen must be added to the stream set PO.0093 with label &lsquo;Monthly Stream Ownership Adjustment&rsquo;.</p>
+
+    <p>The screen allows manual insertion. When inserting an adjustment, the company drop down will be dependent on the profit centre entered.</p>
+related: {}

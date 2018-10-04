@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291513970'
+keys:
+  CODE: PO.0113
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PO.0113
+  NAME: Daily LNG Stream Status, by Stream
+related: {}

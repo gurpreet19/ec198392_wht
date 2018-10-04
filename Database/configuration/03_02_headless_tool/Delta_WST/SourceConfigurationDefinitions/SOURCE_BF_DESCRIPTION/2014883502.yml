@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2014883502'
+keys:
+  BF_DESCRIPTION_NO: CO.2008
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/ANALYSIS_ITEM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen allows the user to configure analysis items. These analysis items can be connected to a hydrocarbon account (export quality). You can have more than&nbsp;one analysis item for a hydrocarbon component. The analysis items are again used to define product analysis items that are used to instantiate cargo analysis items.</p><p>If hydrocarbon component is set, the analysis item will appear in the component analysis section in Cargo Analysis screen. For more information about that screen&nbsp;please see TO-0006 Cargo Analysis specification.</p>
+related: {}

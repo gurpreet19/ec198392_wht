@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1147587652'
+keys:
+  BF_CODE: CO.0228
+  T: BF_COMPONENT
+  URL: /ext_loc_conn
+parentKeys: {}
+properties:
+  BF_CODE: CO.0228
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0228' AND NVL(URL,'IS_NULL') = '/ext_loc_conn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/fcty_ext_location_conn' )
+  CLASS_NAME: FCTY_EXT_LOCATION_CONN
+  COMP_CODE: ext_loc_conn
+  NAME: Ext Loc Connection
+  SIGNING_REQ_IND: null
+  URL: /ext_loc_conn
+related: {}

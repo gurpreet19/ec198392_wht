@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1614808887'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/FIELD
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/FIELD
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

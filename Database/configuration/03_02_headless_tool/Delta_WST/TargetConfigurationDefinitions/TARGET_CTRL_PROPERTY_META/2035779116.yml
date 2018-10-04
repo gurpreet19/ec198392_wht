@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2035779116'
+keys:
+  KEY: /com/ec/eccommon/genericmodel/navigator/SO2_SCRUBBER
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: GROUP_MODEL_TYPE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: operational
+  DESCRIPTION: Group Model type to be applied on So2 Scrubber navigators
+  KEY: /com/ec/eccommon/genericmodel/navigator/SO2_SCRUBBER
+  LABEL: Group Model Type - So2 Scrubber
+  LIST_OF_VALUES: PopupURL=/FrontController/com.ec.frmw.co.screens/group_model_type_popup;PopupReturnColumn=1;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.GROUP_TYPE
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2034843025'
+keys:
+  ATTRIBUTE_TYPE: DEL_DOC_W_DOCNUM
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: Y
+  ATTRIBUTE_TYPE: DEL_DOC_W_DOCNUM
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Indicates if it is allowed to delete document with Invoice Number assigned, Options are Y | N.
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

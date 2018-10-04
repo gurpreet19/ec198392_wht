@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '233040853'
+keys:
+  BF_CODE: SP.0057
+  T: BF_COMPONENT
+  URL: /data_extract_log
+parentKeys: {}
+properties:
+  BF_CODE: SP.0057
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0057' AND NVL(URL,'IS_NULL') = '/data_extract_log')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cont_summary_year' )
+  CLASS_NAME: REVN_SUMMARY_PC_LOG
+  COMP_CODE: data_extract_log
+  NAME: Data Extract Log
+  SIGNING_REQ_IND: null
+  URL: /data_extract_log
+related: {}

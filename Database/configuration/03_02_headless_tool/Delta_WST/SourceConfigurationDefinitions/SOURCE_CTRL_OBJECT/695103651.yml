@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '695103651'
+keys:
+  OBJECT_NAME: OBJECTS_TABLE
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: N
+  MATH: null
+  OBJECT_NAME: OBJECTS_TABLE
+  PINC_TRIGGER_IND: N
+  VIEW_PK_TABLE_NAME: null
+related: {}

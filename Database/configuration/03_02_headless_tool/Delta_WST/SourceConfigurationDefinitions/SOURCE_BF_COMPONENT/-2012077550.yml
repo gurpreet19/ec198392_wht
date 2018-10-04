@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2012077550'
+keys:
+  BF_CODE: TO.0006
+  T: BF_COMPONENT
+  URL: /search
+parentKeys: {}
+properties:
+  BF_CODE: TO.0006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0006' AND NVL(URL,'IS_NULL') = '/search')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_analysis' )
+  CLASS_NAME: TERM_OPERATION_NAVIGATOR
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /search
+related: {}

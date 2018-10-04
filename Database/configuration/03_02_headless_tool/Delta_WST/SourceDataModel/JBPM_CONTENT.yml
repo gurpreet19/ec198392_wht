@@ -1,0 +1,36 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_CONTENT
+cnstPrimaryKey:
+  columns:
+  - ID
+  name: SYS_C008633
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CONTENT:
+    columnName: CONTENT
+    typeName: BLOB
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  ID:
+    columnName: ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

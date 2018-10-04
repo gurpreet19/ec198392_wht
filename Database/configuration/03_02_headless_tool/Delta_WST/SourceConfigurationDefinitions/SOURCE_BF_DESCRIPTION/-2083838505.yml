@@ -1,0 +1,26 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2083838505'
+keys:
+  BF_DESCRIPTION_NO: WR.0064
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0064
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This Business Function is part of the Business Process to gather and QA sub daily well data. It should be used when SCADA systems provide records each 2nd hour / hourly / 30min or other fixed intervals.</p>
+
+    <p>This screen was built based on the further improvements from the existing screen [Sub Daily Production Well Status 1] (WR.0009), the existing [Sub Daily Production Well Status 1] was renamed to [Sub Daily Production Well Status 1 &ndash; by Well].</p>
+
+    <p>The improvements include the Navigator [From Date], [To Date] and the [Well Hookup &amp; Well] Object is optional in the Navigator. However, the [Generate Missing Rows] button is not available in this screen as this was built for single date use only. Therefore, the [Generate Missing Rows] should be performed in the [Sub Daily Production Well Status 1 &ndash; by Well] screen only.</p>
+
+    <p>The improvements are also made available in the data section, the [Well Name] is editable in Insert Mode allowing user to choose the right Well object when the Navigator Well object is omitted. The [Time hh:mm] column has been changed to [Daytime] format to facilitate the display of meaningful daytime information when user tried to browse for the records more than a single date.</p>
+
+    <p>The event handling of &ldquo;Aggregate Current&rdquo; button was changed to adopt the use of the optional Navigator Well object, so the &ldquo;Aggregate Current&rdquo; button will aggregate all sub-daily production well data for the day based on the fetched well name in the data section.</p>
+
+    <p>Similar event handling applied to the &ldquo;Aggregate Facility All&rdquo; button as well, it will aggregate all sub-daily production well data for all wells for the day based on the fetched well object&rsquo;s facility in the data section and calculate the Theoretical Oil for all wells belonging to the selected facility.</p>
+
+    <p>In addition to the columns shown on the sample screen below, the customer may select to configure and display one or more additional columns, e.g. Prod Casing Pressure, Intermediate Casing Pressure, Surface Casing Pressure, Flow Line Temperature or Pressure after Fixed Choke and Pressure after Variable Choke.</p><p>The attribute &quot;On Test&quot; gives an indication whether or not a well is currently on test and this is only applicable for wells configured in PT.0005:Production Test Define.</p>
+related: {}

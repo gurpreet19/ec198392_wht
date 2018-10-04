@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '466396162'
+keys:
+  BF_DESCRIPTION_NO: CO.0093
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0093
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/maintain_meter_run_orifice_plate' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic maintain screen; see description of generic maintain screens in the beginning of the configuration manual.</p>
+
+    <p>A stream using AGA calculations must be connected to a meter run and to an orifice plate. Meter runs and Orifice plates are separate objects. This BF will have two attributes, one to link meter run and one to link orifice plate.</p>
+
+    <p>Daytime is an effective date. Only streams having connection to the AGA BF should be listed in the navigator. Meter Runs and Orifice Plates are logical objects and can be connected to many different streams at the same point in time.</p>
+related: {}

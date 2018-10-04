@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2135350035'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/document_validation/MODE/VALID2
+parentKeys: {}
+properties:
+  BF_CODE: SP.0003
+  NAME: Document Valid2
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/document_validation/MODE/VALID2
+related: {}

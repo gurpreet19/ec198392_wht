@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2117637929'
+keys:
+  ATTRIBUTE_TYPE: MOVE_TO_LONG_TERM
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: MOVE_ONLY
+  ATTRIBUTE_TYPE: MOVE_TO_LONG_TERM
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: 'Valid choices : COPY_MOVE, MOVE_ONLY - Indicates behaviour of Move
+    to Long term button in PD.0001.02 and PD.0002.02'
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

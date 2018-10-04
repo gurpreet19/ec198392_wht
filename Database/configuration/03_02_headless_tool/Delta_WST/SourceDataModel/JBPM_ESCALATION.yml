@@ -1,0 +1,73 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_ESCALATION
+cnstPrimaryKey:
+  columns:
+  - ID
+  name: SYS_C008653
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  DEADLINE_ESCALATION_ID:
+    columnName: DEADLINE_ESCALATION_ID
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  ID:
+    columnName: ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  NAME:
+    columnName: NAME
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+cnstForeignKeys:
+  FK_JBPM_ESCALATION_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_DEADLINE
+    columns:
+      DEADLINE_ESCALATION_ID: ID
+    name: FK_JBPM_ESCALATION_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_ESCALATION_ID:
+    indexName: IDX_ESCALATION_ID
+    columns:
+    - DEADLINE_ESCALATION_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

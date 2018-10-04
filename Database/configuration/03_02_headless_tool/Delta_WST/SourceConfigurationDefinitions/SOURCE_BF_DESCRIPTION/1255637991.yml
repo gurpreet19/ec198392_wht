@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1255637991'
+keys:
+  BF_DESCRIPTION_NO: SD.0048
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/period_dp_np_data/CLASS1/SLNP_DAY_NOMINATION/CLASS2/SLNP_DAY_NOMINATION/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0048' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function contains two data sections. The first section will display all nomination points for the Delivery Point selected in the navigator. When selecting one Nomination Points, the second data section will be populated will all nomination points for the same contract as was selected in the first data section.</p><p>The class to use in this screen will be given in as a parameter on the treeview url. In the product the same class will be used for both data sections, only the filtering will be different. Projects can choose to implement other classes if required.</p><p>See SD.0042 - Daily Sales Nomination for more information on the nominations.</p>
+related: {}

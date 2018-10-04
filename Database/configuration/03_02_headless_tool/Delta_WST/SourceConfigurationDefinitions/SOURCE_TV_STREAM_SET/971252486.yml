@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '971252486'
+keys:
+  CODE: PO.0056_U
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PO.0056_U
+  NAME: Truck Ticket - Single Load Multiple Offload,Unload
+related: {}

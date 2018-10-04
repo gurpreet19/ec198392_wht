@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-281111830'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/SPLIT_ITEM_OTHER
+parentKeys: {}
+properties:
+  BF_CODE: CD.0017
+  NAME: Split Item Other
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/SPLIT_ITEM_OTHER
+related: {}

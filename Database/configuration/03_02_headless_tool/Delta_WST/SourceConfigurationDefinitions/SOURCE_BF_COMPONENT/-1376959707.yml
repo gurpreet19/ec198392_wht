@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1376959707'
+keys:
+  BF_CODE: SP.0029
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: SP.0029
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0029' AND NVL(URL,'IS_NULL') = '/table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/general_price_object/CLASS_NAME/PRICE_OBJECT' )
+  CLASS_NAME: CNTR_GENERAL_PRICE_SETUP
+  COMP_CODE: general_price_usage_table
+  NAME: General Price Usage - Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

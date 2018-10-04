@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1857395237'
+keys:
+  BF_DESCRIPTION_NO: PO.0039
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/gas_processing_restrictions' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>&nbsp;</p>
+
+    <p>The Gas Processing Restrictions screen may be used to input restricted capacity information. If agreed production was not reached one day due to equipment related issues, the actual capacity for that day can be registered connected to the equipment where the restriction was caused. There will be one record per day the restriction lasts.</p>
+
+    <p>The New Capacity number can either be a mass figure, volume, energy etc, it depends on the equipment it is registered on and will be shown in screen as read only. Each Gas Processing Equipment has a UOM. The New Capacity is registered per equipment object, which represent on which stage in the process the restriction occurred.</p>
+
+    <p>Data in this screen can be used as input to the allocation, which will calculate how the distribution that day is based on project specific calculation rules. The screen has no connection to deferment.</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '968817856'
+keys:
+  BF_CODE: CO.0131
+  T: BF_COMPONENT
+  URL: /msgDetail
+parentKeys: {}
+properties:
+  BF_CODE: CO.0131
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0131' AND NVL(URL,'IS_NULL') = '/msgDetail')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/schedule_history' )
+  CLASS_NAME: null
+  COMP_CODE: msgDetail
+  NAME: Message Detail
+  SIGNING_REQ_IND: null
+  URL: /msgDetail
+related: {}

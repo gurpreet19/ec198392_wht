@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1750185602'
+keys:
+  BF_CODE: CP.0015
+  T: BF_COMPONENT
+  URL: /search
+parentKeys: {}
+properties:
+  BF_CODE: CP.0015
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0015' AND NVL(URL,'IS_NULL') = '/search')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/mth_schedule_overview' )
+  CLASS_NAME: STORAGE_LIFT_NOM_OVERV
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /search
+related: {}

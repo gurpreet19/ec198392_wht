@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1592017728'
+keys:
+  BF_DESCRIPTION_NO: CO.0190
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0190
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/control_point_connection' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This BF is a configuration screen for connecting Action Triggers to either business actions or URLs. Business actions are typically actions executed from the Scheduler and can be configured in CO.0127. URLs on the other hand can address different components in a screen, e.g., a button. The URL is constructed using the business function as the first part, then the bf component and finally the bf component action.</p>
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '766254166'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.fc/fcst_price_value_liquid/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/LIQUID
+parentKeys: {}
+properties:
+  BF_CODE: FC.1007
+  NAME: Forecast Liquid Prices
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fc/fcst_price_value_liquid/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/LIQUID
+related: {}

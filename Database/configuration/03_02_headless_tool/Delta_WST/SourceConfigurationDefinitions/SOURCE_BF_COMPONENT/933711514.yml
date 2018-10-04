@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '933711514'
+keys:
+  BF_CODE: WR.0022
+  T: BF_COMPONENT
+  URL: /event_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0022
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0022' AND NVL(URL,'IS_NULL') = '/event_well_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_well_status' )
+  CLASS_NAME: WELL_EVENT
+  COMP_CODE: event_well_status
+  NAME: Surface
+  SIGNING_REQ_IND: null
+  URL: /event_well_status
+related: {}

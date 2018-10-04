@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1710633251'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/period_day_np_data_enddate/CLASS/SLNP_PERIOD_DEL_EVENT/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0047
+parentKeys: {}
+properties:
+  BF_CODE: SD.0047
+  NAME: Sales Gas Delivery Events
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/period_day_np_data_enddate/CLASS/SLNP_PERIOD_DEL_EVENT/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0047
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-998260546'
+keys:
+  BF_CODE: SP.0046
+  T: BF_COMPONENT
+  URL: /trace_value_button/SummaryListValue
+parentKeys: {}
+properties:
+  BF_CODE: SP.0046
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0046' AND NVL(URL,'IS_NULL') = '/trace_value_button/SummaryListValue')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cont_summary/ACCRUAL_IND/N' )
+  CLASS_NAME: SUMMARY_TRACING_HISTORY
+  COMP_CODE: btnTraceValue/SummaryListValue
+  NAME: trace_value_button/SummaryListValue1
+  SIGNING_REQ_IND: null
+  URL: /trace_value_button/SummaryListValue
+related: {}

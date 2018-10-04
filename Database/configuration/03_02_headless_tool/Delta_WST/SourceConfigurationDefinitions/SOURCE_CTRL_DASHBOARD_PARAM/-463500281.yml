@@ -1,0 +1,38 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-463500281'
+keys:
+  NAME: QUERY
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: REVN_DOC_CNT_DD_CO
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: null
+  MANDATORY_IND: null
+  NAME: QUERY
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: "\n<renderer>\n    <model class=\"com.ec.eccommon.genericmodel.model.web.GenericSqlModel\"\
+    >\n        <arg name=\"sqlXml\" value=\"data\" valuetype=\"subXml\">\n\t\t\t<data>\n\
+    \t\t\t  <sql>\n\t\t\t\tselect\n\t\t\t\t x.sort_order as SORT_ORDER,\n\t\t\t\t\
+    \ x.is_default as IS_DEFAULT,\n\t\t\t\t x.PERIOD_CHAR as PERIOD_CHAR,\n\t\t\t\t\
+    \ x.period_date as PERIOD_DATE,\n\t\t\t\t x.DOC_COUNT as DOC_COUNT,\n\t\t\t\t\
+    \ x.status as STATUS,\n\t\t\t\t x.dash_header as DASH_HEADER,\n\t\t\t\t x.inc_booked\
+    \ as INC_BOOKED\n\t\t\t\tfrom V_DASH_DOC_CNT_DD_CO x\n\t\t\t\twhere x.PERIOD_DATE\
+    \ &gt;= trunc(to_date('$FROMDATE$', 'YYYY-MM-DD\"T\"hh24:mi:ss'),'MM')\n\t\t\t\
+    \tand x.PERIOD_DATE &lt;  trunc(to_date('$TODATE$', 'YYYY-MM-DD\"T\"hh24:mi:ss'),'MM')\n\
+    \t\t\t\tand x.CO_ID = '$COMPANY$'\n\t\t\t\tand '$INCL_BOOKED$' = 'Y'\n\t\t\t\t\
+    union all\n\t\t\t\tselect\n\t\t\t\t x.sort_order as SORT_ORDER,\n\t\t\t\t x.is_default\
+    \ as IS_DEFAULT,\n\t\t\t\t x.PERIOD_CHAR as PERIOD_CHAR,\n\t\t\t\t x.period_date\
+    \ as PERIOD_DATE,\n\t\t\t\t x.DOC_COUNT as DOC_COUNT,\n\t\t\t\t x.status as STATUS,\n\
+    \t\t\t\t x.dash_header as DASH_HEADER,\n\t\t\t\t x.inc_booked as INC_BOOKED\n\t\
+    \t\t\tfrom V_DASH_DOC_CNT_DD_CO x\n\t\t\t\twhere x.PERIOD_DATE &gt;= trunc(to_date('$FROMDATE$',\
+    \ 'YYYY-MM-DD\"T\"hh24:mi:ss'),'MM')\n\t\t\t\tand x.PERIOD_DATE &lt;  trunc(to_date('$TODATE$',\
+    \ 'YYYY-MM-DD\"T\"hh24:mi:ss'),'MM')\n\t\t\t\tand x.CO_ID = '$COMPANY$'\n\t\t\t\
+    \tand x.inc_booked = 'N'\n\t\t\t\tand '$INCL_BOOKED$' = 'N'\n\t\t\t  </sql>\n\t\
+    \t\t</data>\n        </arg>\n    </model>\n</renderer>"
+  RESOLVE_TYPE: null
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: REVN_DOC_CNT_DD_CO
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1426050049'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.fc/fcst_qty_value_gpurch/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_PURCHASE
+parentKeys: {}
+properties:
+  BF_CODE: FC.1012
+  NAME: Forecast Gas Purchase Quantities
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fc/fcst_qty_value_gpurch/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_PURCHASE
+related: {}

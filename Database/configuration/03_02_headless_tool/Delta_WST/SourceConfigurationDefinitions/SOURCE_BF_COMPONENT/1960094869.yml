@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1960094869'
+keys:
+  BF_CODE: CO.1032
+  T: BF_COMPONENT
+  URL: /deleteVersion_button
+parentKeys: {}
+properties:
+  BF_CODE: CO.1032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1032' AND NVL(URL,'IS_NULL') = '/deleteVersion_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/object_validation/GROUP_MODEL/operational' )
+  CLASS_NAME: null
+  COMP_CODE: deleteVersion_button
+  NAME: Delete Version
+  SIGNING_REQ_IND: null
+  URL: /deleteVersion_button
+related: {}

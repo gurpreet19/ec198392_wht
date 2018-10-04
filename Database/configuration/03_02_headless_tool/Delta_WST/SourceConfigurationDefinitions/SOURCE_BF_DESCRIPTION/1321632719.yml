@@ -1,0 +1,188 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1321632719'
+keys:
+  BF_DESCRIPTION_NO: PP.0061
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_scenarios_analysis/CLASS_NAME_ANALYSIS_1/FCST_SCENARIO_ANALYSIS/CLASS_NAME_ANALYSIS_2/FCST_ANALYSIS_COMMENT/CLASS_NAME_ANALYSIS_3/FCST_ANALYSIS_DOCUMENTS/CLASS_NAME_VARIABLE_1/FCST_SUMM_VAR_CPR/CLASS_NAME_VARIABLE_2/FCST_SUMM_VAR_MTH_CPR/CLASS_NAME_VARIABLE_3/FCST_SUMM_VAR_DAY_CPR/CLASS_NAME_PHASE_1/FCST_SUMM_PHASE_CPR/CLASS_NAME_PHASE_2/FCST_SUMM_PHASE_MTH_CPR/CLASS_NAME_PHASE_3/FCST_SUMM_PHASE_DAY_CPR/CLASS_NAME_EVENT_1/FCST_SUMM_REASON_CPR/CLASS_NAME_EVENT_2/FCST_SUMM_REASON_MTH_CPR/CLASS_NAME_EVENT_3/FCST_SUMM_REASON_DAY_CPR/CLASS_NAME_EVENT_DETAILS_1/FCST_SUMM_REASON_CPR/CLASS_NAME_EVENT_DETAILS_2/FCST_SUMM_EVENT_DETAILS/CLASS_NAME_EVENT_DETAILS_3/FCST_SUMM_EVENT_CHILD' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>This business function is used to display the analysis for a comparison\
+    \ object selected on the navigator. <br/>\n    Comparison object is defined in\
+    \ Forecast Define Scenarios to Compare(PP.0056).</p>\n    <p>The business function\
+    \ consists of five tabs as follows:</p>\n    <ol><li> Scenario Analysis</li> <li>\
+    \ Details Per Variable</li><li> Details Per Phase</li><li> Events Per Category</li><li>\
+    \ Event Details </li></ol><br/>\n    <h><b>1. <u>SCENARIO ANALYSIS</u></b></h><p>This\
+    \ business function is used to display the calculated analysis for a comparison\
+    \ defined in PP.0056:Forecast Define Scenarios to Compare.</p>\n    <p>Currently,\
+    \ the screen has a tab - SCENARIO ANALYSIS and it is divided into the following\
+    \ data sections:</p>\n    <p><b>Analysis Result</b></p>\n    <p>This data section\
+    \ will filter analysis result for each component and phase based on the selected\
+    \ Analysis Type and Comparison.</p>\n    <p> There is a dependency between the\
+    \ analysis and the components filtered and the calculation should check the dependency\
+    \ prior to inserting the results in FCST_SCENARIO_ANALYSIS table.</P>\n    <p>The\
+    \ analysis type is maintained as EC Codes (CO.1011) and the code type is &quot;FCST_SCENARIO_ANALYSIS_TYPE&quot;</p>\n\
+    \    <p>The components  are defined as EC Codes (CO.1011). To configure the list\
+    \ of codes, go to EC Codes - All Screen -> Select Code Type=&quot;FCST_COMPONENT_ANALYSIS&quot;\
+    \ -> Configure Code as required. Please remember to build the dependency between\
+    \ these two EC Codes.</p>\n    <p> The available phases are Oil, Gas, Water, Condensate,\
+    \ Gas Lift, Diluent, Gas Injection, Water Injection, Steam Injection and CO2 Injection.</p>\n\
+    \    <p> The UPDATE ANALYSIS button calls ecdp_forecast_prod.calculateanalysis\
+    \ procedure to recalculate the analysis results.</p>\n    <p><b> Analysis Comments\
+    \ </b> </p>\n    <p> This data section is used to add comments for the selected\
+    \ analysis type.</p>\n    <p><b> Analysis Documents </b> </p>\n    <p> This data\
+    \ section is used to attach and view the documents the selected analysis type.</p>\n\
+    \t<p>The supported file upload formats can be configured by using the system property\
+    \ &quot;Forecast Scenarios Analysis Allowed File Extensions&quot; in Maintain\
+    \ System Settings (CO.1006). Allowed file extensions need to be listed as comma\
+    \ separated values (eg. .docx,.pdf). Setting the value .* will allow all file\
+    \ extensions to be uploaded. This is also the default value.</p>\n\t<BR/><h><b>2.\
+    \ <u>DETAILS PER VARIABLE</u></b></h>\n    <p>This tab displays the differences\
+    \ in average value between the scenarios for the selected variable and comparison\
+    \ object. The variables are as below:</p><br/>\n     - Potentials (Unconstrained\
+    \ and Constrained)<br/> - Constraints<br/> - Shortfalls (Planned, Unplanned and\
+    \ Non-operational)<br/>\n     - Injection<br/> - Internal Consumption<br/> - Losses<br/>\
+    \ - Compensation<br/> - Available for Export<br/>\n    <p>This tab consists of\
+    \ three sections as follows:</p>\n    <h><b>VALUES FOR THE SELECTED PERIOD</b><h>\n\
+    \    <p>This section displays the differences in average values of the abovementioned\
+    \ variables for the comparison object. <BR/>\n    The records will be filtered\
+    \ based on the From Month and To Month dates defined for the comparison object.</p>\n\
+    \    <P><h><b>MONTHLY VALUES FOR THE SELECTED VARIABLE</b></h></P>\n    <p>This\
+    \ section displays the differences in monthly average values for the selected\
+    \ variable in the &quot;Values for the Selected Period&quot; section for the comparison\
+    \ object. </p>\n    <P><h><b>DAILY VALUES FOR THE SELECTED VARIABLE AND MONTH</b></h></P>\n\
+    \    <p>This section displays the differences in daily values for the variable\
+    \ selected in the &quot;Monthly Values for the Selected Variable&quot; section\
+    \ for the comparison object.</p><br/><h><b>3. <u>DETAILS PER PHASE</u></b></h>\n\
+    \    <p>This tab displays the differences in average values between the scenarios\
+    \ for the selected phase and comparison object. The phases are as below:</p><br/>\n\
+    \     - Oil<br/> - Gas<br/> - Condensate<br/> - Water<br/> - Gas Lift<br/> - Diluent<br/>\
+    \ - Injection (Water, Gas, Steam, CO2)<br/>\n    <p>This tab consists of three\
+    \ sections as follows:</p>\n    <h><b>VALUES FOR THE SELECTED PERIOD</b><h>\n\
+    \    <p>This section displays the difference in average values of the above mentioned\
+    \ phases for the comparison object.<BR/>\n    The records will be filtered based\
+    \ on the From Month and To Month dates defined for the comparison object.</p>\n\
+    \    <P><h><b>MONTHLY VALUES FOR THE SELECTED VARIABLE</b></h></P>\n    <p>This\
+    \ section displays the difference in monthly average values of the phase selected\
+    \ in the &quot;Values for the Selected Period&quot; section for the comparison\
+    \ object. </p>\n    <P><h><b>DAILY VALUES FOR THE SELECTED VARIABLE AND MONTH</b></h></P>\n\
+    \    <p>This section displays the difference in daily values for the phase and\
+    \ month selected in &quot;Monthly Values for the Selected Phase&quot; section\
+    \ for the comparison object.</p><br/><h><b>4. <u>EVENTS PER CATEGORY</u></b></h>\n\
+    \    <p>This tab displays the difference of values between scenarios for the comparison\
+    \ object and Reason Code 1 defined in Forecast Deferment events (PP.0047). This\
+    \ tab consists of three sections as follows:</p>\n    <h><b>EVENTS PER CATEGORY\
+    \ FOR SELECTED PERIOD</b><h>\n    <p>This section displays the difference of values\
+    \ for aggregated losses of the Forecast Deferment events based on the Reason Code\
+    \ 1 for the comparison object. <br/>\n    The records will be filtered based on\
+    \ the From Month and To Month dates defined for the comparison object.\n    </p>\n\
+    \    <P><h><b>MONTHLY VALUES FOR THE SELECTED EVENT CATEGORY</b></h></P>\n   \
+    \ <p>This section displays the difference of values for monthly aggregated event\
+    \ loss based on Reason Code selected in the &quot;Events per Category for Selected\
+    \ Period&quot; section for the comparison object. </p>\n    <P><h><b>DAILY VALUES\
+    \ FOR THE SELECTED EVENT CATEGORY</b></h></P>\n    <p>This section displays the\
+    \ daily loss based on the Reason Code selected in &quot;Monthly Values for the\
+    \ Selected Event Category&quot; section for the comparison object.</p><br/><h><b>5.\
+    \ <u>EVENT DETAILS</u></b></h>\n    <p>As per the selected comparison object,\
+    \ this tab will display Forecast Deferment events (PP.0047) for the comparison\
+    \ object. The records will be filtered based on the From Month and To Month dates\
+    \ defined for the comparison object.<BR/>\n    It consists of an additional navigator\
+    \ and three data sections:\n    <ol><li> Events Per Category For Selected Period</li><li>Scenario\
+    \ Events for Scenario 1 and Scenario 2</li><li> Wells in Group</li></ol>\n   \
+    \ <p>The navigator in this tab consists of 6 additional non-mandatory fields -Event\
+    \ Reason Group, Reason Code, Object Type, Object, Well and Event Tag. These input\
+    \ will be used to filter the records in this data section.</p>\n    <p>This Wells\
+    \ in Group data section displays the Event Losses for Well(s) based on the Event\
+    \ selected in the section \"Events Details\". <br/>\n    Suggestion: In order\
+    \ to make it shorter and simple to read, we can place the statement clearly below\
+    \ to user.</p>\n    </p><center><h><b>CONFIGURATION</b></h></center>\n    <p>The\
+    \ functionality of this Business Function can be customized by plugging customized\
+    \ classes adhering to certain defined norms.</p>\n    <p>The default configuration\
+    \ for this Business Function is as follows:</p>\n    <p><b>/com.ec.prod.pp.screens/forecast_scenarios_analysis</b><br/>\n\
+    \    <b>/CLASS_NAME_ANALYSIS_1</b>/FCST_SCENARIO_ANALYSIS<br/><b>/CLASS_NAME_ANALYSIS_2</b>/FCST_ANALYSIS_COMMENT<br/><b>/CLASS_NAME_ANALYSIS_3</b>/FCST_ANALYSIS_DOCUMENTS<br/>\n\
+    \    <b>/CLASS_NAME_VARIABLE_1</b>/FCST_SUMM_VAR_CPR<br/><b>/CLASS_NAME_VARIABLE_2</b>/FCST_SUMM_VAR_MTH_CPR<br/><b>/CLASS_NAME_VARIABLE_3</b>/FCST_SUMM_VAR_DAY_CPR<br/>\n\
+    \    <b>/CLASS_NAME_PHASE_1</b>/FCST_SUMM_PHASE_CPR<br/><b>/CLASS_NAME_PHASE_2</b>/FCST_SUMM_PHASE_MTH_CPR<br/><b>/CLASS_NAME_PHASE_3</b>/FCST_SUMM_PHASE_DAY_CPR<br/>\n\
+    \    <b>/CLASS_NAME_EVENT_1</b>/FCST_SUMM_REASON_CPR<br/><b>/CLASS_NAME_EVENT_2</b>/FCST_SUMM_REASON_MTH_CPR<br/><b>/CLASS_NAME_EVENT_3</b>/FCST_SUMM_REASON_DAY_CPR<br/>\n\
+    \    <b>/CLASS_NAME_EVENT_DETAILS_1</b>/FCST_SUMM_REASON_CPR<br/>/CLASS_NAME_EVENT_DETAILS_2</b>/FCST_SUMM_EVENT_DETAILS<br/><b>/CLASS_NAME_EVENT_DETAILS_3</b>/FCST_SUMM_EVENT_CHILD<br/>?screentemplate=/com.ec.prod.pp.screens/forecast_scenarios_analysis<br/></p><p>The\
+    \ class configuration for all the data sections in the tabs are as follows:</p>\n\
+    \    <ol><li><b>CLASS_NAME_ANALYSIS_1</b>\n    <p>This class configuration is\
+    \ related to the section &quot;ANALYSIS RESULT&quot; in the tab &quot;SCENARIO_ANALYSIS&quot;.</p></li>\n\
+    \n    <li><b>CLASS_NAME_ANALYSIS_2</b>\n    <p>This class configuration is related\
+    \ to the section &quot;ANALYSIS COMMENTS&quot; in the tab &quot;SCENARIO_ANALYSIS&quot;.</p></li>\n\
+    \n    <li><b>CLASS_NAME_ANALYSIS_3</b>\n    <p>This class configuration is related\
+    \ to the section &quot;ANALYSIS DOCUMENTS&quot; in the tab &quot;SCENARIO_ANALYSIS&quot;.</p></li><p>The\
+    \ class configuration for all the data sections in the tabs are as follows:</p>\n\
+    \    <li><b>CLASS_NAME_VARIABLE_1</b>\n    <p>This class configuration is related\
+    \ to the section &quot;VALUES FOR THE SELECTED PERIOD&quot; in the tab &quot;DETAILS\
+    \ PER VARIABLE&quot;. This class is based on the view that provides the difference\
+    \ of values for all the phases as per selected Variable, Scenario 1 and Scenario\
+    \ 2 for the given time period. The default configured class for this is &quot;FCST_SUMM_VAR_CPR&quot;.</p>\n\
+    \    <p>The tab name is configurable based on the Class Label being set for the\
+    \ customized class, the default tab name is &quot;DETAILS PER VARIABLE&quot;.</p></li><li><b>CLASS_NAME_VARIABLE_2</b>\n\
+    \    <p>This class configuration is related to the section &quot;MONTHLY VALUES\
+    \ FOR THE SELECTED VARIABLE&quot; in the tab &quot;DETAILS PER VARIABLE&quot;.\
+    \ This class is based on the view that provides the difference of values for all\
+    \ the phases as per selected Variable, Scenario 1 and Scenario 2 for a given month.\
+    \ The default configured class for this is &quot;FCST_SUMM_VAR_MTH_CPR&quot;.</p>\n\
+    \    <p>A customized class can be configured on the condition that it has the\
+    \ following attributes:</p>\n    <p><b>VARIABLE_CODE</b> - Variable Code<br/></li>\n\
+    \    <li><b>CLASS_NAME_VARIABLE_3</b>\n    <p>This class configuration is related\
+    \ to the section &quot;DAILY VALUES FOR THE SELECTED VARIABLE AND MONTH&quot;\
+    \ in the tab &quot;DETAILS PER VARIABLE&quot;.\n    This class is based on the\
+    \ view that provides the difference of values for all the phases as per Variable,\
+    \ Scenario 1 and Scenario 2 for a given date. The default configured class for\
+    \ this is &quot;FCST_SUMM_VAR_DAY&quot;.</p>\n    <p>A customized class can be\
+    \ configured on the condition that it has the following attributes:</p>\n    <p><b>VARIABLE_CODE</b>\
+    \ - Variable Code<br/><b>DAYTIME</b> - Date<br/></p></li><li><b>CLASS_NAME_PHASE_1</b>\n\
+    \    <p>This class configuration is related to the section &quot;VALUES FOR THE\
+    \ SELECTED PERIOD&quot; in the tab &quot;DETAILS PER PHASE&quot;.\n    This class\
+    \ is based on the view that provides the difference of values for all the variables\
+    \ as per selected Phase, Scenario 1 and Scenario 2 for the given time period.\
+    \ The default configured class for this is &quot;FCST_SUMM_PHASE_CPR&quot;.</p>\n\
+    \    <p>The tab name is configurable based on the Class Label being set for the\
+    \ customized class, the default tab name is &quot;DETAILS PER PHASE&quot;.</p></li><li><b>CLASS_NAME_PHASE_2</b>\n\
+    \    <p>This class configuration is related to the section &quot;MONTHLY VALUES\
+    \ FOR THE SELECTED PHASE&quot; in the tab &quot;DETAILS PER PHASE&quot;.\n   \
+    \ This class is based on the view that provides the difference of values for all\
+    \ the variables as per selected Phase, Scenario 1 and Scenario 2 for a given month.\
+    \ The default configured class for this is &quot;FCST_SUMM_PHASE_MTH_CPR&quot;.</p>\n\
+    \    <p>A customized class can be configured on the condition that it has the\
+    \ following attributes:</p>\n    <p><b>PHASE_CODE</b> - Phase Code<br/></li>\n\
+    \    <li><b>CLASS_NAME_PHASE_3</b>\n    <p>This class configuration is related\
+    \ to the section &quot;DAILY VALUES FOR THE SELECTED PHASE AND MONTH&quot; in\
+    \ the tab &quot;DETAILS PER PHASE&quot;.\n    This class is based on the view\
+    \ that provides the difference of values for all the variables as per selected\
+    \ Phase, Scenario 1 and Scenario 2 for a given date. The default configured class\
+    \ for this is &quot;FCST_SUMM_PHASE_DAY_CPR&quot;.</p>\n    <p>A customized class\
+    \ can be configured on the condition that it has the following attributes:</p>\n\
+    \    <p><b>PHASE_CODE</b> - Phase Code<br/><b>DAYTIME</b> - Date<br/></p></li><li><b>CLASS_NAME_EVENT_1</b>\n\
+    \    <p>This class configuration is related to the section &quot;EVENTS PER CATEGORY\
+    \ FOR THE SELECTED PERIOD&quot; in the tab &quot;EVENTS PER CATEGORY&quot;.\n\
+    \    This class is based on the view that aggregates the losses of the Forecast\
+    \ Deferment events related to a particular Forecast, Scenario and Reason Code\
+    \ for the given time period.\n    The default configured class for this is &quot;FCST_SUMM_REASON_CPR&quot;.</p>\n\
+    \    <p>The tab name is configurable based on the Class Label being set for the\
+    \ customized class, the default tab name is &quot;EVENTS PER CATEGORY&quot;.</p></li><li><b>CLASS_NAME_EVENT_2</b>\n\
+    \    <p>This class configuration is related to the section &quot;MONTHLY VALUES\
+    \ FOR THE SELECTED EVENT CATEGORY&quot; in the tab &quot;EVENTS PER CATEGORY&quot;.\n\
+    \    This class is based on the view that provides the difference of loss volumes\
+    \ from the Forecast Deferment events as per selected Scenario 1, Scenario 2 and\
+    \ Reason Code for the given time period. The default configured class for this\
+    \ is &quot;FCST_SUMM_REASON_MTH_CPR&quot;.</p>\n    <p>A customized class can\
+    \ be configured on the condition that it has the following attributes:</p>\n \
+    \   <p><b>REASON_CODE_1</b> - Reason Code<br/></p>\n    <li><b>CLASS_NAME_EVENT_3</b>\n\
+    \    <p>This class is based on the view that provides the difference of loss volumes\
+    \ from the Forecast Deferment events as per selected Scenario 1, Scenario 2 and\
+    \ Reason Code for a given month. The default configured class for this is &quot;FCST_SUMM_REASON_DAY_CPR&quot;.</p>\n\
+    \n    <p>A customized class can be configured on the condition that it has the\
+    \ following attributes:</p>\n    <p><b>REASON_CODE_1</b> - Reason Code<br/><b>DAYTIME</b>\
+    \ - Date<br/></p></ol><br/><b>Advise to User:</b>\n    <p>Queries to DV_FCST_SUMM_VAR_CPR\
+    \ and DV_FCST_SUMM_PHASE_CPR classes using an SQL editor must be accompanied by\
+    \ &quot;WHERE&quot; condition\n    that includes FROM_MONTH and TO_MONTH columns\
+    \ as it is affected by a large dataset.\n    FROM_MONTH and TO_MONTH must be compared\
+    \ with &quot;=&quot; sign, because there is a GROUP BY in the view. The values\
+    \ of FROM_MONTH, TO_MONTH should be taken from Comparison Object.  This is not\
+    \ an issue on the screen.</p>"
+related: {}

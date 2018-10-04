@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '433701513'
+keys:
+  BF_DESCRIPTION_NO: CO.0232
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0232
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/facility_analysis_items' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen is used to configure objects in a facility that will be used in analysis. Users are able to set start date and end date for objects that will be used in analysis,where end date is inclusive. The objects that are configured in this screen will be available in Facility Object Analysis (PO.0116) to insert analysis data.</p>
+related: {}

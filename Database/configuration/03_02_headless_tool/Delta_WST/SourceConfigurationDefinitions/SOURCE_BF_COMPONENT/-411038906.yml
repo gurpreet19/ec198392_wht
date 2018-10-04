@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-411038906'
+keys:
+  BF_CODE: UPG.0014
+  T: BF_COMPONENT
+  URL: /reportListTable
+parentKeys: {}
+properties:
+  BF_CODE: UPG.0014
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='UPG.0014' AND NVL(URL,'IS_NULL') = '/reportListTable')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/integrity_status' )
+  CLASS_NAME: PINC_REPORT
+  COMP_CODE: reportListTable
+  NAME: Report List Table
+  SIGNING_REQ_IND: null
+  URL: /reportListTable
+related: {}

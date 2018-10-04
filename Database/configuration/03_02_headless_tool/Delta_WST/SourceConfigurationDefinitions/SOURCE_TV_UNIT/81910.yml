@@ -1,0 +1,87 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '81910'
+keys:
+  T: TV_UNIT
+  UNIT: SCF
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Standard cubic feet at 60 degF
+  FIN_CODE: FT3
+  LABEL: Scf
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: SCF
+  UOM_GROUP: V
+  UOM_SUBGROUP: SF
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCF
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SCF
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCF
+      MULT_FACT: 0.028261959
+      PRECISION: null
+      TO_UNIT: SM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCF
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KSM3
+    parentKeys:
+      TV_UNIT.UNIT: SCF
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCF
+      MULT_FACT: 2.82622E-5
+      PRECISION: 6.0
+      TO_UNIT: KSM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCF
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MMSCF
+    parentKeys:
+      TV_UNIT.UNIT: SCF
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCF
+      MULT_FACT: 1.0E-6
+      PRECISION: null
+      TO_UNIT: MMSCF
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCF
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MSCF
+    parentKeys:
+      TV_UNIT.UNIT: SCF
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SCF
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: MSCF
+      USER_EXIT: null
+      USE_UE: null

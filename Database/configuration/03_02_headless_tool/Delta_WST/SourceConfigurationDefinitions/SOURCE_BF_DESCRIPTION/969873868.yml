@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '969873868'
+keys:
+  BF_DESCRIPTION_NO: CO.0037
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_copy_object/GROUPMODEL/TANK/TARGET/TANK/CLASS_NAME/TANK' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>This screen retrieves records from the Tank class. The version that is valid within the specified values in the navigator will be displayed. It displays all enabled attributes of Tank object. The screen provides the ease to update more than one record at the same time. It also allows creation of a new Tank as a copy of an existing Tank. To Copy a Tank, select the well to copy from and then enter the new Tank Name, Tank Code, and Start Date, and then hit Create a Copy button. If the Tank has Tank Usage connections, it will automatically be included in the copy job.</p>
+related: {}

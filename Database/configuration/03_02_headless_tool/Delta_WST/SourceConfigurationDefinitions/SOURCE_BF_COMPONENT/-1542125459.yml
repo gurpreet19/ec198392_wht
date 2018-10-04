@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1542125459'
+keys:
+  BF_CODE: CO.2059
+  T: BF_COMPONENT
+  URL: /HarbourDues
+parentKeys: {}
+properties:
+  BF_CODE: CO.2059
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2059' AND NVL(URL,'IS_NULL') = '/HarbourDues')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/harbour_dues' )
+  CLASS_NAME: HARBOUR_DUES
+  COMP_CODE: HarbourDues
+  NAME: Harbour Dues
+  SIGNING_REQ_IND: null
+  URL: /HarbourDues
+related: {}

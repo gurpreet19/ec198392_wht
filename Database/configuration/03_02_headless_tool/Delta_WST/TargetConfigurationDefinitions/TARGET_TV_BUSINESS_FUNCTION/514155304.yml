@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '514155304'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.la.screens/monthly_account_status
+parentKeys: {}
+properties:
+  BF_CODE: LA.0002
+  NAME: Monthly Account Status
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.la.screens/monthly_account_status
+related: {}

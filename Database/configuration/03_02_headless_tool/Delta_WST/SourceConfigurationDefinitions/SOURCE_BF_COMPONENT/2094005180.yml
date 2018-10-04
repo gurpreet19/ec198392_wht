@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2094005180'
+keys:
+  BF_CODE: GD.0012
+  T: BF_COMPONENT
+  URL: /PTC
+parentKeys: {}
+properties:
+  BF_CODE: GD.0012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0012' AND NVL(URL,'IS_NULL') = '/PTC')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/pipeline_trade_confirmation' )
+  CLASS_NAME: TCTR_TRADE_CONFIRMATION
+  COMP_CODE: PTC
+  NAME: Pipeline Trading Confirmation
+  SIGNING_REQ_IND: null
+  URL: /PTC
+related: {}

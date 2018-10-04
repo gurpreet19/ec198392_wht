@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1858528493'
+keys:
+  KEY: DEFERMENT_STATUS_THRESHOLD
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: NUMBER
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: 10.0
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Choose the threshold to accept change in status on PD.0024
+  KEY: DEFERMENT_STATUS_THRESHOLD
+  LABEL: 'Automatic Deferment Raw Data: Threshold in minutes'
+  LIST_OF_VALUES: PopupQueryURL=/com.ec.frmw.co.screens/query/ec_code_popup.xml;PopupLayout=/com.ec.frmw.co.screens/layout/ec_code_popup.xml;PopupWhereColumn=CODE_TYPE;PopupWhereValue=DEFERMENT_STATUS_THRESHOLD;PopupWhereOperator=;PopupReturnColumn=1;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.CODE
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

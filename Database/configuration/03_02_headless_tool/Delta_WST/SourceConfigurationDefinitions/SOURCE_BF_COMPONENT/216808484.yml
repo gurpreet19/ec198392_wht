@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '216808484'
+keys:
+  BF_CODE: MHM.0007
+  T: BF_COMPONENT
+  URL: /Outbound
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0007
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0007' AND NVL(URL,'IS_NULL') = '/Outbound')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_journal' )
+  CLASS_NAME: null
+  COMP_CODE: Outbound
+  NAME: Resend Outbound
+  SIGNING_REQ_IND: null
+  URL: /Outbound
+related: {}

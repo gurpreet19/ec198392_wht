@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1762416110'
+keys:
+  BF_CODE: WR.0038
+  T: BF_COMPONENT
+  URL: /event_well_inv
+parentKeys: {}
+properties:
+  BF_CODE: WR.0038
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0038' AND NVL(URL,'IS_NULL') = '/event_well_inv')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_well_inventory' )
+  CLASS_NAME: PWEL_EVENT_INVENTORY
+  COMP_CODE: event_well_inv
+  NAME: Event Well Inventory
+  SIGNING_REQ_IND: null
+  URL: /event_well_inv
+related: {}

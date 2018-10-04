@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-442030452'
+keys:
+  BF_CODE: CP.0033.01
+  T: BF_COMPONENT
+  URL: /btnGraph/storage_graph
+parentKeys: {}
+properties:
+  BF_CODE: CP.0033.01
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0033.01' AND NVL(URL,'IS_NULL') = '/btnGraph/storage_graph')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_schedule_lifting_jsf/CLASS1/STOR_DAY_BAL_FCST_GRAPH/CLASS2/FCST_STOR_LIFT_NOM_SCHED' )
+  CLASS_NAME: STOR_DAY_BAL_FCST_GRAPH2
+  COMP_CODE: btnGraph/storage_graph
+  NAME: Go To Additional Storage Graph/Graph
+  SIGNING_REQ_IND: null
+  URL: /btnGraph/storage_graph
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2025851744'
+keys:
+  BF_DESCRIPTION_NO: GD.0009
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/output_nom_message' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used for generating and sending an output nomination. It&rsquo;s not possible to manually enter a nomination in the system. This can only be done through a&nbsp;nomination message. This screen provides the means to manually create a message and send it to the system. There are two main situations where this function&nbsp;typically is required:</p><p>The operator acting as the NAM shipper submitting output nominations.</p><p>Operator wishes to nominate on behalf of a delivery point agent (for example if there is a technical problem with the delivery point agents system).<br />When selecting valid values in navigator and &lsquo;Go&rsquo; is clicked, there are no shippers listed in the Shipper section. The operator may then insert a new shipper. When a&nbsp;shipper is selected and saved, all hours for the production day is automatically generated with empty nomination value. Next the operator inserts values for each&nbsp;hour in the production day and saves. This may be repeated until all desired shippers have nomination values data and saved.<br />If &lsquo;Copy Latest&rsquo; is clicked, the system will automatic generate all shippers with their corresponding values as stored in the last sent nomination message for the&nbsp;selected values.</p><p>When all nomination for the nomination message is present operator uses the context menu to send the message. Activate the context menu and select send&nbsp;message. This will open a text area with the ability to enter a comment/remark to the message. The message is then sent to the messaging system for possessing&nbsp;and end up as an output nomination. All values are stored in the database.</p>
+related: {}

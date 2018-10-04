@@ -1,0 +1,30 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-822111443'
+keys:
+  BF_DESCRIPTION_NO: CO.0203
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0203
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/tt_validation_overview/ROOT_GROUP/D_ASSET_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>The Validation Overview screen displays an aggregated view of executed
+    Check Rule validations. The first section lists all Check Rule groups, with “–––&gt;”
+    indents indicating level for the given group (sub–group, sub–sub–group, etc).
+    The status and summary of all Check Rule subgroups are aggregated up to the level
+    above.</p><p>This list is filtered by time period (From date / To date) and Group.
+    The Group dropdown is populated with all groups that include subgroups, and when
+    it is selected the list will display the selected group and all its children.  Highlighting
+    a group in the list will display all the Check Rule error log entries connected
+    to this group and its descendant groups. The "Run Selected Groups" button will
+    rerun all selected rules that have generated error log entries. If updating the
+    Ignore flag and pressing the Save Log button, the flagged error log entries will
+    be ignored when creating error/warning icons in the tree view.</p><p>Note that
+    in this version the Validation Overview screen requires a root group parameter
+    as an input parameter for the screen to function properly. So when the screen
+    is defined it must include a query string containing a ROOT_GROUP parameter with
+    a valid Check Rule Group. For example: <em>../com.ec.frmw.co.screens/validation_overview?ROOT_GROUP=D_EXPORT</em></p><p>The
+    purpose of this is to enable several Validation Overview screens with different
+    access for given users/roles.</p>'
+related: {}

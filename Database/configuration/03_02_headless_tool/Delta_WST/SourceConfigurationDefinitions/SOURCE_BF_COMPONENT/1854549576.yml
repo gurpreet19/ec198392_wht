@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1854549576'
+keys:
+  BF_CODE: CP.0065
+  T: BF_COMPONENT
+  URL: /schedule
+parentKeys: {}
+properties:
+  BF_CODE: CP.0065
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0065' AND NVL(URL,'IS_NULL') = '/schedule')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/berth_slot_calendar/CLASS/CARGO_CALENDAR/SORT_TYPE/DESC' )
+  CLASS_NAME: CARGO_CALENDAR
+  COMP_CODE: schedule
+  NAME: Cargo Schedule
+  SIGNING_REQ_IND: null
+  URL: /schedule
+related: {}

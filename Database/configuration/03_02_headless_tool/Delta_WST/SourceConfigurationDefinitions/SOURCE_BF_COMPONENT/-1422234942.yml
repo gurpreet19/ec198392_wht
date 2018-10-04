@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1422234942'
+keys:
+  BF_CODE: WR.0004
+  T: BF_COMPONENT
+  URL: /table_last_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0004' AND NVL(URL,'IS_NULL') = '/table_last_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/maintain_production_well_status' )
+  CLASS_NAME: PWEL_PERIOD_LAST_STATUS
+  COMP_CODE: table_last_status
+  NAME: Last Registered Status
+  SIGNING_REQ_IND: null
+  URL: /table_last_status
+related: {}

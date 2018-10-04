@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1385062128'
+keys:
+  BF_CODE: PT.0018
+  T: BF_COMPONENT
+  URL: /reject_button
+parentKeys: {}
+properties:
+  BF_CODE: PT.0018
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0018' AND NVL(URL,'IS_NULL') = '/reject_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_water_injection_well_data' )
+  CLASS_NAME: null
+  COMP_CODE: reject
+  NAME: Reject button
+  SIGNING_REQ_IND: null
+  URL: /reject_button
+related: {}

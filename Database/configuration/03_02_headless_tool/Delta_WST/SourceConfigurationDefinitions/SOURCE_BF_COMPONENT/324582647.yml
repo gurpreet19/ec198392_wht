@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '324582647'
+keys:
+  BF_CODE: PO.0092
+  T: BF_COMPONENT
+  URL: /subDailyWaterStreamStatus
+parentKeys: {}
+properties:
+  BF_CODE: PO.0092
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0092' AND NVL(URL,'IS_NULL') = '/subDailyWaterStreamStatus')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_water_stream_status_by_period' )
+  CLASS_NAME: STRM_SUB_DAY_STATUS_WAT
+  COMP_CODE: subDailyWaterStreamStatus
+  NAME: Sub Daily Water Stream Status
+  SIGNING_REQ_IND: null
+  URL: /subDailyWaterStreamStatus
+related: {}

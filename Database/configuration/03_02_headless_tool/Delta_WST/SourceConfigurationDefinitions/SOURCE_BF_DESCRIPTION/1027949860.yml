@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1027949860'
+keys:
+  BF_DESCRIPTION_NO: SD.0045
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_np_data/CLASS/SLNP_DAY_DELIVERY/CLASS_SUB/SLNP_SUB_DAY_DELIVERY/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0045' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Sub Daily Sales Delivery business function is a screen for entering/viewing actual gas quantity deliveries for a given contract / nomination point. Basic delivery&nbsp;information will be listed for selected date, and contracts and nomination points satisfying the navigator selection. When selecting a date, day value for the day will&nbsp;be listed, if available. The days in the 1st data section the same found in Daily Sales Delivery (SD.0044) and same rules apply.</p><p>Delivery data in this business function will normally be inserted manually by the user. Alternatively, the delivery data can be automatically populated from interface,&nbsp;for instance from another EC product. When receiving data from an interface, the interface source will be the master. This means that if updated set of data is&nbsp;delivered from the interface, existing delivery data for the given period (day or sub day) is overwritten.</p><p>Data will be stored (independently) at both daily and sub daily level.</p>
+related: {}

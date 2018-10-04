@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '289294683'
+keys:
+  BF_DESCRIPTION_NO: PO.0116
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0116
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/facility_asset_analysis' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The &quot;Facility Object Analysis&quot; business function is used to enter analysis data for facility objects. The facility objects are configured in the &quot;Facility Analysis Items&quot; business function (CO.0232). Analysis for each object can be instantiated for daily, weekly or monthly based on analysis frequency in CO.0232. Analysis could also be manually inserted in the screen.</p>
+
+    <p>The Last Analysis data section displays 5 last analysis for records that have analysis frequency of daily, weekly and monthly. Analysis data that has event as the analysis frequency will display the last 5 analysis within 90 days.</p>
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1952821803'
+keys:
+  T: TV_UNIT
+  UNIT: BBLS15
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Barrels at 15C
+  FIN_CODE: null
+  LABEL: Bbbls @15C
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: BBLS15
+  UOM_GROUP: V
+  UOM_SUBGROUP: null
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '991582251'
+keys:
+  EC_CLIENT_OBJ: /com.ec.sale.pr.screens/price_index_yearly
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.sale.pr.screens/price_index_yearly
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

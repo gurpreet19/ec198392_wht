@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1221493438'
+keys:
+  SOURCE_ID: 50942.0
+  T: TV_LANGUAGE_SOURCE
+parentKeys: {}
+properties:
+  SOURCE: Change Password
+  SOURCE_ID: 50942.0
+related: {}

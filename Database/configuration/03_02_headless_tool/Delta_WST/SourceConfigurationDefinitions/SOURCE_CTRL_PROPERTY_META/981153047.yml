@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '981153047'
+keys:
+  KEY: DEFERMENT_AUTOINSERT
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: Y
+  DESCRIPTION: Set Y to auto insert well records in deferments.
+  KEY: DEFERMENT_AUTOINSERT
+  LABEL: 'Deferment: Allow auto insert well records in Deferments'
+  LIST_OF_VALUES: PopupQueryURL=/com.ec.frmw.co.screens/query/ec_code_popup.xml;PopupLayout=/com.ec.frmw.co.screens/layout/ec_code_popup.xml;PopupWhereColumn=CODE_TYPE;PopupWhereValue=YES_NO;PopupWhereOperator=;PopupReturnColumn=1;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.CODE
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

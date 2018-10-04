@@ -1,0 +1,104 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1812023378'
+keys:
+  BF_DESCRIPTION_NO: CD.0050
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/fin_period/CLASS/SYSTEM_MTH_STATUS_REPORT/ACTION/CLOSE/PERIOD_TYPE/REPORTING' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Revenue Reporting Period - Close screen</strong>    is
+    used for closing a Reporting Period for one or more legal entities for    the
+    different reporting areas within EC Revenue.</p><p><span style="color: rgb(0,
+    0, 153);">    The Reporting Periods is exactly the same concept as Booking Periods.
+    The    difference is the usage throughout EC Revenue.<br>    <u>Booking Periods:
+    </u><br>    - Used by the Financial Transactions to find correct Booking Period
+    for    booking into the Financial System<br>    - Used by the Inventory to find
+    correct Booking Period for booking into the    Financial System<br>    - Used
+    by the Quantity module to pick the right Booking Period when    assigning quantities
+    to Booking Periods in the STIM_MTH_BOOKED table<br>    <u>Reporting Periods:</u><br>    -
+    Used by the Quantity module to pick the right Reporting Period when    assigning
+    quantities to Reporting Periods in the STIM_MTH_REPORTED table<br>    - Reporting
+    Periods are currently NOT used by the Financial Transaction and    Inventory modules</span></p><p>    The
+    screen is divided into a Navigator at the top and a set of Tabs at the    bottom.</p><p>    <u>The
+    Navigator has these elements:</u><br>    <strong><em>- From Month:</em></strong>The
+    start of the period to select reporting periods in the result set.    <em>Mandatory</em><br>    <strong><em>-
+    To Month:</em></strong>The end of the period to select reporting periods in the
+    result set.    <em>Mandatory</em><br>    <strong><em>- Country</em></strong>    :
+    For filtering the result set to show only entries for Companies having    Country
+    according to the selected Country. <em>Optional</em><br>    <strong><em>- Company:</em></strong>    For
+    filtering the result set to only show entries for Companies equal to    the selected
+    Company. <em>Optional</em><br>    <u>Note</u>     : the County has to be selected
+    before one can select a Company.</p><p>    <strong>The Reporting Period Close
+    is a combination of:</strong><br>    <strong><em>1. Reporting Period</em></strong>    ,<br>    <strong><em>2.
+    System Company:</em></strong>    These are the Company objects that have the System
+    Company attribute set to    Y,<br>    <strong><em>3. Booking Area: </em></strong><br>    -
+    Financial Transactions (Sales, Purchase, Tariff Income, Tariff Cost,    Journal
+    Entry). Applies to documents in the Financial Transactions area    where the Financial
+    Code corresponds to the Reporting Area,<br>    - Inventory. Applies to the reporting
+    of Inventory values,<br>    - Quantity. Applies to the Reporting Period for the
+    Quantity module.<br>    It can be different Close time stamp for each of these
+    combinations.</p><p>    It is also possible to set the Close Time Stamp manually
+    by setting the    Time to Close data element available at each of the specific
+    tabs.</p><p>    <strong style="color: rgb(0, 0, 153);">OVERVIEW Tab</strong></p><p>    The
+    Tab gives an overview of the Open/Closed status for all the    combinations Reporting
+    Period / Company / Reporting Area.<br>    From this Tab the user can close reporting
+    periods for all the Functional    Areas by ticking the Close tick-box and save.<br>    <u>Note</u>    it
+    is not allowed to have any open reporting periods before the latest    closed
+    reporting period.</p><p>    <strong><span style="color: rgb(0, 153, 0);">Generate</span>
+    Button </strong><br>    At the bottom of the Overview tab there is a Year entry
+    field for entering    a Year to generate NEW period entries for selected year.<br>    Clicking
+    the Generate button will create new entries for each of the months    of the selected
+    year - this will be done for both the Booking Periods and    the Reporting Periods.</p><p>    <strong
+    style="color: rgb(0, 0, 153);">SALES Tab</strong></p><p>    The Tab gives an overview
+    of the Open/Closed status for all the    combinations Reporting Period / Company
+    / Reporting Area = Sales.<br>    In this tab the user can set the date/time to
+    close a given reporting    period. The user can also perform the close straight
+    away by ticking the    Close tick-box and save.<br>    <u>Note</u>    it is not
+    allowed to have any open reporting periods before the latest    closed reporting
+    period.</p><p>    <strong style="color: rgb(0, 0, 153);">PURCHASES Tab</strong></p><p>    The
+    Tab gives an overview of the Open/Closed status for all the    combinations Reporting
+    Period / Company / Reporting Area = Purchases.<br>    In this tab the user can
+    set the date/time to close a given reporting    period. The user can also perform
+    the close straight away by ticking the    Close tick-box and save.<br>    <u>Note</u>    it
+    is not allowed to have any open reporting periods before the latest    closed
+    reporting period.</p><p>    <strong style="color: rgb(0, 0, 153);">TARIFF INCOME
+    Tab</strong></p><p>    The Tab gives an overview of the Open/Closed status for
+    all the    combinations Reporting Period / Company / Reporting Area = Tariff Income.<br>    In
+    this tab the user can set the date/time to close a given reporting    period.
+    The user can also perform the close straight away by ticking the    Close tick-box
+    and save.<br>    <u>Note</u>    it is not allowed to have any open reporting periods
+    before the latest    closed reporting period.</p><p>    <strong style="color:
+    rgb(0, 0, 153);">TARIFF COST Tab</strong></p><p>    The Tab gives an overview
+    of the Open/Closed status for all the    combinations Reporting Period / Company
+    / Reporting Area = Tariff Cost.<br>    In this tab the user can set the date/time
+    to close a given reporting    period. The user can also perform the close straight
+    away by ticking the    Close tick-box and save.<br>    <u>Note</u>    it is not
+    allowed to have any open reporting periods before the latest    closed reporting
+    period.</p><p>        <strong style="color: rgb(0, 0, 153);">JOURNAL ENTRY Tab</strong></p><p>    The
+    Tab gives an overview of the Open/Closed status for all the    combinations Reporting
+    Period / Company / Reporting Area = Journal Entry.<br>    In this tab the user
+    can set the date/time to close a given reporting    period. The user can also
+    perform the close straight away by ticking the    Close tick-box and save.<br>    <u>Note</u>    it
+    is not allowed to have any open reporting periods before the latest    closed
+    reporting period.</p><p>       <strong style="color: rgb(0, 0, 153);">INVENTORY
+    Tab</strong></p><p>    The Tab gives an overview of the Open/Closed status for
+    all the    combinations Booking Period / Company / Booking Area = Inventory.<br>    In
+    this tab the user can set the date/time to close a given reporting    period.
+    The user can also perform the close straight away by ticking the    Close tick-box
+    and save.<br>    <u>Note</u>    it is not allowed to have any open reporting periods
+    before the latest    closed reporting period.</p><p>    <strong style="color:
+    rgb(0, 0, 153);">QUANTITIES Tab</strong></p><p>    The Tab gives an overview of
+    the Open/Closed status for all the    combinations Booking Period / Company /
+    Booking Area = Quantity.<br>    In this tab the user can set the date/time to
+    close a given reporting    period. The user can also perform the close straight
+    away by ticking the    Close tick-box and save.<br>    <u>Note</u>    it is not
+    allowed to have any open reporting periods before the latest    closed reporting
+    period.</p><p>    <strong><span style="color: rgb(0, 153, 0);">Toggle Tick Boxes</span>
+    Button </strong><br>    The button exists at the bottom of each tab in the screen.<br>    By
+    clicking the Button all <strong>Close</strong> tick-boxes for the chosen    period
+    in Navigator will be ticked.<br>    It performs as an easy way to close as many
+    periods as user wants in one go    instead of doing Close one by one.</p>'
+related: {}

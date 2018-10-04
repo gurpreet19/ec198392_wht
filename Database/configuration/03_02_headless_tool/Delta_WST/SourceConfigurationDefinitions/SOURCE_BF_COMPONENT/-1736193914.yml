@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1736193914'
+keys:
+  BF_CODE: WR.0030
+  T: BF_COMPONENT
+  URL: /table_approved_well_tests
+parentKeys: {}
+properties:
+  BF_CODE: WR.0030
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0030' AND NVL(URL,'IS_NULL') = '/table_approved_well_tests')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/maintain_production_well_estimate' )
+  CLASS_NAME: APPROVED_WELL_TESTS
+  COMP_CODE: table_approved_well_tests
+  NAME: Approved Well Tests
+  SIGNING_REQ_IND: null
+  URL: /table_approved_well_tests
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-955158563'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO2_REMOVAL_UNIT/TARGET/CO2_REMOVAL_UNIT/CLASS_NAME/CO2_REMOVAL_UNIT
+parentKeys: {}
+properties:
+  BF_CODE: CO.0180
+  NAME: Co2 Removal Unit
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO2_REMOVAL_UNIT/TARGET/CO2_REMOVAL_UNIT/CLASS_NAME/CO2_REMOVAL_UNIT
+related: {}

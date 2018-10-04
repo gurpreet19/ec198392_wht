@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '334803211'
+keys:
+  BF_CODE: RP.0003
+  T: BF_COMPONENT
+  URL: /generated_reports
+parentKeys: {}
+properties:
+  BF_CODE: RP.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0003' AND NVL(URL,'IS_NULL') = '/generated_reports')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_administration' )
+  CLASS_NAME: REPORT_GENERATED
+  COMP_CODE: generated_reports
+  NAME: Generated Reports
+  SIGNING_REQ_IND: null
+  URL: /generated_reports
+related: {}

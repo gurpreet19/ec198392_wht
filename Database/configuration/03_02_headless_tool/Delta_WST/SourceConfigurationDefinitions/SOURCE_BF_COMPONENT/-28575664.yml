@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-28575664'
+keys:
+  BF_CODE: CO.0125
+  T: BF_COMPONENT
+  URL: /insert
+parentKeys: {}
+properties:
+  BF_CODE: CO.0125
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0125' AND NVL(URL,'IS_NULL') = '/insert')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/commercial_entity' )
+  CLASS_NAME: COMMERCIAL_ENTITY
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /insert
+related: {}

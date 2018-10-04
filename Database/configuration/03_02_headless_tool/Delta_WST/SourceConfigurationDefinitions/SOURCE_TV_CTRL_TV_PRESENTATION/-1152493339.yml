@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1152493339'
+keys:
+  COMPONENT_ID: ( SELECT 'VENDOR' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/VENDOR?screentemplate=/com.ec.frmw.co.screens/manage_object
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'VENDOR' FROM DUAL )
+  COMPONENT_LABEL: Vendor
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'COMMERCIAL_OBJECTS' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 100.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1652415440'
+keys:
+  BF_CODE: CO.0232
+  T: BF_COMPONENT
+  URL: /analysis
+parentKeys: {}
+properties:
+  BF_CODE: CO.0232
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0232' AND NVL(URL,'IS_NULL') = '/analysis')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/facility_analysis_items' )
+  CLASS_NAME: FCTY_ANALYSIS_ITEM
+  COMP_CODE: analysis
+  NAME: Analysis
+  SIGNING_REQ_IND: null
+  URL: /analysis
+related: {}

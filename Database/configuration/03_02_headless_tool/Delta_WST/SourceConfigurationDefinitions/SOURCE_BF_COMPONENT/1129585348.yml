@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1129585348'
+keys:
+  BF_CODE: PP.0045
+  T: BF_COMPONENT
+  URL: /forecast_assumptions
+parentKeys: {}
+properties:
+  BF_CODE: PP.0045
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0045' AND NVL(URL,'IS_NULL') = '/forecast_assumptions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_assumptions' )
+  CLASS_NAME: FORECAST_ASSUMPTIONS
+  COMP_CODE: forecast_assumptions
+  NAME: Forecast Assumptions
+  SIGNING_REQ_IND: null
+  URL: /forecast_assumptions
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2140208090'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/contract_attribute/CLASS_NAME/REVN_CONTRACT/ACCESS_COLUMN/REVN_CODE
+parentKeys: {}
+properties:
+  BF_CODE: CD.0101
+  NAME: Contractual Attributes
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/contract_attribute/CLASS_NAME/REVN_CONTRACT/ACCESS_COLUMN/REVN_CODE
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '672932000'
+keys:
+  KEY: /com/ec/frmw/ecis/screens/imp_src_mapping/preview/ALLOWED_FILE_EXTENSIONS
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: .xml,.txt,.csv,.xls,.xlsx
+  DESCRIPTION: Comma separated list of allowed file extensions for ECIS Mapping Configuration preview interface
+  KEY: /com/ec/frmw/ecis/screens/imp_src_mapping/preview/ALLOWED_FILE_EXTENSIONS
+  LABEL: ECIS Mapping Conf Preview Interface Allowed File Extensions
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '988917452'
+keys:
+  BF_CODE: PO.0020
+  T: BF_COMPONENT
+  URL: /normalize_btn
+parentKeys: {}
+properties:
+  BF_CODE: PO.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0020' AND NVL(URL,'IS_NULL') = '/normalize_btn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_gas_component_analysis/STRM_SET/PO.0020/COMP_SET/STRM_GAS_COMP' )
+  CLASS_NAME: null
+  COMP_CODE: normalize_button
+  NAME: Normalize Button
+  SIGNING_REQ_IND: null
+  URL: /normalize_btn
+related: {}

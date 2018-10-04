@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2023659965'
+keys:
+  BF_CODE: PD.0022
+  T: BF_COMPONENT
+  URL: /new_masterEvent_button
+parentKeys: {}
+properties:
+  BF_CODE: PD.0022
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PD.0022' AND NVL(URL,'IS_NULL') = '/new_masterEvent_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/equip_downtime' )
+  CLASS_NAME: null
+  COMP_CODE: new_masterEvent_button
+  NAME: New Master Event Button
+  SIGNING_REQ_IND: null
+  URL: /new_masterEvent_button
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2089253958'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/document_receivers
+parentKeys: {}
+properties:
+  BF_CODE: CP.0014
+  NAME: Document Receivers
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/document_receivers
+related: {}
