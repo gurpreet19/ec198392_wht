@@ -1,1 +1,0 @@
-CREATE OR REPLACE TYPE ifac_jounl_entry_t IS TABLE OF ifac_jounl_entry_o;

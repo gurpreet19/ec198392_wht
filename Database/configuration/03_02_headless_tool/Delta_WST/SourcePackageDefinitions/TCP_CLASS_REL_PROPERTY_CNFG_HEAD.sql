@@ -1,5 +1,0 @@
-CREATE OR REPLACE PACKAGE TCP_CLASS_REL_PROPERTY_CNFG IS
-  PROCEDURE init_data;
-  PROCEDURE insert_data(to_class_name IN Varchar2);
-  PROCEDURE check_data;
-END;
