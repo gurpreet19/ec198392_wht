@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '884981564'
+keys:
+  OBJECT_NAME: TRANS_INV_MSG
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: null
+  OBJECT_NAME: TRANS_INV_MSG
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-739073015'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: OILPROD
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Oil Production For Facility
+  LABEL: Oil Production For Facility
+  NAME: Oil Prod
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.PieChartWidget
+  WIDGET_CODE: OILPROD
+related: {}

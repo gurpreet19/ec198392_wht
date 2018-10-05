@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-785507165'
+keys:
+  MEASUREMENT_TYPE: STEAM_MASS
+  T: TV_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: Steam mass
+  FORMAT_MASK: '###,###,##0.0'
+  MEASUREMENT_TYPE: STEAM_MASS
+related: {}

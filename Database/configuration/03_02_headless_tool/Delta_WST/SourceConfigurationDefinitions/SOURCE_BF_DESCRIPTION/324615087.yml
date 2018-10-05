@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '324615087'
+keys:
+  BF_DESCRIPTION_NO: PP.0050
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/maintain_object_design_capacity/CLASS_NAME/OBJECT_DESIGN_CAPACITY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This business function is used to maintain the object design capacity for all phases i.e. Oil, Gas, Water, Cond, Diluent, Gas Lift, Water Inj, Gas Inj, Steam Inj and C02 Inj. </p>
+
+    <p> A capacity object type can be a WELL, PIPELINE, EQUIPMENT, WELL HOOKUP and FACILITY. If there is a need to capture design capacity for other objects, then those objects must implement the DESIGN_CAP_OBJECTS interface in their respective classes. </p>
+
+    <p> By selecting a capacity object type in the navigator the design capacity data for the selected date will be listed. A new object design capacity can be entered by pressing the insert button. </p>
+
+    <p> The design capacity will be used when calculating the capacity for an object. </p>
+related: {}

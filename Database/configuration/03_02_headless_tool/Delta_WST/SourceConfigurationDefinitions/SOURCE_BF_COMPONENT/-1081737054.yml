@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1081737054'
+keys:
+  BF_CODE: HA.0003
+  T: BF_COMPONENT
+  URL: /log_list
+parentKeys: {}
+properties:
+  BF_CODE: HA.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='HA.0003' AND NVL(URL,'IS_NULL') = '/log_list')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/edit_monthly_alloc' )
+  CLASS_NAME: CALC_MTH_PROD_LOG
+  COMP_CODE: log_list
+  NAME: Monthly Allocation
+  SIGNING_REQ_IND: null
+  URL: /log_list
+related: {}

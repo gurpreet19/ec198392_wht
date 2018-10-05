@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1818302564'
+keys:
+  BF_DESCRIPTION_NO: CO.2020
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to create different Contract Templates. The Contract Templates can be regarded as a template for attributes.</p><p>Each contract will be associated to one Contract Template and the attributes will come from the Contract Template. The attribute values can be updated in Contract&nbsp;Attribute business function. There is one for each module, Transport, Sales and Revenue. Only the attributes that are editable and protected will be available in the&nbsp;different modules.</p><p>After a contract template is added to a contract and values are entered for the individual attributes, a template cannot be removed. Attributes can be removed if there&nbsp;are no values in the attribute for any of the implementing contracts. To disable an attribute the attribute can be set to Hidden in all modules (Transport, Sale and&nbsp;Revenue).</p><p>Below are the attributes used by different business logic in the application. If used they must be configured as this. The default template delivered in the product will&nbsp;have this configuration.</p>
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '561049643'
+keys:
+  BF_DESCRIPTION_NO: CP.0037
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_monthly_stor_pc_forecast' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business function is used to maintain monthly forecasts on a storage and profit centre for a selected forecast / scenario.</p><p>The Profit Centre navigator popup will show profit centre which are mapped with the storage selected in the navigator. This relation can be configured in Storage Profit Centre Connection (CO.2083).</p><p>For more details with regards to basic functionality please read &ldquo;CP.0009 - MONTHLY STORAGE PROFIT CENTRE FORECAST&rdquo;.<br />&nbsp;</p>
+related: {}

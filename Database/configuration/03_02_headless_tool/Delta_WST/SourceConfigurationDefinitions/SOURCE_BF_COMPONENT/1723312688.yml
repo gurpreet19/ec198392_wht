@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1723312688'
+keys:
+  BF_CODE: MHM.0004
+  T: BF_COMPONENT
+  URL: /val
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0004' AND NVL(URL,'IS_NULL') = '/val')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_distribution' )
+  CLASS_NAME: MSG_DISTR_PARAM_VAL
+  COMP_CODE: val
+  NAME: Parameter Value
+  SIGNING_REQ_IND: null
+  URL: /val
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1353717541'
+keys:
+  BF_DESCRIPTION_NO: SA.0020.PC
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0020.PC
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/monthly_contract_calc_result/BF_PROFILE/SA.0020.PC/CLASS/SCTR_ACC_MTH_PC_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to look at monthly Contract Account calculation results.</p><p>The implementation of this business function is done in a generic manner. That means that it can be used to show many different contract account calculation result.&nbsp;The product comes with a set of predefined treeview entries, but the project can add more as needed.</p><p>The navigator lets the user select a contract by using the navigation mode. Further the user can to select a contract Account, data set, company and profit centre.&nbsp;They are all optional. Some of these may not be applicable for the specific class and will therefore give the user no records in return if used.</p><p>The amount column will be used to hold the monetary amount for a contract account. In typicall EC implementations Contract Accounts will be related to quantities, but in some cases is it also required to show monetary values. Especially if EC Revenue&rsquo;s ERP Documents concept is used.</p>
+related: {}

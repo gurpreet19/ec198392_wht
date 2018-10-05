@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1920213019'
+keys:
+  BF_CODE: SA.0037
+  T: BF_COMPONENT
+  URL: /daily_data
+parentKeys: {}
+properties:
+  BF_CODE: SA.0037
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SA.0037' AND NVL(URL,'IS_NULL') = '/daily_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_day_np_data/CLASS/SLCN_DAY_PRODUCT_QTY/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0037' )
+  CLASS_NAME: SLCN_DAY_PRODUCT_QTY
+  COMP_CODE: daily_data
+  NAME: Daily Data
+  SIGNING_REQ_IND: null
+  URL: /daily_data
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1296288168'
+keys:
+  BF_CODE: CO.00942
+  T: BF_COMPONENT
+  URL: /snd_prod_data_menu
+parentKeys: {}
+properties:
+  BF_CODE: CO.00942
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.00942' AND NVL(URL,'IS_NULL') = '/snd_prod_data_menu')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens.snd/production_data_menu' )
+  CLASS_NAME: SND_PROD_DATA_MENU
+  COMP_CODE: snd_prod_data_menu
+  NAME: SND Context Menu Item
+  SIGNING_REQ_IND: null
+  URL: /snd_prod_data_menu
+related: {}

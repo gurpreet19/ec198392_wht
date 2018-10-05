@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-587416624'
+keys:
+  BF_CODE: WR.0066
+  T: BF_COMPONENT
+  URL: /objects
+parentKeys: {}
+properties:
+  BF_CODE: WR.0066
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0066' AND NVL(URL,'IS_NULL') = '/objects')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_finder' )
+  CLASS_NAME: WELL_FINDER_OBJECTS
+  COMP_CODE: objects
+  NAME: Objects
+  SIGNING_REQ_IND: null
+  URL: /objects
+related: {}

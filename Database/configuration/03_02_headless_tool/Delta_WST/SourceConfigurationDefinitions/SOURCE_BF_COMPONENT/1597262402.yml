@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1597262402'
+keys:
+  BF_CODE: PP.0060
+  T: BF_COMPONENT
+  URL: /daily_injection_forecast
+parentKeys: {}
+properties:
+  BF_CODE: PP.0060
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0060' AND NVL(URL,'IS_NULL') = '/daily_injection_forecast')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_POTENTIAL/INJ_TYPE/Y' )
+  CLASS_NAME: FCST_IWEL_POTENTIAL
+  COMP_CODE: FCST_WELL_POTENTIAL
+  NAME: Forecast Injection Well Potential
+  SIGNING_REQ_IND: null
+  URL: /daily_injection_forecast
+related: {}

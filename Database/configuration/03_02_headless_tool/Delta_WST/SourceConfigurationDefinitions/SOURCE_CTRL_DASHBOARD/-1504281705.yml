@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1504281705'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: PROD_MONTH_AREA_CON
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Monthly Actual Vs Planned Condensate Production For Area
+  LABEL: Monthly Actual Vs Planned Condensate Production For Area
+  NAME: ProdMonthActualVsProduction
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.LineChartWidget
+  WIDGET_CODE: PROD_MONTH_AREA_CON
+related: {}

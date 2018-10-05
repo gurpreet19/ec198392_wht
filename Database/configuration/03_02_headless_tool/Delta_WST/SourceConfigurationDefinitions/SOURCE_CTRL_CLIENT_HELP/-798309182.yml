@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-798309182'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STORAGE/TARGET/STORAGE/CLASS_NAME/PILOT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STORAGE/TARGET/STORAGE/CLASS_NAME/PILOT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

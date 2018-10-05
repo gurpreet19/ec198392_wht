@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1967570520'
+keys:
+  BF_DESCRIPTION_NO: CP.0056
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/schedule_lifting_actual_vs_forecast' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to graphically display the Storage level for actual vs. any given forecast on a daily level. To be able to easily see how close the actual delivery is to the official plan (or any other plan) will give the scheduler needful information for future scheduling processes. The immediate visual feedback during the scheduling process and after the fact is critical.</p><p>The interactive graph will display the storage level, and the tool tip will show basic information about the storage level quantity. It will also display flags that show the Forecast Cargo, since it is more likely there will be a forecast cargo than an actual cargo. In this screen it is not possible to make any adjustments to the data, if user requires updating planned cargoes this should be done in CP.0002.01 - Schedule Lifting Chart.</p><p>Note that if the Storage type on storage is &lsquo;Import&rsquo; then the calculation for storage level is reversed. Meaning that lifting&rsquo;s goes into the storage and forecast/official numbers goes out of the storage.</p>
+related: {}

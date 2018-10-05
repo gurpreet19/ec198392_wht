@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '854272378'
+keys:
+  NAME: BUSINESS_UNIT
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: REVN_VAL_BP_GC_CO_BU
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Business Unit
+  MANDATORY_IND: Y
+  NAME: BUSINESS_UNIT
+  PARAMETER_SUB_TYPE: BUSINESS_UNIT
+  PARAMETER_TYPE: EC_OBJECT_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 10.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: REVN_VAL_BP_GC_CO_BU
+related: {}

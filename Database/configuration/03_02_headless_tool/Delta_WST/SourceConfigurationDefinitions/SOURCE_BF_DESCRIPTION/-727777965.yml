@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-727777965'
+keys:
+  BF_DESCRIPTION_NO: PR.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PR.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/unit_price' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>In a sales / purchases contract, e.g. a sales contract, price is normally a central term. A contract will typically cover one or several products, each may have a&nbsp;separate price. Further, the contract may define the rules for price determination, making it possible to calculate prices for a longer period based on certain&nbsp;parameters. Since the price element normally will change over time, the price definition is not handled as a contract attribute, but rather split out to separate&nbsp;business functions.</p><p>The Unit Price business function is a screen for entering/viewing unit prices for a given contract. Current version do only support unit price for one product, typically&nbsp;Normal Gas. The screen will show complete price history from contract start and at least until current period. When entering a price, input is a Price value and a&nbsp;Daytime. Further, an optional comment may be entered. The price Daytime value state the valid start date for this price. The validity period for a price is defined by&nbsp;the daytime for that price and until the daytime of the preceding registered price. If no subsequent price is registered the price is valid until the contract&rsquo;s end date.</p>
+related: {}

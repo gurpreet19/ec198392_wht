@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1152057310'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pd.screens/well_deferment
+parentKeys: {}
+properties:
+  BF_CODE: PD.0020
+  NAME: Deferment
+  PROFILE_CLASS_NAME: WELL
+  URL: /com.ec.prod.pd.screens/well_deferment
+related: {}

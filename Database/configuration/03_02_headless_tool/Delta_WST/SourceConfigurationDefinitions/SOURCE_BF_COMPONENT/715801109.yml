@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '715801109'
+keys:
+  BF_CODE: CO.3024
+  T: BF_COMPONENT
+  URL: /objectForm
+parentKeys: {}
+properties:
+  BF_CODE: CO.3024
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.3024' AND NVL(URL,'IS_NULL') = '/objectForm')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/CLASS_NAME/PRICE_RATE/NAVMODEL/SALE_PR/TARGET/PRICE_RATE' )
+  CLASS_NAME: PRICE_RATE
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /objectForm
+related: {}

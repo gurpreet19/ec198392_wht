@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1472443713'
+keys:
+  BF_CODE: CO.0039
+  T: BF_COMPONENT
+  URL: /copy_strapping
+parentKeys: {}
+properties:
+  BF_CODE: CO.0039
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0039' AND NVL(URL,'IS_NULL') = '/copy_strapping')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/tank_strapping' )
+  CLASS_NAME: null
+  COMP_CODE: copy_strapping
+  NAME: Copy Strapping
+  SIGNING_REQ_IND: null
+  URL: /copy_strapping
+related: {}

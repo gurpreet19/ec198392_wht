@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1878974599'
+keys:
+  OBJECT_NAME: FT_ST_LI_DIST_COMPANY
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: null
+  OBJECT_NAME: FT_ST_LI_DIST_COMPANY
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

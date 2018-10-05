@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1872344073'
+keys:
+  BF_CODE: CO.2065
+  T: BF_COMPONENT
+  URL: /carrier_contract
+parentKeys: {}
+properties:
+  BF_CODE: CO.2065
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2065' AND NVL(URL,'IS_NULL') = '/carrier_contract')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_carrier' )
+  CLASS_NAME: CARRIER_CONTRACT
+  COMP_CODE: carrier_contract
+  NAME: Carrier Contract
+  SIGNING_REQ_IND: null
+  URL: /carrier_contract
+related: {}

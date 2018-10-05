@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1733647993'
+keys:
+  BF_DESCRIPTION_NO: SA.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/sale_calc_day' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to run the daily sales calculations. The user selects the day for which the calculations are to be run, it could be a single day with only To Date parameter, or a range of From Date and To Date for multiple days. A list of previous runs of the calculations for the selected date range and calculation job are&nbsp;displayed (if there are any) and the user can press the &quot;Run Calculations&quot; button to invoke the calculations. All started calculations will show in Running Jobs,&nbsp;several calculations may run simultaneously, but only one for each calculation job. The user could also have specified on the minute when to start the calculation, if it&nbsp;was not to start immediately. The Job Start Time is not mandatory to fill in.</p><p>Once a calculation run has been made, the details are displayed in new rows on the screen, one for each run, along with the outcome (e.g. Success of Failure). By&nbsp;highlighting a row from the upper section of the screen, i.e. an individual calculation run, the associated log file summary from that run is displayed in the lower&nbsp;section of the screen and the user can press the Download button to examine the full log file.</p><p>The Calculation Job makes it possible to decide how the calculations will be performed, if several jobs exist then they will run the calculations with different input&nbsp;parameters. These input parameters can be used by the calculation rules to decide which equations to execute.</p><p>The &quot;Simulate&quot; tick box may be used to run the calculations and inspect the subsequent log file, but without writing any results back to the database.</p><p>All successful runs may be approved. Only users with access to approved data may change the Approval Status back to Provisional in order to run a new price&nbsp;calculation.</p>
+related: {}

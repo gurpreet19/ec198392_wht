@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1334533304'
+keys:
+  BF_CODE: PP.0066
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: PP.0066
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0066' AND NVL(URL,'IS_NULL') = '/navigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_scenarios_graphs/CLASS_NAME/FCST_SCENARIO_GRAPHS/DAILY_CLASS_NAME/FCST_SUMM_VAR_DAY/MONTHLY_CLASS_NAME/FCST_SUMM_VAR_MTH' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

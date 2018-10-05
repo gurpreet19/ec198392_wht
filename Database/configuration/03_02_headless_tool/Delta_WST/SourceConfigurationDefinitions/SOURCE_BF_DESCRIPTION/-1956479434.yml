@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1956479434'
+keys:
+  BF_DESCRIPTION_NO: PO.0122
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0122
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_test_device_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to keep track of test device status. This list of test device is configurable and Energy Components creates one new record for a production day.
+    Only test device having attribute &ldquo;test device status screen&rdquo; set to YES will appear in this screen.</p>
+related: {}

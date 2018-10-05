@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1979979170'
+keys:
+  BF_CODE: WR.0018
+  T: BF_COMPONENT
+  URL: /summarizeAllIflwSubToDailyButtonID
+parentKeys: {}
+properties:
+  BF_CODE: WR.0018
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0018' AND NVL(URL,'IS_NULL') = '/summarizeAllIflwSubToDailyButtonID')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_water_injection_flowline_status' )
+  CLASS_NAME: null
+  COMP_CODE: summarizeAllIflwSubToDailyButtonID
+  NAME: Aggregate Facility All
+  SIGNING_REQ_IND: null
+  URL: /summarizeAllIflwSubToDailyButtonID
+related: {}

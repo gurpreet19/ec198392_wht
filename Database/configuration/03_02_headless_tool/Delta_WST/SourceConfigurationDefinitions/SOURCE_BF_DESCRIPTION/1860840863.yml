@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1860840863'
+keys:
+  BF_DESCRIPTION_NO: WR.0021.01
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0021.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_sample_analysis_1' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This BF is used to enter sample analysis taken for a well. A sample analysis is entered for a day and time, and the last available analysis is the one being used until a new analysis is taken. Only APPROVED sample analysis will be used by functions. One well can have zero or many sample analysis for a day. In section two, the last analysis prior to navigator date is listed. The records can be filtered by providing the navigator values for Group Model, Analysis Status and Sampling Method. Group Model navigator values are mandatory while navigator values for Analysis Status and Sampling Method are optional. Analysis data will be filtered based on Valid From date. If this value is null, data will be filtered according to the production day of the analysis Daytime.</p>
+
+    <p>The data attributes for this BF is typically BS&amp;W, sand, salt, density etc. This kind of analysis does not have a full composition. In case composition analysis is to be registered use Business Functions Well Oil/Gas Component Analysis (WR.0010, WR.0010.01).</p>
+
+    <p>This BF displays configurable list of attributes and there can be zero or many samples per well per day. List of a number of analyses for the selected well will be displayed in the screen.</p>
+
+    <p>Analysis type is an attribute that can be disabled by customer themselves. When this attribute is disabled, all the analysis status will have a null value and is automatically treated as an approved analysis.
+related: {}

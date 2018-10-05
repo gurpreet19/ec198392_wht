@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '516982814'
+keys:
+  BF_DESCRIPTION_NO: PO.0119
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0119
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/test_device_analysis' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used for viewing/entering test device analysis. This screen will lists all test devices which has been configured as &lsquo;checked&rsquo; for &lsquo;Should the Test Device be used in Test Device Analysis&rsquo; under Test Device configuration screen.</p>
+
+    <p>A new test device analysis will be created when clicking on the insert button in the toolbar and saving the record after the mandatory values have been specified.</p>
+related: {}

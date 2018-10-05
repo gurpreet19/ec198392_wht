@@ -1,0 +1,172 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '113737112'
+keys:
+  CODE: DEFAULT_TRAN_DISP
+  T: TV_CONTRACT_TEMPLATE
+parentKeys: {}
+properties:
+  CODE: DEFAULT_TRAN_DISP
+  NAME: Default Template for Transport Dispatching
+related:
+  TV_CNTR_TEMPLATE_ATTRIBUTE:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      ATTRIBUTE_NAME: NOM_GRS_NET_PCT
+      T: TV_CNTR_TEMPLATE_ATTRIBUTE
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+    parentKeys:
+      TV_CONTRACT_TEMPLATE.CODE: DEFAULT_TRAN_DISP
+    properties:
+      ATTRIBUTE_NAME: NOM_GRS_NET_PCT
+      ATTRIBUTE_SYNTAX: null
+      ATTRIBUTE_TYPE: ATTRIBUTE
+      DATA_TYPE: NUMBER
+      DIMENSION_TYPE: null
+      FORMAT_MASK: TWO_DEC
+      IS_MANDATORY: N
+      LABEL: Nominated Gross Net Percent
+      REVN_CODE: null
+      SALE_CODE: PROTECTED
+      SORT_ORDER: 60.0
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+      TIME_SPAN: DAY
+      TRAN_CODE: EDIT
+      UOM: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      ATTRIBUTE_NAME: NOM_INPUT_UOM
+      T: TV_CNTR_TEMPLATE_ATTRIBUTE
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+    parentKeys:
+      TV_CONTRACT_TEMPLATE.CODE: DEFAULT_TRAN_DISP
+    properties:
+      ATTRIBUTE_NAME: NOM_INPUT_UOM
+      ATTRIBUTE_SYNTAX: null
+      ATTRIBUTE_TYPE: UOM
+      DATA_TYPE: STRING
+      DIMENSION_TYPE: null
+      FORMAT_MASK: null
+      IS_MANDATORY: N
+      LABEL: Input Nomination UOM
+      REVN_CODE: null
+      SALE_CODE: PROTECTED
+      SORT_ORDER: 10.0
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+      TIME_SPAN: DAY
+      TRAN_CODE: EDIT
+      UOM: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      ATTRIBUTE_NAME: NOM_INPUT_UOM_CONDITION
+      T: TV_CNTR_TEMPLATE_ATTRIBUTE
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+    parentKeys:
+      TV_CONTRACT_TEMPLATE.CODE: DEFAULT_TRAN_DISP
+    properties:
+      ATTRIBUTE_NAME: NOM_INPUT_UOM_CONDITION
+      ATTRIBUTE_SYNTAX: UOM_CONDITION
+      ATTRIBUTE_TYPE: EC_CODE
+      DATA_TYPE: STRING
+      DIMENSION_TYPE: null
+      FORMAT_MASK: null
+      IS_MANDATORY: N
+      LABEL: Input Nomination UOM Type
+      REVN_CODE: null
+      SALE_CODE: PROTECTED
+      SORT_ORDER: 40.0
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+      TIME_SPAN: DAY
+      TRAN_CODE: EDIT
+      UOM: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      ATTRIBUTE_NAME: NOM_OUTPUT_UOM
+      T: TV_CNTR_TEMPLATE_ATTRIBUTE
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+    parentKeys:
+      TV_CONTRACT_TEMPLATE.CODE: DEFAULT_TRAN_DISP
+    properties:
+      ATTRIBUTE_NAME: NOM_OUTPUT_UOM
+      ATTRIBUTE_SYNTAX: null
+      ATTRIBUTE_TYPE: UOM
+      DATA_TYPE: STRING
+      DIMENSION_TYPE: null
+      FORMAT_MASK: null
+      IS_MANDATORY: N
+      LABEL: Output Nomination UOM
+      REVN_CODE: null
+      SALE_CODE: PROTECTED
+      SORT_ORDER: 30.0
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+      TIME_SPAN: DAY
+      TRAN_CODE: EDIT
+      UOM: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      ATTRIBUTE_NAME: NOM_OUTPUT_UOM_CONDITION
+      T: TV_CNTR_TEMPLATE_ATTRIBUTE
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+    parentKeys:
+      TV_CONTRACT_TEMPLATE.CODE: DEFAULT_TRAN_DISP
+    properties:
+      ATTRIBUTE_NAME: NOM_OUTPUT_UOM_CONDITION
+      ATTRIBUTE_SYNTAX: UOM_CONDITION
+      ATTRIBUTE_TYPE: EC_CODE
+      DATA_TYPE: STRING
+      DIMENSION_TYPE: null
+      FORMAT_MASK: null
+      IS_MANDATORY: N
+      LABEL: Output Nomination UOM Type
+      REVN_CODE: null
+      SALE_CODE: PROTECTED
+      SORT_ORDER: 50.0
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+      TIME_SPAN: DAY
+      TRAN_CODE: EDIT
+      UOM: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      ATTRIBUTE_NAME: TRAN_INPUT
+      T: TV_CNTR_TEMPLATE_ATTRIBUTE
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+    parentKeys:
+      TV_CONTRACT_TEMPLATE.CODE: DEFAULT_TRAN_DISP
+    properties:
+      ATTRIBUTE_NAME: TRAN_INPUT
+      ATTRIBUTE_SYNTAX: NOMINATION_SIGN
+      ATTRIBUTE_TYPE: EC_CODE
+      DATA_TYPE: STRING
+      DIMENSION_TYPE: null
+      FORMAT_MASK: null
+      IS_MANDATORY: N
+      LABEL: Transfer Input
+      REVN_CODE: null
+      SALE_CODE: PROTECTED
+      SORT_ORDER: 70.0
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+      TIME_SPAN: MTH
+      TRAN_CODE: EDIT
+      UOM: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      ATTRIBUTE_NAME: TRAN_OUTPUT
+      T: TV_CNTR_TEMPLATE_ATTRIBUTE
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+    parentKeys:
+      TV_CONTRACT_TEMPLATE.CODE: DEFAULT_TRAN_DISP
+    properties:
+      ATTRIBUTE_NAME: TRAN_OUTPUT
+      ATTRIBUTE_SYNTAX: NOMINATION_SIGN
+      ATTRIBUTE_TYPE: EC_CODE
+      DATA_TYPE: STRING
+      DIMENSION_TYPE: null
+      FORMAT_MASK: null
+      IS_MANDATORY: N
+      LABEL: Transfer Output
+      REVN_CODE: null
+      SALE_CODE: PROTECTED
+      SORT_ORDER: 80.0
+      TEMPLATE_CODE: DEFAULT_TRAN_DISP
+      TIME_SPAN: MTH
+      TRAN_CODE: EDIT
+      UOM: null

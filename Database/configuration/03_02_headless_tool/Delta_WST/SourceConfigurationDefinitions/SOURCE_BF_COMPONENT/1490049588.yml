@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1490049588'
+keys:
+  BF_CODE: FC.0010
+  T: BF_COMPONENT
+  URL: /tab
+parentKeys: {}
+properties:
+  BF_CODE: FC.0010
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.0010' AND NVL(URL,'IS_NULL') = '/tab')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast' )
+  CLASS_NAME: null
+  COMP_CODE: tab
+  NAME: Tab control
+  SIGNING_REQ_IND: null
+  URL: /tab
+related: {}

@@ -1,0 +1,36 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-453737577'
+keys:
+  BF_DESCRIPTION_NO: CO.00942
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.00942
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens.snd/production_data_menu' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p style=""><span style="font-family: Arial;">This business function
+    allows the user to configure additional menu options which are links to the relevant
+    EC screens for the context menu in Stream Node Diagram (CO.00941). A user can
+    select Node type (i.e. Well, Tank, Stream, Facility, etc) and choose respective
+    EC screens from the Business Screen drop-down. More than one EC screen can be
+    configured for each node type.</span><span style="font-family: Arial;"> On SND
+    Context menu, all the configured screens are available under "Production Data"
+    menu item, based on the selected node type.</span></p><div style=""><span style="font-family:
+    Arial;">There are also additional filtering for Well and Stream node types as
+    below:-</span></div><div style=""><ul style="list-style-type:disc;margin-left:40px;"><li><span
+    style="font-family: Arial;">For Streams, the context menu will be populated based
+    one the Stream Set list (CO.0030) and Production Data Menu configuration to ensure
+    correct screens are populated for the selected stream. Example, if the user has
+    configured Daily Oil Stream Status (PO.0001) for stream node type, this option
+    will only be available for streams that have the same stream set list configured.</span></li><li><span
+    style="font-family: Arial;">For Wells, the context menu will be populated based
+    one the business function profile (Injection or Production Well) configured in
+    Well screen(CO.0049) and Production Data Menu configuration. This is to ensure
+    correct screens that are relevant to either injection or production wells are
+    populated correctly on the context menu of the selected well.</span></li><li><span
+    style="font-family: Arial;">For Tanks, the context menu will be populated based
+    one the Bf usage configured on the Tank screen(CO.0036) and Production Data Menu
+    configuration. This is to ensure correct screens that are relevant to the tank
+    are populated correctly on the context menu of the selected tank.</span></li></ul></div>'
+related: {}

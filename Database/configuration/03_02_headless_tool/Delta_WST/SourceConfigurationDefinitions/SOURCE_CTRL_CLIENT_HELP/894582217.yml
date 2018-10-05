@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '894582217'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/spot_agreement
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/spot_agreement
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

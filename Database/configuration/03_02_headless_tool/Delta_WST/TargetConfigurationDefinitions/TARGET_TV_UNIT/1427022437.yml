@@ -1,0 +1,175 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1427022437'
+keys:
+  T: TV_UNIT
+  UNIT: M3PERDAY
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Cubic meter per day
+  FIN_CODE: null
+  LABEL: m³/d
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: M3PERDAY
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MCFPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      MULT_FACT: 0.0353147
+      PRECISION: 6.0
+      TO_UNIT: MCFPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BBLSPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      MULT_FACT: 6.2922636
+      PRECISION: null
+      TO_UNIT: BBLSPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BBLPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      MULT_FACT: 6.289811
+      PRECISION: 7.0
+      TO_UNIT: BBLPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KM3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: KM3PERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MMSCFPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: M3PERDAY
+      MULT_FACT: 3.53147E-5
+      PRECISION: 6.0
+      TO_UNIT: MMSCFPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: OIL_RATE
+      T: TV_UOM_SETUP
+      UNIT: M3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: OIL_RATE
+      REPORT_UNIT: Y
+      UNIT: M3PERDAY
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: WATER_RATE
+      T: TV_UOM_SETUP
+      UNIT: M3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: WATER_RATE
+      REPORT_UNIT: Y
+      UNIT: M3PERDAY
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: GAS_RATE
+      T: TV_UOM_SETUP
+      UNIT: M3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: GAS_RATE
+      REPORT_UNIT: Y
+      UNIT: M3PERDAY
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LIQ_RATE
+      T: TV_UOM_SETUP
+      UNIT: M3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LIQ_RATE
+      REPORT_UNIT: Y
+      UNIT: M3PERDAY
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STEAM_RATE_CWE
+      T: TV_UOM_SETUP
+      UNIT: M3PERDAY
+    parentKeys:
+      TV_UNIT.UNIT: M3PERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STEAM_RATE_CWE
+      REPORT_UNIT: Y
+      UNIT: M3PERDAY
+      VIEW_UNIT: Y

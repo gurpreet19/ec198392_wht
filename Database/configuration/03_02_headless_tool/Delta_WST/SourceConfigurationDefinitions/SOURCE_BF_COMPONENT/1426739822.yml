@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1426739822'
+keys:
+  BF_CODE: CO.0194
+  T: BF_COMPONENT
+  URL: /roles
+parentKeys: {}
+properties:
+  BF_CODE: CO.0194
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0194' AND NVL(URL,'IS_NULL') = '/roles')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/system_messages' )
+  CLASS_NAME: SYST_MESS_ROLE
+  COMP_CODE: roles
+  NAME: Roles
+  SIGNING_REQ_IND: null
+  URL: /roles
+related: {}

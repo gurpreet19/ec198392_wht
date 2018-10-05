@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '687256504'
+keys:
+  BF_DESCRIPTION_NO: CA.0002
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CA.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ca.screens/cargo_load' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p class="MsoNormal">This screen is used to record actual data about a lifting.&nbsp; Such data include actual quantities (both net and gross volumes, and masses in metric tonnes and long tonnes). Such data are normally recorded by the fiscal metering computer and can be captured from data historians / meter computer or from printouts from the same meter station. Normally a "certificate of quantity" document is submitted along with the cargo manifest (a series of documents), which states the official quantity figures.</p><p class="MsoNormal">In addition to quantity data, it is important to record any quality data, normally based on representative samples taken during loading and analysed at the terminal laboratory. Such analyses are carried out to determine density/specific gravity, API, RVP (Reid Vapour Pressure), TVP, BS&amp;W and Salt content. For the fiscal metering computer to provide all quantity data, analysis data about density and BS&amp;W is required (hence there is a relationship between the quantity and quality data). Normally a "certificate of quality" document is submitted along with the cargo manifest, which states the official quantity figures.<o:p></o:p></p>
+related: {}

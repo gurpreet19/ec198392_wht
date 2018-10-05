@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '913177723'
+keys:
+  BF_DESCRIPTION_NO: CD.0019
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CUSTOMER' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Customer screen</strong>    is used to define the Customers available for the Contracts in the system.</p><p>    <u>Note</u>    that for each Company defined as a Contract Owner Company there must exist    a corresponding Customer object which has then a relation to the Company in    question.<br>    This applies if there will be for Purchase / Tariff Income / Journal Entry    contracts in the system. The link to the Contract Owner Company is through    the Company relation of the Customer object.<br>    These Customers must also have the Customer Group set to SELF / Contract    Owner Customer.</p><p>    EC has the option to have undefined Customer on a Contract. This concept    can be used if there are multiple Customers for the Contact but for each    individual financial document (i.e. invoice) only one of these Customers is    applicable. <br> The customer for the document can either come from the    interfaced data or being entered manually by user.</p>
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1147773054'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_ELE/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_ELE
+parentKeys: {}
+properties:
+  BF_CODE: PO.0066
+  NAME: Daily Electrical Stream Status
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_ELE/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_ELE
+related: {}

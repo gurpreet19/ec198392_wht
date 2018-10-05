@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1777331121'
+keys:
+  BF_CODE: TO.0016
+  T: BF_COMPONENT
+  URL: /search
+parentKeys: {}
+properties:
+  BF_CODE: TO.0016
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0016' AND NVL(URL,'IS_NULL') = '/search')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/batch_quantity_unload' )
+  CLASS_NAME: TERM_OP_NAVIGATOR_ULD
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /search
+related: {}

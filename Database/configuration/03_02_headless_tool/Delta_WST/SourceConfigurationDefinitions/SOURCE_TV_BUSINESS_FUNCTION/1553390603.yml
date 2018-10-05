@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1553390603'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/document_information
+parentKeys: {}
+properties:
+  BF_CODE: SP.0020
+  NAME: Document Text
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/document_information
+related: {}

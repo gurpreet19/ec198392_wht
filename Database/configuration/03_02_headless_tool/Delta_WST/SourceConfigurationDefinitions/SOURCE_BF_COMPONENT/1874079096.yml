@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1874079096'
+keys:
+  BF_CODE: CP.0032
+  T: BF_COMPONENT
+  URL: /cargo_popup
+parentKeys: {}
+properties:
+  BF_CODE: CP.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0032' AND NVL(URL,'IS_NULL') = '/cargo_popup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_nomination_entry' )
+  CLASS_NAME: null
+  COMP_CODE: cargo_popup
+  NAME: Cargo Popup
+  SIGNING_REQ_IND: null
+  URL: /cargo_popup
+related: {}

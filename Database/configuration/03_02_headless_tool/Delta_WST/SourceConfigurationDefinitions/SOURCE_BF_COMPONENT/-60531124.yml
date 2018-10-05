@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-60531124'
+keys:
+  BF_CODE: GD.0005
+  T: BF_COMPONENT
+  URL: /delivery_point
+parentKeys: {}
+properties:
+  BF_CODE: GD.0005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0005' AND NVL(URL,'IS_NULL') = '/delivery_point')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/exit_point_matching_aggregated' )
+  CLASS_NAME: DP_DAY_SHIPPER_NOM
+  COMP_CODE: delivery_point
+  NAME: Delivery Point
+  SIGNING_REQ_IND: null
+  URL: /delivery_point
+related: {}

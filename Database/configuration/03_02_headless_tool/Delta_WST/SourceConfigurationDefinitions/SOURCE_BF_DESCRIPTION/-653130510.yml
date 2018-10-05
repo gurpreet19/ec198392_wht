@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-653130510'
+keys:
+  BF_DESCRIPTION_NO: IS.0008
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IS.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/mapping_code' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen maps data between values in the file one tries to import data from and values in EC. An example can be if you have a well in EC called AS1_Well_001, while in the file you try to import it's called AM1. By adding a mapping in this screen, EC Import will read the value from the file as AM1, and convert it to AS1_Well_001 before it tries to insert it into EC.</p>
+related: {}

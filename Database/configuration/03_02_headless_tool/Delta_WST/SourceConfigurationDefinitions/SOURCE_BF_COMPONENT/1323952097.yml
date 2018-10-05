@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1323952097'
+keys:
+  BF_CODE: PA.0004
+  T: BF_COMPONENT
+  URL: /event_data
+parentKeys: {}
+properties:
+  BF_CODE: PA.0004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PA.0004' AND NVL(URL,'IS_NULL') = '/event_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/process_overview' )
+  CLASS_NAME: null
+  COMP_CODE: event_data
+  NAME: Event Data
+  SIGNING_REQ_IND: null
+  URL: /event_data
+related: {}

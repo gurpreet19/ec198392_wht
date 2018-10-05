@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1754507666'
+keys:
+  BF_DESCRIPTION_NO: PO.0030
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_production_separator_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is part of the Business Process to gather and QA sub daily production data. It should be used when SCADA systems provide records each 2nd hour / hourly / 30min or at other fixed intervals.</p>
+
+    <p>If the original data has occasional &ldquo;missing rows&rdquo; (that is, not every half hour when the fixed interval is 30 min), the &ldquo;<em>Generate Missing Rows</em>&rdquo; -button will insert any missing rows so that every half hour is accounted for. For these newly inserted rows, an existing period&rsquo;s data will be used as the row&rsquo;s initial value. EC will support copy forward, copy backwards and interpolate methods for generating missing row field values; the customer may select the desired method from a screen popup list.</p>
+
+    <p>The &ldquo;Aggregate Current&rdquo; &ndash;button will aggregate all sub-daily production separator data (except calculated read only fields) for the day and separator chosen in the navigator.</p>
+
+    <p>The &ldquo;Aggregate Facility All&rdquo; &ndash;button will aggregate all sub-daily production separator data (except calculated read only fields) for all separators for the day and facility chosen in the navigator.</p>
+
+    <p>In addition to the columns shown on the sample screen above, the customer may select to configure and display one or more additional columns, e.g. Annulus Pressure, Downstream choke pressure, Downstream choke temperature. A list of available attributes is found in Section 1.1.5.2. The column &ldquo;Is Active&rdquo; indicates whether they are activated in the initial product setup or not. Non activated attributes can be activated from <em>Class Attributes (CO.1014) </em>configuration screen<em>.</em></p>
+
+    <p>The <strong>navigator </strong>section enables the selection of specific date for which the production separator sub day measurement data will be displayed. The navigator is based on the configured group model down to the flowline level. All levels are mandatory but may be defaulted.</p>
+
+    <p><strong>Data section 1 </strong>has two buttons and a dropdown that enables the operator to fill in blank records and trigger an aggregation of sub-day data to daily representative values.</p>
+
+    <p><strong>Data section 2 </strong>lists all sub day measurement data available for the separator.</p>
+related: {}

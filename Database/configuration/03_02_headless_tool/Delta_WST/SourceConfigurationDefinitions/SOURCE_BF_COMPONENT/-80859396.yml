@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-80859396'
+keys:
+  BF_CODE: CP.0072
+  T: BF_COMPONENT
+  URL: /btnEnt
+parentKeys: {}
+properties:
+  BF_CODE: CP.0072
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0072' AND NVL(URL,'IS_NULL') = '/btnEnt')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/schedule_lifting_overview' )
+  CLASS_NAME: null
+  COMP_CODE: btnEnt
+  NAME: Go To Entitlement
+  SIGNING_REQ_IND: null
+  URL: /btnEnt
+related: {}

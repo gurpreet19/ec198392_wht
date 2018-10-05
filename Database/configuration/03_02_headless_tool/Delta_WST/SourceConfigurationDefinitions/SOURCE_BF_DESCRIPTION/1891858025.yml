@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1891858025'
+keys:
+  BF_DESCRIPTION_NO: CO.0100
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0100
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/PROD_SUB_UNIT/TARGET/PROD_SUB_UNIT/CLASS_NAME/PROD_SUB_UNIT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Production Sub Unit is part of the operational group model. It is used to aggregate data to production sub unit level and to navigate down to data starting from production sub unit level in the navigator.</p><p>Production sub unit does not have any data classes. Its also optional, and does not need to be configured for small operations.</p>
+related: {}

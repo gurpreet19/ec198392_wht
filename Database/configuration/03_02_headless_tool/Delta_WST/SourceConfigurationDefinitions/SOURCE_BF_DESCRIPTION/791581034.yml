@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '791581034'
+keys:
+  BF_DESCRIPTION_NO: CO.0167
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0167
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/object_group_conn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen is used to connect object class to other object class objects. The screen opens to model many to many dependencies between different object classes. Examples: Wells can be linked to compressors, where one well can belong to many compressors and one compressor can have many wells. These object classes should be all object classes that have facility_class_1 and facility_class_2 as parent (e.g. well, stream, tank, equipments ++).</p>
+
+    <p>The connections have a start and end date, where end date is exclusive.</p>
+
+    <p>The second operational navigator is used to control which object classes and objects that are listed in popup&rsquo;s. <strong>Do not </strong>use it to limit the records being displayed.</p>
+
+    <p>Furthermore, with the works on ECPD-11535, this screen was modified to handle the &lsquo;Swing Well&rsquo; connection. In insert mode, the [Object Type] will be prompted with additional value of [Swing Well] together with the existing available group types like [Deferment, Reporting and so on] when the Navigator [Object Class] was selected with [Well] value as following.</p>
+
+    <p>The complete [Object Group] entry can be made as following, and this [Swing Well] in Object Type will trigger the exclusive selection in [Object Group Connection] section below, meaning that this Swing Well connection can only be made to [Facility Class 1, Node and Well Hookup].</p>
+
+    <p>Thus, the sample Swing Well connection was made from Offshore-202 Well to a Facility Class 1 object below.</p>
+related: {}

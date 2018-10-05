@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1158455716'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO2_REMOVAL_UNIT/TARGET/CO2_REMOVAL_UNIT/CLASS_NAME/CO2_REMOVAL_UNIT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO2_REMOVAL_UNIT/TARGET/CO2_REMOVAL_UNIT/CLASS_NAME/CO2_REMOVAL_UNIT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

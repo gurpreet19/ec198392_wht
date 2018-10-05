@@ -1,0 +1,85 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1632166723'
+keys:
+  BF_DESCRIPTION_NO: SP.0039
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_cost_mapping' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>\t<b>    Project Data Mapping Setup screen</b> allows to create\
+    \ mapping objects that will be used when executing the Data Mapping for a given\
+    \ Dataset in the Project    Data Mapping screen (BF SP.0041).<br>\t\t<strong style=\"\
+    font-weight: normal;\"> - The screen supports</strong>    insert, delete, and\
+    \ update of mapping objects. The Data Mapping objects are using standard EC date-effective\
+    \ versions.<br>\t\t\t<strong style=\"font-weight: normal;\">- The attribute section</strong>\
+    \    defines the object itself in addition to the target mapping that applies\
+    \ to this object, i.e. different settings that will identify the target records.<br>\
+    \    - In addition to the standard EC object screen, this business function has\
+    \ a <strong style=\"font-weight: normal;\">child section</strong> where all the\
+    \ Source Mapping is defined.</p><p>\t\t\t\t<strong>Button <span style=\"color:\
+    \ rgb(0, 153, 0);\">Report Reference Group</span>\t\t\t\t\t<br>\t\t\t\t\t</strong>-\
+    \ This button appears if the selected Mapping entry is based an a Report Reference\
+    \ Group<br>- By clicking the Report Reference Group button a separate popup-window\
+    \ will be launched showing the setup of Report Reference Items which are connected\
+    \ with the selected Report Reference Group.</p><p style=\"font-weight: normal;\"\
+    >\t\t\t\t\t\t<strong>The Source Mapping section</strong>    maps the particular\
+    \ Data Mapping object towards Data entry records which meet the match criteria\
+    \ defined here. The user might use individual/lists of    different objects or\
+    \ codes in addition to comparison operators to suit its needs.</p><p style=\"\
+    font-weight: normal;\">\t\t\t\t\t\t<strong>The bottom section of the screen (below\
+    \ the list of object attributes) is slightly different depending on the Data Entry\
+    \ Source setting:</strong>\t\t\t\t\t</p><p style=\"font-weight: normal;\">\t\t\
+    \t\t\t\t<strong>Data Entry Source = Class Data:</strong>\t\t\t\t\t\t<br>    -\
+    \ The bottom section shows the Class Mapping for the selected Data Mapping object.<br>\
+    \    - The Data Filter attribute tells which Class Mapping is in use.<br>    -\
+    \ The Setup button allows for editing/configuring the Data Filters. This button\
+    \ will open a new popup window where each of the different Data Filters are  \
+    \  listed together with their configuration.</p><p style=\"font-weight: normal;\"\
+    >\t\t\t\t\t\t\t\t\t<strong>Data Entry Source = Interfaced Data Entry:</strong>\t\
+    \t\t\t\t\t\t\t\t<br>    - The bottom section shows the Source Mapping for the\
+    \ selected Data Mapping object.<br>    - For each entry in the Source Mapping\
+    \ configuration the user can access more detailed information through the buttons\
+    \ at the bottom:</p><p style=\"font-weight: normal;\">\t\t\t\t\t\t\t\t\t\t\t<strong>Button\
+    \ <span style=\"color: rgb(0, 153, 0);\">Object List</span>\t\t\t\t\t\t\t\t\t\t\
+    \t</strong>\t\t\t\t\t\t\t\t\t\t\t<br>    - This button appears if the selected\
+    \ Source Mapping entry is using an Object List, i.e Source Object - Type = Object\
+    \ List.<br>- By clicking the Object List button a separate popup-window will be\
+    \ launched showing the content of the selected Object List.    <strong>\t\t\t\t\
+    \t\t\t\t\t\t\t\t\t\t<em>The popup window has 3 tabs:</em>\t\t\t\t\t\t\t\t\t\t\t\
+    \t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>Tab Items: </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\
+    \    This tab lists the items being part of the Object List. The user can modify\
+    \ the items being part of the Object List.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>Tab Usage: </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
+    \t</strong>    This tab shows where this Object List is being used, i.e. all the\
+    \ Data Mapping Setup entries referring to this Object List.<br>\t\t\t\t\t\t\t\t\
+    \t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>Tab List Handling:\
+    \ </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>    This tab allows for copying\
+    \ one or more Object List Items to other existing Object Lists or to a new Object\
+    \ List.</p><p style=\"font-weight: normal;\">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
+    <strong>Button <span style=\"color: rgb(0, 153, 0);\">View Result</span>\t\t\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    If\
+    \ you have data in the system for the selected Dataset for the Daytime given by\
+    \ the Navigator Date this button will launch a popup window showing the    result\
+    \ set for the Source Mapping Query (See button View Query below)</p><p style=\"\
+    font-weight: normal;\">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span\
+    \ style=\"color: rgb(0, 153, 0);\">View Query</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\
+    \t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    This button will open\
+    \ a popup window showing the query to the database the current Source Mapping\
+    \ yields. You can copy this query into some database client    to see if you get\
+    \ the expected outcome. Note that it is the Navigator Date that is used as the\
+    \ Daytime for the query</p><p style=\"font-weight: normal;\">\t\t\t\t\t\t\t\t\t\
+    \t\t\t\t\t\t\t\t\t<strong>Button <span style=\"color: rgb(0, 153, 0);\">Copy Current\
+    \ Group to New</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t<br>    - The Source Mapping Grouping - attribute Group\
+    \ No - is used for creating 'AND' vs 'OR' sections in the resulting database query:\
+    \ All Source Mapping    entries having the same Group No will be AND'ed together\
+    \ in the resulting database query - when the Group Number changes the resulting\
+    \ query will have an    OR statement in the WHERE condition and the Source Mapping\
+    \ entries for the new group are AND'ed together.<br>    - This button will create\
+    \ a copy of the selected Source Mapping entry and give it a new group number.</p>\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+related: {}

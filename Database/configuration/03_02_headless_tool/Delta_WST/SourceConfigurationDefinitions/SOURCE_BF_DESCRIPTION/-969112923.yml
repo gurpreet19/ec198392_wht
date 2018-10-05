@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-969112923'
+keys:
+  BF_DESCRIPTION_NO: CO.2021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/TRAN_CODE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to change the contract attributes.</p><p>Each contract got a Contract Template (CO.2020) where the attributes are defined. Depending on the template, different attributes can therefore be listed in this&nbsp;business action.</p><p>In the navigator a contract is selected.</p><p> The top section lists all the contract attributes that is/are registered directly against the contract and the current values for the selected date in the navigator. <br />The right column lists all versions of the selected attribute in the left section. If the attribute is retrieved from a user exit function this section will be empty because there are no versions of the attribute.</p><p>The bottom section lists all the contract attributes that is/are stored against one additional dimension. This dimension can either be an object (for example port, berth) or an EC Code. Dimension type is defined in CO.2048 - Contract Attribute Dimension.The middle column lists all the current dimension attributes for the selected contract attribute. <br />While the rightmost column lists all versions of the selected dimension in the middle column. <br /></p>
+related: {}

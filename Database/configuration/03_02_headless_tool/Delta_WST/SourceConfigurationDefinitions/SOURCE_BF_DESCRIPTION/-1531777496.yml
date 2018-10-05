@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1531777496'
+keys:
+  BF_DESCRIPTION_NO: SD.0049
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0049
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/nomloc_delivery_events/CLASS1/SLNL_PERIOD_DEL_EVENT/CLASS2/SLNP_PERIOD_DEL_EVENT_NL/CLASS_SUB/SLNP_SUBDAY_DEL_EVENT_NL/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0049' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is related to SD.0047 - Sales Gas Delivery Events. Often events like this are not received per contract, but instead received as one quantity per a location, and a calculation is required to split this one quantity down to all contracts affected.</p>
+related: {}

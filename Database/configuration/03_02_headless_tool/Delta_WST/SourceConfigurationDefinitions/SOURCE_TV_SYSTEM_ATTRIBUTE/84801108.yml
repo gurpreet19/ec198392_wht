@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '84801108'
+keys:
+  ATTRIBUTE_TYPE: JOURNAL_ENTRY_THRESHOLD
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: JOURNAL_ENTRY_THRESHOLD
+  ATTRIBUTE_VALUE: 500.0
+  DESCRIPTION: Indicates the maximum number of journal entry records should be displayed.
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

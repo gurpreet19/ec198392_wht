@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-667925764'
+keys:
+  BF_CODE: GD.0104
+  T: BF_COMPONENT
+  URL: /nav
+parentKeys: {}
+properties:
+  BF_CODE: GD.0104
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0104' AND NVL(URL,'IS_NULL') = '/nav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_location_nomination/TARGET/DELIVERY_POINT/CLASS/DELPNT_DAY_NOMINATION' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /nav
+related: {}

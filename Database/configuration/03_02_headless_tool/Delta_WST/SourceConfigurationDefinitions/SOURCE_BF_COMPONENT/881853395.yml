@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '881853395'
+keys:
+  BF_CODE: PP.0039
+  T: BF_COMPONENT
+  URL: /PromoteToOfficialButton
+parentKeys: {}
+properties:
+  BF_CODE: PP.0039
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0039' AND NVL(URL,'IS_NULL') = '/PromoteToOfficialButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast' )
+  CLASS_NAME: null
+  COMP_CODE: PromoteToOfficialButton
+  NAME: Promote To official
+  SIGNING_REQ_IND: null
+  URL: /PromoteToOfficialButton
+related: {}

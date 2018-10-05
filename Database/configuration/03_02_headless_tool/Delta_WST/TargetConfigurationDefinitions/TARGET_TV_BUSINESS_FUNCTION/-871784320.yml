@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-871784320'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /user/changepassword
+parentKeys: {}
+properties:
+  BF_CODE: CO.1005
+  NAME: Change Password
+  PROFILE_CLASS_NAME: null
+  URL: /user/changepassword
+related: {}

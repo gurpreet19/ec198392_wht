@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2021614672'
+keys:
+  BF_CODE: GD.0082
+  T: BF_COMPONENT
+  URL: /day_cap_valid
+parentKeys: {}
+properties:
+  BF_CODE: GD.0082
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0082' AND NVL(URL,'IS_NULL') = '/day_cap_valid')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_validation/DATA1_CLASS/TRCN_DAY_CAP_VALID/DATA2_CLASS/TRCN_SUB_DAY_CAP_VALID/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT' )
+  CLASS_NAME: TRCN_DAY_CAP_VALID
+  COMP_CODE: day_cap_valid
+  NAME: Daily Capacity Validation
+  SIGNING_REQ_IND: null
+  URL: /day_cap_valid
+related: {}

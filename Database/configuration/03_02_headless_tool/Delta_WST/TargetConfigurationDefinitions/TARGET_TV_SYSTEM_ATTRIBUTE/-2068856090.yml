@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2068856090'
+keys:
+  ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+  FROM_DATE: 2006-03-26T01:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+  ATTRIBUTE_VALUE: 1.0
+  DESCRIPTION: Change to summertime 2006
+  FROM_DATE: 2006-03-26T01:00:00Z
+related: {}

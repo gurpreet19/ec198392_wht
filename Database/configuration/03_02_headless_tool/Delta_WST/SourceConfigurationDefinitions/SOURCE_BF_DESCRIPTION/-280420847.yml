@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-280420847'
+keys:
+  BF_DESCRIPTION_NO: CD.0020
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/VENDOR' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Vendor screen</strong>    is used to define the Vendors available for the Contracts in the system.</p><p>    For Sales, Tariff Income and Journal Entry contracts EC will automatically    populate the Vendor of the contract if there is a Vendor object where the    Vendor Group = Contract Owner Vendor (Code = SELF) and the Company    relation of the Vendor object is the Contract Owner Company of the    Contract. This means that for each Company defined as a Contract Owner    Company there must exist a corresponding Vendor object which has then a    relation to the Company in question. The link to the Contract Owner Company    is through the Company relation of the Vendor object.</p><p>    <strong>The Vendor object is linked to other objects as follows:</strong><br>    - For each Contract there is one or more Vendor objects connected.<br>    - Each Bank Account object may have a relation to the Vendor object telling    that the Bank Account in question belongs to the selected Vendor object.    When selecting Bank Account for a Vendor in the Company Splits BF only    those Bank Account objects that have been connected to the Vendor in    question will be available in the selection popup<br>    - For supporting the Multi-Vendor Contract functionality there is a    separate class holding some attributes per Vendor being part of the    Contract.<br>    - To handle the various payment variants there is relation to which Vendor    that will receive the Excluding VAT value in the Contract.<br>    - To handle the various payment variants there is relation to which Vendor    that will receive the VAT value in the Contract</p>
+related: {}

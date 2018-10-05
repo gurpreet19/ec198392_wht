@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '402572594'
+keys:
+  BF_CODE: SP.0016
+  T: BF_COMPONENT
+  URL: /rev_doc_btn
+parentKeys: {}
+properties:
+  BF_CODE: SP.0016
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = '/rev_doc_btn')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_general' )
+  CLASS_NAME: null
+  COMP_CODE: ReverseDocument
+  NAME: Reverse Document
+  SIGNING_REQ_IND: null
+  URL: /rev_doc_btn
+related: {}

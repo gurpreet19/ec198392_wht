@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '349003572'
+keys:
+  BF_CODE: PO.0112
+  T: BF_COMPONENT
+  URL: /run_tickets_details
+parentKeys: {}
+properties:
+  BF_CODE: PO.0112
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0112' AND NVL(URL,'IS_NULL') = '/run_tickets_details')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/event_tank_status_dip_and_export' )
+  CLASS_NAME: TANK_OIL_BATCH_EXP_DET
+  COMP_CODE: run_tickets_details
+  NAME: Run Ticket Details
+  SIGNING_REQ_IND: null
+  URL: /run_tickets_details
+related: {}

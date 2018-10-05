@@ -1,0 +1,33 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2000758582'
+keys:
+  NAME: QUERY
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: TRAN_FCST_LIST
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: query
+  MANDATORY_IND: null
+  NAME: QUERY
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<renderer>\n  <model\
+    \ class=\"com.ec.eccommon.genericmodel.model.web.GenericDaoModel\">\n  <arg name=\"\
+    daoQueryXml\" value=\"data\" valuetype=\"subXml\">\n    <data>\n      <query>\n\
+    \        <fromdate>1900-01-01T00:00:00</fromdate>\n        <todate>2990-01-01T00:00:00</todate>\n\
+    \        <readonly>true</readonly>\n        <distinct>true</distinct>\n      </query>\n\
+    \      <class name=\"FCST_MNGR_FCST_LIST\">\n      </class>\n      <object name=\"\
+    FCST_MNGR_FCST_LIST\">\n\t    <property name=\"PERIOD_TYPE\" datavalue=\"$FCST_PERIOD_TYPE$\"\
+    \ operator=\"=\"/>\n        <sql condition=\"$FROMDATE$&lt;&gt;\">\n         \
+    \  <where>\n\t\t\t   to_date('$FROMDATE$', 'YYYY-MM-DD\"T\"HH24:MI:SS') &lt;=\
+    \ object_end_date\n\t\t   </where>\n        </sql>\n        <sql>\n          <where>\n\
+    \            (STORAGE_ID is null or STORAGE_ID = '$STORAGE_ID$')\n          </where>\n\
+    \        </sql>\n      </object>\n      <sort name=\"FCST_MNGR_FCST_LIST\">\n\
+    \        <property name=\"CREATE_DATE\" order=\"DESC\"/>\n      </sort>\n    </data>\n\
+    \    </arg>\n  </model>\n</renderer>"
+  RESOLVE_TYPE: null
+  SORT_ORDER: 60.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: TRAN_FCST_LIST
+related: {}

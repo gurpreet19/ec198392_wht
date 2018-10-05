@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1806091619'
+keys:
+  BF_CODE: PO.0117
+  T: BF_COMPONENT
+  URL: /graph_5
+parentKeys: {}
+properties:
+  BF_CODE: PO.0117
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0117' AND NVL(URL,'IS_NULL') = '/graph_5')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_dashboard' )
+  CLASS_NAME: DASHBRD_DAY_GAS_UTLZ
+  COMP_CODE: graph_5
+  NAME: Gas Utilization
+  SIGNING_REQ_IND: null
+  URL: /graph_5
+related: {}

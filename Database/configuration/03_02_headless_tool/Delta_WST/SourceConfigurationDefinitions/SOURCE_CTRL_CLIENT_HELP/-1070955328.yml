@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1070955328'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_navmodel_nav/CLASS_NAME/PRICE_RATE/NAVMODEL/SALE_PR/TARGET/PRICE_RATE
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_navmodel_nav/CLASS_NAME/PRICE_RATE/NAVMODEL/SALE_PR/TARGET/PRICE_RATE
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

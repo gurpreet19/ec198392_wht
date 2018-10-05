@@ -1,0 +1,132 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1469516511'
+keys:
+  BF_DESCRIPTION_NO: FC.1009
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FC.1009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_qty_value_gsales/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>In the navigator the user selects which forecast case to view or
+    edit. The selection criteria may include a field group. The user may then select
+    among the field groups that have the field group type selected when the forecast
+    case was set up. </p><p>In the table below the navigator an overview of the quantities
+    for the selected forecast case is shown. The numbers in this table are yearly
+    numbers by field with a sum row at the bottom. If a field group was selected in
+    the navigator, this table will only include the fields that are members of that
+    group.</p><p>Then a month-by-month table showing monthly numbers by field is displayed.
+    This table also includes an adjustment line. The content of this line is the difference
+    between last year?s December accrual numbers and the actual December numbers.
+    All quantity data entry will be done through this table.</p><p>At the very bottom
+    of the screen is a section where the user can enter comments. Any number of comments
+    can be inserted by normal insert functionality, not necessarily four rows as in
+    the example screenshot above. The comments will be by forecast case, product and
+    field.</p><p>All parts of the forecast case will be populated when the Populate
+    Forecast Case on the Properties screen is pressed. The quantity part of this logic
+    will work as follows:<br>?&nbsp;The numbers in the Plan Qty column will be copied
+    from the referenced quantity forecast case that is selected on the Properties
+    panel by using the selected stream items for the forecast object.<br>?&nbsp;If
+    the Populate Method is PLAN, then all columns except the Plan Qty column will
+    initially be empty. The user will then have to enter Commercial Adjustment, Swap
+    Adjustment and Sales Qty. Available Sale will be Plan Qty less the two adjustments.
+    Inventory Movement will be Available Sale less Sales Qty.<br>?&nbsp;In the month-by-month
+    table the rows will get status PLAN if the Populate Method is PLAN or if the month
+    in question is later than the Forecast Case month. In the screenshot above, the
+    forecast case?s month is May, and therefore the June thru December months are
+    editable.<br>?&nbsp;For the months after the month of the Forecast Case, the adjustment
+    quantities and the sales quantity will be copied from the official forecast case
+    for the previous month. The user may change them if necessary. The plan quantity
+    will be copied from the connected quantity forecast case. This will trigger a
+    recalculation of available sales quantity and inventory movement.<br>?&nbsp;For
+    the months up to and including the month of the Forecast Case object, actual numbers
+    will be copied into forecast case. The Plan Qty will be actual numbers copied
+    from the selected stream items. The Commercial Adjustment will sum all as-is quantities
+    from the quantities module for the selected stream item category for the month
+    and field in question. The Swap Adjustment quantity will be calculated the same
+    way using the selected stream item category for Swap Adjustments. Available Sale
+    will then be Plan Qty less Commercial Adjustment and Swap Adjustment. The Sales
+    Qty will be sum of all quantities sold from the field in the month in question.
+    This lookup is done by finding the line items selling from the field in question
+    that belong to transactions with point of sale date within the month in question.
+    The documents that these transactions belong to must be set to BOOKED. Finally,
+    Inventory Movement will be the difference between Available Sale and Sales Qty.
+    The status will be ACCRUAL if any of the actual numbers are ACCRUAL. All actual
+    numbers must have status FINAL for the record to get status FINAL.<br>?&nbsp;An
+    exception to this will be made to the Sales Qty for the month after the forecast
+    case?s month, i.e. June in the example screenshot above. There will be a lifting
+    plan for the cargos in this month, and therefore this number will be fetched from
+    the actual tables and not from the official forecast case for the previous month.
+    The number will however still be editable for the user to change if necessary.<br>?&nbsp;On
+    the Prior Year Adjustment line the user has to enter any adjustments and the Sales
+    Qty. The Available Sale and the Inventory Movement will then be calculated. For
+    liquids shipped by cargos, there will normally not be any adjustments to the sales
+    quantity. This means that any adjustment to the available sales quantity will
+    only influence the inventory movement. The sales quantity cell will nonetheless
+    be editable for the user to enter any number.</p><p>Populate method = PLAN </p><p>?&nbsp;Opening
+    Position = Manual input for January. The rest of the months are readonly and consist
+    of the following formula: Closing Pos. Qty for previous month<br>?&nbsp;Status
+    column: The status is connected to the Plan Qty and does not take into account
+    the other columns. The Status will always be PLAN.<br>?&nbsp;Plan Qty ? match
+    on product: The Plan Qty is copied from the connected QTY forecast if the set
+    up Stream Item for this product matches the Qty Forecast set up Stream Item. The
+    column should be read only. The PYA quantity is also fetched from the Qty Forecast
+    and should be readonly.<br>?&nbsp;Plan Qty ? no match on product: The Plan Qty
+    will initially be empty and editable if no match on the Product Stream Item exists
+    in the connected Qty Forecast Case. The PYA quantity should also be editable.<br>?&nbsp;Commercial
+    Adjustment: Initially empty and editable. (if in use in the setup screen)<br>?&nbsp;Swap
+    Adjustment: Initially empty and editable. (if in use in the setup screen)<br>?&nbsp;Available
+    Sale: Available Sale = Plan Quantity ? Commercial Adjustment ? Swap Adjustment.
+    Calculated on the fly. Not editable.<br>?&nbsp;Inventory Movement: Inventory Movement
+    = Available Sale ? Term Sales Quantity ? Spot Sales Quantity. Calculated on the
+    fly. Not editable. <br>?&nbsp;Term Sales Qty: Initially empty and editable. PYA
+    will be editable.<br>?&nbsp;Spot Sales Qty: Initially empty and editable. PYA
+    will be editable.<br>?&nbsp;Closing Position = Inventory movement + Opening Position.
+    Read only.<br>?&nbsp;Rate = Manual input. Note: Manual input for January should
+    trigger the rest of the year to be populated with this value (default) when saving.
+    This default functionality should only apply if all months are empty. Editable.<br>?&nbsp;Closing
+    Value = Closing Position * Rate. Read only.</p><p>Populate method = YEAR TO MONTH
+    </p><p>?&nbsp;Opening Position = the sum of the actual Opening Position for the
+    Inventories defined per Field in the Setup screen, for the month in question.
+    Read only.<br>?&nbsp;Status column: The status is connected to the Plan Qty and
+    does not take into account the other columns<br>?&nbsp;Plan Qty ? match on product:
+    The Plan Qty is copied from the connected QTY forecast if the set up Stream Item
+    for this product matches the Qty Forecast set up Stream Item. The column should
+    be read only. The PYA quantity is also fetched from the Qty Forecast and should
+    be readonly.<br>?&nbsp;Plan Qty ? no match on product: The Plan Qty is fetched
+    from the actual tables, if there is no match on the Product/Stream Item in the
+    Qty Forecast. The months after Plan Date will be editable. The PYA quantity should
+    also be editable.<br>?&nbsp;Commercial Adjustment: The quantity will fetch the
+    actual quantity for the setup Commercial Adjustment stream item for the months
+    prior to Plan Date.<br>?&nbsp;Swap Adjustment: The quantity will fetch the actual
+    quantity for the setup Swap Adjustment stream item for the months prior to Plan
+    Date.<br>?&nbsp;Available Sale: Available Sale = Plan Quantity ? Commercial Adjustment
+    ? Swap Adjustment. Calculated on the fly. Not editable.<br>?&nbsp;Inventory Movement:
+    Inventory Movement = Available Sale ? Term Sales Qty ? Spot Sales Qty. Calculated
+    on the fly. Not editable. <br>?&nbsp;Term Sales Qty: Prior to Plan Date: The sum
+    of all (sales) line item quantities connected to contract documents, which is
+    set up for the Product, Company and Field in question and which is connected to
+    a Term type of contract. (Term/Spot attribute for contract =TERM)(OV_CONTRACT.CONTRACT_TERM_CODE)
+    The sum only takes into account the quantities which is booked and where the transaction
+    date on the document is prior to the Plan Date. After Plan Date: The monthly Term
+    Sales Qty will be editable. PYA will editable.<br>?&nbsp;Spot Sales Qty: Prior
+    to Plan Date: The sum of all (sales) line item quantities connected to contract
+    documents, which is set up for the Product, Company and Field in question and
+    which is connected to a Spot type of contract. (Term/Spot attribute for contract
+    =SPOT)(OV_CONTRACT.CONTRACT_TERM_CODE) The sum only takes into account the quantities
+    which is booked and where the transaction date on the document is prior to the
+    Plan Date. After Plan Date: The monthly Spot Sales Qty will be editable. PYA will
+    editable.<br>?&nbsp;Closing Position = Inventory movement + Opening Position.
+    Read only.<br>?&nbsp;Rate = Manual input. Note: The months after Plan Date should
+    be equal to the last valid unit rate in IN. Editable.<br>?&nbsp;Closing Value
+    = Closing Position * Rate. Read only.</p><p>Year Total Rules:<br>Opening Position
+    &nbsp;&nbsp;= January Opening Position<br>Plan&nbsp;&nbsp;&nbsp;&nbsp;= Sum<br>Commercial
+    Adjustment&nbsp;&nbsp;= Sum<br>Swap Adjustment&nbsp;&nbsp;= Sum<br>Available Sale&nbsp;&nbsp;&nbsp;=
+    Horizontal aggregation ? Year Total from Plan, Commercial Adjustment and Swap
+    Adjustment<br>Inventory Movement&nbsp;&nbsp;= Horizontal aggregation ? Year Total
+    Closing Position ? Year Total Opening Position<br>Sales&nbsp;&nbsp;&nbsp;&nbsp;=
+    Sum<br>Term Sales&nbsp;&nbsp;&nbsp;= Sum<br>Spot Sales&nbsp;&nbsp;&nbsp;= Sum<br>Closing
+    Position&nbsp;&nbsp;&nbsp;= December Closing Position<br>Rate&nbsp;&nbsp;&nbsp;&nbsp;=
+    December Rate<br>Closing Value&nbsp;&nbsp;&nbsp;= December Closing Value</p><p><br></p>'
+related: {}

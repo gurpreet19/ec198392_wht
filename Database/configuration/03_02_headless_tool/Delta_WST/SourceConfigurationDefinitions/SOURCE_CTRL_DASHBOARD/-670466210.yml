@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-670466210'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: OIL_RECONCILIATION_FACTOR
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: PROD
+  DESCRIPTION: Oil Reconciliation Factor
+  LABEL: Oil Reconciliation Factor
+  NAME: OilReconciliation
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.MeterGaugeWidget
+  WIDGET_CODE: OIL_RECONCILIATION_FACTOR
+related: {}

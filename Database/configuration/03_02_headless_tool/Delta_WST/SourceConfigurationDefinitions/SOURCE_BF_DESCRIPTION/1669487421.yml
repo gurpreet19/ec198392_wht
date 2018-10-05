@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1669487421'
+keys:
+  BF_DESCRIPTION_NO: WR.0059
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0059
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/webo_interval_pressure_test' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is used to enter well bore interval pressure tests. There can be several different types of pressure tests, each having different set of attributes. EC will have 5 different test types predefined (data classes). The customer can choose name of the test types and decide which attributes that apply to each test type. The screen layout will be dynamic and have a break after 3 columns. There is no functionality behind this BF, it&rsquo;s a simple data registration BF.</p>
+related: {}

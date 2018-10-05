@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1179393534'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.sale.sa.screens/yearly_contract_calc_result/BF_PROFILE/SA.0021.PC_CPY/CLASS/SCTR_ACC_YR_PC_CPY
+parentKeys: {}
+properties:
+  BF_CODE: SA.0021.PC_CPY
+  NAME: Yearly Contract Account Result – Profit Centre and Company
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.sa.screens/yearly_contract_calc_result/BF_PROFILE/SA.0021.PC_CPY/CLASS/SCTR_ACC_YR_PC_CPY
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1952852245'
+keys:
+  BF_CODE: SP.0041
+  T: BF_COMPONENT
+  URL: /process_summary_type_picker
+parentKeys: {}
+properties:
+  BF_CODE: SP.0041
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0041' AND NVL(URL,'IS_NULL') = '/process_summary_type_picker')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/N' )
+  CLASS_NAME: null
+  COMP_CODE: process_summary_type_picker
+  NAME: Process Summary Type Picker
+  SIGNING_REQ_IND: null
+  URL: /process_summary_type_picker
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '218889944'
+keys:
+  BF_CODE: PT.0015
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: PT.0015
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0015' AND NVL(URL,'IS_NULL') = '/navigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/well_decline_curve' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

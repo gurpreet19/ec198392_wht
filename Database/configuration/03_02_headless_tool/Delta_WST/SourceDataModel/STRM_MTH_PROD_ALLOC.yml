@@ -1,0 +1,374 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: STRM_MTH_PROD_ALLOC
+cnstPrimaryKey:
+  columns:
+  - OBJECT_ID
+  - PRODUCT_ID
+  - DAYTIME
+  name: PK_STRM_MTH_PROD_ALLOC
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  APPROVAL_BY:
+    columnName: APPROVAL_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '33'
+  APPROVAL_DATE:
+    columnName: APPROVAL_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '34'
+  APPROVAL_STATE:
+    columnName: APPROVAL_STATE
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '35'
+  CREATED_BY:
+    columnName: CREATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '27'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '28'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  ELEC_FRAC:
+    columnName: ELEC_FRAC
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  ENERGY:
+    columnName: ENERGY
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  LAST_UPDATED_BY:
+    columnName: LAST_UPDATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '29'
+  LAST_UPDATED_DATE:
+    columnName: LAST_UPDATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '30'
+  MOL_FRAC:
+    columnName: MOL_FRAC
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  NET_MASS:
+    columnName: NET_MASS
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  NET_VOL:
+    columnName: NET_VOL
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  OBJECT_ID:
+    columnName: OBJECT_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  PRODUCT_ID:
+    columnName: PRODUCT_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  RECORD_STATUS:
+    columnName: RECORD_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '26'
+  REC_ID:
+    columnName: REC_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '36'
+  REV_NO:
+    columnName: REV_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '31'
+  REV_TEXT:
+    columnName: REV_TEXT
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '32'
+  TEXT_1:
+    columnName: TEXT_1
+    typeName: VARCHAR2(16)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '22'
+  TEXT_2:
+    columnName: TEXT_2
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '23'
+  TEXT_3:
+    columnName: TEXT_3
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '24'
+  TEXT_4:
+    columnName: TEXT_4
+    typeName: VARCHAR2(1000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '25'
+  UNIT_PRICE_NET_MASS:
+    columnName: UNIT_PRICE_NET_MASS
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  UNIT_PRICE_NET_VOL:
+    columnName: UNIT_PRICE_NET_VOL
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  VALUE_1:
+    columnName: VALUE_1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  VALUE_10:
+    columnName: VALUE_10
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '21'
+  VALUE_2:
+    columnName: VALUE_2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  VALUE_3:
+    columnName: VALUE_3
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  VALUE_4:
+    columnName: VALUE_4
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  VALUE_5:
+    columnName: VALUE_5
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  VALUE_6:
+    columnName: VALUE_6
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  VALUE_7:
+    columnName: VALUE_7
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+  VALUE_8:
+    columnName: VALUE_8
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+  VALUE_9:
+    columnName: VALUE_9
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '20'
+  WT_FRAC:
+    columnName: WT_FRAC
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+cnstForeignKeys:
+  FK_STRM_MTH_PROD_ALLOC_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: STREAM
+    columns:
+      OBJECT_ID: OBJECT_ID
+    name: FK_STRM_MTH_PROD_ALLOC_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_STRM_MTH_PROD_ALLOC_2:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: PRODUCT
+    columns:
+      PRODUCT_ID: OBJECT_ID
+    name: FK_STRM_MTH_PROD_ALLOC_2
+    type: FOREIGNKEY
+    status: UNDEFINED
+cnstChecks:
+  CHK_STRM_MTH_PROD_ALLOC_1:
+    searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')
+    columns:
+    - APPROVAL_STATE
+    name: CHK_STRM_MTH_PROD_ALLOC_1
+    type: CHECK
+    status: UNDEFINED
+indexes:
+  IFK_STRM_MTH_PROD_ALLOC_2:
+    indexName: IFK_STRM_MTH_PROD_ALLOC_2
+    columns:
+    - PRODUCT_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IR_STRM_MTH_PROD_ALLOC:
+    indexName: IR_STRM_MTH_PROD_ALLOC
+    columns:
+    - REC_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 262144
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

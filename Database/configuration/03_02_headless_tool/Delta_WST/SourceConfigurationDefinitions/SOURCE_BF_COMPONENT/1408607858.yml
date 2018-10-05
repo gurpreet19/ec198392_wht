@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1408607858'
+keys:
+  BF_CODE: CO.1042
+  T: BF_COMPONENT
+  URL: /calculation_version
+parentKeys: {}
+properties:
+  BF_CODE: CO.1042
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1042' AND NVL(URL,'IS_NULL') = '/calculation_version')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/create_calculation' )
+  CLASS_NAME: CALCULATION
+  COMP_CODE: calculation_version
+  NAME: Versions
+  SIGNING_REQ_IND: null
+  URL: /calculation_version
+related: {}

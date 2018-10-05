@@ -1,0 +1,91 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1648163725'
+keys:
+  BF_DESCRIPTION_NO: IN.0037
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inventory_reconciliation' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <span style="color: rgb(0, 0, 153);"><em>        Transactional
+    Inventory module in EC Revenue allows complex        inventory valuations using
+    the EC calculation engine. It is a standard        calculation where minimal calculation
+    knowledge is required and can be        fully configured through creating EC objects
+    and configuration. It has        been designed with the intention of creating
+    templates with standard        functionality. And for the cases that do not conform
+    to the normal        rules, overrides can be created to cater for the exceptions.    </em></span></p><p>    <strong>Transactional
+    Inventory Reconciliation screen</strong>    is used to reconcile the difference
+    between two Transactional Inventory Calculation Runs.<br> This functionality will
+    only consider the calculation cycles which is run after setting the system attribute
+    -    ENABLE_DOC_TRACING as Y.</p><p>    - The screen will first identify the Transactional
+    Inventory calculation run document based on the comparison type provided, and
+    then it will figure out the    corresponding Document to compare to. <br> - The
+    screen further provides the opportunity to compare further at more detailed levels
+    by choosing which to analyze    more. The Document can be of type accrual or preceding.</p><h3>    <strong
+    style="color: rgb(0, 0, 153);">Navigator</strong></h3><p>    The purpose of the
+    Navigator is to filter out two Documents to be compared.<br>    It has following
+    elements:<br>    <strong><em>- Daytime:</em></strong>    This is the month for
+    which the Royalty Calculations are run and Reconciliation is to be done. This
+    data element is mandatory.<br>    <strong><em>- Business Unit:</em></strong>    Any
+    documents belonging to a Product Stream Group linked to the selected Business
+    Unit will be listed. This data element is mandatory.<br>    <strong><em>- Product
+    Stream Group:</em></strong>    Documents related to the selected Product Stream
+    Group will be managed in the screen. This data element is mandatory.<br>    <strong><em>-
+    Document Key:</em></strong>    This contains the list of Calculations ran, filtered
+    on the previous parameters.<br>    <strong><em>- Compare Type:</em></strong>    The
+    options available for this mandatory field is available in EC codes. There are
+    two options for that:<br>    1. To Preceding - it gives the last calculation ran
+    with the same settings.<br>    2. To Accrual - it gives the last accrual calculation
+    ran with the same settings.</p><p>    <strong>Button <span style="color: rgb(0,
+    153, 0);">Run Reconciliation</span></strong><br>    The button will run the Reconciliation
+    and is supposed to be used after pressing the Go button. This will populate the
+    Reconciliation Documents Table shown    in the screen.</p><h3>    <strong style="color:
+    rgb(0, 0, 153);">Table Reconciliation Documents</strong></h3><p>    This table
+    displays two Transactional Inventory Calculation Documents to be compared. <br>
+    It has following elements:<br>    <strong><em>- Daytime:</em></strong>    This
+    is the date for which the Transactional Inventory Calculations are run and Reconciliation
+    is to be done. This is a non-editable field.<br>    <strong><em>- From Document:</em></strong>    Transactional
+    Inventory Calculation Document from which the selected document to be compared.
+    This is a non-editable field.<br>    <strong><em>-To Document:</em></strong>    Transactional
+    Inventory Calculation Document selected in the Navigator, which is to be compared
+    with the other document (From Document). This is a    non-editable field.<br>    <strong><em>-
+    Type:</em></strong>    This is the compare type selected in the Navigator. This
+    is a non-editable field.<br>    <strong><em>- Product Stream Group:</em></strong>    It
+    will display the Product Stream Group of the Reconciled Document. This is a non-editable
+    field.<br>    <strong><em>- Status:</em></strong>    This is the editable field,
+    which a user can modify accordingly. It has following values: - New, Under Review
+    and Reviewed.<br>    <strong><em>- Comment:</em></strong>    This is an editable
+    field, meant for users to store their comments.</p><h3>    <strong>VALUE Tab</strong></h3><p>    This
+    will give the difference in the Value or Adjustment values of the lines for two
+    Documents, on which two Calculation Runs are based on.</p><h3>    <strong>QUANTITY
+    Tab </strong></h3><p>    This will give the difference in the Quantity or Adjustment
+    Quantity values of the lines for two Documents, on which two Calculation Runs
+    are based on.</p><h3>    <strong style="color: rgb(0, 0, 153);">Table Unreconciled
+    Balance</strong></h3><p>    This table lists the details (and variances) of two
+    Documents (Calculation Runs) and displays only those items where the value is
+    not the same or missing    from the other Calculation.</p><p>    <strong>Button
+    <span style="color: rgb(0, 153, 0);">Reconcile Inventory</span></strong><br>    User
+    has to click on the button to get the further Reconcile Inventory details, selected
+    in the Reconciliation Document section, which will be displayed    under Unreconciled
+    Line Table.</p><p>    <strong>Button <span style="color: rgb(0, 153, 0);">Refresh</span></strong><br>    After
+    clicking the button the below table Unreconciled Line will be refreshed and Unreconciled
+    Line record will be displayed.</p><h3>    <strong style="color: rgb(0, 0, 153);">Table
+    Unreconciled Line</strong></h3><p>    This table will be populated after selecting
+    one of the values presented in the Unreconciled Balance table and then clicking
+    on the Reconcile Inventory    button, followed by pressing the Refresh button.<br>    Only
+    those items will be displayed where the value is not the same or missing from
+    the other Calculation.</p><p>    <strong>Button<span style="color: rgb(51, 153,
+    153);"> </span><span style="color: rgb(0, 153, 0);">Reconcile Line</span></strong><br>    User
+    needs to press this button in order to further reconcile the line of the document,
+    selected in the Unreconciled Balance table.<br>    This will run the batch to
+    populate the underlying database table for Unreconciled Entries table.</p><p>    <strong>Button
+    <span style="color: rgb(0, 153, 0);">Refresh</span></strong><br>    After clicking
+    on Refresh button below Unreconciled Entries table will be refreshed and data
+    will be displayed.</p><h3>    <strong style="color: rgb(0, 0, 153);">Table Unreconciled
+    Entries</strong></h3><p>    This table will be populated after pressing the Reconcile
+    Line button and then selecting one of the values present in the Unreconciled Line
+    table, followed    by pressing the Refresh button. This table will give all the
+    entries for the Inventory line selected in the previous table.</p>'
+related: {}

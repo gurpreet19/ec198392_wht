@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '387428469'
+keys:
+  COMPONENT_ID: ( SELECT 'TIN_DIM_VAR_PARAM' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_relation/CLASS_NAME/CONFIG_VARIABLE_PARAM/FROM_CLASS_NAME/CONFIG_VARIABLE/ROLE_ID/CONFIG_VARIABLE_ID?screentemplate=/com.ec.frmw.co.screens/manage_object_relation
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'TIN_DIM_VAR_PARAM' FROM DUAL )
+  COMPONENT_LABEL: Config Variable Parameter
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'CALC_OBJECTS' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 280.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

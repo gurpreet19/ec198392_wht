@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '515721518'
+keys:
+  BF_CODE: RC.0050
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: RC.0050
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RC.0050' AND NVL(URL,'IS_NULL') = '/navigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/well_setup/CLASS_NAME/UNIT_AGR/DATA_CLASS/UNIT_WELL_SETUP/NAVMODEL/WELL_SETUP/TARGET/UNIT_AGR' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

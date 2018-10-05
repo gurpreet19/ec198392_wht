@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1071256480'
+keys:
+  BF_DESCRIPTION_NO: GD.0077.01
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0077.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_factors/TARGET/CONTRACT/CLASS/TRCN_FACTOR' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to enter period factor numbers like gcv, density and recovery in the system.</p><p>Period factors can be stored on Transport Zone, Contract or Nomination Point object. Each of these objects has their own treeview entry and their own class. These&nbsp;<span style=""line-height:1.6"">three data classes have the same attributes, but have a different owner (Nomination Point, Contract and Transport Zone).</span></p><p>The implement project can also create their own classes to store factors which have an alternative owner than Nomination Point/Transport Zone/Contract for this&nbsp;business function.<br />To use this business function to store data on different class, than these three, the implement project can create a new treeview entry with arguments on the URL.&nbsp;The TARGET argument is used in the navigator and must match the owner for the data class. The CLASS argument is used for the table data section and it is a&nbsp;requirement that the TARGET is the same as the owner of the data in the CLASS.</p><p>The navigation model uses by default TRAN_COMMERCIAL, but a different navigational model can be used by sending the navigational model as an argument from&nbsp;<span style=""line-height:1.6"">the treeview (argument NAV_MODEL). When using a different navigational model it is important to be aware of the owner of the data class and the target must be&nbsp;</span><span style=""line-height:1.6"">the same object and the TARGET is a valid object in the navigation model..</span></p><p>Mandatory arguments which are needed in the url are only CLASS. When using this BF to store factors on a different owner class than the default one we need to&nbsp;send in TARGET as well.</p>
+related: {}

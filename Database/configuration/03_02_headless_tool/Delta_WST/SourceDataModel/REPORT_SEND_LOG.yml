@@ -1,0 +1,205 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: REPORT_SEND_LOG
+cnstPrimaryKey:
+  columns:
+  - REPORT_NO
+  - DAYTIME
+  name: PK_REPORT_SEND_LOG
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  ACCEPT_STATUS:
+    columnName: ACCEPT_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  APPROVAL_BY:
+    columnName: APPROVAL_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  APPROVAL_DATE:
+    columnName: APPROVAL_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  APPROVAL_STATE:
+    columnName: APPROVAL_STATE
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  CREATED_BY:
+    columnName: CREATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  LAST_UPDATED_BY:
+    columnName: LAST_UPDATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  LAST_UPDATED_DATE:
+    columnName: LAST_UPDATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  MESSAGE_NO:
+    columnName: MESSAGE_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  RECORD_STATUS:
+    columnName: RECORD_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  REC_ID:
+    columnName: REC_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  REPORT_NO:
+    columnName: REPORT_NO
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  REV_NO:
+    columnName: REV_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  REV_TEXT:
+    columnName: REV_TEXT
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+cnstForeignKeys:
+  FK_REPORT_SEND_LOG_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: REPORT
+    columns:
+      REPORT_NO: REPORT_NO
+    name: FK_REPORT_SEND_LOG_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_REPORT_SEND_LOG_2:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: MESSAGE_OUT
+    columns:
+      MESSAGE_NO: MESSAGE_NO
+    name: FK_REPORT_SEND_LOG_2
+    type: FOREIGNKEY
+    status: UNDEFINED
+cnstChecks:
+  CHK_REPORT_SEND_LOG_1:
+    searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')
+    columns:
+    - APPROVAL_STATE
+    name: CHK_REPORT_SEND_LOG_1
+    type: CHECK
+    status: UNDEFINED
+indexes:
+  IFK_REPORT_SEND_LOG_2:
+    indexName: IFK_REPORT_SEND_LOG_2
+    columns:
+    - MESSAGE_NO
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IR_REPORT_SEND_LOG:
+    indexName: IR_REPORT_SEND_LOG
+    columns:
+    - REC_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 262144
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-433124729'
+keys:
+  BF_DESCRIPTION_NO: CO.0153
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0153
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/perforation_interval_maintain' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic create/maintain screen; see description of generic create/maintain screens in the beginning of the configuration manual.</p>
+
+    <p>A perforation interval connects the well bore interval (CO.0056) to a reservoir zone (CO.0048). One well bore interval may have multiple perforation intervals, and therefore each perforation interval will have a split factor (CO.0154) holding percent contribution within the well bore interval. The perforation interval normally represents a specific inflow/outflow location on the well downhole reservoir rock surface. The well bore interval normally represents a completion interval between packers.</p>
+
+    <p>Perforation intervals are not a hierarchical structure. One perforation interval can only belong to one well bore interval.</p>
+
+    <p>Perforation intervals are connected to a reservoir block formation. This connection is not part of the group model, but a static fixed relation between perforation intervals and reservoir block formation. Each perforation interval can only be connected to one reservoir block formation. However, each reservoir block formation can take connections from multiple perforation intervals.</p>
+
+    <p>Three situations may require the use of the perforation interval concept in EC:</p>
+
+    <p>If the customer wants to allocate down to reservoir zones or reservoir block/formations</p>
+
+    <p>If the customer needs to have shrinkage calculations (e.g. in well testing) based on reservoir fluid quality stream data. In this case, the connection between well and fluid properties runs through the well bore, well bore interval and perforation interval concepts (well &lt;= well bore &lt;= well bore interval &lt;= perforation interval =&gt; reservoir block formation =&gt; quality stream).</p>
+
+    <p>In many other cases, the perforation interval concept will not be required for optimum system configuration.</p>
+related: {}

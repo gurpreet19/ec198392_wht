@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-418449749'
+keys:
+  COMPONENT_ID: ( SELECT 'VO_DA_SK_FI' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.vo/split_key/DAILY/TRUE/SPLIT_TYPE/FIELD?screentemplate=/com.ec.revn.vo/split_key
+  COMPONENT_EXT_NAV_NAME: /DAILY/TRUE/SPLIT_TYPE/FIELD?screentemplate=/com.ec.revn.vo/split_key
+  COMPONENT_ID: ( SELECT 'VO_DA_SK_FI' FROM DUAL )
+  COMPONENT_LABEL: Daily Split Key Field
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'VO_DA_SK_REVN' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 4050.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

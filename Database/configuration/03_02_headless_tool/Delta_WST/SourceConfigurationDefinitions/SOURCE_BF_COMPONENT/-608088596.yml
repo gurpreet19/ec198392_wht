@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-608088596'
+keys:
+  BF_CODE: TO.0032
+  T: BF_COMPONENT
+  URL: /Product
+parentKeys: {}
+properties:
+  BF_CODE: TO.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0032' AND NVL(URL,'IS_NULL') = '/Product')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/tab_harbour_menu' )
+  CLASS_NAME: PRODUCT
+  COMP_CODE: Product
+  NAME: Product
+  SIGNING_REQ_IND: null
+  URL: /Product
+related: {}

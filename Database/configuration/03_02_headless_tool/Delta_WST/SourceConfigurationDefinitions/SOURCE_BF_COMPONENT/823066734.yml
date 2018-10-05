@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '823066734'
+keys:
+  BF_CODE: PT.0009
+  T: BF_COMPONENT
+  URL: /active_test_device
+parentKeys: {}
+properties:
+  BF_CODE: PT.0009
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0009' AND NVL(URL,'IS_NULL') = '/active_test_device')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_stable_periods_summarise' )
+  CLASS_NAME: ACTIVE_TEST_DEVICE
+  COMP_CODE: active_test_device
+  NAME: Data Test Device
+  SIGNING_REQ_IND: null
+  URL: /active_test_device
+related: {}

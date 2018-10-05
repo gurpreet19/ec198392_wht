@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-22314217'
+keys:
+  BF_CODE: CD.0020
+  T: BF_COMPONENT
+  URL: /versions
+parentKeys: {}
+properties:
+  BF_CODE: CD.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0020' AND NVL(URL,'IS_NULL') = '/versions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/VENDOR' )
+  CLASS_NAME: VENDOR
+  COMP_CODE: versions
+  NAME: versions
+  SIGNING_REQ_IND: null
+  URL: /versions
+related: {}

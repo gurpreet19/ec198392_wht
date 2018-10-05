@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1214111159'
+keys:
+  BF_DESCRIPTION_NO: WR.0053
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0053
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/period_well_data_water_source_wells' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to list well data &ndash; water source wells data for a Period (From &ndash; To Date) and for only one well. The well is directly connected to a facility, without any intermediate flowline / pipeline systems.</p>
+
+    <p>Data can be entered manually or automatically. The BF requires one entry per well per day, and Energy Components automatically creates new records for a new production day for all active water producing wells identified by WELL_TYPE = &lsquo;WS&rsquo; (Water Source). In addition to that, the production well is recognized by having attribute WELL_CLASS set to &lsquo;P&rsquo; (Producer) or &lsquo;PI&rsquo; (Producer and Injector) and Instrumentation Type have any defined value.</p>
+
+    <p>This BF is actually a variant of the WR.0013 &ndash; Daily Well Data &ndash; Water Source Wells, but with a different navigator type to display the records for a well throughout a period. It will have reference to the WR.0013, and the values for both BF should match.</p>
+related: {}

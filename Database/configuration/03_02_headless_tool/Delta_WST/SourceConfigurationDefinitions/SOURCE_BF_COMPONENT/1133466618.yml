@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1133466618'
+keys:
+  BF_CODE: CP.0023
+  T: BF_COMPONENT
+  URL: /subdaily_rundown
+parentKeys: {}
+properties:
+  BF_CODE: CP.0023
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0023' AND NVL(URL,'IS_NULL') = '/subdaily_rundown')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/process_train_event' )
+  CLASS_NAME: STOR_SUB_DAY_PLAN_PRTR
+  COMP_CODE: subdaily_rundown
+  NAME: Sub Daily Rundown
+  SIGNING_REQ_IND: null
+  URL: /subdaily_rundown
+related: {}

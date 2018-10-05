@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-561858891'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pt.screens/prod_test_samples
+parentKeys: {}
+properties:
+  BF_CODE: PT.0006
+  NAME: Production Test Samples
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pt.screens/prod_test_samples
+related: {}

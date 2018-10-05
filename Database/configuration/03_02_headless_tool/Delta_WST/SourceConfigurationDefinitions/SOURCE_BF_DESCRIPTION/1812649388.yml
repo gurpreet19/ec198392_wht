@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1812649388'
+keys:
+  BF_DESCRIPTION_NO: CO.0147
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0147
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/deferment_group_well_conn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen is used to link Wells to Deferment Groups. This is a many to many connection, meaning that one Well can be part of many Deferment Groups and one Deferment Group can include many Wells.</p>
+
+    <p>The connections have a start and end date, where end date is exclusive.</p>
+
+    <p>When using a Deferment Group in the deferment screens, the connected Wells from this screen will be automatically inserted in the &ldquo;Well Information&rdquo; section upon save. The end user can delete individual Wells afterwards or add new Wells to the deferment event to get a correct list of wells being involved in this event. This Deferment Group is meant to be a way of getting 90%-100% of the wells involved correct upon save.</p>
+related: {}

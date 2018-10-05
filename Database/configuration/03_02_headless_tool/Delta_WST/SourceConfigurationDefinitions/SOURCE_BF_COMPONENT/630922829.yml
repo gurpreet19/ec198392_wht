@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '630922829'
+keys:
+  BF_CODE: SD.0015
+  T: BF_COMPONENT
+  URL: /hourly_profile
+parentKeys: {}
+properties:
+  BF_CODE: SD.0015
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0015' AND NVL(URL,'IS_NULL') = '/hourly_profile')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/wet_gas_hourly_profile' )
+  CLASS_NAME: WET_GAS_HOURLY_PROFILE
+  COMP_CODE: hourly_profile
+  NAME: Hourly Profile
+  SIGNING_REQ_IND: null
+  URL: /hourly_profile
+related: {}

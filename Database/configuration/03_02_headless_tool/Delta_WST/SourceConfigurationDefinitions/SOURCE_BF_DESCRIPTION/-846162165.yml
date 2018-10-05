@@ -1,0 +1,27 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-846162165'
+keys:
+  BF_DESCRIPTION_NO: CO.0234
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0234
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/well_seasonal_value' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen is used to maintain seasonal values for a well.</p>
+
+    <p>Seasonal values are created for the various seasons in a year. It can be two seasons i.e. summer and winter or for more seasons in other instance.</p>
+
+    <p>The configuration of a season is a combination of Date and Valid From attributes, whereby the &ldquo;Date&rdquo; is always the first day of the year and &ldquo;Valid From&rdquo; date indicates the start of each season.</p>
+
+    <p>The seasons within a year can be used repeatedly for many years, until there is a new set of seasons, which is indicated by Date and Valid From.</p>
+
+    <p>A well can specify its own seasonal values or it can be referenced from another well. To reference seasonal values from another well, the referenced well needs to be configured through the Well screen.</p>
+
+    <p>The functionality can best be described using the following diagram:</p>
+
+    <p>- Well A will refer to its own seasonal values because it has its own values.</p>
+    <p>- Well B will access the seasonal values from Well C because Well C is the referenced well.</p>
+related: {}

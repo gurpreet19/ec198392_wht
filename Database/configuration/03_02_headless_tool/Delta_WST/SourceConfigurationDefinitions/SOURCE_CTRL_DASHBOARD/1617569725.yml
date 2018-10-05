@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1617569725'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: REVN_VAL_DD_BC_CO
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: REVN
+  DESCRIPTION: Document Values - Document Date - Booking Currency - Company
+  LABEL: Document Values - Document Date - Booking Currency - Company
+  NAME: Document Values - Document Date - Booking Currency - Company
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: REVN_VAL_DD_BC_CO
+related: {}

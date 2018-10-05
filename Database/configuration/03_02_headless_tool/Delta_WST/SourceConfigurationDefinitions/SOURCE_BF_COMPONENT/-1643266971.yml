@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1643266971'
+keys:
+  BF_CODE: CD.0125
+  T: BF_COMPONENT
+  URL: /table1
+parentKeys: {}
+properties:
+  BF_CODE: CD.0125
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0125' AND NVL(URL,'IS_NULL') = '/table1')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_SEQUENCE/FROM_CLASS_NAME/DOC_SEQUENCE/TO_CLASS_NAME/DOC_SEQUENCE' )
+  CLASS_NAME: null
+  COMP_CODE: createRelationsTable1
+  NAME: Create Relations - Main Table
+  SIGNING_REQ_IND: null
+  URL: /table1
+related: {}

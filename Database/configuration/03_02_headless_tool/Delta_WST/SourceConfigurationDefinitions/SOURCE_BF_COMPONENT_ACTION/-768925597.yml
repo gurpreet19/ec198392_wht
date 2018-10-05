@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-768925597'
+keys:
+  BF_COMPONENT_ACTION_NO: '(SELECT A.BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION
+    A WHERE A.BF_COMPONENT_NO = (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE
+    =''CO.00941'' AND NVL(URL,''IS_NULL'') = ''/network'') AND NVL(A.URL, ''IS_NULL'')
+    = ''/collapse_well_groupMenuBtn'') '
+  T: BF_COMPONENT_ACTION
+parentKeys: {}
+properties:
+  BF_COMPONENT_ACTION_NO: '(SELECT A.BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION
+    A WHERE A.BF_COMPONENT_NO = (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE
+    =''CO.00941'' AND NVL(URL,''IS_NULL'') = ''/network'') AND NVL(A.URL, ''IS_NULL'')
+    = ''/collapse_well_groupMenuBtn'') '
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.00941' AND NVL(URL,'IS_NULL') = '/network')
+  COMMENTS: null
+  NAME: collapse_well_group
+  URL: /collapse_well_groupMenuBtn
+related: {}

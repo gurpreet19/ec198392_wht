@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1038682958'
+keys:
+  BF_CODE: RC.0062
+  T: BF_COMPONENT
+  URL: /documents
+parentKeys: {}
+properties:
+  BF_CODE: RC.0062
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RC.0062' AND NVL(URL,'IS_NULL') = '/documents')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/rty_recon' )
+  CLASS_NAME: RECONCILE_DOC
+  COMP_CODE: documents
+  NAME: Document
+  SIGNING_REQ_IND: null
+  URL: /documents
+related: {}

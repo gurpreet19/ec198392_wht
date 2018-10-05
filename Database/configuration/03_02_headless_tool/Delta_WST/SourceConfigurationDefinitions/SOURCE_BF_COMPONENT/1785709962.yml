@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1785709962'
+keys:
+  BF_CODE: PP.0068
+  T: BF_COMPONENT
+  URL: /actual_volume
+parentKeys: {}
+properties:
+  BF_CODE: PP.0068
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0068' AND NVL(URL,'IS_NULL') = '/actual_volume')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_scenarios_curves/CLASS_NAME/FCST_CURVE/CLASS_NAME_1/FCST_CURVE_SEGMENT/CLASS_NAME_2/FCST_VOLUME/CLASS_NAME_3/FCST_POTENTIAL_VOLUME/CLASS_NAME_4/FCST_ACTUAL_VOLUME' )
+  CLASS_NAME: FCST_POTENTIAL_VOLUME
+  COMP_CODE: actual_volume
+  NAME: Actual Volumes
+  SIGNING_REQ_IND: null
+  URL: /actual_volume
+related: {}

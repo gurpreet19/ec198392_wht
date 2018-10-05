@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1839617999'
+keys:
+  BF_CODE: TO.0005
+  T: BF_COMPONENT
+  URL: /download
+parentKeys: {}
+properties:
+  BF_CODE: TO.0005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0005' AND NVL(URL,'IS_NULL') = '/download')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/blmr_info' )
+  CLASS_NAME: null
+  COMP_CODE: download
+  NAME: Download
+  SIGNING_REQ_IND: null
+  URL: /download
+related: {}

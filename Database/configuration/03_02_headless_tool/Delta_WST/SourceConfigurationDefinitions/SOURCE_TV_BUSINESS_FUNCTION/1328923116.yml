@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1328923116'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/validation/LEVEL/TRANSFER/MODE/SET_TO_NEXT
+parentKeys: {}
+properties:
+  BF_CODE: IN.0001
+  NAME: Inventory Transfer
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/validation/LEVEL/TRANSFER/MODE/SET_TO_NEXT
+related: {}

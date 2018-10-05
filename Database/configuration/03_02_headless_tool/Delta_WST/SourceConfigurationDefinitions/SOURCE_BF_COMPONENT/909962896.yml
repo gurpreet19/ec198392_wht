@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '909962896'
+keys:
+  BF_CODE: SP.0009
+  T: BF_COMPONENT
+  URL: /vendorNav
+parentKeys: {}
+properties:
+  BF_CODE: SP.0009
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0009' AND NVL(URL,'IS_NULL') = '/vendorNav')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/company_splits' )
+  CLASS_NAME: null
+  COMP_CODE: vendorNav
+  NAME: New Split Date
+  SIGNING_REQ_IND: null
+  URL: /vendorNav
+related: {}

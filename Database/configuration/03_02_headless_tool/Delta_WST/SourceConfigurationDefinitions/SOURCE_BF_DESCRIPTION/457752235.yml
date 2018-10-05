@@ -1,0 +1,40 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '457752235'
+keys:
+  BF_DESCRIPTION_NO: CO.0201
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0201
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/asset_calc_attribute' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF allows users to configure Asset specific calculation attributes which can be referenced from calculation rules. All asset types are supported except Well and Stream. Should there be a need for Stream or Well specific attributes, it should rather be an attribute on the Well or Stream class.</p>
+
+    <p>The variable is then referenced as below:-</p>
+
+    <p>AssetAttrValue system,d, &lt;field object id&gt;, &lsquo;FIELD_GOR&rsquo; ,holds a numeric value</p>
+
+    <p>where:-</p>
+
+    <p>system set is available to calculation rule</p>
+
+    <p>d is a reference to the day</p>
+
+    <p>&lt;field object id&gt; is the object_id for the asset</p>
+
+    <p>&lsquo;FIELD_GOR&rsquo; is hard coded reference to the Attribute Type</p>
+
+    <p>AssetAttrText system,d, &lt;field object id&gt;, &lsquo;TEST_TEXT&rsquo; ,holds a text string</p>
+
+    <p>where:-</p>
+
+    <p>system set is available to calculation rule</p>
+
+    <p>d is a reference to the day</p>
+
+    <p>&lt;field object id&gt; is the object_id for the asset</p>
+
+    <p>&lsquo;TEST_TEXT&rsquo; is hard coded reference to the Attribute Type</p>
+related: {}

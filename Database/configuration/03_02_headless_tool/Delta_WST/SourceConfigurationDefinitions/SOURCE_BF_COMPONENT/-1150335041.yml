@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1150335041'
+keys:
+  BF_CODE: SP.0048
+  T: BF_COMPONENT
+  URL: /get_revn_log
+parentKeys: {}
+properties:
+  BF_CODE: SP.0048
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0048' AND NVL(URL,'IS_NULL') = '/get_revn_log')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_erp_documents' )
+  CLASS_NAME: REVN_ERP_DG_LOG
+  COMP_CODE: tab_log
+  NAME: Log
+  SIGNING_REQ_IND: null
+  URL: /get_revn_log
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-980403593'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/company_contact
+parentKeys: {}
+properties:
+  BF_CODE: CO.0239
+  NAME: Company Contact
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens/company_contact
+related: {}

@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1502194613'
+keys:
+  CODE: CUST_SETTING
+  CODE_TYPE: SYST_PROPERTY_CATEGORY
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: CUST_SETTING
+  CODE_TEXT: Custom Settings
+  CODE_TYPE: SYST_PROPERTY_CATEGORY
+  DESCRIPTION: Customise Category for System properties that might be edited by super user
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: null
+  SORT_ORDER: 10.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

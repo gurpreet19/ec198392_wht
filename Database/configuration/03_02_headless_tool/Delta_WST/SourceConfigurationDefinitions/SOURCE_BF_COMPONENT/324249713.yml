@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '324249713'
+keys:
+  BF_CODE: PP.0047
+  T: BF_COMPONENT
+  URL: /moveToGroup
+parentKeys: {}
+properties:
+  BF_CODE: PP.0047
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0047' AND NVL(URL,'IS_NULL') = '/moveToGroup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_event/CLASS_NAME/FCST_WELL_EVENT/CLASS_NAME_2/FCST_WELL_EVENT_CHILD/CLASS_NAME_3/FCST_COMPENSATION_EVENTS' )
+  CLASS_NAME: null
+  COMP_CODE: moveToGroup
+  NAME: Move to Group
+  SIGNING_REQ_IND: null
+  URL: /moveToGroup
+related: {}

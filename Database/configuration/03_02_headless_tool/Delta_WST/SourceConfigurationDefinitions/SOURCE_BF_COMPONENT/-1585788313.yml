@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1585788313'
+keys:
+  BF_CODE: CO.0050
+  T: BF_COMPONENT
+  URL: /insert
+parentKeys: {}
+properties:
+  BF_CODE: CO.0050
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0050' AND NVL(URL,'IS_NULL') = '/insert')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_copy_object_well/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/WELL' )
+  CLASS_NAME: null
+  COMP_CODE: copyObject
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /insert
+related: {}

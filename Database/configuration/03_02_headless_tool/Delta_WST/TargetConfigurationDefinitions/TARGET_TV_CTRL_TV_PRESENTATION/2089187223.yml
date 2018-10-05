@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2089187223'
+keys:
+  COMPONENT_ID: ( SELECT 'CO2_REMOVAL_UNIT_MAINTAIN' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO2_REMOVAL_UNIT/TARGET/CO2_REMOVAL_UNIT/CLASS_NAME/CO2_REMOVAL_UNIT?screentemplate=/com.ec.frmw.co.screens/manage_object_groupmodel_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'CO2_REMOVAL_UNIT_MAINTAIN' FROM DUAL )
+  COMPONENT_LABEL: Co2 Removal Unit
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'EQ_OBJECTS' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 50.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

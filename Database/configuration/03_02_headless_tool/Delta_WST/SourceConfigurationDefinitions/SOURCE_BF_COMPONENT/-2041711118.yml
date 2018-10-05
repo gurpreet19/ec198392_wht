@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2041711118'
+keys:
+  BF_CODE: CO.0153
+  T: BF_COMPONENT
+  URL: /updateAttributes
+parentKeys: {}
+properties:
+  BF_CODE: CO.0153
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0153' AND NVL(URL,'IS_NULL') = '/updateAttributes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/perforation_interval_maintain' )
+  CLASS_NAME: PERF_INTERVAL
+  COMP_CODE: updateAttributes
+  NAME: Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /updateAttributes
+related: {}

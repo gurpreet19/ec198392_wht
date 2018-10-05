@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '277742055'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/document_finder
+parentKeys: {}
+properties:
+  BF_CODE: SP.0001
+  NAME: Document Finder
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/document_finder
+related: {}

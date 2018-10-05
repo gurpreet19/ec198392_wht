@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '814405664'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.sale.sa.screens/sale_calc_yr
+parentKeys: {}
+properties:
+  BF_CODE: SA.0003
+  NAME: Yearly Contract Calculation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.sa.screens/sale_calc_yr
+related: {}

@@ -1,0 +1,84 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_CASEFILEDATALOG
+cnstPrimaryKey:
+  columns:
+  - ID
+  name: SYS_C008740
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CASEDEFID:
+    columnName: CASEDEFID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  CASEID:
+    columnName: CASEID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  ID:
+    columnName: ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  ITEMNAME:
+    columnName: ITEMNAME
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  ITEMTYPE:
+    columnName: ITEMTYPE
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  ITEMVALUE:
+    columnName: ITEMVALUE
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  LASTMODIFIED:
+    columnName: LASTMODIFIED
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  LASTMODIFIEDBY:
+    columnName: LASTMODIFIEDBY
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

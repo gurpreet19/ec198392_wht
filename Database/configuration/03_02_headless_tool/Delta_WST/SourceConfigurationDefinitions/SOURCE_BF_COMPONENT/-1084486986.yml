@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1084486986'
+keys:
+  BF_CODE: CD.0025
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0025
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0025' AND NVL(URL,'IS_NULL') = '/navigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_ACCOUNT' )
+  CLASS_NAME: FIN_ACCOUNT
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

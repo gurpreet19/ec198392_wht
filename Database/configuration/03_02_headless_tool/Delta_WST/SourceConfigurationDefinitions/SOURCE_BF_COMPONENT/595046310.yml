@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '595046310'
+keys:
+  BF_CODE: MHM.0010
+  T: BF_COMPONENT
+  URL: /template
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0010
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0010' AND NVL(URL,'IS_NULL') = '/template')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/send_freetext_msg' )
+  CLASS_NAME: null
+  COMP_CODE: template
+  NAME: Message template
+  SIGNING_REQ_IND: null
+  URL: /template
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '853828492'
+keys:
+  BF_CODE: CO.2021
+  T: BF_COMPONENT
+  URL: /attribute
+parentKeys: {}
+properties:
+  BF_CODE: CO.2021
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2021' AND NVL(URL,'IS_NULL') = '/attribute')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/TRAN_CODE' )
+  CLASS_NAME: null
+  COMP_CODE: attribute
+  NAME: Attribute
+  SIGNING_REQ_IND: null
+  URL: /attribute
+related: {}

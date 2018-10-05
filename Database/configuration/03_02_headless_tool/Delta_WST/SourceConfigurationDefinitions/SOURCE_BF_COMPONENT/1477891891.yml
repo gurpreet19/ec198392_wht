@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1477891891'
+keys:
+  BF_CODE: PO.0064
+  T: BF_COMPONENT
+  URL: /data_class_1
+parentKeys: {}
+properties:
+  BF_CODE: PO.0064
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0064' AND NVL(URL,'IS_NULL') = '/data_class_1')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/eqpm_event' )
+  CLASS_NAME: null
+  COMP_CODE: data_class_1
+  NAME: Data Class 1
+  SIGNING_REQ_IND: null
+  URL: /data_class_1
+related: {}

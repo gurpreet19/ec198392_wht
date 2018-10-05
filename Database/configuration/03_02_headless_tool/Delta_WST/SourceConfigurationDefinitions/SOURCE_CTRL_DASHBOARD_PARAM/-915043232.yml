@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-915043232'
+keys:
+  NAME: STOR_SCHED_PLAN
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: TRAN_SCHLIFTCHART
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Production Plan
+  MANDATORY_IND: N
+  NAME: STOR_SCHED_PLAN
+  PARAMETER_SUB_TYPE: STOR_SCHED_PLAN
+  PARAMETER_TYPE: EC_CODE_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 90.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: TRAN_SCHLIFTCHART
+related: {}

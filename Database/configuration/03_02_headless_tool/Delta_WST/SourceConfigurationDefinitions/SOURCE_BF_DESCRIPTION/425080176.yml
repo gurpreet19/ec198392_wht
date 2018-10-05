@@ -1,0 +1,73 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '425080176'
+keys:
+  BF_DESCRIPTION_NO: IN.0012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/total_position' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Inventory Total Position screen</strong>    provides
+    an overview of the total position for the selected Inventory. The Inventory data
+    is shown in six different sections:<br>    1. Overlift Total Position,<br>    2.
+    Overlift Field Allocation,<br>    3. Underlift Total Position,<br>    4. Underlift
+    Field Allocation,<br>    5. Physical Stock,<br>    6. and Physical Stock Field
+    Allocation</p><p>    <strong><em>Underlift at the beginning of the year and underlift
+    now: </em></strong><br>    - The Overlift Section will show zeros.<br>    - The
+    Underlift Section will show Opening numbers and Closing numbers (current numbers).<br>    <strong><em>Underlift
+    at the beginning of the year and overlift now:</em></strong><br>    - The Overlift
+    Section will show zero for the Opening Quantity and the current values for the
+    overlift.<br>    - The Underlift Section will show the Opening numbers and zero
+    for the Closing numbers (current numbers).<br>    <strong><em>Overlift at the
+    beginning of the year and overlift now:</em></strong><br>    - The Overlift Section
+    will show Opening numbers and Closing numbers (current numbers).<br>    - The
+    Underlift Section will show zeros.<br>    <strong><em>Overlift at the beginning
+    of the year and underlift now:</em></strong><br>    - The Overlift Section will
+    show numbers for the Opening Quantity and the current values will be set to zero.<br>    -
+    The Underlift Section will show zero for the Opening numbers and current values
+    for the underlift.</p><p>    More details for each of the section of the screen:</p><p>    <strong
+    style="color: rgb(0, 0, 153);">Filter Navigator</strong><br>    The Filter Navigator
+    lists all the Inventories being valid for the month selected in the Filter Navigator.</p><p>    <span
+    style="color: rgb(0, 0, 153);"><strong>Overlift Section</strong></span><br>    This
+    section shows the overlift numbers for the Inventory. It shows the following data:<br>    -
+    OL Price (rate) used for the overlift valuation.<br>    - Currency and UOM for
+    the OL Price.<br>    - Opening Quantity for the overlift at the start of the year.
+    If the Inventory was in underlift position at the start of the year this column
+    shows zero.<br>    - UOM for the Opening Quantity.<br>    - Movement YTD as a
+    negative number for the overlift. This number will be set to zero if the Inventory
+    is in underlift position.<br>    - UOM for the Movement YTD.<br>    - Closing
+    Quantity for the Inventory as a negative number for the overlift. This number
+    will be set to zero if the Inventory is in underlift position.<br>    - UOM for
+    the Closing Quantity.<br>    - Pricing Value of the overlift being the Closing
+    Quantity * OL Price. This number will be set to zero if the Inventory is in underlift
+    position.<br>    - Currency for the Pricing Value.<br>    - Other Value being
+    the Pricing Value converted to the Overlift Other currency as defined for the
+    Inventory. Set to NULL if there is no OL Other Currency    defined for the Inventory.<br>    -
+    Currency for the Other Value.</p><p>    <strong style="color: rgb(0, 0, 153);">Underlift
+    Section</strong><br>    This section shows the underlift numbers for the Inventory.
+    It shows the following data:<br>    - Year: Always set to current year for FIFO
+    type of Inventories.<br>    - UL Rate being the rate used for the underlift calculation.<br>    -
+    Currency and UOM for the UL Rate.<br>    - Opening Quantity for the underlift
+    at the start of the year. If the Inventory was in overlift position at the start
+    of the year this column shows zero.<br>    - UOM for the Opening Quantity.<br>    -
+    Opening Pricing Value showing the value of the inventory at the start of the year.
+    If the Inventory was in overlift position at the start of the year    this column
+    shows zero.<br>    - Currency for the Pricing Value.<br>    - Opening Other Value
+    being the Opening Pricing Value converted to the Underlift Other Currency. Set
+    to zero if there is no UL Other Currency defined for    the Inventory.<br>    -
+    Currency for the Opening Other Value.<br>    - Movement YTD. This number will
+    be set to zero if the Inventory was in overlift position at the start of the year.<br>    -
+    UOM for the Movement YTD.<br>    - Closing Quantity for the Inventory as a positive
+    number when the Inventory is in underlift position. Set to zero if the Inventory
+    is in overlift    position.<br>    - UOM for the Closing Quantity.<br>    - Closing
+    Pricing Value showing the current value of the inventory. Set to zero if the Inventory
+    is in overlift position.<br>    - Currency for the Pricing Value.<br>    - Closing
+    Other Value being the Closing Pricing Value converted to the Underlift Other Currency.
+    Set to NULL if there is no UL Other Currency defined for    the Inventory. Set
+    to zero if the Inventory is in overlift position.<br>    - Currency for the Closing
+    Other Value.</p><p>    <span style="color: rgb(0, 0, 153);"><strong>Total Movement
+    Section</strong></span><br>    This section shows the total movement for the Inventory.</p><p>    All
+    data elements in this screen are read-only.</p>'
+related: {}

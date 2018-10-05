@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2035586800'
+keys:
+  BF_DESCRIPTION_NO: PR.0031
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PR.0031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/fcst_contract_price_list' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to maintain forecast prices for price objects. Values will typically be loaded to the system via an interface. However this screen may be used to&nbsp;view, edit, delete or add values. Existing values can be modified and new values for new events (dates) can be added. The values are stored per price objects and&nbsp;forecast/scenario.</p><p>The user selects the required month, objects and forecast in the navigator. A contract is selected in the first section and all prices that are valid at the start of the&nbsp;month and throughout the month for the selected contract will be listed. The last valid prices from an earlier month will also be listed if there are no valid prices on&nbsp;the first day of the month.</p><p>For details about Price Object, Price Concept and Price Element, please read the EC Sales Configuration Manual.</p>
+related: {}

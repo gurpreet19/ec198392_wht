@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2110111152'
+keys:
+  OBJECT_NAME: INVENTORY_AREA
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: N
+  OBJECT_NAME: INVENTORY_AREA
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

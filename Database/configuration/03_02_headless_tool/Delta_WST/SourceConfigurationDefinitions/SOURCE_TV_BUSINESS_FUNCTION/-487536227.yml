@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-487536227'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/document_tracing
+parentKeys: {}
+properties:
+  BF_CODE: CD.0151
+  NAME: Document Tracing
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/document_tracing
+related: {}

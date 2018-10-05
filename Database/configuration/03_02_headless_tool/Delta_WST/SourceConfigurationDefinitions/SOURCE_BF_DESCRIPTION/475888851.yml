@@ -1,0 +1,25 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '475888851'
+keys:
+  BF_DESCRIPTION_NO: WR.0060
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_well_tank_data' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The &quot;Daily Well Tank Data&quot; business function is used to capture tank closing reading for tanks dedicated to one well only. The BF can accept either tank strapping input or gross volume input to calculate Standard Gross Oil, Standard Net Oil and Water Volume. The net oil and water calculation will use bsw from either:</p>
+
+    <p>Pri 1: If user enters BSW and flag &quot;use bsw&quot; is &quot;Y&quot;, then use this as bsw for the day Pri 2: If 1 is null and user enters BSW on the daily well record (attribute pwel_day_status.bs_w), then use this as bsw for the day Pri 3: If 1 and 2 is null calculate average BSW from the last X truck loads (from BF Truck Tickets - Load from Wells) for this well. (X is system attribute)</p>
+
+    <p>Data can be entered manually or loaded automatically. Energy Components will automatically create a new record for a new production day for all tanks having tank meter frequency = &quot;DAY&quot;. For tanks having tank meter frequency = &quot;EVENT&quot;, there will be no automatic instantiation, the user will have to manually press the insert new record button and select the right tank from the tank drop down. All data is treated as closing tank reading at the end of the production day. Therefore there is no time associated with the reading. Tank Volume Input attributes are editable when GRS VOL METHOD and FREE WATER VOL METHOD is MEASURED and Tank Dip Input attributes are editable when GRS VOL METHOD and FREE WATER VOL METHOD is STRAPPING.</p>
+
+    <p>There is also new Well Theoretical Methods supporting calculation of Oil and Water from this BF. The new method is: WELL_TANK, &quot;Well Tank + Trucked&quot;</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

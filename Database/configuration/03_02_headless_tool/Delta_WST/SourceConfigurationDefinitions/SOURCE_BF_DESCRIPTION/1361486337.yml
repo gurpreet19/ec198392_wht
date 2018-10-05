@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1361486337'
+keys:
+  BF_DESCRIPTION_NO: CP.0060
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_cntr_KPI_monitoring/CLASS/FCST_CNTR_KPI_MONITORING/NAV_MODEL/TRAN_COMMERCIAL/BF_PROFILE/CP.0060' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p> This is the forecast version or CP.0027 Contract KPI Monitoring. The business function is used to validate the different ADP scenarios/forecasts against contractual commitments before promoting one of the scenarios to base plan. Key performance indicators in this context typically include Annual Contractual Quantity (ACQ) or Adjusted Annual Contractual Quantity (AACQ) versus delivered/planned quantity from actual deliveries and the annual delivery Plan (ADP). </p><p> Contractually SPAs will often have an associated tolerance limit and this limit can be used as a basis for monitoring the contract KPIs in this business function. SPA performance that falls outside of the tolerance limit can be identified and proper action taken to ensure SPA commitments are fulfilled. </p>
+related: {}

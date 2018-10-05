@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-485661703'
+keys:
+  BF_CODE: CP.0068
+  T: BF_COMPONENT
+  URL: /refreshButton
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0068' AND NVL(URL,'IS_NULL') = '/refreshButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: null
+  COMP_CODE: refreshButton
+  NAME: Refresh Button
+  SIGNING_REQ_IND: null
+  URL: /refreshButton
+related: {}

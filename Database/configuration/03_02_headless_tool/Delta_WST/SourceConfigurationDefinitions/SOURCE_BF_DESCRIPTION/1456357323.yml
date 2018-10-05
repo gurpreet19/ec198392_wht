@@ -1,0 +1,30 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1456357323'
+keys:
+  BF_DESCRIPTION_NO: CO.0058
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/well_bore_interval_split' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Like split factors are used for splitting well volumes to well bores, well bore volumes are further split down to their perforation intervals, using these split factors. The allocation routine will allocate data down to the well (production tubing) level. The reservoir allocation will read these allocated data as well as the well bore and well bore interval split factors. These are then used within the calculations to calculate total production/injection from/to each reservoir block formation. Each phase (oil, gas, water, condensate, steam, gas inj and water inj) has its separate set of split factors that must add up to 100% over all active well bore intervals.</p>
+
+    <p>Two situations may require the use of the well bore interval split concept in EC:</p>
+
+    <p>If the customer wants to allocate down to reservoir zones or reservoir block/formations</p>
+
+    <p>If the customer needs to have shrinkage calculations (e.g. in well testing) based on reservoir fluid quality stream data. In this case, the connection between well and fluid properties runs through the well bore and well bore interval concept (well &lt;= well bore &lt;= well bore interval =&gt; reservoir block formation =&gt; quality stream).</p>
+
+    <p>For both these situation a quantitative description of how the individual well bore intervals contribute to the total well bore throughput is required for each phase, and the well bore interval split &ndash; concept provides this specific information as date effective percentages.</p>
+
+    <p>The screen will have group model navigator with WELL as a target. The next section is a list of all well bore / well bore interval combinations having that well as a parent. The data section 2 (&lsquo;Current Effective Split&rsquo;) is a list of well bore interval split that are still effective. The data section 3 (&lsquo;Last Effective Split&rsquo;) is a list of noneffective splits which will be read-only.</p>
+
+    <p>The &lsquo;Create New Split&rsquo; button will create a fresh set of factors on the date selected in navigator. The initial factor values for each phase and well bore in the new set are copied directly from the previous set. The previous set is automatically deactivated by setting its end date equal to the start date of the new split factor set.</p>
+
+    <p>The &lsquo;Set End Date&rsquo; button will set an end date to all split using the selected date in the navigator. However, new split will not be created upon setting the end date using this button.</p>
+
+    <p>The last row in the screen contains a sum row. If the sum deviates from 100, an error message is shown to the user. This validation of split factors uses a rounding set to 9 decimals. However, no value (NULL) in all rows for one column is accepted by the system. This is convenient in order to avoid entering split factors for irrelevant phases (like steam factors for a gas producer). Note that wells only having one well bore interval should have a well bore interval split where each of the relevant phases are set to 100%</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1164215889'
+keys:
+  BF_CODE: PO.0014
+  T: BF_COMPONENT
+  URL: /weather
+parentKeys: {}
+properties:
+  BF_CODE: PO.0014
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0014' AND NVL(URL,'IS_NULL') = '/weather')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_weather_status' )
+  CLASS_NAME: WEATHER
+  COMP_CODE: weather
+  NAME: Weather
+  SIGNING_REQ_IND: null
+  URL: /weather
+related: {}

@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1246944331'
+keys:
+  ATTRIBUTE_TYPE: PROCESS_ONLY_OPEN_DOCS
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: PROCESS_ONLY_OPEN_DOCS
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Indicates whether validated documents should be protected from changes from document processing. Options are Y | N
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

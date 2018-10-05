@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '905969528'
+keys:
+  BF_DESCRIPTION_NO: PO.0069
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0069
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_stream_data_day_nav/CLASS_NAME/STRM_DAY_STREAM_DAY_NAV' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is a generic screen used to show daily stream data.</p><p>This screen does not have a standard operational navigator but only a single date field.</p><p>The screen is generic in the sense that it takes a Data Class name as a parameter. Note that the data class must be:</p><ul style="list-style-type:disc;margin-left:40px;"><li>Stream oriented</li><li>Have daily resolution</li></ul><p>A project can set up several instances of this screen by creating project specific data classes and corresponding project specific stream sets. The project specific stream sets must be included in the class WHERE clause as any other daily stream data classes in the EC product.</p><p>Part of the standard EC Product one example instance of this screen has been set up. This example screen is connected to product stream set with code = PO.0069.</p>
+related: {}

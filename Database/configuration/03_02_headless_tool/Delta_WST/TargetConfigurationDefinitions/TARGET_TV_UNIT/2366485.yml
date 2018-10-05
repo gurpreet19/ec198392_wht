@@ -1,0 +1,51 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2366485'
+keys:
+  T: TV_UNIT
+  UNIT: MILE
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Miles
+  FIN_CODE: null
+  LABEL: Mile
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MILE
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MILE
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KM
+    parentKeys:
+      TV_UNIT.UNIT: MILE
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MILE
+      MULT_FACT: 1.609344
+      PRECISION: 6.0
+      TO_UNIT: KM
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: DISTANCE
+      T: TV_UOM_SETUP
+      UNIT: MILE
+    parentKeys:
+      TV_UNIT.UNIT: MILE
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: DISTANCE
+      REPORT_UNIT: Y
+      UNIT: MILE
+      VIEW_UNIT: Y

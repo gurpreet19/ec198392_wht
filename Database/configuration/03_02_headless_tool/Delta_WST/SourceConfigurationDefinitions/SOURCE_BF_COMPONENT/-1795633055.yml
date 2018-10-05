@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1795633055'
+keys:
+  BF_CODE: PO.0087
+  T: BF_COMPONENT
+  URL: /component_set
+parentKeys: {}
+properties:
+  BF_CODE: PO.0087
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0087' AND NVL(URL,'IS_NULL') = '/component_set')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_profit_centre_component_analysis/STRM_SET/PO.0087/COMP_SET/STRM_PC_COMP' )
+  CLASS_NAME: STRM_PC_COMP_ANALYSIS
+  COMP_CODE: component_set
+  NAME: Component Set
+  SIGNING_REQ_IND: null
+  URL: /component_set
+related: {}

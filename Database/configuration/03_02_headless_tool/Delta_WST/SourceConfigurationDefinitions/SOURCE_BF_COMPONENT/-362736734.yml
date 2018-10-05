@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-362736734'
+keys:
+  BF_CODE: CO.1037
+  T: BF_COMPONENT
+  URL: /implClass
+parentKeys: {}
+properties:
+  BF_CODE: CO.1037
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1037' AND NVL(URL,'IS_NULL') = '/implClass')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/db_object_type' )
+  CLASS_NAME: CALC_OBJ_TYPE_IMPL_CLS
+  COMP_CODE: implClass
+  NAME: Filtering
+  SIGNING_REQ_IND: null
+  URL: /implClass
+related: {}

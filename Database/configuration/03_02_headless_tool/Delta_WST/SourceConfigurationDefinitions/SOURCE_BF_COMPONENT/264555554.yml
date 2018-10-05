@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '264555554'
+keys:
+  BF_CODE: GD.0054
+  T: BF_COMPONENT
+  URL: /capRelLocEvent
+parentKeys: {}
+properties:
+  BF_CODE: GD.0054
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0054' AND NVL(URL,'IS_NULL') = '/capRelLocEvent')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release' )
+  CLASS_NAME: CAPACITY_REL_LOC_EVENT
+  COMP_CODE: capRelLocEvent
+  NAME: Location Events
+  SIGNING_REQ_IND: null
+  URL: /capRelLocEvent
+related: {}

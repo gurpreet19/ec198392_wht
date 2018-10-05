@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1792333055'
+keys:
+  CODE: REVN
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: OV_FUNCTIONAL_AREA
+parentKeys: {}
+properties:
+  CODE: REVN
+  DAYTIME: 1900-01-01T00:00:00Z
+  NAME: Revenue
+  OBJECT_END_DATE: null
+  OBJECT_START_DATE: 1900-01-01T00:00:00Z
+related: {}

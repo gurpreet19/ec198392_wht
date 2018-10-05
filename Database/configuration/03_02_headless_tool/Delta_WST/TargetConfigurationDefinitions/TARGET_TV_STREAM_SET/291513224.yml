@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291513224'
+keys:
+  CODE: PO.0081
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PO.0081
+  NAME: Period Steam Stream Status
+related: {}

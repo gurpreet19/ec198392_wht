@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1822608937'
+keys:
+  BF_CODE: CD.0102
+  T: BF_COMPONENT
+  URL: /neteditor
+parentKeys: {}
+properties:
+  BF_CODE: CD.0102
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0102' AND NVL(URL,'IS_NULL') = '/neteditor')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/stream_node_diagram' )
+  CLASS_NAME: null
+  COMP_CODE: neteditor
+  NAME: Allocation Network
+  SIGNING_REQ_IND: null
+  URL: /neteditor
+related: {}

@@ -1,0 +1,68 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '364770620'
+keys:
+  T: TV_UNIT
+  UNIT: MJPERDAY
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Mega Joule per day
+  FIN_CODE: null
+  LABEL: MJ/d
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MJPERDAY
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BTUPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: MJPERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERDAY
+      MULT_FACT: 947.8170777
+      PRECISION: 6.0
+      TO_UNIT: BTUPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: GBTUPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: MJPERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MJPERDAY
+      MULT_FACT: 9.47817E7
+      PRECISION: 6.0
+      TO_UNIT: GBTUPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: ENERGY_RATE
+      T: TV_UOM_SETUP
+      UNIT: MJPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: MJPERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: ENERGY_RATE
+      REPORT_UNIT: Y
+      UNIT: MJPERDAY
+      VIEW_UNIT: Y

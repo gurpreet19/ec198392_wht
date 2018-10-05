@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1455651099'
+keys:
+  BF_DESCRIPTION_NO: CO.3011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.3011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/profit_centre_company_contract_priority' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to connect contracts to profit centres and set the priority between contracts for a company (owner), connected to the profit centres. A priority can be configured for a company on a set of contracts. This gives the company (owner) the opportunity to make sure that given contracts are fulfilled first in the contract allocation. A company does not need to be part of the commercial entity set as the seller on a contract. This gives you the opportunity to associate companies that are owners on profit centres, but do not have their own contracts, to contracts &#39;owned&#39; by other companies.</p><p>The information configured in this business function is typically used by contract allocations. It is up to each project/customer to decide exactly how to use the priority level and priority split and to configure the corresponding calculations.</p><p>The first screen section lists all the companies (owners) connected to the selected profit centres. Companies are found via any Commercial Entities connected to the profit centres.</p><p>The second screen section lists any contracts with their priority settings for the company chosen in the first data section.For each company (owner), one or several contracts can be added. If required by the allocation rules, a priority level and/or split can be set. The priority level will typically have 1 as the highest priority.</p><p>The Contract Name popup will list all contracts, not only the contracts where the company is part of the commercial entity that is set as the seller on the contract.</p>
+related: {}

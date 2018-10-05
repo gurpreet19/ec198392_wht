@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '99376638'
+keys:
+  BF_CODE: FC.1004
+  T: BF_COMPONENT
+  URL: /insert
+parentKeys: {}
+properties:
+  BF_CODE: FC.1004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.1004' AND NVL(URL,'IS_NULL') = '/insert')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_properties/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST' )
+  CLASS_NAME: FORECAST
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /insert
+related: {}

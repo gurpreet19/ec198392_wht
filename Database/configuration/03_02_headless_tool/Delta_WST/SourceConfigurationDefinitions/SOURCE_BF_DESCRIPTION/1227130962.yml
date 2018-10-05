@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1227130962'
+keys:
+  BF_DESCRIPTION_NO: CD.0021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/BANK' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Bank screen</strong>    is used to manage the Bank
+    objects.<br>    Each Bank can hold one or more Bank Accounts and the Bank Accounts    connected
+    to a Bank can belong to different Customers and Vendors.</p><p>    <u>Note</u>    that
+    the Bank SWIFT code is sitting at the Bank object which is a branch    specific
+    code for the Bank, i.e. the Bank object need to be specific per    branch (office).</p><p>    <u>Smart
+    Tip</u>    : The Address Line 1 to 8 should be used for the complete address of
+    the    Bank for use in invoice hardcopy etc.</p>'
+related: {}

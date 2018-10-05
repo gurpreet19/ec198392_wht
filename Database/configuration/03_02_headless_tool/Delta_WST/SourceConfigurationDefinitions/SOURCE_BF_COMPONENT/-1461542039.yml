@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1461542039'
+keys:
+  BF_CODE: FC.0021
+  T: BF_COMPONENT
+  URL: /periodOpRestriction
+parentKeys: {}
+properties:
+  BF_CODE: FC.0021
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.0021' AND NVL(URL,'IS_NULL') = '/periodOpRestriction')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_period_operational_restriction/DATA_CLASS/FCST_OPRES_PERIOD_RESTR' )
+  CLASS_NAME: FCST_OPRES_PERIOD_RESTR
+  COMP_CODE: periodOpRestriction
+  NAME: Period Operational Restriction
+  SIGNING_REQ_IND: null
+  URL: /periodOpRestriction
+related: {}

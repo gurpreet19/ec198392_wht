@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1326943731'
+keys:
+  OBJECT_NAME: FCST_STOR_LIFT_CPY_SPLIT
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: Y
+  OBJECT_NAME: FCST_STOR_LIFT_CPY_SPLIT
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

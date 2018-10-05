@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-890333207'
+keys:
+  BF_CODE: IN.0012
+  T: BF_COMPONENT
+  URL: /ol_field_alloc
+parentKeys: {}
+properties:
+  BF_CODE: IN.0012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0012' AND NVL(URL,'IS_NULL') = '/ol_field_alloc')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/total_position' )
+  CLASS_NAME: INV_OL_F_TOTAL_POSITION
+  COMP_CODE: processOLFieldAlloc
+  NAME: Process - Field Allocation, Overlift
+  SIGNING_REQ_IND: null
+  URL: /ol_field_alloc
+related: {}

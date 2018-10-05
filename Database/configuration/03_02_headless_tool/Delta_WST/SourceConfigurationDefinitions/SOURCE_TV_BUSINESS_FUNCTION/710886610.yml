@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '710886610'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/facility_analysis_items
+parentKeys: {}
+properties:
+  BF_CODE: CO.0232
+  NAME: Facility Analysis Items
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens/facility_analysis_items
+related: {}

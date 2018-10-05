@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '414603259'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/forecast_scenarios_curves/CLASS_NAME/FCST_CURVE/CLASS_NAME_1/FCST_CURVE_SEGMENT/CLASS_NAME_2/FCST_VOLUME/CLASS_NAME_3/FCST_POTENTIAL_VOLUME/CLASS_NAME_4/FCST_ACTUAL_VOLUME
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/forecast_scenarios_curves/CLASS_NAME/FCST_CURVE/CLASS_NAME_1/FCST_CURVE_SEGMENT/CLASS_NAME_2/FCST_VOLUME/CLASS_NAME_3/FCST_POTENTIAL_VOLUME/CLASS_NAME_4/FCST_ACTUAL_VOLUME
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

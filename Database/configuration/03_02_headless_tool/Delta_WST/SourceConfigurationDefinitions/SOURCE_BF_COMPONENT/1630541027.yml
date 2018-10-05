@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1630541027'
+keys:
+  BF_CODE: PT.0010
+  T: BF_COMPONENT
+  URL: /prod_test_result_data_sets
+parentKeys: {}
+properties:
+  BF_CODE: PT.0010
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0010' AND NVL(URL,'IS_NULL') = '/prod_test_result_data_sets')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_result' )
+  CLASS_NAME: PROD_TEST_RESULT
+  COMP_CODE: prod_test_result_data_sets
+  NAME: Production Test Result Data Sets
+  SIGNING_REQ_IND: null
+  URL: /prod_test_result_data_sets
+related: {}

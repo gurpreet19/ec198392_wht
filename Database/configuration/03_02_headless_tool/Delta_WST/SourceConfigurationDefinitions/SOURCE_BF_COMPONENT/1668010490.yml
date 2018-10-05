@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1668010490'
+keys:
+  BF_CODE: FC.1005
+  T: BF_COMPONENT
+  URL: /streamitem3
+parentKeys: {}
+properties:
+  BF_CODE: FC.1005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.1005' AND NVL(URL,'IS_NULL') = '/streamitem3')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_revenue_setup/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST' )
+  CLASS_NAME: FCST_GPURCH_MEMBER
+  COMP_CODE: streamitem3
+  NAME: Purchase Contract
+  SIGNING_REQ_IND: null
+  URL: /streamitem3
+related: {}

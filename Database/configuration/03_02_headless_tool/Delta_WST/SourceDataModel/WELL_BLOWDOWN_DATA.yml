@@ -1,0 +1,451 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: WELL_BLOWDOWN_DATA
+cnstPrimaryKey:
+  columns:
+  - EVENT_NO
+  name: PK_WELL_BLOWDOWN_DATA
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  ANNULUS_PRESS:
+    columnName: ANNULUS_PRESS
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  ANNULUS_PRESS_2:
+    columnName: ANNULUS_PRESS_2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  ANNULUS_PRESS_3:
+    columnName: ANNULUS_PRESS_3
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  APPROVAL_BY:
+    columnName: APPROVAL_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '43'
+  APPROVAL_DATE:
+    columnName: APPROVAL_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '44'
+  APPROVAL_STATE:
+    columnName: APPROVAL_STATE
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '45'
+  AVG_CHOKE_SIZE:
+    columnName: AVG_CHOKE_SIZE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  AVG_COND_RATE:
+    columnName: AVG_COND_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  AVG_OIL_RATE:
+    columnName: AVG_OIL_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  AVG_SEP_PRESS:
+    columnName: AVG_SEP_PRESS
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  AVG_SEP_TEMP:
+    columnName: AVG_SEP_TEMP
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  AVG_WATER_RATE:
+    columnName: AVG_WATER_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  AVG_WH_PRESS:
+    columnName: AVG_WH_PRESS
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  AVG_WH_TEMP:
+    columnName: AVG_WH_TEMP
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  COMMENTS:
+    columnName: COMMENTS
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '20'
+  COND_SAMPLE:
+    columnName: COND_SAMPLE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  CREATED_BY:
+    columnName: CREATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '37'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '38'
+  DATE_1:
+    columnName: DATE_1
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '26'
+  DATE_2:
+    columnName: DATE_2
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '27'
+  DATE_3:
+    columnName: DATE_3
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '28'
+  DATE_4:
+    columnName: DATE_4
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '29'
+  DATE_5:
+    columnName: DATE_5
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '30'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  EVENT_NO:
+    columnName: EVENT_NO
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  LAST_UPDATED_BY:
+    columnName: LAST_UPDATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '39'
+  LAST_UPDATED_DATE:
+    columnName: LAST_UPDATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '40'
+  OBJECT_ID:
+    columnName: OBJECT_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  OIL_SAMPLE:
+    columnName: OIL_SAMPLE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  OTHER_SAMPLE:
+    columnName: OTHER_SAMPLE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+  PARENT_EVENT_NO:
+    columnName: PARENT_EVENT_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  RECORD_STATUS:
+    columnName: RECORD_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '36'
+  REC_ID:
+    columnName: REC_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '46'
+  REV_NO:
+    columnName: REV_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '41'
+  REV_TEXT:
+    columnName: REV_TEXT
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '42'
+  TEXT_1:
+    columnName: TEXT_1
+    typeName: VARCHAR2(16)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '31'
+  TEXT_2:
+    columnName: TEXT_2
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '32'
+  TEXT_3:
+    columnName: TEXT_3
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '33'
+  TEXT_4:
+    columnName: TEXT_4
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '34'
+  TEXT_5:
+    columnName: TEXT_5
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '35'
+  VALUE_1:
+    columnName: VALUE_1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '21'
+  VALUE_2:
+    columnName: VALUE_2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '22'
+  VALUE_3:
+    columnName: VALUE_3
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '23'
+  VALUE_4:
+    columnName: VALUE_4
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '24'
+  VALUE_5:
+    columnName: VALUE_5
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '25'
+  WATER_SAMPLE:
+    columnName: WATER_SAMPLE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+cnstUniqueKeys:
+  UK_WELL_BLOWDOWN_DATA:
+    columns:
+    - OBJECT_ID
+    - DAYTIME
+    name: UK_WELL_BLOWDOWN_DATA
+    type: UNIQUEKEY
+    status: UNDEFINED
+cnstForeignKeys:
+  FK_WELL_BLOWDOWN_DATA_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: WELL_BLOWDOWN_EVENT
+    columns:
+      PARENT_EVENT_NO: EVENT_NO
+    name: FK_WELL_BLOWDOWN_DATA_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+cnstChecks:
+  CHK_WELL_BLOWDOWN_DATA_1:
+    searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')
+    columns:
+    - APPROVAL_STATE
+    name: CHK_WELL_BLOWDOWN_DATA_1
+    type: CHECK
+    status: UNDEFINED
+indexes:
+  IR_WELL_BLOWDOWN_DATA:
+    indexName: IR_WELL_BLOWDOWN_DATA
+    columns:
+    - REC_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_WELL_BLOWDOWN_DATA_1:
+    indexName: I_WELL_BLOWDOWN_DATA_1
+    columns:
+    - PARENT_EVENT_NO
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

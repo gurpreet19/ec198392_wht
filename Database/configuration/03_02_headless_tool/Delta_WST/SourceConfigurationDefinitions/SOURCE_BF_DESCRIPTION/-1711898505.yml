@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1711898505'
+keys:
+  BF_DESCRIPTION_NO: GD.0011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/pipeline_trade_request' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This BF is used to monitor the trading of for instance pipeline stock or sales gas. It monitors:<br />trading request messages coming in from contracts.<br />outgoing trading notifications (typically buy or sell requests)<br />incoming expressions of interest<br />outgoing contract details</p><p>A message is sent by a contract (upstream shipper) that wants to sell pipeline stock or sales gas at a certain delivery point, on a specific hour. Typically the Message.&nbsp;</p><p>Handling Module (MHM) registers the new request and sends a trading request messages to all the contracts. Any interested company sends a message and will&nbsp;receive the seller (or buyer) details from the MHM automatically.</p><p>The user can monitor the process and will not be able to add new requests for the contract.</p>
+related: {}

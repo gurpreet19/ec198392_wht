@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1320955555'
+keys:
+  T: TV_UNIT
+  UNIT: KILOLITER
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Kilo Liter
+  FIN_CODE: null
+  LABEL: kL
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KILOLITER
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related: {}

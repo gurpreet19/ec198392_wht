@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '626733168'
+keys:
+  BF_DESCRIPTION_NO: IS.0006
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IS.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_upload' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is for uploading files and importing data from an uploaded file to EC. All the uploaded files will be shown here. For each uploaded file additional files can be uploaded. Additional files will be stored in the database and can be previewed. You can delete the additional files by clicking the Delete and Save buttons in the toolbar.</p>
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '53474798'
+keys:
+  COMPONENT_ID: ( SELECT 'FT_CO_DS' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.sp/document_setup/CLASS_NAME/CONTRACT_DOC?screentemplate=/com.ec.revn.sp/document_setup
+  COMPONENT_EXT_NAV_NAME: /CLASS_NAME/CONTRACT_DOC?screentemplate=/com.ec.revn.sp/document_setup
+  COMPONENT_ID: ( SELECT 'FT_CO_DS' FROM DUAL )
+  COMPONENT_LABEL: Document Properties
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FT_CO_REVN' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 4900.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1787722234'
+keys:
+  COMPONENT_ID: ( SELECT 'WEBO_PRES_TEST' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.wr.screens/webo_pressure_test
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'WEBO_PRES_TEST' FROM DUAL )
+  COMPONENT_LABEL: Well Bore Pressure Test
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FLD_WELL_RES_EVENT' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 106.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

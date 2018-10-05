@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1881290308'
+keys:
+  OBJECT_NAME: VIEWLAYER_DIRTY_LOG
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: null
+  OBJECT_NAME: VIEWLAYER_DIRTY_LOG
+  PINC_TRIGGER_IND: N
+  VIEW_PK_TABLE_NAME: null
+related: {}

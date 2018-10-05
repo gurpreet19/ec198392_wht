@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '535521714'
+keys:
+  ATTRIBUTE_TYPE: GAS_CONST_DEN_AIR_15_DEG
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: GAS_CONST_DEN_AIR_15_DEG
+  ATTRIBUTE_VALUE: 1.225
+  DESCRIPTION: Density of air at 15°C ISA
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

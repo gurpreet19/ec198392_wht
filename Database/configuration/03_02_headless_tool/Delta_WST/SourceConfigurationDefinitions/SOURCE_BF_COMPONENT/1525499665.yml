@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1525499665'
+keys:
+  BF_CODE: PO.0086
+  T: BF_COMPONENT
+  URL: /add_eqpm_event_button
+parentKeys: {}
+properties:
+  BF_CODE: PO.0086
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0086' AND NVL(URL,'IS_NULL') = '/add_eqpm_event_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_vent_flare' )
+  CLASS_NAME: null
+  COMP_CODE: add_eqpm_event_button
+  NAME: Add Equipment Event Button
+  SIGNING_REQ_IND: null
+  URL: /add_eqpm_event_button
+related: {}

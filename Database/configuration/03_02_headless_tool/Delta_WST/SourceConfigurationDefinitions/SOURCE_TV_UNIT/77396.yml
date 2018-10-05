@@ -1,0 +1,93 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '77396'
+keys:
+  T: TV_UNIT
+  UNIT: NM3
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Normal cubic meter at 0 degC
+  FIN_CODE: NCM
+  LABEL: Nm³
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: NM3
+  UOM_GROUP: V
+  UOM_SUBGROUP: NM
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: NM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: NM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: NM3
+      MULT_FACT: 0.947944
+      PRECISION: 6.0
+      TO_UNIT: SM3
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_VOLUME_QTY
+      T: TV_UOM_SETUP
+      UNIT: NM3
+    parentKeys:
+      TV_UNIT.UNIT: NM3
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0'
+      MEASUREMENT_TYPE: REV_VOLUME_QTY
+      REPORT_UNIT: null
+      UNIT: NM3
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      T: TV_UOM_SETUP
+      UNIT: NM3
+    parentKeys:
+      TV_UNIT.UNIT: NM3
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0'
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      REPORT_UNIT: null
+      UNIT: NM3
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      T: TV_UOM_SETUP
+      UNIT: NM3
+    parentKeys:
+      TV_UNIT.UNIT: NM3
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0'
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      REPORT_UNIT: null
+      UNIT: NM3
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      T: TV_UOM_SETUP
+      UNIT: NM3
+    parentKeys:
+      TV_UNIT.UNIT: NM3
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0'
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      REPORT_UNIT: null
+      UNIT: NM3
+      VIEW_UNIT: null

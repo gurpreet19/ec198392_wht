@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-342242693'
+keys:
+  CODE: PREALLOC_MEAS_GL
+  CODE_TYPE: GAS_LIFT_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: PREALLOC_MEAS_GL
+  CODE_TEXT: Pre-Allocation of Measured Gaslift
+  CODE_TYPE: GAS_LIFT_METHOD
+  DESCRIPTION: Pre-Allocation of Measured Gaslift
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 80.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

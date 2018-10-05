@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '534270844'
+keys:
+  ATTRIBUTE_TYPE: CASCADE_LOG_LEVEL
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: INFO
+  ATTRIBUTE_TYPE: CASCADE_LOG_LEVEL
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: 'Default log level for cascade process in EC Revenue. Valid choices:
+    INFO or DEBUG.'
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

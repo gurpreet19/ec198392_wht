@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1715831667'
+keys:
+  BF_DESCRIPTION_NO: CP.0028
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0028
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/contract_delivery_tracking' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used for monitoring of contract deliveries / plan (Annual Delivery Plan) for any given delivery program year. Within the oil and gas business and&nbsp;especially within the LNG domain it is critical to at any time be able to track and report on how the plant is performing with regards to its contractual commitments.&nbsp;Long term contracts are typically monitored on a 12 month basis where the start of the contract year is not always January 1st.<br />&nbsp;</p>
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1720959044'
+keys:
+  BF_CODE: CD.0024
+  T: BF_COMPONENT
+  URL: /calendar_setup
+parentKeys: {}
+properties:
+  BF_CODE: CD.0024
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/calendar_setup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar' )
+  CLASS_NAME: CALENDAR_SETUP
+  COMP_CODE: tab4
+  NAME: CALENDAR SETUP
+  SIGNING_REQ_IND: null
+  URL: /calendar_setup
+related: {}

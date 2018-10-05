@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '969918094'
+keys:
+  NAME: ShowPointLabels
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: FCTY_TOP5_MTH_GAS_PROD
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Show point Labels
+  MANDATORY_IND: N
+  NAME: ShowPointLabels
+  PARAMETER_SUB_TYPE: BOOL
+  PARAMETER_TYPE: BASIC_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 30.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: FCTY_TOP5_MTH_GAS_PROD
+related: {}

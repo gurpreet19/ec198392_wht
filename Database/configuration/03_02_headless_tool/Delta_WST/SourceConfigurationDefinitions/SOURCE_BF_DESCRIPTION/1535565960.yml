@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1535565960'
+keys:
+  BF_DESCRIPTION_NO: CO.0011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/LICENCE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>A licence is a right to explore and produce oil and gas from a geographical area. This is normally granted by the government. Commercial Entity belongs to a Licence, and Licence is used in the Commercial Entity navigator to list Commercial Entities. Licence is also used in the Maintain Equity Share navigator.</p>
+related: {}

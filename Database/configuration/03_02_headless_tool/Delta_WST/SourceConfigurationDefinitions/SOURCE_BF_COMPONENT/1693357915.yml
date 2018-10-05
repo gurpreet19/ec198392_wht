@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1693357915'
+keys:
+  BF_CODE: PO.0032
+  T: BF_COMPONENT
+  URL: /analysis
+parentKeys: {}
+properties:
+  BF_CODE: PO.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0032' AND NVL(URL,'IS_NULL') = '/analysis')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_sample_analysis/STRM_SET/PO.0032' )
+  CLASS_NAME: STRM_SAMPLE_ANALYSIS
+  COMP_CODE: analysis
+  NAME: Analysis
+  SIGNING_REQ_IND: null
+  URL: /analysis
+related: {}

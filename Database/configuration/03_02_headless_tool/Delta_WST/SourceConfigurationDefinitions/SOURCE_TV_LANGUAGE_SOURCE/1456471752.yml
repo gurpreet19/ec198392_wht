@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1456471752'
+keys:
+  SOURCE_ID: 110039.0
+  T: TV_LANGUAGE_SOURCE
+parentKeys: {}
+properties:
+  SOURCE: ORA-20447
+  SOURCE_ID: 110039.0
+related: {}

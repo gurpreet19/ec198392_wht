@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-355083893'
+keys:
+  BF_CODE: PO.0083
+  T: BF_COMPONENT
+  URL: /StorageDip
+parentKeys: {}
+properties:
+  BF_CODE: PO.0083
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0083' AND NVL(URL,'IS_NULL') = '/StorageDip')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_tank_dip_status' )
+  CLASS_NAME: STOR_DAY_DIP_STATUS
+  COMP_CODE: StorageDip
+  NAME: Storage Single Dip
+  SIGNING_REQ_IND: null
+  URL: /StorageDip
+related: {}

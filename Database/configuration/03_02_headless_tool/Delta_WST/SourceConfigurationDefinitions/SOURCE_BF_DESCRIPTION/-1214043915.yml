@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1214043915'
+keys:
+  BF_DESCRIPTION_NO: PP.0034
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0034
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/monthly_forecast/GROUPMODEL/FCTY_CLASS_1/TARGET/FCTY_CLASS_1/CLASS_NAME/FCST_FCTY1_MTH_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p> This business function is used to define available Monthly Facility Class 1 Forecast data based on the selected scenario object. A scenario data can be created using insert functionality, as well as existing scenario data can be modified as per requirement. Scenario data records that are no longer required can be removed using this screen.</p>
+    <p>The same facility class 1 may also have daily scenario data and it is registered in a separate business function screen. </p>
+related: {}

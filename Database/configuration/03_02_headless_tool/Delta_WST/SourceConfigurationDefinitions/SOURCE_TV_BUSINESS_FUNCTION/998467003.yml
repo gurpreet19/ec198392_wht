@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '998467003'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/constant_standard/CLASS_NAME/CONST_STD_COMP_SUM_FAC
+parentKeys: {}
+properties:
+  BF_CODE: CO.0160
+  NAME: Compression and Summation Factor
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens/constant_standard/CLASS_NAME/CONST_STD_COMP_SUM_FAC
+related: {}

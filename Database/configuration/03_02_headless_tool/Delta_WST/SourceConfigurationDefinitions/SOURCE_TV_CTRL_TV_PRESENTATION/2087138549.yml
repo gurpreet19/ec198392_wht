@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2087138549'
+keys:
+  COMPONENT_ID: ( SELECT 'CONN_PAYMENT_TERM' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/PAYMENT_TERM/FROM_CLASS_NAME/PAYMENT_TERM/TO_CLASS_NAME/PAYMENT_TERM?screentemplate=/com.ec.revn.cd/create_object_relations_basic&NAVQUERY=/com.ec.revn.cd/query/get_filternavigator.xml&NAVLAYOUT=/com.ec.revn.cd/layout/filternavigator.xml
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'CONN_PAYMENT_TERM' FROM DUAL )
+  COMPONENT_LABEL: Payment Term Usage
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'OBJECT_USAGE' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 200.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

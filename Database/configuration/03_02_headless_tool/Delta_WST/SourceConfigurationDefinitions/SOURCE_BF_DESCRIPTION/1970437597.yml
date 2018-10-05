@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1970437597'
+keys:
+  BF_DESCRIPTION_NO: VO.0035
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: VO.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/edit_monthly_alloc_revn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Monthly Quantity Allocation screen</strong>    is used
+    to execute various Calculations to run Monthly Stream Item values.</p><p>    <span
+    style="color: rgb(0, 0, 153);"><strong>Navigator</strong></span><br>    It is
+    a standard calculation screen where the user needs to select the Months to execute
+    the Calculation for as well as Allocation Network and Calculation    Job.</p><p>    <strong><span
+    style="color: rgb(0, 153, 0);">Run Calculations</span> Button</strong><br>    The
+    button enables the Calculation Job according to the Navigator settings.</p><p>    <span
+    style="color: rgb(0, 0, 153);"><strong>Calculation Run Section</strong></span><br>    The
+    section lists all Calculation Runs for a chosen Allocation Month.</p><p>    <span
+    style="color: rgb(0, 0, 153);"><strong>Calculation Log Section</strong></span><br>    The
+    section lists Calculation Log information for a chosen Calculation Run.</p><p>    <strong><span
+    style="color: rgb(0, 153, 0);">View </span>Button</strong><br>    The button opens
+    a pop-up window with a Calculation Log Summary. It shows the steps of Calculation
+    Ran and how it was executed.</p><p>    <strong><span style="color: rgb(0, 153,
+    0);">Download</span> Button</strong><br>    The button is making the XML version
+    of Calculation Log Summary to be downloaded and saved locally by the user.</p>'
+related: {}

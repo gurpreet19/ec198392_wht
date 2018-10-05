@@ -1,0 +1,34 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1715152647'
+keys:
+  BF_DESCRIPTION_NO: CO.0076
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0076
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/status_processes' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>A status process is a job that can be run to update records status
+    on a set of data classes.</p><p>Record status controls data access to the data.
+    There are three record statuses configured in EC.</p><dir><li><p>P = Provisional.
+    Data inserted manually will become provisional. This is the lowest security level.</p>
+    </li><li><p> V = Verified. Provisional data can be lifted to verified by running
+    a process</p></li><li><p> A = Approved. This is the highest security level. A
+    monthly process will set data to approved.</p></li></dir><p>It is recommended
+    to create one process for provisional to verify process for each facility and
+    one process for verify to approve process for each monthly reconciliation network
+    (for all facilities producing into a terminal &ndash; integrated system).</p><p>Data
+    status can be updated from P to V and to A, and also in the reverse direction.
+    The revision tracking will track the record status being updated in both directions.
+    Status process will not be triggered if the date affects a Globally or Locally
+    locked month.</p><p>One status process can be a child of another process and it
+    can also have its own process tasks. A process task is a configuration of one
+    task to update record status for one single data class. An extra where clause
+    can be added to make sure that only records belonging to one particular facility
+    is updated. To find out how to write the where clause, see attribute description
+    below.</p><p>Note: Due to differences in types and requirements of classes, some
+    classes have special handling in this business function. More details are included
+    in the mentioned attribute descriptions.</p><p>The screen consists of 3 sections;
+    the attributes for each section are further described below.'
+related: {}

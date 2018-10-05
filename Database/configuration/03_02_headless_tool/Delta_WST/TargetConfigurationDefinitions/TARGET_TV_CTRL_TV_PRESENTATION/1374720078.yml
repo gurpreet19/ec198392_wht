@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1374720078'
+keys:
+  COMPONENT_ID: ( SELECT 'REGULATORY_PERMITS' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/regulatory_permits/CLASS_NAME/REGULATORY_PERMITS?screentemplate=/com.ec.frmw.co.screens/regulatory_permits
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'REGULATORY_PERMITS' FROM DUAL )
+  COMPONENT_LABEL: Regulatory Permits
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'BASIC_OBJECTS' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 160.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

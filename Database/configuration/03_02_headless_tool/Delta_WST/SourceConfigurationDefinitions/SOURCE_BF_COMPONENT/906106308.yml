@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '906106308'
+keys:
+  BF_CODE: PA.0004
+  T: BF_COMPONENT
+  URL: /process_event_log_summary
+parentKeys: {}
+properties:
+  BF_CODE: PA.0004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PA.0004' AND NVL(URL,'IS_NULL') = '/process_event_log_summary')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/process_overview' )
+  CLASS_NAME: null
+  COMP_CODE: process_event_log_summary
+  NAME: Logs
+  SIGNING_REQ_IND: null
+  URL: /process_event_log_summary
+related: {}

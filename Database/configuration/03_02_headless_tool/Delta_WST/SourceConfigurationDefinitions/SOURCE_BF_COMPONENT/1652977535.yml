@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1652977535'
+keys:
+  BF_CODE: TO.0016
+  T: BF_COMPONENT
+  URL: /batch_uld
+parentKeys: {}
+properties:
+  BF_CODE: TO.0016
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0016' AND NVL(URL,'IS_NULL') = '/batch_uld')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/batch_quantity_unload' )
+  CLASS_NAME: CARGO_STR_BTH_ULD
+  COMP_CODE: batch_uld
+  NAME: Cargo Batch Unload
+  SIGNING_REQ_IND: null
+  URL: /batch_uld
+related: {}

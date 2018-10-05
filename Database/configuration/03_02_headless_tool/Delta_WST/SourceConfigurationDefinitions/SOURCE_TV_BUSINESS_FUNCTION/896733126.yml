@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '896733126'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/inv_historic_layer/STREAM_CATEGORY_CODE/INV
+parentKeys: {}
+properties:
+  BF_CODE: IN.0021
+  NAME: Inventory Historic Layer
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/inv_historic_layer/STREAM_CATEGORY_CODE/INV
+related: {}

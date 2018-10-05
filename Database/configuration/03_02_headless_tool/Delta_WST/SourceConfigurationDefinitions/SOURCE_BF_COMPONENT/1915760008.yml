@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1915760008'
+keys:
+  BF_CODE: SD.0030
+  T: BF_COMPONENT
+  URL: /new_fcst
+parentKeys: {}
+properties:
+  BF_CODE: SD.0030
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0030' AND NVL(URL,'IS_NULL') = '/new_fcst')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/forecast_sales_dispatching' )
+  CLASS_NAME: null
+  COMP_CODE: new_fcst
+  NAME: New Forecast
+  SIGNING_REQ_IND: null
+  URL: /new_fcst
+related: {}

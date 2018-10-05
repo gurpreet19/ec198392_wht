@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2085965226'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.in/inv_setup_item_selection/STREAM_CATEGORY_CODE/INV
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.in/inv_setup_item_selection/STREAM_CATEGORY_CODE/INV
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

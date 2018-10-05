@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1117076831'
+keys:
+  BF_CODE: CO.1022
+  T: BF_COMPONENT
+  URL: /uom_setup
+parentKeys: {}
+properties:
+  BF_CODE: CO.1022
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1022' AND NVL(URL,'IS_NULL') = '/uom_setup')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/measurement_types' )
+  CLASS_NAME: UOM_SETUP
+  COMP_CODE: uom_setup
+  NAME: Uom Setup
+  SIGNING_REQ_IND: null
+  URL: /uom_setup
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-167367377'
+keys:
+  KEY: /com/ec/tran/to/screens/cargo_document_parcel/ALLOWED_FILE_EXTENSIONS
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: .xml,.txt,.csv,.xls,.xlsx,.pdf,.docx
+  DESCRIPTION: Comma separated list of allowed file extensions for uploading Document in Cargo Document Parcel Screen
+  KEY: /com/ec/tran/to/screens/cargo_document_parcel/ALLOWED_FILE_EXTENSIONS
+  LABEL: Allowed File Extensions for Documents Upload Cargo Documents Parcel
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2555596'
+keys:
+  T: TV_UNIT
+  UNIT: STEP
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Step
+  FIN_CODE: null
+  LABEL: Step
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: STEP
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related: {}

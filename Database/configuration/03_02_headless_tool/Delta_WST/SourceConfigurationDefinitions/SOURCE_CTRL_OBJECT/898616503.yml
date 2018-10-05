@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '898616503'
+keys:
+  OBJECT_NAME: FCST_YR_STATUS
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: Y
+  OBJECT_NAME: FCST_YR_STATUS
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1860187172'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/HEATER/TARGET/HEATER/CLASS_NAME/HEATER
+parentKeys: {}
+properties:
+  BF_CODE: CO.0222
+  NAME: Heater
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/HEATER/TARGET/HEATER/CLASS_NAME/HEATER
+related: {}

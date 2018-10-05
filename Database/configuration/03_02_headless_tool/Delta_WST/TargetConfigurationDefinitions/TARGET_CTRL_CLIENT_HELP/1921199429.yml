@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1921199429'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pd.screens/eqpm_downtime
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pd.screens/eqpm_downtime
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

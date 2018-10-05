@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '726382841'
+keys:
+  BF_DESCRIPTION_NO: PO.0004
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_water_overboard_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used for all daily water streams having an analysis for oil in water. This BF requires one entry per stream per day, and Energy Components automatically creates new records for a new production day for all water streams that are part of a stream set for this screen. The second section displays the oil in water analysis.</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

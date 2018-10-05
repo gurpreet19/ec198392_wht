@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '558568255'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.fc/fcst_properties/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.fc/fcst_properties/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

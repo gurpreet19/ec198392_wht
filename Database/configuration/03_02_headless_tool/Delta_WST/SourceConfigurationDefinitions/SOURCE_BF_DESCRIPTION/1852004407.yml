@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1852004407'
+keys:
+  BF_DESCRIPTION_NO: PO.0101
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0101
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/product_entitlement' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The business function is used to get a perspective of the entitlements totals based on transaction types.</p>
+
+    <p>The main section shows the volumes for a selected product, based on transaction types and companies.</p>
+related: {}

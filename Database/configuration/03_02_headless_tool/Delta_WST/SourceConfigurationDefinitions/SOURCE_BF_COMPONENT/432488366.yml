@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '432488366'
+keys:
+  BF_CODE: WR.0049
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: WR.0049
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0049' AND NVL(URL,'IS_NULL') = '/navigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1028700297'
+keys:
+  BF_CODE: PO.0086
+  T: BF_COMPONENT
+  URL: /data_class_5
+parentKeys: {}
+properties:
+  BF_CODE: PO.0086
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0086' AND NVL(URL,'IS_NULL') = '/data_class_5')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_vent_flare' )
+  CLASS_NAME: STRM_DAY_ROU_GEN_VAP
+  COMP_CODE: data_class_5
+  NAME: Generated Vapours
+  SIGNING_REQ_IND: null
+  URL: /data_class_5
+related: {}

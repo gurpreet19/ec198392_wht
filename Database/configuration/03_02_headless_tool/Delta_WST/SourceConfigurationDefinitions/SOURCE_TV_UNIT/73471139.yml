@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '73471139'
+keys:
+  T: TV_UNIT
+  UNIT: MMBTU
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Million British thermal unit
+  FIN_CODE: null
+  LABEL: MMBtu
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MMBTU
+  UOM_GROUP: E
+  UOM_SUBGROUP: null
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-422691779'
+keys:
+  BF_CODE: WR.0046
+  T: BF_COMPONENT
+  URL: /monthly_gas_injection_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0046
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0046' AND NVL(URL,'IS_NULL') = '/monthly_gas_injection_well_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/monthly_gas_injection_well_status' )
+  CLASS_NAME: IWEL_MTH_STATUS_GAS
+  COMP_CODE: monthly_gas_injection_well_status
+  NAME: Monthly Gas Injection Well Status
+  SIGNING_REQ_IND: null
+  URL: /monthly_gas_injection_well_status
+related: {}

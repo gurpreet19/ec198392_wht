@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-183306412'
+keys:
+  ATTRIBUTE_TYPE: API_CALC_MAX_ITERATIONS
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: API_CALC_MAX_ITERATIONS
+  ATTRIBUTE_VALUE: 20.0
+  DESCRIPTION: Default max iteration used in the loop to calculate blend/diluent volume in EcBp_Vcf.calcAPIBlendShrinkage
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '556836432'
+keys:
+  BF_DESCRIPTION_NO: CO.0118
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0118
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/REGION' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>A Region can be used in the geographical group model above e.g. Country. There are no data classes associated with Region, it is only available to be used in group models for navigation and reporting. For this object two screens should exist - one to create and maintain region also known as the Region (CO.0118).</p>
+related: {}

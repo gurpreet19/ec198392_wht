@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-752535850'
+keys:
+  BF_CODE: RP.0016
+  T: BF_COMPONENT
+  URL: /sendlog
+parentKeys: {}
+properties:
+  BF_CODE: RP.0016
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0016' AND NVL(URL,'IS_NULL') = '/sendlog')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_set_administration' )
+  CLASS_NAME: REPORT_SEND_LOG
+  COMP_CODE: sendlog
+  NAME: Send log
+  SIGNING_REQ_IND: null
+  URL: /sendlog
+related: {}

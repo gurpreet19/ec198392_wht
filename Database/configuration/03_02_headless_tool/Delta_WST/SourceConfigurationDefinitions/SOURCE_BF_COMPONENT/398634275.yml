@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '398634275'
+keys:
+  BF_CODE: SP.0006
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button/com.ec.pf.screenlet.button/button/pc
+parentKeys: {}
+properties:
+  BF_CODE: SP.0006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0006' AND NVL(URL,'IS_NULL') = '/com.ec.pf.screenlet.button/button/com.ec.pf.screenlet.button/button/pc')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/BOOKED' )
+  CLASS_NAME: FIN_DOC_PROFIT_CENTER
+  COMP_CODE: documentDetail/btnTransDetail/pc
+  NAME: My Button/classic_trans/Distributions
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button/com.ec.pf.screenlet.button/button/pc
+related: {}

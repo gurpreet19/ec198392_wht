@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-975424468'
+keys:
+  OBJECT_NAME: STIM_FCST_MTH_VALUE
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: Y
+  OBJECT_NAME: STIM_FCST_MTH_VALUE
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

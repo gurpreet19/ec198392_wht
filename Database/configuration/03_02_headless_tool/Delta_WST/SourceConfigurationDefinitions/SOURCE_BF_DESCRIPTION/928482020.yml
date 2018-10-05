@@ -1,0 +1,34 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '928482020'
+keys:
+  BF_DESCRIPTION_NO: PD.0004
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PD.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_deferment_master' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The Daily Deferment Master and the Daily Deferment Summary (PD.0005) are two BF&rsquo;s that can be used to follow up and track lost volume on a daily basis. These BF&rsquo;s are not driven by individual well deferred volumes but rather facility or area volumes and therefore by using these BF&rsquo;s it will not be possible to calculate a well on time from deferment events nor calculate the well theoretical rate from potential minus deferred volumes.</p>
+
+    <p>The main advantage by using Daily Deferment Master &amp; Daily Deferment Summary is that you can follow up deferred volumes every day and make sure that the difference between your planned max capacity and actual production is distributed to open deferment events.</p>
+
+    <p>The Daily Deferment Master is used to enter new &quot;Master Events&quot; and &quot;Deferment Events&quot;.</p>
+
+    <p>1- &nbsp;Deferment Events is any type of event that leads to deferred production, and the event can last from a few minutes to many days or months. A Deferment Event can be entered without linking it to a Master Event. However, all Deferment Events should eventually be linked to a Master Event.</p>
+
+    <p>2- &nbsp;Master Events holds the reason codes. A Master Event will typically be open for a longer period to add up all Deferment Events that have the same reason codes.</p>
+
+    <p>The Master Event has a start day and end day which is the beginning production day and ending production day of the event. Any linked Deferment Events must be within the Master Deferment start and end production day, if not an error will be raised.</p>
+
+    <p>The 5 deferment codes can be configured using the Ec Codes BF. Select code_type &lsquo;DEF_CODE_1 to 5&rsquo;. The generic labels Def Code X can be changed using language translation.</p>
+
+    <p>Total Deferred Volumes shows the sum of all deferred volumes for all linked Deferment Events, which again sums all daily deferred volumes from the BF Daily Deferment Summary.</p>
+
+    <p>The Verify and Approve button will run a process to update the status of selected records. Only records having end date set can be verified or approved and you need access level 40 (Edit on Provisional) to run Verified and access level 50 (Edit on Verified) to run Approve button. Approve button will also cascade down to linked deferment events. These statuses will control access to modify records like most other BF&rsquo;s in EC.</p>
+
+    <p>When setting End Daytime in the Deferment Event section it will be checked that you don&rsquo;t have any daily deferment records (in BF PD.0005) beyond that end daytime and that the end daytime is not after any linked end day in the Master Event section. This is to ensure consistency.</p>
+
+    <p>Finally, the system attribute DAILY_DEFERMENT_LEVEL is very important. The attribute controls at which level the deferment events will be compared with actual and planned numbers. This attribute cannot be changed later without having impacting historical data (reports will not work anymore for historical data).</p>
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1765893120'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/cont_summary_year
+parentKeys: {}
+properties:
+  BF_CODE: SP.0057
+  NAME: Project Data Extract By Year
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/cont_summary_year
+related: {}

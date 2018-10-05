@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1639455404'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/monthly_prod_unit_forecast/CLASS_NAME/FCST_PRODUNIT_MTH_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: PP.0076
+  NAME: Monthly Production Unit Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/monthly_prod_unit_forecast/CLASS_NAME/FCST_PRODUNIT_MTH_STATUS
+related: {}

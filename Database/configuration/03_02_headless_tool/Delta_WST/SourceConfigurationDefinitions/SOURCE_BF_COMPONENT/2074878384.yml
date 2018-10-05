@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2074878384'
+keys:
+  BF_CODE: HA.0001
+  T: BF_COMPONENT
+  URL: /dateStartJob
+parentKeys: {}
+properties:
+  BF_CODE: HA.0001
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='HA.0001' AND NVL(URL,'IS_NULL') = '/dateStartJob')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/daily_data_status_process' )
+  CLASS_NAME: null
+  COMP_CODE: dateStartJob
+  NAME: Date Start Job
+  SIGNING_REQ_IND: null
+  URL: /dateStartJob
+related: {}

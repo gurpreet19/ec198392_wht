@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1442621111'
+keys:
+  BF_CODE: CP.0068
+  T: BF_COMPONENT
+  URL: /forecast_flags
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0068' AND NVL(URL,'IS_NULL') = '/forecast_flags')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: FCST_MAN_STOR_FC_COM_FLG
+  COMP_CODE: forecast_flags
+  NAME: Graph
+  SIGNING_REQ_IND: null
+  URL: /forecast_flags
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '655157717'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/document_setup/CLASS_NAME/CONTRACT_DOC
+parentKeys: {}
+properties:
+  BF_CODE: SP.0012
+  NAME: Document Properties
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/document_setup/CLASS_NAME/CONTRACT_DOC
+related: {}

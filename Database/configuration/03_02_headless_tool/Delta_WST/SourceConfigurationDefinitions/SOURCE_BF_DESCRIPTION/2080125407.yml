@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2080125407'
+keys:
+  BF_DESCRIPTION_NO: SD.0040
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0040
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_day_np_data/CLASS/SLNP_DAY_FORECAST/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0040' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>For long-term gas sales contract, it is quite common that an off-take forecast at various periodical levels is to be provided by the gas buyer. The background for this&nbsp;is for the seller to be able to plan / anticipate future gas supply demand to be delivered under the contract. Note however, that in most cases, such forecasts are not&nbsp;binding and does not impose and obligation on the buyer.</p><p>If the contract has multiple nomination points &ndash; then one forecast need to be provided per nomination point.</p><p>The periodical levels would typically be a forecasted annual off-take over the complete life-time (reflected in the contract ACQ clauses), a monthly/quarterly forecast&nbsp;for the coming gas year, a daily forecast for the coming week/month.</p><p>The Daily Sales Forecast business function is a screen for entering/viewing gas supply forecast data. Forecast information will be listed for selected period, and&nbsp;contracts and nomination points satisfying the navigator selection. Data may be entered and modified on daily level.</p><p>Data will be stored at daily level. Data are to be entered in one consistent unit of measure. The unit of measure is defined in the gas sales contract, as an attribute.</p>
+related: {}

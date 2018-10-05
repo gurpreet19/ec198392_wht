@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '752664531'
+keys:
+  NAME: header
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: AREA_TOP5_MTH_COND_PROD
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: null
+  MANDATORY_IND: null
+  NAME: header
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: EcDatamodel.row[0].col[HEADER].datavalue
+  RESOLVE_TYPE: DATAMODEL
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: AREA_TOP5_MTH_COND_PROD
+related: {}

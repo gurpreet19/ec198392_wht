@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-629358259'
+keys:
+  BF_CODE: TO.0032
+  T: BF_COMPONENT
+  URL: /tab50
+parentKeys: {}
+properties:
+  BF_CODE: TO.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0032' AND NVL(URL,'IS_NULL') = '/tab50')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/tab_harbour_menu' )
+  CLASS_NAME: null
+  COMP_CODE: tab50
+  NAME: Timesheet
+  SIGNING_REQ_IND: null
+  URL: /tab50
+related: {}

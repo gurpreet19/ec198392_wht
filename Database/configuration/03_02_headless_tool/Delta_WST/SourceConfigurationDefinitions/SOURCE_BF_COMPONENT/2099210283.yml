@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2099210283'
+keys:
+  BF_CODE: GD.0004
+  T: BF_COMPONENT
+  URL: /delpoint
+parentKeys: {}
+properties:
+  BF_CODE: GD.0004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0004' AND NVL(URL,'IS_NULL') = '/delpoint')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/exit_point_matching' )
+  CLASS_NAME: DP_DAY_SHIPPER_NOM
+  COMP_CODE: delpoint
+  NAME: Delivery Point
+  SIGNING_REQ_IND: null
+  URL: /delpoint
+related: {}

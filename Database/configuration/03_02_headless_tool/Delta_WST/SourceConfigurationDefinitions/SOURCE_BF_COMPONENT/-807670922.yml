@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-807670922'
+keys:
+  BF_CODE: WR.0067
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button
+parentKeys: {}
+properties:
+  BF_CODE: WR.0067
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0067' AND NVL(URL,'IS_NULL') = '/com.ec.pf.screenlet.button/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/webo_pressure_test' )
+  CLASS_NAME: null
+  COMP_CODE: go_button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button
+related: {}

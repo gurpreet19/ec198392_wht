@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1734565214'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.jbpm/jbpm_process_template
+parentKeys: {}
+properties:
+  BF_CODE: PA.0002
+  NAME: Process Template
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.jbpm/jbpm_process_template
+related: {}

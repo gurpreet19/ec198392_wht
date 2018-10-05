@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1748732176'
+keys:
+  BF_CODE: PD.0023
+  T: BF_COMPONENT
+  URL: /deferment_day_graph
+parentKeys: {}
+properties:
+  BF_CODE: PD.0023
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PD.0023' AND NVL(URL,'IS_NULL') = '/deferment_day_graph')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/deferment_day/CLASS_NAME/DEFERMENT_EVENT/DAILY_CLASS_NAME/DEFERMENT_DAY/TABLE_NAME/DEFERMENT_EVENT' )
+  CLASS_NAME: DEFERMENT_DAY
+  COMP_CODE: deferment_day_graph
+  NAME: Deferment Day Graph
+  SIGNING_REQ_IND: null
+  URL: /deferment_day_graph
+related: {}

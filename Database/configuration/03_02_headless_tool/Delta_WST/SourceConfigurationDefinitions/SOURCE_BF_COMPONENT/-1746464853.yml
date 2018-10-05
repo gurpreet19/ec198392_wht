@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1746464853'
+keys:
+  BF_CODE: CD.0052
+  T: BF_COMPONENT
+  URL: /tabitem8
+parentKeys: {}
+properties:
+  BF_CODE: CD.0052
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0052' AND NVL(URL,'IS_NULL') = '/tabitem8')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/fin_period/CLASS/SYSTEM_MTH_STATUS_REPORT/ACTION/REOPEN/PERIOD_TYPE/REPORTING' )
+  CLASS_NAME: SYSTEM_MTH_STATUS
+  COMP_CODE: tabitem8
+  NAME: Quantities
+  SIGNING_REQ_IND: null
+  URL: /tabitem8
+related: {}

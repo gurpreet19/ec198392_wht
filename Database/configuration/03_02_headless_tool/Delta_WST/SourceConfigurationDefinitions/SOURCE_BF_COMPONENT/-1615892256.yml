@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1615892256'
+keys:
+  BF_CODE: IN.0024
+  T: BF_COMPONENT
+  URL: /chosen_inv
+parentKeys: {}
+properties:
+  BF_CODE: IN.0024
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0024' AND NVL(URL,'IS_NULL') = '/chosen_inv')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inventory_overview/ACCRUAL_IND/N' )
+  CLASS_NAME: TRANS_INV_NAV_INV
+  COMP_CODE: chosen_inv
+  NAME: chosen inv
+  SIGNING_REQ_IND: null
+  URL: /chosen_inv
+related: {}

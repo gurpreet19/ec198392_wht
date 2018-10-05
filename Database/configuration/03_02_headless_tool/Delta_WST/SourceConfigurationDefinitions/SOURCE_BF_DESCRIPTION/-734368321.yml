@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-734368321'
+keys:
+  BF_DESCRIPTION_NO: CO.2070
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2070
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/canal_transit' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to capture registration time, departure time and arrival time for canals. Penalty for late arrival is also registered in this function.<br />The user shall configure the canal transit start and end points, transit rates (per m3 total capacity) for use in calculating the transit cost, arrival time limits as well as penalty rates for late arrival at canal transfer start port. The mechanism is such that late arrival up to when the convoy leaves is increasingly more expensive depending on how late the vessel arrives up to convoy departure. Typical example of a canal is the Suez Canal.</p>
+related: {}

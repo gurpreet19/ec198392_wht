@@ -1,0 +1,97 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-23333313'
+keys:
+  BF_DESCRIPTION_NO: RC.0062
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RC.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/rty_recon' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Royalty Reconciliation screen</strong>    is used to
+    reconcile the difference between two Royalty Runs. Two Royalty Runs can be chosen
+    based on preceding document, previous accrual document or End of Period documents
+    (EOPs). <br> This functionality will only consider the calculation cycles which
+    are run after setting the system attribute -    <strong>ENABLE_DOC_TRACING</strong>
+    as Y.</p><p>    The screen will first identify the other royalty run document
+    based on the comparison type provided, and then it will figure out the corresponding
+    Extract Documents to compare to. <br> The screen further provides the opportunity
+    to compare further at more detailed levels by choosing which to    analyze more.
+    </p><h3>    <strong style="color: rgb(0, 0, 153);">Navigator</strong></h3><p>    The
+    purpose of Navigator is to filter out the 2 documents to be compared.</p><p><u>Navigator
+    has following elements:</u><br>    <strong>- Daytime: </strong>    This is the
+    month for which the royalty calculations are run and reconciliation is to be done.<br>    This
+    data element is mandatory.<br>    <strong>- Report: </strong>    Documents with
+    the selected Dataset will be managed in the screen. This data element is mandatory.<br>    <strong>-
+    Contract Area/Property: </strong>    Any documents belonging to a Contract linked
+    to the selected Contract Area will be listed. This data element is mandatory.<br>    <strong>-
+    Product Stream/Project: </strong>    Documents related to the selected Project
+    will be managed in the screen. This data element is mandatory.<br>    <strong>-
+    Document Key: </strong>    This contains the list of calculations ran, filtered
+    on the previous parameters.<br>    <strong>- Compare Type: </strong>    The options
+    available for this mandatory field is available in EC codes. There are three options:
+    - To Preceding, To Accrual, and EOPS to Last    Month Report.<br>    1. To Preceding
+    will give the last Calculation ran irrespective if the chosen and preceding are
+    or are not the same type (Accrual/Actual).<br>    2. To Accrual will give the
+    last Accrual Calculation Run with the same settings. This works for both Accrual
+    and Actual.<br>    3. EOPs to Last Month Report will compare EOPs with the matching
+    GFE / MRC from December.</p><p>    <strong>Button <span style="color: rgb(0, 153,
+    0);">Run Reconciliation</span></strong><span style="color: rgb(0, 153, 0);"></span><br>    This
+    button will run the Reconciliation and is supposed to be used after pressing the
+    Go button. <br>  This will populate the Reconciliation Documents Table    shown
+    in the screen.</p><h2>    <strong>Tab Reconciliation</strong></h2><h3>        <strong
+    style="color: rgb(0, 0, 153);">Table Reconciliation Documents</strong></h3><p>    This
+    table displays the 2 Royalty Calculation Documents to be compared. It has following
+    elements:<br>    <strong>- Daytime:</strong> This is the date for which the royalty
+    calculations are run and reconciliation is to be done. This is a non-editable
+    field.<br>    <strong>- From Document:</strong> Royalty calculation document from
+    which the selected document to be compared. This is a non-editable field.<br>    <strong>-
+    To Document</strong>: Royalty calculation document selected in the navigator,
+    which is to be compared with the other document (From Document).    This is a
+    non-editable field.<br>    <strong>- Type: </strong>    It is the compare type
+    selected in the navigator. This is a non-editable field.<br>    <strong>- Reconcile
+    Type:</strong>    It will always be Royalty for this screen. This is a non-editable
+    field.<br>    <strong>- Status:</strong>    This is the editable field, which
+    a user can modify accordingly. It has following values: - New, Under Review and
+    Reviewed.<br>    <strong>- Comment:</strong>    This is an editable field, meant
+    for users to store their comments.</p><p>    <strong>Button <span style="color:
+    rgb(0, 153, 0);">Reconcile Line</span></strong><span style="color: rgb(0, 153,
+    0);"></span><br>    A user needs to press this button in order to further reconcile
+    the line of the extract document, selected in the Unreconciliation Lines table.
+    <br>This will run the batch to populate the underlying database table for Unreconciled
+    Entries table for the Data Extract Document line selected in the Unreconciliation
+    Lines table.</p><p>       <strong>Button <span style="color: rgb(0, 153, 0);">View
+    From Document</span></strong><span style="color: rgb(0, 153, 0);">    </span><br>    This
+    will enable user to view the Preceding/Accrual Calculation Document, which is
+    to be compared with the calculation Document chosen in the Navigator.    The specific
+    document name is also present in the From Document field of the Reconciliation
+    Documents table.</p><p>    <strong>Button<span style="color: rgb(0, 153, 0);">
+    View To Document</span></strong><span style="color: rgb(0, 153, 0);"></span><br>    This
+    will show the royalty calculation document, selected by the user in the Document
+    Key filter of the navigator. <br> The specific document name is also    present
+    in the To Document field of the Reconciliation Documents table.</p><h3>    <strong>Sub-Tab
+    Amount</strong></h3><p>    This will give the difference in the Amount or Adjustment
+    Amount values of the lines of the 2 Extract Documents, on which the 2 Calculation
+    Runs are based on.<br> The names of the 2 Extract Documents are present in Unreconciliation
+    Lines table, Documents column. The 2 documents are separated by a slash (/) in
+    that data element.</p><h3>        <strong>Sub-Tab Quantity</strong></h3><p>    This
+    will give the difference in the Quantity or Adjustment Quantity values of the
+    lines of the 2 Extract Documents, on which the 2 Calculation Runs are    based
+    on. <br> The names of the 2 Extract Documents are present in Unreconciliation
+    Lines table, Documents column. The 2 documents are separated by a slash (/)    in
+    that data element.</p><p>        <strong>Button <span style="color: rgb(0, 153,
+    0);">View From Config</span></strong>   <br>    This will open the pop-up window
+    with the data extract list details and data extract setup configuration of the
+    line tag, selected in the UnReconciliation    Lines table, from the <strong>From
+    Extract Document</strong>.</p><p>        <strong>Button <span style="color: rgb(0,
+    153, 0);">View To Config</span></strong><span style="color: rgb(0, 153, 0);"></span><br>    This
+    will open the pop-up window with the data extract list details and data extract
+    setup configuration of the line tag, selected in the UnReconciliation    Lines
+    table, from the <strong>To Extract Document</strong>.</p><h3>    <strong style="color:
+    rgb(0, 0, 153);">Table Unreconciled Entries</strong></h3><p>    This table will
+    be populated after pressing the Reconcile Line button and then selecting one of
+    the values present in the drop down, just above the    Unreconciled Entries table,
+    followed by pressing the Go button. <br> This table will give all the entries
+    for the data extract line selected in the previous    table.</p>'
+related: {}

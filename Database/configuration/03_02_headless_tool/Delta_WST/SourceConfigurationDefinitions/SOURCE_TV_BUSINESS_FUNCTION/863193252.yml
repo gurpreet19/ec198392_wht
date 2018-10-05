@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '863193252'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.sale.sd.screens/daily_nomloc_target
+parentKeys: {}
+properties:
+  BF_CODE: SD.0053
+  NAME: Daily Nomination Location Target
+  PROFILE_CLASS_NAME: NOMINATION_LOCATION
+  URL: /com.ec.sale.sd.screens/daily_nomloc_target
+related: {}

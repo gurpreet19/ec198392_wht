@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-987940863'
+keys:
+  BF_DESCRIPTION_NO: TO.0008
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_activity_timesheet_unload' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is based on the Cargo Activity Timesheet, but this business function handle unload activities at discharge port.</p><p>Note that demurrage plays no role here.</p>
+related: {}

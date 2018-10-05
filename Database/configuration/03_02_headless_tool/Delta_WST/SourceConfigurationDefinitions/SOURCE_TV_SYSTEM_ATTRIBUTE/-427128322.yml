@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-427128322'
+keys:
+  ATTRIBUTE_TYPE: DEFAULT_REVERSAL_CODE
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: '05'
+  ATTRIBUTE_TYPE: DEFAULT_REVERSAL_CODE
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Typically it is '05' for SAP
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

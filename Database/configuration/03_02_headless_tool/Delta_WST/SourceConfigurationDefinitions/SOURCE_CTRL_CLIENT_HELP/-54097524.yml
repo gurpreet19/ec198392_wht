@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-54097524'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/cost_object_popup/SHOW_CLOSE_BUTTON/false
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/cost_object_popup/SHOW_CLOSE_BUTTON/false
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

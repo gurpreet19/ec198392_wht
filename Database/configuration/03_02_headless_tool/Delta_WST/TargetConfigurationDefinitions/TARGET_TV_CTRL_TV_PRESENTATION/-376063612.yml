@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-376063612'
+keys:
+  COMPONENT_ID: ( SELECT 'TEST_DEVICE_MAINTAIN' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/TEST_DEVICE/TARGET/TEST_DEVICE/CLASS_NAME/TEST_DEVICE?screentemplate=/com.ec.frmw.co.screens/manage_object_groupmodel_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'TEST_DEVICE_MAINTAIN' FROM DUAL )
+  COMPONENT_LABEL: Test Device
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'EQ_OBJECTS' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 270.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

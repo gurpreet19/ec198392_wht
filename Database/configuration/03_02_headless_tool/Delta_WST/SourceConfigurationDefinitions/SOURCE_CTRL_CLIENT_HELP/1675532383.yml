@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1675532383'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.in/inv_validation/LEVEL/TRANSFER/MODE/SET_TO_NEXT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.in/inv_validation/LEVEL/TRANSFER/MODE/SET_TO_NEXT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

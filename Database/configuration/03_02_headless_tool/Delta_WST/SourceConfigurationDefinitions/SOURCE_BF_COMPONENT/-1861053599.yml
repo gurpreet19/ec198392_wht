@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1861053599'
+keys:
+  BF_CODE: CO.1036
+  T: BF_COMPONENT
+  URL: /busAction
+parentKeys: {}
+properties:
+  BF_CODE: CO.1036
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1036' AND NVL(URL,'IS_NULL') = '/busAction')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/create_and_maintain_business_trigger_action' )
+  CLASS_NAME: BUSINESS_ACTION
+  COMP_CODE: busAction
+  NAME: Business Action
+  SIGNING_REQ_IND: null
+  URL: /busAction
+related: {}

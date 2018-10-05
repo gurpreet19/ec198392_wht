@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1403718877'
+keys:
+  BF_CODE: PO.0036
+  T: BF_COMPONENT
+  URL: /hydrocomponents
+parentKeys: {}
+properties:
+  BF_CODE: PO.0036
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0036' AND NVL(URL,'IS_NULL') = '/hydrocomponents')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/maintain_swap_requests' )
+  CLASS_NAME: STRM_COMPANY_HC_SWAP
+  COMP_CODE: hydrocomponents
+  NAME: Hydrocarbon Component
+  SIGNING_REQ_IND: null
+  URL: /hydrocomponents
+related: {}

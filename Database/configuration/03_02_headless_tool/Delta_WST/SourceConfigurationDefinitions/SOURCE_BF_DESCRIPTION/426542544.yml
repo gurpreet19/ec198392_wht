@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '426542544'
+keys:
+  BF_DESCRIPTION_NO: PO.0094
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0094
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_chemical_tank_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to enter data for period of chemical tanks. If a tank is filled more than once a day, enter the sum and add details in the comments field. This applies to all tanks, regardless of tank meter frequency (daily, event, monthly). Empty fields (rows where filled and closing is both empty) will be treated as none existing when calculating closing volume and consumption for a tank and product.</p>
+
+    <p>Only records that are event based can be inserted. For these event based chemical tanks, the system will assume that the latest available closing inventory is valid until there is a new record having closing inventory or filled quantities.</p>
+
+    <p>All daily and monthly records are instantiated, but if data is not filled it is assumed that the latest available reading is valid. EC do not interpret null as 0.</p>
+
+    <p>Chemical Tanks can be connected to either facility class 1 or 2. Mandatory fields in the navigator should therefore be all above either facility class 2 if it exists, or facility class 1.</p>
+related: {}

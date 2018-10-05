@@ -1,0 +1,37 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1790222890'
+keys:
+  BF_DESCRIPTION_NO: SD.0007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/delivery_events' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>When gas is delivered, exact delivery quantities under each contract
+    are tracked. In addition, events related to the delivery must be tracked. This
+    is required to&nbsp;determine if deliveries are in accordance with contract, and
+    to capture further information required to produce the basis for invoicing.&nbsp;</p><p>A
+    gas delivery event is an event, influencing the gas delivery during a certain
+    period. As an example, the delivered gas may for a certain period be of a quality
+    lower&nbsp;than agreed in the contract. In such case, a typical event would be:
+    &ldquo;Off-spec Gas&rdquo;, &ldquo;Start: 2004-10-10 09:00&rdquo;, &ldquo;End:
+    2004-10-12 07:00&rdquo;. In this example, the contract&nbsp;would typically have
+    an attribute &ldquo;Off-spec Gas price deduction&rdquo;, stating a lower price
+    for &ldquo;Off-spec Gas&rdquo;. This information will then be used when calculating
+    contract&nbsp;accounts. In some cases it is not feasible to derive the wanted
+    quantity from the event period, but rather by inputing an exact quantity caused
+    by the event. In such&nbsp;situations the exact quantity caused by the event should
+    be tracked.</p><p>The Gas Delivery Events business function is a screen for entering/viewing
+    events related to deliveries for a given contract / delivery point. The events
+    will be<br />selected from a pre-defined list. A start daytime and end daytime
+    must be entered. For each registered event, an optional quantity and comment may
+    be entered.</p><p>This business function is similar to the Daily Contract Account
+    Events (SA.0008). However, the Gas Delivery Events is intended to handle period
+    based events&nbsp;related to what happened in the &ldquo;physical world&rdquo;,
+    e.g. a period of off-spec gas delivery. The Daily Contract Account Events is intended
+    to handle daily events related&nbsp;to happenings in the &ldquo;commercial world&rdquo;,
+    e.g. comercial arrangements where the parties agree to a certain deal adressing
+    a certain situation.</p>'
+related: {}

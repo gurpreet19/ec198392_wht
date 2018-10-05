@@ -1,0 +1,21 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1874286990'
+keys:
+  BF_DESCRIPTION_NO: CO.0208
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0208
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DISPOSITION_TYPE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>The object class Disposition Type holds a list of available ways to distribute the well production. E.g. the gas production from the well may be used to support:</p>
+    <p>-  Fuel Gas</p>
+    <p>-  Flare Gas</p>
+    <p>-  Injection Gas</p>
+    <p>-  Export Gas</p>
+    <p>Then all these will be different Disposition Types for gas. Behind a Disposition Type (e.g. Fuel Gas) there might be more than one physical stream measuring fuel gas. Each stream will then have a relation to the Disposition Type that stream represents.</p>
+related: {}

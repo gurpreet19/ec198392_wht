@@ -1,0 +1,293 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '82201'
+keys:
+  T: TV_UNIT
+  UNIT: SM3
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Standard cubic meter at 15 degC
+  FIN_CODE: M3
+  LABEL: Sm³
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: SM3
+  UOM_GROUP: V
+  UOM_SUBGROUP: SM
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MSCF
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      MULT_FACT: 0.0353147
+      PRECISION: null
+      TO_UNIT: MSCF
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      MULT_FACT: 6.2898107704321
+      PRECISION: null
+      TO_UNIT: BBLS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: SCF
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      MULT_FACT: 35.3147
+      PRECISION: null
+      TO_UNIT: SCF
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KSM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: KSM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MSM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      MULT_FACT: 1.0E-6
+      PRECISION: null
+      TO_UNIT: MSM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MMSCF
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      MULT_FACT: 3.53829E-5
+      PRECISION: 6.0
+      TO_UNIT: MMSCF
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: NM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: SM3
+      MULT_FACT: 1.054915
+      PRECISION: 7.0
+      TO_UNIT: NM3
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_OIL_VOL
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_OIL_VOL
+      REPORT_UNIT: Y
+      UNIT: SM3
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_GAS_VOL
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_GAS_VOL
+      REPORT_UNIT: Y
+      UNIT: SM3
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_LIQ_VOL
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_LIQ_VOL
+      REPORT_UNIT: Y
+      UNIT: SM3
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: AGA_GAS_VOL
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: AGA_GAS_VOL
+      REPORT_UNIT: Y
+      UNIT: SM3
+      VIEW_UNIT: N
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_LNG_VOL
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_LNG_VOL
+      REPORT_UNIT: Y
+      UNIT: SM3
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_VOLUME_QTY
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.00'
+      MEASUREMENT_TYPE: REV_VOLUME_QTY
+      REPORT_UNIT: null
+      UNIT: SM3
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.00'
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      REPORT_UNIT: null
+      UNIT: SM3
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.00'
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      REPORT_UNIT: null
+      UNIT: SM3
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.00'
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      REPORT_UNIT: null
+      UNIT: SM3
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LIQ_RATE_VOL
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LIQ_RATE_VOL
+      REPORT_UNIT: Y
+      UNIT: SM3
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: GAS_RATE_VOL
+      T: TV_UOM_SETUP
+      UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: SM3
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: GAS_RATE_VOL
+      REPORT_UNIT: Y
+      UNIT: SM3
+      VIEW_UNIT: Y

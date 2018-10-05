@@ -1,0 +1,96 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1488393797'
+keys:
+  T: TV_UNIT
+  UNIT: KGPERDAY
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Kilogram per day
+  FIN_CODE: null
+  LABEL: kg/d
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KGPERDAY
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LBSPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: KGPERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERDAY
+      MULT_FACT: 2.20462
+      PRECISION: null
+      TO_UNIT: LBSPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERDAY
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: TONNESPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: KGPERDAY
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KGPERDAY
+      MULT_FACT: 0.001
+      PRECISION: null
+      TO_UNIT: TONNESPERDAY
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LIQ_MASS_RATE
+      T: TV_UOM_SETUP
+      UNIT: KGPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: KGPERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LIQ_MASS_RATE
+      REPORT_UNIT: Y
+      UNIT: KGPERDAY
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: MASS_RATE
+      T: TV_UOM_SETUP
+      UNIT: KGPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: KGPERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: MASS_RATE
+      REPORT_UNIT: Y
+      UNIT: KGPERDAY
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: GAS_MASS_RATE
+      T: TV_UOM_SETUP
+      UNIT: KGPERDAY
+    parentKeys:
+      TV_UNIT.UNIT: KGPERDAY
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: GAS_MASS_RATE
+      REPORT_UNIT: Y
+      UNIT: KGPERDAY
+      VIEW_UNIT: Y

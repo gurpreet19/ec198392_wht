@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1494093521'
+keys:
+  BF_CODE: CP.0071
+  T: BF_COMPONENT
+  URL: /daily_strm_fcst
+parentKeys: {}
+properties:
+  BF_CODE: CP.0071
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0071' AND NVL(URL,'IS_NULL') = '/daily_strm_fcst')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_day_stor_prod' )
+  CLASS_NAME: FCST_DAY_STOR_PROD
+  COMP_CODE: daily_strm_fcst
+  NAME: Production Daily Stream Forecast
+  SIGNING_REQ_IND: null
+  URL: /daily_strm_fcst
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '538318260'
+keys:
+  BF_CODE: RP.0011
+  T: BF_COMPONENT
+  URL: /select_export_columns
+parentKeys: {}
+properties:
+  BF_CODE: RP.0011
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0011' AND NVL(URL,'IS_NULL') = '/select_export_columns')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/export_to_excel_express' )
+  CLASS_NAME: QBL_SEL_EXPORT_COLUMNS
+  COMP_CODE: select_export_columns
+  NAME: Select Export Columns
+  SIGNING_REQ_IND: null
+  URL: /select_export_columns
+related: {}

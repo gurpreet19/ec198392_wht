@@ -1,0 +1,70 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '74620'
+keys:
+  T: TV_UNIT
+  UNIT: KPA
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: KiloPascal
+  FIN_CODE: null
+  LABEL: kPa
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KPA
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BARG
+    parentKeys:
+      TV_UNIT.UNIT: KPA
+    properties:
+      ADD_NUMB: null
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPA
+      MULT_FACT: 0.01
+      PRECISION: null
+      TO_UNIT: BARG
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: PSIG
+    parentKeys:
+      TV_UNIT.UNIT: KPA
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPA
+      MULT_FACT: 0.1450382
+      PRECISION: 7.0
+      TO_UNIT: PSIG
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPA
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MBAR
+    parentKeys:
+      TV_UNIT.UNIT: KPA
+    properties:
+      ADD_NUMB: 1013.25
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KPA
+      MULT_FACT: 10.0
+      PRECISION: 6.0
+      TO_UNIT: MBAR
+      USER_EXIT: null
+      USE_UE: null

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1923262813'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/manage_prod_stream_list/OBJ_CLASS/PROD_STREAM_GROUP/DATA_CLASS/PROD_STREAM_GROUP_SETUP
+parentKeys: {}
+properties:
+  BF_CODE: SP.0066
+  NAME: Product Stream Group Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/manage_prod_stream_list/OBJ_CLASS/PROD_STREAM_GROUP/DATA_CLASS/PROD_STREAM_GROUP_SETUP
+related: {}

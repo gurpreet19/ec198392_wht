@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1401303787'
+keys:
+  BF_CODE: MHM.0013
+  T: BF_COMPONENT
+  URL: /generateMessageButton
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='MHM.0013' AND NVL(URL,'IS_NULL') = '/generateMessageButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_generation' )
+  CLASS_NAME: null
+  COMP_CODE: generateMessageButton
+  NAME: Generate
+  SIGNING_REQ_IND: null
+  URL: /generateMessageButton
+related: {}

@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1291703145'
+keys:
+  BF_DESCRIPTION_NO: PO.0013
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/marine_logistics' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to keep track of vessel movements. It is very simple; the only tracking is the date &amp; time a vessel arrives and the date &amp; time it leaves a facility.</p>
+related: {}

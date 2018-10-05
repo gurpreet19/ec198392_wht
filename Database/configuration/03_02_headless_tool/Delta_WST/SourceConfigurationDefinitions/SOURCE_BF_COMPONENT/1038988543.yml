@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1038988543'
+keys:
+  BF_CODE: IN.0027
+  T: BF_COMPONENT
+  URL: /updateAttributes
+parentKeys: {}
+properties:
+  BF_CODE: IN.0027
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0027' AND NVL(URL,'IS_NULL') = '/updateAttributes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='' )
+  CLASS_NAME: TRANS_DIM_SET
+  COMP_CODE: updateAttributes
+  NAME: Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /updateAttributes
+related: {}

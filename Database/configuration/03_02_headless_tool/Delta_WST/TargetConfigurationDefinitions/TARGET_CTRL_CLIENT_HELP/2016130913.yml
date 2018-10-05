@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2016130913'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/period_steam_stream_status
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/period_steam_stream_status
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

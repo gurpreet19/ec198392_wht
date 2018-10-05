@@ -1,0 +1,189 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2396'
+keys:
+  T: TV_UNIT
+  UNIT: KG
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Kilogram
+  FIN_CODE: null
+  LABEL: kg
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: KG
+  UOM_GROUP: M
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LBS
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      MULT_FACT: 2.20462
+      PRECISION: 6.0
+      TO_UNIT: LBS
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KTONNE
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      MULT_FACT: 1.0E-6
+      PRECISION: null
+      TO_UNIT: KTONNE
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LTON
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      MULT_FACT: 9.842E-4
+      PRECISION: 6.0
+      TO_UNIT: LTON
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: STON
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      MULT_FACT: 0.0011023
+      PRECISION: 6.0
+      TO_UNIT: STON
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: TONNES
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: KG
+      MULT_FACT: 0.001
+      PRECISION: 6.0
+      TO_UNIT: TONNES
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: OIL_MASS
+      T: TV_UOM_SETUP
+      UNIT: KG
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: OIL_MASS
+      REPORT_UNIT: Y
+      UNIT: KG
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: WATER_MASS
+      T: TV_UOM_SETUP
+      UNIT: KG
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: WATER_MASS
+      REPORT_UNIT: Y
+      UNIT: KG
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: GAS_MASS
+      T: TV_UOM_SETUP
+      UNIT: KG
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: GAS_MASS
+      REPORT_UNIT: null
+      UNIT: KG
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LIQ_MASS
+      T: TV_UOM_SETUP
+      UNIT: KG
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LIQ_MASS
+      REPORT_UNIT: Y
+      UNIT: KG
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LNG_MASS
+      T: TV_UOM_SETUP
+      UNIT: KG
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LNG_MASS
+      REPORT_UNIT: Y
+      UNIT: KG
+      VIEW_UNIT: Y
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STEAM_MASS
+      T: TV_UOM_SETUP
+      UNIT: KG
+    parentKeys:
+      TV_UNIT.UNIT: KG
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STEAM_MASS
+      REPORT_UNIT: Y
+      UNIT: KG
+      VIEW_UNIT: Y

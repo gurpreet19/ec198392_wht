@@ -1,0 +1,33 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '76182'
+keys:
+  T: TV_UNIT
+  UNIT: MDM
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: MilliDarcy meter (kH-product)
+  FIN_CODE: null
+  LABEL: mD·m
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MDM
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: KH_PRODUCT
+      T: TV_UOM_SETUP
+      UNIT: MDM
+    parentKeys:
+      TV_UNIT.UNIT: MDM
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: KH_PRODUCT
+      REPORT_UNIT: Y
+      UNIT: MDM
+      VIEW_UNIT: Y

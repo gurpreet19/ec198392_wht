@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-514908016'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/split_key/MONTHLY/TRUE/SPLIT_TYPE/COMPANY
+parentKeys: {}
+properties:
+  BF_CODE: VO.0010
+  NAME: Monthly Split Key Company
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/split_key/MONTHLY/TRUE/SPLIT_TYPE/COMPANY
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1407158409'
+keys:
+  BF_CODE: SP.0054
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button/AnalyzeButton
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/com.ec.pf.screenlet.button/button/AnalyzeButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: null
+  COMP_CODE: btnDocDetail/AnalyzeRecActionButton
+  NAME: document_detail/Analyze Rec Action Button
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button/AnalyzeButton
+related: {}

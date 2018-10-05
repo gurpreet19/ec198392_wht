@@ -1,0 +1,66 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1188815574'
+keys:
+  BF_DESCRIPTION_NO: PO.0056
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_single_load_multiple_offload' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>This Business Function (BF) is used to register more complex trucking,\
+    \ where there is not only a one to one relation between a truck load and a truck\
+    \ unload. If there is a one-to-one relation, consider using the BF Truck Tickets\
+    \ - Single Transfer.\n<p>This BF does also cater for ownership (Profit Centre).\
+    \ One truck can unload crude with different ownership, e.g. one trailer owned\
+    \ by Joint Venture A and one trailer owned by Joint Venture B. This means that\
+    \ the quantity unloaded must be tagged with the correct Profit Centre.</p>\n\n\
+    <p>There are three folders in this BF.</p>\n<p>1.\tLoad Volume</p>\n<p>a.\tThis\
+    \ is used to register data when loading the truck. This could be an export where\
+    \ the unload operation is never registered or it can be an internal transfer to\
+    \ another facility where the unload operation will take place. There is a &ldquo;Verify\
+    \ Ticket&rdquo; button which is used to flag whether this is in transit (will\
+    \ be unloaded later) or is finished (will not be unloaded in EC). Pressing Verify\
+    \ Ticket will set record status = V and the ticket will not be listed as in transit\
+    \ (see later).</p>\n<p>2.\tUnload Volume</p>\n<p>a.\tWhen unloading a truck there\
+    \ could be one unload operation or many, e.g. when trucking fuel to different\
+    \ fuel stations. Each unload operation will be one ticket in EC and the user can\
+    \ choose to link the ticket to the correct load ticket. There is a &ldquo;in transit&rdquo;\
+    \ view in the lower section which lists all tickets that are in transit (loaded\
+    \ but not yet verified). For each unload ticket EC will also calculate standard\
+    \ density and a volume correction factor (VCF) based on the observed density,\
+    \ temperature and ASTM standards (table 53A for Standard Density and 54A for Volume\
+    \ Correction Factor). When using oilfield units (observed temperature in Fahrenheit),\
+    \ it will calculate corrected gravity based on observed temperature and observed\
+    \ gravity (ASTM Table 5A). Hence, VCF is based on corrective gravity and observed\
+    \ temperature. Note that class attributes API and CORR_API must be enabled and\
+    \ the temperature unit must be set to Fahrenheit for both the database and the\
+    \ screen view when using oilfield units.</p>\n<p>3.\tUnload Mass</p>\n<p>a.\t\
+    Unload operation are sometimes done using a weight. The user can choose to register\
+    \ unload as volume or weight. If a weight is used there is other input data required\
+    \ and EC will calculate standard density using ASTM standards (table 54A) and\
+    \ convert mass to volume. If the observed temperature is in Fahrenheit, the same\
+    \ applies for ASTM calculations as for Unload Volume.</p>\n\n<p>Common for unload\
+    \ tickets that are linked to a load ticket is that EC will automatically calculate\
+    \ total net volume loaded as sum of all unload net volume tickets link to the\
+    \ loaded ticket. If there are no unload tickets linked to a load ticket, the net\
+    \ volume loaded is assumed to be identical to the gross volume loaded.</p>\n\n\
+    <p>The navigator is a bit special. Since trucks can drive over long distance and\
+    \ the load and unload facility is different, we have chosen to navigate by the\
+    \ operational group model down to Area only, and allow for selection of two Areas,\
+    \ both for the Load and UnLoad operation. In addition a From Date and To Date\
+    \ + Status (NULL=All statuses, Verified=Only Verified tickets, Provisional=Only\
+    \ Provisional Tickets) will be used to filter tickets listed in the screen. This\
+    \ means that a user, who needs access to enter truck tickets for one facility\
+    \ under e.g. Area A, will also have access to enter truck tickets for all facilities\
+    \ under Area A.</p>\n\n<p>NB! There is limitation when using Trending report in\
+    \ Status Area. The trending graph will not be drawn if there are multiple records\
+    \ for the same date and time but the report will be exporting correctly.Meaning\
+    \ that, it will include all records for the same date and time in the trending\
+    \ report. To ensure that the trending graph is drawn, the data should be recorded\
+    \ for same date and different time or else, the server log will thrown an error:\
+    \ &ldquo;You are attempting to add an observation for the time period Tue Jun\
+    \ 08 00:00:00 UTC 2010 but the series already contains an observation for that\
+    \ time period. Duplicates are not permitted. Try using the addOrUpdate() method&rdquo;.</p>\n"
+related: {}

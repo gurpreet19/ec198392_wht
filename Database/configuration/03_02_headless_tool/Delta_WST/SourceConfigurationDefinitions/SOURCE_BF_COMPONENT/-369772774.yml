@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-369772774'
+keys:
+  BF_CODE: GD.0062
+  T: BF_COMPONENT
+  URL: /day_loc_capacity
+parentKeys: {}
+properties:
+  BF_CODE: GD.0062
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0062' AND NVL(URL,'IS_NULL') = '/day_loc_capacity')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_capacity/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_CAP/SUB_CLASS/TRNL_SUB_DAY_CAP/GRAPH_CLASS/TRNL_SUB_DAY_CAP_GRAPH/PROFILE_GRAPH/TRNL_SUB_DAY_CAP_PROFILE/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0062' )
+  CLASS_NAME: TRNL_DAY_CAP
+  COMP_CODE: day_loc_capacity
+  NAME: Daily Location Capacity
+  SIGNING_REQ_IND: null
+  URL: /day_loc_capacity
+related: {}

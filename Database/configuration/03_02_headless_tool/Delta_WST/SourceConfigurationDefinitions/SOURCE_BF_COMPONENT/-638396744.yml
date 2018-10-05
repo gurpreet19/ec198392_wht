@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-638396744'
+keys:
+  BF_CODE: GD.0030
+  T: BF_COMPONENT
+  URL: /nomMatch
+parentKeys: {}
+properties:
+  BF_CODE: GD.0030
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0030' AND NVL(URL,'IS_NULL') = '/nomMatch')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_location_matching/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNP_DAY_NOM_MATCH_CNTLC
+  COMP_CODE: nomMatch
+  NAME: Nomination Matching
+  SIGNING_REQ_IND: null
+  URL: /nomMatch
+related: {}

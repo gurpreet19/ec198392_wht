@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '980888231'
+keys:
+  EC_CLIENT_OBJ: /com.ec.bpm.ext.ec.web/process_overview
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.bpm.ext.ec.web/process_overview
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1699076338'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_copy_object_stream/GROUPMODEL/STREAM/TARGET/STREAM/CLASS_NAME/STREAM
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_copy_object_stream/GROUPMODEL/STREAM/TARGET/STREAM/CLASS_NAME/STREAM
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

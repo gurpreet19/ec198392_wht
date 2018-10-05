@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-401763996'
+keys:
+  BF_CODE: WR.0013
+  T: BF_COMPONENT
+  URL: /water_source_well
+parentKeys: {}
+properties:
+  BF_CODE: WR.0013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0013' AND NVL(URL,'IS_NULL') = '/water_source_well')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_well_data_water_source_wells' )
+  CLASS_NAME: PWEL_DAY_STATUS_WS
+  COMP_CODE: daily_well_data_water_source_wells
+  NAME: Daily Well Data Water Source Wells
+  SIGNING_REQ_IND: null
+  URL: /water_source_well
+related: {}

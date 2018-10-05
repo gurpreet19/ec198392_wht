@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-772531985'
+keys:
+  BF_DESCRIPTION_NO: CO.2009
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/initialize_lifting_account' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is a configuration screen used to initialize Lifting Accounts. The screen will only list the opening balance for Lifting Accounts. If a Lifting Account does not&nbsp;have a start balance you are allowed to insert one start balance. It is not allowed to initialize the lifting account on the same month where you want to set the closing&nbsp;balance Monthly Account Status (LA.0002).</p>
+related: {}

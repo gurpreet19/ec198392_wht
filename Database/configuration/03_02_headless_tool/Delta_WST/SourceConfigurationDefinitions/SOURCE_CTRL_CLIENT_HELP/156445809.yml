@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '156445809'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/ifac_journal_entry/NAV_MODEL/DATA_INTERFACE/NAV_TARGET/BUSINESS_UNIT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/ifac_journal_entry/NAV_MODEL/DATA_INTERFACE/NAV_TARGET/BUSINESS_UNIT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

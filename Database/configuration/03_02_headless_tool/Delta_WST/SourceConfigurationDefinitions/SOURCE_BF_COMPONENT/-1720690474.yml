@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1720690474'
+keys:
+  BF_CODE: CO.1042
+  T: BF_COMPONENT
+  URL: /exportbutton
+parentKeys: {}
+properties:
+  BF_CODE: CO.1042
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1042' AND NVL(URL,'IS_NULL') = '/exportbutton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/create_calculation' )
+  CLASS_NAME: null
+  COMP_CODE: exportbutton
+  NAME: Export Button
+  SIGNING_REQ_IND: null
+  URL: /exportbutton
+related: {}

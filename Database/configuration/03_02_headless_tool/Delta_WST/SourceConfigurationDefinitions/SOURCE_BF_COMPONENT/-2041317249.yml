@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2041317249'
+keys:
+  BF_CODE: PA.0012
+  T: BF_COMPONENT
+  URL: /ClaimButton
+parentKeys: {}
+properties:
+  BF_CODE: PA.0012
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PA.0012' AND NVL(URL,'IS_NULL') = '/ClaimButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/task_management' )
+  CLASS_NAME: null
+  COMP_CODE: ClaimButton
+  NAME: ClaimButton
+  SIGNING_REQ_IND: null
+  URL: /ClaimButton
+related: {}

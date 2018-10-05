@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1546502620'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/GENERATOR/TARGET/GENERATOR/CLASS_NAME/GENERATOR
+parentKeys: {}
+properties:
+  BF_CODE: CO.0063
+  NAME: Generator
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/GENERATOR/TARGET/GENERATOR/CLASS_NAME/GENERATOR
+related: {}

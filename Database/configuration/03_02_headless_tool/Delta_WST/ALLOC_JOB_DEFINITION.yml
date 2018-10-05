@@ -1,0 +1,140 @@
+CODE=HOURLY_ALLOC_VOL VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '538547514'
+  keys:
+    CODE: HOURLY_ALLOC_VOL
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=MONTHLY_WELL_THEOR_MASS_PRECALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1841021854'
+  keys:
+    CODE: MONTHLY_WELL_THEOR_MASS_PRECALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_DEFERMENT_CALCULATIONS VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '515074806'
+  keys:
+    CODE: DAILY_DEFERMENT_CALCULATIONS
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_ALLOC_MASS VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '441859057'
+  keys:
+    CODE: DAILY_ALLOC_MASS
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_WELL_THEOR_MASS_PRECALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-679923182'
+  keys:
+    CODE: DAILY_WELL_THEOR_MASS_PRECALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=LINE_ITEM_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-248315105'
+  keys:
+    CODE: LINE_ITEM_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=MONTHLY_ALLOC_MASS VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1141511909'
+  keys:
+    CODE: MONTHLY_ALLOC_MASS
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=MONTHLY_ALLOC_VOL VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '120464158'
+  keys:
+    CODE: MONTHLY_ALLOC_VOL
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_ALLOC_VOL VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1149031278'
+  keys:
+    CODE: DAILY_ALLOC_VOL
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_WELL_THEOR_VOL_PRECALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '355339967'
+  keys:
+    CODE: DAILY_WELL_THEOR_VOL_PRECALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=MONTHLY_ALLOC_RESERVOIR VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2131803394'
+  keys:
+    CODE: MONTHLY_ALLOC_RESERVOIR
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=PAYMENT_DUE_DATE_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '430639603'
+  keys:
+    CODE: PAYMENT_DUE_DATE_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=DAILY_ALLOC_RESERVOIR VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-267526282'
+  keys:
+    CODE: DAILY_ALLOC_RESERVOIR
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=MONTHLY_WELL_THEOR_VOL_PRECALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '852302771'
+  keys:
+    CODE: MONTHLY_WELL_THEOR_VOL_PRECALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED

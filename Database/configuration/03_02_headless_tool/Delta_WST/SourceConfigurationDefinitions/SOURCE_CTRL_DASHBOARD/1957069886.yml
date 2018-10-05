@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1957069886'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: PROD_DAILY_ACT_PLAN_GAS
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Daily Actual Vs Planned Gas Production For Facility
+  LABEL: Daily Actual Vs Planned Gas Production For Facility
+  NAME: DailyGasProdAvP
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: PROD_DAILY_ACT_PLAN_GAS
+related: {}

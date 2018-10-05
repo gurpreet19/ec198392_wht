@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1441101603'
+keys:
+  CODE: SUMMARY_TRACING
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: OV_REPT_CONTEXT
+parentKeys: {}
+properties:
+  CODE: SUMMARY_TRACING
+  COMMENTS: null
+  DAYTIME: 1900-01-01T00:00:00Z
+  DESCRIPTION: Data Extract Tracing Context
+  NAME: Data Extract Tracing Context
+  OBJECT_END_DATE: null
+  OBJECT_START_DATE: 1900-01-01T00:00:00Z
+related: {}

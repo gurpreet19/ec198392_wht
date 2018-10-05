@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1994439103'
+keys:
+  BF_CODE: CO.2005
+  T: BF_COMPONENT
+  URL: /lift_activity_code
+parentKeys: {}
+properties:
+  BF_CODE: CO.2005
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2005' AND NVL(URL,'IS_NULL') = '/lift_activity_code')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/lifting_activity_code' )
+  CLASS_NAME: LIFTING_ACTIVITY_CODE
+  COMP_CODE: lift_activity_code
+  NAME: Lifting Activity Code
+  SIGNING_REQ_IND: null
+  URL: /lift_activity_code
+related: {}

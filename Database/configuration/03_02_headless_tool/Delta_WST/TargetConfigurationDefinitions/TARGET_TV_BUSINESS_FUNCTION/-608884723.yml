@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-608884723'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STREAM/TARGET/STREAM/CLASS_NAME/STREAM
+parentKeys: {}
+properties:
+  BF_CODE: CO.0027
+  NAME: Stream
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STREAM/TARGET/STREAM/CLASS_NAME/STREAM
+related: {}

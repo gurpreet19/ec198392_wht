@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-374659886'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_RECEIVED_TERM/FROM_CLASS_NAME/DOC_RECEIVED_TERM/TO_CLASS_NAME/DOC_RECEIVED_TERM
+parentKeys: {}
+properties:
+  BF_CODE: CD.0124
+  NAME: Document Received Term Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_RECEIVED_TERM/FROM_CLASS_NAME/DOC_RECEIVED_TERM/TO_CLASS_NAME/DOC_RECEIVED_TERM
+related: {}

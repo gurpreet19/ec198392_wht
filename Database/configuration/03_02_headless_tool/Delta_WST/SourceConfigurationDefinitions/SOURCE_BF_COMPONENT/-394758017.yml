@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-394758017'
+keys:
+  BF_CODE: IN.0035
+  T: BF_COMPONENT
+  URL: /chosen_date
+parentKeys: {}
+properties:
+  BF_CODE: IN.0035
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0035' AND NVL(URL,'IS_NULL') = '/chosen_date')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inventory_overview/ACCRUAL_IND/Y' )
+  CLASS_NAME: TRANS_INV_NAV_MTH
+  COMP_CODE: chosen_date
+  NAME: chosen date
+  SIGNING_REQ_IND: null
+  URL: /chosen_date
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2014785431'
+keys:
+  BF_CODE: GD.0046
+  T: BF_COMPONENT
+  URL: /view
+parentKeys: {}
+properties:
+  BF_CODE: GD.0046
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0046' AND NVL(URL,'IS_NULL') = '/view')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/monthly_disp_calc/NOMINATION_CYCLE/false' )
+  CLASS_NAME: null
+  COMP_CODE: view
+  NAME: View
+  SIGNING_REQ_IND: null
+  URL: /view
+related: {}

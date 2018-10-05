@@ -1,0 +1,34 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '931265113'
+keys:
+  BF_DESCRIPTION_NO: WR.0066
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0066
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_finder' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used to search among wells. Further it can take you to Well business functions.</p>
+
+    <p>In the navigator, there is a free text field which is used as the search target string.</p>
+
+    <p>By default, EC shipped with search criteria on Code and Name, user can search for the right Well objects where its Code and Name matched with the defined search target string.</p>
+
+    <p>The search is not case sensitive in this context and no wildcards needed.</p>
+
+    <p>In addition, EC also provides user with the flexibility to re-define the search criteria on other well attributes, such as CALC_METHOD. Search criteria can be reduced to a single attribute or can be increased to more than one attribute, but it has to be delimited with a keyboard character &quot;|&quot;, which is the vertical bar (or DOS pipe character).</p>
+
+    <p>The data section below will then list all wells for the defined search criteria matched with (or like) the search target string.</p>
+
+    <p>By choosing a Well, it will show you the active group models associated with the selected Well object. After you selected the active group model, the third column will populate the group model relations with the objects and its value.</p>
+
+    <p>In the second data-section, it will list out all the business functions belonged to a Business Function Profile and this Profile must be configured in Well Object.</p>
+
+    <p>By selecting a business function and pressing the &lsquo;Go to BF&rsquo; button, a new window will be opened with the navigator values pre-populated based on selected well.</p>
+
+    <p>In addition, you could define your own specific profile code such as STEAM_INJ in Business Function Profile, and further define your choice of selection on those Steam Injector Business Functions.</p>
+
+    <p>The Well Finder will only display the user-defined Business Functions (STEAM_INJ) on the selected Well Object based on its configured Business Function Profile.</p>
+related: {}

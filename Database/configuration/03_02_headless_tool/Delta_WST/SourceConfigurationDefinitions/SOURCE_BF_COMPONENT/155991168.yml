@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '155991168'
+keys:
+  BF_CODE: CO.1039
+  T: BF_COMPONENT
+  URL: /readMapping
+parentKeys: {}
+properties:
+  BF_CODE: CO.1039
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1039' AND NVL(URL,'IS_NULL') = '/readMapping')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/variable_definition' )
+  CLASS_NAME: CALC_VAR_READ_MAPPING
+  COMP_CODE: readMapping
+  NAME: Read Mappings
+  SIGNING_REQ_IND: null
+  URL: /readMapping
+related: {}

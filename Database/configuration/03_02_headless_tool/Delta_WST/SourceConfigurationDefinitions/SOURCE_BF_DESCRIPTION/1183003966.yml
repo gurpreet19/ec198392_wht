@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1183003966'
+keys:
+  BF_DESCRIPTION_NO: WR.0038
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0038
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_well_inventory' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Each production well, may at various times under go well work. During this period, product may continue to flow into a set of local tanks and not into the main production stream. This business function allows user to record the date, time, production of gas, oil and BS&amp;W into the tank, and oil and BS&amp;W out of the tank into the production stream.</p>
+
+    <p>Gas, oil and BS&amp;W which enters the tanks are regarded as Inventory Produced while gross oil and BS&amp;W that flows out are regarded as Inventory Withdrawn. (Any gas recorded will be allocated immediately as flare gas). Net oil and water are calculated using BS&amp;W and subtracting it from the gross oil stored volume. Balance net oil and water will be calculated as the total sum of net oil and water for the day.</p>
+related: {}

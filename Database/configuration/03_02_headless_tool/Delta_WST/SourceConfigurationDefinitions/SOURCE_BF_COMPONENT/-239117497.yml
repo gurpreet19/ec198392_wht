@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-239117497'
+keys:
+  BF_CODE: RP.0014
+  T: BF_COMPONENT
+  URL: /report_published
+parentKeys: {}
+properties:
+  BF_CODE: RP.0014
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0014' AND NVL(URL,'IS_NULL') = '/report_published')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_publishing' )
+  CLASS_NAME: REPORT_PUBLISHED
+  COMP_CODE: report_published
+  NAME: Report Published
+  SIGNING_REQ_IND: null
+  URL: /report_published
+related: {}

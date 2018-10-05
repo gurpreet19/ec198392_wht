@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1017159646'
+keys:
+  BF_DESCRIPTION_NO: CO.1072
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/xhtml/pages/versions' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Version business function is used to view detailed version information about the Energy Component application.</p>
+related: {}

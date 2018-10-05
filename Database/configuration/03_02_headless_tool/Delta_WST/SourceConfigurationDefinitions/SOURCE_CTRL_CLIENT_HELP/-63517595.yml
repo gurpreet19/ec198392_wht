@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-63517595'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/intergr_boe_conversion
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/intergr_boe_conversion
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

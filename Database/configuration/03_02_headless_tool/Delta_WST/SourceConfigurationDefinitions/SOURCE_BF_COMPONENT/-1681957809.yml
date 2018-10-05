@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1681957809'
+keys:
+  BF_CODE: CP.0002.01
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: CP.0002.01
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0002.01' AND NVL(URL,'IS_NULL') = '/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/schedule_lifting_jsf/CLASS1/STOR_DAY_BALANCE_GRAPH/CLASS2/STOR_BERTH_DAY_RESTR/CLASS3/STORAGE_LIFT_NOM_SCHED' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '940720340'
+keys:
+  NAME: LegendPosition
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: FCTY_TOP5_YR_GAS_PROD
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Legend Position
+  MANDATORY_IND: N
+  NAME: LegendPosition
+  PARAMETER_SUB_TYPE: LEGEND_POSITION
+  PARAMETER_TYPE: EC_CODE_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 40.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: FCTY_TOP5_YR_GAS_PROD
+related: {}

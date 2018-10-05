@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1937575397'
+keys:
+  OBJECT_NAME: PWEL_SAMPLE
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: Y
+  OBJECT_NAME: PWEL_SAMPLE
+  PINC_TRIGGER_IND: N
+  VIEW_PK_TABLE_NAME: null
+related: {}

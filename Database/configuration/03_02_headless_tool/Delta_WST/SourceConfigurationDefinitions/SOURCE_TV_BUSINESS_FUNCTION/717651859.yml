@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '717651859'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.sale.sd.screens/daily_forecast
+parentKeys: {}
+properties:
+  BF_CODE: SD.0001
+  NAME: Daily Gas Sales Forecast
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.sd.screens/daily_forecast
+related: {}

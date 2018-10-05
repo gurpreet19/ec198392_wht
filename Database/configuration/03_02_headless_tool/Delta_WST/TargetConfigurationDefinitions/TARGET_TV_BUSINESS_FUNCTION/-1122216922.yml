@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1122216922'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pd.screens/eqpm_downtime
+parentKeys: {}
+properties:
+  BF_CODE: PD.0007
+  NAME: Equipment Downtime
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pd.screens/eqpm_downtime
+related: {}

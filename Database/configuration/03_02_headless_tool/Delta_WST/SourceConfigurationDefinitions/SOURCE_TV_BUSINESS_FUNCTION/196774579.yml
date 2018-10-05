@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '196774579'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/BANK_ACCOUNT/FROM_CLASS_NAME/BANK_ACCOUNT/TO_CLASS_NAME/BANK_ACCOUNT
+parentKeys: {}
+properties:
+  BF_CODE: CD.0149
+  NAME: Bank Account Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/BANK_ACCOUNT/FROM_CLASS_NAME/BANK_ACCOUNT/TO_CLASS_NAME/BANK_ACCOUNT
+related: {}

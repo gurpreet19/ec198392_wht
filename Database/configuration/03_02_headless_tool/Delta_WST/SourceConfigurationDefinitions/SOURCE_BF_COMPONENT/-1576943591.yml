@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1576943591'
+keys:
+  BF_CODE: IN.0007
+  T: BF_COMPONENT
+  URL: /dist_status_form
+parentKeys: {}
+properties:
+  BF_CODE: IN.0007
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0007' AND NVL(URL,'IS_NULL') = '/dist_status_form')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/inv_setup_item_selection/STREAM_CATEGORY_CODE/INV' )
+  CLASS_NAME: INVENTORY_FIELD
+  COMP_CODE: DistStatusForm
+  NAME: Distribution Status Form
+  SIGNING_REQ_IND: null
+  URL: /dist_status_form
+related: {}

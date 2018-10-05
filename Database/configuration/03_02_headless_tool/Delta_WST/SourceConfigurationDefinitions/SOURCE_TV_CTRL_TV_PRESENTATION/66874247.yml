@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '66874247'
+keys:
+  COMPONENT_ID: ( SELECT 'GAS_PROC_RESTRICTIONS' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.po.screens/gas_processing_restrictions
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'GAS_PROC_RESTRICTIONS' FROM DUAL )
+  COMPONENT_LABEL: Gas Processing Restrictions
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FLD_PROD_OPER_EVENT' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 180.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

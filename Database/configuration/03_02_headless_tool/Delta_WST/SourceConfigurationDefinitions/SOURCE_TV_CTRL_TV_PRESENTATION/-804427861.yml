@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-804427861'
+keys:
+  COMPONENT_ID: ( SELECT 'SA0039_PERIOD_CNTR_LIFT' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.sale.sa.screens/period_contract_lifting/CLASS/SCTR_DAY_LIFTING/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0039?screentemplate=/com.ec.sale.sa.screens/period_contract_lifting
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'SA0039_PERIOD_CNTR_LIFT' FROM DUAL )
+  COMPONENT_LABEL: Period Contract Lifting
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FLD_SALE_SA' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 180.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

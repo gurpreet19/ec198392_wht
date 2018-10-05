@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1853700330'
+keys:
+  BF_CODE: PT.0014
+  T: BF_COMPONENT
+  URL: /performance_curve_third_axis
+parentKeys: {}
+properties:
+  BF_CODE: PT.0014
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0014' AND NVL(URL,'IS_NULL') = '/performance_curve_third_axis')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/flowline_performance_curve' )
+  CLASS_NAME: PERF_CURVE_THIRD_AXIS
+  COMP_CODE: performance_curve_third_axis
+  NAME: Third Axis
+  SIGNING_REQ_IND: null
+  URL: /performance_curve_third_axis
+related: {}

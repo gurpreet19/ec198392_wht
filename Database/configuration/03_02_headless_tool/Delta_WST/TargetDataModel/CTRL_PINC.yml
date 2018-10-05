@@ -1,0 +1,196 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: CTRL_PINC
+cnstPrimaryKey:
+  columns:
+  - TYPE
+  - NAME
+  - MD5SUM
+  - DAYTIME
+  name: PK_CTRL_PINC
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CREATED_BY:
+    columnName: CREATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: TIMESTAMP(6)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  LAST_UPDATED_BY:
+    columnName: LAST_UPDATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  LAST_UPDATED_DATE:
+    columnName: LAST_UPDATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  MACHINE:
+    columnName: MACHINE
+    typeName: VARCHAR2(64)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  MD5SUM:
+    columnName: MD5SUM
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  NAME:
+    columnName: NAME
+    typeName: VARCHAR2(240)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  OBJECT:
+    columnName: OBJECT
+    typeName: BLOB
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  OPERATION:
+    columnName: OPERATION
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  OSUSER:
+    columnName: OSUSER
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  RECORD_STATUS:
+    columnName: RECORD_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  REV_NO:
+    columnName: REV_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+  REV_TEXT:
+    columnName: REV_TEXT
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+  TABLE_PK:
+    columnName: TABLE_PK
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  TAG:
+    columnName: TAG
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  TERMINAL:
+    columnName: TERMINAL
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  TYPE:
+    columnName: TYPE
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  USERNAME:
+    columnName: USERNAME
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+indexes:
+  I_CTRL_PINC_1:
+    indexName: I_CTRL_PINC_1
+    columns:
+    - DAYTIME
+    - TYPE
+    - NAME
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 1024000
+    nextExtent: 1024000
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 10240000
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 10240000
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

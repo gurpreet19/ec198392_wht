@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '207912518'
+keys:
+  BF_CODE: CD.0151
+  T: BF_COMPONENT
+  URL: /notes
+parentKeys: {}
+properties:
+  BF_CODE: CD.0151
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0151' AND NVL(URL,'IS_NULL') = '/notes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/document_tracing' )
+  CLASS_NAME: DATASET_FLOW_DOC_NOTE
+  COMP_CODE: notes
+  NAME: Notes
+  SIGNING_REQ_IND: null
+  URL: /notes
+related: {}

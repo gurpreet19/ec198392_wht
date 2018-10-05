@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1789407173'
+keys:
+  BF_CODE: SP.0056
+  T: BF_COMPONENT
+  URL: /amt
+parentKeys: {}
+properties:
+  BF_CODE: SP.0056
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0056' AND NVL(URL,'IS_NULL') = '/amt')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/journal_entry_reconciliation/RECON_TYPE/PROJECT' )
+  CLASS_NAME: CONT_JOURNAL_ENTRY
+  COMP_CODE: amt
+  NAME: Amount
+  SIGNING_REQ_IND: null
+  URL: /amt
+related: {}

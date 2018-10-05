@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1565811566'
+keys:
+  BF_CODE: CO.0186
+  T: BF_COMPONENT
+  URL: /choke_conversion_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.0186
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0186' AND NVL(URL,'IS_NULL') = '/choke_conversion_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/choke_conversion' )
+  CLASS_NAME: CHOKE_CONVERSION
+  COMP_CODE: choke_conversion_table
+  NAME: Choke Conversion
+  SIGNING_REQ_IND: null
+  URL: /choke_conversion_table
+related: {}

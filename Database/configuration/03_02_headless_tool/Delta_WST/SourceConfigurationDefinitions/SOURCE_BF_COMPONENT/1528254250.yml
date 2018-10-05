@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1528254250'
+keys:
+  BF_CODE: WR.0023
+  T: BF_COMPONENT
+  URL: /event_well_hole_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0023
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0023' AND NVL(URL,'IS_NULL') = '/event_well_hole_status')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_well_hole_status' )
+  CLASS_NAME: WELL_HOLE_EVENT
+  COMP_CODE: event_well_hole_status
+  NAME: Event Production Well Hole Status
+  SIGNING_REQ_IND: null
+  URL: /event_well_hole_status
+related: {}

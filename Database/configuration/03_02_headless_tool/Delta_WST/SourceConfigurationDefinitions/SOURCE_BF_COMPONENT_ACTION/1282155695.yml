@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1282155695'
+keys:
+  BF_COMPONENT_ACTION_NO: '(SELECT A.BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION
+    A WHERE A.BF_COMPONENT_NO = (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE
+    =''CD.0024'' AND NVL(URL,''IS_NULL'') = ''/updateAttributes'') AND NVL(A.URL,
+    ''IS_NULL'') = ''/updateAttributes'') '
+  T: BF_COMPONENT_ACTION
+parentKeys: {}
+properties:
+  BF_COMPONENT_ACTION_NO: '(SELECT A.BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION
+    A WHERE A.BF_COMPONENT_NO = (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE
+    =''CD.0024'' AND NVL(URL,''IS_NULL'') = ''/updateAttributes'') AND NVL(A.URL,
+    ''IS_NULL'') = ''/updateAttributes'') '
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/updateAttributes')
+  COMMENTS: null
+  NAME: Update Attributes
+  URL: /updateAttributes
+related: {}

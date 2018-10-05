@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '255592840'
+keys:
+  BF_DESCRIPTION_NO: CO.2035
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CONTRACT_GROUP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to configure contract groups.</p>
+related: {}

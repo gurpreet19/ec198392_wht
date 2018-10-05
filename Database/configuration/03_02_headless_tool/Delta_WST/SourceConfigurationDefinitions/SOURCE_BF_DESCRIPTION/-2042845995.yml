@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2042845995'
+keys:
+  BF_DESCRIPTION_NO: GD.0086
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0086
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_point_transfer_validation/CLASS_1/TRNP_DAY_TRANSFER_VAL/CLASS_2/TRNP_DAY_TRANSF_SUPP_VAL/COLUMN_SORT/DAYTIME/SORT_TYPE/ASC' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is a read only screen for presenting daily transfer matching results per shipper/counterparty, transfer service and nomination type. Matching&nbsp;results for transfers having supplier are aggregated in the main table. Transfers per supplier are presented in the lower drilldown table.</p><p>The first data section shows the requested transfer quantities not having supplier as entered in GD.0108 - Daily Nomination Point Transfer. The aggregation for&nbsp;transfers having supplier is based on the columns Nomination Point, Transfer Service, Nomination Type and Counter Nomination Point.</p><p>The navigation model uses by default TRAN_COMMERCIAL, but a different navigational model can be used by sending the navigational model as an argument from&nbsp;the treeview (argument NAV_MODEL).</p><p>Mandatory arguments which are needed in the url are CLASS_1 and CLASS_2.</p>
+related: {}

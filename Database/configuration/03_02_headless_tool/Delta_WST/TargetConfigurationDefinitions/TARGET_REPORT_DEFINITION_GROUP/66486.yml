@@ -1,0 +1,66 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '66486'
+keys:
+  REP_GROUP_CODE: CAT
+  T: REPORT_DEFINITION_GROUP
+parentKeys: {}
+properties:
+  ARCHIVE_IND: null
+  DATE_1: null
+  DATE_2: null
+  DATE_3: null
+  DATE_4: null
+  DATE_5: null
+  FUNCTIONAL_AREA_ID: (SELECT O.OBJECT_ID FROM OBJECTS O WHERE (O.CLASS_NAME='FUNCTIONAL_AREA' OR O.CLASS_NAME IN (SELECT CHILD_CLASS FROM CLASS_DEPENDENCY_CNFG WHERE PARENT_CLASS ='FUNCTIONAL_AREA' AND DEPENDENCY_TYPE = 'IMPLEMENTS')) AND O.CODE ='CARGO' AND ROWNUM < 2)
+  HIDE_IND: N
+  NAME: Cargo Timesheet
+  PARENT_REP_GROUP_CODE: null
+  REF_OBJECT_ID_1: null
+  REF_OBJECT_ID_2: null
+  REF_OBJECT_ID_3: null
+  REF_OBJECT_ID_4: null
+  REF_OBJECT_ID_5: null
+  REPORT_AREA_ID: null
+  REP_DATE_PARAMETER: null
+  REP_GROUP_CODE: CAT
+  SORT_ORDER: 60.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+  VALUE_1: null
+  VALUE_2: null
+  VALUE_3: null
+  VALUE_4: null
+  VALUE_5: null
+related:
+  REPORT_DEF_GRP_VERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1900-01-01T00:00:00Z
+      REP_GROUP_CODE: CAT
+      T: REPORT_DEF_GRP_VERSION
+    parentKeys:
+      REPORT_DEFINITION_GROUP.REP_GROUP_CODE: CAT
+    properties:
+      DAYTIME: 1900-01-01T00:00:00Z
+      REP_GROUP_CODE: CAT
+  REPORT_RUNABLE:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      REPORT_RUNABLE_NO: (SELECT A.REPORT_RUNABLE_NO FROM REPORT_RUNABLE A WHERE A.REP_GROUP_CODE='CAT' AND A.NAME='CAT' AND ROWNUM = 1)
+      T: REPORT_RUNABLE
+    parentKeys:
+      REPORT_DEFINITION_GROUP.REP_GROUP_CODE: CAT
+    properties:
+      AUTO_SCHEDULE_IND: null
+      FUNCTIONAL_AREA_ID: null
+      NAME: CAT
+      REPORT_RUNABLE_NO: (SELECT A.REPORT_RUNABLE_NO FROM REPORT_RUNABLE A WHERE A.REP_GROUP_CODE='CAT' AND A.NAME='CAT' AND ROWNUM = 1)
+      REP_GROUP_CODE: CAT

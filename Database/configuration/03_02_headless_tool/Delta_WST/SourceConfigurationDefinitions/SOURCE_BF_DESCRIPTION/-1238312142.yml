@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1238312142'
+keys:
+  BF_DESCRIPTION_NO: PR.0011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PR.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/price_index_monthly_forecast' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to enter and display values for the monthly price index forecasts. This business function allows the user to select a period and an&nbsp;index from a list of those available. The associated index value forecast may then be entered. Data in this business function will be instantiated, so at the end of a&nbsp;month, a new (empty) row will be created in this business function for the next month, but it is still possible for the user to create new rows as required (using the&nbsp;button). The data presented in this business function is (up to) 12 rows for the year selected in the navigator. The rows are displayed in chronological order i.e.&nbsp;oldest first.</p>
+related: {}

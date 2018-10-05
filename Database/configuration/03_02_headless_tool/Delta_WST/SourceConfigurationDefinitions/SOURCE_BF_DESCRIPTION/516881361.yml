@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '516881361'
+keys:
+  BF_DESCRIPTION_NO: GD.0082
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0082
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_validation/DATA1_CLASS/TRCN_DAY_CAP_VALID/DATA2_CLASS/TRCN_SUB_DAY_CAP_VALID/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to validate Contract Capacity on Locations against nominations on the same Location.</p><p>The purpose of the screen is to give the user a quick overview of which nomination locations that are not validated correctly. An icon is used as an alarm indicator. The alarm should be visible on all levels in the treeview and in the two data sections. It is the data in data section two that determines the status of the alarm. The rule is that, if there are any validation errors in the second data section it shall result in and error icon on that data. The error shall be populated to the first data section and to the path in the treeview. The icon itself is rendered by the jst treeview component.</p><p>For the treeview to appear, data needs to be available in the data section. This data will typically be populated by an automatic process which calculates the daily capacity for each day.</p><p>The screen is rendered under the JSF framework and will only be available in JSF mode.</p><p>The screen is divided into four areas.<ol type="1"><li>Navigator</li><li>Treeview &ndash; Navigate through Transport System &ndash; Transport Zone &ndash; Nomination Location</li><li>Data Section 1 &ndash; Day Capacity Validation</li><li>Data Section 2 &ndash; Sub Day Capacity Validation</li></ol></p><p>The treeview will be filtered based on the navigator by using the nav model, and the data section will be filtered both on the treeview and on the navigator, also by using the nav model.</p><p>The navigator uses the Tran Commercial navigation model where Contract is target.</p>
+related: {}

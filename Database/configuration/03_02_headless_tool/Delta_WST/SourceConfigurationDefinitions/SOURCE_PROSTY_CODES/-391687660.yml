@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-391687660'
+keys:
+  CODE: GL_PLUN
+  CODE_TYPE: DETAILED_PROD_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: GL_PLUN
+  CODE_TEXT: Plunger Gas Lift
+  CODE_TYPE: DETAILED_PROD_METHOD
+  DESCRIPTION: Plunger Gas Lift
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: N
+  SORT_ORDER: 80.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

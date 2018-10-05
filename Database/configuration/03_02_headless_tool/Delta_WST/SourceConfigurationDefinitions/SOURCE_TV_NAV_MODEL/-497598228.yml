@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-497598228'
+keys:
+  FROM_CLASS_NAME: COUNTRY
+  MODEL: FIN_PERIOD
+  ROLE_NAME: COUNTRY
+  T: TV_NAV_MODEL
+  TO_CLASS_NAME: COMPANY
+parentKeys: {}
+properties:
+  DISABLED_IND: null
+  FORCE_NAV: null
+  FROM_CLASS_NAME: COUNTRY
+  MODEL: FIN_PERIOD
+  MULTIPLICITY: 1:N
+  ROLE_NAME: COUNTRY
+  TO_CLASS_NAME: COMPANY
+related: {}

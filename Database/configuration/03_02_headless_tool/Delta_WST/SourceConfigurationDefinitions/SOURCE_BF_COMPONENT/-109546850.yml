@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-109546850'
+keys:
+  BF_CODE: CD.0109
+  T: BF_COMPONENT
+  URL: /objectdates
+parentKeys: {}
+properties:
+  BF_CODE: CD.0109
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0109' AND NVL(URL,'IS_NULL') = '/objectdates')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_doc_sequence/CLASS_NAME/DOC_SEQUENCE' )
+  CLASS_NAME: DOC_SEQUENCE
+  COMP_CODE: objectdates
+  NAME: Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /objectdates
+related: {}

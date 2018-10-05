@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-964159528'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.sale.sa.screens/monthly_expenditure
+parentKeys: {}
+properties:
+  BF_CODE: SA.0014
+  NAME: Monthly Expenditure
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.sa.screens/monthly_expenditure
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1955841931'
+keys:
+  BF_CODE: PD.0004
+  T: BF_COMPONENT
+  URL: /DefermentEventTable
+parentKeys: {}
+properties:
+  BF_CODE: PD.0004
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PD.0004' AND NVL(URL,'IS_NULL') = '/DefermentEventTable')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_deferment_master' )
+  CLASS_NAME: DEF_DAY_DEFERMENT_EVENT
+  COMP_CODE: DefermentEventTable
+  NAME: Deferment Event
+  SIGNING_REQ_IND: null
+  URL: /DefermentEventTable
+related: {}

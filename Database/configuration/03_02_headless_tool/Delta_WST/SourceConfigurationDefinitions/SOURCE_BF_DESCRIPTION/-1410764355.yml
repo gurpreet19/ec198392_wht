@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1410764355'
+keys:
+  BF_DESCRIPTION_NO: GD.0116
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0116
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_summary_matrix/TARGET/NOMINATION_LOCATION/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0116/CLASS1/TRNL_SUB_DAY_NOM_MATRIX/CLASS2/TRNP_SUB_DAY_LOC_MATRIX/NOMINATION_CYCLE/FALSE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to get an overview of hourly nominations per nomination location. By default the business function will show the hourly scheduled output quantity. This, however, can be modified by implementing projects.</p><p>The first data section show the aggregated hourly totals by nomination location. When a nomination location is selected , the second data section will show the hourly nominations for all connected nomination points and allows users to update the hourly nomination point quantities.</p><p>Projects can change which quantity is displayed, either by creating new classes and update the treeview url to include this new class, or to update the attributes in the class currently used by the screen.</p><p>The navigation model uses by default TRAN_OPERATIONAL, but a different navigational model can be used by sending the navigational model as an argument from the treeview&nbsp;(argument NAV_MODEL).</p>
+related: {}

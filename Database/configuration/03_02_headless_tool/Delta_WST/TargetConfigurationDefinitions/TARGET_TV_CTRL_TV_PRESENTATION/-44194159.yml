@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-44194159'
+keys:
+  COMPONENT_ID: ( SELECT 'TRAN_OUTNOM_MSG' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.gd.screens/output_nom_message
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'TRAN_OUTNOM_MSG' FROM DUAL )
+  COMPONENT_LABEL: Create Output Nomination Message
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'TRAN_GD' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 1090.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

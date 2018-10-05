@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-595988178'
+keys:
+  BF_DESCRIPTION_NO: IN.0032
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_relation/CLASS_NAME/CONFIG_VARIABLE_PARAM/FROM_CLASS_NAME/CONFIG_VARIABLE/ROLE_ID/CONFIG_VARIABLE_ID' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Config Variable Parameter screen</strong>    is used to assign default values or methods to determine values for Calculation Variable Parameters.</p><p>    The Configuration Variable Parameter has a relation to the Config Variable it is connected to. The Config Variable then is connected to a Calculation    variable.</p><p>    Changing the Calc Variable Signature on the Configuration Variable will result in deleting all the Config Variable Parameters and creating new ones that    correspond to the Parameters on the new calculation variable signature.</p><p>    There will be configuration set up to allow the calculation to read these setting. The EC Code CONFIG_VAR_KEY_VALUES can be used to set up default values    when using the class to assign data when running the calculation.</p><p>    This class is used in conjunction with Business Function Transactional Inventory Stream Setup (BF IN.0036)</p>
+related: {}

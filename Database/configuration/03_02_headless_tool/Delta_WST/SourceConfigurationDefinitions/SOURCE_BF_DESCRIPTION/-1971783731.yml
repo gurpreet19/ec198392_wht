@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1971783731'
+keys:
+  BF_DESCRIPTION_NO: CO.0137
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0137
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/RESV_BLOCK_FORMATION' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Reservoir Block Formation defines the intersection zone between Reservoir Block and Formation. This vertical and horizontal part of the reservoir can also be tagged with a voidage group to link different areas together.</p>
+
+    <p>Reservoir Block Formation zone can also be attached to a Commercial Entity.</p>
+
+    <p>Perforation Intervals are connected to a Reservoir Block Formation zone. It is possible to set up reservoir allocation that will split allocated Well production/injection figures down to the Reservoir Block Formation zone, using Perforation Interval splits, Well Bore Interval splits, Well Bore splits and allocated Well production/injection figures. The aggregated allocated figures per Reservoir Block Formation will then be written back to the database. The allocated results can then be extracted using the generated report layer.</p>
+related: {}

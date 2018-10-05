@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '801794698'
+keys:
+  BF_CODE: CO.2082
+  T: BF_COMPONENT
+  URL: /generalTerms
+parentKeys: {}
+properties:
+  BF_CODE: CO.2082
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2082' AND NVL(URL,'IS_NULL') = '/generalTerms')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/maintain_opportunities' )
+  CLASS_NAME: OPPORTUNITY_GEN_TERM
+  COMP_CODE: generalTerms
+  NAME: General Terms
+  SIGNING_REQ_IND: null
+  URL: /generalTerms
+related: {}

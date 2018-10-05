@@ -1,0 +1,1097 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: INV_VALUATION_JN
+columns:
+  APPROVAL_BY:
+    columnName: APPROVAL_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '130'
+  APPROVAL_DATE:
+    columnName: APPROVAL_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '131'
+  APPROVAL_STATE:
+    columnName: APPROVAL_STATE
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '132'
+  BOOKED_USER_ID:
+    columnName: BOOKED_USER_ID
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '51'
+  BOOKING_DATE:
+    columnName: BOOKING_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '63'
+  BOOK_CATEGORY:
+    columnName: BOOK_CATEGORY
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  CLOSING_BOOKING_VALUE:
+    columnName: CLOSING_BOOKING_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+  CLOSING_MEMO_VALUE:
+    columnName: CLOSING_MEMO_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+  CLOSING_PRICE_VALUE:
+    columnName: CLOSING_PRICE_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  COMMENTS:
+    columnName: COMMENTS
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '102'
+  CREATED_BY:
+    columnName: CREATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '124'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '125'
+  DATE_1:
+    columnName: DATE_1
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '118'
+  DATE_2:
+    columnName: DATE_2
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '119'
+  DATE_3:
+    columnName: DATE_3
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '120'
+  DATE_4:
+    columnName: DATE_4
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '121'
+  DATE_5:
+    columnName: DATE_5
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '122'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  DESCRIPTION:
+    columnName: DESCRIPTION
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  DOCUMENT_LEVEL_CODE:
+    columnName: DOCUMENT_LEVEL_CODE
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '52'
+  ERP_FEEDBACK_DATE:
+    columnName: ERP_FEEDBACK_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '98'
+  ERP_FEEDBACK_ERROR_MESS:
+    columnName: ERP_FEEDBACK_ERROR_MESS
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '99'
+  ERP_FEEDBACK_REF:
+    columnName: ERP_FEEDBACK_REF
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '100'
+  ERP_FEEDBACK_STATUS:
+    columnName: ERP_FEEDBACK_STATUS
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '101'
+  FX_SOURCE_CODE:
+    columnName: FX_SOURCE_CODE
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  FX_SOURCE_ID:
+    columnName: FX_SOURCE_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  FX_TYPE:
+    columnName: FX_TYPE
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  GROUP_CURRENCY_ID:
+    columnName: GROUP_CURRENCY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '68'
+  HISTORIC:
+    columnName: HISTORIC
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '95'
+  INV_MONEY_DIST_METHOD:
+    columnName: INV_MONEY_DIST_METHOD
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '96'
+  INV_PRICING_VALUE_METHOD:
+    columnName: INV_PRICING_VALUE_METHOD
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '97'
+  JN_APPLN:
+    columnName: JN_APPLN
+    typeName: VARCHAR2(35)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  JN_DATETIME:
+    columnName: JN_DATETIME
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  JN_NOTES:
+    columnName: JN_NOTES
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  JN_OPERATION:
+    columnName: JN_OPERATION
+    typeName: CHAR(3)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  JN_ORACLE_USER:
+    columnName: JN_ORACLE_USER
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  JN_SESSION:
+    columnName: JN_SESSION
+    typeName: NUMBER(38,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  LAST_UPDATED_BY:
+    columnName: LAST_UPDATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '126'
+  LAST_UPDATED_DATE:
+    columnName: LAST_UPDATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '127'
+  LOCAL_CURRENCY_ID:
+    columnName: LOCAL_CURRENCY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '69'
+  NAME:
+    columnName: NAME
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  OBJECT_ID:
+    columnName: OBJECT_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  OL_AVG_PRICE_STATUS:
+    columnName: OL_AVG_PRICE_STATUS
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '57'
+  OL_AVG_RATE:
+    columnName: OL_AVG_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '21'
+  OL_BOOKING_CURRENCY_ID:
+    columnName: OL_BOOKING_CURRENCY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '34'
+  OL_BOOKING_GROUP_FOREX_RATE:
+    columnName: OL_BOOKING_GROUP_FOREX_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '70'
+  OL_BOOKING_LOCAL_FOREX_RATE:
+    columnName: OL_BOOKING_LOCAL_FOREX_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '71'
+  OL_BOOKING_MEMO_FOREX_RATE:
+    columnName: OL_BOOKING_MEMO_FOREX_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '72'
+  OL_BOOKING_VALUE:
+    columnName: OL_BOOKING_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '27'
+  OL_CLOSING_POS_QTY1:
+    columnName: OL_CLOSING_POS_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '46'
+  OL_CLOSING_POS_QTY2:
+    columnName: OL_CLOSING_POS_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '47'
+  OL_MEMO_CURRENCY_ID:
+    columnName: OL_MEMO_CURRENCY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '35'
+  OL_MEMO_VALUE:
+    columnName: OL_MEMO_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '26'
+  OL_OPENING_QTY1:
+    columnName: OL_OPENING_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '60'
+  OL_OPENING_QTY2:
+    columnName: OL_OPENING_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '61'
+  OL_PRICE_VALUE:
+    columnName: OL_PRICE_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '25'
+  OL_PRICING_CURRENCY_ID:
+    columnName: OL_PRICING_CURRENCY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '33'
+  OL_RATE:
+    columnName: OL_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '73'
+  POSTING_TYPE:
+    columnName: POSTING_TYPE
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '65'
+  PROCESSED_BY:
+    columnName: PROCESSED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '66'
+  PROCESSED_DATE:
+    columnName: PROCESSED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '67'
+  PS_AVG_RATE:
+    columnName: PS_AVG_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '74'
+  PS_AVG_RATE_STATUS:
+    columnName: PS_AVG_RATE_STATUS
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '93'
+  PS_BOOKING_VALUE:
+    columnName: PS_BOOKING_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '83'
+  PS_CLOSING_BOOKING_VALUE:
+    columnName: PS_CLOSING_BOOKING_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '75'
+  PS_CLOSING_MEMO_VALUE:
+    columnName: PS_CLOSING_MEMO_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '76'
+  PS_CLOSING_POS_QTY1:
+    columnName: PS_CLOSING_POS_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '77'
+  PS_CLOSING_POS_QTY2:
+    columnName: PS_CLOSING_POS_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '78'
+  PS_CLOSING_PRICING_VALUE:
+    columnName: PS_CLOSING_PRICING_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '79'
+  PS_MEMO_VALUE:
+    columnName: PS_MEMO_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '84'
+  PS_OPENING_QTY1:
+    columnName: PS_OPENING_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '80'
+  PS_OPENING_QTY2:
+    columnName: PS_OPENING_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '81'
+  PS_PRICE_VALUE:
+    columnName: PS_PRICE_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '85'
+  PS_RATE:
+    columnName: PS_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '82'
+  RECORD_STATUS:
+    columnName: RECORD_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '123'
+  REC_ID:
+    columnName: REC_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '133'
+  REV_NO:
+    columnName: REV_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '128'
+  REV_TEXT:
+    columnName: REV_TEXT
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '129'
+  SET_TO_BOOKED_DATE:
+    columnName: SET_TO_BOOKED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '64'
+  SET_TO_NEXT_IND:
+    columnName: SET_TO_NEXT_IND
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '54'
+  SET_TO_PREV_IND:
+    columnName: SET_TO_PREV_IND
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '55'
+  TEXT_1:
+    columnName: TEXT_1
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '108'
+  TEXT_10:
+    columnName: TEXT_10
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '117'
+  TEXT_2:
+    columnName: TEXT_2
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '109'
+  TEXT_3:
+    columnName: TEXT_3
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '110'
+  TEXT_4:
+    columnName: TEXT_4
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '111'
+  TEXT_5:
+    columnName: TEXT_5
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '112'
+  TEXT_6:
+    columnName: TEXT_6
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '113'
+  TEXT_7:
+    columnName: TEXT_7
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '114'
+  TEXT_8:
+    columnName: TEXT_8
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '115'
+  TEXT_9:
+    columnName: TEXT_9
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '116'
+  TOTAL_CLOSING_POS_QTY1:
+    columnName: TOTAL_CLOSING_POS_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '91'
+  TOTAL_CLOSING_POS_QTY2:
+    columnName: TOTAL_CLOSING_POS_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '92'
+  TOTAL_MOV_QTY1:
+    columnName: TOTAL_MOV_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '38'
+  TOTAL_MOV_QTY2:
+    columnName: TOTAL_MOV_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '39'
+  TRANSFER_DATE:
+    columnName: TRANSFER_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '62'
+  TRANSFER_USER_ID:
+    columnName: TRANSFER_USER_ID
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '50'
+  UL_AVG_RATE:
+    columnName: UL_AVG_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '20'
+  UL_AVG_RATE_STATUS:
+    columnName: UL_AVG_RATE_STATUS
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '56'
+  UL_BOOKING_CURRENCY_ID:
+    columnName: UL_BOOKING_CURRENCY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '31'
+  UL_BOOKING_GROUP_FOREX_RATE:
+    columnName: UL_BOOKING_GROUP_FOREX_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '86'
+  UL_BOOKING_LOCAL_FOREX_RATE:
+    columnName: UL_BOOKING_LOCAL_FOREX_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '87'
+  UL_BOOKING_MEMO_FOREX_RATE:
+    columnName: UL_BOOKING_MEMO_FOREX_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '88'
+  UL_BOOKING_VALUE:
+    columnName: UL_BOOKING_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '24'
+  UL_CLOSING_POS_QTY1:
+    columnName: UL_CLOSING_POS_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '42'
+  UL_CLOSING_POS_QTY2:
+    columnName: UL_CLOSING_POS_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '43'
+  UL_MEMO_CURRENCY_ID:
+    columnName: UL_MEMO_CURRENCY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '32'
+  UL_MEMO_VALUE:
+    columnName: UL_MEMO_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '23'
+  UL_OPENING_POS_QTY1:
+    columnName: UL_OPENING_POS_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '40'
+  UL_OPENING_POS_QTY2:
+    columnName: UL_OPENING_POS_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '41'
+  UL_PRICE_VALUE:
+    columnName: UL_PRICE_VALUE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '22'
+  UL_PRICING_CURRENCY_ID:
+    columnName: UL_PRICING_CURRENCY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '30'
+  UL_RATE:
+    columnName: UL_RATE
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '53'
+  UOM1_CODE:
+    columnName: UOM1_CODE
+    typeName: VARCHAR2(16)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '28'
+  UOM2_CODE:
+    columnName: UOM2_CODE
+    typeName: VARCHAR2(16)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '29'
+  VALID1_USER_ID:
+    columnName: VALID1_USER_ID
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '48'
+  VALID2_USER_ID:
+    columnName: VALID2_USER_ID
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '49'
+  VALUATION_LEVEL:
+    columnName: VALUATION_LEVEL
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  VALUATION_METHOD:
+    columnName: VALUATION_METHOD
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  VALUE_1:
+    columnName: VALUE_1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '103'
+  VALUE_2:
+    columnName: VALUE_2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '104'
+  VALUE_3:
+    columnName: VALUE_3
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '105'
+  VALUE_4:
+    columnName: VALUE_4
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '106'
+  VALUE_5:
+    columnName: VALUE_5
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '107'
+  YEAR_CODE:
+    columnName: YEAR_CODE
+    typeName: VARCHAR2(4)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '94'
+  YTD_OL_MOV_QTY1:
+    columnName: YTD_OL_MOV_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '58'
+  YTD_OL_MOV_QTY2:
+    columnName: YTD_OL_MOV_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '59'
+  YTD_PROD_QTY1:
+    columnName: YTD_PROD_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '44'
+  YTD_PROD_QTY2:
+    columnName: YTD_PROD_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '45'
+  YTD_PS_MOV_QTY1:
+    columnName: YTD_PS_MOV_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '89'
+  YTD_PS_MOV_QTY2:
+    columnName: YTD_PS_MOV_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '90'
+  YTD_UL_MOV_QTY1:
+    columnName: YTD_UL_MOV_QTY1
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '36'
+  YTD_UL_MOV_QTY2:
+    columnName: YTD_UL_MOV_QTY2
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '37'
+indexes:
+  IR_INV_VALUATION_JN:
+    indexName: IR_INV_VALUATION_JN
+    columns:
+    - REC_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 60
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

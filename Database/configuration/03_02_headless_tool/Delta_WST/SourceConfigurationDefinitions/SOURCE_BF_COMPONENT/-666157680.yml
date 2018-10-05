@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-666157680'
+keys:
+  BF_CODE: CO.1058
+  T: BF_COMPONENT
+  URL: /Document
+parentKeys: {}
+properties:
+  BF_CODE: CO.1058
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1058' AND NVL(URL,'IS_NULL') = '/Document')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/pki_signature_verification' )
+  CLASS_NAME: null
+  COMP_CODE: Document
+  NAME: Document Created
+  SIGNING_REQ_IND: null
+  URL: /Document
+related: {}

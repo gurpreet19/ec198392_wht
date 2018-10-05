@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-977103737'
+keys:
+  ATTRIBUTE_TYPE: DOC_GEN_MONTHS
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: DOC_GEN_MONTHS
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: If set, the document processing will look for interfaced data back to the number of months, relative to today. Number must be positive. If not set the system will get interfaced data for the last ten years.
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

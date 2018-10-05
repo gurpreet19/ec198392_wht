@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2046045416'
+keys:
+  BF_DESCRIPTION_NO: CO.1012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/SYSTEM_ATTRIBUTE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The System Attributes screen provides an interface for editing, adding and deleting system attributes. For example the date when changing from wintertime to summertime.</p><p>Note that the system setting for UOM is also stored in this table. However, this value is only specified as a part of the product implementation and will never be changed afterwards.</p>
+related: {}

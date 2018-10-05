@@ -1,0 +1,158 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '75165'
+keys:
+  T: TV_UNIT
+  UNIT: LBS
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Pound
+  FIN_CODE: null
+  LABEL: lb
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: LBS
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KG
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBS
+      MULT_FACT: 0.453592
+      PRECISION: 6.0
+      TO_UNIT: KG
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: LTON
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBS
+      MULT_FACT: 4.47E-4
+      PRECISION: 6.0
+      TO_UNIT: LTON
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: STON
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBS
+      MULT_FACT: 5.0E-4
+      PRECISION: null
+      TO_UNIT: STON
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: TONNES
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBS
+      MULT_FACT: 4.5359290943564E-4
+      PRECISION: 9.0
+      TO_UNIT: TONNES
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: OIL_MASS
+      T: TV_UOM_SETUP
+      UNIT: LBS
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: OIL_MASS
+      REPORT_UNIT: null
+      UNIT: LBS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: WATER_MASS
+      T: TV_UOM_SETUP
+      UNIT: LBS
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: WATER_MASS
+      REPORT_UNIT: null
+      UNIT: LBS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: GAS_MASS
+      T: TV_UOM_SETUP
+      UNIT: LBS
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: GAS_MASS
+      REPORT_UNIT: null
+      UNIT: LBS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LIQ_MASS
+      T: TV_UOM_SETUP
+      UNIT: LBS
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LIQ_MASS
+      REPORT_UNIT: N
+      UNIT: LBS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: WEIGHT
+      T: TV_UOM_SETUP
+      UNIT: LBS
+    parentKeys:
+      TV_UNIT.UNIT: LBS
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: WEIGHT
+      REPORT_UNIT: Y
+      UNIT: LBS
+      VIEW_UNIT: Y

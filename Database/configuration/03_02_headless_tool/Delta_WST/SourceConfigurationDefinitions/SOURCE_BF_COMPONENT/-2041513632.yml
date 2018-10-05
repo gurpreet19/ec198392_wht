@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2041513632'
+keys:
+  BF_CODE: IN.0026
+  T: BF_COMPONENT
+  URL: /transaction_lines
+parentKeys: {}
+properties:
+  BF_CODE: IN.0026
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0026' AND NVL(URL,'IS_NULL') = '/transaction_lines')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inv_line' )
+  CLASS_NAME: TRANS_INV_LINE
+  COMP_CODE: transaction_lines
+  NAME: Trans Inventory Line
+  SIGNING_REQ_IND: null
+  URL: /transaction_lines
+related: {}

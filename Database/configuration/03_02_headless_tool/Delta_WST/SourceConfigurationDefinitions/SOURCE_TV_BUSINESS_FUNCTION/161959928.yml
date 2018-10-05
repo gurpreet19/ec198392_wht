@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '161959928'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/MTH
+parentKeys: {}
+properties:
+  BF_CODE: FI.0003
+  NAME: Monthly Financial Item
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/MTH
+related: {}

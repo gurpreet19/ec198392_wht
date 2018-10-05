@@ -1,0 +1,44 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-672542047'
+keys:
+  BF_DESCRIPTION_NO: GD.0109
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0109
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_meter_allocation/BF_PROFILE/GD.0109/TARGET/METER/CLASS/METER_DAY_ALLOC/LOG_CLASS/CALC_TRAN_METER_LOG/SUB_CLASS/TRNP_DAY_DELIVERY_ALLOC/NAV_MODEL/TRAN_OPERATIONAL' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>The Business function allows the Transport Operator user to control
+    the Allocation process.</p><p>The normal use of this screen is to view currently
+    measured energy exit point both calculated and reported.</p><p>The screen should
+    show both current and previous reported Allocation. The 1st Data section will
+    show metered quantity. The 2nd Data section will show scheduled nominations on
+    the selected meter.</p><p>Calculate Button: to calculate values and how they are
+    calculated this must be defined by each individual implementation in a Calculation
+    Rule etc.</p><p>This screen has been designed in such manner that it can be extended
+    to support other types of energy allocation processes in the future, including
+    other allocation principles than pro-rata and swing/OBA, allocation to other parties
+    than shippers.</p><p>Project Implementation:<ul style="list-style-type:disc"><li>The
+    applicable exit point and day in the upper table will be highlighted in red. By
+    selecting a longer date range in the navigator, the user can easily spot revisions
+    for several days at once.</li><li>The highlighting in the upper table indicates
+    when the measured quantities have changed since last reported allocation for that
+    day or when the initial allocation results for the day have not been reported
+    yet. Similar highlighting in the allocation results table indicates which of the
+    currently allocated quantities have changed since last reported quantities&nbsp;(note:
+    all quantities will always be highlighted initially, since the allocation method
+    is pro-rata, however reporting the quantities to each contract, will make the
+    highlighting disappear, one contract at the time).</li><li>This screen allows
+    the user to (re)calculate and (re)send allocation reports to the users. Sending
+    a report to a user will cause the Current Allocation for that contract to be copied
+    to Reported Allocation, discarding the previously Reported Allocation quantities.</li></ul></p><p>To
+    use this business functions it is a requirement that the TARGET can be found in
+    a navigation model, and that the target is the owner of the data in the CLASS.
+    Mandatory arguments which are needed in the url are CLASS and SUB_CLASS. The navigation
+    model can be forced by the project by using NAV_MODEL argument.</p><p>The Business
+    function supports profiling on Meter, grouping Meter objects that belong to a
+    certain profile. But profiling does not work on two different objects eg having
+    Delivery Point and Meter using profile Mechanism; only one type of object can
+    use profiling at each screen.</p>'
+related: {}

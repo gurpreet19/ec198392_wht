@@ -1,0 +1,36 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1819245927'
+keys:
+  T: TV_UNIT
+  UNIT: BTUPERMTH
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: British thermal unit per month
+  FIN_CODE: null
+  LABEL: Btu/m
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: BTUPERMTH
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BTUPERMTH
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MJPERMTH
+    parentKeys:
+      TV_UNIT.UNIT: BTUPERMTH
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BTUPERMTH
+      MULT_FACT: 0.0010550559
+      PRECISION: 6.0
+      TO_UNIT: MJPERMTH
+      USER_EXIT: null
+      USE_UE: null

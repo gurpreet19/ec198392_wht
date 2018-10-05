@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1893085045'
+keys:
+  OBJECT_NAME: BPM_EC_EVENT_INBOUND_ATT
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: N
+  OBJECT_NAME: BPM_EC_EVENT_INBOUND_ATT
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

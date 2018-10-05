@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1678663167'
+keys:
+  BF_CODE: GD.0028
+  T: BF_COMPONENT
+  URL: /daycntrinputnom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0028
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0028' AND NVL(URL,'IS_NULL') = '/daycntrinputnom')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_balancing/CLASS/TRCN_DAY_NOM_BAL/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNP_DAY_NOM_BAL_CNT_IN
+  COMP_CODE: daycntrinputnom
+  NAME: Daily Contract Input Nominations
+  SIGNING_REQ_IND: null
+  URL: /daycntrinputnom
+related: {}

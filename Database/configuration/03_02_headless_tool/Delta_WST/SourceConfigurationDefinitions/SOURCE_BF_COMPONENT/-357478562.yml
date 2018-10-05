@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-357478562'
+keys:
+  BF_CODE: CP.0032
+  T: BF_COMPONENT
+  URL: /nominations
+parentKeys: {}
+properties:
+  BF_CODE: CP.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0032' AND NVL(URL,'IS_NULL') = '/nominations')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_nomination_entry' )
+  CLASS_NAME: FCST_STOR_LIFT_NOM
+  COMP_CODE: nominations
+  NAME: Nominations
+  SIGNING_REQ_IND: null
+  URL: /nominations
+related: {}

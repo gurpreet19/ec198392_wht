@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1456408326'
+keys:
+  SOURCE_ID: 110015.0
+  T: TV_LANGUAGE_SOURCE
+parentKeys: {}
+properties:
+  SOURCE: ORA-20423
+  SOURCE_ID: 110015.0
+related:
+  TV_LANGUAGE_TARGET:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      LANGUAGE_ID: 1.0
+      SOURCE_ID: 110015.0
+      T: TV_LANGUAGE_TARGET
+    parentKeys:
+      TV_LANGUAGE_SOURCE.SOURCE_ID: 110015.0
+    properties:
+      LANGUAGE_ID: 1.0
+      SOURCE_ID: 110015.0
+      TARGET: Differential pressure must not be <= 0.0 Inches H2O

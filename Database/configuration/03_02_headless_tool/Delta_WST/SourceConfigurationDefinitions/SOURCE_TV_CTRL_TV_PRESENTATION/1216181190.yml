@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1216181190'
+keys:
+  COMPONENT_ID: ( SELECT 'STREAM_ITEM_CAT' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_CATEGORY?screentemplate=/com.ec.frmw.co.screens/manage_object
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'STREAM_ITEM_CAT' FROM DUAL )
+  COMPONENT_LABEL: Stream Item Category
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'STREAM_OBJECTS' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 100.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

@@ -1,0 +1,131 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-238082021'
+keys:
+  BF_DESCRIPTION_NO: CD.0107
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0107
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p><span style="color: rgb(0, 0, 153);"> <em> <u> For the EC Financial
+    Documents there are 3 key dates that EC can determine automatically based on configuration:
+    </u> <br>       <strong> - Document Date </strong> (Document Date Term screen
+    - BF CD.0107), <br> <strong>- Document Received Date </strong> (Document Received
+    Term screen - BF CD.0108), <br>    <strong> - Payment Date </strong> (Payment
+    Term screen - BF CD.0023).</em></span></p><p><span style="color: rgb(0, 0, 153);">
+    <em>EC uses a concept called Date Term to be able to determine these dates. <u>
+    This works as follows: </u> </em></span></p><p>  <img src="/onlinehelp/img?type=description&bfDescNo=CD.0107&imgNo=1&dataLevel=2&pfdrid_c=true"
+    class="ecImg" style="font-size: 10pt;"></p><p>    <span style="color: rgb(0, 0,
+    153);"><em><u>The logic contains 2 main elements:</u></em></span></p><p>    <span
+    style="color: rgb(0, 0, 153);"><em><strong>1. Starting Point</strong> - the date
+    the Term is calculated from to get to the Target Date.</em></span></p><p><span
+    style="color: rgb(0, 0, 153);"> <em>The Starting Point is a date that can be given
+    by another date in the financial document, such as Document Date, Bill of Lading
+    Date, etc. The setting of the starting point is disconnected from the Date Term
+    object itself. This way the same Date Term can be used with different starting
+    points. The starting point is defined for each Document Setup for the various
+    Date Terms by the Document Date Base Code / Document Received Date Base Code /
+    Payment Term Date Base Code attribute which can be set to Document Date, Bill
+    of Lading Date, etc.</em></span></p><p>    <span style="color: rgb(0, 0, 153);"><em><strong>2.
+    Term itself</strong> - the rule to get to the Target Date (Document Date / Document
+    Received Date / Payment Date).</em></span></p><p><span style="color: rgb(0, 0,
+    153);"><em> The Term has various methods to get to the Target Date which may include
+    Calendar Days vs Business Days. <br>In case the Date Term includes Business Days
+    then a Calendar object needs to be defined.</em></span></p><p>    <strong style="font-size:
+    large;">Document Date Term screen</strong> is used to manage all the Document
+    Date Terms available in the system. <br>The Document Date Term is used for calculating
+    a Document Date for a Financial Document. <br>The concept is that the Document
+    Date can be calculated by the system or be set to one of the other dates in a
+    Financial Document.</p><p>    <u>Note:</u> The daytime used when creating a Document
+    object (the Document Date data entry) will be the initial Document Date for the
+    document and versioned configuration data from Contract / Document Setup / Transaction
+    Templates / etc. will be picked based on this initial date. After the Document
+    object has been created the Document Date Term will be executed and the Document
+    Date may be changed according to the Document Date Term. <br>EC has a number of
+    different methods to set the Document Date and typically the Document Date can
+    be set to follow one of the other dates in the Document.</p><p>    <u>The Document
+    Date Term has these methods:</u> <br>    <u>Note:</u> The terms First and Last
+    refer to the earliest / latest dates found in the Transactions if there are different
+    dates found.</p><p>    <strong><em>- First Discharge Commenced Date</em></strong>
+    (Code: DIS_COMM_FIRST): Document Date will be set to First Discharge Commenced
+    Date.</p><p>    <strong><em>- First Discharge Completed Date</em></strong> (Code:
+    DIS_COMP_FIRST): Document Date will be set to First Discharge Completed Date.</p><p>    <strong><em>-
+    First Loading Commenced Date</em></strong> (Code: LOAD_COMM_FIRST): Document Date
+    will be set to First Loading Commenced Date.</p><p>    <strong><em>- First Loading
+    Completed Date</em></strong> (Code: LOAD_COMP_FIRST): Document Date will be set
+    to First Loading Completed Date.</p><p>    <strong><em>- First Supply From Date</em></strong>
+    (Code: SUPPLY_FROM_FIRST): Document Date will be set to First Supply From Date.</p><p>    <strong><em>-
+    First Supply To Date</em></strong> (Code: SUPPLY_TO_FIRST): Document Date will
+    be set to First Supply To Date.</p><p>    <strong><em>- First Transaction Point
+    of Sale Date</em></strong> (Code: POSD_FIRST): Document Date will be set to First
+    Transaction Point of Sale Date.</p><p>    <strong><em>- Last Transaction Point
+    of Sale Date</em></strong> (Code: POSD_LAST): Document Date will be set to Last
+    Transaction Point of Sale Date.</p><p>    <strong><em>- Fixed Date in current
+    Month</em></strong> (Code: FIXED_CURR_MTH): Document Date will be set to a Fixed
+    Date in current Month. <br>The initial document date will determine the month.</p><p>    <strong><em>-
+    Fixed Date in next Month</em></strong> (Code: FIXED_NEXT_MTH): Document Date will
+    be set to a Fixed Date in next Month. <br>The initial document date will determine
+    the month.</p><p>    <strong><em>- Fixed Date in previous Month</em></strong>
+    (Code: FIXED_PREV_MTH): Document Date will be set to Fixed Date in previous Month.
+    <br>The initial document date will determine the month.</p><p>    <strong><em>-
+    Last Discharge Commenced Date</em></strong> (Code: DIS_COMM_LAST): Document Date
+    will be set to Last Discharge Commenced Date.</p><p>    <strong><em>- Last Discharge
+    Completed Date</em></strong> (Code: DIS_COMP_LAST): Document Date will be set
+    to Last Discharge Completed Date.</p><p>    <strong><em>- Last Loading Commenced
+    Date</em></strong> (Code: LOAD_COMM_LAST): Document Date will be set to Last Loading
+    Commenced Date.</p><p>    <strong><em>- Last Loading Completed Date</em></strong>
+    (Code: LOAD_COMP_LAST): Document Date will be set to Last Loading Completed Date.</p><p>    <strong><em>-
+    Last Supply From Date</em></strong> (Code: SUPPLY_FROM_LAST): Document Date will
+    be set to Last Supply From Date.</p><p>    <strong><em>- Last Supply To Date</em></strong>
+    (Code: SUPPLY_TO_LAST): Document Date will be set to Last Supply To Date.</p><p>    <strong><em>-
+    Set Document Date manually</em></strong> (Code: MANUAL): Document Date will be
+    set manually.</p><p>    <strong><em>- System Date as Document Date</em></strong>
+    (Code: SYSDATE): Document Date will be set to System Date.</p><p>        <strong><em>-
+    Workdays in current Month</em></strong> (Code: CAL_CURRENT_MTH): Document Date
+    will be set to X Workdays in current Month.<br>The initial document date will
+    determine the month. Offset will determine the number of days. Calendar is needed</p><p>    <strong><em>-
+    Workdays in next Month</em></strong> (Code: CAL_NEXT_MTH): Document Date will
+    be set to X Workdays in next Month.<br>The initial document date will determine
+    the month. Offset will determine the number of days. Calendar is needed.</p><p>    <strong><em>-
+    Workdays in previous Month</em></strong> (Code: CAL_PREV_MTH): Document Date will
+    be set to X Workdays in previous Month.<br>The initial document date will determine
+    the month. Offset will determine the number of days. Calendar is needed.</p><p>    <strong><em>-
+    First Bill of Lading Date</em></strong> (Code: BL_DATE_FIRST): Document Date will
+    be set to First Bill of Lading Date.</p><p>    <strong><em>- Last Bill of Lading
+    Date</em></strong> (Code: BL_DATE_LAST): Document Date will be set to Last Bill
+    of Lading Date.</p><p>    <strong> <em>- Xth Working Day from Last Working Day
+    of Previous Month</em> </strong> (Code: XTH_LAST_PREV_MTH): Document Date will
+    be set to Xth Working Day from Last Working Day of Previous Month.<br>The initial
+    document date will determine the month. Offset will determine the number of days.
+    Calendar is needed.</p><p>    <strong> <em>- Xth Working Day from Last Working
+    Day of Current Month</em> </strong> (Code: XTH_LAST_CURR_MTH): Document Date will
+    be set to Xth Working Day from Last Working Day of Current Month.<br>The initial
+    document date will determine the month. Offset will determine the number of days.
+    Calendar is needed.</p><p>    <strong> <em>- Xth Working Day from Last Working
+    Day of Next Month</em> </strong> (Code: XTH_LAST_NEXT_MTH): Document Date will
+    be set to Xth Working Day from Last Working Day of Next Month.<br>The initial
+    document date will determine the month. Offset will determine the number of days.
+    Calendar is needed.</p><p>    <strong> <em>- Xth Working Day from Last Working
+    Day of Next Month + 1</em> </strong> (Code: XTH_LAST_NEXTNEXT_MTH): Document Date
+    will be set to Xth Working Day from Last Working Day of Next Month + 1.<br>The
+    initial document date will determine the month. Offset will determine the number
+    of days. Calendar is needed.</p><p>    <strong> <em>- Xth Calendar Day from Last
+    Calendar Day of Previous Month</em> </strong> (Code: CAL_XTH_LAST_PREV_MTH): Document
+    Date will be set to Xth Calendar Day from Last Calendar Day of Previous Month.<br>The
+    initial document date will determine the month. Offset will determine the number
+    of days. Calendar is not needed.</p><p>    <strong> <em>- Xth Calendar Day from
+    Last Calendar Day of Current Month</em> </strong> (Code: CAL_XTH_LAST_CURR_MTH):
+    Document Date will be set to Xth Calendar Day from Last Calendar Day of Current
+    Month.<br>The initial document date will determine the month. Offset will determine
+    the number of days. Calendar is not needed</p><p>    <strong> <em>- Xth Calendar
+    Day from Last Calendar Day of Next Month</em> </strong> (Code: CAL_XTH_LAST_NEXT_MTH):
+    Document Date will be set to Xth Calendar Day from Last Calendar Day of Next Month.<br>The
+    initial document date will determine the month. Offset will determine the number
+    of days. Calendar is not needed</p><p>    <strong> <em>- Xth Calendar Day from
+    Last Calendar Day of Next Month + 1</em> </strong> (Code: CAL_XTH_LAST_NEXTNEXT_MTH):
+    Document Date will be set to Xth Calendar Day from Last Calendar Day of Next Month
+    + 1. <br>The initial document date will determine the month. Offset will determine
+    the number of days. Calendar is not needed</p>'
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '607615657'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.to.screens/port_resource_usage
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.to.screens/port_resource_usage
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

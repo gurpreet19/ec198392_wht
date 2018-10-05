@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1343529626'
+keys:
+  BF_CODE: PT.0010
+  T: BF_COMPONENT
+  URL: /wbi_test_result_data
+parentKeys: {}
+properties:
+  BF_CODE: PT.0010
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0010' AND NVL(URL,'IS_NULL') = '/wbi_test_result_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_result' )
+  CLASS_NAME: null
+  COMP_CODE: wbi_test_result_data
+  NAME: Well Bore Interval Test Result Data
+  SIGNING_REQ_IND: null
+  URL: /wbi_test_result_data
+related: {}

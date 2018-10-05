@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1963728919'
+keys:
+  BF_CODE: CP.0064
+  T: BF_COMPONENT
+  URL: /monthly_reference_entitlement
+parentKeys: {}
+properties:
+  BF_CODE: CP.0064
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0064' AND NVL(URL,'IS_NULL') = '/monthly_reference_entitlement')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/monthly_reference_entitlement' )
+  CLASS_NAME: LIFT_ACC_MTH_REF_ENT
+  COMP_CODE: monthly_reference_entitlement
+  NAME: Monthly Reference Entitlement
+  SIGNING_REQ_IND: null
+  URL: /monthly_reference_entitlement
+related: {}

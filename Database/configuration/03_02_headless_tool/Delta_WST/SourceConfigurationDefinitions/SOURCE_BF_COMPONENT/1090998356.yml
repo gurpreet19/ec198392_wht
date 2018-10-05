@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1090998356'
+keys:
+  BF_CODE: CO.1011
+  T: BF_COMPONENT
+  URL: /codes
+parentKeys: {}
+properties:
+  BF_CODE: CO.1011
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1011' AND NVL(URL,'IS_NULL') = '/codes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/ec_codes' )
+  CLASS_NAME: EC_CODES
+  COMP_CODE: codes
+  NAME: EC Codes
+  SIGNING_REQ_IND: null
+  URL: /codes
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1467367847'
+keys:
+  BF_DESCRIPTION_NO: TO.0033
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/marine_notices' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to capture marine notices received from the port superintendent, local government or other third parties.</p><p>The data section will display marine notices based on the year selected in the navigator. The date in the data section represents when a marine notice is first valid. Other columns in this business function including Notice Number, Description, Notice Type and a Valid checkbox.</p><p>A marine notice is valid if the Valid checkbox is selected. All valid marine notices will appear in the read only section "All Notices In Force" regardless of the year selected in the navigator.</p>
+related: {}

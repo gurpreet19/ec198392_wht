@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-86932407'
+keys:
+  BF_CODE: PP.0045
+  T: BF_COMPONENT
+  URL: /scenario_documents
+parentKeys: {}
+properties:
+  BF_CODE: PP.0045
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PP.0045' AND NVL(URL,'IS_NULL') = '/scenario_documents')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_assumptions' )
+  CLASS_NAME: SCENARIO_DOCUMENTS
+  COMP_CODE: scenario_documents
+  NAME: Scenario Documents
+  SIGNING_REQ_IND: null
+  URL: /scenario_documents
+related: {}

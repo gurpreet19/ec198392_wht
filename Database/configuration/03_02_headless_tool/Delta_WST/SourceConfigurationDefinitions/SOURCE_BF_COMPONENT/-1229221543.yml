@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1229221543'
+keys:
+  BF_CODE: IS.0002
+  T: BF_COMPONENT
+  URL: /imp_target_mapping_table
+parentKeys: {}
+properties:
+  BF_CODE: IS.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IS.0002' AND NVL(URL,'IS_NULL') = '/imp_target_mapping_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_target_mapping' )
+  CLASS_NAME: TARGET_MAPPINGS
+  COMP_CODE: imp_target_mapping_table
+  NAME: Target Mapping Table
+  SIGNING_REQ_IND: null
+  URL: /imp_target_mapping_table
+related: {}

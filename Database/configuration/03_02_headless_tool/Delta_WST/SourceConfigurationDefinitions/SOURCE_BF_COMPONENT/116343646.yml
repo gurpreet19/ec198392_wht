@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '116343646'
+keys:
+  BF_CODE: GD.0028
+  T: BF_COMPONENT
+  URL: /nom_balancing
+parentKeys: {}
+properties:
+  BF_CODE: GD.0028
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0028' AND NVL(URL,'IS_NULL') = '/nom_balancing')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_balancing/CLASS/TRCN_DAY_NOM_BAL/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRCN_DAY_NOM_BAL
+  COMP_CODE: nom_balancing
+  NAME: Daily Nominations Balancing
+  SIGNING_REQ_IND: null
+  URL: /nom_balancing
+related: {}

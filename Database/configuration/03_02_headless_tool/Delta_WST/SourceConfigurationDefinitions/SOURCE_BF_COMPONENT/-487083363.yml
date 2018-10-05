@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-487083363'
+keys:
+  BF_CODE: PT.0010
+  T: BF_COMPONENT
+  URL: /accept_no_alloc_button
+parentKeys: {}
+properties:
+  BF_CODE: PT.0010
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PT.0010' AND NVL(URL,'IS_NULL') = '/accept_no_alloc_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_result' )
+  CLASS_NAME: null
+  COMP_CODE: accept_no_alloc
+  NAME: Accept test, No alloc
+  SIGNING_REQ_IND: null
+  URL: /accept_no_alloc_button
+related: {}

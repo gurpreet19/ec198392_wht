@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-27253206'
+keys:
+  BF_DESCRIPTION_NO: CO.2048
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/cntr_attr_dim_type' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to create and maintain Contract attribute dimension types.</p><p>Dimension types are typically used when creating Contract Templates (CO.2020). Further it is used when maintaining Contract Attributes (Transport, Sale or Revenue).</p>
+related: {}

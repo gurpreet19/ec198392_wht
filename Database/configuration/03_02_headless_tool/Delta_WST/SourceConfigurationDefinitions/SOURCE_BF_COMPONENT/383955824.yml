@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '383955824'
+keys:
+  BF_CODE: CO.1032
+  T: BF_COMPONENT
+  URL: /validate_class_attr
+parentKeys: {}
+properties:
+  BF_CODE: CO.1032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1032' AND NVL(URL,'IS_NULL') = '/validate_class_attr')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/object_validation/GROUP_MODEL/operational' )
+  CLASS_NAME: OBJECT_ATTR_VALIDATION
+  COMP_CODE: validate_class_attr
+  NAME: Validate Class Attributes
+  SIGNING_REQ_IND: null
+  URL: /validate_class_attr
+related: {}

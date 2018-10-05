@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1569591230'
+keys:
+  BF_DESCRIPTION_NO: SD.0050
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_renomination/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0050/CLASS/SLNP_DAY_RENOM_LIST/CLASS_SUB/SLNP_DAY_RENOMINATION' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to record any renomination against a contract.</p><p>The screen supports multiple renominations for any gas day. The user chooses a day and a list of any existing renominations is displayed (in descending time order - i.e. latest first). The system supports to automatically copy the value of the renomination quantity columns to the corresponding daily nomination. Anyhow it will be up to the implementation project to include any required validation and handling of the renominations.</p><p>For more information about the nomination process please see SD.0042 - Daily Sales Nomination.</p>
+related: {}

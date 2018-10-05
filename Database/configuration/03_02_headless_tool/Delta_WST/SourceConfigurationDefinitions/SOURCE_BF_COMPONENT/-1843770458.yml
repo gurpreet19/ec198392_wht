@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1843770458'
+keys:
+  BF_CODE: IN.0006
+  T: BF_COMPONENT
+  URL: /objectdates
+parentKeys: {}
+properties:
+  BF_CODE: IN.0006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0006' AND NVL(URL,'IS_NULL') = '/objectdates')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/rate_objects_definition' )
+  CLASS_NAME: INVENTORY_PRICE_OBJECT
+  COMP_CODE: objectdates
+  NAME: Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /objectdates
+related: {}

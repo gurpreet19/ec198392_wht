@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1676890077'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_contract_capacity_request/CLASS_1/CNTR_DAY_CAPACITY_REQ/CLASS_2/CNTR_CAPACITY_DAY_TRANS
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_contract_capacity_request/CLASS_1/CNTR_DAY_CAPACITY_REQ/CLASS_2/CNTR_CAPACITY_DAY_TRANS
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

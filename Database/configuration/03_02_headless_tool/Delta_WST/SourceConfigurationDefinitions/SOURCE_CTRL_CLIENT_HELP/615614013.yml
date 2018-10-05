@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '615614013'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/forecast_quota_nomination/CLASS_NAME/FCST_QUOTA_NOM
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/forecast_quota_nomination/CLASS_NAME/FCST_QUOTA_NOM
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '852926297'
+keys:
+  BF_CODE: SP.0048
+  T: BF_COMPONENT
+  URL: /reportselector
+parentKeys: {}
+properties:
+  BF_CODE: SP.0048
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0048' AND NVL(URL,'IS_NULL') = '/reportselector')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_erp_documents' )
+  CLASS_NAME: null
+  COMP_CODE: reportselector
+  NAME: Report Selector
+  SIGNING_REQ_IND: null
+  URL: /reportselector
+related: {}

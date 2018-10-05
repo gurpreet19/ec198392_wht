@@ -1,0 +1,102 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '69811552'
+keys:
+  T: TV_UNIT
+  UNIT: INH2O
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Inches of Water
+  FIN_CODE: null
+  LABEL: InAq
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: INH2O
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: INH2O
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BARG
+    parentKeys:
+      TV_UNIT.UNIT: INH2O
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: INH2O
+      MULT_FACT: 0.0024909
+      PRECISION: null
+      TO_UNIT: BARG
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: INH2O
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: PSIG
+    parentKeys:
+      TV_UNIT.UNIT: INH2O
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: INH2O
+      MULT_FACT: 0.0361273
+      PRECISION: 6.0
+      TO_UNIT: PSIG
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: INH2O
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: PSIA
+    parentKeys:
+      TV_UNIT.UNIT: INH2O
+    properties:
+      ADD_NUMB: 14.7
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: INH2O
+      MULT_FACT: 0.0361273
+      PRECISION: null
+      TO_UNIT: PSIA
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: INH2O
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: BARA
+    parentKeys:
+      TV_UNIT.UNIT: INH2O
+    properties:
+      ADD_NUMB: 1.01325
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: INH2O
+      MULT_FACT: 0.0024909
+      PRECISION: null
+      TO_UNIT: BARA
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: PRESS_DIFF
+      T: TV_UOM_SETUP
+      UNIT: INH2O
+    parentKeys:
+      TV_UNIT.UNIT: INH2O
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: PRESS_DIFF
+      REPORT_UNIT: Y
+      UNIT: INH2O
+      VIEW_UNIT: Y

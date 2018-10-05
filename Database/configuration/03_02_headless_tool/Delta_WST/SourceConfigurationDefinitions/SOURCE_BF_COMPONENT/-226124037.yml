@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-226124037'
+keys:
+  BF_CODE: CO.1043
+  T: BF_COMPONENT
+  URL: /relPropertyList
+parentKeys: {}
+properties:
+  BF_CODE: CO.1043
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1043' AND NVL(URL,'IS_NULL') = '/relPropertyList')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_class_rel_property' )
+  CLASS_NAME: CLASS_REL_PROPERTY_CNFG
+  COMP_CODE: relPropertyList
+  NAME: Class Relation
+  SIGNING_REQ_IND: null
+  URL: /relPropertyList
+related: {}

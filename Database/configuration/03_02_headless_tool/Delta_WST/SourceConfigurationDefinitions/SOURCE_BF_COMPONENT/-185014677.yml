@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-185014677'
+keys:
+  BF_CODE: FC.1006
+  T: BF_COMPONENT
+  URL: /table2
+parentKeys: {}
+properties:
+  BF_CODE: FC.1006
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FC.1006' AND NVL(URL,'IS_NULL') = '/table2')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_qty_value_liquid/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/LIQUID' )
+  CLASS_NAME: FCST_MTH_LIQUID_QTY
+  COMP_CODE: detailstable
+  NAME: FcstFieldMonthTable
+  SIGNING_REQ_IND: null
+  URL: /table2
+related: {}

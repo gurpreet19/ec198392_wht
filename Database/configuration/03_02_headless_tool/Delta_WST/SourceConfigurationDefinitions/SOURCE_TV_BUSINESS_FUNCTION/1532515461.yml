@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1532515461'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/fin_erp_documents
+parentKeys: {}
+properties:
+  BF_CODE: SP.0048
+  NAME: ERP Document
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/fin_erp_documents
+related: {}

@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-535287653'
+keys:
+  BF_CODE: GD.0032
+  T: BF_COMPONENT
+  URL: /inventory
+parentKeys: {}
+properties:
+  BF_CODE: GD.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0032' AND NVL(URL,'IS_NULL') = '/inventory')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_contract_loc_inventory' )
+  CLASS_NAME: CNTR_DAY_LOC_INVENTORY
+  COMP_CODE: inventory
+  NAME: Inventory
+  SIGNING_REQ_IND: null
+  URL: /inventory
+related: {}

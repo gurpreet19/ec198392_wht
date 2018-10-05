@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2145738484'
+keys:
+  BF_CODE: GD.0080
+  T: BF_COMPONENT
+  URL: /PeriodNominationPointShareSplit
+parentKeys: {}
+properties:
+  BF_CODE: GD.0080
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0080' AND NVL(URL,'IS_NULL') = '/PeriodNominationPointShareSplit')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_nomination_point_share/CLASS_SHARE/TRNP_EVENT_SHARE/CLASS_SHARE_SPLIT/TRNP_EVENT_SHARE_SPLIT/BF_PROFILE_2/DEF_TRAN/CATEGORY/ENTRY_EXIT_PATH/SHOW_OPERATIONAL/N' )
+  CLASS_NAME: TRNP_EVENT_SHARE_SPLIT
+  COMP_CODE: PeriodNominationPointShareSplit
+  NAME: Period Nomination Point Share Split
+  SIGNING_REQ_IND: null
+  URL: /PeriodNominationPointShareSplit
+related: {}

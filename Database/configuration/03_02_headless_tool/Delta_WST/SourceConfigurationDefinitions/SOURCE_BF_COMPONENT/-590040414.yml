@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-590040414'
+keys:
+  BF_CODE: SA.0034
+  T: BF_COMPONENT
+  URL: /SaleCalculationButton
+parentKeys: {}
+properties:
+  BF_CODE: SA.0034
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SA.0034' AND NVL(URL,'IS_NULL') = '/SaleCalculationButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/fcst_sale_calc_day' )
+  CLASS_NAME: null
+  COMP_CODE: SaleCalculationButton
+  NAME: Sale Calculation Button
+  SIGNING_REQ_IND: null
+  URL: /SaleCalculationButton
+related: {}

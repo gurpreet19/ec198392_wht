@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1834430351'
+keys:
+  BF_CODE: CO.0130
+  T: BF_COMPONENT
+  URL: /job_schedule_when
+parentKeys: {}
+properties:
+  BF_CODE: CO.0130
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0130' AND NVL(URL,'IS_NULL') = '/job_schedule_when')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/create_and_maintain_schedules' )
+  CLASS_NAME: null
+  COMP_CODE: job_schedule_when
+  NAME: Schedule When
+  SIGNING_REQ_IND: null
+  URL: /job_schedule_when
+related: {}

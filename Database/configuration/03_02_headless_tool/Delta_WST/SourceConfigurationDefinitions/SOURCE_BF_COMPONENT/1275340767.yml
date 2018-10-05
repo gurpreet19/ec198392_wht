@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1275340767'
+keys:
+  BF_CODE: CO.2063
+  T: BF_COMPONENT
+  URL: /carrier_tank
+parentKeys: {}
+properties:
+  BF_CODE: CO.2063
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2063' AND NVL(URL,'IS_NULL') = '/carrier_tank')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/carrier_cooldown' )
+  CLASS_NAME: CARRIER_TANK
+  COMP_CODE: carrier_tank
+  NAME: Carrier Tank
+  SIGNING_REQ_IND: null
+  URL: /carrier_tank
+related: {}

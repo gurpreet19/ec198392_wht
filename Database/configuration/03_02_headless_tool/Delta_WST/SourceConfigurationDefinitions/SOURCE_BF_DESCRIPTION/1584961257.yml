@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1584961257'
+keys:
+  BF_DESCRIPTION_NO: CO.0144
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0144
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/free_text_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This screen is used to create plain text templates. EC does not
+    apply any business logic based on the content and neither does the receiving side.
+    This means that messages created from these templates are to be considered as
+    textual information. Ex: The notification to a party that a pig is sent through
+    a pipe.</p><p>The templates can contain any valid text character, and the meaning
+    of the text/characters is to be decided by the users of EC. For instance a company
+    could use XX?XX–XX as a placeholder for a date, and another would use DD?MM–YY.</p><p>These
+    templates will be available in the “Send Freetext Message” screen. In this screen
+    you will be able to edit the message according to your specific needs, adding
+    dates, values and so on.</p>'
+related: {}

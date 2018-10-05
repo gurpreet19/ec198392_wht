@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1564586224'
+keys:
+  BF_CODE: CO.0036
+  T: BF_COMPONENT
+  URL: /objectdates
+parentKeys: {}
+properties:
+  BF_CODE: CO.0036
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0036' AND NVL(URL,'IS_NULL') = '/objectdates')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/TANK/TARGET/TANK/CLASS_NAME/TANK' )
+  CLASS_NAME: TANK
+  COMP_CODE: objectdates
+  NAME: Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /objectdates
+related: {}

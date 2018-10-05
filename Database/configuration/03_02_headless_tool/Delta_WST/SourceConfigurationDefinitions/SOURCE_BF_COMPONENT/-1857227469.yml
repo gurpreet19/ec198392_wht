@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1857227469'
+keys:
+  BF_CODE: CO.0230
+  T: BF_COMPONENT
+  URL: /tank_taps
+parentKeys: {}
+properties:
+  BF_CODE: CO.0230
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0230' AND NVL(URL,'IS_NULL') = '/tank_taps')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/tank_tap' )
+  CLASS_NAME: TANK_TAPS
+  COMP_CODE: tank_taps
+  NAME: Tank Taps
+  SIGNING_REQ_IND: null
+  URL: /tank_taps
+related: {}

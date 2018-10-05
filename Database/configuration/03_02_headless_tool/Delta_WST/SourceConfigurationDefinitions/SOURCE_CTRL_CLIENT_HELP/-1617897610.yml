@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1617897610'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.fc.screens/forecast_period_product_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/FCST_TRNL_PRD_CP_REC_FAC/BF_PROFILE/FC.0023/CLASS_DAY/FCST_TRNL_PRD_CP_REC_DAY/DIM1/PRODUCT_ID_POPUP/FCST_CLASS/FORECAST_TRAN_FC
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.fc.screens/forecast_period_product_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/FCST_TRNL_PRD_CP_REC_FAC/BF_PROFILE/FC.0023/CLASS_DAY/FCST_TRNL_PRD_CP_REC_DAY/DIM1/PRODUCT_ID_POPUP/FCST_CLASS/FORECAST_TRAN_FC
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

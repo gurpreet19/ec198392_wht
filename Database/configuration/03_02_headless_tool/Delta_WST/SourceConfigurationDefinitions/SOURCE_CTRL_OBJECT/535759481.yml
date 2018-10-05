@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '535759481'
+keys:
+  OBJECT_NAME: STREAM_ITEM_FORMULA
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: null
+  OBJECT_NAME: STREAM_ITEM_FORMULA
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

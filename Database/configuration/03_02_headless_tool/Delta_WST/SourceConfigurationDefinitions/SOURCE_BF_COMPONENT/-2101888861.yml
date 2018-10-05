@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2101888861'
+keys:
+  BF_CODE: CO.0188
+  T: BF_COMPONENT
+  URL: /test_device_ref
+parentKeys: {}
+properties:
+  BF_CODE: CO.0188
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0188' AND NVL(URL,'IS_NULL') = '/test_device_ref')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/test_device_reference_value' )
+  CLASS_NAME: TDEV_REFERENCE_VALUE
+  COMP_CODE: test_dev_ref
+  NAME: Test Device Reference Value
+  SIGNING_REQ_IND: null
+  URL: /test_device_ref
+related: {}

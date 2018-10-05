@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-238522293'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: TRAN_FCST_LIST
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: TRAN
+  DESCRIPTION: Displays Transport Forecast List
+  LABEL: Transport Forecast List
+  NAME: TransportForecastList
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.TableWidget
+  WIDGET_CODE: TRAN_FCST_LIST
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '27959430'
+keys:
+  BF_DESCRIPTION_NO: CO.1021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/unit' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Units screen provides an interface for adding, editing and deleting units used in the system.</p>
+related: {}

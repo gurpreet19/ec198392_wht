@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1541464969'
+keys:
+  BF_CODE: TO.0021
+  T: BF_COMPONENT
+  URL: /CargoHarbourDues
+parentKeys: {}
+properties:
+  BF_CODE: TO.0021
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='TO.0021' AND NVL(URL,'IS_NULL') = '/CargoHarbourDues')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_harbour_dues' )
+  CLASS_NAME: CARGO_HARBOUR_DUES
+  COMP_CODE: CargoHarbourDues
+  NAME: Cargo Harbour Dues
+  SIGNING_REQ_IND: null
+  URL: /CargoHarbourDues
+related: {}

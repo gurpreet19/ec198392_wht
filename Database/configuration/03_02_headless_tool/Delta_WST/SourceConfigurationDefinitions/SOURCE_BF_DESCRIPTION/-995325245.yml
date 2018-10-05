@@ -1,0 +1,21 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-995325245'
+keys:
+  BF_DESCRIPTION_NO: PO.0001.03
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0001.03
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MASS/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_MASS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is part of the Business Process to gather and QA daily metered stream data. The business function is very similar to PO.0001, but it is configured to allow for data entry in mass and not volume. Volume can be calculated based on density. Density can either be manual input or a reference value.</p>
+
+    <p>The data class does also include many more attributes, which by default is disabled. The business function can therefore be reconfigured to show other data entry input values and other calculated values.</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

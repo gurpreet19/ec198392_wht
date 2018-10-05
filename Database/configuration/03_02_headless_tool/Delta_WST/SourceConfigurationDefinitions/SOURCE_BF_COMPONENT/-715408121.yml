@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-715408121'
+keys:
+  BF_CODE: RP.0002
+  T: BF_COMPONENT
+  URL: /report_def_grp_ver
+parentKeys: {}
+properties:
+  BF_CODE: RP.0002
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RP.0002' AND NVL(URL,'IS_NULL') = '/report_def_grp_ver')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_definition' )
+  CLASS_NAME: REPORT_DEF_GRP_VERSION
+  COMP_CODE: report_def_grp_ver
+  NAME: Report Definition Group Version
+  SIGNING_REQ_IND: null
+  URL: /report_def_grp_ver
+related: {}

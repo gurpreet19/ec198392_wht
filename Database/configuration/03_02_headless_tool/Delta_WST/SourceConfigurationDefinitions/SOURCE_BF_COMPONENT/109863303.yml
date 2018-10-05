@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '109863303'
+keys:
+  BF_CODE: WR.0075
+  T: BF_COMPONENT
+  URL: /sub_daily_graph
+parentKeys: {}
+properties:
+  BF_CODE: WR.0075
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0075' AND NVL(URL,'IS_NULL') = '/sub_daily_graph')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_validation/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_SUB_DAY_VALID' )
+  CLASS_NAME: PWEL_SUB_DAY_VALID
+  COMP_CODE: sub_daily_graph
+  NAME: Graph
+  SIGNING_REQ_IND: null
+  URL: /sub_daily_graph
+related: {}

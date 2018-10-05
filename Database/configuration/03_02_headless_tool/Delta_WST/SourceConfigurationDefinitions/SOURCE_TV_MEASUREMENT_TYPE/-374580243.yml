@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-374580243'
+keys:
+  MEASUREMENT_TYPE: KH_PRODUCT
+  T: TV_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: kH Product
+  FORMAT_MASK: '###,###,##0.0'
+  MEASUREMENT_TYPE: KH_PRODUCT
+related: {}

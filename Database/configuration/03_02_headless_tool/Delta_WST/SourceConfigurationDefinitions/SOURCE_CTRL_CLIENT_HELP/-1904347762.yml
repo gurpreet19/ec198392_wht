@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1904347762'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/setup_vat_code_relations_basic
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/setup_vat_code_relations_basic
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

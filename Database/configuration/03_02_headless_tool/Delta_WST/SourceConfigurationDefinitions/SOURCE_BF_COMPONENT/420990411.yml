@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '420990411'
+keys:
+  BF_CODE: CD.0145
+  T: BF_COMPONENT
+  URL: /Cost_Object_Result
+parentKeys: {}
+properties:
+  BF_CODE: CD.0145
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0145' AND NVL(URL,'IS_NULL') = '/Cost_Object_Result')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/cost_object_popup/SHOW_CLOSE_BUTTON/false' )
+  CLASS_NAME: null
+  COMP_CODE: Cost_Object_Result
+  NAME: Cost_Object_Result
+  SIGNING_REQ_IND: null
+  URL: /Cost_Object_Result
+related: {}

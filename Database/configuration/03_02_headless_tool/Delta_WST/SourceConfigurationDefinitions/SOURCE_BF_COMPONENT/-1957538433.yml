@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1957538433'
+keys:
+  BF_CODE: IS.0001
+  T: BF_COMPONENT
+  URL: /imp_interface_table
+parentKeys: {}
+properties:
+  BF_CODE: IS.0001
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IS.0001' AND NVL(URL,'IS_NULL') = '/imp_interface_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_src_mapping_setup' )
+  CLASS_NAME: IMP_SOURCE_INTERFACE
+  COMP_CODE: imp_interface_table
+  NAME: Source Interface
+  SIGNING_REQ_IND: null
+  URL: /imp_interface_table
+related: {}

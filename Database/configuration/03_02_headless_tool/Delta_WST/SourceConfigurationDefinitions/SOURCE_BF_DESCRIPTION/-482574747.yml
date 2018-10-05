@@ -1,0 +1,51 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-482574747'
+keys:
+  BF_DESCRIPTION_NO: CO.1031
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_validation' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This business function is used to enable and disable attributes
+    and set validation rules on attributes in data classes. This BF must not be confused
+    with BF – Object Validation. That BF is used for individual configuration on objects
+    in a class while this one is on the class level.</p><p>The first popup in the
+    navigator lists all classes of type OBJECT which have the “Include_In_Validation”
+    class property enabled.</p><p>The next data section lists all DATA classes which
+    have the “Include_In_Validation” class property enabled, and where the selected
+    OBJECT class is the owner, and the name of the class does not end with ‘_ALLOC’.</p><p>Versions
+    can be created and seen in the data section to the left. A version of the configuration
+    is valid until a new version starts. When a new version is created the old configuration
+    is copied to the new version. A version applies to both tabs.</p><p>The first
+    tab allows the user to mark attributes that should not be editable on the selected
+    data class. The list of attributes visible on the left side are those that are
+    not</p><p></p><ul><li>Part of the primary key.</li><li>Mandatory.</li><li>Functions.</li><li>Relations
+    (relations stored in CLASS_RELATION).</li><li>Disabled.</li></ul><p></p><p>The
+    second tab allows the user the opportunity to add validation rules to attributes
+    on the data class. This means that all objects in the selected data class will
+    get the same validation. The list of attributes will be the same as in the first
+    tab, but will <span style="font-size: 13.3333px;">additionally </span><span style="font-size:
+    10pt;">exclude attributes that are not NUMBER or INTEGER.</span></p><p>Using Min/Max
+    means that a given value must be inside a given range. The percentage is used
+    when the entered values are inside a percentage of yesterday''s (last) entered
+    value for the object. Using both min/max and percent is not allowed.</p><h4>Behavior
+    in BF’s:</h4><p>When the "Not Editable" flag is set on an attribute for an object,
+    the user is not allowed to enter a value on the attribute.</p><p>When a warning
+    occurs, the attribute value will appear in yellow. The user is allowed to save
+    when there are warnings.</p><p>When an error occurs, the value will appear in
+    red. The user is not allowed to save that value. Note that the screens will stop
+    the user from entering values that are not valid, but there can still be data
+    in the system that is wrong. This will typically occur when data is coming in
+    from other sources.</p><h4>Rules:</h4><p>When the configuration is interpreted
+    there are some rules. The following are the levels where configuration can be
+    set:</p><p></p><ul><li>(Access).</li><li>Class meta – Standard Class configuration.</li><li>Presentation
+    syntax. Vieweditable can be set individually on attributes and objects.</li><li>Class
+    Validation.</li><li>Object Validation.</li></ul><p></p><p>The rule for "Not Editable"
+    is that if any level set editable to false (not allowed to change) then the underlying
+    levels cannot turn it on again.</p><p>The rule for Mandatory is the same as above.
+    If any of the levels sets a value to mandatory, the underlying levels cannot turn
+    it off.</p>'
+related: {}

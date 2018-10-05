@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-848598307'
+keys:
+  KEY: /com/ec/tran/cp/screens/cargo_planning_filter_navigator/filtercontext
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: TRAN_CP
+  DESCRIPTION: Filter navigator to remember values across the Cargo Planning module
+  KEY: /com/ec/tran/cp/screens/cargo_planning_filter_navigator/filtercontext
+  LABEL: 'Filter Navigator for CP '
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

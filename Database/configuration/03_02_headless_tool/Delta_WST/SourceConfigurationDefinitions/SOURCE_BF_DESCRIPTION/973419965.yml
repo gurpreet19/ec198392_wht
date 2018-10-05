@@ -1,0 +1,34 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '973419965'
+keys:
+  BF_DESCRIPTION_NO: VO.0024
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: VO.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/fcst_stim_mth_query_quantities' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Forecast Query Quantities screen</strong>    shows
+    a list of Forecast Stream Items for a particular Year based on a set of query
+    parameters.</p><p>    - The result of the query will list all stream items by
+    Months matching the selection criteria in Navigator.<br>    - The Date (Year)
+    parameter and the Forecast Case parameter have to be filled out. Also some of
+    the other parameters have to be set in order to avoid    download of too many
+    stream items. Leaving a parameter blank will act as a wildcard for the parameter.</p><p>    <strong
+    style="color: rgb(0, 0, 153);">Tab Control Section</strong></p><p>    When one
+    year is selected in the Navigator the Tab Control below is showing each month
+    in separate tabs. <br> The content of these tabs is exactly the same    except
+    for the Date parameter.</p><p>    <strong style="color: rgb(0, 0, 153);">Value
+    Table Section</strong></p><p>    The quantities and UOMs can be updated in this
+    data section in the same way as in Monthly Quantity Overview screen (BF VO.0023).</p><p>    <strong>Button
+    <span style="color: rgb(0, 153, 0);">RESET SELECTED CALC METHOD</span></strong><br>    The
+    button enables to reset the Calc Method for the selected Stream Item.</p><p>    <strong>Button
+    <span style="color: rgb(0, 153, 0);">RESET SELECTED CONVERSION FACTORS</span></strong><br>    The
+    button enables to reset the Conversion Factor for the selected Stream Item.</p><p>    <strong>Button
+    <span style="color: rgb(0, 153, 0);">VIEW CASCADE</span></strong><br>    The button
+    explains how the selected number was calculated using other numbers.</p><p>    <strong
+    style="color: rgb(0, 0, 153);">Monthly Query Quantities Form Section</strong></p><p>    In
+    this data section additional information about extra input attributes and the
+    conversion factors is shown.</p>'
+related: {}

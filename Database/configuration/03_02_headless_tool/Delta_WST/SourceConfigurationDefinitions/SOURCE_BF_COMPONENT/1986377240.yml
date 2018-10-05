@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1986377240'
+keys:
+  BF_CODE: WR.0032
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button
+parentKeys: {}
+properties:
+  BF_CODE: WR.0032
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0032' AND NVL(URL,'IS_NULL') = '/com.ec.pf.screenlet.button/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button
+related: {}

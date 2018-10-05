@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1059284728'
+keys:
+  BF_CODE: SA.0008
+  T: BF_COMPONENT
+  URL: /contracts
+parentKeys: {}
+properties:
+  BF_CODE: SA.0008
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SA.0008' AND NVL(URL,'IS_NULL') = '/contracts')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/daily_contract_account_events' )
+  CLASS_NAME: SALE_CONTRACT
+  COMP_CODE: contracts
+  NAME: Contracts
+  SIGNING_REQ_IND: null
+  URL: /contracts
+related: {}

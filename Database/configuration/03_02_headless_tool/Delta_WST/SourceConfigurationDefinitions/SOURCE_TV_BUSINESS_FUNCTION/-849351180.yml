@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-849351180'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/daily_field_forecast/CLASS_NAME/FCST_FIELD_DAY_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: PP.0062
+  NAME: Daily Field Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/daily_field_forecast/CLASS_NAME/FCST_FIELD_DAY_STATUS
+related: {}

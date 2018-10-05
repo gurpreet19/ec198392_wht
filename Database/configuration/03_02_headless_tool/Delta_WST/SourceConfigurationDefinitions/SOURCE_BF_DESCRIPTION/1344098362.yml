@@ -1,0 +1,43 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1344098362'
+keys:
+  BF_DESCRIPTION_NO: TO.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_activity_timesheet' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>During a lift operation, it is essential that a &ldquo;time sheet&rdquo;
+    or &ldquo;port log&rdquo; is prepared, recording all defined activities required
+    during the lifting operation. In Energy<br />Components, activities are defined
+    in the Lifting Activity Code (CO.2005) configuration screen. Product specific
+    activities are defined in Product Lifting Activity Code&nbsp;(CO.20014).</p><p>Activities
+    are either periodical activity with a start-date and end-date, or instance activities
+    with only one daytime (only start-date). Based on information in this&nbsp;business
+    function, a printed time sheet can be produced. This will typically form part
+    of the official cargo documentation to be prepared for each cargo.</p><p>Whenever
+    a Cargo is set to Official and Ready for Loading, a set of lifting activities
+    is instantiated. This means that an activity is created for each lifting activity
+    code&nbsp;marked as &ldquo;Is Instantiated&rdquo; or has a value in &ldquo;Demurrage
+    Code&rdquo; in the Lifting Activity Code configuration screen. If required, additional
+    activities can be entered. An&nbsp;activity code can only be registered once for
+    a given cargo.</p><p>For more information on Cargo Status see Cargo Status Rules.</p><p>Context
+    menu can be enabled on the first data section of the screen to execute the oracle
+    procedure: ue_cargo_action.</p><p>Sample of setting up context menu for the screen,
+    </p><p><strong>insert into BUSINESS_FUNCTION (BF_CODE, NAME, URL, PROFILE_CLASS_NAME)<br
+    />values (&#39;TO.0001&#39;, &#39;Cargo Activity Timesheet&#39;, &#39;/com.ec.tran.to.screens/cargo_activity_timesheet&#39;,
+    &#39;CONTRACT&#39;);<br /><br />insert into BF_COMPONENT (BF_CODE, COMP_CODE,
+    NAME, URL)<br />values (&#39;TO.0001&#39;, &#39;search&#39;, &#39;search&#39;,
+    &#39;/cargo_filter&#39;);<br /><br />insert into CNTX_MENU_ITEM (BF_CODE, COMP_CODE,
+    ITEM_CODE, NAME, ACTION_CLASS_NAME, ACTION_ROW_SCOPE, THRESHOLD_LEVEL,<br />CONFIRM_MESSAGE,
+    REMARK_IND, AUTO_SAVE_IND, MIN_SELECTED_ROW, MAX_SELECTED_ROW, FUNC_MESSAGE, FUNC_VALIDATION,<br
+    />DIVIDER_IND, SORT_ORDER, DESCRIPTION)<br />values (&#39;TO.0001&#39;, &#39;search&#39;,
+    &#39;INSERT_NEXT_RUN&#39;, &#39;Instantiate next run&#39;,<br />&#39;com.ec.tran.cp.screens.model.ejb.GenericCargoAction&#39;,
+    &#39;selectedRows&#39;, 10, null, &#39;N&#39;, &#39;N&#39;, null, null, &#39;&#39;,
+    &#39;&#39;, &#39;N&#39;, 10,<br />&#39;Insert next run&#39;);<br /><br />INSERT
+    into CNTX_MENU_ITEM_PARAM (BF_CODE, COMP_CODE, ITEM_CODE, PARAMETER_NAME, PARAMETER_VALUE,
+    SORT_ORDER)<br />VALUES (&#39;TO.0001&#39;, &#39;search&#39;, &#39;INSERT_NEXT_RUN&#39;,
+    &#39;CARGO_NO&#39;, &#39;Screen.this.currentRow.CARGO_NO&#39;, 10);<br /><br />commit;</strong></p>'
+related: {}

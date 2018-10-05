@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291513071'
+keys:
+  CODE: PO.0033
+  T: TV_STREAM_SET
+parentKeys: {}
+properties:
+  CODE: PO.0033
+  NAME: Daily Water Stream Status, by Stream
+related: {}

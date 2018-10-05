@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-112497606'
+keys:
+  BF_CODE: GD.0056
+  T: BF_COMPONENT
+  URL: /capBidMisc
+parentKeys: {}
+properties:
+  BF_CODE: GD.0056
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0056' AND NVL(URL,'IS_NULL') = '/capBidMisc')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_bid' )
+  CLASS_NAME: CAPACITY_BID_MISC
+  COMP_CODE: capBidMisc
+  NAME: Misc
+  SIGNING_REQ_IND: null
+  URL: /capBidMisc
+related: {}

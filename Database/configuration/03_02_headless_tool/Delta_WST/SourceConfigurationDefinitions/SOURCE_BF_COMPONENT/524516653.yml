@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '524516653'
+keys:
+  BF_CODE: GD.0106
+  T: BF_COMPONENT
+  URL: /daynomdelivery
+parentKeys: {}
+properties:
+  BF_CODE: GD.0106
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0106' AND NVL(URL,'IS_NULL') = '/daynomdelivery')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_nomination_delivery/CLASS/TRNP_DAY_DELIVERY/CLASS_SUB/TRNP_SUB_DAY_DELIVERY/TARGET/NOMINATION_POINT' )
+  CLASS_NAME: TRNP_DAY_DELIVERY
+  COMP_CODE: daynomdelivery
+  NAME: Daily Nomination Delivery
+  SIGNING_REQ_IND: null
+  URL: /daynomdelivery
+related: {}

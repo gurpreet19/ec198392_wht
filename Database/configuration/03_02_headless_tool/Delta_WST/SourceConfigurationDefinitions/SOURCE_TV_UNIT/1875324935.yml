@@ -1,0 +1,124 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1875324935'
+keys:
+  T: TV_UNIT
+  UNIT: LBSPERBBLS
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Pound per barrel
+  FIN_CODE: null
+  LABEL: lb/bbl
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: LBSPERBBLS
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBSPERBBLS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KGPERSM3
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERBBLS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBSPERBBLS
+      MULT_FACT: 2.854126
+      PRECISION: null
+      TO_UNIT: KGPERSM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBSPERBBLS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: KGPERM3
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERBBLS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: LBSPERBBLS
+      MULT_FACT: 2.854126153
+      PRECISION: null
+      TO_UNIT: KGPERM3
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: OIL_DENS
+      T: TV_UOM_SETUP
+      UNIT: LBSPERBBLS
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERBBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: OIL_DENS
+      REPORT_UNIT: Y
+      UNIT: LBSPERBBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_OIL_DENS
+      T: TV_UOM_SETUP
+      UNIT: LBSPERBBLS
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERBBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_OIL_DENS
+      REPORT_UNIT: Y
+      UNIT: LBSPERBBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: WATER_DENS
+      T: TV_UOM_SETUP
+      UNIT: LBSPERBBLS
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERBBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: WATER_DENS
+      REPORT_UNIT: Y
+      UNIT: LBSPERBBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_WATER_DENS
+      T: TV_UOM_SETUP
+      UNIT: LBSPERBBLS
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERBBLS
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_WATER_DENS
+      REPORT_UNIT: Y
+      UNIT: LBSPERBBLS
+      VIEW_UNIT: N
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_LNG_DENS
+      T: TV_UOM_SETUP
+      UNIT: LBSPERBBLS
+    parentKeys:
+      TV_UNIT.UNIT: LBSPERBBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_LNG_DENS
+      REPORT_UNIT: Y
+      UNIT: LBSPERBBLS
+      VIEW_UNIT: null

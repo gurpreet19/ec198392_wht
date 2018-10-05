@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1760687210'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.bpm.ext.ec.web/jbpm_process_notification
+parentKeys: {}
+properties:
+  BF_CODE: PA.0006
+  NAME: Process Notifications
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.bpm.ext.ec.web/jbpm_process_notification
+related: {}

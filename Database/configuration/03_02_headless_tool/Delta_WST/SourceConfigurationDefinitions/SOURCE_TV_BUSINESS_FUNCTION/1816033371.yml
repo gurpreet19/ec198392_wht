@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1816033371'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.fc.screens/daily_afs/TARGET/SUPPLY_POINT/CLASS1/FCST_SP_DAY_AFS/CLASS2/FCST_SP_DAY_CPY_AFS
+parentKeys: {}
+properties:
+  BF_CODE: FC.0025
+  NAME: Daily AFS
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.fc.screens/daily_afs/TARGET/SUPPLY_POINT/CLASS1/FCST_SP_DAY_AFS/CLASS2/FCST_SP_DAY_CPY_AFS
+related: {}

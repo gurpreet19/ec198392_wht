@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '237104309'
+keys:
+  BF_CODE: CD.0134
+  T: BF_COMPONENT
+  URL: /standard_navigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0134
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0134' AND NVL(URL,'IS_NULL') = '/standard_navigator')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/setup_vat_code_relations_basic' )
+  CLASS_NAME: null
+  COMP_CODE: StandardNavigator
+  NAME: Standard Navigator
+  SIGNING_REQ_IND: null
+  URL: /standard_navigator
+related: {}

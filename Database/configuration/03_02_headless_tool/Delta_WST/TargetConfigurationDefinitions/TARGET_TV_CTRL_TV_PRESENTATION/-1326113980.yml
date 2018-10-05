@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1326113980'
+keys:
+  COMPONENT_ID: ( SELECT 'CARGO_ADM' FROM DUAL )
+  T: TV_CTRL_TV_PRESENTATION
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.ca.screens/cargo
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ( SELECT 'CARGO_ADM' FROM DUAL )
+  COMPONENT_LABEL: Cargo And Parcel Information
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ( SELECT 'FLD_CARGO_ADM' FROM DUAL )
+  PARENT_WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+  SORT_NO: 10.0
+  WINDOW_ID: ( SELECT 'ENERGYX' FROM DUAL )
+related: {}

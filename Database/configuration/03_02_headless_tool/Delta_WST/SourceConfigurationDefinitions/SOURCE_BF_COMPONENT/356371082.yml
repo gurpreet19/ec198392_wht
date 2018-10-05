@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '356371082'
+keys:
+  BF_CODE: CD.0013
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CD.0013
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0013' AND NVL(URL,'IS_NULL') = '/daytimes')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_TEMPLATE' )
+  CLASS_NAME: DOC_TEMPLATE
+  COMP_CODE: daytimes
+  NAME: New Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

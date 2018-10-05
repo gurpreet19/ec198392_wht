@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1431976943'
+keys:
+  BF_CODE: CD.0118
+  T: BF_COMPONENT
+  URL: /relations
+parentKeys: {}
+properties:
+  BF_CODE: CD.0118
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0118' AND NVL(URL,'IS_NULL') = '/relations')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/setup_company_relations_basic/CLASS_NAME/VENDOR' )
+  CLASS_NAME: null
+  COMP_CODE: relations
+  NAME: Relations
+  SIGNING_REQ_IND: null
+  URL: /relations
+related: {}

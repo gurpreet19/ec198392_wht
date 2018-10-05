@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1777398504'
+keys:
+  BF_CODE: IS.0003
+  T: BF_COMPONENT
+  URL: /imp_staging_data_table
+parentKeys: {}
+properties:
+  BF_CODE: IS.0003
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IS.0003' AND NVL(URL,'IS_NULL') = '/imp_staging_data_table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_staging' )
+  CLASS_NAME: null
+  COMP_CODE: imp_staging_data_table
+  NAME: Staging Data Table
+  SIGNING_REQ_IND: null
+  URL: /imp_staging_data_table
+related: {}

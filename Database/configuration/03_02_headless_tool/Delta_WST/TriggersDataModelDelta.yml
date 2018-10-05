@@ -1,0 +1,1676 @@
+IU_STOR_BLEND_BATCH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STOR_BLEND_BATCH
+  status: MODIFIED
+  type: TRIGGER
+BIUD_CLASS_DEPENDENCY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_DEPENDENCY_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_NOMPNT_SUB_DAY_CONFIRMATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_SUB_DAY_CONFIRMATION
+  status: MODIFIED
+  type: TRIGGER
+IU_BPM_EC_GCOMMAND_HANDLER_P: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_EC_GCOMMAND_HANDLER_P
+  status: ADDED
+  type: TRIGGER
+IU_OBJLOC_DAY_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJLOC_DAY_NOMINATION
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SUB_DAY_CP_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SUB_DAY_CP_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_STOR_SUB_DAY_FORECAST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STOR_SUB_DAY_FORECAST
+  status: MODIFIED
+  type: TRIGGER
+IU_STIM_PENDING_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_PENDING_ITEM
+  status: ADDED
+  type: TRIGGER
+IU_SUMMARY_SETUP_LIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_SUMMARY_SETUP_LIST
+  status: ADDED
+  type: TRIGGER
+IU_STOR_DAY_FIFO_COMP_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STOR_DAY_FIFO_COMP_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_DEFERMENT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_DEFERMENT_EVENT
+  status: DELETED
+  type: TRIGGER
+IU_DEF_DAY_MASTER_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DEF_DAY_MASTER_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_PIPE_SUB_DAY_PC_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PIPE_SUB_DAY_PC_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IUD_T_IFAC_PRICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_T_IFAC_PRICE
+  status: ADDED
+  type: TRIGGER
+IU_EQPM_SAMPLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_EQPM_SAMPLE
+  status: DELETED
+  type: TRIGGER
+IU_STIM_PENDING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_PENDING
+  status: ADDED
+  type: TRIGGER
+IU_PWEL_SUB_DAY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PWEL_SUB_DAY_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+I_OBJECT_LIST_UPLOAD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_OBJECT_LIST_UPLOAD
+  status: ADDED
+  type: TRIGGER
+IU_OBJECT_LIST_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECT_LIST_SETUP
+  status: ADDED
+  type: TRIGGER
+BIU_CLASS_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIU_CLASS_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_CARGO_HARBOUR_DUES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CARGO_HARBOUR_DUES
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_PRODUCT_MEAS_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PRODUCT_MEAS_SETUP
+  status: MODIFIED
+  type: TRIGGER
+IU_TRANS_TEMPLATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANS_TEMPLATE
+  status: MODIFIED
+  type: TRIGGER
+D_CONT_LINE_ITEM_DIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_CONT_LINE_ITEM_DIST
+  status: ADDED
+  type: TRIGGER
+IU_PROD_PRICE_SUB_DAY_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PROD_PRICE_SUB_DAY_VALUE
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_VERSION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_VERSION
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_DP_TRADE_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_DP_TRADE_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_SCHEDULE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_SCHEDULE
+  status: MODIFIED
+  type: TRIGGER
+IU_SPLIT_KEY_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_SPLIT_KEY_SETUP
+  status: ADDED
+  type: TRIGGER
+IU_CALC_RULE_VERSION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALC_RULE_VERSION
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_DAY_DELIVERY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_DAY_DELIVERY
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_SUB_DAY_DP_AVAIL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_SUB_DAY_DP_AVAIL
+  status: MODIFIED
+  type: TRIGGER
+IU_IFLW_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_IFLW_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+BS_CLASS_RELATION_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BS_CLASS_RELATION_CNFG
+  status: ADDED
+  type: TRIGGER
+AU_STIM_DAY_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AU_STIM_DAY_VALUE
+  status: ADDED
+  type: TRIGGER
+BS_NAV_MODEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BS_NAV_MODEL
+  status: ADDED
+  type: TRIGGER
+BIUD_CLASS_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_WELL_EQUIP_DOWNTIME: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_EQUIP_DOWNTIME
+  status: DELETED
+  type: TRIGGER
+IU_CONT_PAY_TRACKING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_PAY_TRACKING
+  status: ADDED
+  type: TRIGGER
+BIU_CLASS_REL_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIU_CLASS_REL_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_PFLW_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PFLW_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_IMP_STAGING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_IMP_STAGING
+  status: ADDED
+  type: TRIGGER
+IU_OBJECTS_DEFERMENT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECTS_DEFERMENT_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_REPORT_SET_LIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REPORT_SET_LIST
+  status: MODIFIED
+  type: TRIGGER
+IU_CAPACITY_RELEASE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CAPACITY_RELEASE
+  status: MODIFIED
+  type: TRIGGER
+IU_ACTION_PARAMETER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_ACTION_PARAMETER
+  status: MODIFIED
+  type: TRIGGER
+IU_TRANS_INV_LI_PRODUCT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANS_INV_LI_PRODUCT
+  status: ADDED
+  type: TRIGGER
+IUR_SPLIT_KEY_VERSION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUR_SPLIT_KEY_VERSION
+  status: ADDED
+  type: TRIGGER
+IU_MESSAGE_DISTRIBUTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_MESSAGE_DISTRIBUTION
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_DAY_FORECAST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_DAY_FORECAST
+  status: ADDED
+  type: TRIGGER
+IU_WEBO_PRESS_TEST_GRAD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WEBO_PRESS_TEST_GRAD
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_MTH_DELIVERY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_MTH_DELIVERY
+  status: ADDED
+  type: TRIGGER
+IU_OBJLOC_SUB_DAY_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJLOC_SUB_DAY_NOMINATION
+  status: MODIFIED
+  type: TRIGGER
+IU_CALC_PROCESS_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALC_PROCESS_LOG
+  status: MODIFIED
+  type: TRIGGER
+AIU_STIM_MTH_BOOKED: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AIU_STIM_MTH_BOOKED
+  status: ADDED
+  type: TRIGGER
+IU_CONT_TRANS_REALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_TRANS_REALLOC
+  status: ADDED
+  type: TRIGGER
+AIU_BUSINESS_FUNCTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AIU_BUSINESS_FUNCTION
+  status: MODIFIED
+  type: TRIGGER
+IU_PIPE_PC_TRANSACTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PIPE_PC_TRANSACTION
+  status: MODIFIED
+  type: TRIGGER
+IU_REVN_LOG_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REVN_LOG_ITEM
+  status: ADDED
+  type: TRIGGER
+IU_MAPPING_CODE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_MAPPING_CODE
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_PC_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_PC_ANALYSIS
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_DAY_LOC_INV_TRANS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_DAY_LOC_INV_TRANS
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SUB_DAY_PCCPY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SUB_DAY_PCCPY_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_CARRIER_INSPECTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CARRIER_INSPECTION
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_PERIOD_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_PERIOD_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_REVN_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REVN_LOG
+  status: ADDED
+  type: TRIGGER
+IU_CARGO_LIFTING_DELAY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CARGO_LIFTING_DELAY
+  status: MODIFIED
+  type: TRIGGER
+IU_STATUS_PROCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STATUS_PROCESS
+  status: MODIFIED
+  type: TRIGGER
+BIUD_CLASS_TRA_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_TRA_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_STRM_ANALYSIS_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_ANALYSIS_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_TASK: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TASK
+  status: MODIFIED
+  type: TRIGGER
+IU_CHOKE_MODEL_LIP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CHOKE_MODEL_LIP
+  status: MODIFIED
+  type: TRIGGER
+IU_TANK_MEASUREMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TANK_MEASUREMENT
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_SWING_CONNECTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_SWING_CONNECTION
+  status: MODIFIED
+  type: TRIGGER
+AU_CONT_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AU_CONT_LINE_ITEM
+  status: ADDED
+  type: TRIGGER
+AIU_STIM_MTH_REPORTED: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AIU_STIM_MTH_REPORTED
+  status: ADDED
+  type: TRIGGER
+IU_OBJECT_AGA_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECT_AGA_ANALYSIS
+  status: MODIFIED
+  type: TRIGGER
+IU_CAPACITY_BID: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CAPACITY_BID
+  status: MODIFIED
+  type: TRIGGER
+IU_INV_VALUATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_INV_VALUATION
+  status: ADDED
+  type: TRIGGER
+AU_CONT_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AU_CONT_DOCUMENT
+  status: ADDED
+  type: TRIGGER
+IU_CALC_BATCH_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALC_BATCH_LOG
+  status: MODIFIED
+  type: TRIGGER
+AU_STIM_MTH_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AU_STIM_MTH_VALUE
+  status: ADDED
+  type: TRIGGER
+IU_DEFER_LOSS_STRM_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DEFER_LOSS_STRM_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_MEMBER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_MEMBER
+  status: ADDED
+  type: TRIGGER
+IU_FLWL_SUB_DAY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FLWL_SUB_DAY_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+D_CONT_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_CONT_LINE_ITEM
+  status: ADDED
+  type: TRIGGER
+IU_BPM_EC_EVENT_ARCHIVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_EC_EVENT_ARCHIVE
+  status: ADDED
+  type: TRIGGER
+IU_FCTY_DEFERMENT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCTY_DEFERMENT_EVENT
+  status: DELETED
+  type: TRIGGER
+IU_PERF_MTH_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PERF_MTH_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+BIUD_CLASS_ATTRIBUTE_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_ATTRIBUTE_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_DUMMY_OBJECT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DUMMY_OBJECT
+  status: MODIFIED
+  type: TRIGGER
+IU_STREAM_SEASONAL_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STREAM_SEASONAL_VALUE
+  status: ADDED
+  type: TRIGGER
+IU_EQUIP_DOWNTIME: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_EQUIP_DOWNTIME
+  status: ADDED
+  type: TRIGGER
+IU_CONT_QTY_STIM_MTH_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_QTY_STIM_MTH_VALUE
+  status: ADDED
+  type: TRIGGER
+IU_BPM_EC_GCOMMAND_OP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_EC_GCOMMAND_OP
+  status: ADDED
+  type: TRIGGER
+IU_TEST_DEVICE_EVENT_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TEST_DEVICE_EVENT_STATUS
+  status: ADDED
+  type: TRIGGER
+IU_MESSAGE_WORKFLOW_ALERT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_MESSAGE_WORKFLOW_ALERT
+  status: MODIFIED
+  type: TRIGGER
+IU_ACTION_INSTANCE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_ACTION_INSTANCE
+  status: MODIFIED
+  type: TRIGGER
+IU_TEST_DEVICE_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TEST_DEVICE_ANALYSIS
+  status: ADDED
+  type: TRIGGER
+IUD_V_TRNP_DAY_NOM_PATH_MATRIX: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_TRNP_DAY_NOM_PATH_MATRIX
+  status: ADDED
+  type: TRIGGER
+BIUD_CLASS_TRIGGER_ACTN_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_TRIGGER_ACTN_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_FCST_COMPENSATION_EVENTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_COMPENSATION_EVENTS
+  status: ADDED
+  type: TRIGGER
+IU_WBI_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WBI_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+D_FIN_ACCOUNT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_FIN_ACCOUNT
+  status: ADDED
+  type: TRIGGER
+IU_CARGO_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CARGO_ANALYSIS
+  status: MODIFIED
+  type: TRIGGER
+IU_OBJECT_SUB_DAY_DIM1_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECT_SUB_DAY_DIM1_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_PARCEL_LOAD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PARCEL_LOAD
+  status: MODIFIED
+  type: TRIGGER
+IUD_STOR_SUB_DAY_LIFT_NOM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_STOR_SUB_DAY_LIFT_NOM
+  status: ADDED
+  type: TRIGGER
+IUD_V_FCST_CARRIER_CHART: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_FCST_CARRIER_CHART
+  status: ADDED
+  type: TRIGGER
+U_CONT_JOURNAL_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: U_CONT_JOURNAL_SUMMARY
+  status: ADDED
+  type: TRIGGER
+BIUD_CLASS_ATTR_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_ATTR_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_NOMPNT_DAY_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_DAY_NOMINATION
+  status: MODIFIED
+  type: TRIGGER
+IU_CONTRACT_ATTRIBUTE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONTRACT_ATTRIBUTE
+  status: MODIFIED
+  type: TRIGGER
+IU_DELPNT_SUB_DAY_TARGET: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DELPNT_SUB_DAY_TARGET
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_OBJECT_FLUID: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_OBJECT_FLUID
+  status: ADDED
+  type: TRIGGER
+IU_TRANS_INV_LI_PR_VAR_DIM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANS_INV_LI_PR_VAR_DIM
+  status: ADDED
+  type: TRIGGER
+IU_CNTX_MENU_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTX_MENU_ITEM
+  status: MODIFIED
+  type: TRIGGER
+IU_CAPACITY_REL_REPUT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CAPACITY_REL_REPUT
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_FORMULA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_FORMULA
+  status: MODIFIED
+  type: TRIGGER
+D_FIN_COST_CENTER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_FIN_COST_CENTER
+  status: ADDED
+  type: TRIGGER
+IU_T_ALERT_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_T_ALERT_LOG
+  status: ADDED
+  type: TRIGGER
+IU_OBJ_FLUID_ANA_DETAIL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJ_FLUID_ANA_DETAIL
+  status: MODIFIED
+  type: TRIGGER
+IU_LIFT_ACC_SUB_DAY_FCST_FC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_LIFT_ACC_SUB_DAY_FCST_FC
+  status: MODIFIED
+  type: TRIGGER
+IU_PRODUCT_OBJECT_COMB: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PRODUCT_OBJECT_COMB
+  status: MODIFIED
+  type: TRIGGER
+D_FIN_WBS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_FIN_WBS
+  status: ADDED
+  type: TRIGGER
+IU_STRM_SUB_DAY_PC_CP_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SUB_DAY_PC_CP_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_DAY_CAP_REQUEST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_DAY_CAP_REQUEST
+  status: MODIFIED
+  type: TRIGGER
+IU_LIFT_ACC_SUB_DAY_BAL_AL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_LIFT_ACC_SUB_DAY_BAL_AL
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_SUB_DAY_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_SUB_DAY_NOMINATION
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_OBJ_EVENT_DIM1_TRAN_FAC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_OBJ_EVENT_DIM1_TRAN_FAC
+  status: MODIFIED
+  type: TRIGGER
+IU_STORAGE_LIFT_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STORAGE_LIFT_NOMINATION
+  status: MODIFIED
+  type: TRIGGER
+IU_REPORT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REPORT
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_TRANS_CONFIG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_TRANS_CONFIG
+  status: MODIFIED
+  type: TRIGGER
+IU_PERFORMANCE_CURVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PERFORMANCE_CURVE
+  status: MODIFIED
+  type: TRIGGER
+IU_CARGO_STOR_BATCH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CARGO_STOR_BATCH
+  status: MODIFIED
+  type: TRIGGER
+D_DEFERMENT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_DEFERMENT_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_CNTX_MENU_ITEM_PARAM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTX_MENU_ITEM_PARAM
+  status: MODIFIED
+  type: TRIGGER
+AIU_STIM_MTH_ACTUAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AIU_STIM_MTH_ACTUAL
+  status: ADDED
+  type: TRIGGER
+AID_PARCEL_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AID_PARCEL_NOMINATION
+  status: MODIFIED
+  type: TRIGGER
+IU_CALC_PROC_ELM_ITERATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALC_PROC_ELM_ITERATION
+  status: MODIFIED
+  type: TRIGGER
+IU_CONTROL_POINT_LINK: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONTROL_POINT_LINK
+  status: MODIFIED
+  type: TRIGGER
+IU_TASK_DETAIL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TASK_DETAIL
+  status: MODIFIED
+  type: TRIGGER
+IU_MESSAGE_OUT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_MESSAGE_OUT
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_NOMPNT_SUB_DAY_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_NOMPNT_SUB_DAY_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_AUDIT_LOGIN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_AUDIT_LOGIN
+  status: MODIFIED
+  type: TRIGGER
+IU_EQUITY_SHARE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_EQUITY_SHARE
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_ACC_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_ACC_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_STIM_FCST_MTH_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_FCST_MTH_VALUE
+  status: ADDED
+  type: TRIGGER
+IU_CONT_JOURNAL_ENTRY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_JOURNAL_ENTRY
+  status: ADDED
+  type: TRIGGER
+IU_PRICE_INDEX_SUB_DAY_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PRICE_INDEX_SUB_DAY_VALUE
+  status: MODIFIED
+  type: TRIGGER
+IU_CONT_ERP_POSTINGS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_ERP_POSTINGS
+  status: ADDED
+  type: TRIGGER
+IU_REVN_DATA_FILTER_RULE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REVN_DATA_FILTER_RULE
+  status: ADDED
+  type: TRIGGER
+IUD_V_FLUID_ANALYSIS_COMP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_FLUID_ANALYSIS_COMP
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_CURVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_CURVE
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_MTH_NOM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_MTH_NOM
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_COMPANY_SWAP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_COMPANY_SWAP
+  status: MODIFIED
+  type: TRIGGER
+IU_DEF_DAY_SUMMARY_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DEF_DAY_SUMMARY_EVENT
+  status: MODIFIED
+  type: TRIGGER
+I_IFAC_JOURNAL_ENTRY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_IFAC_JOURNAL_ENTRY
+  status: ADDED
+  type: TRIGGER
+IU_BPM_PA_COMMAND_QUEUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_PA_COMMAND_QUEUE
+  status: ADDED
+  type: TRIGGER
+IU_CNTR_BUNDLE_XFER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_BUNDLE_XFER
+  status: MODIFIED
+  type: TRIGGER
+IU_HARBOUR_INTERRUPTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_HARBOUR_INTERRUPTION
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_NOMLOC_PERIOD_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_NOMLOC_PERIOD_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_PROCESS_MONITOR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PROCESS_MONITOR
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_OBJECT_FLUID_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_OBJECT_FLUID_ANALYSIS
+  status: MODIFIED
+  type: TRIGGER
+IU_T_BASIS_CLIENTERRORLOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_T_BASIS_CLIENTERRORLOG
+  status: MODIFIED
+  type: TRIGGER
+IU_ALLOC_JOB_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_ALLOC_JOB_LOG
+  status: MODIFIED
+  type: TRIGGER
+IU_TRANS_INV_LINE_OVERRIDE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANS_INV_LINE_OVERRIDE
+  status: ADDED
+  type: TRIGGER
+IU_BF_SCREENSHOT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BF_SCREENSHOT
+  status: ADDED
+  type: TRIGGER
+BIUD_NAV_MODEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_NAV_MODEL
+  status: ADDED
+  type: TRIGGER
+IU_REPORT_TEMPLATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REPORT_TEMPLATE
+  status: MODIFIED
+  type: TRIGGER
+BIUD_CLASS_RELATION_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_RELATION_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_BPM_PROC_MONITOR_NODE_CONF: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_PROC_MONITOR_NODE_CONF
+  status: ADDED
+  type: TRIGGER
+IU_BPM_EC_GCOMMAND_OP_P: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_EC_GCOMMAND_OP_P
+  status: ADDED
+  type: TRIGGER
+IU_LOB_TEMPLATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_LOB_TEMPLATE
+  status: MODIFIED
+  type: TRIGGER
+IU_MESSAGE_ATTACHMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_MESSAGE_ATTACHMENT
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_BLOWDOWN_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_BLOWDOWN_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_WET_GAS_HOURLY_PROFILE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WET_GAS_HOURLY_PROFILE
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_PERIOD_CAPACITY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_PERIOD_CAPACITY
+  status: MODIFIED
+  type: TRIGGER
+IU_OPLOC_SUB_DAY_RESTRICT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OPLOC_SUB_DAY_RESTRICT
+  status: MODIFIED
+  type: TRIGGER
+IU_STOR_SUB_DAY_BAL_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STOR_SUB_DAY_BAL_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_STOR_SUB_DAY_OFFICIAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STOR_SUB_DAY_OFFICIAL
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_NOMPNT_DAY_AFS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_NOMPNT_DAY_AFS
+  status: ADDED
+  type: TRIGGER
+IU_LOG_ENTRY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_LOG_ENTRY
+  status: MODIFIED
+  type: TRIGGER
+IU_BPM_EC_EVENT_INBOUND: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_EC_EVENT_INBOUND
+  status: ADDED
+  type: TRIGGER
+I_CNTR_PG_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_CNTR_PG_SETUP
+  status: ADDED
+  type: TRIGGER
+IU_OBJLOC_SUB_DAY_TARGET: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJLOC_SUB_DAY_TARGET
+  status: ADDED
+  type: TRIGGER
+IU_PSEP_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PSEP_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+BS_CLASS_REL_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BS_CLASS_REL_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_REPORT_DEFINITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REPORT_DEFINITION
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMLOC_PERIOD_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMLOC_PERIOD_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_WEBO_INTERVAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WEBO_INTERVAL
+  status: MODIFIED
+  type: TRIGGER
+IU_SCTR_DAY_LIFTING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_SCTR_DAY_LIFTING
+  status: ADDED
+  type: TRIGGER
+IU_WBI_SAMPLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WBI_SAMPLE
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_MTH_TRANSFER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_MTH_TRANSFER
+  status: MODIFIED
+  type: TRIGGER
+IU_REPORT_RUNABLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REPORT_RUNABLE
+  status: MODIFIED
+  type: TRIGGER
+BIUD_CLASS_REL_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_REL_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IUD_T_IFAC_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_T_IFAC_QTY
+  status: ADDED
+  type: TRIGGER
+IU_PTST_DEFINITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PTST_DEFINITION
+  status: MODIFIED
+  type: TRIGGER
+IU_CHEM_TANK_PRODUCT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CHEM_TANK_PRODUCT
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_STOR_LIFT_CPY_SPLIT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_STOR_LIFT_CPY_SPLIT
+  status: ADDED
+  type: TRIGGER
+IU_FCST_MTH_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_MTH_STATUS
+  status: ADDED
+  type: TRIGGER
+IU_OBJECT_SUB_DAY_DIM2_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECT_SUB_DAY_DIM2_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_QUALITY_HANDLING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_QUALITY_HANDLING
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_SUB_DAY_DP_SHIP_NOM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_SUB_DAY_DP_SHIP_NOM
+  status: MODIFIED
+  type: TRIGGER
+IU_CONTRACT_PREPARE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONTRACT_PREPARE
+  status: MODIFIED
+  type: TRIGGER
+IU_REPORT_SET: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REPORT_SET
+  status: MODIFIED
+  type: TRIGGER
+IU_OBJECT_ITEM_COMMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECT_ITEM_COMMENT
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_PERIOD_TOTALIZER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_PERIOD_TOTALIZER
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SAMPLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SAMPLE
+  status: MODIFIED
+  type: TRIGGER
+I_IFAC_ERP_POSTINGS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_IFAC_ERP_POSTINGS
+  status: ADDED
+  type: TRIGGER
+IU_FCTY_SPILL_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCTY_SPILL_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_PTST_RESULT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PTST_RESULT
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_ANALYSIS
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_FCST_CARGO_SUB_DAY_BERTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_FCST_CARGO_SUB_DAY_BERTH
+  status: ADDED
+  type: TRIGGER
+IU_TEST_DEVICE_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TEST_DEVICE_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_PWEL_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PWEL_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_REPT_SET_CONDITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REPT_SET_CONDITION
+  status: MODIFIED
+  type: TRIGGER
+U_FIN_DOC_COMPANY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: U_FIN_DOC_COMPANY
+  status: ADDED
+  type: TRIGGER
+AU_CONT_LINE_ITEM_DIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AU_CONT_LINE_ITEM_DIST
+  status: ADDED
+  type: TRIGGER
+BIUD_CLASS_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIUD_CLASS_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_FCTY_ASSET_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCTY_ASSET_ANALYSIS
+  status: ADDED
+  type: TRIGGER
+IU_EQPM_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_EQPM_ANALYSIS
+  status: MODIFIED
+  type: TRIGGER
+IU_EQPM_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_EQPM_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_BPM_EC_GCOMMAND_HANDLER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_EC_GCOMMAND_HANDLER
+  status: ADDED
+  type: TRIGGER
+IU_BF_DESCRIPTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BF_DESCRIPTION
+  status: ADDED
+  type: TRIGGER
+IU_STIM_MTH_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_MTH_VALUE
+  status: ADDED
+  type: TRIGGER
+IU_IFLW_PERIOD_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_IFLW_PERIOD_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_IWEL_MTH_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_IWEL_MTH_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_ALLOC_JOB_DEFINITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_ALLOC_JOB_DEFINITION
+  status: MODIFIED
+  type: TRIGGER
+IU_PWEL_EVENT_INVENTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PWEL_EVENT_INVENTORY
+  status: MODIFIED
+  type: TRIGGER
+IU_PWEL_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PWEL_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+D_CONT_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_CONT_DOCUMENT
+  status: ADDED
+  type: TRIGGER
+IU_RECORD_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_RECORD_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_BPM_PROC_OV_LIST_PROPERTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_PROC_OV_LIST_PROPERTY
+  status: ADDED
+  type: TRIGGER
+IU_MHM_MSG_DM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_MHM_MSG_DM
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_WELL_CONN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_WELL_CONN
+  status: MODIFIED
+  type: TRIGGER
+IU_CONT_TRANSACTION_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_TRANSACTION_QTY
+  status: ADDED
+  type: TRIGGER
+IU_NOMPNT_SUB_DAY_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_SUB_DAY_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_INTERFACE_CONTENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_INTERFACE_CONTENT
+  status: ADDED
+  type: TRIGGER
+I_IFAC_CARGO_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_IFAC_CARGO_VALUE
+  status: ADDED
+  type: TRIGGER
+IU_ALLOC_JOB_PASS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_ALLOC_JOB_PASS
+  status: MODIFIED
+  type: TRIGGER
+IU_PERF_MTH_COMP_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PERF_MTH_COMP_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+AU_CONT_TRANSACTION_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AU_CONT_TRANSACTION_QTY
+  status: ADDED
+  type: TRIGGER
+IU_T_BASIS_CLIENTMESSAGE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_T_BASIS_CLIENTMESSAGE
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_EQPM_MASTER_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_EQPM_MASTER_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_FCST_SP_DAY_AFS_OVERVIEW: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_FCST_SP_DAY_AFS_OVERVIEW
+  status: ADDED
+  type: TRIGGER
+IU_CNTR_SUB_DAY_CAP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_SUB_DAY_CAP
+  status: MODIFIED
+  type: TRIGGER
+IU_PWEL_RESULT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PWEL_RESULT
+  status: MODIFIED
+  type: TRIGGER
+IU_STIM_MTH_REPORTED: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_MTH_REPORTED
+  status: ADDED
+  type: TRIGGER
+IU_CONT_LI_DIST_COMPANY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_LI_DIST_COMPANY
+  status: ADDED
+  type: TRIGGER
+I_TRANS_INV_LINE_OVERRIDE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_TRANS_INV_LINE_OVERRIDE
+  status: ADDED
+  type: TRIGGER
+IU_STOR_SUB_DAY_PC_FCST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STOR_SUB_DAY_PC_FCST
+  status: MODIFIED
+  type: TRIGGER
+IU_CURVE_POINT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CURVE_POINT
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_REPT_SET_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_REPT_SET_COMBINATION
+  status: MODIFIED
+  type: TRIGGER
+IU_CONT_JOURNAL_ENTRY_EXCL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_JOURNAL_ENTRY_EXCL
+  status: ADDED
+  type: TRIGGER
+I_IFAC_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_IFAC_DOCUMENT
+  status: ADDED
+  type: TRIGGER
+IU_CURVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CURVE
+  status: MODIFIED
+  type: TRIGGER
+BIU_CLASS_TRA_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIU_CLASS_TRA_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+DDL_ECKERNEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: DDL_ECKERNEL
+  status: MODIFIED
+  type: TRIGGER
+IU_STORAGE_LIFT_NOM_SPLIT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STORAGE_LIFT_NOM_SPLIT
+  status: MODIFIED
+  type: TRIGGER
+IU_CLASS_ATTR_PRES_CONFIG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CLASS_ATTR_PRES_CONFIG
+  status: MODIFIED
+  type: TRIGGER
+IU_STOR_SUB_DAY_FCST_FCAST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STOR_SUB_DAY_FCST_FCAST
+  status: MODIFIED
+  type: TRIGGER
+IU_EQPM_SUB_DAY_RESTRICTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_EQPM_SUB_DAY_RESTRICTION
+  status: MODIFIED
+  type: TRIGGER
+IU_FLUID_ANALYSIS_COMPONENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FLUID_ANALYSIS_COMPONENT
+  status: MODIFIED
+  type: TRIGGER
+CLASS_RELATION_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: CLASS_RELATION_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_FCST_NOMPNT_PERIOD_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_NOMPNT_PERIOD_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_TAG_EVENT_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TAG_EVENT_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_NOMPNT_DAY_CPY_AFS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_NOMPNT_DAY_CPY_AFS
+  status: ADDED
+  type: TRIGGER
+IU_STIM_DAY_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_DAY_VALUE
+  status: ADDED
+  type: TRIGGER
+IUD_V_SCHEDULE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_SCHEDULE
+  status: MODIFIED
+  type: TRIGGER
+IU_MESSAGE_TEMPLATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_MESSAGE_TEMPLATE
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_COMMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_COMMENT
+  status: ADDED
+  type: TRIGGER
+IU_CONT_JOURNAL_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_JOURNAL_SUMMARY
+  status: ADDED
+  type: TRIGGER
+IU_FLOWLINE_SUB_WELL_CONN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FLOWLINE_SUB_WELL_CONN
+  status: MODIFIED
+  type: TRIGGER
+IU_IWEL_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_IWEL_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_CAPACITY_RECALL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CAPACITY_RECALL
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_NP_DAY_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_NP_DAY_NOMINATION
+  status: ADDED
+  type: TRIGGER
+IUD_V_ACTION_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_ACTION_VALUE
+  status: MODIFIED
+  type: TRIGGER
+IU_PWEL_SAMPLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PWEL_SAMPLE
+  status: MODIFIED
+  type: TRIGGER
+IU_WEATHER_SITE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WEATHER_SITE
+  status: MODIFIED
+  type: TRIGGER
+IU_PARCEL_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PARCEL_NOMINATION
+  status: MODIFIED
+  type: TRIGGER
+IU_BUSINESS_FUNCTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BUSINESS_FUNCTION
+  status: MODIFIED
+  type: TRIGGER
+IU_T_BASIS_USER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_T_BASIS_USER
+  status: MODIFIED
+  type: TRIGGER
+AS_CLASS_REL_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AS_CLASS_REL_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IU_CONT_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_DOCUMENT
+  status: ADDED
+  type: TRIGGER
+I_IFAC_SALES_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_IFAC_SALES_QTY
+  status: ADDED
+  type: TRIGGER
+IU_STIM_DAY_ACTUAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_DAY_ACTUAL
+  status: ADDED
+  type: TRIGGER
+IU_STIM_MTH_BOOKED: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_MTH_BOOKED
+  status: ADDED
+  type: TRIGGER
+IUD_V_CARGO_BERTH_CHART: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_CARGO_BERTH_CHART
+  status: ADDED
+  type: TRIGGER
+IU_TRANS_PROCESS_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANS_PROCESS_LOG
+  status: MODIFIED
+  type: TRIGGER
+D_CONT_TRANSACTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_CONT_TRANSACTION
+  status: ADDED
+  type: TRIGGER
+IU_CARGO_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CARGO_DOCUMENT
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SUB_DAY_PC_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SUB_DAY_PC_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_IWEL_PERIOD_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_IWEL_PERIOD_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_CARGO_TRANSPORT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CARGO_TRANSPORT
+  status: MODIFIED
+  type: TRIGGER
+IU_BUSINESS_ACTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BUSINESS_ACTION
+  status: MODIFIED
+  type: TRIGGER
+IU_PIPE_SUB_DAY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PIPE_SUB_DAY_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_CHRONOLOGY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_CHRONOLOGY
+  status: MODIFIED
+  type: TRIGGER
+IU_PERF_DAY_COMP_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PERF_DAY_COMP_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_METER_COMPOSITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_METER_COMPOSITION
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SUB_DAY_CPYCP_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SUB_DAY_CPYCP_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_OBJ_EVENT_CP_TRAN_FACTOR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_OBJ_EVENT_CP_TRAN_FACTOR
+  status: MODIFIED
+  type: TRIGGER
+IU_BF_DESCRIPTION_IMAGE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BF_DESCRIPTION_IMAGE
+  status: ADDED
+  type: TRIGGER
+IU_WELL_BLOWDOWN_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_BLOWDOWN_DATA
+  status: ADDED
+  type: TRIGGER
+IU_DEFERMENT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DEFERMENT_EVENT
+  status: ADDED
+  type: TRIGGER
+IU_CONT_LINE_ITEM_DIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_LINE_ITEM_DIST
+  status: ADDED
+  type: TRIGGER
+IUD_V_CARGO_SUB_DAY_BERTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_CARGO_SUB_DAY_BERTH
+  status: ADDED
+  type: TRIGGER
+IU_STIM_MTH_ACTUAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_MTH_ACTUAL
+  status: ADDED
+  type: TRIGGER
+IU_FCST_PROD_CURVES_SEGMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_PROD_CURVES_SEGMENT
+  status: ADDED
+  type: TRIGGER
+IU_WELL_TRANSPORT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_TRANSPORT_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IUD_STOR_FCST_SUB_DAY_LIFT_NOM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_STOR_FCST_SUB_DAY_LIFT_NOM
+  status: ADDED
+  type: TRIGGER
+BI_T_BASIS_OBJECT_PARTITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BI_T_BASIS_OBJECT_PARTITION
+  status: ADDED
+  type: TRIGGER
+IU_DEF_DAY_DEFERMENT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DEF_DAY_DEFERMENT_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SUB_DAY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SUB_DAY_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+AIUD_T_BASIS_ACCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AIUD_T_BASIS_ACCESS
+  status: DELETED
+  type: TRIGGER
+IU_CALCULATION_VERSION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALCULATION_VERSION
+  status: MODIFIED
+  type: TRIGGER
+IU_STOR_DAY_FIFO_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STOR_DAY_FIFO_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_FCTY_DAY_POB: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCTY_DAY_POB
+  status: MODIFIED
+  type: TRIGGER
+IU_BPM_PROC_MONITOR_PROC_CONF: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_PROC_MONITOR_PROC_CONF
+  status: ADDED
+  type: TRIGGER
+IU_STRM_TRANSPORT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_TRANSPORT_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_WEBO_PRESS_TEST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WEBO_PRESS_TEST
+  status: MODIFIED
+  type: TRIGGER
+IU_TEST_DEVICE_SAMPLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TEST_DEVICE_SAMPLE
+  status: ADDED
+  type: TRIGGER
+IU_T_BASIS_OBJECT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_T_BASIS_OBJECT
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_PTST_PWEL_RESULT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_PTST_PWEL_RESULT
+  status: MODIFIED
+  type: TRIGGER
+IU_EQPM_EVENT_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_EQPM_EVENT_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_TRANSACTION_MEASUREMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANSACTION_MEASUREMENT
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_SP_DAY_AFS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_SP_DAY_AFS
+  status: ADDED
+  type: TRIGGER
+IU_PIPE_SUB_DAY_PC_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PIPE_SUB_DAY_PC_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SET_LIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SET_LIST
+  status: MODIFIED
+  type: TRIGGER
+I_TRANS_INV_LI_PR_VAR_OVER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: I_TRANS_INV_LI_PR_VAR_OVER
+  status: ADDED
+  type: TRIGGER
+BIU_CLASS_ATTR_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: BIU_CLASS_ATTR_PROPERTY_CNFG
+  status: ADDED
+  type: TRIGGER
+IUD_V_ACTION_PARAM_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_ACTION_PARAM_VALUE
+  status: MODIFIED
+  type: TRIGGER
+IU_PRODUCTION_DAY_VERSION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PRODUCTION_DAY_VERSION
+  status: MODIFIED
+  type: TRIGGER
+IU_PSEP_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PSEP_SUB_DAY_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_T_BASIS_ACCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_T_BASIS_ACCESS
+  status: MODIFIED
+  type: TRIGGER
+IU_SAILING_ADVICE_MESSAGE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_SAILING_ADVICE_MESSAGE
+  status: MODIFIED
+  type: TRIGGER
+IU_CALC_SET_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALC_SET_COMBINATION
+  status: MODIFIED
+  type: TRIGGER
+IU_DEFER_LOSS_ACC_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DEFER_LOSS_ACC_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_FCST_CARGO_BERTH_CHART: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_FCST_CARGO_BERTH_CHART
+  status: ADDED
+  type: TRIGGER
+IU_CALC_SET_EQUATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALC_SET_EQUATION
+  status: MODIFIED
+  type: TRIGGER
+IU_LIFT_ACC_SUB_DAY_FORECAST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_LIFT_ACC_SUB_DAY_FORECAST
+  status: MODIFIED
+  type: TRIGGER
+IU_OBJECT_PLAN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECT_PLAN
+  status: MODIFIED
+  type: TRIGGER
+IU_PRODUCT_ANALYSIS_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PRODUCT_ANALYSIS_ITEM
+  status: MODIFIED
+  type: TRIGGER
+IU_DELPNT_DAY_CAP_ADJ: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DELPNT_DAY_CAP_ADJ
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_FCST_OBJ_EVT_DIM1_CP_FAC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_FCST_OBJ_EVT_DIM1_CP_FAC
+  status: ADDED
+  type: TRIGGER
+IU_CARGO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CARGO
+  status: MODIFIED
+  type: TRIGGER
+AS_NAV_MODEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AS_NAV_MODEL
+  status: ADDED
+  type: TRIGGER
+IU_OBJ_TRAN_SUB_DAY_NOM_BOUND: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJ_TRAN_SUB_DAY_NOM_BOUND
+  status: MODIFIED
+  type: TRIGGER
+D_CONT_LI_DIST_COMPANY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_CONT_LI_DIST_COMPANY
+  status: ADDED
+  type: TRIGGER
+IU_CNTR_CAPACITY_DAY_TRANS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_CAPACITY_DAY_TRANS
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_SUB_DAY_DP_FORECAST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_SUB_DAY_DP_FORECAST
+  status: MODIFIED
+  type: TRIGGER
+IU_CTRL_PROPERTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CTRL_PROPERTY
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_SUB_DAY_DP_NOM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_SUB_DAY_DP_NOM
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_ATTR_DIMENSION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_ATTR_DIMENSION
+  status: MODIFIED
+  type: TRIGGER
+IU_TRANS_INV_LINE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANS_INV_LINE
+  status: ADDED
+  type: TRIGGER
+AIU_BF_COMPONENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AIU_BF_COMPONENT
+  status: ADDED
+  type: TRIGGER
+IU_NOMPNT_DAY_CONFIRMATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_DAY_CONFIRMATION
+  status: MODIFIED
+  type: TRIGGER
+IU_TRANS_INV_LI_PR_OVER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANS_INV_LI_PR_OVER
+  status: ADDED
+  type: TRIGGER
+IU_BF_COMPONENT_ACTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BF_COMPONENT_ACTION
+  status: MODIFIED
+  type: TRIGGER
+AI_CARGO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AI_CARGO
+  status: MODIFIED
+  type: TRIGGER
+AUD_TRANS_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AUD_TRANS_MAPPING
+  status: MODIFIED
+  type: TRIGGER
+IU_PERF_INTERVAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PERF_INTERVAL
+  status: MODIFIED
+  type: TRIGGER
+IU_CONT_TRANSACTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_TRANSACTION
+  status: ADDED
+  type: TRIGGER
+IU_WELL_HOLE_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_HOLE_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_NOMPNT_SUB_DAY_DELIVERY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_SUB_DAY_DELIVERY
+  status: MODIFIED
+  type: TRIGGER
+IU_SEPA_SUB_DAY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_SEPA_SUB_DAY_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_PTST_PWEL_SINGLE_RES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_PTST_PWEL_SINGLE_RES
+  status: MODIFIED
+  type: TRIGGER
+IU_PROCESS_NOTIFICATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PROCESS_NOTIFICATION
+  status: MODIFIED
+  type: TRIGGER
+IU_BPM_EC_GCOMMAND: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_EC_GCOMMAND
+  status: ADDED
+  type: TRIGGER
+IU_IMP_SOURCE_INTERFACE_FILE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_IMP_SOURCE_INTERFACE_FILE
+  status: ADDED
+  type: TRIGGER
+IU_CALC_SET_CONDITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALC_SET_CONDITION
+  status: MODIFIED
+  type: TRIGGER
+U_FIN_DOC_PROFIT_CENTER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: U_FIN_DOC_PROFIT_CENTER
+  status: ADDED
+  type: TRIGGER
+IU_V_PERFORMANCE_CURVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_V_PERFORMANCE_CURVE
+  status: MODIFIED
+  type: TRIGGER
+IU_BPM_PROC_OV_DATA_OPERATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_PROC_OV_DATA_OPERATION
+  status: ADDED
+  type: TRIGGER
+IU_PROD_FORECAST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PROD_FORECAST
+  status: MODIFIED
+  type: TRIGGER
+IU_TREND_CURVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TREND_CURVE
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_SP_DAY_CPY_AFS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_SP_DAY_CPY_AFS
+  status: ADDED
+  type: TRIGGER
+IU_CNTR_SUB_DAY_DP_DELIVERY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_SUB_DAY_DP_DELIVERY
+  status: MODIFIED
+  type: TRIGGER
+IU_CTRL_CHECK_RULES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CTRL_CHECK_RULES
+  status: MODIFIED
+  type: TRIGGER
+IU_FCST_PROD_CURVES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_PROD_CURVES
+  status: ADDED
+  type: TRIGGER
+IU_TRANS_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TRANS_MAPPING
+  status: MODIFIED
+  type: TRIGGER
+IU_BF_PROFILE_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BF_PROFILE_SETUP
+  status: MODIFIED
+  type: TRIGGER
+IU_OBJLOC_DAY_NP_NOM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJLOC_DAY_NP_NOM
+  status: ADDED
+  type: TRIGGER
+IU_T_PREFERANSE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_T_PREFERANSE
+  status: MODIFIED
+  type: TRIGGER
+IU_CONT_DOCUMENT_TEXT_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_DOCUMENT_TEXT_ITEM
+  status: ADDED
+  type: TRIGGER
+IU_SEPA_SUB_DAY_PC_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_SEPA_SUB_DAY_PC_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_CURRENCY_EXCHANGE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CURRENCY_EXCHANGE
+  status: MODIFIED
+  type: TRIGGER
+IU_LIFT_ACC_SUB_DAY_OFFICIAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_LIFT_ACC_SUB_DAY_OFFICIAL
+  status: MODIFIED
+  type: TRIGGER
+IUD_V_FCST_RECOVERY_FACTOR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_FCST_RECOVERY_FACTOR
+  status: MODIFIED
+  type: TRIGGER
+IU_STRM_SUB_DAY_CPY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STRM_SUB_DAY_CPY_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_TANK_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_TANK_ANALYSIS
+  status: MODIFIED
+  type: TRIGGER
+IU_OBJECT_TRANSPORT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECT_TRANSPORT_EVENT
+  status: MODIFIED
+  type: TRIGGER
+IU_CNTR_DAY_INV_SWAP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_DAY_INV_SWAP
+  status: MODIFIED
+  type: TRIGGER
+U_V_TREND_ANALYSIS_CONFIG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: U_V_TREND_ANALYSIS_CONFIG
+  status: ADDED
+  type: TRIGGER
+D_FIN_REVENUE_ORDER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_FIN_REVENUE_ORDER
+  status: ADDED
+  type: TRIGGER
+IU_BF_COMPONENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BF_COMPONENT
+  status: MODIFIED
+  type: TRIGGER
+IU_WELL_SEASONAL_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WELL_SEASONAL_VALUE
+  status: ADDED
+  type: TRIGGER
+IU_FCST_WELL_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_FCST_WELL_EVENT
+  status: ADDED
+  type: TRIGGER
+AS_T_BASIS_ROLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AS_T_BASIS_ROLE
+  status: ADDED
+  type: TRIGGER
+IU_PFLW_SAMPLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PFLW_SAMPLE
+  status: MODIFIED
+  type: TRIGGER
+IU_METER_ALLOC_METHOD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_METER_ALLOC_METHOD
+  status: MODIFIED
+  type: TRIGGER
+AID_T_BASIS_USERROLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AID_T_BASIS_USERROLE
+  status: DELETED
+  type: TRIGGER
+IU_CALC_EQUATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CALC_EQUATION
+  status: MODIFIED
+  type: TRIGGER
+IU_OPPORTUNITY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OPPORTUNITY
+  status: ADDED
+  type: TRIGGER
+IUD_V_MSG_GEN_OUTGOING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_MSG_GEN_OUTGOING
+  status: ADDED
+  type: TRIGGER
+IU_BALANCING_ADJ_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BALANCING_ADJ_MTH
+  status: ADDED
+  type: TRIGGER
+IU_CONT_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CONT_LINE_ITEM
+  status: ADDED
+  type: TRIGGER
+IU_PFLW_PERIOD_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PFLW_PERIOD_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IU_STIM_FCST_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_STIM_FCST_SETUP
+  status: ADDED
+  type: TRIGGER
+IUD_V_CNTR_INV_OPER_MATRIX: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_CNTR_INV_OPER_MATRIX
+  status: MODIFIED
+  type: TRIGGER
+IU_PERF_PERIOD_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PERF_PERIOD_STATUS
+  status: ADDED
+  type: TRIGGER
+IU_PERF_DAY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PERF_DAY_ALLOC
+  status: MODIFIED
+  type: TRIGGER
+IU_CTRL_PERSONALISATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CTRL_PERSONALISATION
+  status: MODIFIED
+  type: TRIGGER
+IU_OBJECT_FLUID_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJECT_FLUID_ANALYSIS
+  status: MODIFIED
+  type: TRIGGER
+IU_PWEL_PERIOD_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_PWEL_PERIOD_STATUS
+  status: MODIFIED
+  type: TRIGGER

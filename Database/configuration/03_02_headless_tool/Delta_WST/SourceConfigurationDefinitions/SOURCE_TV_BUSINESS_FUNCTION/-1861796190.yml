@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1861796190'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/period_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_STM/STRM_SET/PO.0081
+parentKeys: {}
+properties:
+  BF_CODE: PO.0081
+  NAME: Daily Steam Stream Status, by Stream
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.po.screens/period_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_STM/STRM_SET/PO.0081
+related: {}

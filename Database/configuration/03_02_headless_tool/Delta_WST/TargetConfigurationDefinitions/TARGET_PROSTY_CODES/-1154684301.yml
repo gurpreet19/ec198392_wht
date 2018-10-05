@@ -1,0 +1,86 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1154684301'
+keys:
+  CODE: GP
+  CODE_TYPE: WELL_TYPE
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: GP
+  CODE_TEXT: Gas Producer (Gas/Water/Cond)
+  CODE_TYPE: WELL_TYPE
+  DESCRIPTION: Gas Producer (Gas/Water/Cond)
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 30.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related:
+  CTRL_CODE_DEPENDENCY:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: GP
+      CODE2: CURVE
+      CODE_TYPE1: WELL_TYPE
+      CODE_TYPE2: CALC_METHOD
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: GP
+      PROSTY_CODES.CODE_TYPE: WELL_TYPE
+    properties:
+      CODE1: GP
+      CODE2: CURVE
+      CODE3: null
+      CODE_TYPE1: WELL_TYPE
+      CODE_TYPE2: CALC_METHOD
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: GP
+      CODE2: NA
+      CODE_TYPE1: WELL_TYPE
+      CODE_TYPE2: PROD_METHOD
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: GP
+      PROSTY_CODES.CODE_TYPE: WELL_TYPE
+    properties:
+      CODE1: GP
+      CODE2: NA
+      CODE3: null
+      CODE_TYPE1: WELL_TYPE
+      CODE_TYPE2: PROD_METHOD
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: GP
+      CODE2: NF
+      CODE_TYPE1: WELL_TYPE
+      CODE_TYPE2: PROD_METHOD
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: GP
+      PROSTY_CODES.CODE_TYPE: WELL_TYPE
+    properties:
+      CODE1: GP
+      CODE2: NF
+      CODE3: null
+      CODE_TYPE1: WELL_TYPE
+      CODE_TYPE2: PROD_METHOD
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER

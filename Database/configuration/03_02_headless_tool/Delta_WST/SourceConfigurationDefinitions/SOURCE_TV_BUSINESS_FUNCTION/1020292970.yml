@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1020292970'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/well_seasonal_value
+parentKeys: {}
+properties:
+  BF_CODE: CO.0234
+  NAME: Well Seasonal Value
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens/well_seasonal_value
+related: {}

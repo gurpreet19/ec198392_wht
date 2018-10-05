@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '146654315'
+keys:
+  BF_CODE: WR.0020
+  T: BF_COMPONENT
+  URL: /summarizePflwSubToDailyButtonID
+parentKeys: {}
+properties:
+  BF_CODE: WR.0020
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='WR.0020' AND NVL(URL,'IS_NULL') = '/summarizePflwSubToDailyButtonID')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_oil_production_flowline_status' )
+  CLASS_NAME: null
+  COMP_CODE: summarizePflwSubToDailyButtonID
+  NAME: Aggregate Current
+  SIGNING_REQ_IND: null
+  URL: /summarizePflwSubToDailyButtonID
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-729698034'
+keys:
+  OBJECT_NAME: CTRL_DASHBOARD_PARAM
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: N
+  OBJECT_NAME: CTRL_DASHBOARD_PARAM
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

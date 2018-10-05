@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2104509347'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.report.screens/xls_report_set_definition
+parentKeys: {}
+properties:
+  BF_CODE: RP.0009
+  NAME: Excel Report Sets
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.report.screens/xls_report_set_definition
+related: {}

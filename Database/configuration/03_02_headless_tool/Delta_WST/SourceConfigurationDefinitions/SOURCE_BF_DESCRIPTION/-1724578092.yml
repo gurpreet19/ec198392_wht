@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1724578092'
+keys:
+  BF_DESCRIPTION_NO: PP.0044
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/calculate_forecast' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This business function is used to start a forecast calculation job, and further to view the execution logs. The selection of dates, forecast and scenario are done on the navigator. User can then proceed to select the calculation either using the Process Diagram Calculation or PLSQL Calculation tabs.</p>
+
+    <p>The Process Diagram Calculation utilizes the calculation engine while the PLSQL calculation calls the plsql procedure to perform the calculation.</p>
+
+    <p>All started forecast calculation jobs will be displayed in the Running Jobs section (showing Start Time, Status). Several forecast calculations may run simultaneously, but only one for each calculation job.</p>
+
+    <p>When using the Process Diagram Calculation, user can view the execution log for forecast calculation jobs for the selected Date, Calculation Job and Log Level. The job details are displayed in new rows on the screen, one for each run, along with the outcome (e.g. Success of Failure). By highlighting a row from the upper section of the screen, i.e. an individual calculation run, the associated log file summary from that run is displayed in the lower section of the screen. The log details data section is not available for customization and there is no class file related to this data section. User can press the Download button to examine the full log file.</p>
+
+    <p>User could also define plsql forecast calculation and this can be executed using the PLSQL Calculation tab. The procedure that executes this calculation is ecdp_forecast_prod.runScenarioCalc and currently only User Exit is supported. Projects can add different calculation logic as required by adding new codes in EC Codes ( EC Code = CALC_SCENARIO ) and update the Ue_Forecast_Prod.runScenarioCalc accordingly. Execution logs could also be viewed by highlighting a row from the upper section of the screen, i.e. an individual calculation run, and the associated log summary from that run is displayed in this lower section. The log details data section is not available for customization and there is no class file related to this data section.</p>
+related: {}

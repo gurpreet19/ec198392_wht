@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1399611952'
+keys:
+  BF_DESCRIPTION_NO: CO.0228
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0228
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/fcty_ext_location_conn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen will be used to configure the many to many relation between Facility Class 1/2 and External Location. Each connection has a start and end date + an optional sort order which will be used instead-of name in the truck ticket Business Function (if it&rsquo;s not null). These connections will be used in the truck tickets screens to identify from where the truck comes from or to where it&rsquo;s going.</p>
+related: {}

@@ -1,0 +1,253 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2032071'
+keys:
+  T: TV_UNIT
+  UNIT: BBLS
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Barrel at 60 degF
+  FIN_CODE: B60
+  LABEL: bbl
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: BBLS
+  UOM_GROUP: V
+  UOM_SUBGROUP: BI
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBLS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: SM3
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBLS
+      MULT_FACT: 0.158987294928
+      PRECISION: null
+      TO_UNIT: SM3
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBLS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: SBBL
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBLS
+      MULT_FACT: 1.0
+      PRECISION: 6.0
+      TO_UNIT: SBBL
+      USER_EXIT: null
+      USE_UE: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBLS
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: M3
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: BBLS
+      MULT_FACT: 0.158987294928
+      PRECISION: null
+      TO_UNIT: M3
+      USER_EXIT: null
+      USE_UE: null
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: OIL_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: OIL_VOL
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_OIL_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_OIL_VOL
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: WATER_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: WATER_VOL
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_LIQ_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_LIQ_VOL
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_WATER_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_WATER_VOL
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: N
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STD_LNG_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STD_LNG_VOL
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: STEAM_VOL_CWE
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: N
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: STEAM_VOL_CWE
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: N
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_VOLUME_QTY
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0000'
+      MEASUREMENT_TYPE: REV_VOLUME_QTY
+      REPORT_UNIT: null
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0000'
+      MEASUREMENT_TYPE: REV_EXTRA1_QTY
+      REPORT_UNIT: null
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0000'
+      MEASUREMENT_TYPE: REV_EXTRA2_QTY
+      REPORT_UNIT: null
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: '###,###,###,##0.0000'
+      MEASUREMENT_TYPE: REV_EXTRA3_QTY
+      REPORT_UNIT: null
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: LIQ_RATE_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: LIQ_RATE_VOL
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: WATER_RATE_VOL
+      T: TV_UOM_SETUP
+      UNIT: BBLS
+    parentKeys:
+      TV_UNIT.UNIT: BBLS
+    properties:
+      DB_UNIT: null
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: WATER_RATE_VOL
+      REPORT_UNIT: Y
+      UNIT: BBLS
+      VIEW_UNIT: null

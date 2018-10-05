@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1485300276'
+keys:
+  BF_DESCRIPTION_NO: CO.0158
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0158
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/report_group/CLASS_NAME/REPORT_GROUP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>A new object class called REPORT_GROUP which will be used in the new BF &ldquo;CO.0159 - Report Group Connection&rdquo; to connect report_group to other object class objects. These object classes should be all object classes that have facility_class_1 as parent (e.g. well, stream, tank, equipments ++).</p>
+
+    <p>REPORT_GROUP is not in the operational group model.</p>
+related: {}

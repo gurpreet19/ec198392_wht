@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-441519647'
+keys:
+  BF_CODE: SD.0047
+  T: BF_COMPONENT
+  URL: /daily_data
+parentKeys: {}
+properties:
+  BF_CODE: SD.0047
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SD.0047' AND NVL(URL,'IS_NULL') = '/daily_data')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_day_np_data_enddate/CLASS/SLNP_PERIOD_DEL_EVENT/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0047' )
+  CLASS_NAME: SLNP_PERIOD_DEL_EVENT
+  COMP_CODE: daily_data
+  NAME: Events
+  SIGNING_REQ_IND: null
+  URL: /daily_data
+related: {}

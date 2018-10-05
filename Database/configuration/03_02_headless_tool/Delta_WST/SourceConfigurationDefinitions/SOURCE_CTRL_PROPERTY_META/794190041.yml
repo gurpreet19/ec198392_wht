@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '794190041'
+keys:
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/navmodel/REVN_IN/INVENTORY
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: NAV_DEF_VALUE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Default values in nav model for Inventory navigators
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/navmodel/REVN_IN/INVENTORY
+  LABEL: Default values in nav model for inventory navigators
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1778192740'
+keys:
+  EC_CLIENT_OBJ: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_INDEX_DS_MTH_VALUE
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_INDEX_DS_MTH_VALUE
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,143 @@
+CREATE OR REPLACE PACKAGE EcDp_Stream_Ref_Attribute IS
+
+/****************************************************************
+** Package        :  EcDp_Stream_Ref_Attribute, header part
+**
+** $Revision: 1.1.1.1 $
+**
+** Purpose        :  Definition of stream reference attributes
+**
+** Documentation  :  www.energy-components.com
+**
+** Created  : 27.12.1999  Carl-Fredrik S?sen
+**
+** Modification history:
+**
+** Version  Date      Whom  Change description:
+** -------  ------    ----- -----------------------------------
+** 3.1      10.05.00  CFS   Added method VA_TRESHOLD_PCT
+*****************************************************************/
+
+--
+
+FUNCTION BORG_PRT_TOR_PCT
+RETURN VARCHAR2;
+
+--
+
+FUNCTION FLARE_WATER_CONTENT
+RETURN VARCHAR2;
+
+--
+
+FUNCTION FUEL_HP_SCAV
+RETURN VARCHAR2;
+
+--
+
+FUNCTION FUEL_LP_SCAV
+RETURN VARCHAR2;
+
+--
+
+FUNCTION GAS_OIL_RATIO
+RETURN VARCHAR2;
+
+--
+
+FUNCTION HIGH_GOR_MAX
+RETURN VARCHAR2;
+
+--
+
+FUNCTION HIGH_GOR_MIN
+RETURN VARCHAR2;
+
+--
+
+FUNCTION N2_RATE
+RETURN VARCHAR2;
+
+--
+
+FUNCTION NET_FLARE_FACTOR
+RETURN VARCHAR2;
+
+--
+
+FUNCTION NET_VOL
+RETURN VARCHAR2;
+
+--
+
+FUNCTION NET_WATER_CONTENT
+RETURN VARCHAR2;
+
+--
+
+FUNCTION PILOT_GAS_RATE
+RETURN VARCHAR2;
+
+--
+
+FUNCTION SEP_DENSITY
+RETURN VARCHAR2;
+
+--
+
+FUNCTION SR_ADD_CONSTANT
+RETURN VARCHAR2;
+
+--
+
+FUNCTION SR_FACTOR_STATFJORD_NORTH
+RETURN VARCHAR2;
+
+--
+
+FUNCTION SR_FACTOR_STATFJORD_OST
+RETURN VARCHAR2;
+
+--
+
+FUNCTION SR_PRESS_CONSTANT
+RETURN VARCHAR2;
+
+--
+
+FUNCTION SR_PRESS_FACTOR
+RETURN VARCHAR2;
+
+--
+
+FUNCTION SR_TEMP_CONSTANT
+RETURN VARCHAR2;
+
+--
+
+FUNCTION STD_DENSITY
+RETURN VARCHAR2;
+
+--
+
+FUNCTION VA_REMOVE_GAS
+RETURN VARCHAR2;
+
+--
+
+FUNCTION VA_TRESHOLD_PCT
+RETURN VARCHAR2;
+
+--
+
+FUNCTION VENTILE_WATER_CONTENT
+RETURN VARCHAR2;
+
+--
+
+FUNCTION WATER_DENSITY
+RETURN VARCHAR2;
+
+--
+
+END;

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1270268207'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/monthly_np_data/CLASS/SLNP_MTH_DELIVERY/CLASS_DAY/SLNP_DAY_DELIVERY/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0046
+parentKeys: {}
+properties:
+  BF_CODE: SD.0046
+  NAME: Monthly Sales Delivery
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/monthly_np_data/CLASS/SLNP_MTH_DELIVERY/CLASS_DAY/SLNP_DAY_DELIVERY/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0046
+related: {}

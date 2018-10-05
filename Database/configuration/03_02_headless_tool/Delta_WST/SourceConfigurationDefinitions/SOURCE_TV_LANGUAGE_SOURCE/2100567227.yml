@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2100567227'
+keys:
+  SOURCE_ID: 60003.0
+  T: TV_LANGUAGE_SOURCE
+parentKeys: {}
+properties:
+  SOURCE: ORA-20603
+  SOURCE_ID: 60003.0
+related:
+  TV_LANGUAGE_TARGET:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      LANGUAGE_ID: 1.0
+      SOURCE_ID: 60003.0
+      T: TV_LANGUAGE_TARGET
+    parentKeys:
+      TV_LANGUAGE_SOURCE.SOURCE_ID: 60003.0
+    properties:
+      LANGUAGE_ID: 1.0
+      SOURCE_ID: 60003.0
+      TARGET: Cannot create transactions on a booked document

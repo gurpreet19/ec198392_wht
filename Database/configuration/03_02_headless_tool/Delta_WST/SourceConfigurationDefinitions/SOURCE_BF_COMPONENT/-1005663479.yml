@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1005663479'
+keys:
+  BF_CODE: CO.1032.01
+  T: BF_COMPONENT
+  URL: /go_button
+parentKeys: {}
+properties:
+  BF_CODE: CO.1032.01
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1032.01' AND NVL(URL,'IS_NULL') = '/go_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/object_validation_default' )
+  CLASS_NAME: null
+  COMP_CODE: go_button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /go_button
+related: {}

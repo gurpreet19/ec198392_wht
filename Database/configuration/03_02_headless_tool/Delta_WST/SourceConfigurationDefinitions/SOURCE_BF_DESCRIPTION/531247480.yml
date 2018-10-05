@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '531247480'
+keys:
+  BF_DESCRIPTION_NO: CD.0115
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0115
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/INVENTORY_AREA' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Inventory Area screen</strong>    is used to create and maintain Inventory Areas.</p><p>    Each Inventory Area is connected to a Business Unit, and each Inventory    defined in the system must belong to an Inventory Area.</p><p>    The grouping of the Inventories is done through the Business Unit /    Inventory Area combination.</p><p>    In a ring-fenced environment the Inventory Area is typically the    ring-fencing object which will then ring-fence all Inventory objects.</p>
+related: {}

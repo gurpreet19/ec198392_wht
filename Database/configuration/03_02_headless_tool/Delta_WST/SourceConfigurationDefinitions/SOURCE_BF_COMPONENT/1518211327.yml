@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1518211327'
+keys:
+  BF_CODE: CP.0050
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: CP.0050
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0050' AND NVL(URL,'IS_NULL') = '/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/sub_day_receipts_lift_acc' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

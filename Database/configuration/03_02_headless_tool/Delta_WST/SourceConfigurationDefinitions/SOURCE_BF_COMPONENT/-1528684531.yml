@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1528684531'
+keys:
+  BF_CODE: PD.0022
+  T: BF_COMPONENT
+  URL: /verify_button
+parentKeys: {}
+properties:
+  BF_CODE: PD.0022
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PD.0022' AND NVL(URL,'IS_NULL') = '/verify_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/equip_downtime' )
+  CLASS_NAME: null
+  COMP_CODE: verify_button
+  NAME: Verify Button
+  SIGNING_REQ_IND: null
+  URL: /verify_button
+related: {}

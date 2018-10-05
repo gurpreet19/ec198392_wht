@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1600584330'
+keys:
+  BF_DESCRIPTION_NO: PT.0017
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PT.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_steam_injection_well_data' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function allows user to insert a steam injection well event data. Steam Injection Rate can be either inserted by the user or calculated based on the specified Rate Calculation Method.</p>
+
+    <p>User selects the Rate Calculation Method in Data Section 1 and the appropriate layout in Data Section 2 is displayed upon save. The different layouts are needed as different methods have different calculation input.</p>
+related: {}

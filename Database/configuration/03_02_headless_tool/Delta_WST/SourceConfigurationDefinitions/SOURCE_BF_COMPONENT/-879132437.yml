@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-879132437'
+keys:
+  BF_CODE: SP.0016
+  T: BF_COMPONENT
+  URL: /form
+parentKeys: {}
+properties:
+  BF_CODE: SP.0016
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = '/form')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_general' )
+  CLASS_NAME: CONT_DOCUMENT
+  COMP_CODE: DocGenDetails
+  NAME: Document General Details
+  SIGNING_REQ_IND: null
+  URL: /form
+related: {}

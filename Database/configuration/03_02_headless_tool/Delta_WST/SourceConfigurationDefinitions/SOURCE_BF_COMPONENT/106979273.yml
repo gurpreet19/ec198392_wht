@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '106979273'
+keys:
+  BF_CODE: PO.0086
+  T: BF_COMPONENT
+  URL: /daily_gas_strm_vf
+parentKeys: {}
+properties:
+  BF_CODE: PO.0086
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0086' AND NVL(URL,'IS_NULL') = '/daily_gas_strm_vf')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_vent_flare' )
+  CLASS_NAME: STRM_DAY_VENTFLARE
+  COMP_CODE: daily_gas_strm_vf
+  NAME: Daily Gas Streams
+  SIGNING_REQ_IND: null
+  URL: /daily_gas_strm_vf
+related: {}

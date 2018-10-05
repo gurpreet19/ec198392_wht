@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-745988066'
+keys:
+  BF_DESCRIPTION_NO: GD.0007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_day_estimate_calc' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to start the sub daily estimate calculations and to view the calculated results for Contracts and Delivery Points.</p><p>In the Navigator, the user selects the date, exit delivery point, allocation network and calculation job. The &ldquo;Go&rdquo; button will execute a search on the database and&nbsp;return all hours that the hourly calculations has be run for in the date. The sub daily nominations for the select hour will be listed. If calculations have been done for&nbsp;the selected hour the last sections will display information about the run.</p>
+related: {}

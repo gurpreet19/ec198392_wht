@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-250146906'
+keys:
+  BF_DESCRIPTION_NO: SA.0033
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/fcst_monthly_contr_acc_company_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to show the results of the Forecast Monthly Calculation. The screen is read only.</p><p>After selecting a period, a contract and a forecast, the selected month and 11 months back in time (meaning, showing last 12-month period) will show in the Month&nbsp;data section. After selecting a month in the upper table, the results for that month are shown per company, with the calculated quantities per contract account of the&nbsp;selected contract. When company is selected in the navigator will only account for this company be listed. The unit of measure (UOM) is a contract account attribute,&nbsp;to inform what kind of number the quantity calculated is.</p><p>To be able to view months into the future must records be inserted into DV_SCTR_MTH_STATUS.</p>
+related: {}

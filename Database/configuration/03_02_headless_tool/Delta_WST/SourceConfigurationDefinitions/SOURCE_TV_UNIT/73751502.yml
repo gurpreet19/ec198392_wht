@@ -1,0 +1,36 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '73751502'
+keys:
+  T: TV_UNIT
+  UNIT: MVOLT
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Millivolt
+  FIN_CODE: null
+  LABEL: mV
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MVOLT
+  UOM_GROUP: E
+  UOM_SUBGROUP: null
+related:
+  TV_UNIT_CONVERSION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MVOLT
+      T: TV_UNIT_CONVERSION
+      TO_UNIT: MICROVOLT
+    parentKeys:
+      TV_UNIT.UNIT: MVOLT
+    properties:
+      ADD_NUMB: 0.0
+      DAYTIME: 1960-01-01T00:00:00Z
+      FROM_UNIT: MVOLT
+      MULT_FACT: 1000.0
+      PRECISION: null
+      TO_UNIT: MICROVOLT
+      USER_EXIT: null
+      USE_UE: null

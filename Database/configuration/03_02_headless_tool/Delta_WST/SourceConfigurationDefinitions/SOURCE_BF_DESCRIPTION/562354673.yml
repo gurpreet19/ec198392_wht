@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '562354673'
+keys:
+  BF_DESCRIPTION_NO: CD.0130
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0130
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_REVENUE_ORDER' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Revenue Order screen</strong>    is used to manage the Revenue Order objects in EC.</p><p> <u>    The Revenue Order </u> is used for allocating cost and income in the financial    system.</p><p>    New Revenue Order objects can be generated from interfaced data entries by    Data Entry Interface screen (BF SP.0055).</p>
+related: {}

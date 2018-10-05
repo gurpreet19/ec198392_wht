@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-424576767'
+keys:
+  T: TV_BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_UOP_DEPR_KEY
+parentKeys: {}
+properties:
+  BF_CODE: CD.0099
+  NAME: UOP Key
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_UOP_DEPR_KEY
+related: {}

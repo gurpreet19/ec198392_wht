@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1495712342'
+keys:
+  BF_DESCRIPTION_NO: PO.0012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/alarms' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to keep track of important alarm events, typically those events that should be included in daily reports and not all alarms in a control room.</p>
+
+    <p>Alarm types and area are configurable and the user can create as many events as needed within a production day. The user can also decide whether the event should be included in the daily report or not by ticking off the report check box.</p>
+related: {}

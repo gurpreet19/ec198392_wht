@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '889077775'
+keys:
+  BF_DESCRIPTION_NO: CO.0238
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0238
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/equip_conn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen is used to connect equipment object to other assets. The screen opens to model one to many dependencies between an equipment to different asset classes. Examples: A compressors can link to a few wells or facilities.</p>
+
+    <p>The connections have a start and end date, where end date is exclusive.</p>
+
+    <p>The reason for adding this BF is that we want to make it possible to support a link between Equipment, Well, Facility or Well Hookup that is not related to the stream node diagram.</p>
+related: {}

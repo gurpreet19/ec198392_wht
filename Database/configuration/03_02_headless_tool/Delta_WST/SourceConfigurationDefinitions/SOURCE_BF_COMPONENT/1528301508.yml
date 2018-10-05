@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1528301508'
+keys:
+  BF_CODE: CP.0009
+  T: BF_COMPONENT
+  URL: /productionApportion
+parentKeys: {}
+properties:
+  BF_CODE: CP.0009
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CP.0009' AND NVL(URL,'IS_NULL') = '/productionApportion')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/monthly_stor_pc_forecast' )
+  CLASS_NAME: null
+  COMP_CODE: productionApportion
+  NAME: Apportion
+  SIGNING_REQ_IND: null
+  URL: /productionApportion
+related: {}

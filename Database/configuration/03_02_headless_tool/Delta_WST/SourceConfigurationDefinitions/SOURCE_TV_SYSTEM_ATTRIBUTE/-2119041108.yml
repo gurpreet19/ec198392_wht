@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2119041108'
+keys:
+  ATTRIBUTE_TYPE: VAT_ON_ACCRUALS
+  FROM_DATE: 1900-01-01T00:00:00Z
+  T: TV_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: Y
+  ATTRIBUTE_TYPE: VAT_ON_ACCRUALS
+  ATTRIBUTE_VALUE: null
+  DESCRIPTION: Indicates whether the system should calculate VAT for accruals. Options are Y | N
+  FROM_DATE: 1900-01-01T00:00:00Z
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1924760098'
+keys:
+  BF_DESCRIPTION_NO: WL.0003
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WL.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/logbook' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The logbook screen allows TCC users to view and enter logbook entries for others to see. New entries can be added by clicking the standard insert button in the screen toolbar. All entries are open for editing, also old ones. The date/time and user ID, however, is set initially on save by the system and cannot be changed by the user. The date/time and user ID values do not change even if a different user changes the log entry. Standard revision information will be available in the revision tab of the screen.</p><p>If the Alarm column is checked and saved then the entire log entry will be highlighted with red line. Default for new log entries is unchecked.</p><p>If the Archived column is checked and saved then editing of all columns except the Archived column will be disabled.</p>
+related: {}

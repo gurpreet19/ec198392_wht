@@ -1,0 +1,350 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1058624184'
+keys:
+  BF_DESCRIPTION_NO: PO.0124
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0124
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_fcty_balancing/GROUPMODEL/FCTY_CLASS_1/REPORT_CLASS1/STRM_OIL_EXPORT_EVENT/REPORT_CLASS2/OBJECT_SINGLE_TRANSFER/REPORT_CLASS3/STRM_DAY_STREAM_STATUS/REPORT_CLASS4/BALANCING_ADJ_MTH/REPORT_CLASS5/PWEL_MTH_STATUS/REPORT_CLASS6/PWEL_DAY_STATUS_WS/REPORT_CLASS7/IWEL_MTH_STATUS_STEAM/REPORT_CLASS8/IWEL_MTH_STATUS_WATER/REPORT_CLASS9/STRM_MTH_LIQ' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p class="MsoNormal" style="font-size: 10pt; text-align: justify;
+    line-height: normal;">The Monthly Facility Balancing screen enables the user to
+    view product balances, check tolerances, and drill down to the details behind
+    the volumes. This is done in order to diagnose and resolve volumetric data issues
+    as part of the monthly volumetric accounting process. This BF will work as asingle
+    point of access for users to perform Facility balancing of product volumes and
+    as sist in diagnosing volumetric issues. This BF will support the balancing activity
+    by the following measures:</p><p style="font-size: 10pt; margin-bottom: 0.0001pt;
+    text-align: justify; line-height: normal; vertical-align: baseline;">&nbsp;&nbsp;&nbsp;&nbsp;-
+    All inventories, dispositions, receipt, and production volumes are accounted for
+    selected facility.</p><p style="font-size: 10pt; margin-bottom: 0.0001pt; text-align:
+    justify; line-height: normal; vertical-align: baseline;">&nbsp;&nbsp;&nbsp;&nbsp;-
+    Proration factors and metering differences are in tolerance.</p><p style="font-size:
+    10pt; text-align: justify; line-height: normal; vertical-align: baseline;">&nbsp;&nbsp;&nbsp;&nbsp;-
+    Determining the derived volume for each product at the facility.</p><p class="MsoNormal"
+    style="font-size: 10pt; text-align: justify; line-height: normal;">The key objective
+    of facility balance is to ensure that the volume for "Product In = Product Out".
+    Any imbalances will appear as "Imbalance" attribute value on the screen.</p><p
+    class="MsoNormal" style="font-size: 10pt; text-align: justify; line-height: normal;">As
+    a default configuration ''Product In'' calculation captures volumes from the Balance
+    Groups listed below:</p><table class="MsoNormalTable" border="0" cellspacing="0"
+    cellpadding="0" style="font-size: 10pt; border-collapse: collapse;"> <tbody><tr>  <td
+    valign="top" style="border:solid black 1.0pt;mso-border-alt:solid black .75pt;  background:#E7E6E6;padding:0in
+    6.0pt 0in 6.0pt">  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Balance
+    Group</p>  </td>  <td valign="top" style="border:solid black 1.0pt;border-left:none;mso-border-left-alt:  solid
+    black .75pt;mso-border-alt:solid black .75pt;background:#E7E6E6;  padding:0in
+    6.0pt 0in 6.0pt">  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Description</p>  </td>
+    </tr> <tr>  <td valign="top" style="border:solid black 1.0pt;border-top:none;mso-border-top-alt:  solid
+    black .75pt;mso-border-alt:solid black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Opening
+    Inventory</p>  </td>  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid
+    black 1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Product
+    in inventory at the start of reporting month.</p>  </td> </tr> <tr>  <td valign="top"
+    style="border:solid black 1.0pt;border-top:none;mso-border-top-alt:  solid black
+    .75pt;mso-border-alt:solid black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p class="MsoNormal"
+    style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Receipt</p>  </td>  <td
+    valign="top" style="border-top:none;border-left:none;border-bottom:solid black
+    1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">It
+    include receipts of products into a facility. It may be the product trucked into
+    the facility, receipts from well, flow-lined receipts, etc.</p>  </td> </tr> <tr>  <td
+    valign="top" style="border:solid black 1.0pt;border-top:none;mso-border-top-alt:  solid
+    black .75pt;mso-border-alt:solid black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Production</p>  </td>  <td
+    valign="top" style="border-top:none;border-left:none;border-bottom:solid black
+    1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">It
+    includes Wellhead Production and Production of by-products of Gas.</p>  </td>
+    </tr></tbody></table><p class="MsoNormal" style="font-size: 10pt; margin-bottom:
+    0.0001pt; line-height: normal;">&nbsp;</p><p class="MsoNormal" style="font-size:
+    10pt; text-align: justify; line-height: normal;">''Product Out'' captures volumes
+    as below:</p><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+    style="font-size: 10pt; border-collapse: collapse;"> <tbody><tr>  <td valign="top"
+    style="border:solid black 1.0pt;mso-border-alt:solid black .75pt;  background:#E7E6E6;padding:0in
+    6.0pt 0in 6.0pt">  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Balance
+    Group</p>  </td>  <td valign="top" style="border:solid black 1.0pt;border-left:none;mso-border-left-alt:  solid
+    black .75pt;mso-border-alt:solid black .75pt;background:#E7E6E6;  padding:0in
+    6.0pt 0in 6.0pt">  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Description</p>  </td>
+    </tr> <tr>  <td valign="top" style="border:solid black 1.0pt;border-top:none;mso-border-top-alt:  solid
+    black .75pt;mso-border-alt:solid black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Closing
+    Inventory</p>  </td>  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid
+    black 1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Product
+    in inventory at the end of the reporting month.</p>  </td> </tr> <tr>  <td valign="top"
+    style="border:solid black 1.0pt;border-top:none;mso-border-top-alt:  solid black
+    .75pt;mso-border-alt:solid black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p class="MsoNormal"
+    style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Consumption</p>  </td>  <td
+    valign="top" style="border-top:none;border-left:none;border-bottom:solid black
+    1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Product
+    consumed at the facility like Gas flared, plant use of fresh water, etc.</p>  </td>
+    </tr> <tr>  <td valign="top" style="border:solid black 1.0pt;border-top:none;mso-border-top-alt:  solid
+    black .75pt;mso-border-alt:solid black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Disposition</p>  </td>  <td
+    valign="top" style="border-top:none;border-left:none;border-bottom:solid black
+    1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Dispositions
+    of product from a facility; like product trucked out, flow-lined dispositions,
+    injections of load fluid into wells.</p>  </td> </tr> <tr>  <td valign="top" style="border:solid
+    black 1.0pt;border-top:none;mso-border-top-alt:  solid black .75pt;mso-border-alt:solid
+    black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Injection</p>  </td>  <td
+    valign="top" style="border-top:none;border-left:none;border-bottom:solid black
+    1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Product
+    sent to a well for injection or disposal into a reservoir. This only applies to
+    injection facilities.</p>  </td> </tr> <tr>  <td valign="top" style="border:solid
+    black 1.0pt;border-top:none;mso-border-top-alt:  solid black .75pt;mso-border-alt:solid
+    black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Metering
+    Difference</p>  </td>  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid
+    black 1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">The
+    difference in measurement between facility inlets (production, receipts, etc.)
+    and outlets (dispositions, injection, fuel, flare, etc.), when all inlets and
+    outlets are measured.</p>  </td> </tr> <tr>  <td valign="top" style="border:solid
+    black 1.0pt;border-top:none;mso-border-top-alt:  solid black .75pt;mso-border-alt:solid
+    black .75pt;padding:0in 6.0pt 0in 6.0pt">  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Shrinkage</p>  </td>  <td
+    valign="top" style="border-top:none;border-left:none;border-bottom:solid black
+    1.0pt;  border-right:solid black 1.0pt;mso-border-top-alt:solid black .75pt;  mso-border-left-alt:solid
+    black .75pt;mso-border-alt:solid black .75pt;  padding:0in 6.0pt 0in 6.0pt">  <p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;text-align:  justify;line-height:normal">Reductions
+    in product volumes resulting from a facility process.</p>  </td> </tr></tbody></table><p
+    class="MsoNormal" style="font-size: 10pt; margin-bottom: 0.0001pt; line-height:
+    normal;">&nbsp;</p><p class="MsoNormal" style="font-size: 10pt; text-align: justify;
+    line-height: normal;">Volumes for Facility balancing are retrieved from the following
+    data sources:</p><p class="MsoNormal" style="font-size: 10pt; margin-left: 18.5pt;
+    text-indent: -0.15in;"><span lang="EN-GB">i ) Monthly allocated data for streams
+    (Allocation needs to be run before the volumes are available in this screen.)</span></p><p
+    class="MsoNormal" style="font-size: 10pt; margin-left: 18.5pt; text-indent: -0.15in;"><span
+    lang="EN-GB">ii ) Truck Ticket - Single Transfer - Objects (PO.0100)</span></p><p
+    class="MsoNormal" style="font-size: 10pt; margin-left: 32.5pt; text-indent: -0.15in;"><span
+    lang="EN-GB">The truck tickets data will be aggregated for given facility under
+    Total Truck In / Total Truck out readings.</span></p><p class="MsoNormal" style="font-size:
+    10pt; margin-left: 18.5pt; text-indent: -0.15in;"><span lang="EN-GB">iii ) Monthly
+    Facility Balancing - Adjustment (PO.0123)</span></p><p class="MsoNormal" style="font-size:
+    10pt; margin-left: 32.5pt; text-indent: -0.15in;"><span lang="EN-GB">Allows user
+    to adjust measurement data that affects the month end facility balance.</span></p><p
+    class="MsoNormal" style="font-size: 10pt; text-align: justify; line-height: normal;"><b>Export
+    to Excel Button</b></p><p class="MsoNormal" style="font-size: 10pt; text-align:
+    justify; line-height: normal;">This button exports the filtered data in the screen
+    into Excel format. The exported document will consist of one fixed tab and up
+    to 8 configurable tabs. The fixed tab will show the summary of the Monthly Facility
+    Balancing Screen. The configurable tabs will show the data based on the facility
+    and product selected in the navigator. Project need to define the CLASS_NAME and
+    TARGET parameter for each configurable tab in order for the configurable tabs
+    to work. For example:</p><p class="MsoNormal" style="font-size: 10pt; margin-left:
+    38.5pt; text-indent: -0.25in;"><span lang="EN-GB">- To show Monthly Production
+    Well data in 2nd tab, CLASS_NAME1 can be defined as PWEL_MTH_STATUS and TARGET1
+    can be defined as WELL</span></p><p class="MsoNormal" style="font-size: 10pt;
+    margin-left: 38.5pt; text-indent: -0.25in;"><span lang="EN-GB">- To show Truck
+    Ticket data in 3rd tab, CLASS_NAME2 can be defined as OBJ_SINGLE_TRANSFER_VIEW
+    and TARGET2 can be defined as FACILITY</span></p><p class="MsoNormal" style="font-size:
+    10pt; text-align: justify; line-height: normal;"><b>Configuration requirement</b></p><p
+    class="MsoNormal" style="font-size: 10pt; text-align: justify; line-height: normal;">Additional
+    configuration is required to identify which streams that will be included in the
+    Monthly Facility balancing calculation as described below:-</p><p class="MsoNormal"
+    style="font-size: 10pt; margin: 0in 0in 0.0001pt 0.25in; text-align: justify;
+    text-indent: -0.25in; line-height: normal; vertical-align: baseline;"><!--[if
+    !supportLists]-->1.<span style="font-variant-numeric: normal; font-stretch: normal;
+    font-size: 7pt; line-height: normal; font-family: " times="" new="" roman";"="">&nbsp;
+    &nbsp;</span>Defining Various Balance Items for screen:</p><p class="MsoNormal"
+    style="font-size: 10pt; margin: 0in 0in 0.0001pt 0.2in; text-align: justify; line-height:
+    normal;">Configure EC Code for Code Type: BALANCE_GROUP</p><p class="MsoNormal"
+    style="font-size: 10pt; margin-left: 38.5pt; text-indent: -0.25in;"><span lang="EN-GB">-
+    BALANCE GROUP is a new EC Code introduced for Facility balancing. These are used
+    to categorize products under Balance groups. EC is shipped with set of Balance
+    group which can be viewed under Code Type: BALANCE_GROUP on "EC Codes - All" (CO.1011)
+    screen.</span></p><p class="MsoNormal" style="font-size: 10pt; margin-left: 38.5pt;
+    text-indent: -0.25in;"><span lang="EN-GB">- User can add or remove these balance
+    groups and set its ''Alt Code'' attribute value to ''IN'' or ''OUT''. Based on
+    the ''Alt Code'' value the balance group will be considered as ''Product In''
+    or ''Product Out'' during Facility Balancing calculations.</span></p><p class="MsoNormal"
+    style="font-size: 10pt; margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p><p
+    class="MsoNormal" style="font-size: 10pt; margin: 0in 0in 0.0001pt; text-align:
+    justify; text-indent: 0in; line-height: normal; vertical-align: baseline;"><!--[if
+    !supportLists]-->2.<span style="font-variant-numeric: normal; font-stretch: normal;
+    font-size: 7pt; line-height: normal; font-family: " times="" new="" roman";"="">&nbsp;
+    &nbsp;</span>Defining Activity Codes for screen:</p><p class="MsoNormal" style="font-size:
+    10pt; margin: 0in 0in 0.0001pt 0.2in; text-align: justify; line-height: normal;">Configure
+    EC Code for Code Type: STRM_BAL_CATEGORY</p><p class="MsoNormal" style="font-size:
+    10pt; margin-left: 38.5pt; text-indent: -0.25in;"><span lang="EN-GB">- STRM_BAL_CATEGORY
+    is a new EC Code introduced for Facility Balancing. These are used to aggregate
+    Balance Group and assign activity code using ''Alt Code''. These activity code
+    will be visible on Monthly Facility Balancing screen.</span></p><p style="font-size:
+    10pt; margin-bottom: 0.0001pt; text-align: justify; line-height: normal; vertical-align:
+    baseline;">&nbsp;&nbsp;&nbsp;&nbsp;- User can add or remove these stream balance
+    categories and set its ''Alt Code'' attribute value to required activity code.</p><p
+    class="MsoNormal" style="font-size: 10pt; margin-bottom: 0.0001pt; line-height:
+    normal;">&nbsp;</p><p class="MsoNormal" style="font-size: 10pt; margin: 0in 0in
+    0.0001pt; text-align: justify; text-indent: 0in; line-height: normal; vertical-align:
+    baseline;"><!--[if !supportLists]-->3.<span style="font-variant-numeric: normal;
+    font-stretch: normal; font-size: 7pt; line-height: normal; font-family: " times=""
+    new="" roman";"="">&nbsp; &nbsp;</span>Associating a Stream with Product and Balance
+    Category</p><p class="MsoNormal" style="font-size: 10pt; margin-bottom: 0.0001pt;
+    text-align: justify; line-height: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stream
+    Configuration</p><p class="MsoNormal" style="font-size: 10pt; margin: 0in 0in
+    0.0001pt 0.25in; text-align: justify; line-height: normal;">The required configuration
+    will be as follows:</p><p class="MsoNormal" style="font-size: 10pt; margin-left:
+    38.5pt; text-indent: -0.25in;"><span lang="EN-GB">- Product: Assign a product
+    to a stream. (Product is configured in CO.0007)</span></p><p class="MsoNormal"
+    style="font-size: 10pt; margin-left: 38.5pt; text-indent: -0.25in;"><span lang="EN-GB">-
+    Stream Balance Category: Select a Balance Category</span></p><p class="MsoNormal"
+    style="font-size: 10pt; margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p><blockquote
+    style="font-size: 10pt; margin: 0px 0px 0px 40px; border: none; padding: 0px;"><p
+    class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:normal"><img
+    src="/onlinehelp/img?type=description&amp;bfDescNo=PO.0124&amp;imgNo=1&amp;dataLevel=0&amp;pfdrid_c=true"
+    class="ecImg"></p></blockquote><p class="MsoNormal" style="font-size: 10pt; line-height:
+    normal;">&nbsp;</p><p class="MsoNormal" style="font-size: 10pt; margin-left: 38.5pt;
+    text-indent: -0.25in;"><span lang="EN-GB">- Based on the settings above, Product
+    Balance Group and Balance Group will be populated for the given stream.</span></p><p
+    class="MsoNormal" style="font-size: 10pt; margin-bottom: 0.0001pt; line-height:
+    normal;">&nbsp;</p><p class="MsoNormal" style="font-size: 10pt; margin: 0in 0in
+    0.0001pt; text-align: justify; text-indent: 0in; line-height: normal; vertical-align:
+    baseline;"><!--[if !supportLists]-->4.<span style="font-variant-numeric: normal;
+    font-stretch: normal; font-size: 7pt; line-height: normal; font-family: " times=""
+    new="" roman";"="">&nbsp; &nbsp;</span>Defining Product Group for screen:</p><p
+    style="font-size: 10pt;">&nbsp;</p><p class="MsoNormal" style="font-size: 10pt;
+    margin: 0in 0in 0.0001pt 0.2in; text-align: justify; line-height: normal;">Product
+    Groups and assign Stream Balance Category</p><p class="MsoNormal" style="font-size:
+    10pt; margin-left: 38.5pt; text-indent: -0.25in;"><span lang="EN-GB">- User can
+    create Product group and assign Stream Balance category to it using "Product Group
+    Setup" (RC.0054) screen. For example: Products like WATER, STEAM, FSHWTR and BRKWTR
+    are all included in the "Water" product group.</span></p><p class="MsoNormal"
+    style="font-size: 10pt; margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p><p
+    class="MsoNormal" style="font-size: 10pt; margin: 0in 0in 0.0001pt 0.5in; line-height:
+    normal;"><img src="/onlinehelp/img?type=description&amp;bfDescNo=PO.0124&amp;imgNo=2&amp;dataLevel=0&amp;pfdrid_c=true"
+    class="ecImg" style="font-size: 10pt;">&nbsp;</p><p class="MsoNormal" style="font-size:
+    10pt; margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p><p class="MsoNormal"
+    style="font-size: 10pt; margin-left: 38.5pt; text-indent: -0.25in;"><span lang="EN-GB">-
+    Product Group (RC.0053) screen has a new attribute "Is Water Product" which is
+    used to identify a group as Water Product group.</span></p><p class="MsoNormal"
+    style="font-size: 10pt; margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p><p
+    class="MsoNormal" style="font-size: 10pt; margin: 0in 0in 0.0001pt 0.5in; line-height:
+    normal;"><img src="/onlinehelp/img?type=description&amp;bfDescNo=PO.0124&amp;imgNo=3&amp;dataLevel=0&amp;pfdrid_c=true"
+    class="ecImg" style="font-size: 10pt;">&nbsp;</p><p class="MsoNormal" style="font-size:
+    10pt; margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p><p class="MsoNormal"
+    style="font-size: 10pt;">5. Displaying additional attributes on Monthly Facility
+    Balancing screen.<o:p></o:p></p><p class="MsoNormal" style="font-size: 10pt; margin-left:
+    13.5pt; text-indent: -13.5pt;">&nbsp;&nbsp;&nbsp; Default configuration shipped
+    with EC will display either "Total Gas Volume" or "Total" metrics attribute which
+    may vary based on product group selected in Navigator.<o:p></o:p></p><p class="MsoNormal"
+    style="font-size: 10pt;">&nbsp; &nbsp; The behavior will be as follows:<o:p></o:p></p><p
+    class="MsoListParagraphCxSpFirst" style="font-size: 10pt; margin-left: 25.5pt;
+    text-indent: -0.25in;"><!--[if !supportLists]-->&nbsp; &nbsp; -<span style="font-variant-numeric:
+    normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family:
+    " times="" new="" roman";"="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><!--[endif]-->Display "Total Gas Volume" for Product group "Gas"<o:p></o:p></p><p
+    class="MsoListParagraphCxSpLast" style="font-size: 10pt; margin-left: 25.5pt;
+    text-indent: -0.25in;"><!--[if !supportLists]-->&nbsp; &nbsp; -<span style="font-variant-numeric:
+    normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family:
+    " times="" new="" roman";"="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><!--[endif]-->Display "Total" volume for rest of the Product groups.<o:p></o:p></p><p
+    class="MsoNormal" style="font-size: 10pt;">&nbsp; &nbsp;&nbsp;The screen can display
+    additional volume related attributes which are user configurable.<o:p></o:p></p><p
+    class="MsoNormal" style="font-size: 10pt;">&nbsp; &nbsp;For example:<o:p></o:p></p><p
+    class="MsoListParagraphCxSpFirst" style="font-size: 10pt; margin-left: 25.5pt;
+    text-indent: -0.25in;"><!--[if !supportLists]-->&nbsp; &nbsp; -<span style="font-variant-numeric:
+    normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family:
+    " times="" new="" roman";"="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><!--[endif]-->For product group "Blend", &nbsp;show bitumen, diluent and
+    shrinkage volumes that make up the blend<o:p></o:p></p><p class="MsoListParagraphCxSpLast"
+    style="font-size: 10pt; margin-left: 25.5pt; text-indent: -0.25in;"><!--[if !supportLists]-->&nbsp;
+    &nbsp; -<span style="font-variant-numeric: normal; font-stretch: normal; font-size:
+    7pt; line-height: normal; font-family: " times="" new="" roman";"="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><!--[endif]-->For product group "Gas", &nbsp;show both Volume and Energy<o:p></o:p></p><p
+    class="MsoNormal" style="font-size: 10pt;">&nbsp;&nbsp; The required configuration
+    to display additional attributes are as follows:<o:p></o:p></p><p class="MsoListParagraphCxSpFirst"
+    style="font-size: 10pt; margin-left: 25.5pt; text-indent: -0.25in;"><!--[if !supportLists]-->&nbsp;
+    &nbsp; -<span style="font-variant-numeric: normal; font-stretch: normal; font-size:
+    7pt; line-height: normal; font-family: " times="" new="" roman";"="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><!--[endif]-->All attributes that can be possibly displayed on the screen
+    are listed under EC Code: BALANCE_GRP_ATTRIBUTE<o:p></o:p></p><p class="MsoListParagraphCxSpLast"
+    style="font-size: 10pt; margin-left: 25.5pt; text-indent: -0.25in;"><!--[if !supportLists]-->&nbsp;
+    &nbsp; -<span style="font-variant-numeric: normal; font-stretch: normal; font-size:
+    7pt; line-height: normal; font-family: " times="" new="" roman";"="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><!--[endif]-->List of all product groups are available under EC Code: BAL_PROD_GROUP<o:p></o:p></p><p
+    class="MsoNormal" style="font-size: 10pt; margin-left: 7.5pt;">To display additional
+    attributes for any Product Group, the user needs to map attributes with Product
+    Group using EC Code dependency configuration. For e.g.:</p><p class="MsoNormal"
+    style="font-size: 10pt; text-indent: 0px; margin-left: 7.5pt;"><span style="text-indent:
+    -0.5in; font-size: 10pt;">&nbsp; i) Aittribute "Net Bitumen Vol" is identified
+    using EC Code: BITUMEN_VOL; Code Type: BALANCE_GRP_ATTRIBUTE</span></p><p class="MsoNormal"
+    style="font-size: 10pt; text-indent: 0px; margin-left: 7.5pt;"><span style="font-size:
+    10pt; text-indent: -0.5in;">&nbsp; ii) Product "Blend" is identified using EC
+    Code: BLEND_PROD_BAL; Code Type : BAL_PROD_GROUP</span></p><p class="MsoNormal"
+    style="font-size: 10pt; margin-left: 7.5pt;">Attribute "Net Bitumen Vol" (EC Code:
+    BITUMEN_VOL) must have EC Code dependency set to Product "Blend" (EC Code: BLEND_PROD_BAL)
+    if this attribute is required when "Blend" is selected as the navigator value
+    for Product dropdown on the screen.<o:p></o:p></p><p class="MsoNormal" style="font-size:
+    10pt; text-align: justify; line-height: normal;"></p><p class="MsoNormal" style="font-size:
+    10pt; margin-left: 7.5pt;">Following is the screenshot depicting this configuration:-<o:p></o:p></p><p
+    class="MsoNormal" style="font-size: 10pt; margin-left: 7.5pt;">&nbsp; &nbsp; &nbsp;&nbsp;<img
+    src="/onlinehelp/img?type=description&amp;bfDescNo=PO.0124&amp;imgNo=5&amp;dataLevel=2&amp;pfdrid_c=true"
+    class="ecImg"></p><p class="MsoListParagraph" style="font-size: 10pt; margin-left:
+    25.5pt; text-indent: -0.25in;"><!--[if !supportLists]-->&nbsp; &nbsp; &nbsp; -<span
+    style="font-variant-numeric: normal; font-stretch: normal; font-size: 7pt; line-height:
+    normal; font-family: " times="" new="" roman";"="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><!--[endif]-->An attribute can be mapped to multiple Product groups. In
+    such case, this attribute will be visible for each of these Product Groups, when
+    selected in the navigator.<o:p></o:p></p><p class="MsoNormal" style="font-size:
+    10pt; text-align: justify; line-height: normal;">&nbsp;&nbsp;6. &nbsp;&nbsp;Display
+    a popup window for a stream on the Monthly Facility Balancing screen</p><p class="MsoNormal"
+    style="font-size: 10pt; margin-left: 0.5in; line-height: normal;">Popup windows
+    can be displayed when a stream is clicked on the Monthly Facility Balancing screen.
+    &nbsp;Check the "Used in Balancing Screen" option on the Screen Set List screen
+    (CO.0030) next to the Stream Set Name to display as the pop up window for a stream.</p><p
+    class="MsoNormal" style="font-size: 10pt; margin-left: 0.5in; line-height: normal;">&nbsp;<img
+    src="/onlinehelp/img?type=description&amp;bfDescNo=PO.0124&amp;imgNo=4&amp;dataLevel=0&amp;pfdrid_c=true"
+    class="ecImg" style="font-size: 10pt;"></p><p class="MsoNormal" style="font-size:
+    10pt; margin-left: 0.5in; line-height: normal;"><i>The daily stream volumes will
+    be displayed in a popup window using the "Daily Gas Stream Status, by Stream"
+    Stream Set when the "Gas Vent B" stream is clicked in the Monthly Facility Balancing
+    screen.</i></p><p class="MsoNormal" style="font-size: 10pt; text-align: justify;
+    line-height: normal;">Monthly Facility Balancing Screen has some special consideration
+    regarding following:</p><p class="MsoNormal" style="font-size: 10pt; text-align:
+    justify; line-height: normal;"><b>Specific calculation for Products related to
+    Water product:</b></p><p class="MsoNormal" style="font-size: 10pt; text-align:
+    justify; line-height: normal;">While considering Truck ticket data on Monthly
+    Facility Balancing screen under the "Receipt" and "Disposition" Balance Item categories,
+    data is pulled from the Truck Ticket - Single Transfer - Objects (PO.0100) screen.
+    Truck Tickets for any product other than Water products, water volume calculated
+    due to BS&amp;W cut is included in the "Total Trucked In" and "Total Trucked Out"
+    volume. Such volumes will appear with product code of "Water".</p><p class="MsoNormal"
+    style="font-size: 10pt; text-align: justify; line-height: normal;">BS&amp;W cut
+    for Truck Tickets, created for Water Product group will not be included. For these
+    truck tickets, volume will be referred from the attribute Calculated Liq. Gross
+    Volume.</p><p class="MsoNormal" style="font-size: 10pt; text-align: justify; line-height:
+    normal;">Note: Only the product groups which are configured as per point 3 of
+    Configuration mentioned above, i.e. the "Is Water Product" attribute must be selected
+    for them on Product Group (RC.0053) screen, will be considered as Water Product
+    Group</p><p class="MsoNormal" style="font-size: 10pt; text-align: justify; line-height:
+    normal;"><b>Support of additional columns on Monthly Facility Balancing Screen</b>:</p><p
+    class="MsoNormal" style="font-size: 10pt; text-align: justify; line-height: normal;">Based
+    on default configuration Monthly Facility Balancing screen displays a single column
+    as "Total", &nbsp;showing volume for product group selected as Navigator option.</p><p
+    class="MsoNormal" style="font-size: 10pt; text-align: justify; line-height: normal;">Additionally
+    screen can display additional columns on screen which are client configurable
+    by Product Group. For example:</p><p class="MsoNormal" style="font-size: 10pt;
+    margin-left: 38.5pt; text-indent: -0.25in;"><span lang="EN-GB">- For Product Group
+    "Blend" show the bitumen, diluent and shrinkage volumes that make up the blend</span></p><p
+    class="MsoNormal" style="font-size: 10pt; margin-left: 38.5pt; text-indent: -0.25in;"><span
+    lang="EN-GB">- For product group "Gas" show both Volume and Energy</span></p><p
+    class="MsoNormal" style="font-size: 10pt; text-align: justify; line-height: normal;">User
+    need to follow point 5 of configuration as described above.</p><p class="MsoNormal"
+    style="font-size: 10pt; text-align: justify; line-height: normal;"><b>Inclusion
+    of Truck Ticket</b></p><p class="MsoNormal" style="font-size: 10pt; text-align:
+    justify; line-height: normal;">The option to include or exclude truck ticket from
+    the balancing sheet can be configured in CO.1006 - Maintain System Settings. By
+    default, the truck tickets are included in the balancing sheet.</p>'
+related: {}

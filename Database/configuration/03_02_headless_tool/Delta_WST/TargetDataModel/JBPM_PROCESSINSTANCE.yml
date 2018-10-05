@@ -1,0 +1,193 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_PROCESSINSTANCE
+cnstPrimaryKey:
+  columns:
+  - ID_
+  name: SYS_C0015700
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  END_:
+    columnName: END_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  ID_:
+    columnName: ID_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  ISSUSPENDED_:
+    columnName: ISSUSPENDED_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  KEY_:
+    columnName: KEY_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  PROCESSDEFINITION_:
+    columnName: PROCESSDEFINITION_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  ROOTTOKEN_:
+    columnName: ROOTTOKEN_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  START_:
+    columnName: START_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  SUPERPROCESSTOKEN_:
+    columnName: SUPERPROCESSTOKEN_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  VERSION_:
+    columnName: VERSION_
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+cnstForeignKeys:
+  FK_PROCIN_PROCDEF:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_PROCESSDEFINITION
+    columns:
+      PROCESSDEFINITION_: ID_
+    name: FK_PROCIN_PROCDEF
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_PROCIN_ROOTTKN:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_TOKEN
+    columns:
+      ROOTTOKEN_: ID_
+    name: FK_PROCIN_ROOTTKN
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_PROCIN_SPROCTKN:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_TOKEN
+    columns:
+      SUPERPROCESSTOKEN_: ID_
+    name: FK_PROCIN_SPROCTKN
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_PROCIN_KEY:
+    indexName: IDX_PROCIN_KEY
+    columns:
+    - KEY_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_PROCIN_PROCDEF:
+    indexName: IDX_PROCIN_PROCDEF
+    columns:
+    - PROCESSDEFINITION_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_PROCIN_ROOTTK:
+    indexName: IDX_PROCIN_ROOTTK
+    columns:
+    - ROOTTOKEN_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_PROCIN_SPROCTK:
+    indexName: IDX_PROCIN_SPROCTK
+    columns:
+    - SUPERPROCESSTOKEN_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

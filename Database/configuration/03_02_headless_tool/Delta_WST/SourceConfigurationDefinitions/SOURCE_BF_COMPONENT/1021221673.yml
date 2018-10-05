@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1021221673'
+keys:
+  BF_CODE: CO.1001
+  T: BF_COMPONENT
+  URL: /copy_button
+parentKeys: {}
+properties:
+  BF_CODE: CO.1001
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.1001' AND NVL(URL,'IS_NULL') = '/copy_button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_access_roles' )
+  CLASS_NAME: null
+  COMP_CODE: copy_button
+  NAME: Copy Button
+  SIGNING_REQ_IND: null
+  URL: /copy_button
+related: {}

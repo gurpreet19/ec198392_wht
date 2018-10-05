@@ -1,0 +1,250 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_TOKEN
+cnstPrimaryKey:
+  columns:
+  - ID_
+  name: SYS_C0015692
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  END_:
+    columnName: END_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  ID_:
+    columnName: ID_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  ISABLETOREACTIVATEPARENT_:
+    columnName: ISABLETOREACTIVATEPARENT_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  ISSUSPENDED_:
+    columnName: ISSUSPENDED_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  ISTERMINATIONIMPLICIT_:
+    columnName: ISTERMINATIONIMPLICIT_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  LOCK_:
+    columnName: LOCK_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  NAME_:
+    columnName: NAME_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  NEXTLOGINDEX_:
+    columnName: NEXTLOGINDEX_
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  NODEENTER_:
+    columnName: NODEENTER_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  NODE_:
+    columnName: NODE_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  PARENT_:
+    columnName: PARENT_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  PROCESSINSTANCE_:
+    columnName: PROCESSINSTANCE_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  START_:
+    columnName: START_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  SUBPROCESSINSTANCE_:
+    columnName: SUBPROCESSINSTANCE_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  VERSION_:
+    columnName: VERSION_
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+cnstForeignKeys:
+  FK_TOKEN_NODE:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_NODE
+    columns:
+      NODE_: ID_
+    name: FK_TOKEN_NODE
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TOKEN_PARENT:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_TOKEN
+    columns:
+      PARENT_: ID_
+    name: FK_TOKEN_PARENT
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TOKEN_PROCINST:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_PROCESSINSTANCE
+    columns:
+      PROCESSINSTANCE_: ID_
+    name: FK_TOKEN_PROCINST
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TOKEN_SUBPI:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_PROCESSINSTANCE
+    columns:
+      SUBPROCESSINSTANCE_: ID_
+    name: FK_TOKEN_SUBPI
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_TOKEN_NODE:
+    indexName: IDX_TOKEN_NODE
+    columns:
+    - NODE_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TOKEN_PARENT:
+    indexName: IDX_TOKEN_PARENT
+    columns:
+    - PARENT_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TOKEN_PROCIN:
+    indexName: IDX_TOKEN_PROCIN
+    columns:
+    - PROCESSINSTANCE_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TOKEN_SUBPI:
+    indexName: IDX_TOKEN_SUBPI
+    columns:
+    - SUBPROCESSINSTANCE_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

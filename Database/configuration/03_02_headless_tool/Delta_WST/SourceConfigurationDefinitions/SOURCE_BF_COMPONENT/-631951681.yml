@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-631951681'
+keys:
+  BF_CODE: PO.0095
+  T: BF_COMPONENT
+  URL: /subDailyElectricalStreamStatusTable
+parentKeys: {}
+properties:
+  BF_CODE: PO.0095
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0095' AND NVL(URL,'IS_NULL') = '/subDailyElectricalStreamStatusTable')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_electrical_stream_status' )
+  CLASS_NAME: STRM_SUB_DAY_STATUS_ELE
+  COMP_CODE: subDailyElectricalStreamStatusTable
+  NAME: Sub Daily Electrical Stream Status
+  SIGNING_REQ_IND: null
+  URL: /subDailyElectricalStreamStatusTable
+related: {}

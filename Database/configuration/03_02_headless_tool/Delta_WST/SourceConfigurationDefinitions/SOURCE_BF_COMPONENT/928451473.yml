@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '928451473'
+keys:
+  BF_CODE: GD.0052
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: GD.0052
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='GD.0052' AND NVL(URL,'IS_NULL') = '/button')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_operational_restriction/CLASS/OPRES_PERIOD_RESTRICTION' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

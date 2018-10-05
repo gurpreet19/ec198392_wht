@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1450925631'
+keys:
+  MEASUREMENT_TYPE: LIQ_RATE_VOL
+  T: TV_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: Special handling of Liquid Rate to Liquid Volume
+  FORMAT_MASK: '###,###,##0.0'
+  MEASUREMENT_TYPE: LIQ_RATE_VOL
+related: {}

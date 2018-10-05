@@ -1,0 +1,33 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1776195009'
+keys:
+  T: TV_UNIT
+  UNIT: MILLISIEMENS
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Milli Siemens
+  FIN_CODE: null
+  LABEL: mS
+  PREFIX: null
+  PREFIX_FACTOR: null
+  UNIT: MILLISIEMENS
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  TV_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: CONDUCTIVITY
+      T: TV_UOM_SETUP
+      UNIT: MILLISIEMENS
+    parentKeys:
+      TV_UNIT.UNIT: MILLISIEMENS
+    properties:
+      DB_UNIT: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: CONDUCTIVITY
+      REPORT_UNIT: Y
+      UNIT: MILLISIEMENS
+      VIEW_UNIT: Y

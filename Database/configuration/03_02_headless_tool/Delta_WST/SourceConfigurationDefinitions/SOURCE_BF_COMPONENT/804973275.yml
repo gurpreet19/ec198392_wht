@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '804973275'
+keys:
+  BF_CODE: LA.0001
+  T: BF_COMPONENT
+  URL: /single_adj
+parentKeys: {}
+properties:
+  BF_CODE: LA.0001
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='LA.0001' AND NVL(URL,'IS_NULL') = '/single_adj')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.la.screens/monthly_account_adjustment' )
+  CLASS_NAME: LIFT_ACCOUNT_ADJ_SINGLE
+  COMP_CODE: single_adj
+  NAME: Single Account Adjustment
+  SIGNING_REQ_IND: null
+  URL: /single_adj
+related: {}

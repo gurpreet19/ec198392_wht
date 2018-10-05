@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '660700950'
+keys:
+  BF_CODE: CO.0217
+  T: BF_COMPONENT
+  URL: /versions
+parentKeys: {}
+properties:
+  BF_CODE: CO.0217
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.0217' AND NVL(URL,'IS_NULL') = '/versions')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CHOKE_MODEL' )
+  CLASS_NAME: CHOKE_MODEL
+  COMP_CODE: versions
+  NAME: versions
+  SIGNING_REQ_IND: null
+  URL: /versions
+related: {}

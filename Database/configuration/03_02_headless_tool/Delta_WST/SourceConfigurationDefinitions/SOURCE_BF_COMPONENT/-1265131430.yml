@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1265131430'
+keys:
+  BF_CODE: CO.2056
+  T: BF_COMPONENT
+  URL: /CreateNewSplitButton
+parentKeys: {}
+properties:
+  BF_CODE: CO.2056
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.2056' AND NVL(URL,'IS_NULL') = '/CreateNewSplitButton')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_lifting_account_split' )
+  CLASS_NAME: null
+  COMP_CODE: CreateNewSplitButton
+  NAME: Copy Current Split
+  SIGNING_REQ_IND: null
+  URL: /CreateNewSplitButton
+related: {}

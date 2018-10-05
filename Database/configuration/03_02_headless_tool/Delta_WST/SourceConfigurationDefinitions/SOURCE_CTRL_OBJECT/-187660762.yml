@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-187660762'
+keys:
+  OBJECT_NAME: DATASET_FLOW_AMEND_CONN
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: null
+  OBJECT_NAME: DATASET_FLOW_AMEND_CONN
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

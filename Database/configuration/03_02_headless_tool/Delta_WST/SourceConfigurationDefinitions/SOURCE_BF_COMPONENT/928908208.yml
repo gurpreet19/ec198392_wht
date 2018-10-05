@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '928908208'
+keys:
+  BF_CODE: CD.0132
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CD.0132
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0132' AND NVL(URL,'IS_NULL') = '/table')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_object_list' )
+  CLASS_NAME: OBJECT_LIST_SETUP
+  COMP_CODE: object_list_table
+  NAME: Object List List
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

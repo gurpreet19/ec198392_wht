@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-33567989'
+keys:
+  BF_CODE: PO.0099
+  T: BF_COMPONENT
+  URL: /blend_content
+parentKeys: {}
+properties:
+  BF_CODE: PO.0099
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0099' AND NVL(URL,'IS_NULL') = '/blend_content')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/blend_export' )
+  CLASS_NAME: STOR_BLEND_CONTENT
+  COMP_CODE: blend_content
+  NAME: Blend Content
+  SIGNING_REQ_IND: null
+  URL: /blend_content
+related: {}

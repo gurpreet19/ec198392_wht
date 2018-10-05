@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-774791973'
+keys:
+  BF_CODE: PO.0038
+  T: BF_COMPONENT
+  URL: /gasStreamCompanyStatus
+parentKeys: {}
+properties:
+  BF_CODE: PO.0038
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='PO.0038' AND NVL(URL,'IS_NULL') = '/gasStreamCompanyStatus')
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_company_status' )
+  CLASS_NAME: STRM_DAY_CPY_STATUS_GAS
+  COMP_CODE: gasStreamCompanyStatus
+  NAME: Daily Gas Stream Company Status
+  SIGNING_REQ_IND: null
+  URL: /gasStreamCompanyStatus
+related: {}

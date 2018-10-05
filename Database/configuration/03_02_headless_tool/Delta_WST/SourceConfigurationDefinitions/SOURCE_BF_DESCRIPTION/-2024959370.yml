@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2024959370'
+keys:
+  BF_DESCRIPTION_NO: FC.0021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FC.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_period_operational_restriction/DATA_CLASS/FCST_OPRES_PERIOD_RESTR' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to enter and view forecasted capacity restriction on operational restriction.</p><p>An operation object can be objects like PIPELINE and DELIVERY_POINT. The objects where an implementation needs capacity, the object must implement the&nbsp;OPERATIONAL_RESTRICTION interface.</p><p>Capacity restrictions can happen, either due to planned or unplanned events. This information is needed by the scheduling process for balancing the contracts&nbsp;against the allowable physical limitations of the pipeline.</p><p>By selecting an object in the navigator the restriction for selected period will be listed. A new restriction can be entered by pressing the insert button. The restricted&nbsp;capacity can be looked at in two ways. It can represent a daily capacity or as the total capacity for the period. The example implementation on the class action&nbsp;trigger, anticipate that the restricted capacity is a daily figure.</p><p>Note that restriction can be calculated based on other restrictions and the output from capacity calculation can be viewed here.</p>
+related: {}
