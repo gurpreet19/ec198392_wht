@@ -1,1 +1,0 @@
-CREATE OR REPLACE TYPE cost_mapp_info_t IS TABLE OF cost_mapp_info_o;
