@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-448927625'
+keys:
+  BF_DESCRIPTION_NO: PO.0123
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0123
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_fcty_balancing_adj' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The Monthly Facility Balancing - Adjustments screen allow users to adjust measurement data that affects the month end facility balance. Ideally corrections are made to the original source data however production reporting deadlines may not always allow for sufficient time to correct data at the source.</p>
+
+    <p>The adjustment quantities can be included in the monthly production allocations and can be reflected in the calculation of the Monthly Facility Balancing screen (PO.0124).</p>
+
+    <p>Adjustments are entered in the form of a change in volume (i.e. not an override) to the monthly stream quantities that are displayed on the Monthly Facility Balancing screen.</p>
+
+    <p>The screen enables adjustments to:</p>
+
+    <p>- Streams that are configured for the Monthly Facility Balancing screen</p>
+
+    <p>- Trucked quantities based on trucked from and to locations.</p>
+related: {}

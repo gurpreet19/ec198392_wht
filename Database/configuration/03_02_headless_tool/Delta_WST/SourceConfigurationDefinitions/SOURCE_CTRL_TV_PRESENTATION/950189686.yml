@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '950189686'
+keys:
+  COMPONENT_ID: FCTY_ANALYSIS_ITEM
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.co.screens/facility_analysis_items
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: FCTY_ANALYSIS_ITEM
+  COMPONENT_LABEL: Facility Analysis Items
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FACILITY_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 35.0
+  WINDOW_ID: ENERGYX
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2056700072'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/fcst_day_stor_prod
+parentKeys: {}
+properties:
+  BF_CODE: CP.0071
+  NAME: Forecast Daily Storage Production
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/fcst_day_stor_prod
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1112052234'
+keys:
+  BF_CODE: CO.0082
+  CLASS_NAME: SUB_AREA
+  COMP_CODE: manageObject
+  T: BF_COMPONENT
+  URL: /manageObject
+parentKeys: {}
+properties:
+  BF_CODE: CO.0082
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/SUB_AREA/TARGET/SUB_AREA/CLASS_NAME/SUB_AREA' )
+  CLASS_NAME: SUB_AREA
+  COMP_CODE: manageObject
+  NAME: Manage Object
+  SIGNING_REQ_IND: null
+  URL: /manageObject
+related: {}

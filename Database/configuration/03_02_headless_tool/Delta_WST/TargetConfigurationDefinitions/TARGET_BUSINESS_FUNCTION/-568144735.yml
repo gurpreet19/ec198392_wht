@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-568144735'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pd.screens/well_downtime
+parentKeys: {}
+properties:
+  BF_CODE: PD.0008
+  NAME: Well Downtime
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pd.screens/well_downtime
+related: {}

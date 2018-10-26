@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '828817148'
+keys:
+  COMPONENT_ID: FT_PR_TG
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.sp/transaction_general?query=/com.ec.revn.sp/query/get_transaction_general_crude_form.xml&layout=/com.ec.revn.sp/layout/transaction_general_crude_form.xml
+  COMPONENT_EXT_NAV_NAME: ?query=/com.ec.revn.sp/query/get_transaction_general_crude_form.xml&layout=/com.ec.revn.sp/layout/transaction_general_crude_form.xml
+  COMPONENT_ID: FT_PR_TG
+  COMPONENT_LABEL: Transaction General
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FT_PR_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 5030.0
+  WINDOW_ID: ENERGYX
+related: {}

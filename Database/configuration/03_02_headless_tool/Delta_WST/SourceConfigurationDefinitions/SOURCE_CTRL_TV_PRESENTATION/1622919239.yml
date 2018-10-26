@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1622919239'
+keys:
+  COMPONENT_ID: WATER_OVERBOARD
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.po.screens/daily_water_overboard_status
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: WATER_OVERBOARD
+  COMPONENT_LABEL: Daily Water Overboard Status
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_PO_GRP_BY_DAY
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 80.0
+  WINDOW_ID: ENERGYX
+related: {}

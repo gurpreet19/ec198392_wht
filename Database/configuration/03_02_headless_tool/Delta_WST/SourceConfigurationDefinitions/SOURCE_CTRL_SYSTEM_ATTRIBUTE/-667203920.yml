@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-667203920'
+keys:
+  ATTRIBUTE_TYPE: GAS_CONST_1ATM_TO_kPA
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: GAS_CONST_1ATM_TO_kPA
+  ATTRIBUTE_VALUE: 101.325
+  COMMENTS: 1atm converted to kPa
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2050785126'
+keys:
+  BF_DESCRIPTION_NO: SA.0011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/contract_account_status_yearly' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to show the results of the Yearly Calculation. The screen is read only, and can be used together with the Yearly Calculation screen to&nbsp;do the same thing as the Yearly Processing screen does. The difference is that the Yearly Processing screen has some buttons to approve the data or do the&nbsp;calculations with db packages, and it shows the result of the calculations in the same screen. The Yearly Contract Account Status will be used only for displaying the&nbsp;results of the calculations. The Yearly Calculation screen will start the calculations using calculation rules and not fixed db packages.</p><p>The Yearly Processing screen should not coexist with the Yearly Contract Account Status or the Yearly Calculation, only one of the solutions should be used.</p><p>After selecting a year and a contract, all years where an allocation has been run will show in the Year data section, with the latest year on top. After selecting a year&nbsp;in the upper table, the results for that year are shown per contract, with the calculated quantities per contract account of the selected contract. The unit of measure&nbsp;(UOM) is a contract account attribute, to inform what kind of number the quantity calculated is. The amount column will be used to hold the monetary amount for a contract account. In typicall EC implementations Contract Accounts will be related to quantities, but in some cases is it also required to show monetary values. Especially if EC Revenue&rsquo;s ERP Documents concept is used.</p>
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1148643434'
+keys:
+  BF_CODE: PR.0035
+  CLASS_NAME: PRICE_RATE_MTH_VALUE
+  COMP_CODE: price_index_values_monthly
+  T: BF_COMPONENT
+  URL: /price_index_values_monthly
+parentKeys: {}
+properties:
+  BF_CODE: PR.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/price_index_monthly/CLASS/PRICE_RATE_MTH_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_RATE/TARGET_TYPE/self' )
+  CLASS_NAME: PRICE_RATE_MTH_VALUE
+  COMP_CODE: price_index_values_monthly
+  NAME: Monthly Values
+  SIGNING_REQ_IND: null
+  URL: /price_index_values_monthly
+related: {}

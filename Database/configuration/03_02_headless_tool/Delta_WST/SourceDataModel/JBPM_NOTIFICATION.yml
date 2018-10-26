@@ -1,0 +1,81 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_NOTIFICATION
+cnstPrimaryKey:
+  columns:
+  - ID
+  name: SYS_C008664
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  DTYPE:
+    columnName: DTYPE
+    typeName: VARCHAR2(31 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  ESCALATION_NOTIFICATIONS_ID:
+    columnName: ESCALATION_NOTIFICATIONS_ID
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  ID:
+    columnName: ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  PRIORITY:
+    columnName: PRIORITY
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+cnstForeignKeys:
+  FK_JBPM_NOTIFICATION_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_ESCALATION
+    columns:
+      ESCALATION_NOTIFICATIONS_ID: ID
+    name: FK_JBPM_NOTIFICATION_1
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_NOT_ESCID:
+    indexName: IDX_NOT_ESCID
+    columns:
+    - ESCALATION_NOTIFICATIONS_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

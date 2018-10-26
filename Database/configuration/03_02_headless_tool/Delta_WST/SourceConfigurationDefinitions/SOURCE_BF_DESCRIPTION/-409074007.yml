@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-409074007'
+keys:
+  BF_DESCRIPTION_NO: CO.0122
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0122
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_pt_conversion/CLASS_NAME/STRM_PT_CONVERSION' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic maintain screen; see description of generic maintain screens in the beginning of the configuration manual.</p>
+
+    <p>This specification defines a new configuration screen <em>Stream PT Conversion Values</em>. The purpose of this screen is to access the conversion values used in production testing when calculating test results.</p>
+related: {}

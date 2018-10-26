@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1563154464'
+keys:
+  SOURCE_ID: 5003.0
+  T: T_BASIS_LANGUAGE_SOURCE
+parentKeys: {}
+properties:
+  SOURCE_ID: 5003.0
+  SOURCE_TEXT: ORA-20303
+related:
+  T_BASIS_LANGUAGE_TARGET:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      LANGUAGE_ID: 1.0
+      SOURCE_ID: 5003.0
+      T: T_BASIS_LANGUAGE_TARGET
+    parentKeys:
+      T_BASIS_LANGUAGE_SOURCE.SOURCE_ID: 5003.0
+    properties:
+      LANGUAGE_ID: 1.0
+      SOURCE_ID: 5003.0
+      TARGET_TEXT: The Cargo Status cannot change from Approved to Tentative, Official, Ready for Harbour, Closed or Cancelled

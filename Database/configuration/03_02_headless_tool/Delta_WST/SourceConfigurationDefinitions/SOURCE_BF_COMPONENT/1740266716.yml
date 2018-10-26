@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1740266716'
+keys:
+  BF_CODE: CO.0072
+  CLASS_NAME: CHEM_PRODUCT
+  COMP_CODE: manage_object_nav_nav
+  T: BF_COMPONENT
+  URL: /manage_object_nav_nav
+parentKeys: {}
+properties:
+  BF_CODE: CO.0072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CHEM_PRODUCT' )
+  CLASS_NAME: CHEM_PRODUCT
+  COMP_CODE: manage_object_nav_nav
+  NAME: Manage Object Navigator
+  SIGNING_REQ_IND: null
+  URL: /manage_object_nav_nav
+related: {}

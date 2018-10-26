@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1617441827'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/pipeline_trade_confirmation
+parentKeys: {}
+properties:
+  BF_CODE: GD.0012
+  NAME: Pipeline Trading  Confirmation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.gd.screens/pipeline_trade_confirmation
+related: {}

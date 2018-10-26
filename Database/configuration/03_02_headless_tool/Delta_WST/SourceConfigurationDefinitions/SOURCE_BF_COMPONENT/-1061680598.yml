@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1061680598'
+keys:
+  BF_CODE: CO.2035
+  CLASS_NAME: CONTRACT_GROUP
+  COMP_CODE: objectForm
+  T: BF_COMPONENT
+  URL: /objectForm
+parentKeys: {}
+properties:
+  BF_CODE: CO.2035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CONTRACT_GROUP' )
+  CLASS_NAME: CONTRACT_GROUP
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /objectForm
+related: {}

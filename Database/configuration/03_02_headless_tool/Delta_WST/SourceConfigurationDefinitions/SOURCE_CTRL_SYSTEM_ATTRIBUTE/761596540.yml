@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '761596540'
+keys:
+  ATTRIBUTE_TYPE: ACC_REV_VALIDATION_LEVEL
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: OPEN
+  ATTRIBUTE_TYPE: ACC_REV_VALIDATION_LEVEL
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Indicates the default validation level for the reversal document. Options are OPEN | VALID1 | VALID2 | TRANSFER | BOOKED
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

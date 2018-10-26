@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '577150419'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0082' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='list_management_table' AND NVL(CLASS_NAME,'IS_NULL') = 'STIM_COLLECTION_SETUP')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0082' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='list_management_table' AND NVL(CLASS_NAME,'IS_NULL') = 'STIM_COLLECTION_SETUP')
+  COMMENTS: null
+  NAME: List Management - Table /save
+  URL: /save
+related: {}

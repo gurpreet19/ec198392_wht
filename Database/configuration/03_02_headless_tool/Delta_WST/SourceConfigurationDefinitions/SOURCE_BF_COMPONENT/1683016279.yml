@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1683016279'
+keys:
+  BF_CODE: CO.1035
+  CLASS_NAME: null
+  COMP_CODE: tag_event_status
+  T: BF_COMPONENT
+  URL: /tag_event_status
+parentKeys: {}
+properties:
+  BF_CODE: CO.1035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/tag_event_status' )
+  CLASS_NAME: null
+  COMP_CODE: tag_event_status
+  NAME: Tag Event Status
+  SIGNING_REQ_IND: null
+  URL: /tag_event_status
+related: {}

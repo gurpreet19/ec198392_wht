@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-519937439'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/monthly_tank_status
+parentKeys: {}
+properties:
+  BF_CODE: PO.0006
+  NAME: Monthly Tank Status
+  PROFILE_CLASS_NAME: '''TANK'
+  URL: /com.ec.prod.po.screens/monthly_tank_status
+related: {}

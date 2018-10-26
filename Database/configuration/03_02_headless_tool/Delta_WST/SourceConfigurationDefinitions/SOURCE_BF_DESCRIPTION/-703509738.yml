@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-703509738'
+keys:
+  BF_DESCRIPTION_NO: PP.0024
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/prod_object_potential/GROUPMODEL/CHOKE_MODEL/TARGET/CHOKE_MODEL/DATA_CLASS/CHOKE_MODEL_MPP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used to record the maximum production potential (MPP) for a Choke Model object. MPP&rsquo;s can be recorded every day or whenever there is expected to be a change. EC will treat a MPP for a date to be valid until there is another MPP another day. The unit is controlled by the Choke Model object&rsquo;s unit which is configured when you create Choke Model objects.</p>
+
+    <p>Section two will be a read-only section displaying any future LIP opportunities for the selected Choke Model object. Only LIP records having the attribute &ldquo;INCLUDE_MPP&rdquo;=&rdquo;Y&rdquo; should be displayed. All records where from date &gt; navigator From Date should be displayed.</p>
+
+    <p>Section three is also a read only section. This section displays one row per day for all days between navigator From Date and navigator To Date. The MPP for the navigator Choke Model object is displayed + any LIP record increments and the sum of both as a third column. It is the sum of both that will be used in the Daily Facility Loss Accounting and Daily Field Loss Accounting BFs.</p>
+
+    <p>The button &ldquo;Draw Graph&rdquo; will open a popup window displaying the graph shown for all days between navigator From Date and To Date.</p>
+related: {}

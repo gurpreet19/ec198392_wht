@@ -1,0 +1,61 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '269457172'
+keys:
+  BF_DESCRIPTION_NO: PP.0066
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0066
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_scenarios_graphs/CLASS_NAME/FCST_SCENARIO_GRAPHS/DAILY_CLASS_NAME/FCST_SUMM_VAR_DAY/MONTHLY_CLASS_NAME/FCST_SUMM_VAR_MTH' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This Business Function is used to render daily and monthly graphs
+    for the selected Scenarios, date range, Forecast Variable and Phase for comparison
+    purpose.</p><p>While inserting Forecast and Scenario, the last asset (Production
+    Unit, Facility, etc.) selected in the navigator will also be saved which is the
+    &ldquo;Linked Asset&rdquo; for data filtering purpose.For example,</p><ol><li>When
+    the navigator is selected up to Production Unit, while inserting Forecast and
+    Scenario, the Production Unit will be saved as the &ldquo;Linked Asset&rdquo;
+    for the record.</li><li>When the navigator is selected up to Facility Class 1,
+    while inserting Forecast and Scenario, the Facility Class 1 will be saved as the
+    &ldquo;Linked Asset&rdquo; for the record.</li></ol><p>While filtering the Forecasts
+    and Scenarios, all records whose &ldquo;Linked Asset&rdquo; is the same as that
+    of the last asset (Production Unit, Facility, etc.) selected in the navigator
+    will be filtered. For example,</p><ol><li>When the navigator is selected up to
+    Production Unit, all records whose &ldquo;Linked Asset&rdquo; is the same as the
+    Production Unit provided in the navigator will be filtered.</li><li>When the navigator
+    is selected up to Facility Class 1, all records whose &ldquo;Linked Asset&rdquo;
+    is the same as the Facility Class 1 provided in the navigator will be filtered.</li></ol><p>The
+    second section is the navigator used to select parameters (From Date, To Date,
+    Variable, Phase and Graph Type) which are used to draw the graph.</p><p>The &ldquo;Variable&rdquo;
+    dropdown is used to select the Forecast Variable [Potentials (Unconstrained and
+    Constrained), Constraints, Shortfalls (Planned, Unplanned and Non-operational),
+    Injection, Internal Consumption, Losses, Compensation, Available for Export].
+    The &ldquo;Phase&rdquo; dropdown is used to select the Forecast Phase [Oil, Gas,
+    Condensate, Water, Gas Lift, Diluent, Injection (Water, Gas, Steam, CO2)].</p><p>The
+    Forecast Variables and Phases are configured as EC Codes. To configure them, go
+    to EC Codes - All (CO.1011) BF -&gt; For Variable: Code Type=&ldquo;FCST_VARIABLE&rdquo;,
+    For Phase : Code Type=&ldquo;FCST_PHASE&rdquo;.</p><p>The &ldquo;Draw Graph&rdquo;
+    button is used to render the daily and monthly graphs based on the selected date
+    range. For example, when From Date = 02-Jan-2017, To Date = 8-Nov-2017 then daily
+    graph will be drawn with the date range and monthly graph will be rendered from
+    Jan-2017 to Nov-2017.</p><p>User can choose the type of graph to be drawn, either
+    line chart or area chart.</p><p>The functionality of this Business Function can
+    be customized by plugging customized classes adhering to certain defined norms.</p><p>The
+    default configuration for this Business Function is as follows:</p><p><b>/com.ec.prod.pp.screens/forecast_scenarios_graphs</b><br/>/CLASS_NAME/FCST_SCENARIO_GRAPHS<br/><b>/DAILY_CLASS_NAME</b>/FCST_SUMM_VAR_DAY<br/><b>/MONTHLY_CLASS_NAME</b>/FCST_SUMM_VAR_MTH<br/>?screentemplate=/com.ec.prod.pp.screens/forecast_scenarios_graphs</p><p>The
+    class configuration for the daily and monthly graphs is as follows:</p><ol><li><b>DAILY_CLASS_NAME</b><p>This
+    class configuration is related to the &ldquo;Daily Comparison&rdquo; graph. This
+    class is based on the view that aggregates the variables for all the phases related
+    to a particular Forecast and Scenario for a given date. The default configured   class
+    for this is &ldquo;FCST_SUMM_VAR_DAY&rdquo;.</p><p>A customized class can be configured
+    on the condition that it has the following attributes:</p><p><b>VARIABLE_CODE</b>
+    - Variable Code<br/><b>FORECAST_ID</b> - Forecast ID<br/><b>OBJECT_ID</b> - Scenario
+    ID<br/> <b>DAYTIME</b> - Date</p></li><li><b>MONTHLY_CLASS_NAME</b><p>This class
+    configuration is related to the &ldquo;Monthly Comparison&rdquo; graph. This class
+    is based on the view that aggregates the variables for all the phases related
+    to a particular Forecast and Scenario for a given month. The default configured
+    class for this is &ldquo;FCST_SUMM_VAR_MTH&ldquo;.</p><p>A customized class can
+    be configured on the condition that it has the following attributes:</p><p><b>VARIABLE_CODE</b>
+    - Variable Code<br/> <b>FORECAST_ID</b> - Forecast ID<br/> <b>OBJECT_ID</b> -
+    Scenario ID<br/> <b>DAYTIME</b> - Date</p></li></ol>'
+related: {}

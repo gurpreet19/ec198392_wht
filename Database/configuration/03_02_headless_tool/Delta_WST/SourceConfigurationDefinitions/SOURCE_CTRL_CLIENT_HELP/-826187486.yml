@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-826187486'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/intergr_uom_conv
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/intergr_uom_conv
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1529230429'
+keys:
+  BF_CODE: CO.1031
+  CLASS_NAME: CLASS_ATTR_VALIDATION
+  COMP_CODE: validate_class_attr
+  T: BF_COMPONENT
+  URL: /validate_class_attr
+parentKeys: {}
+properties:
+  BF_CODE: CO.1031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_validation' )
+  CLASS_NAME: CLASS_ATTR_VALIDATION
+  COMP_CODE: validate_class_attr
+  NAME: Validate Class Attributes
+  SIGNING_REQ_IND: null
+  URL: /validate_class_attr
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-328754970'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.rty/royalty_contract_us/CLASS_NAME/CONTRACT/DATA_CLASS/DIVISION_ORDER/NAVMODEL/DIV_ORDER/BF_PROFILE/RC.0058/ACCESS_COLUMN/REVN_CODE
+parentKeys: {}
+properties:
+  BF_CODE: RC.0058
+  NAME: Division Order
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.rty/royalty_contract_us/CLASS_NAME/CONTRACT/DATA_CLASS/DIVISION_ORDER/NAVMODEL/DIV_ORDER/BF_PROFILE/RC.0058/ACCESS_COLUMN/REVN_CODE
+related: {}

@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1124038170'
+keys:
+  NAME: CONTRACT_AREA
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: REVN_DOC_CNT_DD_CO_CA
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Contract Area
+  MANDATORY_IND: Y
+  NAME: CONTRACT_AREA
+  PARAMETER_SUB_TYPE: CONTRACT_AREA
+  PARAMETER_TYPE: EC_OBJECT_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 10.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: REVN_DOC_CNT_DD_CO_CA
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1383494489'
+keys:
+  BF_CODE: FC.1016
+  CLASS_NAME: FIELD
+  COMP_CODE: fieldcode
+  T: BF_COMPONENT
+  URL: /fieldcode
+parentKeys: {}
+properties:
+  BF_CODE: FC.1016
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_value_by_field/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST' )
+  CLASS_NAME: FIELD
+  COMP_CODE: fieldcode
+  NAME: Field Code
+  SIGNING_REQ_IND: null
+  URL: /fieldcode
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1531149476'
+keys:
+  BF_DESCRIPTION_NO: VO.0012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: VO.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/split_key/MONTHLY/TRUE/SPLIT_TYPE/STREAM_ITEM_CATEGORY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Monthly Split Key Stream Item Categories screen</strong>    is used to create and maintain Item Category Split Key shares.</p><p>    The Item Category Split Key is used by the Cascade Logic to calculate values in the Volume module when a value should be split into values for different    stream item categories.</p><p>    The Cascade Logic is run after saving in this business function and e.g. might influence all instantiated stream items for the timespan valid for the share    that uses this split key.</p>
+related: {}

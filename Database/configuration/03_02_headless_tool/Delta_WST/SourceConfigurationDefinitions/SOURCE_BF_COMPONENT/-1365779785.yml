@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1365779785'
+keys:
+  BF_CODE: CO.2053
+  CLASS_NAME: LETTER_PROTEST_TEMPLATE
+  COMP_CODE: protest_template
+  T: BF_COMPONENT
+  URL: /protest_template
+parentKeys: {}
+properties:
+  BF_CODE: CO.2053
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/letter_of_protest_template' )
+  CLASS_NAME: LETTER_PROTEST_TEMPLATE
+  COMP_CODE: protest_template
+  NAME: Protest Template
+  SIGNING_REQ_IND: null
+  URL: /protest_template
+related: {}

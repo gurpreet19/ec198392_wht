@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1979975991'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO_GEN_UNIT/TARGET/CO_GEN_UNIT/CLASS_NAME/CO_GEN_UNIT
+parentKeys: {}
+properties:
+  BF_CODE: CO.0170
+  NAME: Co Gen Unit
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO_GEN_UNIT/TARGET/CO_GEN_UNIT/CLASS_NAME/CO_GEN_UNIT
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1273137624'
+keys:
+  BF_CODE: VO.0011
+  CLASS_NAME: SPLIT_KEY
+  COMP_CODE: search
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: VO.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/split_key/MONTHLY/TRUE/SPLIT_TYPE/FIELD' )
+  CLASS_NAME: SPLIT_KEY
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

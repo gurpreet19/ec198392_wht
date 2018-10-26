@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '338172008'
+keys:
+  BF_CODE: PD.0006
+  CLASS_NAME: WELL_EQPM_MASTER_EVENT
+  COMP_CODE: master_events
+  T: BF_COMPONENT
+  URL: /master_events
+parentKeys: {}
+properties:
+  BF_CODE: PD.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/well_eqpm_master_event' )
+  CLASS_NAME: WELL_EQPM_MASTER_EVENT
+  COMP_CODE: master_events
+  NAME: Master Events
+  SIGNING_REQ_IND: null
+  URL: /master_events
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '208208997'
+keys:
+  BF_CODE: PO.0116
+  CLASS_NAME: null
+  COMP_CODE: table_last_5_reading
+  T: BF_COMPONENT
+  URL: /table_last_5_reading
+parentKeys: {}
+properties:
+  BF_CODE: PO.0116
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/facility_asset_analysis' )
+  CLASS_NAME: null
+  COMP_CODE: table_last_5_reading
+  NAME: Last 5 Reading
+  SIGNING_REQ_IND: null
+  URL: /table_last_5_reading
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-669810878'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/document_validation/MODE/TRANSFER
+parentKeys: {}
+properties:
+  BF_CODE: SP.0004
+  NAME: Document Transfer
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/document_validation/MODE/TRANSFER
+related: {}

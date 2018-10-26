@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '312154050'
+keys:
+  BF_DESCRIPTION_NO: CO.0192
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0192
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/task_process_item' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This is a configuration screen for Task Process Items. A task process item is used to define process details on frequency of tasks and business functions related to tasks. The scheduler will pick up this information and populate the task list. The frequency is defined as cron expressions. For more information on cron expressions, please refer to the Process Automation documentation. To be able to use expression like "first working day", the REVN module must be installed and the "calendar_coll_id" attribute must be enabled.</p>
+related: {}

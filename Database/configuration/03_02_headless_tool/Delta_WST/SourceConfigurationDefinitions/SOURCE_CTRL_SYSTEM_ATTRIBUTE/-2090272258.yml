@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2090272258'
+keys:
+  ATTRIBUTE_TYPE: VO_STIM_CASCADE_TABLE
+  DAYTIME: 2010-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: STIM_CASCADE_ASYNCH
+  ATTRIBUTE_TYPE: VO_STIM_CASCADE_TABLE
+  ATTRIBUTE_VALUE: null
+  COMMENTS: 'Indicates the table cacading stream items will be saved to when booking
+    a document if the ERP Feedback field is empty. Valid choices: STIM_CASCADE | STIM_CASCADE_ASYNCH."'
+  DAYTIME: 2010-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

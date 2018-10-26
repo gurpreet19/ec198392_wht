@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '402118473'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.pr.screens/price_index_daily_with_dim/CLASS/PRICE_IDX_DS_PO_DAY_VAL
+parentKeys: {}
+properties:
+  BF_CODE: PR.0016
+  NAME: Daily Price Index – Dataset and Price Object
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.pr.screens/price_index_daily_with_dim/CLASS/PRICE_IDX_DS_PO_DAY_VAL
+related: {}

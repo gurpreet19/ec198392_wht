@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1067370609'
+keys:
+  BF_DESCRIPTION_NO: CO.0108
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0108
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/WELL_HOOKUP/TARGET/WELL_HOOKUP/CLASS_NAME/WELL_HOOKUP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This is a generic screen; see description of generic screens at the beginning of the configuration manual.</p><p>The Well Hookup object class is included in the operational group model between the well class and the facility_class_1 class. The Well Hookup object is a pure connection object without any associated data. It is to be used solely by the allocation for making it possible to created relations between a set of wells against one or more streams. A typical case is grouping a set of injection wells against an injection master meter. A physical interpretation of the Well Hookup object could be a platform manifold or a subsea template, having a set of wells connected to it.</p><p>The Well Hookup class will be an allocatable object, meaning that it can be represented as an allocation node. The Well Hookup object can be used for connecting both production and injection wells to associated master meters.</p><p>Example of usage:</p><p>Below figure illustrating a physical situation with a set of injection wells connected to an injection manifold. A master injection meter measures the total injection volume. The right-hand side of the figure illustrates how the manifold is represented as a Well Hookup object. In this case the Well Hookup object has only been set up with the "Can Process Water Injection Flag" as activated.</p><p><img src="/onlinehelp/img?type=description&amp;bfDescNo=CO.0108&amp;imgNo=1&amp;dataLevel=0&amp;pfdrid_c=true" class="ecImg"></p><p>Since the Well Hookup object is part of the group model there is an assumption that any connections between Well and Well Hookup objects are effective from the beginning of the production day.</p>
+related: {}

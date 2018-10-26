@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1456471752'
+keys:
+  SOURCE_ID: 110039.0
+  T: T_BASIS_LANGUAGE_SOURCE
+parentKeys: {}
+properties:
+  SOURCE_ID: 110039.0
+  SOURCE_TEXT: ORA-20447
+related: {}

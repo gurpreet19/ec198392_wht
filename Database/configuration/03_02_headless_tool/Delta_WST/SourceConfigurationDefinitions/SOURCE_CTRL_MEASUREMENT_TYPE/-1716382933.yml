@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1716382933'
+keys:
+  MEASUREMENT_TYPE: RATIO_WAT_LIQ
+  T: CTRL_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: WCR etc
+  FORMAT_MASK: '#0.000000'
+  MEASUREMENT_TYPE: RATIO_WAT_LIQ
+related: {}

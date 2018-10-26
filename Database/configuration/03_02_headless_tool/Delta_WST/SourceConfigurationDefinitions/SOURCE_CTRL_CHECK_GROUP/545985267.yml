@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '545985267'
+keys:
+  CHECK_GROUP: M_ASSET_STATUS
+  T: CTRL_CHECK_GROUP
+parentKeys: {}
+properties:
+  CHECK_GROUP: M_ASSET_STATUS
+  CHECK_RULE_TARGET: null
+  DESCRIPTION: Monthly Asset Status
+  EC_USER_OBJECT: null
+  PARENT_GROUP: null
+related: {}

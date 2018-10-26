@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1461655276'
+keys:
+  BF_CODE: CO.2023
+  CLASS_NAME: CONTRACT_SHIPPER_PAIR
+  COMP_CODE: downstream_shipper
+  T: BF_COMPONENT
+  URL: /downstream_shipper
+parentKeys: {}
+properties:
+  BF_CODE: CO.2023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/shipper_pair' )
+  CLASS_NAME: CONTRACT_SHIPPER_PAIR
+  COMP_CODE: downstream_shipper
+  NAME: Downstream Shippers
+  SIGNING_REQ_IND: null
+  URL: /downstream_shipper
+related: {}

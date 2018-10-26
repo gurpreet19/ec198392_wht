@@ -1,0 +1,55 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-990136126'
+keys:
+  BF_DESCRIPTION_NO: SD.0054
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_nomloc_profile/NAV_MODEL/SALE_COMMERCIAL/TARGET/NOMINATION_LOCATION/BF_PROFILE/SD.0054/CLASS/SLNL_DAY_TARGET/SUB_CLASS/SLNP_SUB_DAY_PROFILE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>This business function list the targets for the day and the daily\
+    \ flow profile calculated based on the different targets.</p><p>The targets for\
+    \ the day are created in Daily Nomination Location Target (SD.0053). All targets\
+    \ created for selected day in the navigator is listed in the first section.</p><p>The\
+    \ next section list the hourly profile. When a new target is created within the\
+    \ day the flow rates already issued as a target up to the hour of issue of the\
+    \ new target are retained.</p><p>When the target is initially issued, the prorating\
+    \ is quite simple. The daily target is simply profiled over the day in proportion\
+    \ to any profile defined for the wet gas. The situation becomes slightly more\
+    \ complex when a target has already been issued for the day in which the original\
+    \ hourly figures are retained up to the time of the change. The new target value\
+    \ is then used to calculate the total for the remaining hours such that the overall\
+    \ average for the day now equals the new target. Once the average values have\
+    \ been calculated, these values are then profiled according to any profile defined\
+    \ for the wet gas in a similar manner to that described above.</p><p>The End of\
+    \ Day Target is the current target for the selected hour</p><p>Example when only\
+    \ one target:<br>Time 06:00, Target TJ = 2400</p><table style=\"border-collapse:\
+    \ collapse;\" border=\"1\">  <tr>    <th>Hour</th>\t<th>Dry gas hourly formula</th>\
+    \    <th>Dry gas hourly value</th>    <th>End Of Day Target</th>  </tr>  <tr>\
+    \    <td>06:00</td>    <td>DG daily total</td>    <td>2400</td>    <td>2400</td>\
+    \  </tr>  <tr>    <td>07:00</td>    <td>DG daily total</td>    <td>2400</td> \
+    \   <td>2400</td>  </tr> <tr>    <td>08:00</td>    <td>DG daily total</td>   \
+    \ <td>2400</td>    <td>2400</td>  </tr> <tr>    <td>...</td>    <td>...</td> \
+    \   <td>...</td>    <td>...</td>  </tr> <tr>    <td>05:00</td>    <td>DG daily\
+    \ total</td>    <td>2400</td>    <td>2400</td>  </tr></table><p>Example when more\
+    \ than one target within day: <br>Time = 06:00, Target TJ = 2400<br>Time = 18:00,\
+    \ Target TJ = 3600<br></p><table style=\"border-collapse: collapse;\" border=\"\
+    1\">  <tr>    <th>Hour</th>    <th>Dry gas hourly formula</th>    <th>Dry gas\
+    \ hourly value</th>    <th>End Of Day Target</th>  </tr>  <tr>    <td>06:00</td>\
+    \    <td>DG daily total</td>    <td>2400</td>    <td>2400</td>  </tr>  <tr>  \
+    \  <td>07:00</td>    <td>DG daily total</td>    <td>2400</td>    <td>2400</td>\
+    \  </tr>  <tr>    <td>...</td>    <td>...</td>    <td>...</td>    <td>...</td>\
+    \  </tr>  <tr>    <td>18:00</td>    <td>DG daily total * hours in day - Sum(DG\
+    \ hourly value for all hours until current) / hours remaining</td>    <td>4800</td>\
+    \    <td>3600</td>  </tr>  <tr>    <td>19:00</td>    <td>DG daily total * (WG\
+    \ hourly value/WG daily total)</td>    <td>4800</td>    <td>3600</td>  </tr> \
+    \ <tr>    <td>...</td>    <td>...</td>    <td>...</td>    <td>...</td>  </tr>\
+    \  <tr>    <td>05:00</td>    <td>DG daily total * (WG hourly value/WG daily total)</td>\
+    \    <td>4800</td>    <td>3600</td>  </tr></table><p>The implementation projects\
+    \ can create a new treeview entry with arguments on the URL. The screen takes\
+    \ NAV_MODEL, TARGET, TARGET_TYPE, CLASS, SUB_CLASS and BF_PROFILE as parameters\
+    \ on the treeview. The navigation model can be forced by the project by using\
+    \ NAV_MODEL argument.</p>"
+related: {}

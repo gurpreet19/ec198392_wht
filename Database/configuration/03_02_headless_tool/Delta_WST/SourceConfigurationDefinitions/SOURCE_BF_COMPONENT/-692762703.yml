@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-692762703'
+keys:
+  BF_CODE: IS.0007
+  CLASS_NAME: IMP_TARGET_MAPPING_UE
+  COMP_CODE: target_mapping_ue_table
+  T: BF_COMPONENT
+  URL: /target_mapping_ue_table
+parentKeys: {}
+properties:
+  BF_CODE: IS.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_src_mapping_ue' )
+  CLASS_NAME: IMP_TARGET_MAPPING_UE
+  COMP_CODE: target_mapping_ue_table
+  NAME: Target Mapping User Exit
+  SIGNING_REQ_IND: null
+  URL: /target_mapping_ue_table
+related: {}

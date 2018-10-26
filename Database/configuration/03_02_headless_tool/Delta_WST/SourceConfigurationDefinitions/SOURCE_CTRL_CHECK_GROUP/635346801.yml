@@ -1,0 +1,25 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '635346801'
+keys:
+  CHECK_GROUP: M_PWEL_STATUS
+  T: CTRL_CHECK_GROUP
+parentKeys: {}
+properties:
+  CHECK_GROUP: M_PWEL_STATUS
+  CHECK_RULE_TARGET: null
+  DESCRIPTION: Monthly Production Well Status
+  EC_USER_OBJECT: /com.ec.prod.wr.screens/monthly_production_well_status/CLASS_NAME/PWEL_MTH_STATUS?screentemplate=/com.ec.prod.wr.screens/monthly_production_well_status
+  PARENT_GROUP: M_ASSET_STATUS
+related:
+  CTRL_CHECK_COMBINATION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CHECK_GROUP: M_PWEL_STATUS
+      CHECK_ID: 101.0
+      T: CTRL_CHECK_COMBINATION
+    parentKeys:
+      CTRL_CHECK_GROUP.CHECK_GROUP: M_PWEL_STATUS
+    properties:
+      CHECK_GROUP: M_PWEL_STATUS
+      CHECK_ID: 101.0
+      DESCRIPTION: null

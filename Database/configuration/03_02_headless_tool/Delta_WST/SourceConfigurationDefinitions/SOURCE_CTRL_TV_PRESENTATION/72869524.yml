@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '72869524'
+keys:
+  COMPONENT_ID: WELL_FINDER
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/well_finder
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: WELL_FINDER
+  COMPONENT_LABEL: Well Finder
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_WELL_RES
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 5.0
+  WINDOW_ID: ENERGYX
+related: {}

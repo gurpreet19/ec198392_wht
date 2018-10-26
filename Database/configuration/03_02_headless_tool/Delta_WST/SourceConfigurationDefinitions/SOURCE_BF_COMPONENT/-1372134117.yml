@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1372134117'
+keys:
+  BF_CODE: CD.0105
+  CLASS_NAME: CALENDAR_COLL_SETUP
+  COMP_CODE: tab3
+  T: BF_COMPONENT
+  URL: /calendar_collection_setup
+parentKeys: {}
+properties:
+  BF_CODE: CD.0105
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION' )
+  CLASS_NAME: CALENDAR_COLL_SETUP
+  COMP_CODE: tab3
+  NAME: CALENDAR COLLECTION SETUP
+  SIGNING_REQ_IND: null
+  URL: /calendar_collection_setup
+related: {}

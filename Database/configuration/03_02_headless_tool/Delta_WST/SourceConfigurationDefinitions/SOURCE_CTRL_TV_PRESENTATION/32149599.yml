@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '32149599'
+keys:
+  COMPONENT_ID: ASSET_UNIT_CONVERSION
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/asset_unit_conversion
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ASSET_UNIT_CONVERSION
+  COMPONENT_LABEL: Asset Unit Conversion
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: UNITS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 50.0
+  WINDOW_ID: ENERGYX
+related: {}

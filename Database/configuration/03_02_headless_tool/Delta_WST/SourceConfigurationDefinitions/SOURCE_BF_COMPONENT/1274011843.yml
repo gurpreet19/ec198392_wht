@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1274011843'
+keys:
+  BF_CODE: PO.0056
+  CLASS_NAME: STRM_TRUCK_UNLOAD_MASS
+  COMP_CODE: unload_mass
+  T: BF_COMPONENT
+  URL: /unload_mass
+parentKeys: {}
+properties:
+  BF_CODE: PO.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_single_load_multiple_offload' )
+  CLASS_NAME: STRM_TRUCK_UNLOAD_MASS
+  COMP_CODE: unload_mass
+  NAME: Unload mass
+  SIGNING_REQ_IND: null
+  URL: /unload_mass
+related: {}

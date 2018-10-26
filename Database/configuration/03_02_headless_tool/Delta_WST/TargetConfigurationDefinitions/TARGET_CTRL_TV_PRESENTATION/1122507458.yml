@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1122507458'
+keys:
+  COMPONENT_ID: LOW_DEFERMENT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.pd.screens/low_deferment
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: LOW_DEFERMENT
+  COMPONENT_LABEL: Low Deferments
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_LOW_OFF_DEFERMENT
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 60.0
+  WINDOW_ID: ENERGYX
+related: {}

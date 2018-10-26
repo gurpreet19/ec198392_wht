@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '543233317'
+keys:
+  BF_DESCRIPTION_NO: SA.0010
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/contract_account_status_monthly' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to show the results of the Monthly Calculation. The screen is read only, and can be used together with the Monthly Calculation screen&nbsp;to do the same thing as the Monthly Processing screen does. The difference is that the Monthly Processing screen has some buttons to approve the data or do the&nbsp;calculations with db packages, and it shows the result of the calculations in the same screen. The Monthly Contract Account Status will be used only for displaying&nbsp;the results of the calculations. The Monthly Calculation screen will start the calculations using calculation rules and not fixed db packages.</p><p>The Monthly Processing screen should not coexist with the Monthly Contract Account Status or the Monthly Calculation, only one of the solutions should be used.&nbsp;</p><p>After selecting a period and a contract, the selected month and 11 months back in time (meaning, showing last 12-month period) will show in the Month data section.&nbsp;After selecting a month in the upper table, the results for that month are shown per contract, with the calculated quantities per contract account of the selected&nbsp;contract. The unit of measure (UOM) is a contract account attribute, to inform what kind of number the quantity calculated is. The amount column will be used to hold the monetary amount for a contract account. In typicall EC implementations Contract Accounts will be related to quantities, but in some cases is it also required to show monetary values. Especially if EC Revenue&rsquo;s ERP Documents concept is used.</p>
+related: {}

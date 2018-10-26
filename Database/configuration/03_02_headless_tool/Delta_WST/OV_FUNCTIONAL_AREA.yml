@@ -1,0 +1,30 @@
+' CODE=ECIS DAYTIME=01-01-1900': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1509972540'
+  keys:
+    CODE: ECIS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: OV_FUNCTIONAL_AREA
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' CODE=REVN DAYTIME=01-01-1900': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1792333055'
+  keys:
+    CODE: REVN
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: OV_FUNCTIONAL_AREA
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' CODE=SALE_DISP DAYTIME=01-01-1900': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1067163182'
+  keys:
+    CODE: SALE_DISP
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: OV_FUNCTIONAL_AREA
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2074596894'
+keys:
+  BF_CODE: IN.0011
+  CLASS_NAME: INV_FIELD_PS_RATE_CALC
+  COMP_CODE: processRateCalPhyDetail
+  T: BF_COMPONENT
+  URL: /phytable/detail
+parentKeys: {}
+properties:
+  BF_CODE: IN.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/rate_calculation' )
+  CLASS_NAME: INV_FIELD_PS_RATE_CALC
+  COMP_CODE: processRateCalPhyDetail
+  NAME: Physical Stock Rates by Field
+  SIGNING_REQ_IND: null
+  URL: /phytable/detail
+related: {}

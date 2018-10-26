@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1818967614'
+keys:
+  BF_CODE: FI.0007
+  CLASS_NAME: CALC_REVN_FIN_ITEM_LOG
+  COMP_CODE: log_list
+  T: BF_COMPONENT
+  URL: /log_list
+parentKeys: {}
+properties:
+  BF_CODE: FI.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/fin_item_calc_mth' )
+  CLASS_NAME: CALC_REVN_FIN_ITEM_LOG
+  COMP_CODE: log_list
+  NAME: Calculation Log
+  SIGNING_REQ_IND: null
+  URL: /log_list
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1101665747'
+keys:
+  BF_CODE: SP.0015
+  CLASS_NAME: LINE_ITEM_TEMPLATE
+  COMP_CODE: TransactionTemplateOtherLineItem
+  T: BF_COMPONENT
+  URL: /other_line_item_table
+parentKeys: {}
+properties:
+  BF_CODE: SP.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/transaction_mapping' )
+  CLASS_NAME: LINE_ITEM_TEMPLATE
+  COMP_CODE: TransactionTemplateOtherLineItem
+  NAME: Other Line Item
+  SIGNING_REQ_IND: null
+  URL: /other_line_item_table
+related: {}

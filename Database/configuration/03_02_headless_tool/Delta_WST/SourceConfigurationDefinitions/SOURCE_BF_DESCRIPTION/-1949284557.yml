@@ -1,0 +1,102 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1949284557'
+keys:
+  BF_DESCRIPTION_NO: FI.0002
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FI.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>    <strong>Financial Item Template screen</strong>    is used\
+    \ to group Financial Item objects into Templates. One FI object can be a source\
+    \ for many FI Template attributes. Moreover, one FI object can be part of as many\
+    \ FI Templates as user wants.</p><h2><strong style=\"color: rgb(0, 0, 153);\"\
+    >Navigator</strong></h2><p>    Navigator settings allow user to define the search\
+    \ criteria for the    Financial Item Templates and display them in the table.</p><p>\
+    \    <u>Navigator has these selection options:</u></p>    <p>    <strong>- Date</strong>\
+    \    -  Auto filled with the first day of the current month. This is the date\
+    \ Financial Item Templates are Valid to.   </p><p><strong>- Business Unit</strong>\
+    \    - Optional - This is the Business Unit the FI Template belongs to.</p>\t\
+    <p><strong>- Contract Area</strong>    - Optional - This is the Contract Area\
+    \ the FI Template belongs to.</p><p>    <strong>- Financial Item Template Code</strong>\
+    \    - Optional - This is the code of the Financial Item Template or part of the\
+    \ code in case    of using a wildcard search by *code*.</p>\t<p>       <strong>-\
+    \ Financial Item Template Name</strong>    - Optional - This is the name of the\
+    \ Financial Item Template or part of the name in case    of using a wildcard search\
+    \ by *name*.</p><h2><strong style=\"color: rgb(0, 0, 153);\">Template Section</strong></h2><p>\
+    \    The section displays FI Templates matching Navigator criteria.</p><p>   \
+    \     <strong>Creating a new FI Template</strong></p><p>        <u>Creating a\
+    \ new FI Template will have these features:</u></p>    <p>    <strong>- Financial\
+    \ Item Template Code </strong>    - Mandatory - This is the code of the FI Template.\
+    \ Should be unique.</p>    <p>    <strong>- Financial Item Template Name </strong>\
+    \    - Mandatory - This is the name of the FI Template.</p>    <p>    <strong>-\
+    \ Valid From </strong>    - Mandatory - This is the date FI Template is Valid\
+    \ from.</p>\t<p>    <strong>- Valid To </strong>    - Optional - This is the date\
+    \ FI Template is Valid to.</p>\t<p>    <strong>- Contract Area </strong>    -\
+    \ Optional - This is the Contract Area the FI Template belongs to.</p>\t\t<p>\
+    \        <strong>Button <span style=\"color: rgb(0, 153, 0);\">Copy Template </span></strong>\
+    \    <br>    Each existing Financial Item Template can be copied by following\
+    \ steps:<br>    1. Assigning a new Code and Name,<br>    2. Typing a new date\
+    \ the Template is Valid from (and if needed -  Valid    to),<br>    3. Clicking\
+    \ Copy Template button.</p><p>    <u>Note:</u>    selected Template will be copied\
+    \ together with all FI Template Attributes.</p><h2><strong style=\"color: rgb(0,\
+    \ 0, 153);\">Template Attribute Section</strong></h2><p>    The section displays\
+    \ Financial Item objects (Template Attributes) that    are grouped under the selected\
+    \ FI Template. Template only includes    configuration, no transactional data.\
+    \ It is just defining what entries    exist and what objects are they linked to.</p><p>\
+    \    <strong>Creating a new FI Template Attribute</strong></p><p>    <u>Inserting\
+    \ a new Template Attribute will have these features:</u>    </p><p>    <strong>-\
+    \ Sort Order: </strong></p>\t<ul><li>    Optional. This is a sort order of the\
+    \ FI Template Attribute. </li><li>By default, a newly inserted entry will appear\
+    \ on top of the list of FI attributes if a user has not entered a sort order manually.\
+    \ </li></ul>    <p>    <strong>- Financial Item Source Object Name: </strong></p>\
+    \    <ul><li>Mandatory. This is an original Name of the FI object created in the\
+    \ FI Definition    screen. </li>\t<li>It can't be changed by the user in any other\
+    \ screen, but it can be    replaced with other selected FI object in the dropdown.</li></ul><p>\
+    \    <strong>- Financial Item Name:</strong></p><ul><li>    Mandatory. This is\
+    \ an optional name given to FI Template Attribute by the user. Can be left blank.</li><li>\
+    \    By default, it has the same Name as FI Source Object.</li></ul>  <p>    <strong>-\
+    \ Dataset:</strong>   </p><ul><li>    Datasets are created for the FI object in\
+    \ the FI Definition screen (Dataset    Tab).</li><li>    Inserting a FI Template\
+    \ Attribute in the screen the user can:</li>    - choose one of the available\
+    \ datasets in the dropdown. After saving the    chosen dataset will be displayed\
+    \ in the screen.<br>    - leave the Dataset field blank. After saving EC will\
+    \ automatically create    one FI Template Attribute for each of the datasets that\
+    \ are configured for the FI    object.<li>    Dataset field can't be left blank.\
+    \ It should always have value.</li></ul>  \t<p>    <strong>- Dataset Priority:</strong>\
+    \   </p><ul><li>It is a priority of the FI dataset values for processing in the\
+    \ Daily / Monthly / Yearly FI screens (in terms of calculation and reporting purposes).</li><li>Dataset\
+    \ Priority field can't be left blank. It should always have value.</li></ul>\t\
+    <p>    <strong>- Currency / UOM:</strong>   </p><ul><li>Represents the unit of\
+    \ measure for the FI Template Attribute.</li><li>Dropdown contains either a list\
+    \ of currencies or a list of UOMs. It depends on the Item Type.</li><li>    The\
+    \ field can't be left blank. It should always have value.</li></ul>\t<p>    <strong>-\
+    \ Company:</strong> This is a certain Company the FI Template Attribute can be\
+    \ linked to.   </p>\t<p>    <strong>- Object Link Type:</strong>    </p>   <ul><li>Even\
+    \ though Object Link Type is defined for the FI object in the FI Definition screen,\
+    \ the field is still editable.</li>   <li>    The field can't be left blank. It\
+    \ should always have value.</li></ul>\t<p>    <strong>- Object Link:</strong>\
+    \    </p>   <ul><li>Even though Object Link is defined for the FI object in the\
+    \ FI Definition screen, the field is still editable.</li>\t<li>    The field can't\
+    \ be left blank. It should always have value.</li></ul>\t<p>    <strong>- Financial\
+    \ Account:</strong>    </p><ul><li>    This is a particular Financial Account\
+    \ that can be defined for the FI Template Attribute.</li><li>    Can be left blank.</li></ul><p>\
+    \    <strong>- ERP Account Code:</strong>    </p><ul><li>    This is a GL account\
+    \ reference to the linked Financial Account.</li><li>    Assigned automatically\
+    \ by EC. Read-only.</li></ul><p>    <strong>- Cost Object Type:</strong> Even\
+    \ though Cost Object Type is defined for the FI object in the FI Definition screen,\
+    \ the field is still editable.</p><p>    <strong>- Cost Object:</strong> If Cost\
+    \ Object Type is set to \"None\", Cost Object field is blank. </p>\t<p> <strong>-\
+    \ Cost Object ERP Code:</strong></p>    <ul><li>    This is an ERP reference to\
+    \ the linked Cost Object.</li><li>Assigned automatically by EC. Read-only.</li></ul>\t\
+    <p> <strong>- Contract Area:</strong></p>    <ul><li>This is a read-only column.\
+    \ It shows the Contract Area the FI Template Attribute is linked to.</li>\t<li>If\
+    \ FI Template was not connected to any Contract Area and now FI Template is going\
+    \ to be set to a certain Contract Area, all Template Attributes would automatically\
+    \ be linked to the chosen Contract Area.</li></ul>\t<p>    <strong>- Comment:</strong>\
+    \ This is a comment for the FI Template Attribute.</p>\t\t      <p><strong>  \
+    \      NOTE: Changes made for the FI entries in the FI Template screen are not\
+    \ saved        back to the FI object (FI Definition screen).    </strong></p>"
+related: {}

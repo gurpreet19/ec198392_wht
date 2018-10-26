@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2053012799'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/UTILITY_EQPM/TARGET/UTILITY_EQPM/CLASS_NAME/UTILITY_EQPM
+parentKeys: {}
+properties:
+  BF_CODE: CO.0116
+  NAME: Utility Equipment
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/UTILITY_EQPM/TARGET/UTILITY_EQPM/CLASS_NAME/UTILITY_EQPM
+related: {}

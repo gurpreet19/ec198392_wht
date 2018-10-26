@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1924896053'
+keys:
+  BF_CODE: SA.0009
+  CLASS_NAME: SCTR_DAY_STATUS
+  COMP_CODE: DCAS
+  T: BF_COMPONENT
+  URL: /DCAS
+parentKeys: {}
+properties:
+  BF_CODE: SA.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/contract_account_status_daily' )
+  CLASS_NAME: SCTR_DAY_STATUS
+  COMP_CODE: DCAS
+  NAME: Daily Contract Account Status
+  SIGNING_REQ_IND: null
+  URL: /DCAS
+related: {}

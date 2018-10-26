@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '161935612'
+keys:
+  BF_DESCRIPTION_NO: WR.0058
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/webo_interval_plt_test' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to store the result of PLT (Production Logging Test) tests. More than one PLT test can be stored for a day and well bore, using the run no identifier.</p>
+
+    <p>EC will also calculate each well bore intervals percent share of oil, gas and water. These numbers can be used as input to determine new split factors used in the BF &ldquo;Maintain Well Bore Interval Split (CO.0058)&rdquo;. There will be no automatic link.</p>
+related: {}

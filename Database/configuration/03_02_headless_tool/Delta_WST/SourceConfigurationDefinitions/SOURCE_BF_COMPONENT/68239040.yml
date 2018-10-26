@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '68239040'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: FIN_PERIOD_DOC_TRANS
+  COMP_CODE: btnDocDetail/transactions
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button/transactions
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: FIN_PERIOD_DOC_TRANS
+  COMP_CODE: btnDocDetail/transactions
+  NAME: document_detail/Transaction
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button/transactions
+related: {}

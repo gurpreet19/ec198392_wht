@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-418230125'
+keys:
+  BF_CODE: TO.0033
+  CLASS_NAME: MARINE_NOTICES
+  COMP_CODE: notices_year_overview
+  T: BF_COMPONENT
+  URL: /notices_year_overview
+parentKeys: {}
+properties:
+  BF_CODE: TO.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/marine_notices' )
+  CLASS_NAME: MARINE_NOTICES
+  COMP_CODE: notices_year_overview
+  NAME: All Notices In Force
+  SIGNING_REQ_IND: null
+  URL: /notices_year_overview
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1209801080'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/UTILITY_EQPM/TARGET/UTILITY_EQPM/CLASS_NAME/UTILITY_EQPM
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/UTILITY_EQPM/TARGET/UTILITY_EQPM/CLASS_NAME/UTILITY_EQPM
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

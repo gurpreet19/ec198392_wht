@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2127415896'
+keys:
+  BF_CODE: GD.0048
+  CLASS_NAME: CNTR_INV_DAY_OPER_MATRIX
+  COMP_CODE: inventory
+  T: BF_COMPONENT
+  URL: /inventory
+parentKeys: {}
+properties:
+  BF_CODE: GD.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_contract_inv_matrix/TARGET/CONTRACT_INVENTORY/CLASS/CNTR_INV_DAY_OPER_MATRIX/NAV_MODEL/TRAN_COMMERCIAL' )
+  CLASS_NAME: CNTR_INV_DAY_OPER_MATRIX
+  COMP_CODE: inventory
+  NAME: Inventory
+  SIGNING_REQ_IND: null
+  URL: /inventory
+related: {}

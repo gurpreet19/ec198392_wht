@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '773950945'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: REVN_DOC_CNT_BP_ALL
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: REVN
+  DESCRIPTION: Document Validation Status - All - By Booking Period
+  LABEL: Document Validation Status - All - By Booking Period
+  NAME: Document Validation Status - All - By Booking Period
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: REVN_DOC_CNT_BP_ALL
+related: {}

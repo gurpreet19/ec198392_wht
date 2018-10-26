@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1770996175'
+keys:
+  BF_CODE: GD.0035
+  CLASS_NAME: TRNP_DAY_NOM_LOC_CONF
+  COMP_CODE: dayconf
+  T: BF_COMPONENT
+  URL: /dayconf
+parentKeys: {}
+properties:
+  BF_CODE: GD.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_confirmation/CLASS/TRNP_DAY_NOM_LOC_CONF/SUB_CLASS/TRNP_SUB_DAY_LOC_CONF/NAV_MODEL/TRAN_COMMERCIAL/NOMINATION_CYCLE/false/USE_NOM_CON/N/COUNTER_BF_PROFILE/DEF_TRAN' )
+  CLASS_NAME: TRNP_DAY_NOM_LOC_CONF
+  COMP_CODE: dayconf
+  NAME: Daily Nomination Location Confirmation
+  SIGNING_REQ_IND: null
+  URL: /dayconf
+related: {}

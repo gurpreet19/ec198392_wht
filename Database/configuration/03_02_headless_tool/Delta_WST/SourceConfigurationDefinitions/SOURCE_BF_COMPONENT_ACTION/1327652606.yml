@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1327652606'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0048' AND NVL(URL,'IS_NULL') = '/navigator' AND COMP_CODE ='modules' AND NVL(CLASS_NAME,'IS_NULL') = 'MODULE_STATUS')
+  T: BF_COMPONENT_ACTION
+  URL: /unlock
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0048' AND NVL(URL,'IS_NULL') = '/navigator' AND COMP_CODE ='modules' AND NVL(CLASS_NAME,'IS_NULL') = 'MODULE_STATUS')
+  COMMENTS: null
+  NAME: Modules /unlock
+  URL: /unlock
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-513554432'
+keys:
+  BF_CODE: CO.0144
+  CLASS_NAME: MSG_FREE_TEXT_SUBJECT
+  COMP_CODE: subject
+  T: BF_COMPONENT
+  URL: /subject
+parentKeys: {}
+properties:
+  BF_CODE: CO.0144
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/free_text_template' )
+  CLASS_NAME: MSG_FREE_TEXT_SUBJECT
+  COMP_CODE: subject
+  NAME: Message Subject
+  SIGNING_REQ_IND: null
+  URL: /subject
+related: {}

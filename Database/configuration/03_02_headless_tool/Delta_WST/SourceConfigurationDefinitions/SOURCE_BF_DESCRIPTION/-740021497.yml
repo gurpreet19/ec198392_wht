@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-740021497'
+keys:
+  BF_DESCRIPTION_NO: CO.0197
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0197
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_well_conn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to connect wells to streams. This is needed to be able to allocate dispositions to wells, where only a subset of the wells should be charged for the disposition. Examples of dispositions can be flare or fuel consumptions.</p>
+
+    <p>The connections have a start and end daytime, where end daytime is exclusive.</p>
+
+    <p>Also, there is a new view (V_STRM_WELL_DAY_CONN) was developed to calculate the fraction of a day the stream and well is connected. On top of this view, a data class (DV_ STRM_WELL_CONN_DAY_DATA) was created to display the production day per well total fraction of the day the well is connected to the stream.</p>
+related: {}

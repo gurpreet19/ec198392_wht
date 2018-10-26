@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-66997382'
+keys:
+  BF_DESCRIPTION_NO: PO.0027
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0027
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_aga_analysis/STRM_SET/PO.0027' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>AGA calculations require a set of analysis constants for AGA3 and AGA8. This BF will be used to enter such values.</p>
+
+    <p>Each stream using AGA calculations needs at least one AGA analysis. The AGA analysis can be a reference value (new attribute to stream). The AGA library will use the latest APPROVED analysis. The analysis VALID_FROM_DATE will be used.</p>
+related: {}

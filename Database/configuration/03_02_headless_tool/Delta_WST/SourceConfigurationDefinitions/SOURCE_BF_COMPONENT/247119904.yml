@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '247119904'
+keys:
+  BF_CODE: WL.0001
+  CLASS_NAME: null
+  COMP_CODE: go_to/accept
+  T: BF_COMPONENT
+  URL: /go_to/accept
+parentKeys: {}
+properties:
+  BF_CODE: WL.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/task_list' )
+  CLASS_NAME: null
+  COMP_CODE: go_to/accept
+  NAME: goto/Accept
+  SIGNING_REQ_IND: null
+  URL: /go_to/accept
+related: {}

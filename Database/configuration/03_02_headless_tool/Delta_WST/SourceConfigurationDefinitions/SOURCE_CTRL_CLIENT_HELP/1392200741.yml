@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1392200741'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.co.screens/storage_profit_centre_conn
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.co.screens/storage_profit_centre_conn
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

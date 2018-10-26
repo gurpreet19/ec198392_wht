@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-930945934'
+keys:
+  BF_CODE: IS.0006
+  CLASS_NAME: null
+  COMP_CODE: import_data_btn
+  T: BF_COMPONENT
+  URL: /import_data_btn
+parentKeys: {}
+properties:
+  BF_CODE: IS.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_upload' )
+  CLASS_NAME: null
+  COMP_CODE: import_data_btn
+  NAME: Import Data into EC
+  SIGNING_REQ_IND: null
+  URL: /import_data_btn
+related: {}

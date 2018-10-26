@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1207054688'
+keys:
+  BF_DESCRIPTION_NO: WR.0007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_gas_injection_flowline_well_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used when daily gas injection flowline and gas injection well data are available. Data can be entered manually or automatically. The BF requires one entry per flowline and well per day, and Energy Components automatically creates new records for both active flowlines and wells. The screen lists all gas injection flowlines connected to the facility and all wells connected to the selected flowline.</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

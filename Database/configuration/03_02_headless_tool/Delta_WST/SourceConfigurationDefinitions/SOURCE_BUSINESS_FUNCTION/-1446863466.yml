@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1446863466'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/nomination_split/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT
+parentKeys: {}
+properties:
+  BF_CODE: CP.0020
+  NAME: Nomination Split
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/nomination_split/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-702942779'
+keys:
+  COMPONENT_ID: GD_PIPELINE_LINEPACK
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.gd.screens/daily_linepack
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: GD_PIPELINE_LINEPACK
+  COMPONENT_LABEL: Daily Pipeline Linepack
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_GD_IN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 10.0
+  WINDOW_ID: ENERGYX
+related: {}

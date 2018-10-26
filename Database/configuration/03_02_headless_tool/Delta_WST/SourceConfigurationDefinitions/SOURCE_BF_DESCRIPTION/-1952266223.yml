@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1952266223'
+keys:
+  BF_DESCRIPTION_NO: PP.0041
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0041
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/stream_component_forecast/CLASS_NAME/FCST_STRM_OIL/COMPONENT_SET_CLASS/FCST_STRM_OIL_COMPONENT/STRM_SET/PP.0041/COMP_SET/STRM_OIL_COMP' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This Business Function is part of the Business Process to enter component analysis results for oil streams.</p>
+    <p>A new scenario data will be created when clicking on the insert button in the toolbar and saving the record after the mandatory values have been specified. When saving the analysis, the belonging component set is automatically created. The component set being used is a pre-configured set of hydrocarbon components, which is specified in the configuration screen for the hydrocarbon component set.</p>
+    <p>For both weight and mol percentages to have the sum add up to 100%.</p>
+related: {}

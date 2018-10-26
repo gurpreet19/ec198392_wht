@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-852286088'
+keys:
+  NAME: FACILITY
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: FCTY_PROD_WELL_STATUS
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Facility
+  MANDATORY_IND: Y
+  NAME: FACILITY
+  PARAMETER_SUB_TYPE: FCTY_CLASS_1
+  PARAMETER_TYPE: EC_OBJECT_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 10.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: FCTY_PROD_WELL_STATUS
+related: {}

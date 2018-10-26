@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '829856511'
+keys:
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/navmodel/TRAN_OPERATIONAL/METER/METER
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: NAV_DEF_VALUE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Default values in nav model for GD Nom Location Meter navigators
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/navmodel/TRAN_OPERATIONAL/METER/METER
+  LABEL: Default values in nav model for GD Nom Location Meter navigators
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '606009484'
+keys:
+  BF_CODE: GD.0034
+  CLASS_NAME: null
+  COMP_CODE: confirmButton
+  T: BF_COMPONENT
+  URL: /confirmButton
+parentKeys: {}
+properties:
+  BF_CODE: GD.0034
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_location_confirmation/CLASS/TRNP_DAY_NOM_CONF/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false' )
+  CLASS_NAME: null
+  COMP_CODE: confirmButton
+  NAME: Confirm Nomination
+  SIGNING_REQ_IND: null
+  URL: /confirmButton
+related: {}

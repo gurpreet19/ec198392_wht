@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-129440024'
+keys:
+  BF_CODE: TO.0032
+  CLASS_NAME: null
+  COMP_CODE: btnSendAll
+  T: BF_COMPONENT
+  URL: /btnSendAll
+parentKeys: {}
+properties:
+  BF_CODE: TO.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/tab_harbour_menu' )
+  CLASS_NAME: null
+  COMP_CODE: btnSendAll
+  NAME: SendAll
+  SIGNING_REQ_IND: null
+  URL: /btnSendAll
+related: {}

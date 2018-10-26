@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2006448813'
+keys:
+  COMPONENT_ID: REVN_LOG
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/revn_log
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: REVN_LOG
+  COMPONENT_LABEL: Revenue Detailed Log
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: RL_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 5440.0
+  WINDOW_ID: ENERGYX
+related: {}

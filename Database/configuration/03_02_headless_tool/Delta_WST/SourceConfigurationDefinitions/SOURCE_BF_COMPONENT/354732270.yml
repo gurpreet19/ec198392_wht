@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '354732270'
+keys:
+  BF_CODE: GD.0052
+  CLASS_NAME: OPRES_PERIOD_RESTRICTION
+  COMP_CODE: periodOpRestriction
+  T: BF_COMPONENT
+  URL: /periodOpRestriction
+parentKeys: {}
+properties:
+  BF_CODE: GD.0052
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_operational_restriction/CLASS/OPRES_PERIOD_RESTRICTION' )
+  CLASS_NAME: OPRES_PERIOD_RESTRICTION
+  COMP_CODE: periodOpRestriction
+  NAME: Period Operational Restriction
+  SIGNING_REQ_IND: null
+  URL: /periodOpRestriction
+related: {}

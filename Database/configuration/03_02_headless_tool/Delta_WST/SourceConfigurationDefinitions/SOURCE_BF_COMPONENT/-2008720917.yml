@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2008720917'
+keys:
+  BF_CODE: CO.1047
+  CLASS_NAME: CALC_LOG_PRFL_PARAM_OVRD
+  COMP_CODE: calcLogProfileParamOvrd
+  T: BF_COMPONENT
+  URL: /calcLogProfileParamOvrd
+parentKeys: {}
+properties:
+  BF_CODE: CO.1047
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/maintain_calc_log_profile' )
+  CLASS_NAME: CALC_LOG_PRFL_PARAM_OVRD
+  COMP_CODE: calcLogProfileParamOvrd
+  NAME: Calc Log Profile Param Override
+  SIGNING_REQ_IND: null
+  URL: /calcLogProfileParamOvrd
+related: {}

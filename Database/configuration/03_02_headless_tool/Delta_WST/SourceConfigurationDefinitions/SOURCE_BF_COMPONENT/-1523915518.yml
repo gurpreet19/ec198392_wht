@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1523915518'
+keys:
+  BF_CODE: PO.0007
+  CLASS_NAME: HSE
+  COMP_CODE: hse
+  T: BF_COMPONENT
+  URL: /hse
+parentKeys: {}
+properties:
+  BF_CODE: PO.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_safety_health_environment' )
+  CLASS_NAME: HSE
+  COMP_CODE: hse
+  NAME: Health, Safety and Environment
+  SIGNING_REQ_IND: null
+  URL: /hse
+related: {}

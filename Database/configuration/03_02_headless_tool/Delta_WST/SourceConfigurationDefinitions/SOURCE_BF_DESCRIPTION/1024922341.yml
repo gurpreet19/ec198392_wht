@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1024922341'
+keys:
+  BF_DESCRIPTION_NO: CO.2043
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2043
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/METER/CLASS_NAME/METER' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to create and maintain meter objects.</p><p>Throughout the pipeline there are different meters. The typical ones are exit and entry meters, measuring the gas coming into and going out of the pipeline. Other&nbsp;meters like fuel and transit meters can also be included.</p><p>The equivalent to Meters is Streams in EC Production. Since Streams got more functionality associated to them they can still be used if required. The meter will then&nbsp;refer to the correct Stream. Measurements coming in via a gathering system will then be stored against the stream and not the meter.<br />Below is and description of different meter types. Additional you can see the other objects involved; Pipeline Segment, Delivery Point. Delivery Stream.</p>
+related: {}

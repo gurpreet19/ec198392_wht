@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-799501319'
+keys:
+  BF_CODE: TO.0010
+  CLASS_NAME: STORAGE_LIFTING_UNLOAD
+  COMP_CODE: storage_lifting
+  T: BF_COMPONENT
+  URL: /storage_lifting
+parentKeys: {}
+properties:
+  BF_CODE: TO.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/unload_info' )
+  CLASS_NAME: STORAGE_LIFTING_UNLOAD
+  COMP_CODE: storage_lifting
+  NAME: Unload Info Storage Lifting
+  SIGNING_REQ_IND: null
+  URL: /storage_lifting
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1428387062'
+keys:
+  BF_CODE: PD.0015
+  CLASS_NAME: CHOKE_MODEL_LIP_YEAR
+  COMP_CODE: table_yearly_prod_gain
+  T: BF_COMPONENT
+  URL: /table_yearly_prod_gain
+parentKeys: {}
+properties:
+  BF_CODE: PD.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/locked_in_potential' )
+  CLASS_NAME: CHOKE_MODEL_LIP_YEAR
+  COMP_CODE: table_yearly_prod_gain
+  NAME: Yearly Production Gain
+  SIGNING_REQ_IND: null
+  URL: /table_yearly_prod_gain
+related: {}

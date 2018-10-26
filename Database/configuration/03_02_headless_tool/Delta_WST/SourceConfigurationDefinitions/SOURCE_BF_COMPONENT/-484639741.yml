@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-484639741'
+keys:
+  BF_CODE: CO.3015
+  CLASS_NAME: PRICE_ELEMENT
+  COMP_CODE: price_element
+  T: BF_COMPONENT
+  URL: /price_element
+parentKeys: {}
+properties:
+  BF_CODE: CO.3015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/price_element' )
+  CLASS_NAME: PRICE_ELEMENT
+  COMP_CODE: price_element
+  NAME: Price Element
+  SIGNING_REQ_IND: null
+  URL: /price_element
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '972423099'
+keys:
+  BF_CODE: SP.0005
+  CLASS_NAME: FIN_DOC_COMPANY
+  COMP_CODE: documentDetail/btnTransDetail/company
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button/com.ec.pf.screenlet.button/button/company
+parentKeys: {}
+properties:
+  BF_CODE: SP.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/UNTRANSFER' )
+  CLASS_NAME: FIN_DOC_COMPANY
+  COMP_CODE: documentDetail/btnTransDetail/company
+  NAME: My Button/classic_trans/Company
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button/com.ec.pf.screenlet.button/button/company
+related: {}

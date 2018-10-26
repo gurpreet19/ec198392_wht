@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1049799574'
+keys:
+  BF_DESCRIPTION_NO: CO.0200
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0200
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/alloc_process_job_conn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The Allocation Job Status Process Connection BF is used to configure a link between Allocation Network &amp; Allocation Jobs and Status Processes. When this link is configured, you cannot start the Allocation Job for a day before the Status Process has been run. If no link exists, then you can start Allocation Jobs as today, independent of Status Processes</p>
+related: {}

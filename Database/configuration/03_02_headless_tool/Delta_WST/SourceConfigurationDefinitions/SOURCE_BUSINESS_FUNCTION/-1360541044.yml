@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1360541044'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/monthly_production_well_status/CLASS_NAME/PWEL_MTH_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: WR.0077
+  NAME: Monthly Production Well Status
+  PROFILE_CLASS_NAME: WELL
+  URL: /com.ec.prod.wr.screens/monthly_production_well_status/CLASS_NAME/PWEL_MTH_STATUS
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2023355247'
+keys:
+  BF_CODE: GD.0088
+  CLASS_NAME: TRNL_DAY_NOM_CNTR_BAL
+  COMP_CODE: nom_loc_bal
+  T: BF_COMPONENT
+  URL: /nom_loc_bal
+parentKeys: {}
+properties:
+  BF_CODE: GD.0088
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_location_contract_balance/NAV_MODEL/TRAN_OPERATIONAL/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_NOM_CNTR_BAL/CLASS_2/TRCN_DAY_NOM_BAL_IN_OUT/CLASS_3/TRCN_DAY_NOM_SUPP_BAL/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNL_DAY_NOM_CNTR_BAL
+  COMP_CODE: nom_loc_bal
+  NAME: Nomination location Balance
+  SIGNING_REQ_IND: null
+  URL: /nom_loc_bal
+related: {}

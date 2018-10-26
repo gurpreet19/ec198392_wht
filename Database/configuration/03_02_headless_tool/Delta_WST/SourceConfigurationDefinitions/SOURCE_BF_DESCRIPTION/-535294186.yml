@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-535294186'
+keys:
+  BF_DESCRIPTION_NO: GD.0087
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0087
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_contract_balance/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT/CLASS/TRCN_DAY_NOM_BAL2/CLASS_2/TRNP_DAY_NOM_BAL_CNT_IN2/CLASS_3/TRNP_DAY_NOM_TRANSF_BAL/CLASS_4/TRNP_DAY_NOM_BAL_CN_OUT2/NOMINATION_CYCLE/false' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen gives an overview of the daily shipper field lifting nominations, including transfer transactions, entry transactions, exit nominations per delivery point and&nbsp;resulting imbalance. In cases where the shipper&rsquo;s nominated quantities are subject to upstream or downstream matching, the down matched difference quantity is&nbsp;displayed alongside the original nominated quantity.</p><p>Typical usage of this business function is to allow the shipper to view total requested input, total requested transfers and total requested output quantities on&nbsp;contracts.</p><p>For Delivery points which are subject to attribution rather than matching. In such cases the nominations are presented until the attributed quantities are available.</p><p>The user can view the individual input and transfer and output nominations in the lower section of the screen. The shipper can use this view to determine where the&nbsp;imbalance exists.</p><p>In order to properly balance nominations, the shipper will be able to use this business function to verify that each contract is properly balanced.</p><p>The business function is read only. If nominations do not balance, the shipper needs to correct nominations in the Input Nomination or Transfer Nomination or&nbsp;Output Nomination.</p><p>The screen support enabling and disabling of the tabs. 1st tab will Show all the values, 2nd Tab shows Requested and Accepted Nominations, 3rd Tab shows&nbsp;Accepted, Adjusted and Scheduled nominations, 4th tab shows Adjusted, confirmed and scheduled nominations.</p><p>The sign positive or negative will be configured in the Transport Contract Attributes, EC_CODE NOMINATION_SIGN will be used for this functionality EC_CODE =&nbsp;NOMINATION_SIGN ,eg Positive(+) or Negative(-). This need to be configured for each contract to be used in the nominations. If this is not configured correctly the&nbsp;transfer calculation will be wrong as well as the Balance calculation.</p>
+related: {}

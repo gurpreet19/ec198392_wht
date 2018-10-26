@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2065324316'
+keys:
+  BF_CODE: CD.0074
+  CLASS_NAME: PAYMENT_TERM
+  COMP_CODE: search
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0074
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/PAYMENT_TERM/FROM_CLASS_NAME/PAYMENT_TERM/TO_CLASS_NAME/PAYMENT_TERM' )
+  CLASS_NAME: PAYMENT_TERM
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1622770344'
+keys:
+  BF_CODE: CO.2014
+  CLASS_NAME: PROD_LIFT_ACTIVITY_CODE
+  COMP_CODE: prod_lift_activity_code
+  T: BF_COMPONENT
+  URL: /prod_lift_activity_code
+parentKeys: {}
+properties:
+  BF_CODE: CO.2014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/prod_lift_activity_code' )
+  CLASS_NAME: PROD_LIFT_ACTIVITY_CODE
+  COMP_CODE: prod_lift_activity_code
+  NAME: Product Lifting Activity Code
+  SIGNING_REQ_IND: null
+  URL: /prod_lift_activity_code
+related: {}

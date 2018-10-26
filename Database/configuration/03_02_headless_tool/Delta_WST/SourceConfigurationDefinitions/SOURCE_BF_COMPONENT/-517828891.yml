@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-517828891'
+keys:
+  BF_CODE: LA.0001
+  CLASS_NAME: LIFT_ACCOUNT_ADJUSTMENT
+  COMP_CODE: adj
+  T: BF_COMPONENT
+  URL: /adj
+parentKeys: {}
+properties:
+  BF_CODE: LA.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.la.screens/monthly_account_adjustment' )
+  CLASS_NAME: LIFT_ACCOUNT_ADJUSTMENT
+  COMP_CODE: adj
+  NAME: Between Account Adjustments
+  SIGNING_REQ_IND: null
+  URL: /adj
+related: {}

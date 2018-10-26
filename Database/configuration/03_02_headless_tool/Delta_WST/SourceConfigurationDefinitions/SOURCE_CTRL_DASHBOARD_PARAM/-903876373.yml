@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-903876373'
+keys:
+  NAME: header
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: FCTY_TOP5_YR_GAS_PROD
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: null
+  MANDATORY_IND: null
+  NAME: header
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: EcDatamodel.row[0].col[HEADER].datavalue
+  RESOLVE_TYPE: DATAMODEL
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: FCTY_TOP5_YR_GAS_PROD
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '889852599'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/BankingDetailsForm' AND COMP_CODE ='BankingDetailsForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/BankingDetailsForm' AND COMP_CODE ='BankingDetailsForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+  COMMENTS: null
+  NAME: Banking Details Form /save
+  URL: /save
+related: {}

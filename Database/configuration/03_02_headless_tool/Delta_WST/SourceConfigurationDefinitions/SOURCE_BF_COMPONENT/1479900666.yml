@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1479900666'
+keys:
+  BF_CODE: SP.0001
+  CLASS_NAME: CONT_DOCUMENT
+  COMP_CODE: documents
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: SP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_finder' )
+  CLASS_NAME: CONT_DOCUMENT
+  COMP_CODE: documents
+  NAME: Document Finder Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

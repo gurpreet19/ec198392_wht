@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1949572272'
+keys:
+  BF_CODE: CO.1060
+  CLASS_NAME: CALC_LIBRARY
+  COMP_CODE: updateAttributes
+  T: BF_COMPONENT
+  URL: /updateAttributes
+parentKeys: {}
+properties:
+  BF_CODE: CO.1060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CALC_LIBRARY' )
+  CLASS_NAME: CALC_LIBRARY
+  COMP_CODE: updateAttributes
+  NAME: Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /updateAttributes
+related: {}

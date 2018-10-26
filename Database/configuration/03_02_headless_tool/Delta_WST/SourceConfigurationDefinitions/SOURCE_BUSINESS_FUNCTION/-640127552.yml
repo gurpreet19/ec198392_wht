@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-640127552'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/well_component_forecast/CLASS_NAME/FCST_WELL_GAS/PHASE/GAS/COMPONENT_SET_CLASS/FCST_WELL_GAS_COMPONENT/COMP_SET/WELL_GAS_COMP
+parentKeys: {}
+properties:
+  BF_CODE: PP.0043
+  NAME: Well Gas Component Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/well_component_forecast/CLASS_NAME/FCST_WELL_GAS/PHASE/GAS/COMPONENT_SET_CLASS/FCST_WELL_GAS_COMPONENT/COMP_SET/WELL_GAS_COMP
+related: {}

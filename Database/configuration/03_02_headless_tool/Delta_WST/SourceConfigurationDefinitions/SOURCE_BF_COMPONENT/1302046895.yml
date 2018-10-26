@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1302046895'
+keys:
+  BF_CODE: CO.3011
+  CLASS_NAME: SCTR_PC_CPY_PRIORITY
+  COMP_CODE: contracts
+  T: BF_COMPONENT
+  URL: /contracts
+parentKeys: {}
+properties:
+  BF_CODE: CO.3011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/profit_centre_company_contract_priority' )
+  CLASS_NAME: SCTR_PC_CPY_PRIORITY
+  COMP_CODE: contracts
+  NAME: Contracts
+  SIGNING_REQ_IND: null
+  URL: /contracts
+related: {}

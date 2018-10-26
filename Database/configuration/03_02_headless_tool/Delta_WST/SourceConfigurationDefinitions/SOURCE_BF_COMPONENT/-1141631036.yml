@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1141631036'
+keys:
+  BF_CODE: CP.0027
+  CLASS_NAME: CONTRACT_KPI_MONITORING
+  COMP_CODE: KPIMonitoring
+  T: BF_COMPONENT
+  URL: /KPIMonitoring
+parentKeys: {}
+properties:
+  BF_CODE: CP.0027
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/contract_KPI_monitoring/CLASS/CONTRACT_KPI_MONITORING/NAV_MODEL/TRAN_COMMERCIAL/BF_PROFILE/CP.0027' )
+  CLASS_NAME: CONTRACT_KPI_MONITORING
+  COMP_CODE: KPIMonitoring
+  NAME: Contract KPI Monitoring
+  SIGNING_REQ_IND: null
+  URL: /KPIMonitoring
+related: {}

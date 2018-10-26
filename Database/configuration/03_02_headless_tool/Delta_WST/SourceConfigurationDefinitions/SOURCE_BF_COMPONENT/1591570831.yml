@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1591570831'
+keys:
+  BF_CODE: GD.0055
+  CLASS_NAME: CAPACITY_REL_RATE_RD
+  COMP_CODE: capRelRate
+  T: BF_COMPONENT
+  URL: /capRelRate
+parentKeys: {}
+properties:
+  BF_CODE: GD.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_details' )
+  CLASS_NAME: CAPACITY_REL_RATE_RD
+  COMP_CODE: capRelRate
+  NAME: Rate
+  SIGNING_REQ_IND: null
+  URL: /capRelRate
+related: {}

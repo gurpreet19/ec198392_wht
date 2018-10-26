@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1766752310'
+keys:
+  BF_CODE: WR.0018
+  CLASS_NAME: IFLW_SUB_DAY_STATUS_WAT
+  COMP_CODE: subDailyWaterInjFlwStatusTable
+  T: BF_COMPONENT
+  URL: /subDailyWaterInjFlwStatusTable
+parentKeys: {}
+properties:
+  BF_CODE: WR.0018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_water_injection_flowline_status' )
+  CLASS_NAME: IFLW_SUB_DAY_STATUS_WAT
+  COMP_CODE: subDailyWaterInjFlwStatusTable
+  NAME: Sub Daily Water Injection Flowline Status
+  SIGNING_REQ_IND: null
+  URL: /subDailyWaterInjFlwStatusTable
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-549393741'
+keys:
+  BF_CODE: IN.0011
+  CLASS_NAME: INV_AVG_RATE_CALC
+  COMP_CODE: processRateCalcULorOL
+  T: BF_COMPONENT
+  URL: /uloltable
+parentKeys: {}
+properties:
+  BF_CODE: IN.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/rate_calculation' )
+  CLASS_NAME: INV_AVG_RATE_CALC
+  COMP_CODE: processRateCalcULorOL
+  NAME: Avg UL/OL Rate
+  SIGNING_REQ_IND: null
+  URL: /uloltable
+related: {}

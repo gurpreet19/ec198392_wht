@@ -1,0 +1,23 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '751678426'
+keys:
+  BF_DESCRIPTION_NO: WR.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used when daily production well data are available per production well and the well is directly connected to a facility, without any intermediate flowline / pipeline systems.</p>
+
+    <p>Data can be entered manually or automatically. The BF requires one entry per well per day, and Energy Components automatically creates new records for a new production day for all active producing wells having the attribute INSTRUMENTATION_TYPE set to Instrumentation Type 1. In addition to that, the production well is recognized by having attribute WELL_CLASS set to &lsquo;P&rsquo; (Producer) or &lsquo;PI&rsquo; (Producer and Injector).</p>
+
+    <p>This BF is very similar to other Daily Production Well Status 2 and Daily Production Well Status 3. The only difference is the wells that are associated have different instrumentation types.</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

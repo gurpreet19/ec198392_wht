@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1033584565'
+keys:
+  BF_CODE: CO.3015
+  CLASS_NAME: PRICE_CONCEPT
+  COMP_CODE: nav
+  T: BF_COMPONENT
+  URL: /nav
+parentKeys: {}
+properties:
+  BF_CODE: CO.3015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/price_element' )
+  CLASS_NAME: PRICE_CONCEPT
+  COMP_CODE: nav
+  NAME: Price Concept
+  SIGNING_REQ_IND: null
+  URL: /nav
+related: {}

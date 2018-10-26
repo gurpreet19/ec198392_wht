@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1791004773'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0007' AND NVL(URL,'IS_NULL') = '/inv_movement_table_detail' AND COMP_CODE ='inv_movement_table' AND NVL(CLASS_NAME,'IS_NULL') = 'INVENTORY_STIM_SETUP')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0007' AND NVL(URL,'IS_NULL') = '/inv_movement_table_detail' AND COMP_CODE ='inv_movement_table' AND NVL(CLASS_NAME,'IS_NULL') = 'INVENTORY_STIM_SETUP')
+  COMMENTS: null
+  NAME: Inventory Movement Stream Item /save
+  URL: /save
+related: {}

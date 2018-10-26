@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2121017219'
+keys:
+  BF_CODE: CO.2074
+  CLASS_NAME: null
+  COMP_CODE: button
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: CO.2074
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_attribute_dim_matrix/ACCESS_COLUMN/TRAN_CODE' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Buttton
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

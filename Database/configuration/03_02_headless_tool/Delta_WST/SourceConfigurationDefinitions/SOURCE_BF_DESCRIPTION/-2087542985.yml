@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2087542985'
+keys:
+  BF_DESCRIPTION_NO: SP.0033
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/spot_agreement' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Deal details screen</strong>    allows the user to copy a contract and update specific data on the new contract, e.g. Qty per day, Price, Bank Accounts. Other data that need to be updated    can be added to the class by the project.&nbsp;</p><p>If it is required that the data is stored elsewhere, triggers must be created on insert/update.</p>
+related: {}

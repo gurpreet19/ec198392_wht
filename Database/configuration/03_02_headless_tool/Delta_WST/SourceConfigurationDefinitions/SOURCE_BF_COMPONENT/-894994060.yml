@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-894994060'
+keys:
+  BF_CODE: CD.0033
+  CLASS_NAME: PRODUCT_SALES_ORDER
+  COMP_CODE: objectForm
+  T: BF_COMPONENT
+  URL: /insert
+parentKeys: {}
+properties:
+  BF_CODE: CD.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_SALES_ORDER' )
+  CLASS_NAME: PRODUCT_SALES_ORDER
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /insert
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-142818693'
+keys:
+  FUNCTIONAL_AREA_ID: null
+  NAME: ReleaseFalseBlockingJobs
+  T: BUSINESS_ACTION
+parentKeys: {}
+properties:
+  ACTION_CLASS_NAME: com.ec.frmw.scheduler.action.ReleaseFalseBlockingJobsBusinesAction
+  BA_TYPE: SCHEDULER
+  FUNCTIONAL_AREA_ID: null
+  JBPM_DEPLOYMENT_ID: null
+  JBPM_PROCESS_NAME: null
+  JBPM_PROCESS_VERSION: null
+  NAME: ReleaseFalseBlockingJobs
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-116577674'
+keys:
+  BF_CODE: GD.0054
+  CLASS_NAME: null
+  COMP_CODE: btnWithdraw
+  T: BF_COMPONENT
+  URL: /btnWithdraw
+parentKeys: {}
+properties:
+  BF_CODE: GD.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release' )
+  CLASS_NAME: null
+  COMP_CODE: btnWithdraw
+  NAME: Withdraw
+  SIGNING_REQ_IND: null
+  URL: /btnWithdraw
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '29787650'
+keys:
+  BF_CODE: GD.0036
+  CLASS_NAME: TRNP_DAY_NOM_SCH_CNT_OUT
+  COMP_CODE: daycntroutputnom
+  T: BF_COMPONENT
+  URL: /daycntroutputnom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0036
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/gas_scheduling/CLASS/TRCP_DAY_NOM_SCH/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNP_DAY_NOM_SCH_CNT_OUT
+  COMP_CODE: daycntroutputnom
+  NAME: Daily Contract Output Nominations
+  SIGNING_REQ_IND: null
+  URL: /daycntroutputnom
+related: {}

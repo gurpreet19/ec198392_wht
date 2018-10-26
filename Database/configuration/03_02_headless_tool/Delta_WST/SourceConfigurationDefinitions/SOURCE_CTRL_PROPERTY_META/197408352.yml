@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '197408352'
+keys:
+  KEY: /com/ec/tran/gd/screens/capacity_validation/autoExpandLevel
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: '2'
+  DESCRIPTION: How many levels to auto expand in Capacity Validation in EC Transport - Gas Dispatching
+  KEY: /com/ec/tran/gd/screens/capacity_validation/autoExpandLevel
+  LABEL: Capacity Validation auto expand levels
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: USER
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1008124379'
+keys:
+  BF_CODE: CO.2082
+  CLASS_NAME: MAINTAIN_OPPORTUNITY
+  COMP_CODE: opportunity
+  T: BF_COMPONENT
+  URL: /opportunity
+parentKeys: {}
+properties:
+  BF_CODE: CO.2082
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/maintain_opportunities' )
+  CLASS_NAME: MAINTAIN_OPPORTUNITY
+  COMP_CODE: opportunity
+  NAME: Maintain Opportunities
+  SIGNING_REQ_IND: null
+  URL: /opportunity
+related: {}

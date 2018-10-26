@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-829270412'
+keys:
+  BF_DESCRIPTION_NO: PO.0065
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0065
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_tank_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used when period tank volume data is available. Data can be entered manually or loaded automatically. Energy or tanks having tank meter frequency = &ldquo;EVENT&rdquo;, there will be no automatic instantiation, the user will have to manually press the insert new record button and select the right tank from the tank drop down. All data is treated as closing tank reading at the end of the production day. Therefore there is no time associated with the reading.</p>
+
+    <p>Opening volume for a day is calculated as last available closing volume, for daily tanks it will always be yesterday closing. If today is the tank&rsquo;s start day there will be no value for yesterday&rsquo;s closing, and opening volume is set to 0.</p>
+related: {}

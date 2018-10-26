@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1058587341'
+keys:
+  BF_CODE: PO.0069
+  CLASS_NAME: STRM_DAY_STREAM_DAY_NAV
+  COMP_CODE: dailyStrmDataDayNav
+  T: BF_COMPONENT
+  URL: /dailyStrmDataDayNav
+parentKeys: {}
+properties:
+  BF_CODE: PO.0069
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_stream_data_day_nav/CLASS_NAME/STRM_DAY_STREAM_DAY_NAV' )
+  CLASS_NAME: STRM_DAY_STREAM_DAY_NAV
+  COMP_CODE: dailyStrmDataDayNav
+  NAME: Daily Stream Data Day Nav
+  SIGNING_REQ_IND: null
+  URL: /dailyStrmDataDayNav
+related: {}

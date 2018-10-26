@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1904204114'
+keys:
+  NAME: PRODUCT
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: REVN_QTY_BBLS
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Product
+  MANDATORY_IND: Y
+  NAME: PRODUCT
+  PARAMETER_SUB_TYPE: PRODUCT
+  PARAMETER_TYPE: EC_OBJECT_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 20.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: REVN_QTY_BBLS
+related: {}

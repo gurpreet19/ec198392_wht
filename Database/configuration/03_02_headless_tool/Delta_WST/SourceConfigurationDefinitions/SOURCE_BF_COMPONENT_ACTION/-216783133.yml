@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-216783133'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0104' AND NVL(URL,'IS_NULL') = '/tableSetup' AND COMP_CODE ='StreamCategoryItemSetup' AND NVL(CLASS_NAME,'IS_NULL') = 'STREAM_CATEGORY_SETUP')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0104' AND NVL(URL,'IS_NULL') = '/tableSetup' AND COMP_CODE ='StreamCategoryItemSetup' AND NVL(CLASS_NAME,'IS_NULL') = 'STREAM_CATEGORY_SETUP')
+  COMMENTS: null
+  NAME: Stream Category Item Setup /save
+  URL: /save
+related: {}

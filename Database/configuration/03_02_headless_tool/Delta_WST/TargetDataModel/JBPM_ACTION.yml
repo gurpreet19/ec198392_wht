@@ -1,0 +1,282 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_ACTION
+cnstPrimaryKey:
+  columns:
+  - ID_
+  name: SYS_C0015718
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  ACTIONDELEGATION_:
+    columnName: ACTIONDELEGATION_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  ACTIONEXPRESSION_:
+    columnName: ACTIONEXPRESSION_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  CLASS:
+    columnName: CLASS
+    typeName: CHAR(1 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  DUEDATE_:
+    columnName: DUEDATE_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  EVENTINDEX_:
+    columnName: EVENTINDEX_
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  EVENT_:
+    columnName: EVENT_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  EXCEPTIONHANDLERINDEX_:
+    columnName: EXCEPTIONHANDLERINDEX_
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+  EXCEPTIONHANDLER_:
+    columnName: EXCEPTIONHANDLER_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+  EXPRESSION_:
+    columnName: EXPRESSION_
+    typeName: VARCHAR2(4000 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  ID_:
+    columnName: ID_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  ISASYNC_:
+    columnName: ISASYNC_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  ISPROPAGATIONALLOWED_:
+    columnName: ISPROPAGATIONALLOWED_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  NAME_:
+    columnName: NAME_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  PROCESSDEFINITION_:
+    columnName: PROCESSDEFINITION_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  REFERENCEDACTION_:
+    columnName: REFERENCEDACTION_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  REPEAT_:
+    columnName: REPEAT_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  TIMERACTION_:
+    columnName: TIMERACTION_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  TIMERNAME_:
+    columnName: TIMERNAME_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  TRANSITIONNAME_:
+    columnName: TRANSITIONNAME_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+cnstForeignKeys:
+  FK_ACTION_ACTNDEL:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_DELEGATION
+    columns:
+      ACTIONDELEGATION_: ID_
+    name: FK_ACTION_ACTNDEL
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_ACTION_EVENT:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_EVENT
+    columns:
+      EVENT_: ID_
+    name: FK_ACTION_EVENT
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_ACTION_EXPTHDL:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_EXCEPTIONHANDLER
+    columns:
+      EXCEPTIONHANDLER_: ID_
+    name: FK_ACTION_EXPTHDL
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_ACTION_PROCDEF:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_PROCESSDEFINITION
+    columns:
+      PROCESSDEFINITION_: ID_
+    name: FK_ACTION_PROCDEF
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_ACTION_REFACT:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_ACTION
+    columns:
+      REFERENCEDACTION_: ID_
+    name: FK_ACTION_REFACT
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_CRTETIMERACT_TA:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_ACTION
+    columns:
+      TIMERACTION_: ID_
+    name: FK_CRTETIMERACT_TA
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_ACTION_ACTNDL:
+    indexName: IDX_ACTION_ACTNDL
+    columns:
+    - ACTIONDELEGATION_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_ACTION_EVENT:
+    indexName: IDX_ACTION_EVENT
+    columns:
+    - EVENT_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_ACTION_PROCDF:
+    indexName: IDX_ACTION_PROCDF
+    columns:
+    - PROCESSDEFINITION_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

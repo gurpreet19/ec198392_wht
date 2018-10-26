@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '798260959'
+keys:
+  CODE: SYSTEM_COMPANY
+  CODE_TYPE: FIN_VENDOR_SCOPE
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: SYSTEM_COMPANY
+  CODE_TEXT: System Company
+  CODE_TYPE: FIN_VENDOR_SCOPE
+  DESCRIPTION: Company where the system flag is set
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 40.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

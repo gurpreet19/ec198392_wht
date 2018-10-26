@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1029027950'
+keys:
+  BF_CODE: PO.0119
+  CLASS_NAME: TEST_DEVICE_ANALYSIS
+  COMP_CODE: tdev_analysis
+  T: BF_COMPONENT
+  URL: /tdev_analysis
+parentKeys: {}
+properties:
+  BF_CODE: PO.0119
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/test_device_analysis' )
+  CLASS_NAME: TEST_DEVICE_ANALYSIS
+  COMP_CODE: tdev_analysis
+  NAME: Test Device Analysis
+  SIGNING_REQ_IND: null
+  URL: /tdev_analysis
+related: {}

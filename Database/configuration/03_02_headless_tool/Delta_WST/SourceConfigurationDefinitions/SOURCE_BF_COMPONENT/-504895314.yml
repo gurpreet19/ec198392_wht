@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-504895314'
+keys:
+  BF_CODE: SD.0020
+  CLASS_NAME: DRY_GAS_TARGET
+  COMP_CODE: targets
+  T: BF_COMPONENT
+  URL: /targets
+parentKeys: {}
+properties:
+  BF_CODE: SD.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_dry_gas_profile' )
+  CLASS_NAME: DRY_GAS_TARGET
+  COMP_CODE: targets
+  NAME: Targets
+  SIGNING_REQ_IND: null
+  URL: /targets
+related: {}

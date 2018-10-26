@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-815330588'
+keys:
+  COMPONENT_ID: IN_VA_UB
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.in/validation/LEVEL/UNBOOKED/MODE/SET_TO_PREV?screentemplate=/com.ec.revn.in/validation&tquery=/com.ec.revn.in/query/get_validation_table.xml&tlayout=/com.ec.revn.in/layout/validation_booked_table.xml&DLC=BOOKED
+  COMPONENT_EXT_NAV_NAME: /LEVEL/UNBOOKED/MODE/SET_TO_PREV?screentemplate=/com.ec.revn.in/validation&tquery=/com.ec.revn.in/query/get_validation_table.xml&tlayout=/com.ec.revn.in/layout/validation_booked_table.xml&DLC=BOOKED
+  COMPONENT_ID: IN_VA_UB
+  COMPONENT_LABEL: Inventory Un-Booked
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: IN_VA_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4490.0
+  WINDOW_ID: ENERGYX
+related: {}

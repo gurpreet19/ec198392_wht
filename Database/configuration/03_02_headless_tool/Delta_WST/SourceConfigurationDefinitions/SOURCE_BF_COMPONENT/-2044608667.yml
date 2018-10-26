@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2044608667'
+keys:
+  BF_CODE: CO.0238
+  CLASS_NAME: EQPM_CONN
+  COMP_CODE: object_grp_conn
+  T: BF_COMPONENT
+  URL: /object_grp_conn
+parentKeys: {}
+properties:
+  BF_CODE: CO.0238
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/equip_conn' )
+  CLASS_NAME: EQPM_CONN
+  COMP_CODE: object_grp_conn
+  NAME: Object Group
+  SIGNING_REQ_IND: null
+  URL: /object_grp_conn
+related: {}

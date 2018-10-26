@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1130682538'
+keys:
+  BF_CODE: PD.0023
+  CLASS_NAME: DEFERMENT_EVENT
+  COMP_CODE: deferment_event
+  T: BF_COMPONENT
+  URL: /deferment_event
+parentKeys: {}
+properties:
+  BF_CODE: PD.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/deferment_day/CLASS_NAME/DEFERMENT_EVENT/DAILY_CLASS_NAME/DEFERMENT_DAY/TABLE_NAME/DEFERMENT_EVENT' )
+  CLASS_NAME: DEFERMENT_EVENT
+  COMP_CODE: deferment_event
+  NAME: Deferment Event
+  SIGNING_REQ_IND: null
+  URL: /deferment_event
+related: {}

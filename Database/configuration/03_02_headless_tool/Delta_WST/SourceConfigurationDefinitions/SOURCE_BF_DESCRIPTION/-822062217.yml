@@ -1,0 +1,23 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-822062217'
+keys:
+  BF_DESCRIPTION_NO: CD.0015
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_CATEGORY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Revenue Stream Category screen</strong>    is used
+    to define and maintain Revenue Stream Category objects.</p><p>    <strong>Stream
+    Category</strong>    is a list of predefined categories which can be used to categorize
+    streams    in reports. If the stream changes stream category, set an end date
+    on the    old stream and create a new stream for the new category.<br>    Each
+    Stream object used in EC Revenue will have a Stream Category attached.<br>    For
+    each Stream Category object one defines which areas within the    Financial Transaction
+    the Stream will be available. This is then use in    various popups for filtering
+    the Stream Items that are available.</p><p>    <u> A Stream can then be available
+    to one or more of the Financial Transaction    areas: </u><br>    - Sales<br>    -
+    Purchases<br>    - Tariff Income<br>    - Tariff Cost<br>    - Journal Entry<'
+related: {}

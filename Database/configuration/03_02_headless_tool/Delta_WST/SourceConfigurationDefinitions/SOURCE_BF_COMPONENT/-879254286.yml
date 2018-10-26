@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-879254286'
+keys:
+  BF_CODE: SP.0019
+  CLASS_NAME: CONT_LINE_ITEM
+  COMP_CODE: lineitemfixedvalue
+  T: BF_COMPONENT
+  URL: /lineitemfixedvalue
+parentKeys: {}
+properties:
+  BF_CODE: SP.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/transaction_values' )
+  CLASS_NAME: CONT_LINE_ITEM
+  COMP_CODE: lineitemfixedvalue
+  NAME: Fixed Value Line Items
+  SIGNING_REQ_IND: null
+  URL: /lineitemfixedvalue
+related: {}

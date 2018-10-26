@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1861995820'
+keys:
+  BF_CODE: CO.0086
+  CLASS_NAME: STRM_REFERENCE_VALUE
+  COMP_CODE: daytimes
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CO.0086
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_reference_value' )
+  CLASS_NAME: STRM_REFERENCE_VALUE
+  COMP_CODE: daytimes
+  NAME: daytimes
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

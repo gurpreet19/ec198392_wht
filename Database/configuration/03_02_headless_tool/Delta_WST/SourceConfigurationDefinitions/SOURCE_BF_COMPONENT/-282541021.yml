@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-282541021'
+keys:
+  BF_CODE: IN.0006
+  CLASS_NAME: INVENTORY_PRICE_OBJECT
+  COMP_CODE: updateAttributes
+  T: BF_COMPONENT
+  URL: /updateAttributes
+parentKeys: {}
+properties:
+  BF_CODE: IN.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/rate_objects_definition' )
+  CLASS_NAME: INVENTORY_PRICE_OBJECT
+  COMP_CODE: updateAttributes
+  NAME: Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /updateAttributes
+related: {}

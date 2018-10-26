@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1400691763'
+keys:
+  BF_CODE: IN.0022
+  CLASS_NAME: TRANS_INV_TMPL_ATTR
+  COMP_CODE: Attribute
+  T: BF_COMPONENT
+  URL: /Attribute
+parentKeys: {}
+properties:
+  BF_CODE: IN.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/transaction_inventory_template' )
+  CLASS_NAME: TRANS_INV_TMPL_ATTR
+  COMP_CODE: Attribute
+  NAME: Transaction Inventory Template Attribute
+  SIGNING_REQ_IND: null
+  URL: /Attribute
+related: {}

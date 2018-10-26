@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-610891342'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0006' AND NVL(URL,'IS_NULL') = '/updateAttributes' AND COMP_CODE ='updateAttributes' AND NVL(CLASS_NAME,'IS_NULL') = 'INVENTORY_PRICE_OBJECT')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0006' AND NVL(URL,'IS_NULL') = '/updateAttributes' AND COMP_CODE ='updateAttributes' AND NVL(CLASS_NAME,'IS_NULL') = 'INVENTORY_PRICE_OBJECT')
+  COMMENTS: null
+  NAME: Update Attributes /save
+  URL: /save
+related: {}

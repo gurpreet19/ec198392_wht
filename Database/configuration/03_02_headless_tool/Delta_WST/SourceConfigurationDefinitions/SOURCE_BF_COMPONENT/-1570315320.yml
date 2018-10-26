@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1570315320'
+keys:
+  BF_CODE: FI.0007
+  CLASS_NAME: null
+  COMP_CODE: dateStartJob
+  T: BF_COMPONENT
+  URL: /dateStartJob
+parentKeys: {}
+properties:
+  BF_CODE: FI.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/fin_item_calc_mth' )
+  CLASS_NAME: null
+  COMP_CODE: dateStartJob
+  NAME: Date Start Job
+  SIGNING_REQ_IND: null
+  URL: /dateStartJob
+related: {}

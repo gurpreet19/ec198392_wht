@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-181385876'
+keys:
+  BF_DESCRIPTION_NO: CO.0125
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0125
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/commercial_entity' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic create and maintain screen; see description of generic create and maintain screens in the beginning of the configuration manual.</p>
+
+    <p>Commercial Entity is the combination of a Licence and a Field. It must be an area where an owner group (Joint Venture) has the same equity split. A Reservoir Block Formation is linked to owner through Commercial Entity. When a well bore interval is tied to Reservoir Block Formations we can also derived the ownership of the well, even if the well has completions in different Commercial Entities.</p>
+
+    <p>See figure under section Commercial Objects</p>
+related: {}

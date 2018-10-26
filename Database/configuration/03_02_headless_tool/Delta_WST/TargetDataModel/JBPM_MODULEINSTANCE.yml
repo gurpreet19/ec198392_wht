@@ -1,0 +1,106 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_MODULEINSTANCE
+cnstPrimaryKey:
+  columns:
+  - ID_
+  name: SYS_C0015704
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CLASS_:
+    columnName: CLASS_
+    typeName: CHAR(1 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  ID_:
+    columnName: ID_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  NAME_:
+    columnName: NAME_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  PROCESSINSTANCE_:
+    columnName: PROCESSINSTANCE_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  TASKMGMTDEFINITION_:
+    columnName: TASKMGMTDEFINITION_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  VERSION_:
+    columnName: VERSION_
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+cnstForeignKeys:
+  FK_MODINST_PRCINST:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_PROCESSINSTANCE
+    columns:
+      PROCESSINSTANCE_: ID_
+    name: FK_MODINST_PRCINST
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TASKMGTINST_TMD:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_MODULEDEFINITION
+    columns:
+      TASKMGMTDEFINITION_: ID_
+    name: FK_TASKMGTINST_TMD
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_MODINST_PRINST:
+    indexName: IDX_MODINST_PRINST
+    columns:
+    - PROCESSINSTANCE_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

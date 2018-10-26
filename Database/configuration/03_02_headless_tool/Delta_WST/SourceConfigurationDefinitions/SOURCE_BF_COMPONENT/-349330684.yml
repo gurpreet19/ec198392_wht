@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-349330684'
+keys:
+  BF_CODE: MHM.0012
+  CLASS_NAME: MSG_DELIVERY_ADDRESS
+  COMP_CODE: msg_delivery_address
+  T: BF_COMPONENT
+  URL: /msg_delivery_address
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/actor_maintenance' )
+  CLASS_NAME: MSG_DELIVERY_ADDRESS
+  COMP_CODE: msg_delivery_address
+  NAME: Delivery Address
+  SIGNING_REQ_IND: null
+  URL: /msg_delivery_address
+related: {}

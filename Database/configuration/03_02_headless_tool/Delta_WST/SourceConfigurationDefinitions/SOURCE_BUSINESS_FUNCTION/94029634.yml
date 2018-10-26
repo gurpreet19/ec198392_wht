@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '94029634'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/forecast_object_constraints/CLASS_NAME/FCST_OBJ_CONSTRAINTS
+parentKeys: {}
+properties:
+  BF_CODE: PP.0049
+  NAME: Forecast Object Constraints
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/forecast_object_constraints/CLASS_NAME/FCST_OBJ_CONSTRAINTS
+related: {}

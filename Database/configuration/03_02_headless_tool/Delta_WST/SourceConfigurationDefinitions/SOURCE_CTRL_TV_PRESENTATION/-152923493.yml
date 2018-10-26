@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-152923493'
+keys:
+  COMPONENT_ID: JBPM_PROCESS_EXECUTION
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.bpm.ext.ec.web/jbpm_process_execution
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: JBPM_PROCESS_EXECUTION
+  COMPONENT_LABEL: Process Execution
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_JBPM
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 300.0
+  WINDOW_ID: ENERGYX
+related: {}

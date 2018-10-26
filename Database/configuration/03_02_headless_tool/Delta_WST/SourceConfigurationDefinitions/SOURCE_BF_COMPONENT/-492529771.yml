@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-492529771'
+keys:
+  BF_CODE: SD.0018
+  CLASS_NAME: DRY_GAS_TARGET
+  COMP_CODE: last_target
+  T: BF_COMPONENT
+  URL: /last_target
+parentKeys: {}
+properties:
+  BF_CODE: SD.0018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/before_day_target' )
+  CLASS_NAME: DRY_GAS_TARGET
+  COMP_CODE: last_target
+  NAME: Last Target
+  SIGNING_REQ_IND: null
+  URL: /last_target
+related: {}

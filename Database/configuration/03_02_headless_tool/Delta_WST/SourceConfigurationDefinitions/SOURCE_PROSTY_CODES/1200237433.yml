@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1200237433'
+keys:
+  CODE: EXCEL_ACTION_CHUNKED
+  CODE_TYPE: ECIS_JOB_ACTION
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: com.ec.ecdm.is.advancedexcel.sourcemapping.jobaction.AdvancedExcelJobActionChunked
+  CODE: EXCEL_ACTION_CHUNKED
+  CODE_TEXT: Excel Job Action Chunked (Extraction)
+  CODE_TYPE: ECIS_JOB_ACTION
+  DESCRIPTION: Extraction from Excel, in chunks
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 32.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

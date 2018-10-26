@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-806553800'
+keys:
+  BF_CODE: GD.0081
+  CLASS_NAME: TRCN_CAPACITY_FACTOR
+  COMP_CODE: objectfactors
+  T: BF_COMPONENT
+  URL: /objectfactors
+parentKeys: {}
+properties:
+  BF_CODE: GD.0081
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_factors/CLASS/TRCN_CAPACITY_FACTOR/TARGET/CONTRACT_CAPACITY/NAV_MODEL/TRAN_COMMERCIAL/BF_PROFILE/GD.0081' )
+  CLASS_NAME: TRCN_CAPACITY_FACTOR
+  COMP_CODE: objectfactors
+  NAME: Object Factors
+  SIGNING_REQ_IND: null
+  URL: /objectfactors
+related: {}

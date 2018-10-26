@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1387803535'
+keys:
+  BF_DESCRIPTION_NO: CO.0229
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0229
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/ext_loc_reference_value' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic maintain screen; see description of generic maintain screens in the beginning of the configuration manual.</p>
+
+    <p>The object class External Location can have some data recorded about quality of the liquids. This screen is designed to capture a data class for the new External Location object class. The new class is event based and you can only have max one record per object per day.</p>
+
+    <p>Auto retrieve is purposely turned off for this screen.</p>
+related: {}

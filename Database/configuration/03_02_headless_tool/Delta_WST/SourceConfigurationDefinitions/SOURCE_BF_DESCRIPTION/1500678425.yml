@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1500678425'
+keys:
+  BF_DESCRIPTION_NO: FC.0013
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FC.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_input_nomination_point/CLASS/FCST_NOMPNT_DAY_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to maintain forecasting Input Nomination Point as export values from Nomination point. Ordinarily, these values would be loaded into the<br />system via messages, typically from a coordinator who collect forecast values from the production units. However this screen may be used to view, edit, delete or&nbsp;add values. Existing values can be modified and new values for new events (dates) can be added. The values are stored per Nomination Point. Depending on&nbsp;which combination of those is selected in the navigator, different sets of data will be shown in the data section.</p><p>The user selects a date range, Business Unit and [or Contract Area or Contract or Nomination Point] and Forecast and Series, from the navigator at the top of the&nbsp;screen and presses the &ldquo;Go&hellip;&rdquo; button. The planning period details are then populated in the Forecast Input Nomination Point [FCST_NOMPNT_DAY_STATUS]&nbsp;table. It is now possible to add, edit or delete values for individual planning periods in the Forecast Input Nomination Point table.</p>
+related: {}

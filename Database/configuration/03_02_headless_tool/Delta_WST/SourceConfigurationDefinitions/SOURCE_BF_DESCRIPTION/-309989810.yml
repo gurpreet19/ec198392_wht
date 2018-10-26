@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-309989810'
+keys:
+  BF_DESCRIPTION_NO: CO.0039
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/tank_strapping' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The concept of tank strapping tables is used to calculate the tank&rsquo;s volume, based on a level dip. This is a lookup table, and any number of lookup points may be modified at any time, allowing for modeling non-linear correlations between dip level and volume.</p>
+
+    <p>The Tank Strapping Table screen provides an interface for specifying the storage volume on a specific dip level on a tank. A tank can have several dip levels. The storage volume and dip levels are being used for calculation of the total volume of the tank. A storage volume and a dip level are time dependent, which implies that the <em>size </em>of the tank is time dependent. Please note that the storage volume in this context is the tank inventory volume and has nothing to do with the Object Class Storage.</p>
+
+    <p>The group navigator on the top (see snapshot) is used for navigation down to the tank object where tank strapping will be performed. The group navigator contains from- and to-date fields, which is a constraint on the group relation and limits the available tank objects, both on the navigator, but also in the tank popup used for copying tank strappings. It also contains constant default values for the from- and to-date fields. The from- and to-date fields are also having the role as a filter on the &ldquo;Valid From&rdquo; dates in the table below the navigator.</p>
+
+    <p>The &ldquo;Valid From&rdquo; table displays all the tank strapping dates on the selected tank object. When clicking on a row, the existing tank strappings on the selected date are populated in the table on the bottom. In this table, Dip Level and Storage Volume are displayed. Use the standard toolbar buttons for insertion and deletion on this table.</p>
+
+    <p>When inserting a new daytime on a tank object, a new row in the table on the bottom will appear when save is being performed. In this row, Dip Level and Storage Volume are being set to 0 (initial value).</p>
+
+    <p>The &ldquo;Copy Current Tank Strapping&rdquo; button will copy the set of tank strappings, which currently are valid (The tank strapping set with highest Valid From date) to the date specified in the date picker, and to the tank object selected in the tank popup. This popup shows the same values as the tank popup in the group model, i.e. the group model parent limits the selectable tank objects. If no tank object is selected in the popup, then it will copy to current object.</p>
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1995338191'
+keys:
+  ATTRIBUTE_TYPE: INV_4EYE_VALIDATION
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: INV_4EYE_VALIDATION
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Indicates whether to have 5-level / 2-user validation for Inventory or not, Options are Y | N.
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

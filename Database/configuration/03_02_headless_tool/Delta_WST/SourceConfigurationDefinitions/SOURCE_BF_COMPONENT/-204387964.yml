@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-204387964'
+keys:
+  BF_CODE: SP.0062
+  CLASS_NAME: CONT_JOURNAL_SUMMARY
+  COMP_CODE: summary_adjustment_data
+  T: BF_COMPONENT
+  URL: /summary_adjustment_data
+parentKeys: {}
+properties:
+  BF_CODE: SP.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/Y' )
+  CLASS_NAME: CONT_JOURNAL_SUMMARY
+  COMP_CODE: summary_adjustment_data
+  NAME: Extract Adjustment Data
+  SIGNING_REQ_IND: null
+  URL: /summary_adjustment_data
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '153388220'
+keys:
+  BF_CODE: SD.0001
+  CLASS_NAME: null
+  COMP_CODE: generateMissingHoursButton
+  T: BF_COMPONENT
+  URL: /generateMissingHoursButton
+parentKeys: {}
+properties:
+  BF_CODE: SD.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_forecast' )
+  CLASS_NAME: null
+  COMP_CODE: generateMissingHoursButton
+  NAME: Generate Missing Hours
+  SIGNING_REQ_IND: null
+  URL: /generateMissingHoursButton
+related: {}

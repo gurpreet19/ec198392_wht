@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1561524382'
+keys:
+  BF_CODE: CO.0154
+  CLASS_NAME: PERF_INTERVAL_SPLIT
+  COMP_CODE: lastsplits
+  T: BF_COMPONENT
+  URL: /lastsplits
+parentKeys: {}
+properties:
+  BF_CODE: CO.0154
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/perf_interval_split' )
+  CLASS_NAME: PERF_INTERVAL_SPLIT
+  COMP_CODE: lastsplits
+  NAME: Last Effective Object Splits
+  SIGNING_REQ_IND: null
+  URL: /lastsplits
+related: {}

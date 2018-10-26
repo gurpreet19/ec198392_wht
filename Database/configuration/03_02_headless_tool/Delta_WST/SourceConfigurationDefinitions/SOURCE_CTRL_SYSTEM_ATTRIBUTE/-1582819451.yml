@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1582819451'
+keys:
+  ATTRIBUTE_TYPE: GAS_CONST_Z_FACTOR_AIR
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: GAS_CONST_Z_FACTOR_AIR
+  ATTRIBUTE_VALUE: 0.99958
+  COMMENTS: Z-factor for air at 15°C.
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

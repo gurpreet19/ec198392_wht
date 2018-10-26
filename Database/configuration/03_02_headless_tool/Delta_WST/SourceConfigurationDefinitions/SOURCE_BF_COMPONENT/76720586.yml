@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '76720586'
+keys:
+  BF_CODE: CP.0068
+  CLASS_NAME: FCST_MNGR_CARGO_CALENDAR
+  COMP_CODE: schedule
+  T: BF_COMPONENT
+  URL: /schedule
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: FCST_MNGR_CARGO_CALENDAR
+  COMP_CODE: schedule
+  NAME: Cargo Schedule
+  SIGNING_REQ_IND: null
+  URL: /schedule
+related: {}

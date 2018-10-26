@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2087880823'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/OPERATOR_ROUTE/TARGET/OPERATOR_ROUTE/CLASS_NAME/OPERATOR_ROUTE
+parentKeys: {}
+properties:
+  BF_CODE: CO.0244
+  NAME: Operator Route
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/OPERATOR_ROUTE/TARGET/OPERATOR_ROUTE/CLASS_NAME/OPERATOR_ROUTE
+related: {}

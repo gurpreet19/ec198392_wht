@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-914708512'
+keys:
+  BF_CODE: RC.0060
+  CLASS_NAME: REPORT_ADM_PUB
+  COMP_CODE: publish_report
+  T: BF_COMPONENT
+  URL: /publish_report
+parentKeys: {}
+properties:
+  BF_CODE: RC.0060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/N' )
+  CLASS_NAME: REPORT_ADM_PUB
+  COMP_CODE: publish_report
+  NAME: Publish Report
+  SIGNING_REQ_IND: null
+  URL: /publish_report
+related: {}

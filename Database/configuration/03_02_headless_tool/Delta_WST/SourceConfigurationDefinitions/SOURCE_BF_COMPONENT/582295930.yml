@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '582295930'
+keys:
+  BF_CODE: CO.1032
+  CLASS_NAME: null
+  COMP_CODE: deleteVersion_button
+  T: BF_COMPONENT
+  URL: /deleteVersion_button
+parentKeys: {}
+properties:
+  BF_CODE: CO.1032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/object_validation/GROUP_MODEL/operational' )
+  CLASS_NAME: null
+  COMP_CODE: deleteVersion_button
+  NAME: Delete Version
+  SIGNING_REQ_IND: null
+  URL: /deleteVersion_button
+related: {}

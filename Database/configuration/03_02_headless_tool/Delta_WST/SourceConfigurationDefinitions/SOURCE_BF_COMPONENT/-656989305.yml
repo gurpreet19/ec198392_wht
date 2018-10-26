@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-656989305'
+keys:
+  BF_CODE: CO.0013
+  CLASS_NAME: COMPANY
+  COMP_CODE: updateAttributes
+  T: BF_COMPONENT
+  URL: /updateAttributes
+parentKeys: {}
+properties:
+  BF_CODE: CO.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/COMPANY' )
+  CLASS_NAME: COMPANY
+  COMP_CODE: updateAttributes
+  NAME: Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /updateAttributes
+related: {}

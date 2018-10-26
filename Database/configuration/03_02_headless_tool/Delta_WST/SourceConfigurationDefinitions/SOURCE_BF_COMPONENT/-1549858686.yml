@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1549858686'
+keys:
+  BF_CODE: PO.0117
+  CLASS_NAME: DASHBRD_DAY_GAS_ACT_PLAN
+  COMP_CODE: graph_2
+  T: BF_COMPONENT
+  URL: /graph_2
+parentKeys: {}
+properties:
+  BF_CODE: PO.0117
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_dashboard' )
+  CLASS_NAME: DASHBRD_DAY_GAS_ACT_PLAN
+  COMP_CODE: graph_2
+  NAME: Gas Production (Actual vs Planned)
+  SIGNING_REQ_IND: null
+  URL: /graph_2
+related: {}

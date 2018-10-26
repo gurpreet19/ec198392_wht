@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '228836320'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/cont_journal_entry
+parentKeys: {}
+properties:
+  BF_CODE: SP.0042
+  NAME: Project Data Entry
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/cont_journal_entry
+related: {}

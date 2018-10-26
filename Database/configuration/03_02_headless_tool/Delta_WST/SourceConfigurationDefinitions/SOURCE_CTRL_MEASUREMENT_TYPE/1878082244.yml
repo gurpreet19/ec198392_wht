@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1878082244'
+keys:
+  MEASUREMENT_TYPE: PRESS_OBS
+  T: CTRL_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: Observed pressure
+  FORMAT_MASK: '##0.0'
+  MEASUREMENT_TYPE: PRESS_OBS
+related: {}

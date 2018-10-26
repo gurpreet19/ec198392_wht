@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-738029736'
+keys:
+  BF_CODE: WR.0077
+  CLASS_NAME: PWEL_MTH_STATUS
+  COMP_CODE: monthly_well_status
+  T: BF_COMPONENT
+  URL: /monthly_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0077
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/monthly_production_well_status/CLASS_NAME/PWEL_MTH_STATUS' )
+  CLASS_NAME: PWEL_MTH_STATUS
+  COMP_CODE: monthly_well_status
+  NAME: Monthly Well Status
+  SIGNING_REQ_IND: null
+  URL: /monthly_well_status
+related: {}

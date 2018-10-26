@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1633767396'
+keys:
+  COMPONENT_ID: CONN_FIELD
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/FIELD/FROM_CLASS_NAME/FIELD/TO_CLASS_NAME/FIELD?screentemplate=/com.ec.revn.cd/create_object_relations_basic&NAVQUERY=/com.ec.revn.cd/query/get_filternavigator.xml&NAVLAYOUT=/com.ec.revn.cd/layout/filternavigator.xml
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CONN_FIELD
+  COMPONENT_LABEL: Field Usage
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: OBJECT_USAGE
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 40.0
+  WINDOW_ID: ENERGYX
+related: {}

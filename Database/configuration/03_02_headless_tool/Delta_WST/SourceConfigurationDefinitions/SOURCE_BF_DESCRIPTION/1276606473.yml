@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1276606473'
+keys:
+  BF_DESCRIPTION_NO: CO.3026
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.3026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/contract_account_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain contract account templates. It is typically used together with the Contract Account BF (CO.3004), to ease the setup of new contracts with a predetermined set of contract accounts.</p>
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '923007879'
+keys:
+  BF_CODE: RC.0060
+  CLASS_NAME: EC_CODES_POPUP
+  COMP_CODE: accept_status
+  T: BF_COMPONENT
+  URL: /accept_status
+parentKeys: {}
+properties:
+  BF_CODE: RC.0060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/N' )
+  CLASS_NAME: EC_CODES_POPUP
+  COMP_CODE: accept_status
+  NAME: Report Status
+  SIGNING_REQ_IND: null
+  URL: /accept_status
+related: {}

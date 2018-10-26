@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1426071273'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.sd.screens/daily_dry_gas_profile
+parentKeys: {}
+properties:
+  BF_CODE: SD.0020
+  NAME: Daily Dry Gas Flow Profile
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.sd.screens/daily_dry_gas_profile
+related: {}

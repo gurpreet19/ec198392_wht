@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '796959447'
+keys:
+  BF_CODE: SD.0016
+  CLASS_NAME: SCTR_DAY_AVAILABILITY
+  COMP_CODE: daily_availability
+  T: BF_COMPONENT
+  URL: /daily_availability
+parentKeys: {}
+properties:
+  BF_CODE: SD.0016
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_availability' )
+  CLASS_NAME: SCTR_DAY_AVAILABILITY
+  COMP_CODE: daily_availability
+  NAME: Daily Availabilities To Nominations
+  SIGNING_REQ_IND: null
+  URL: /daily_availability
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1908556646'
+keys:
+  BF_CODE: WR.0004
+  CLASS_NAME: PWEL_PERIOD_STATUS
+  COMP_CODE: table_well_status
+  T: BF_COMPONENT
+  URL: /table_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/maintain_production_well_status' )
+  CLASS_NAME: PWEL_PERIOD_STATUS
+  COMP_CODE: table_well_status
+  NAME: Well Status
+  SIGNING_REQ_IND: null
+  URL: /table_well_status
+related: {}

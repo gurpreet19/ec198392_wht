@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2071407981'
+keys:
+  NAME: BOOKING_CURRENCY
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: REVN_VAL_DD_BC_CO_BU
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Booking Currency
+  MANDATORY_IND: Y
+  NAME: BOOKING_CURRENCY
+  PARAMETER_SUB_TYPE: CURRENCY
+  PARAMETER_TYPE: EC_OBJECT_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 30.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: REVN_VAL_DD_BC_CO_BU
+related: {}

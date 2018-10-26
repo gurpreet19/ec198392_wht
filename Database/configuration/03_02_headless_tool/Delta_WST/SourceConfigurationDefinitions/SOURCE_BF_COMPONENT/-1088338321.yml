@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1088338321'
+keys:
+  BF_CODE: IN.0010
+  CLASS_NAME: INV_QTY_POS_OVERALL
+  COMP_CODE: processVerifyTable
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: IN.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/verify_quantities' )
+  CLASS_NAME: INV_QTY_POS_OVERALL
+  COMP_CODE: processVerifyTable
+  NAME: Process - Verify Quantities
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

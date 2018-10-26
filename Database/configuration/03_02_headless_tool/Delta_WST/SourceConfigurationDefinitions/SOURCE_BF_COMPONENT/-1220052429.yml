@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1220052429'
+keys:
+  BF_CODE: VO.0021
+  CLASS_NAME: CASCADE
+  COMP_CODE: buttonCascade/List
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button/table
+parentKeys: {}
+properties:
+  BF_CODE: VO.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/monthly_node_input' )
+  CLASS_NAME: CASCADE
+  COMP_CODE: buttonCascade/List
+  NAME: view_cascade_log/PopupList
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button/table
+related: {}

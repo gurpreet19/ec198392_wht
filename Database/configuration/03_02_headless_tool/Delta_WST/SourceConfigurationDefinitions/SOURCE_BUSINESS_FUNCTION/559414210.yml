@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '559414210'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/YR
+parentKeys: {}
+properties:
+  BF_CODE: FI.0006
+  NAME: Yearly Financial Item
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/YR
+related: {}

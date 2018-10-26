@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1407874036'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.sa.screens/period_contract_lifting/CLASS/SCTR_DAY_LIFTING/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0039
+parentKeys: {}
+properties:
+  BF_CODE: SA.0039
+  NAME: Period Contract Lifting
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.sa.screens/period_contract_lifting/CLASS/SCTR_DAY_LIFTING/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0039
+related: {}

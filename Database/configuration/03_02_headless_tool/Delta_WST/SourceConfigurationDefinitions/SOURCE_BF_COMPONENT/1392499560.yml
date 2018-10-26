@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1392499560'
+keys:
+  BF_CODE: PO.0112
+  CLASS_NAME: TANK_EVENT_RUN_TICKETS
+  COMP_CODE: run_tickets
+  T: BF_COMPONENT
+  URL: /run_tickets
+parentKeys: {}
+properties:
+  BF_CODE: PO.0112
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/event_tank_status_dip_and_export' )
+  CLASS_NAME: TANK_EVENT_RUN_TICKETS
+  COMP_CODE: run_tickets
+  NAME: Run Ticket
+  SIGNING_REQ_IND: null
+  URL: /run_tickets
+related: {}

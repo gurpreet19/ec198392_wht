@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1083786082'
+keys:
+  BF_CODE: CO.0153
+  CLASS_NAME: PERF_INTERVAL
+  COMP_CODE: manageObject
+  T: BF_COMPONENT
+  URL: /manageobject
+parentKeys: {}
+properties:
+  BF_CODE: CO.0153
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/perforation_interval_maintain' )
+  CLASS_NAME: PERF_INTERVAL
+  COMP_CODE: manageObject
+  NAME: Manage Object
+  SIGNING_REQ_IND: null
+  URL: /manageobject
+related: {}

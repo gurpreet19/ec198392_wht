@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-191350107'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/BANK/FROM_CLASS_NAME/BANK/TO_CLASS_NAME/BANK
+parentKeys: {}
+properties:
+  BF_CODE: CD.0073
+  NAME: Bank Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/BANK/FROM_CLASS_NAME/BANK/TO_CLASS_NAME/BANK
+related: {}

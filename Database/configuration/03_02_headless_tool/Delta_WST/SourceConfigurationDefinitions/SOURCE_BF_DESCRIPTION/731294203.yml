@@ -1,0 +1,151 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '731294203'
+keys:
+  BF_DESCRIPTION_NO: FC.1016
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FC.1016
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_value_by_field/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This BF manages the Quantity Forecast Cases in terms of quantities.
+    In addition, this BF manages comments attached to each Field taking part in a
+    Quantity Forecast Case.&nbsp; </p><p>The Quantity Forecast Case quantities can
+    either be manually entered into the Quantity Forecast Case using this BF or uploaded
+    through a flat file interface. Upload of Quantity Forecast Case quantities can
+    be done using a scheduler job designed for this. A typical scenario is to start
+    by uploading or entering the quantities for a Quantity Forecast Case having POPULATE_METHOD
+    set to �PLAN�. The next step is to make copy of this Quantity Forecast Case and
+    change the POPULATE_METHOD to �YEAR_TO_MONTH� to create a Closing Forecast (CF)
+    for January. The MONTH attribute for the January CF will then be changed to January
+    and the new Quantity Forecast Case can be updated with Final/Accrual quantities
+    from the EC Revenue Quantities module for January using the �Populate Forecast
+    Case� function in BF �FC.1001 � Quantity Forecast Properties�. The Closing Forecast
+    for February will then be created by making a copy of the January CF and changing
+    the MONTH attribute to February.&nbsp; The February CF can then be updated with
+    actual quantities from the EC Revenue Quantities module using the �Populate Forecast
+    Case� function.</p><p>The BF consists of these screen sections:</p><p>�&nbsp;Static
+    Navigator</p><p>The following query elements are available for selecting a Quantity
+    Forecast Case and determining which parts of the Quantity Forecast Case to view:</p><p>o&nbsp;Year:
+    By selecting a Year the Forecast Case popup will be limited to only show Quantity
+    Forecast Cases for that year.</p><p>o&nbsp;Forecast Case: This popup will list
+    all the Quantity Forecast Cases for the selected Year available to the current
+    user, i.e. all PUBLIC cases independent from which user originally created it,
+    and all PRIVATE cases belonging to the current user.</p><p>o&nbsp;Company: From
+    this selector the user can select to view COMPANY specific quantity values vs.
+    FULL values. By selecting a particular COMPANY the quantity sections in this BF
+    will only show Stream Items having the COMPANY attribute set to the selected COMPANY.
+    By selecting �FULL� the quantity sections in this BF will only show Stream Items
+    having the COMPANY attribute set to FULL. This way it is possible to either view/modify
+    company specific quantities or full (100%) quantities. The popup will only list
+    Companies having the SYSTEM_COMPANY flag set to Yes (Y) in addition to the FULL
+    company.</p><p>o&nbsp;Field Group: By selecting a Field Group only Stream Items
+    having the FIELD attribute set to one of the Fields belonging to the selected
+    Field Group will be listed in the Quantity Overview Section. This way users having
+    responsibility for a limited number of Fields can view the relevant fields.</p><p>o&nbsp;The
+    �Go� button will execute the query and view the quantity details for the selected
+    Quantity Forecast Case in the following sections.</p><p>�&nbsp;Quantity Overview
+    Section</p><p>This section lists the Stream Items defined for the Quantity Forecast
+    Case filtered by the selection criteria set by the Static Navigator. It is a table
+    sorted vertically by Field Name. The columns are the Product Objects defined for
+    the Quantity Forecast Case, sorted horizontally according to the Product Object
+    Sort order. The Stream Item values are each summed across the year, i.e. it is
+    the sum of the monthly numbers for each Stream Item. A Subtotal is calculated
+    in the screen adding all the Stream Items together per Product Object. The Adjustment
+    Stream Item is NOT part of the subtotal. The Adjustment Stream Item is a sum of
+    the Adjustment Stream Item for each Field. This value is also calculated in the
+    screen, i.e. the number is NOT stored in the database. The Field subtotal and
+    the Adjustment sum is then added to get a Quantity Forecast Case Total for each
+    Product Object. The Quantity Forecast Case Total is calculated on the fly and
+    NOT stored in the database.</p><p>For each row there is also a column for SUM
+    across the Product Objects for each Field calculated in BOE. The SUM quantity
+    is also calculated to BOE/Day. <br>These values are not stored in the database
+    � they are calculated on the fly.</p><p>This section has a �POPULATE FORECAST
+    CASE� button for updating Stream Item values with actual data from the EC Revenue
+    Quantities module, table STIM_MTH_ACTUAL. This button will also update any of
+    the Adjustment Stream Items.</p><p>This section has a button for setting the entire
+    Quantity Forecast Case to APPROVED. The �APPROVE� button will only be accessible
+    by users having the access rights set accordingly, i.e. access rights to change
+    record status from PROVISIONAL / VERIFIED to APPROVED.</p><p>This section also
+    has a button for resetting a Quantity Forecast Case from APPROVED back to PROVISIONAL.
+    When performing this action the system must check that if the Quantity Forecast
+    Case in question is in use by a Revenue Forecast Case, the Revenue Forecast Case
+    MUST NOT have status APPROVED, i.e. it is not allowed to reset a Quantity Forecast
+    Case to PROVISIONAL if the corresponding Revenue Forecast Case is set to APPROVED.
+    Similarly it will not be allowed to set a Revenue Forecast Case to APPROVED unless
+    the corresponding Quantity Forecast Case has been set to APPROVED first.</p><p>This
+    section will handle cases where there are no stream items for a given combination
+    of Field and Product Object, i.e. a pure Gas Field will not have any Crude Stream
+    Items. For these cases the table will simply have no quantity for the given Field
+    / Product Object. This section will have NULL-handling in order to ensure correct
+    sub-totals, grand totals, sum in BOE, and sum in BOE/day in case of �missing�
+    stream items.</p><p>All values are read only in this section, regardless of record
+    status or access privileges. </p><p>�&nbsp;Field/Month Quantity Section</p><p>This
+    section lists the Stream Items for the Field selected in the Quantity Overview
+    section in combination with the other query parameters set in the Static Navigator,
+    i.e. only Stream Items matching selected Field in the Quantity Overview section
+    together with the Company selection for the selected Quantity Forecast Case. This
+    section will have one row for each month of the year.</p><p>Each row will be read
+    only or editable depending on the POPULATE_METHOD of the Quantity Forecast Case
+    and the Row Status for each row. </p><p>The Row Status is calculated as follows
+    for Quantity Forecast Cases having POPULATE_METHOD set to �YEAR_TO_MONTH�: <br>o&nbsp;If
+    ALL Stream Items for a particular month is set to FINAL, then the Status is set
+    to FINAL and the row is read only. A Stream Item will have its Status set when
+    updating the Quantity Forecast Case with actual numbers from the Quantity module.
+    The Status will then be set to the same value as the Stream Item has in the Actual
+    table (STIM_MTH_ACTUAL)<br>o&nbsp;If ONE of the Stream Items for a particular
+    month is set to ACCRUAL, then the Row Status is set to ACCRUAL and the row is
+    read only. A Stream Item will have its Status set when updating the Quantity Forecast
+    Case with actual numbers from the Quantity module. The Status will then be set
+    to the same value as the Stream Item has in the Actual table (STIM_MTH_ACTUAL)<br>o&nbsp;If
+    none of the criteria above is fulfilled, the Row Status is set to PLAN and the
+    row is editable given the user has the access rights with respect to modifying
+    PROVISIONAL / VERIFIED / APPROVED data elements.</p><p>For Quantity Forecast Cases
+    having POPULATE_METHOD set to �PLAN� all rows will be editable given the user
+    has the access rights with respect to modifying PROVISIONAL / VERIFIED / APPROVED
+    data elements</p><p>A Year Total per Product Object for the selected Field is
+    calculated by the screen and not stored in the database. The Year Total quantity
+    is read only. </p><p>This section also provides a read-only field for showing
+    the Adjustment Stream Item quantities. These quantities are entered using the
+    VO screens and will be copied to the Quantity Forecast Case as part of the �Populate
+    Forecast Case� method in BF �FC.1001 � Quantity Forecast Properties�. These quantities
+    are stored as a monthly number at the first month of the Quantity Forecast Case,
+    i.e. January.</p><p>A Grand Total per Product Object for the selected Field is
+    calculated by the screen and not stored in the database. The Grand Total is the
+    sum of the Year Total and the Adjustment per Product Object. </p><p>For each row
+    there is also a column for SUM across the Product Objects for each Month calculated
+    in BOE. The SUM quantity is also calculated to BOE/Day according to the number
+    of days for each month. The number of days in February will be 29 for leap years.
+    These values are not stored in the database � they are calculated on the fly.</p><p>The
+    Stream Items connected to a Quantity Forecast Case may not be valid for all the
+    months through the year. If this is the case for a Stream Item, the data element
+    for the combination of Product Object and Month will be NULL and read only.</p><p>When
+    entering or modifying quantities in this section the Cascade logic will be executed
+    in order to update any other Stream Items being part of the Quantity Forecast
+    Case which has a Formula or Split Key reference to the Stream Item in question.</p><p>Stream
+    Items defined for the selected Quantity Forecast Case and Field which has no value
+    set, i.e. the Stream Item value is NULL, will be marked in red to make it easier
+    to identify missing quantity data. To change this, the user can press on the �Populate
+    Forecast Case� button above to repopulate the stream items with actual data from
+    the EC Revenue Quantities module, table STIM_MTH_ACTUAL. Also, this section will
+    handle cases where there are no stream items for a given combination of Field
+    and Product Object, i.e. a pure Gas Field will not have any Crude Stream Items.
+    For these cases the table will simply have no quantity for the given Field / Product
+    Object. This section have NULL-handling in order to ensure correct sub-totals,
+    grand totals, sum in BOE, and sum in BOE/day in case of �missing� stream item.</p><p>This
+    section has a button for setting the forecast quantities and comments for the
+    selected Field to VERIFIED. The �VERIFY� button is only be accessible by users
+    having the access rights set accordingly, i.e. access rights to change record
+    status from PROVISIONAL to VERIFIED.</p><p>�&nbsp;Field Comments Section<br>This
+    section manages one or more Comments for the selected combination of Quantity
+    Forecast Case and Field. The user can Add / Delete / Modify Field Comments. Each
+    Comment is categorized by setting a category for each Comment. The categories
+    will be defined by the customer through EC Codes entries. By default there will
+    be two Comment Categories defined: GENERAL and MONTH_SPECIFIC. These can be deleted
+    and replaced by customer specific Comment categories by the customer.</p><p>The
+    Field Comments can only be modified by users having access rights according to
+    the record status of the Comments, i.e. if the Comments have been set to VERIFIED
+    only users having access rights to modify VERIFED records can change them. The
+    same concept applies to APPROVED records.<br></p>'
+related: {}

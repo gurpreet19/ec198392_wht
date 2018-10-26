@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1727223257'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_INDEX_DS_MTH_VALUE
+parentKeys: {}
+properties:
+  BF_CODE: PR.0017
+  NAME: Monthly Price Index – Dataset
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_INDEX_DS_MTH_VALUE
+related: {}

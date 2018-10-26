@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '357486795'
+keys:
+  BF_CODE: SP.0042
+  CLASS_NAME: null
+  COMP_CODE: unapprove_button
+  T: BF_COMPONENT
+  URL: /unapprove_button
+parentKeys: {}
+properties:
+  BF_CODE: SP.0042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cont_journal_entry' )
+  CLASS_NAME: null
+  COMP_CODE: unapprove_button
+  NAME: Unapprove Button
+  SIGNING_REQ_IND: null
+  URL: /unapprove_button
+related: {}

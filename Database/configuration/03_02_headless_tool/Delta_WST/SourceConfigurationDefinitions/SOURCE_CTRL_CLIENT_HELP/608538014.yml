@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '608538014'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/price_values
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/price_values
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

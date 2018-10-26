@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-6469271'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/daily_node_overview
+parentKeys: {}
+properties:
+  BF_CODE: VO.0017
+  NAME: Daily Node Overview
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/daily_node_overview
+related: {}

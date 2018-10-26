@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1780961659'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0005' AND NVL(URL,'IS_NULL') = '/useTemplateWithoutValue' AND COMP_CODE ='useTemplateWithoutValue' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  T: BF_COMPONENT_ACTION
+  URL: /execute
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0005' AND NVL(URL,'IS_NULL') = '/useTemplateWithoutValue' AND COMP_CODE ='useTemplateWithoutValue' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  COMMENTS: null
+  NAME: Use Template Without Value / execute
+  URL: /execute
+related: {}

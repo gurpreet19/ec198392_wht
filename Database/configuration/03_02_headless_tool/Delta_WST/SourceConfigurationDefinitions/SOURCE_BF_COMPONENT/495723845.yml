@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '495723845'
+keys:
+  BF_CODE: SP.0019
+  CLASS_NAME: CONT_TRANSACTION
+  COMP_CODE: TransactionGeneralMaster
+  T: BF_COMPONENT
+  URL: /transaction_table
+parentKeys: {}
+properties:
+  BF_CODE: SP.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/transaction_values' )
+  CLASS_NAME: CONT_TRANSACTION
+  COMP_CODE: TransactionGeneralMaster
+  NAME: Transaction General
+  SIGNING_REQ_IND: null
+  URL: /transaction_table
+related: {}

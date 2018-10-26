@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '568495707'
+keys:
+  BF_CODE: PO.0122
+  CLASS_NAME: TEST_DEVICE_DAY_STATUS
+  COMP_CODE: test_device_status
+  T: BF_COMPONENT
+  URL: /test_device_status
+parentKeys: {}
+properties:
+  BF_CODE: PO.0122
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_test_device_status' )
+  CLASS_NAME: TEST_DEVICE_DAY_STATUS
+  COMP_CODE: test_device_status
+  NAME: Test Device Status
+  SIGNING_REQ_IND: null
+  URL: /test_device_status
+related: {}

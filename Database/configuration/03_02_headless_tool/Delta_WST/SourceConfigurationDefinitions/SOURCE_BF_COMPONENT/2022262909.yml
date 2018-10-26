@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2022262909'
+keys:
+  BF_CODE: TO.0035
+  CLASS_NAME: PORT_RESOURCE_USAGE
+  COMP_CODE: requiredResources
+  T: BF_COMPONENT
+  URL: /requiredResources
+parentKeys: {}
+properties:
+  BF_CODE: TO.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/port_resource_usage' )
+  CLASS_NAME: PORT_RESOURCE_USAGE
+  COMP_CODE: requiredResources
+  NAME: Required Port Resources
+  SIGNING_REQ_IND: null
+  URL: /requiredResources
+related: {}

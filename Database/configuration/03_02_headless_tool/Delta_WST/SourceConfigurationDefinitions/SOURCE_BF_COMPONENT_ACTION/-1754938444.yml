@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1754938444'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RC.0062' AND NVL(URL,'IS_NULL') = '/reconcileje' AND COMP_CODE ='reconcileje' AND NVL(CLASS_NAME,'IS_NULL') = 'RECONCILE_JE_DIF')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='RC.0062' AND NVL(URL,'IS_NULL') = '/reconcileje' AND COMP_CODE ='reconcileje' AND NVL(CLASS_NAME,'IS_NULL') = 'RECONCILE_JE_DIF')
+  COMMENTS: null
+  NAME: reconcileje/save
+  URL: /save
+related: {}

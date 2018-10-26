@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1552535321'
+keys:
+  BF_DESCRIPTION_NO: UPG.0014
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: UPG.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/integrity_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>In order to apply changes to an existing EC system – i.e. apply deltas, service releases or even a new version of the whole system – the current version of the system needs to be verified. Current version of an object can either be an official EC release (from a main release, service release or a delta) or it can be an unofficially changed object. The latter case means that the object has been amended outside install mode (normally by the customer), which causes a conflict when replacing this object by an official release.</p><p>This business function provides a graphical user interface that enables the user to generate reports containing information regarding the status of the objects in the system. The report generation is very much based upon the functionality provided by the Product Integrity Concept (PInC) API (defined in business function UPG.0008).</p><p>The business function provides the following report types:</p><p></p><ul><li>Full Report – Lists the status on all objects on the given date.</li><li>Object Report – Lists the status on the selected objects on the given date.</li><li>Release Report – Lists all objects included in the selected release and shows the actual live release number of each object. If the Live version of the object is not the same as the given release tag, all amendments after the given release on this object will be shown.</li><li>Custom Report – Lists all live objects that is not an official release, i.e. are changed by the customer/unofficially.</li><li>User Report – Lists the status on objects created by the given user (database user or OS user).</li></ul><p></p>
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '854366174'
+keys:
+  COMPONENT_ID: OBJECT_USAGE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: null
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: OBJECT_USAGE
+  COMPONENT_LABEL: Revenue Object Usage
+  COMPONENT_TYPE: FOLDER
+  PARENT_COMPONENT_ID: ASSETS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 150.0
+  WINDOW_ID: ENERGYX
+related: {}

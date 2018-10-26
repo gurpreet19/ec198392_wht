@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1360111786'
+keys:
+  BF_CODE: GD.0011
+  CLASS_NAME: TCTR_DP_TRADE_REQUEST
+  COMP_CODE: trading_requests
+  T: BF_COMPONENT
+  URL: /trading_requests
+parentKeys: {}
+properties:
+  BF_CODE: GD.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/pipeline_trade_request' )
+  CLASS_NAME: TCTR_DP_TRADE_REQUEST
+  COMP_CODE: trading_requests
+  NAME: Trading Requests
+  SIGNING_REQ_IND: null
+  URL: /trading_requests
+related: {}

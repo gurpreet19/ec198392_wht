@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '942312772'
+keys:
+  BF_DESCRIPTION_NO: VO.0009
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: VO.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/split_key/MONTHLY/TRUE/SPLIT_TYPE/PRODUCT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Monthly Split Key Product screen</strong>    is used to create and maintain monthly Product Split Key shares.</p><p>    The Product Split Key is used by the cascade logic to calculate values in the Volume module when a value should be split into values for different    products.</p><p>    The cascade logic is run after saving in this business function and e.g. might influence all instantiated stream items for the timespan valid for the share    that uses this split key.</p>
+related: {}

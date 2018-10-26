@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-472490035'
+keys:
+  BF_CODE: CP.0023
+  CLASS_NAME: STORAGE
+  COMP_CODE: storage
+  T: BF_COMPONENT
+  URL: /storage
+parentKeys: {}
+properties:
+  BF_CODE: CP.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/process_train_event' )
+  CLASS_NAME: STORAGE
+  COMP_CODE: storage
+  NAME: storage
+  SIGNING_REQ_IND: null
+  URL: /storage
+related: {}

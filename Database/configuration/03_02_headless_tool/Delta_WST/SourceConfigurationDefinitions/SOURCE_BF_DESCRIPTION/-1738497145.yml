@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1738497145'
+keys:
+  BF_DESCRIPTION_NO: CO.3024
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.3024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/CLASS_NAME/PRICE_RATE/NAVMODEL/SALE_PR/TARGET/PRICE_RATE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to configure rates. In EC, rates are financial benchmarks used when producing interest rates. Typical examples can be LIBOR and EURIBOR. Each rate may have a single daily, monthly or yearly value. Where there are multiple values associated with a rate (e.g. high value and low value), these would be configured within EC as separate rates.</p><p>A rate is typically used as input to Price Calculations or PSA Calculation. When long term contracts are negotiated they will typically agree on key rates to be used in the calculation for the contract or the PSA. This is to make sure that over time the calculated result will vary according to changes in the market.</p><p>In EC, rates are configured using the generic PRICE_INPUT_ITEM tables. This allows projects to create specific price input items and corresponding transactional business functions.</p>
+related: {}

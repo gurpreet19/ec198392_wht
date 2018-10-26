@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '852353702'
+keys:
+  KEY: /com/ec/tran/gd/screens/nomination_matrix/ALIGNMENT
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: DAYTIME_ROW
+  DESCRIPTION: How to populate nomination matrix in EC Transport - Gas Dispatching
+  KEY: /com/ec/tran/gd/screens/nomination_matrix/ALIGNMENT
+  LABEL: Nomination Matrix alignment
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: USER
+related: {}

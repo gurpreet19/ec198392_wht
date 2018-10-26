@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-890094148'
+keys:
+  BF_CODE: CD.0133
+  CLASS_NAME: null
+  COMP_CODE: navButton
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button
+parentKeys: {}
+properties:
+  BF_CODE: CD.0133
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/revn_log' )
+  CLASS_NAME: null
+  COMP_CODE: navButton
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button
+related: {}

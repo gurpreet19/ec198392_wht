@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-678890872'
+keys:
+  COMPONENT_ID: SD0013_WET_GAS_EXP_AND_FUEL
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.sale.sd.screens/wet_gas_export_fuel
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: SD0013_WET_GAS_EXP_AND_FUEL
+  COMPONENT_LABEL: Wet Gas Export and Fuel
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_SALE_SD
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 110.0
+  WINDOW_ID: ENERGYX
+related: {}

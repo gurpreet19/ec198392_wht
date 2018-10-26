@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1108506772'
+keys:
+  BF_DESCRIPTION_NO: IS.0002
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IS.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_target_mapping' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is representing the lowest section in the “Mapping Configuration” screen. The only difference is the navigator. There are three optional navigator values:</p><p>EC Class, EC attribute and EC Key.</p><p>This screen shows all the existing mappings against one EC class.</p>
+related: {}

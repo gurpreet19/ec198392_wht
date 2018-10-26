@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1383258725'
+keys:
+  ATTRIBUTE_TYPE: DEFAULT_REVERSAL_DATE
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: DEFAULT_REVERSAL_DATE
+  ATTRIBUTE_VALUE: 1.0
+  COMMENTS: Default date of the following booking period to do automatic reversal in SAP.
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

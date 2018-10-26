@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '773238209'
+keys:
+  BF_DESCRIPTION_NO: CO.1060
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CALC_LIBRARY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Calculation Library screen is used to define calculation libraries. A calculation library is a grouping mechanism for library calculations, and serves no other purpose than organizing such calculations.</p><p>For more information about library calculations, please see the documentation for CO.1061 - Create Library Calculation and CO.1062 - Maintain Library Calculation. <br></p>
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1246692273'
+keys:
+  BF_CODE: PO.0109
+  CLASS_NAME: TANK_DAY_STATUS
+  COMP_CODE: inventory
+  T: BF_COMPONENT
+  URL: /inventory
+parentKeys: {}
+properties:
+  BF_CODE: PO.0109
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_tank_status_terminal' )
+  CLASS_NAME: TANK_DAY_STATUS
+  COMP_CODE: inventory
+  NAME: Daily Tank Status
+  SIGNING_REQ_IND: null
+  URL: /inventory
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1810282776'
+keys:
+  BF_CODE: PT.0010
+  CLASS_NAME: ACTIVE_RESULT_WELL
+  COMP_CODE: active_result_well
+  T: BF_COMPONENT
+  URL: /active_result_well
+parentKeys: {}
+properties:
+  BF_CODE: PT.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_result' )
+  CLASS_NAME: ACTIVE_RESULT_WELL
+  COMP_CODE: active_result_well
+  NAME: Well
+  SIGNING_REQ_IND: null
+  URL: /active_result_well
+related: {}

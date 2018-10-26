@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '467302035'
+keys:
+  COMPONENT_ID: REGION_MAINTAIN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/REGION?screentemplate=/com.ec.frmw.co.screens/manage_object_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: REGION_MAINTAIN
+  COMPONENT_LABEL: Region
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: BASIC_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 120.0
+  WINDOW_ID: ENERGYX
+related: {}

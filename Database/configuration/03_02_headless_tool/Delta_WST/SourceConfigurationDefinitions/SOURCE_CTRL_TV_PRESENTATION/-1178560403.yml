@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1178560403'
+keys:
+  COMPONENT_ID: FINANCIAL_ITEM_TEMPLATE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.fi/financial_item_template?screentemplate=/com.ec.revn.fi/financial_item_template
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: FINANCIAL_ITEM_TEMPLATE
+  COMPONENT_LABEL: Financial Item Template
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FINANCIAL_ITEM
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 200.0
+  WINDOW_ID: ENERGYX
+related: {}

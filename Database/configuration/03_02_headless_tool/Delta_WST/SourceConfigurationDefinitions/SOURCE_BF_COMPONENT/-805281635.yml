@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-805281635'
+keys:
+  BF_CODE: SP.0055
+  CLASS_NAME: IFAC_JOURNAL_ENTRY_VIEW
+  COMP_CODE: journal_entry
+  T: BF_COMPONENT
+  URL: /journal_entry
+parentKeys: {}
+properties:
+  BF_CODE: SP.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/ifac_journal_entry/NAV_MODEL/DATA_INTERFACE/NAV_TARGET/BUSINESS_UNIT' )
+  CLASS_NAME: IFAC_JOURNAL_ENTRY_VIEW
+  COMP_CODE: journal_entry
+  NAME: Data Entry
+  SIGNING_REQ_IND: null
+  URL: /journal_entry
+related: {}

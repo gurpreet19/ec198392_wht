@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1414274256'
+keys:
+  BF_CODE: PO.0065
+  CLASS_NAME: TANK_DAY_INV_OIL
+  COMP_CODE: inventory
+  T: BF_COMPONENT
+  URL: /inventory
+parentKeys: {}
+properties:
+  BF_CODE: PO.0065
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_tank_status' )
+  CLASS_NAME: TANK_DAY_INV_OIL
+  COMP_CODE: inventory
+  NAME: Period Tank Status
+  SIGNING_REQ_IND: null
+  URL: /inventory
+related: {}

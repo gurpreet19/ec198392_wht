@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1261089808'
+keys:
+  BF_CODE: SD.0052
+  CLASS_NAME: null
+  COMP_CODE: calculateButton
+  T: BF_COMPONENT
+  URL: /calculateButton
+parentKeys: {}
+properties:
+  BF_CODE: SD.0052
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/fcst_nomloc_delivery_events/CLASS1/FCST_SLNL_PRD_DEL_EVT/CLASS2/FCST_SLNP_PRD_DEL_EVT_NL/CLASS_SUB/FCST_SLNP_SUB_DEL_EVT_NL/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0052' )
+  CLASS_NAME: null
+  COMP_CODE: calculateButton
+  NAME: Calculate
+  SIGNING_REQ_IND: null
+  URL: /calculateButton
+related: {}

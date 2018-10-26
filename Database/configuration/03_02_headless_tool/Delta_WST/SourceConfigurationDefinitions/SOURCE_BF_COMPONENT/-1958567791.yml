@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1958567791'
+keys:
+  BF_CODE: RP.0006
+  CLASS_NAME: REPORT_QUEUE_STATUS
+  COMP_CODE: report_queue_status
+  T: BF_COMPONENT
+  URL: /report_queue_status
+parentKeys: {}
+properties:
+  BF_CODE: RP.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_queue_status' )
+  CLASS_NAME: REPORT_QUEUE_STATUS
+  COMP_CODE: report_queue_status
+  NAME: Report Queue Status
+  SIGNING_REQ_IND: null
+  URL: /report_queue_status
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1088411175'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/monthly_query_quantities
+parentKeys: {}
+properties:
+  BF_CODE: VO.0023
+  NAME: Monthly Quantity Overview
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/monthly_query_quantities
+related: {}

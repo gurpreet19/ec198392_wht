@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1146734347'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = '/reportselector' AND COMP_CODE ='reportselector' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  T: BF_COMPONENT_ACTION
+  URL: /execute
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = '/reportselector' AND COMP_CODE ='reportselector' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  COMMENTS: null
+  NAME: Report Selector /execute
+  URL: /execute
+related: {}

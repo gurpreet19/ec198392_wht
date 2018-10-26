@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-565948806'
+keys:
+  BF_CODE: CD.0137
+  CLASS_NAME: REPORT_REF_GROUP
+  COMP_CODE: objectForm
+  T: BF_COMPONENT
+  URL: /insert
+parentKeys: {}
+properties:
+  BF_CODE: CD.0137
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_report_ref_group/CLASS_NAME/REPORT_REF_GROUP' )
+  CLASS_NAME: REPORT_REF_GROUP
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /insert
+related: {}

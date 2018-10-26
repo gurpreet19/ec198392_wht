@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1299950971'
+keys:
+  BF_DESCRIPTION_NO: CO.0074
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0074
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/chem_tank_product' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen is used to conenct a chemical product to a chemical tank. Choose a chemical tank in the navigator, and the screen will list which chemical products that have been on that tank. Only one chemical product can be on one chemcial tank at the time.</p>
+
+    <p>When a new chemical product is conencted to a chemical tank, EC assumes that the starting closing volume is 0.</p>
+related: {}

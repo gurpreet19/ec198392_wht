@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-243570426'
+keys:
+  BF_CODE: GD.0092
+  CLASS_NAME: CNTR_CAPACITY_DAY_TRANS
+  COMP_CODE: contract_capacity_trans
+  T: BF_COMPONENT
+  URL: /contract_capacity_trans
+parentKeys: {}
+properties:
+  BF_CODE: GD.0092
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_contract_capacity_request/CLASS_1/CNTR_DAY_CAPACITY_REQ/CLASS_2/CNTR_CAPACITY_DAY_TRANS' )
+  CLASS_NAME: CNTR_CAPACITY_DAY_TRANS
+  COMP_CODE: contract_capacity_trans
+  NAME: Contract Capacity Transactions
+  SIGNING_REQ_IND: null
+  URL: /contract_capacity_trans
+related: {}

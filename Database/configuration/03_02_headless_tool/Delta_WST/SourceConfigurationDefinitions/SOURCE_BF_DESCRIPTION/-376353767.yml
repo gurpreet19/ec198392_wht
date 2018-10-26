@@ -1,0 +1,162 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-376353767'
+keys:
+  BF_DESCRIPTION_NO: SP.0068
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0068
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_report_ref_item_setup' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<div style="color: rgb(34, 34, 34); text-transform: none; text-indent:
+    0px; letter-spacing: normal; font-family: arial, sans-serif; font-size: 12.8px;
+    font-style: normal; font-weight: normal; word-spacing: 0px; white-space: normal;
+    orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures:
+    normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style:
+    initial; text-decoration-color: initial;"><strong>Report Reference Group Setup
+    screen</strong> allows to create a set of Report Reference Items where user can
+    indicate what mapping parameter to set and the value for each parameter. That
+    will be used when executing the Data Mapping (Source/Class) for a given Report
+    Reference Group and Dataset in the Project Data Mapping screen (BF SP.0041).</div><div
+    style="color: rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing:
+    normal; font-family: arial, sans-serif; font-size: 12.8px; font-style: normal;
+    font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:
+    2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps:
+    normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;">- The screen supports insert, delete, and update of Report Reference
+    Items. The Report Reference Item objects are using standard EC date-effective
+    versions.</div><div style="color: rgb(34, 34, 34); text-transform: none; text-indent:
+    0px; letter-spacing: normal; font-family: arial, sans-serif; font-size: 12.8px;
+    font-style: normal; font-weight: normal; word-spacing: 0px; white-space: normal;
+    orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures:
+    normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style:
+    initial; text-decoration-color: initial;">- In addition to the standard EC object
+    screen, this business function has a child section where the Source Mapping and
+    Class Mapping for the Report Reference Item is defined.</div><div style="color:
+    rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing: normal;
+    font-family: arial, sans-serif; font-size: 12.8px; font-style: normal; font-weight:
+    normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color:
+    rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal;
+    -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;"><br></div><div style="color: rgb(34, 34, 34); text-transform: none;
+    text-indent: 0px; letter-spacing: normal; font-family: arial, sans-serif; font-size:
+    12.8px; font-style: normal; font-weight: normal; word-spacing: 0px; white-space:
+    normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures:
+    normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style:
+    initial; text-decoration-color: initial;"><strong>The bottom section of the screen
+    has Source Mapping and Class Mapping Tabs:</strong></div><div style="color: rgb(34,
+    34, 34); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family:
+    arial, sans-serif; font-size: 12.8px; font-style: normal; font-weight: normal;
+    word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color:
+    rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal;
+    -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;"><br></div><div style="color: rgb(34, 34, 34); text-transform: none;
+    text-indent: 0px; letter-spacing: normal; font-family: arial, sans-serif; font-size:
+    12.8px; font-style: normal; font-weight: normal; word-spacing: 0px; white-space:
+    normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures:
+    normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style:
+    initial; text-decoration-color: initial;"><strong>Source Mapping Tab:</strong></div><div
+    style="color: rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing:
+    normal; font-family: arial, sans-serif; font-size: 12.8px; font-style: normal;
+    font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:
+    2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps:
+    normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;">- The Source Mapping Tab shows the Source Mapping for the selected Report
+    Reference Item object.</div><div style="color: rgb(34, 34, 34); text-transform:
+    none; text-indent: 0px; letter-spacing: normal; font-family: arial, sans-serif;
+    font-size: 12.8px; font-style: normal; font-weight: normal; word-spacing: 0px;
+    white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);
+    font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:
+    0px; text-decoration-style: initial; text-decoration-color: initial;">- The Source
+    Mapping section maps the particular Report Reference Item object&nbsp;towards
+    Data entry records which meet the match criteria defined here.&nbsp;</div><div
+    style="color: rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing:
+    normal; font-family: arial, sans-serif; font-size: 12.8px; font-style: normal;
+    font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:
+    2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps:
+    normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;">- The user might use individual/lists of different objects or codes
+    in addition to comparison operators to suit its needs.</div><div style="color:
+    rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing: normal;
+    font-family: arial, sans-serif; font-size: 12.8px; font-style: normal; font-weight:
+    normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color:
+    rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal;
+    -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;">- For the Source Mapping entry using an Object List the user can access
+    more detailed information through the button at the bottom:</div><div style="color:
+    rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing: normal;
+    font-family: arial, sans-serif; font-size: 12.8px; font-style: normal; font-weight:
+    normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color:
+    rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal;
+    -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;"><br></div><div style="color: rgb(34, 34, 34); text-transform: none;
+    text-indent: 0px; letter-spacing: normal; font-family: arial, sans-serif; font-size:
+    12.8px; font-style: normal; font-weight: normal; word-spacing: 0px; white-space:
+    normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures:
+    normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style:
+    initial; text-decoration-color: initial;"><strong>Button</strong> <font color="#009900"><strong>Object
+    List</strong></font></div><div style="color: rgb(34, 34, 34); text-transform:
+    none; text-indent: 0px; letter-spacing: normal; font-family: arial, sans-serif;
+    font-size: 12.8px; font-style: normal; font-weight: normal; word-spacing: 0px;
+    white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);
+    font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:
+    0px; text-decoration-style: initial; text-decoration-color: initial;">- This button
+    appears if the selected Source Mapping entry is using an Object List, i.e Source
+    Object - Type = Object List.</div><div style="color: rgb(34, 34, 34); text-transform:
+    none; text-indent: 0px; letter-spacing: normal; font-family: arial, sans-serif;
+    font-size: 12.8px; font-style: normal; font-weight: normal; word-spacing: 0px;
+    white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);
+    font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:
+    0px; text-decoration-style: initial; text-decoration-color: initial;">- By clicking
+    the Object List button a separate popup-window will be launched showing the content
+    of the selected Object List.<em> <strong>The popup window has 3 tabs:</strong></em></div><div
+    style="color: rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing:
+    normal; font-family: arial, sans-serif; font-size: 12.8px; font-style: normal;
+    font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:
+    2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps:
+    normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;"><strong>Tab Items: &nbsp;</strong>This tab lists the items being part
+    of the Object List. The user can modify the items being part of the Object List.</div><div
+    style="color: rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing:
+    normal; font-family: arial, sans-serif; font-size: 12.8px; font-style: normal;
+    font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:
+    2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps:
+    normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;"><strong>Tab Usage: </strong>&nbsp;This tab shows where this Object List
+    is being used, i.e. all the Data Mapping Setup entries referring to this Object
+    List.</div><div style="color: rgb(34, 34, 34); text-transform: none; text-indent:
+    0px; letter-spacing: normal; font-family: arial, sans-serif; font-size: 12.8px;
+    font-style: normal; font-weight: normal; word-spacing: 0px; white-space: normal;
+    orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures:
+    normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style:
+    initial; text-decoration-color: initial;"><strong>Tab List Handling: </strong>&nbsp;This
+    tab allows for copying one or more Object List Items to other existing Object
+    Lists or to a new Object List.</div><div style="color: rgb(34, 34, 34); text-transform:
+    none; text-indent: 0px; letter-spacing: normal; font-family: arial, sans-serif;
+    font-size: 12.8px; font-style: normal; font-weight: normal; word-spacing: 0px;
+    white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);
+    font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:
+    0px; text-decoration-style: initial; text-decoration-color: initial;">&nbsp;</div><div
+    style="color: rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing:
+    normal; font-family: arial, sans-serif; font-size: 12.8px; font-style: normal;
+    font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:
+    2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps:
+    normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;"><strong>Class Mapping Tab:</strong></div><div style="color: rgb(34,
+    34, 34); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family:
+    arial, sans-serif; font-size: 12.8px; font-style: normal; font-weight: normal;
+    word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-color:
+    rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal;
+    -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:
+    initial;">- The Class Mapping Tab shows Class Mapping for the selected Report
+    Reference Item object.</div><div style="color: rgb(34, 34, 34); text-transform:
+    none; text-indent: 0px; letter-spacing: normal; font-family: arial, sans-serif;
+    font-size: 12.8px; font-style: normal; font-weight: normal; word-spacing: 0px;
+    white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);
+    font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:
+    0px; text-decoration-style: initial; text-decoration-color: initial;">- The user
+    can add what mapping parameter to set and the value for each parameter which then
+    be selected as value for the Class Mapping parameter in the Project Data Mapping
+    Setup screen (BF SP.0039).</div>'
+related: {}

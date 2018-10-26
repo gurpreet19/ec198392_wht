@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1890285045'
+keys:
+  BF_CODE: SA.0019.CPY
+  CLASS_NAME: SCTR_ACC_DAY_CPY_STATUS
+  COMP_CODE: calc_result
+  T: BF_COMPONENT
+  URL: /calc_result
+parentKeys: {}
+properties:
+  BF_CODE: SA.0019.CPY
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/daily_contract_calc_result/BF_PROFILE/SA.0019.CPY/CLASS/SCTR_ACC_DAY_CPY_STATUS' )
+  CLASS_NAME: SCTR_ACC_DAY_CPY_STATUS
+  COMP_CODE: calc_result
+  NAME: Calculation Result
+  SIGNING_REQ_IND: null
+  URL: /calc_result
+related: {}

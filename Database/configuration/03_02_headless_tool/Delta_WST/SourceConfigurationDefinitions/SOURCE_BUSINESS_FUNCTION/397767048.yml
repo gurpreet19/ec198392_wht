@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '397767048'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.fc/fcst_qty_value_gsales/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES
+parentKeys: {}
+properties:
+  BF_CODE: FC.1009
+  NAME: Forecast Gas Sales Quantities
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fc/fcst_qty_value_gsales/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES
+related: {}

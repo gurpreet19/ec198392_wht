@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-806638692'
+keys:
+  BF_CODE: WR.0021
+  CLASS_NAME: WELL_SAMP_LAST_ANAL
+  COMP_CODE: table_last_3_reading
+  T: BF_COMPONENT
+  URL: /table_last_3_reading
+parentKeys: {}
+properties:
+  BF_CODE: WR.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_sample_analysis' )
+  CLASS_NAME: WELL_SAMP_LAST_ANAL
+  COMP_CODE: table_last_3_reading
+  NAME: Last 3 Reading
+  SIGNING_REQ_IND: null
+  URL: /table_last_3_reading
+related: {}

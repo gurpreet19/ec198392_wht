@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-945116922'
+keys:
+  BF_DESCRIPTION_NO: CO.3001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.3001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain contract attributes. To read more about the functionality please read CO.2021 Transport Contract Attribute.</p>
+related: {}

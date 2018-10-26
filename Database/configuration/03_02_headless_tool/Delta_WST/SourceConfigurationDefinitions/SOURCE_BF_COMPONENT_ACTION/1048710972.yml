@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1048710972'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/vendortable' AND COMP_CODE ='BankingDetailsVendorTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_VENDOR')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/vendortable' AND COMP_CODE ='BankingDetailsVendorTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_VENDOR')
+  COMMENTS: null
+  NAME: Banking Details Vendor Table /save
+  URL: /save
+related: {}

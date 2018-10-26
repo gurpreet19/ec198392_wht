@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1483684207'
+keys:
+  BF_CODE: CO.1039
+  CLASS_NAME: null
+  COMP_CODE: exportallbutton
+  T: BF_COMPONENT
+  URL: /exportallbutton
+parentKeys: {}
+properties:
+  BF_CODE: CO.1039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/variable_definition' )
+  CLASS_NAME: null
+  COMP_CODE: exportallbutton
+  NAME: Export All
+  SIGNING_REQ_IND: null
+  URL: /exportallbutton
+related: {}

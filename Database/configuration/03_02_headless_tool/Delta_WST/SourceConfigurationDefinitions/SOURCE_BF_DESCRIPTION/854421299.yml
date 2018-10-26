@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '854421299'
+keys:
+  BF_DESCRIPTION_NO: IS.0009
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IS.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_agent_config' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The "Agent Configuration" screen is used to download the ECIS Agent jar file. The ECIS Agent is a standalone tool for importing data into EC.</p><p>For Tag and Row based import, configure the sources using the other ECIS screens.</p><p>For Advanced File Import, the ECIS Job Action parameters can be configured in this screen.</p><p>See ECIS release documentation for details on how to configure and run the ECIS Agent.</p>
+related: {}

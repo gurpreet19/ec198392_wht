@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1097601075'
+keys:
+  BF_CODE: CO.2024
+  CLASS_NAME: NOMINATION_POINT
+  COMP_CODE: daytimes
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CO.2024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/CONTRACT/TARGET/NOMINATION_POINT/CLASS_NAME/NOMINATION_POINT' )
+  CLASS_NAME: NOMINATION_POINT
+  COMP_CODE: daytimes
+  NAME: New Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

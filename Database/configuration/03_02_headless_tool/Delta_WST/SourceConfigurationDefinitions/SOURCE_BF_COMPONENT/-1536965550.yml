@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1536965550'
+keys:
+  BF_CODE: PR.0013
+  CLASS_NAME: PROD_PRICE_SUB_DAY_LIST
+  COMP_CODE: product_price_list
+  T: BF_COMPONENT
+  URL: /product_price_list
+parentKeys: {}
+properties:
+  BF_CODE: PR.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/product_price_list_sub_day' )
+  CLASS_NAME: PROD_PRICE_SUB_DAY_LIST
+  COMP_CODE: product_price_list
+  NAME: Product Price List
+  SIGNING_REQ_IND: null
+  URL: /product_price_list
+related: {}

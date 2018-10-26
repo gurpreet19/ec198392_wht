@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-447478835'
+keys:
+  BF_CODE: CO.3012.01
+  CLASS_NAME: null
+  COMP_CODE: conn_date
+  T: BF_COMPONENT
+  URL: /conn_date
+parentKeys: {}
+properties:
+  BF_CODE: CO.3012.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/profit_centre_company_nomination_point_priority_bulk_update' )
+  CLASS_NAME: null
+  COMP_CODE: conn_date
+  NAME: Connect Date
+  SIGNING_REQ_IND: null
+  URL: /conn_date
+related: {}

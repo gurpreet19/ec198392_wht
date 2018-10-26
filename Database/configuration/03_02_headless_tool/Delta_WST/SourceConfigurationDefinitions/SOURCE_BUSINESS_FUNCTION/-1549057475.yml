@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1549057475'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/mapping_code
+parentKeys: {}
+properties:
+  BF_CODE: CD.0121
+  NAME: Mapping Codes
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/mapping_code
+related: {}

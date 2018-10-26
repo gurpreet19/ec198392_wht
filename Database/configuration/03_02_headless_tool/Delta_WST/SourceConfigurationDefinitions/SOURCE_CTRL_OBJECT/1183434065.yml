@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1183434065'
+keys:
+  OBJECT_NAME: CTRL_PINC_REPORT
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: N
+  MATH: null
+  OBJECT_NAME: CTRL_PINC_REPORT
+  PINC_TRIGGER_IND: N
+  VIEW_PK_TABLE_NAME: null
+related: {}

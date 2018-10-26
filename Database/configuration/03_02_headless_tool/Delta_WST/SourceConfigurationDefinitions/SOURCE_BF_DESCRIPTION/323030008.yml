@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '323030008'
+keys:
+  BF_DESCRIPTION_NO: TO.0021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_harbour_dues' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to register different kinds of harbour dues related to a cargo.</p><p>The screen has a harbor dues table with all dues registered on a cargo. Available due codes to be used in this screen are configured in Harbour Dues Setup screen&nbsp;(CO.2054). The table shows the due code, quantity and description.</p>
+related: {}

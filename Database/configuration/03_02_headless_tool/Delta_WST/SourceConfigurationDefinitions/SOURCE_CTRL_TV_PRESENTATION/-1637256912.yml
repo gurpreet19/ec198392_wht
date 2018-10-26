@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1637256912'
+keys:
+  COMPONENT_ID: IN_PS_RC
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.in/rate_calculation?screentemplate=/com.ec.revn.in/rate_calculation&tlayout=/com.ec.revn.in/layout/process_inventory_verify_table.xml
+  COMPONENT_EXT_NAV_NAME: ?screentemplate=/com.ec.revn.in/rate_calculation&tlayout=/com.ec.revn.in/layout/process_inventory_verify_table.xml
+  COMPONENT_ID: IN_PS_RC
+  COMPONENT_LABEL: Inventory Rates
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: IN_PS_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4660.0
+  WINDOW_ID: ENERGYX
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1452627377'
+keys:
+  ATTRIBUTE_TYPE: PROCESS_ONLY_OPEN_DOCS
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: PROCESS_ONLY_OPEN_DOCS
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Indicates whether validated documents should be protected from changes from document processing. Options are Y | N
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

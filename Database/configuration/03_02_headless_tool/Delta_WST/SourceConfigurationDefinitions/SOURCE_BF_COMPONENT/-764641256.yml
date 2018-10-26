@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-764641256'
+keys:
+  BF_CODE: RC.0056
+  CLASS_NAME: TRACT
+  COMP_CODE: versions
+  T: BF_COMPONENT
+  URL: /versions
+parentKeys: {}
+properties:
+  BF_CODE: RC.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/manage_object_navmodel_nav/CLASS_NAME/TRACT/NAVMODEL/WELL_SETUP/TARGET/TRACT/TARGET_TYPE/parent' )
+  CLASS_NAME: TRACT
+  COMP_CODE: versions
+  NAME: versions
+  SIGNING_REQ_IND: null
+  URL: /versions
+related: {}

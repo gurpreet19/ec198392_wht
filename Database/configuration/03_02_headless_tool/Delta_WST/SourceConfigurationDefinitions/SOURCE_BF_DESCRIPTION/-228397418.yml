@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-228397418'
+keys:
+  BF_DESCRIPTION_NO: GD.0043
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0043
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_validation/DATA_CLASS_1/TRNP_DAY_NOM_VAL/DATA_CLASS_2/TRNP_DAY_NOM_VAL_CONN' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to present a summary of nominated value and min/max availability on a nomination point level as a read only screen.The screen have two data sections both of them list nomination points availability, adjusted nominated value and the difference between availability and nominated&nbsp;value.</p><p>The first data section shows nomination points based on contract in the navigational model where data have been entered TBD Refer where data&nbsp;are entered.=The second data section show Nomination Points which are linked to the Nomination Point chosen in the first data section.This link is to be configured in&nbsp;nomination point connection (CO.2052).</p><p>The navigation model uses by default TRAN_COMMERCIAL, but a different navigational model can be used by sending the navigational model as an argument from&nbsp;the treeview (argument NAV_MODEL).</p><p>Mandatory arguments which are needed in the url are DATA_CLASS_1 and DATA_CLASS_2.</p>
+related: {}

@@ -1,0 +1,20 @@
+CODE= JOURNAL_MAP_TRACING NAME= my_cost_map: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1115432566'
+  keys:
+    NAME: my_cost_map
+    OBJECT_ID: (SELECT O.OBJECT_ID FROM OBJECTS O WHERE (O.CLASS_NAME='REPT_CONTEXT' OR O.CLASS_NAME IN (SELECT CHILD_CLASS FROM CLASS_DEPENDENCY_CNFG WHERE PARENT_CLASS ='REPT_CONTEXT' AND DEPENDENCY_TYPE = 'IMPLEMENTS')) AND O.CODE ='JOURNAL_MAP_TRACING' AND ROWNUM < 2)
+    T: REPT_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE= SUMMARY_TRACING NAME= my_summary: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '4525672'
+  keys:
+    NAME: my_summary
+    OBJECT_ID: (SELECT O.OBJECT_ID FROM OBJECTS O WHERE (O.CLASS_NAME='REPT_CONTEXT' OR O.CLASS_NAME IN (SELECT CHILD_CLASS FROM CLASS_DEPENDENCY_CNFG WHERE PARENT_CLASS ='REPT_CONTEXT' AND DEPENDENCY_TYPE = 'IMPLEMENTS')) AND O.CODE ='SUMMARY_TRACING' AND ROWNUM < 2)
+    T: REPT_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

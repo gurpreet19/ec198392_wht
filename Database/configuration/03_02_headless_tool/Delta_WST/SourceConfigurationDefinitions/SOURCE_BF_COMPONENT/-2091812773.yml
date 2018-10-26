@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2091812773'
+keys:
+  BF_CODE: FC.1008
+  CLASS_NAME: FCST_LIQUID_COMMENT
+  COMP_CODE: forecast_comment
+  T: BF_COMPONENT
+  URL: /forecast_comment
+parentKeys: {}
+properties:
+  BF_CODE: FC.1008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_revn_value_liquid/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/LIQUID' )
+  CLASS_NAME: FCST_LIQUID_COMMENT
+  COMP_CODE: forecast_comment
+  NAME: forecast_comment
+  SIGNING_REQ_IND: null
+  URL: /forecast_comment
+related: {}

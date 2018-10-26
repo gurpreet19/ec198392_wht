@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1132738246'
+keys:
+  BF_CODE: IS.0007
+  CLASS_NAME: IMP_SRC_MAPPING_UE
+  COMP_CODE: source_mapping_ue_table
+  T: BF_COMPONENT
+  URL: /source_mapping_ue_table
+parentKeys: {}
+properties:
+  BF_CODE: IS.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_src_mapping_ue' )
+  CLASS_NAME: IMP_SRC_MAPPING_UE
+  COMP_CODE: source_mapping_ue_table
+  NAME: Source Mapping User Exit
+  SIGNING_REQ_IND: null
+  URL: /source_mapping_ue_table
+related: {}

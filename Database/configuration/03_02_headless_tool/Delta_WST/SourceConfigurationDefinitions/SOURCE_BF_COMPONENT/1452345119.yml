@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1452345119'
+keys:
+  BF_CODE: CO.2056
+  CLASS_NAME: null
+  COMP_CODE: SetEndSplitButton
+  T: BF_COMPONENT
+  URL: /SetEndSplitButton
+parentKeys: {}
+properties:
+  BF_CODE: CO.2056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_lifting_account_split' )
+  CLASS_NAME: null
+  COMP_CODE: SetEndSplitButton
+  NAME: Set End Date
+  SIGNING_REQ_IND: null
+  URL: /SetEndSplitButton
+related: {}

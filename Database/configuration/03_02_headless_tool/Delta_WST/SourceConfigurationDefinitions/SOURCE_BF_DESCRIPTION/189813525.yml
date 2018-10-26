@@ -1,0 +1,63 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '189813525'
+keys:
+  BF_DESCRIPTION_NO: PT.0005
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PT.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_define' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p style="font-size: 13.3333px;">The business function for "Production
+    Test Define" displays all&nbsp;<em>production tests&nbsp;</em>registered in the
+    system that satisfies the navigation criteria, and at the same time enables the
+    operator to introduce new tests.</p><p style="font-size: 13.3333px;">Many times,
+    the metering setup of the test device involves choosing between multiple alternative&nbsp;metrs&nbsp;for
+    oil, gas, and water. In a situation where standard, adjusted rates are to be calculated
+    on the fly for each test sample (e.g. at a 5-minute interval in PT.0006), the
+    correct selection of preferred meters must be carried out as a part of the test
+    definition. The PT.0005 business function provides the necessary tools for defining
+    these primary meters and also tools to redefine them in cases where the initial
+    selection turned out to be inadequate.</p><p style="font-size: 13.3333px;">PT.0005
+    - Production Test Define is the starting point for the performance test work process
+    in EC. Data entered here will propagate and influence the data presented in all
+    other downstream PT business functions. The business function contains a&nbsp;<em>navigator
+    section&nbsp;</em>and three&nbsp;<em>data sections</em>. All data sections are
+    visible at the same time.</p><p style="font-size: 13.3333px;">The&nbsp;<strong>navigator&nbsp;</strong>section
+    enables the selection of a time window (from date - to date). There must be an
+    overlap between the navigator From-To and the Start-End time interval of the&nbsp;<em>production
+    test measurement data set&nbsp;</em>for the test to be listed. From Date &lt;
+    End Date AND To Date &gt; Start Date. The to-date is configurable by&nbsp;maintain&nbsp;user
+    settings screen (CO.1008) which by default is set to TODAY. The navigator is based
+    on the configured group model down to the well level. The&nbsp;well&nbsp;element
+    is optional. If provided, the production test data set must contain the selected
+    well as an active well and also have a defined instrumentation type in order to
+    be listed. The&nbsp;<em>Test No&nbsp;</em>element is optional. If provided, navigation
+    will select one specific performance test.</p><p style="font-size: 13.3333px;">Navigator
+    selections are applied when pressing the [GO] -button.</p><p style="font-size:
+    13.3333px;"><strong>Data section 1&nbsp;</strong>lists all&nbsp;production test
+    measurement data sets&nbsp;that satisfy the navigation criteria. Records are sorted
+    descending on Start Date (most recent on top). The list is scrollable and supports
+    single record selection. Collapse/expand functionality is activated. The selected
+    record in this data section controls the content of the data sections 2, 3 and
+    4. The initial focus is the top row in the data section. The&nbsp;End Date&nbsp;and&nbsp;Comment&nbsp;fields
+    are editable data elements in&nbsp;Data section 1&nbsp;when retrieving. When inserting,<span
+    style="font-size: 13.3333px;">&nbsp;<span style="font-style: italic;">Start Date</span>&nbsp;will
+    always be the current date and time</span><span style="font-size: 13.3333px;">&nbsp;by&nbsp;default.</span><span
+    style="font-size: 10pt;">&nbsp;</span><span style="font-size: 10pt;">Start Date&nbsp;</span><span
+    style="font-size: 10pt;">and&nbsp;</span><span style="font-size: 10pt;">Test Type&nbsp;</span><span
+    style="font-size: 10pt;">are also opened for edit so that all initial information
+    necessary for creating a performance test can be supplied.&nbsp;</span><span style="font-size:
+    10pt;">Start Date&nbsp;</span><span style="font-size: 10pt;">and&nbsp;</span><span
+    style="font-size: 10pt;">Test Type&nbsp;</span><span style="font-size: 10pt;">are
+    mandatory entries, whereas&nbsp;</span><span style="font-size: 10pt;">End Date&nbsp;</span><span
+    style="font-size: 10pt;">is optional. This supports a situation where test operators
+    insert live tests (End Date not known).</span></p><p>While inserting a record
+    for a Production Test, the default value for Test Device will be selected as mentioned
+    in the following order:</p><ol><li>If a well has a defined test device, then that
+    test device will be selected automatically.</li><li>If facility has a default
+    test device, then that device will be selected automatically.</li><li>If facility
+    has only one test device, then that device will be selected automatically.</li></ol><p>If
+    all above conditions do not meet, no default test device will be selected.</p>'
+related: {}

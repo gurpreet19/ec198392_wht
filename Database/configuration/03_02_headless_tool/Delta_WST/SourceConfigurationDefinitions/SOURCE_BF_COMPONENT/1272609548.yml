@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1272609548'
+keys:
+  BF_CODE: MHM.0004
+  CLASS_NAME: DISTRIBUTION_SET_CONTACT
+  COMP_CODE: listc
+  T: BF_COMPONENT
+  URL: /listc
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_distribution' )
+  CLASS_NAME: DISTRIBUTION_SET_CONTACT
+  COMP_CODE: listc
+  NAME: Distribution List Contact
+  SIGNING_REQ_IND: null
+  URL: /listc
+related: {}

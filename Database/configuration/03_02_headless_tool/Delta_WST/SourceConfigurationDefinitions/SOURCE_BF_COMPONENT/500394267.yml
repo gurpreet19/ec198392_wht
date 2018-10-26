@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '500394267'
+keys:
+  BF_CODE: FC.1004
+  CLASS_NAME: null
+  COMP_CODE: RunningJobs
+  T: BF_COMPONENT
+  URL: /running_jobs
+parentKeys: {}
+properties:
+  BF_CODE: FC.1004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_properties/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST' )
+  CLASS_NAME: null
+  COMP_CODE: RunningJobs
+  NAME: RunningJobs
+  SIGNING_REQ_IND: null
+  URL: /running_jobs
+related: {}

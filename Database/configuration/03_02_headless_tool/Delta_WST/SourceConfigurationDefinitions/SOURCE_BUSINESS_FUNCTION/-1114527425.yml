@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1114527425'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/setup_forex_source
+parentKeys: {}
+properties:
+  BF_CODE: CD.0112
+  NAME: Exchange Rate Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/setup_forex_source
+related: {}

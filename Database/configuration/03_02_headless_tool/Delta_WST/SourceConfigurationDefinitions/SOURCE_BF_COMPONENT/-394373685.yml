@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-394373685'
+keys:
+  BF_CODE: CD.0042
+  CLASS_NAME: null
+  COMP_CODE: tab
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.tab/tab
+parentKeys: {}
+properties:
+  BF_CODE: CD.0042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/STREAM_ITEM_CATEGORY' )
+  CLASS_NAME: null
+  COMP_CODE: tab
+  NAME: Tab control
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.tab/tab
+related: {}

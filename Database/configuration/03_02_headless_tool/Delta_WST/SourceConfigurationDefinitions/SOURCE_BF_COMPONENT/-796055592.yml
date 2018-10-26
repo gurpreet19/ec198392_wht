@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-796055592'
+keys:
+  BF_CODE: MHM.0008
+  CLASS_NAME: null
+  COMP_CODE: SelectAllMessages
+  T: BF_COMPONENT
+  URL: /SelectAllMessages
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/incoming_messages' )
+  CLASS_NAME: null
+  COMP_CODE: SelectAllMessages
+  NAME: Select All Messages
+  SIGNING_REQ_IND: null
+  URL: /SelectAllMessages
+related: {}

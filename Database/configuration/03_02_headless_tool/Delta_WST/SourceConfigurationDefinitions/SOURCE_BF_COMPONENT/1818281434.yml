@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1818281434'
+keys:
+  BF_CODE: CP.0073
+  CLASS_NAME: FCST_STOR_LIFT_CPY_SPLIT
+  COMP_CODE: company_split
+  T: BF_COMPONENT
+  URL: /company_split
+parentKeys: {}
+properties:
+  BF_CODE: CP.0073
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_nomination_split' )
+  CLASS_NAME: FCST_STOR_LIFT_CPY_SPLIT
+  COMP_CODE: company_split
+  NAME: Company Split
+  SIGNING_REQ_IND: null
+  URL: /company_split
+related: {}

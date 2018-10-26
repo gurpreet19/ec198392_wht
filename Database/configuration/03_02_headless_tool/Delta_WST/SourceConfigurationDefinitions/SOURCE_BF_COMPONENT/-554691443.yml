@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-554691443'
+keys:
+  BF_CODE: TO.0013
+  CLASS_NAME: CARGO_STOR_BATCH_LIFTING
+  COMP_CODE: lifting
+  T: BF_COMPONENT
+  URL: /lifting
+parentKeys: {}
+properties:
+  BF_CODE: TO.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/batch_quantity' )
+  CLASS_NAME: CARGO_STOR_BATCH_LIFTING
+  COMP_CODE: lifting
+  NAME: Cargo Batch Lifting
+  SIGNING_REQ_IND: null
+  URL: /lifting
+related: {}

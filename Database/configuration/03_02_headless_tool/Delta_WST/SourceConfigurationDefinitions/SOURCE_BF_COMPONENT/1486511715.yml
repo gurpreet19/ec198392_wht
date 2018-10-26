@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1486511715'
+keys:
+  BF_CODE: PO.0004
+  CLASS_NAME: STRM_DAY_WATER_ANALYSIS
+  COMP_CODE: analysis
+  T: BF_COMPONENT
+  URL: /analysis
+parentKeys: {}
+properties:
+  BF_CODE: PO.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_water_overboard_status' )
+  CLASS_NAME: STRM_DAY_WATER_ANALYSIS
+  COMP_CODE: analysis
+  NAME: Water Analysis
+  SIGNING_REQ_IND: null
+  URL: /analysis
+related: {}

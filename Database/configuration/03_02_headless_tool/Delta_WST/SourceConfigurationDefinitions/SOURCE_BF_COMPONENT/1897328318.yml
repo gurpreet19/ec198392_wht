@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1897328318'
+keys:
+  BF_CODE: FI.0001
+  CLASS_NAME: FINANCIAL_ITEM
+  COMP_CODE: manageObject
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: FI.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_definition' )
+  CLASS_NAME: FINANCIAL_ITEM
+  COMP_CODE: manageObject
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

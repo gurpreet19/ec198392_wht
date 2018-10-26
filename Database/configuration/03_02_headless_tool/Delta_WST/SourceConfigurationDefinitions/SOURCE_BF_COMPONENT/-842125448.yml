@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-842125448'
+keys:
+  BF_CODE: PO.0020
+  CLASS_NAME: STRM_GAS_ANALYSIS
+  COMP_CODE: analysis
+  T: BF_COMPONENT
+  URL: /analysis
+parentKeys: {}
+properties:
+  BF_CODE: PO.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_gas_component_analysis/STRM_SET/PO.0020/COMP_SET/STRM_GAS_COMP' )
+  CLASS_NAME: STRM_GAS_ANALYSIS
+  COMP_CODE: analysis
+  NAME: Analysis
+  SIGNING_REQ_IND: null
+  URL: /analysis
+related: {}

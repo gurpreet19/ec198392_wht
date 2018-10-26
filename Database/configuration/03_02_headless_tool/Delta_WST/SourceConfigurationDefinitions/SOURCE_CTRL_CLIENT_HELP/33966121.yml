@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '33966121'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/class_attr_pres_config
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/class_attr_pres_config
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

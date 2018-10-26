@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-297145130'
+keys:
+  BF_DESCRIPTION_NO: SP.0021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/banking_details' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Banking Details screen</strong>    provides an overview of the Document Total Value and the Banking Details for the Vendor receiving the payment in case of an invoice and the Banking Details    for the Customer payables in case of a Credit Note. The user can also select VAT Registration Number for both the Vendor and Customer.</p><p>    All data elements of this screen is disabled when the Document is not OPEN, i.e. Document Level = VALID1 | VALID2 | TRANSFER | BOOKED.</p><p>    <strong>The screen is divided into these sections:</strong></p><p>    <strong><em>- Filter Navigator:</em></strong><br>    The Filter Navigator lists all the contracts being valid at the date selected in the Filter Navigator. By clicking a contract object in the Filter    Navigator all the documents defined for the contract will be listed in the Document List section.</p><p>    <strong><em>- Document List:</em></strong><br>    The Document List section lists all the Documents created for the selected contract. By clicking a Document the Document Text objects for the selected    Document will be listed. The first Document will be selected by default</p><p>    <strong><em>- Vendor Banking Details:</em></strong><br>    This section shows the Vendor Banking Details, Payment Due Date, Total Amount, Vendor VAT Registration Number, and the country code for the Vendor VAT    Registration Number.</p><p>    <strong><em>- Customer Banking Details</em></strong><br>    This section shows the Customer Banking Details, Payment Due Date, Total Amount, Customer VAT Registration Number, and the country code for the Customer    VAT Registration Number</p><p>    <strong><em>- Totals:</em></strong><br>    This section lists the Total amount receivable/payable by the Contract Owner Company. It also shows the total amount in words if the "Amount in Words"    attribute of the Document Setup has been set to YES.</p>
+related: {}

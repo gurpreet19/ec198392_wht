@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '557979892'
+keys:
+  BF_CODE: MHM.0008
+  CLASS_NAME: null
+  COMP_CODE: viewConvertedButton
+  T: BF_COMPONENT
+  URL: /viewConvertedButton
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/incoming_messages' )
+  CLASS_NAME: null
+  COMP_CODE: viewConvertedButton
+  NAME: View Converted
+  SIGNING_REQ_IND: null
+  URL: /viewConvertedButton
+related: {}

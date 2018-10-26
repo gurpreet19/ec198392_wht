@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1604653539'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/STREAM_ITEM_CATEGORY
+parentKeys: {}
+properties:
+  BF_CODE: CD.0042
+  NAME: Stream Item Category Split Key
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/STREAM_ITEM_CATEGORY
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '181351488'
+keys:
+  BF_CODE: IN.0026
+  CLASS_NAME: null
+  COMP_CODE: CopyProdVarSetButton
+  T: BF_COMPONENT
+  URL: /CopyVariables
+parentKeys: {}
+properties:
+  BF_CODE: IN.0026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inv_line' )
+  CLASS_NAME: null
+  COMP_CODE: CopyProdVarSetButton
+  NAME: CopyVariables
+  SIGNING_REQ_IND: null
+  URL: /CopyVariables
+related: {}

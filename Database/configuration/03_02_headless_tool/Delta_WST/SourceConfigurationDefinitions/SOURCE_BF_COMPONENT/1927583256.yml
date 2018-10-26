@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1927583256'
+keys:
+  BF_CODE: PP.0024
+  CLASS_NAME: CHOKE_MODEL_MPP
+  COMP_CODE: table_potential
+  T: BF_COMPONENT
+  URL: /table_potential
+parentKeys: {}
+properties:
+  BF_CODE: PP.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/prod_object_potential/GROUPMODEL/CHOKE_MODEL/TARGET/CHOKE_MODEL/DATA_CLASS/CHOKE_MODEL_MPP' )
+  CLASS_NAME: CHOKE_MODEL_MPP
+  COMP_CODE: table_potential
+  NAME: Choke Model MPP
+  SIGNING_REQ_IND: null
+  URL: /table_potential
+related: {}

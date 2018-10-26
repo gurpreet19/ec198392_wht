@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-68839751'
+keys:
+  BF_CODE: CD.0112
+  CLASS_NAME: null
+  COMP_CODE: relations
+  T: BF_COMPONENT
+  URL: /relations
+parentKeys: {}
+properties:
+  BF_CODE: CD.0112
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/setup_forex_source' )
+  CLASS_NAME: null
+  COMP_CODE: relations
+  NAME: Relations
+  SIGNING_REQ_IND: null
+  URL: /relations
+related: {}

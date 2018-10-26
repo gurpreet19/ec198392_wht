@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1074542653'
+keys:
+  FROM_CLASS_NAME: COMPANY
+  MODEL: FIN_PERIOD
+  ROLE_NAME: COMPANY
+  T: NAV_MODEL
+  TO_CLASS_NAME: CONTRACT
+parentKeys: {}
+properties:
+  DISABLED_IND: null
+  FORCE_NAV: null
+  FROM_CLASS_NAME: COMPANY
+  MODEL: FIN_PERIOD
+  MULTIPLICITY: 1:N
+  ROLE_NAME: COMPANY
+  TO_CLASS_NAME: CONTRACT
+related: {}

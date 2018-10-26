@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-798858482'
+keys:
+  BF_CODE: GD.0011
+  CLASS_NAME: TCTR_TRADE_INTEREST
+  COMP_CODE: trading_interested
+  T: BF_COMPONENT
+  URL: /trading_interested
+parentKeys: {}
+properties:
+  BF_CODE: GD.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/pipeline_trade_request' )
+  CLASS_NAME: TCTR_TRADE_INTEREST
+  COMP_CODE: trading_interested
+  NAME: Interested Trading Parties
+  SIGNING_REQ_IND: null
+  URL: /trading_interested
+related: {}

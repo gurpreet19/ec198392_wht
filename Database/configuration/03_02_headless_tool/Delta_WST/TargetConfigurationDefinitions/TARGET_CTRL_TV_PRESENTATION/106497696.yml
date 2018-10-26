@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '106497696'
+keys:
+  COMPONENT_ID: GD_PERIOD_OPERATIONAL_NOM
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.gd.screens/period_operational_nomination/CLASS/TRNP_DAY_NOM_OPER_CTR/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false?screentemplate=/com.ec.tran.gd.screens/period_operational_nomination
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: GD_PERIOD_OPERATIONAL_NOM
+  COMPONENT_LABEL: Period Operational Nomination
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_GD_NO_OP
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 100.0
+  WINDOW_ID: ENERGYX
+related: {}

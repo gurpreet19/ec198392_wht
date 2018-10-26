@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1510921701'
+keys:
+  BF_CODE: CO.1037
+  CLASS_NAME: CALC_OBJECT_ATTRIBUTE
+  COMP_CODE: attrObj
+  T: BF_COMPONENT
+  URL: /attrObj
+parentKeys: {}
+properties:
+  BF_CODE: CO.1037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/db_object_type' )
+  CLASS_NAME: CALC_OBJECT_ATTRIBUTE
+  COMP_CODE: attrObj
+  NAME: Attributes
+  SIGNING_REQ_IND: null
+  URL: /attrObj
+related: {}

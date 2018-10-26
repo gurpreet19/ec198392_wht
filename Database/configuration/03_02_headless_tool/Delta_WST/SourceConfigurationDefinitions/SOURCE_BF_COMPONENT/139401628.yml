@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '139401628'
+keys:
+  BF_CODE: PD.0004
+  CLASS_NAME: null
+  COMP_CODE: masterVerifyButton
+  T: BF_COMPONENT
+  URL: /masterVerifyButton
+parentKeys: {}
+properties:
+  BF_CODE: PD.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_deferment_master' )
+  CLASS_NAME: null
+  COMP_CODE: masterVerifyButton
+  NAME: Verify
+  SIGNING_REQ_IND: null
+  URL: /masterVerifyButton
+related: {}

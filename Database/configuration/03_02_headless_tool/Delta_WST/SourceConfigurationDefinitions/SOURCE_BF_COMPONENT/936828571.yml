@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '936828571'
+keys:
+  BF_CODE: TO.0020
+  CLASS_NAME: CARGO_PROTEST
+  COMP_CODE: letterOfProtestType
+  T: BF_COMPONENT
+  URL: /letterOfProtestType
+parentKeys: {}
+properties:
+  BF_CODE: TO.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/letter_of_protest' )
+  CLASS_NAME: CARGO_PROTEST
+  COMP_CODE: letterOfProtestType
+  NAME: Letter of Protest Type
+  SIGNING_REQ_IND: null
+  URL: /letterOfProtestType
+related: {}

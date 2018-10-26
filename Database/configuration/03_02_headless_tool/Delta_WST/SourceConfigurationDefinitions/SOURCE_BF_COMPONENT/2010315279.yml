@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2010315279'
+keys:
+  BF_CODE: CO.3023
+  CLASS_NAME: SCTR_PRICE_ELEMENT
+  COMP_CODE: price_elements
+  T: BF_COMPONENT
+  URL: /price_elements
+parentKeys: {}
+properties:
+  BF_CODE: CO.3023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/cargo_price_element_setup' )
+  CLASS_NAME: SCTR_PRICE_ELEMENT
+  COMP_CODE: price_elements
+  NAME: Price Elements
+  SIGNING_REQ_IND: null
+  URL: /price_elements
+related: {}

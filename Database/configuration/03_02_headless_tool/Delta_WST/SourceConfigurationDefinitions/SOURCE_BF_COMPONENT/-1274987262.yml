@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1274987262'
+keys:
+  BF_CODE: IS.0003
+  CLASS_NAME: IMP_STAGING_POPUP
+  COMP_CODE: imp_staging_code_table
+  T: BF_COMPONENT
+  URL: /imp_staging_code_table
+parentKeys: {}
+properties:
+  BF_CODE: IS.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_staging' )
+  CLASS_NAME: IMP_STAGING_POPUP
+  COMP_CODE: imp_staging_code_table
+  NAME: Staging Code Table
+  SIGNING_REQ_IND: null
+  URL: /imp_staging_code_table
+related: {}

@@ -1,0 +1,11 @@
+CREATE OR REPLACE TRIGGER "AIUD_T_BASIS_ACCESS" 
+AFTER INSERT OR UPDATE OR DELETE ON T_BASIS_ACCESS
+FOR EACH ROW
+DECLARE
+BEGIN
+    -- $Revision: 1.1 $
+    -- Common
+Ecdp_Context.setDirtyGlobalContext;
+
+END;
+

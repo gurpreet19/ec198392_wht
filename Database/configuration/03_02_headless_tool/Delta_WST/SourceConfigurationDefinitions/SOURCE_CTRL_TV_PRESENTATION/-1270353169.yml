@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1270353169'
+keys:
+  COMPONENT_ID: VO_MO_LI_OV
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.vo/monthly_list_overview
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: VO_MO_LI_OV
+  COMPONENT_LABEL: Monthly List Overview
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: VO_MO_LI_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4300.0
+  WINDOW_ID: ENERGYX
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1789688568'
+keys:
+  BF_DESCRIPTION_NO: GD.0034
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0034
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_location_confirmation/CLASS/TRNP_DAY_NOM_CONF/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used by interconnect operators to manually confirm nominations.</p><p>In order to maintain balanced nominations at transport locations where gas entitlements and gas transport operatorship can change; interconnect point operators (or&nbsp;their representatives) will use this business function to match and confirm their nominated quantities per contract and counterparty. The business function can also&nbsp;be used by the transportation service provider to match and confirm nominated quantities on behalf of interconnect point operators.</p><p>The interconnect point operator or his representative can view each nomination per contract and counter party for the gas day.</p><p>The interconnect point operator can confirm the quantity by approving each of the suggested confirmations. If the operator does not want to confirm the quantity&nbsp;suggested by the system, he will be able to enter a lower quantity and then approve the lower confirmed quantity. If a confirmation has already been approved, the&nbsp;confirmed quantity cannot be changed unless the current confirmation is disapproved first.</p><p>Nominations can also be confirmed using electronic messaging.</p>
+related: {}

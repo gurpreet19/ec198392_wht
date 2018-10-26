@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-640127455'
+keys:
+  BF_CODE: PO.0101
+  CLASS_NAME: null
+  COMP_CODE: product_inventory
+  T: BF_COMPONENT
+  URL: /product_inventory
+parentKeys: {}
+properties:
+  BF_CODE: PO.0101
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/product_entitlement' )
+  CLASS_NAME: null
+  COMP_CODE: product_inventory
+  NAME: Total Product Inventory
+  SIGNING_REQ_IND: null
+  URL: /product_inventory
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-115098826'
+keys:
+  BF_DESCRIPTION_NO: PO.0089
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0089
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/event_tank_seal' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is being use to capture the seal data on a tank. It is used when a seal is replaced for the purpose of maintenance and not during transport of the tank liquid. Seal is mainly used for security purpose</p>
+
+    <p>The records are valid for the period. The period can be of any length of either by &lsquo;hourly&rsquo; or &lsquo;daily&rsquo;.</p>
+
+    <p>The save button saves any edited value to the database and data with can be deleted.</p>
+related: {}

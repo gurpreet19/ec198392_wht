@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '126911950'
+keys:
+  COMPONENT_ID: ACCESS_ROLE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/maintain_access_roles
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ACCESS_ROLE
+  COMPONENT_LABEL: Role Maintenance
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ACCESS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 20.0
+  WINDOW_ID: ENERGYX
+related: {}

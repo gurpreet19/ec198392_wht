@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1781349720'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pd.screens/deferment_day/CLASS_NAME/DEFERMENT_EVENT/DAILY_CLASS_NAME/DEFERMENT_DAY/TABLE_NAME/DEFERMENT_EVENT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pd.screens/deferment_day/CLASS_NAME/DEFERMENT_EVENT/DAILY_CLASS_NAME/DEFERMENT_DAY/TABLE_NAME/DEFERMENT_EVENT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

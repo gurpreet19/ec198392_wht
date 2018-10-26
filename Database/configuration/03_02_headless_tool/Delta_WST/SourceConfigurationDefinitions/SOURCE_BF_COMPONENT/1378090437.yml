@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1378090437'
+keys:
+  BF_CODE: IN.0030
+  CLASS_NAME: TRANS_PROD_SET
+  COMP_CODE: from_class
+  T: BF_COMPONENT
+  URL: /from_class
+parentKeys: {}
+properties:
+  BF_CODE: IN.0030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='' )
+  CLASS_NAME: TRANS_PROD_SET
+  COMP_CODE: from_class
+  NAME: From_Class
+  SIGNING_REQ_IND: null
+  URL: /from_class
+related: {}

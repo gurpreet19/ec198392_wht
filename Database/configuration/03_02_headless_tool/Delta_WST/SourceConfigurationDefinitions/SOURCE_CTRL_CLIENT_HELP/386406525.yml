@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '386406525'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/PAYMENT_TERM/FROM_CLASS_NAME/PAYMENT_TERM/TO_CLASS_NAME/PAYMENT_TERM
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/PAYMENT_TERM/FROM_CLASS_NAME/PAYMENT_TERM/TO_CLASS_NAME/PAYMENT_TERM
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

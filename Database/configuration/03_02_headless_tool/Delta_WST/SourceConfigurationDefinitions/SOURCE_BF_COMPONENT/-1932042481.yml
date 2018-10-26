@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1932042481'
+keys:
+  BF_CODE: CO.3024
+  CLASS_NAME: PRICE_RATE
+  COMP_CODE: versions
+  T: BF_COMPONENT
+  URL: /versions
+parentKeys: {}
+properties:
+  BF_CODE: CO.3024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/CLASS_NAME/PRICE_RATE/NAVMODEL/SALE_PR/TARGET/PRICE_RATE' )
+  CLASS_NAME: PRICE_RATE
+  COMP_CODE: versions
+  NAME: versions
+  SIGNING_REQ_IND: null
+  URL: /versions
+related: {}

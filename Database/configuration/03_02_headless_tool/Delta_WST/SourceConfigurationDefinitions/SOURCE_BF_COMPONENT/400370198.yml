@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '400370198'
+keys:
+  BF_CODE: PD.0013
+  CLASS_NAME: DEFER_DAILY_LOSS_ACC
+  COMP_CODE: daily_loss
+  T: BF_COMPONENT
+  URL: /daily_loss
+parentKeys: {}
+properties:
+  BF_CODE: PD.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_facility_loss_accounting' )
+  CLASS_NAME: DEFER_DAILY_LOSS_ACC
+  COMP_CODE: daily_loss
+  NAME: daily_loss
+  SIGNING_REQ_IND: null
+  URL: /daily_loss
+related: {}

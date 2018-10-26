@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1248781555'
+keys:
+  KEY: GR_TR_SELECT_COLOR
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: 92D050
+  DESCRIPTION: This is the color for the text box outline for the Visual Tracing for the selected text box. Given in RGB as HEX
+  KEY: GR_TR_SELECT_COLOR
+  LABEL: Visual Tracing selected color
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

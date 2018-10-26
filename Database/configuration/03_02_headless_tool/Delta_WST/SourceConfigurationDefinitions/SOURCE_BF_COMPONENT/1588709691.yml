@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1588709691'
+keys:
+  BF_CODE: CP.0002.01
+  CLASS_NAME: STOR_DAY_BALANCE_GRAPH
+  COMP_CODE: nomination_graph
+  T: BF_COMPONENT
+  URL: /nomination_graph
+parentKeys: {}
+properties:
+  BF_CODE: CP.0002.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/schedule_lifting_jsf/CLASS1/STOR_DAY_BALANCE_GRAPH/CLASS2/STOR_BERTH_DAY_RESTR/CLASS3/STORAGE_LIFT_NOM_SCHED' )
+  CLASS_NAME: STOR_DAY_BALANCE_GRAPH
+  COMP_CODE: nomination_graph
+  NAME: Graph
+  SIGNING_REQ_IND: null
+  URL: /nomination_graph
+related: {}

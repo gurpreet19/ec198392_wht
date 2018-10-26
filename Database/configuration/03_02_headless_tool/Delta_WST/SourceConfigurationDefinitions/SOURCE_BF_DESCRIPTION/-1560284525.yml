@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1560284525'
+keys:
+  BF_DESCRIPTION_NO: CD.0022
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/BANK_ACCOUNT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Bank Account screen</strong>    is used to manage all Bank Accounts in EC.<br>    Each Bank Account belongs to either a Customer or a Vendor or both in case    the legal entity acts as both a vendor and a customer in the system.</p><p>    - Each Bank Account object is also connected to a Bank object.<br>    - Each Bank object may have multiple Bank Account objects connected.<br>    - Each Customer and Vendor may have several Bank Account objects    associated, typically one for each of the different currencies in use by    the Contracts.</p><p>    Bank Account object is required for each Vendor (and optional for each    Customer) that takes part in a Contract. The Bank Account objects are    linked to a Contract through the Company Splits BF and the Document Vendors    BF. The Financial Document Validation process in EC requires that there is    a Bank Account object defined for each Vendor being part of a Financial    Document.</p>
+related: {}

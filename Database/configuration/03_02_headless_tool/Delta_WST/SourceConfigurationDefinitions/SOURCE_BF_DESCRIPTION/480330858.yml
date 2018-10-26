@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '480330858'
+keys:
+  BF_DESCRIPTION_NO: CP.0039.01
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0039.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_daily_entitlement_single_la' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to get an overview of the entitlement over a period including liftings and production for a selected forecast / scenario.</p><p>For more details with regards to basic functionality please read &ldquo;CP.0017.01 - Daily Entitlement - Single Lifting Account&rdquo;</p>
+related: {}

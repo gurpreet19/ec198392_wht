@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1558067275'
+keys:
+  BF_DESCRIPTION_NO: CP.0048
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_carrier_availability' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function gives a day-to-day overview of when a carrier is available to be scheduled for a cargo on a forecast/scenario.</p><p>For more details with regards to basic functionality please read &quot;CP.0029 &ndash; Carrier Availability&quot;.</p>
+related: {}

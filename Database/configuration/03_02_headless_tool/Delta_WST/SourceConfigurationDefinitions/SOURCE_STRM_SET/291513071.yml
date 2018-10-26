@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291513071'
+keys:
+  STREAM_SET: PO.0033
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Daily Water Stream Status, by Stream
+  STREAM_SET: PO.0033
+related: {}

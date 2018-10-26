@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2054353003'
+keys:
+  BF_CODE: CO.1056
+  CLASS_NAME: TRANS_PROCESS_LOG
+  COMP_CODE: trans_log
+  T: BF_COMPONENT
+  URL: /trans_log
+parentKeys: {}
+properties:
+  BF_CODE: CO.1056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/trans_process_log' )
+  CLASS_NAME: TRANS_PROCESS_LOG
+  COMP_CODE: trans_log
+  NAME: Trans Process Log
+  SIGNING_REQ_IND: null
+  URL: /trans_log
+related: {}

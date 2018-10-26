@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '590141992'
+keys:
+  BF_CODE: IN.0026
+  CLASS_NAME: null
+  COMP_CODE: Msg_tab
+  T: BF_COMPONENT
+  URL: Msg_tab
+parentKeys: {}
+properties:
+  BF_CODE: IN.0026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inv_line' )
+  CLASS_NAME: null
+  COMP_CODE: Msg_tab
+  NAME: MsgTab control
+  SIGNING_REQ_IND: null
+  URL: Msg_tab
+related: {}

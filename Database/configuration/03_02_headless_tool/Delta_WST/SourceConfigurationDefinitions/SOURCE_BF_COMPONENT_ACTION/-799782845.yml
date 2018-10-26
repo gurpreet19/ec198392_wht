@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-799782845'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0003' AND NVL(URL,'IS_NULL') = '/entry_list' AND COMP_CODE ='entry_list' AND NVL(CLASS_NAME,'IS_NULL') = 'FIN_ITEM_ENTRY')
+  T: BF_COMPONENT_ACTION
+  URL: /execute
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='FI.0003' AND NVL(URL,'IS_NULL') = '/entry_list' AND COMP_CODE ='entry_list' AND NVL(CLASS_NAME,'IS_NULL') = 'FIN_ITEM_ENTRY')
+  COMMENTS: null
+  NAME: FINANCIAL ITEM /execute
+  URL: /execute
+related: {}

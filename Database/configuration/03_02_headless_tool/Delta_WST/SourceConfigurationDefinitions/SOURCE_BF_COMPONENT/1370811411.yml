@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1370811411'
+keys:
+  BF_CODE: PP.0045
+  CLASS_NAME: null
+  COMP_CODE: viewAttachmentBtn
+  T: BF_COMPONENT
+  URL: /viewAttachmentBtn
+parentKeys: {}
+properties:
+  BF_CODE: PP.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_assumptions' )
+  CLASS_NAME: null
+  COMP_CODE: viewAttachmentBtn
+  NAME: View Forecast Attachment
+  SIGNING_REQ_IND: null
+  URL: /viewAttachmentBtn
+related: {}

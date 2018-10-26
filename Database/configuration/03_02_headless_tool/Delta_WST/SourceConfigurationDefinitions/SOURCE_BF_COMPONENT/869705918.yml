@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '869705918'
+keys:
+  BF_CODE: PD.0022
+  CLASS_NAME: EQUIP_DOWNTIME
+  COMP_CODE: eqpm_downtime_event
+  T: BF_COMPONENT
+  URL: /eqpm_downtime_event
+parentKeys: {}
+properties:
+  BF_CODE: PD.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/equip_downtime' )
+  CLASS_NAME: EQUIP_DOWNTIME
+  COMP_CODE: eqpm_downtime_event
+  NAME: Event
+  SIGNING_REQ_IND: null
+  URL: /eqpm_downtime_event
+related: {}

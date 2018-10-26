@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-534637484'
+keys:
+  BF_CODE: CP.0046
+  CLASS_NAME: FCST_LIFT_ACC_ADJ_SINGLE
+  COMP_CODE: single_account_adjustment
+  T: BF_COMPONENT
+  URL: /single_account_adjustment
+parentKeys: {}
+properties:
+  BF_CODE: CP.0046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_lift_acc_adj' )
+  CLASS_NAME: FCST_LIFT_ACC_ADJ_SINGLE
+  COMP_CODE: single_account_adjustment
+  NAME: Single Account Adjustment
+  SIGNING_REQ_IND: null
+  URL: /single_account_adjustment
+related: {}

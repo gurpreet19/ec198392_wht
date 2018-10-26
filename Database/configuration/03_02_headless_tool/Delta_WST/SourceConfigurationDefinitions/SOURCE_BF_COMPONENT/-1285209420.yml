@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1285209420'
+keys:
+  BF_CODE: CP.0067
+  CLASS_NAME: STOR_SUB_DAY_NOM_RECEIPT
+  COMP_CODE: sub_daily
+  T: BF_COMPONENT
+  URL: /sub_daily
+parentKeys: {}
+properties:
+  BF_CODE: CP.0067
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/sub_daily_receipts_details' )
+  CLASS_NAME: STOR_SUB_DAY_NOM_RECEIPT
+  COMP_CODE: sub_daily
+  NAME: Sub Daily Lifting Account
+  SIGNING_REQ_IND: null
+  URL: /sub_daily
+related: {}

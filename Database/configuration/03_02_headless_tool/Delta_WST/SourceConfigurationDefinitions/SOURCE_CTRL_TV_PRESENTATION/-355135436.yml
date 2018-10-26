@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-355135436'
+keys:
+  COMPONENT_ID: RTY
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: null
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: RTY
+  COMPONENT_LABEL: Royalty
+  COMPONENT_TYPE: FOLDER
+  PARENT_COMPONENT_ID: REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 5120.0
+  WINDOW_ID: ENERGYX
+related: {}

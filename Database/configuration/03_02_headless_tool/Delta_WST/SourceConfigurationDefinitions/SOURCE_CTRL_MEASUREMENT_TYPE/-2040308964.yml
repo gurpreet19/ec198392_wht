@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2040308964'
+keys:
+  MEASUREMENT_TYPE: WATER_RATE_VOL
+  T: CTRL_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: Special handling of Water Rate to Water Volume
+  FORMAT_MASK: '###,###,##0.0'
+  MEASUREMENT_TYPE: WATER_RATE_VOL
+related: {}

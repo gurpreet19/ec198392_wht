@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1878454714'
+keys:
+  BF_CODE: GD.0055
+  CLASS_NAME: CAPACITY_RELEASE_RD
+  COMP_CODE: capacityReleaseMain
+  T: BF_COMPONENT
+  URL: /capacityReleaseMain
+parentKeys: {}
+properties:
+  BF_CODE: GD.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_details' )
+  CLASS_NAME: CAPACITY_RELEASE_RD
+  COMP_CODE: capacityReleaseMain
+  NAME: Capacity Release Main
+  SIGNING_REQ_IND: null
+  URL: /capacityReleaseMain
+related: {}

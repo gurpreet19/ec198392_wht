@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2083979201'
+keys:
+  BF_CODE: PP.0038
+  CLASS_NAME: null
+  COMP_CODE: nav
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: PP.0038
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/monthly_stream_forecast/GROUPMODEL/STREAM/TARGET/STREAM/CLASS_NAME/FCST_STREAM_MTH_STATUS/STRM_SET/PP.0038' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

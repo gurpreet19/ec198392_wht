@@ -1,0 +1,43 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1488386405'
+keys:
+  T: CTRL_UNIT
+  UNIT: KGPERKWH
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Kilogram per kilowatt hours
+  FIN_CODE: null
+  LABEL: kg/kWh
+  PREFIX: null
+  PREFIX_FACTOR: null
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+  UNIT: KGPERKWH
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  CTRL_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: MASS_ENERGY_FACTOR
+      T: CTRL_UOM_SETUP
+      UNIT: KGPERKWH
+    parentKeys:
+      CTRL_UNIT.UNIT: KGPERKWH
+    properties:
+      DB_UNIT_IND: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: MASS_ENERGY_FACTOR
+      REPORT_UNIT_IND: Y
+      UNIT: KGPERKWH
+      VIEW_UNIT_IND: Y

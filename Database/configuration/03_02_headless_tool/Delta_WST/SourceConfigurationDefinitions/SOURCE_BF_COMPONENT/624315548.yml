@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '624315548'
+keys:
+  BF_CODE: SD.0018
+  CLASS_NAME: null
+  COMP_CODE: CreateDayTargetButton
+  T: BF_COMPONENT
+  URL: /CreateDayTargetButton
+parentKeys: {}
+properties:
+  BF_CODE: SD.0018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/before_day_target' )
+  CLASS_NAME: null
+  COMP_CODE: CreateDayTargetButton
+  NAME: Create Day Target
+  SIGNING_REQ_IND: null
+  URL: /CreateDayTargetButton
+related: {}

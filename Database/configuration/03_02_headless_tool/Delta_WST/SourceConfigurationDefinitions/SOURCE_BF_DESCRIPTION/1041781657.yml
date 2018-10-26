@@ -1,0 +1,65 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1041781657'
+keys:
+  BF_DESCRIPTION_NO: CD.0105
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0105
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p><strong>Calendar Collection Screen</strong> is used for grouping
+    several Calendars into a group.</p><p>EC has functionality for automatically determining
+    actual dates for Document Date, Document Received Date, and Payment Date for the
+    Financial Documents. In case the determination of these dates involves Business
+    Days vs Holidays then EC requires that there is a Calendar for defining each date
+    of the year whether the day in question is a Business Day or a Holiday.</p><p>The
+    Calendar Collection objects are connected to a contract instead of the Calendar.
+    When using the Calendar Collection together with Payment Due Date calculation,
+    Document Date calculation and Document Received Date etc. it will be the combination
+    of Business Days / Holidays of the calendars in the collection that will determine
+    the Business Days / Holidays.</p><h2><strong style="color: rgb(0, 0, 153);">Navigator</strong></h2><p>Navigator
+    settings allow the user to define the search criteria for Calendar Collection
+    and list them in the table below:</p><p><u>Navigator has one selection option:</u></p><p><strong>1.
+    Date</strong> - Auto filled with the first day of the current month.<br>This is
+    the date Calendar Collection objects are Valid to.</p><h3><strong style="color:
+    rgb(0, 0, 153);">Calendar List Section</strong></h3><p>This section displays all
+    Calendar Collections matching the Navigator criteria. By default, 20 records are
+    shown in a single page. User has the liberty to modify the number of records to
+    be displayed in a page using the Filter option presents just above the Calendar
+    Collection list.</p><h2><strong style="color: rgb(0, 0, 153);">Tab Calendar Collection</strong></h2><p>This
+    tab is used for defining Calendar Collection objects, which can then be used for
+    grouping several Calendar objects into a group. User can create a new Calendar
+    Collection object or amend an existing one and can also create new versions of
+    the Calendar Collection using this tab.</p><u>Creating a new Calendar Collection
+    object will have these columns / attributes:</u><br><p><strong>1. Code</strong>
+    - Mandatory <br>This is the code of the Calendar Collection. Should be unique.</p><p><strong>2.
+    Name</strong> - Mandatory <br>This is the name the Calendar Collection belongs
+    to.</p><p><strong>3. Start Date</strong> - Mandatory <br>This is the date Calendar
+    Collection is Valid from.</p><p><strong>4. End Date</strong> - Optional<br>This
+    is the date Calendar Collection is Valid to.</p><p><strong>5. Description</strong>
+    - Optional<br>This is a voluntary description of the Calendar Collection object.</p><p><strong>6.
+    Comment </strong> - Optional<br>This is a comment for the Calendar Collection
+    object</p><h2><strong style="color: rgb(0, 0, 153);">Tab Calendar Collection Setup</strong></h2><p>This
+    is used for grouping several Calendars into a group calendar called Calendar Collection.</p><u>Creating
+    a new Calendar Collection setup will have these columns:</u><br><p><strong>1.
+    Date </strong> - Mandatory<br>This is the date the added Calendar is Valid from.</p><p><strong>2.
+    Code </strong> - Non-Editable<br>This is the code of the Calendar and is Auto-Populated
+    from the Name Drop Down.</p><p><strong>3. Name</strong> - Mandatory<br>This is
+    the name the Calendar we are supposed to select from the dropdown. The records
+    in the dropdowns gets populated from the <strong>Calendar Screen</strong> in EC.</p><h2><strong
+    style="color: rgb(0, 0, 153);">Tab Calendar Usage</strong></h2><p>This tab is
+    used to give an overview of the various relations from the Calendar Collection
+    class to other EC classes. A single Calendar/Calendar Collection can be used in
+    multiple classes.</p><p>The tab is divided into two sections:</p><h3><strong style="color:
+    rgb(0, 0, 153);">Attribute/Relations List section </strong></h3><p>The section
+    lists the various relations for the Calendar Collection class.</p><p>It will list
+    1: N type of relations where the Calendar Collection class is at the single side.
+    It will also list all the N: M type of relations where the selected class is either
+    at the N-side or the M-side of the relation.</p><p>For each relation in the Relation
+    List, the user can see which objects the selected Calendar Collection has relations
+    to.</p><h3><strong style="color: rgb(0, 0, 153);">Relation Details section</strong></h3><p>The
+    section lists the objects that the Calendar Collection class has relation to for
+    the relation selected in the Relations List section.</p>'
+related: {}

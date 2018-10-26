@@ -1,0 +1,37 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1072262840'
+keys:
+  BF_DESCRIPTION_NO: CO.0077
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0077
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/initiate_day' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>The initiate day screen contains a button that invokes the instantiation
+    that is configured as EC codes using the code_type INITIATE_DAY. The instantiation
+    procedures run might also be procedures instantiating for other product areas
+    like transport and sales. This will then be configured equally as EC codes within
+    the respective product area.</p><p>By default two stored procedures for production
+    instantiation are configured in EC codes to be run by this button:</p><p> <b>ec_bs_instantiate.new_day_start(start_date):</b>
+    This procedure creates a new date in a table holding only valid production dates.
+    This happens at the beginning of the production day.</p><p> <b>ec_bs_instantiate.new_day_end(start_date,end_date):</b>
+    This procedure creates a new record for all classes and objects having instantiation.
+    If a new object has been defined effective back in time, you must rerun this process
+    manually to include this new object. The process will not damage any existing
+    records.</p><p>In addition, a user-exit instantiation procedure is configured
+    to be run. The user-exit procedure might also be used to include user-exit functionality
+    for the Sales and Transport product areas.</p><p><b>Initiate Day Future Date:</b>
+    If  the user wants to initiate for future dates, go to the Maintain System Settings
+    (CO.1006) -&gt; Custom Settings -&gt; Set ‘Initiate Day: Allow future date instantiation’
+    = ‘Y’. The default behavior for this attribute is ‘N’, i.e. no future day instantiation
+    is allowed.</p><p><b>Initiate Day Revision Text Update:</b> If the user wants
+    to update the revision text during insert or update for tables, go to Maintain
+    System Settings (CO.1006) -&gt; Custom Settings -&gt; Set ‘Initiate Day: Allow
+    Revision Text Update during instantiation’ = ‘Y’. This is default behavior. If
+    the user doesn''t want to update the revision text, set ‘Initiate Day: Allow Revision
+    Text Update during instantiation’ = ‘N’.</p><p>These three jobs are scheduled
+    to start automatically by Oracle. Under normal operations, there is no need to
+    run these manually.</p>'
+related: {}

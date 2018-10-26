@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1388209263'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0005' AND NVL(URL,'IS_NULL') = '/objectdates' AND COMP_CODE ='objectdates' AND NVL(CLASS_NAME,'IS_NULL') = 'INVENTORY')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0005' AND NVL(URL,'IS_NULL') = '/objectdates' AND COMP_CODE ='objectdates' AND NVL(CLASS_NAME,'IS_NULL') = 'INVENTORY')
+  COMMENTS: null
+  NAME: Object Start Date and End Date /save
+  URL: /save
+related: {}

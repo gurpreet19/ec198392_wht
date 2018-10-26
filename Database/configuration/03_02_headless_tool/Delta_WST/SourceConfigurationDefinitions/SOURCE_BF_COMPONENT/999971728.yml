@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '999971728'
+keys:
+  BF_CODE: RC.0057
+  CLASS_NAME: TRACT_WELL_SETUP
+  COMP_CODE: well_setup
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: RC.0057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/well_setup/CLASS_NAME/TRACT/DATA_CLASS/TRACT_WELL_SETUP/NAVMODEL/WELL_SETUP/TARGET/TRACT' )
+  CLASS_NAME: TRACT_WELL_SETUP
+  COMP_CODE: well_setup
+  NAME: Well Setup
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1660879520'
+keys:
+  BF_CODE: PP.0073
+  CLASS_NAME: FCST_SPRDUNIT_DAY_STATUS
+  COMP_CODE: daily_forecast_parent
+  T: BF_COMPONENT
+  URL: /daily_forecast_parent
+parentKeys: {}
+properties:
+  BF_CODE: PP.0073
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_forecast_parent/GROUPMODEL/PROD_SUB_UNIT/TARGET/PROD_SUB_UNIT/CLASS_NAME/FCST_SPRDUNIT_DAY_STATUS' )
+  CLASS_NAME: FCST_SPRDUNIT_DAY_STATUS
+  COMP_CODE: daily_forecast_parent
+  NAME: Forecast Data
+  SIGNING_REQ_IND: null
+  URL: /daily_forecast_parent
+related: {}

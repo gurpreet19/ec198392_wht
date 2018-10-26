@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1271459644'
+keys:
+  BF_CODE: CO.1026
+  CLASS_NAME: CLASS_ATTR_PROPERTY_CNFG
+  COMP_CODE: attrPropertyList
+  T: BF_COMPONENT
+  URL: /attrPropertyList
+parentKeys: {}
+properties:
+  BF_CODE: CO.1026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_class_attr_property' )
+  CLASS_NAME: CLASS_ATTR_PROPERTY_CNFG
+  COMP_CODE: attrPropertyList
+  NAME: Attribute List
+  SIGNING_REQ_IND: null
+  URL: /attrPropertyList
+related: {}

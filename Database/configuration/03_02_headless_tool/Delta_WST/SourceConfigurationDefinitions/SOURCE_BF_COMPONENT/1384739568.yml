@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1384739568'
+keys:
+  BF_CODE: SD.0048
+  CLASS_NAME: SLNP_DAY_NOMINATION
+  COMP_CODE: daily_data_contract
+  T: BF_COMPONENT
+  URL: /daily_data_contract
+parentKeys: {}
+properties:
+  BF_CODE: SD.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/period_dp_np_data/CLASS1/SLNP_DAY_NOMINATION/CLASS2/SLNP_DAY_NOMINATION/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0048' )
+  CLASS_NAME: SLNP_DAY_NOMINATION
+  COMP_CODE: daily_data_contract
+  NAME: Daily Data Contract
+  SIGNING_REQ_IND: null
+  URL: /daily_data_contract
+related: {}

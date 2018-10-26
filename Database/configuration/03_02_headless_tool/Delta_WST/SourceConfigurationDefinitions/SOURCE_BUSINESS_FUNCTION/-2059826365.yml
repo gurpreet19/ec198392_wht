@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2059826365'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.pr.screens/contract_price_list_with_dim/CLASS/CONTRACT_PRICE_DS_LIST
+parentKeys: {}
+properties:
+  BF_CODE: PR.0020
+  NAME: Contract Price List - Dataset
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.pr.screens/contract_price_list_with_dim/CLASS/CONTRACT_PRICE_DS_LIST
+related: {}

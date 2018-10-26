@@ -1,0 +1,164 @@
+CNT_JOUNL_ENTRY_O: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: CNT_JOUNL_ENTRY_O
+  status: ADDED
+  type: USER_DECLARED
+CNT_JOUNL_ENTRY_T: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: CNT_JOUNL_ENTRY_T
+  status: ADDED
+  type: USER_DECLARED
+COST_MAPP_INFO_O: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: COST_MAPP_INFO_O
+  status: ADDED
+  type: USER_DECLARED
+COST_MAPP_INFO_T: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: COST_MAPP_INFO_T
+  status: ADDED
+  type: USER_DECLARED
+IFAC_JOUNL_ENTRY_O: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IFAC_JOUNL_ENTRY_O
+  status: ADDED
+  type: USER_DECLARED
+IFAC_JOUNL_ENTRY_T: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IFAC_JOUNL_ENTRY_T
+  status: ADDED
+  type: USER_DECLARED
+QSTRM_PMASS_ARR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: QSTRM_PMASS_ARR
+  status: MODIFIED
+  type: USER_DECLARED
+QSTRM_PMASS_REC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: QSTRM_PMASS_REC
+  status: MODIFIED
+  type: USER_DECLARED
+SND_TOOLTIP_CELL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: SND_TOOLTIP_CELL
+  status: ADDED
+  type: USER_DECLARED
+SND_TOOLTIP_CELLS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: SND_TOOLTIP_CELLS
+  status: ADDED
+  type: USER_DECLARED
+SUMRY_DOC_CONT_O: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: SUMRY_DOC_CONT_O
+  status: ADDED
+  type: USER_DECLARED
+SUMRY_DOC_CONT_T: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: SUMRY_DOC_CONT_T
+  status: ADDED
+  type: USER_DECLARED
+T_ACC_MAP_ASSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_ACC_MAP_ASSIS
+  status: ADDED
+  type: USER_DECLARED
+T_BPM_EVENT_ATTRIBUTE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_BPM_EVENT_ATTRIBUTE
+  status: ADDED
+  type: USER_DECLARED
+T_BPM_TABLE_T_EVENT_ATTRIBUTE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_BPM_TABLE_T_EVENT_ATTRIBUTE
+  status: ADDED
+  type: USER_DECLARED
+T_CONT_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_CONT_DOCUMENT
+  status: ADDED
+  type: USER_DECLARED
+T_CONT_SPLIT_METHOD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_CONT_SPLIT_METHOD
+  status: ADDED
+  type: USER_DECLARED
+T_CONT_SPLIT_METHOD_O: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_CONT_SPLIT_METHOD_O
+  status: ADDED
+  type: USER_DECLARED
+T_IFAC_CARGO_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_IFAC_CARGO_VALUE
+  status: ADDED
+  type: USER_DECLARED
+T_IFAC_SALES_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_IFAC_SALES_QTY
+  status: ADDED
+  type: USER_DECLARED
+T_JOURNAL_ENTRY_REF_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_JOURNAL_ENTRY_REF_INFO
+  status: ADDED
+  type: USER_DECLARED
+T_MIXED_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_MIXED_DATA
+  status: ADDED
+  type: USER_DECLARED
+T_REVN_DATA_EXT_PARAM_VAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_REVN_DATA_EXT_PARAM_VAL
+  status: ADDED
+  type: USER_DECLARED
+T_REVN_DIST_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_REVN_DIST_INFO
+  status: ADDED
+  type: USER_DECLARED
+T_REVN_DOC_OP_CONTEXT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_REVN_DOC_OP_CONTEXT
+  status: ADDED
+  type: USER_DECLARED
+T_REVN_FT_DOC_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_REVN_FT_DOC_INFO
+  status: ADDED
+  type: USER_DECLARED
+T_REVN_LOGGER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_REVN_LOGGER
+  status: ADDED
+  type: USER_DECLARED
+T_REVN_OBJ_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_REVN_OBJ_INFO
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_ACC_MAP_ASSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_ACC_MAP_ASSIS
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_CONT_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_CONT_DOCUMENT
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_IFAC_CARGO_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_IFAC_CARGO_VALUE
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_IFAC_SALES_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_IFAC_SALES_QTY
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_JOURNAL_ENTRY_REF_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_JOURNAL_ENTRY_REF_INFO
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_MIXED_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_MIXED_DATA
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_NUMBER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_NUMBER
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_REVN_DATA_EXT_ARG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_REVN_DATA_EXT_ARG
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_REVN_DIST_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_REVN_DIST_INFO
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_TRANS_INV: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_TRANS_INV
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_VARCHAR2: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_VARCHAR2
+  status: ADDED
+  type: USER_DECLARED
+T_TRANS_INV: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TRANS_INV
+  status: ADDED
+  type: USER_DECLARED
+VARCHAR2000L_T: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: VARCHAR2000L_T
+  status: MODIFIED
+  type: USER_DECLARED

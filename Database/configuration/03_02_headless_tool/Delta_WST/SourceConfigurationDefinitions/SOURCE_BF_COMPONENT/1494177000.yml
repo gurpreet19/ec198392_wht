@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1494177000'
+keys:
+  BF_CODE: CP.0028
+  CLASS_NAME: CNTR_DAY_STOR_DEL
+  COMP_CODE: deliverytrack
+  T: BF_COMPONENT
+  URL: /deliverytrack
+parentKeys: {}
+properties:
+  BF_CODE: CP.0028
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/contract_delivery_tracking' )
+  CLASS_NAME: CNTR_DAY_STOR_DEL
+  COMP_CODE: deliverytrack
+  NAME: Delivery Tracking
+  SIGNING_REQ_IND: null
+  URL: /deliverytrack
+related: {}

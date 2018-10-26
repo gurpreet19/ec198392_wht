@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '927933726'
+keys:
+  BF_CODE: PP.0057
+  CLASS_NAME: FCST_CONSUMPTION_LOSS
+  COMP_CODE: consumption_losses
+  T: BF_COMPONENT
+  URL: /consumption_losses
+parentKeys: {}
+properties:
+  BF_CODE: PP.0057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_consumption_losses/CLASS_NAME/FCST_CONSUMPTION_LOSS' )
+  CLASS_NAME: FCST_CONSUMPTION_LOSS
+  COMP_CODE: consumption_losses
+  NAME: Forecast Consumption and Losses
+  SIGNING_REQ_IND: null
+  URL: /consumption_losses
+related: {}

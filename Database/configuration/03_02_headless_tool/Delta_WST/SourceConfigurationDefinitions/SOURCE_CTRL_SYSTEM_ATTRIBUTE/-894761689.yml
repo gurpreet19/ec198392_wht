@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-894761689'
+keys:
+  ATTRIBUTE_TYPE: CASCADE_CONV_FACT_CHANGE
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: AUTO
+  ATTRIBUTE_TYPE: CASCADE_CONV_FACT_CHANGE
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Indicates whether immediate cascade will be run when changing intergroup-conversion factor in use by stream items. Options are AUTO (default) | MANUAL and NONE.
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

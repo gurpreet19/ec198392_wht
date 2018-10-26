@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-512650860'
+keys:
+  BF_CODE: WR.0063
+  CLASS_NAME: IWEL_GAS_DATA
+  COMP_CODE: event_well_status
+  T: BF_COMPONENT
+  URL: /event_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0063
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_well_status_3' )
+  CLASS_NAME: IWEL_GAS_DATA
+  COMP_CODE: event_well_status
+  NAME: Event Production Well Status
+  SIGNING_REQ_IND: null
+  URL: /event_well_status
+related: {}

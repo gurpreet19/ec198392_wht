@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '428370191'
+keys:
+  BF_CODE: HA.0004
+  CLASS_NAME: MONTHLY_STATUS_PROCESS
+  COMP_CODE: statusProcess
+  T: BF_COMPONENT
+  URL: /statusProcess
+parentKeys: {}
+properties:
+  BF_CODE: HA.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/monthly_data_status_process' )
+  CLASS_NAME: MONTHLY_STATUS_PROCESS
+  COMP_CODE: statusProcess
+  NAME: Log of Executed Processes
+  SIGNING_REQ_IND: null
+  URL: /statusProcess
+related: {}

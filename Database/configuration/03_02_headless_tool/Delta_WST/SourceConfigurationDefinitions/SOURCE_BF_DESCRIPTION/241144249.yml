@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '241144249'
+keys:
+  BF_DESCRIPTION_NO: WR.0011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/maintain_well_chronology' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This BF is used to enter technical production well history. There is a configurable list of well chronology categories and corresponding codes to choose from and a text field is available for additional information.</p><p>The BF is event based and all records within from and to date in the navigator are listed. Pressing Insert, a new row will be made on top of the other rows open for input. Default date is current date. Category and code are mandatory.</p><p>The list of events is sorted on date (descending). There is no functionality behind this BF, it is a simple data registration BF.</p>
+related: {}

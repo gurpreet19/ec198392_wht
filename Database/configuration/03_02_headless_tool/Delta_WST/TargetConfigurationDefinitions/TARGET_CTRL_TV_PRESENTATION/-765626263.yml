@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-765626263'
+keys:
+  COMPONENT_ID: MTH_ACCOUNT_BALANCE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.ca.screens/mth_account_balance
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: MTH_ACCOUNT_BALANCE
+  COMPONENT_LABEL: Monthly Account Balance Calculation
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_CARGO_ADM
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 40.0
+  WINDOW_ID: ENERGYX
+related: {}

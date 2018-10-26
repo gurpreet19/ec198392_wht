@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-805199048'
+keys:
+  BF_CODE: CO.2046
+  CLASS_NAME: CNTR_PROFIT_CENTRE
+  COMP_CODE: profit_centre_list
+  T: BF_COMPONENT
+  URL: /profit_centre_list
+parentKeys: {}
+properties:
+  BF_CODE: CO.2046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_profit_centre_list' )
+  CLASS_NAME: CNTR_PROFIT_CENTRE
+  COMP_CODE: profit_centre_list
+  NAME: Profit Centre List
+  SIGNING_REQ_IND: null
+  URL: /profit_centre_list
+related: {}

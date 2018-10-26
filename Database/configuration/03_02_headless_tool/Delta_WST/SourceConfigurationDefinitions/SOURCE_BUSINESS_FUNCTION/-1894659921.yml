@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1894659921'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.sd.screens/daily_renomination
+parentKeys: {}
+properties:
+  BF_CODE: SD.0011
+  NAME: Daily Re-Nomination
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.sd.screens/daily_renomination
+related: {}

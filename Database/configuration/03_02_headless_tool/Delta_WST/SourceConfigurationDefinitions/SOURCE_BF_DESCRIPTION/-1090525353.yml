@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1090525353'
+keys:
+  BF_DESCRIPTION_NO: SP.0044
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_summary_setup' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Project Data Extract Connection screen</strong>    is used to create connections between Projects and Data Extract setup objects.</p><p>    This is necessary for limiting number of Projects that are available for each Data Extract, e.g. when working in the Project Data Extract screen navigator    (SP.0046).</p><p><img src="/onlinehelp/img?type=description&amp;bfDescNo=SP.0044&amp;imgNo=7&amp;dataLevel=2&amp;pfdrid_c=true" class="ecImg"></p>
+related: {}

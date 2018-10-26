@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '437841388'
+keys:
+  BF_CODE: CO.0205
+  CLASS_NAME: COLLECTION_POINT
+  COMP_CODE: objectdates
+  T: BF_COMPONENT
+  URL: /objectdates
+parentKeys: {}
+properties:
+  BF_CODE: CO.0205
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/COLLECTION_POINT/TARGET/COLLECTION_POINT/CLASS_NAME/COLLECTION_POINT' )
+  CLASS_NAME: COLLECTION_POINT
+  COMP_CODE: objectdates
+  NAME: Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /objectdates
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '366409352'
+keys:
+  BF_CODE: CO.2072
+  CLASS_NAME: NOMPNT_CODE_CONN
+  COMP_CODE: nompnt_code_conn
+  T: BF_COMPONENT
+  URL: /nompnt_code_conn
+parentKeys: {}
+properties:
+  BF_CODE: CO.2072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/nompnt_code_connection' )
+  CLASS_NAME: NOMPNT_CODE_CONN
+  COMP_CODE: nompnt_code_conn
+  NAME: Nomination Point Codes
+  SIGNING_REQ_IND: null
+  URL: /nompnt_code_conn
+related: {}

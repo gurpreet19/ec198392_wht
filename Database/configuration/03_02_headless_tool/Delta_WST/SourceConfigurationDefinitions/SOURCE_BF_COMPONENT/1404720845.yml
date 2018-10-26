@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1404720845'
+keys:
+  BF_CODE: PO.0037
+  CLASS_NAME: STRM_DAY_PC_STATUS_GAS
+  COMP_CODE: gasStreamProfitCentreStatus
+  T: BF_COMPONENT
+  URL: /gasStreamProfitCentreStatus
+parentKeys: {}
+properties:
+  BF_CODE: PO.0037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_profit_centre_status' )
+  CLASS_NAME: STRM_DAY_PC_STATUS_GAS
+  COMP_CODE: gasStreamProfitCentreStatus
+  NAME: Daily Gas Stream Profit Centre Status
+  SIGNING_REQ_IND: null
+  URL: /gasStreamProfitCentreStatus
+related: {}

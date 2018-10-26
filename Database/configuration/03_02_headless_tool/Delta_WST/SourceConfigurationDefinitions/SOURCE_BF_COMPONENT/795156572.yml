@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '795156572'
+keys:
+  BF_CODE: CO.0234
+  CLASS_NAME: WELL_SEASONAL_VALUE
+  COMP_CODE: seasonal
+  T: BF_COMPONENT
+  URL: /seasonal
+parentKeys: {}
+properties:
+  BF_CODE: CO.0234
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/well_seasonal_value' )
+  CLASS_NAME: WELL_SEASONAL_VALUE
+  COMP_CODE: seasonal
+  NAME: Well Seasonal Value
+  SIGNING_REQ_IND: null
+  URL: /seasonal
+related: {}

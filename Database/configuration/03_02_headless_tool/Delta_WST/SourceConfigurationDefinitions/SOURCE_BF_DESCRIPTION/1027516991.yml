@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1027516991'
+keys:
+  BF_DESCRIPTION_NO: PO.0109
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0109
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_tank_status_terminal' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This BF is used when daily tank volume data is available. Data can be entered manually or loaded automatically. Energy Components will automatically create a new record for a new production day for all tanks having tank meter frequency = &quot;DAY&quot;. For tanks having tank meter frequency = &quot;EVENT&quot;, there will be no automatic instantiation, the user will have to manually press the insert new record button and select the right tank from the tank drop down. All data is treated as closing tank reading at the end of the production day. Therefore there is no time associated with the reading.</p>
+
+    <p>Opening volume for a day is calculated as last available closing volume, for daily tanks it will always be yesterday closing. If today is the tank&rsquo;s start day there will be no value for yesterday&rsquo;s closing, and opening volume is set to 0.</p>
+
+    <p>It is possible to upload Attachments related to the data in this screen. The Attachments will be linked to Facility Class 1 (not to Tank). For uploading an Attachment, click the Upload button. A file browser dialogue box will then be presented for the user to select the file to be uploaded. The uploaded file is stored in the EC database as a BLOB (binary large object), and is immediately available for viewing by clicking the View button.</p>
+    <p>The supported file upload formats can be configured by using the system property &quot;Daily Tank Status - Terminal Allowed File Extensions&quot; in Maintain System Settings (CO.1006). Allowed file extensions need to be listed as comma separated values (eg. .docx,.pdf). Setting the value .* will allow all file extensions to be uploaded. This is also the default value.</p>
+related: {}

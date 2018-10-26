@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1557669149'
+keys:
+  MEASUREMENT_TYPE: STEAM_RATE_CWE_MTH
+  T: CTRL_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: Cold Water Equivalents of Steam for month
+  FORMAT_MASK: '###,###,##0.0'
+  MEASUREMENT_TYPE: STEAM_RATE_CWE_MTH
+related: {}

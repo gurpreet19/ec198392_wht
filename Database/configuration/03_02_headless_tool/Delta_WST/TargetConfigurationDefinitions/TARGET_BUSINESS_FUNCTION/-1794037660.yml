@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1794037660'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/daily_meter_composition_matrix/CLASS/METER_DAY_COMP_APPROVED
+parentKeys: {}
+properties:
+  BF_CODE: GD.0075
+  NAME: Daily Meter Composition Matrix - Approved
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.gd.screens/daily_meter_composition_matrix/CLASS/METER_DAY_COMP_APPROVED
+related: {}

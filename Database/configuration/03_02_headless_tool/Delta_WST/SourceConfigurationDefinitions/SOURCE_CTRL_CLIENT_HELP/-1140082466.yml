@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1140082466'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.report.screens/report_queue_status
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.report.screens/report_queue_status
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

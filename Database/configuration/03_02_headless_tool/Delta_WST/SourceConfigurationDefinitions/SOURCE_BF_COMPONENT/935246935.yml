@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '935246935'
+keys:
+  BF_CODE: CP.0068
+  CLASS_NAME: null
+  COMP_CODE: logcontent
+  T: BF_COMPONENT
+  URL: /logcontent
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: null
+  COMP_CODE: logcontent
+  NAME: LogContent
+  SIGNING_REQ_IND: null
+  URL: /logcontent
+related: {}

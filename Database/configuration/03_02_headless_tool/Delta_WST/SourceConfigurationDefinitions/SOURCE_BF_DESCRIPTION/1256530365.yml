@@ -1,0 +1,74 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1256530365'
+keys:
+  BF_DESCRIPTION_NO: RC.0060
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RC.0060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/N' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>\t<strong>Monthly Royalty Process screen</strong>    allows running\
+    \ Royalty Calculations such as Monthly Royalty Calculation, Good Faith Estimate,\
+    \ EOPS (End of Period Statement).<br>    - Yearly reports must be ran from January\
+    \ to December.<br>    - The screen will display an error message if the dates\
+    \ do not follow this requirement.<br>\t\t\t\t<u>Note:</u>    There is also an\
+    \ identical screen for running Accruals. When running from this screen no Accruals\
+    \ will be picked up for opening or preceding data.</p><h3>\t<strong>Calculations\
+    \ Tab</strong>\t</h3><p>    This tab allows running a calculation using the data\
+    \ from the Navigator.<br>    - The royalty can be ran with full logging to get\
+    \ more details in the lower section.</p>\t\t\t\t<h3>\t\t<strong>Report Tab</strong>\t\
+    \t\t</h3><p>    This Tab contains sections for:</p><p>\t\t\t\t<strong style=\"\
+    color: rgb(0, 0, 153);\">Royalty Calculations </strong>\t\t\t\t<br>    The section\
+    \ starts with a reference with critical information fora calculation run. By deleting\
+    \ the calculation run in the Calculations Tab the data here    will not be effected.\
+    \ In other words it is possible to clear the Calculation Run Log without losing\
+    \ the critical data related to the run. This enables    verifying a run even if\
+    \ the log has been cleared.<br>\t\t<strong>Button <span style=\"color: rgb(0,\
+    \ 153, 0);\">Verify Document</span>: </strong>    Approves the Calculation Run\
+    \ (will make data available to be picked up by other calculations).<br>\t\t<strong>Button\
+    \ <span style=\"color: rgb(0, 153, 0);\">Unverify Document</span>:</strong>  \
+    \  Will set the Calculation back to Provisional making the data unavailable again.\
+    \ This can only be done if the data has not been used yet, or the places    where\
+    \ it has been used have been deleted.<br>\t\t<strong>Button <span style=\"color:\
+    \ rgb(0, 153, 0);\">Trace Document</span>:</strong>    Allows to see what data\
+    \ went into the calculation and where the data from the calculation was picked\
+    \ up.<br>\t\t<strong>Button <span style=\"color: rgb(0, 153, 0);\">View Extract\
+    \ Document</span>:</strong>    This will allow opening the extract document used\
+    \ for the specific month or year for the calculation.<br>\t\t<strong>Button <span\
+    \ style=\"color: rgb(0, 153, 0);\">Generate Pending Reports</span>: </strong>\
+    \    When the Calculation is ran, the Reports are not generated but the data for\
+    \ them is prepared. Once the calculation is complete this button must be pressed\
+    \    to actually generate the content of the reports in the table below.</p><p>\t\
+    \t<strong style=\"color: rgb(0, 0, 153);\">Reports list</strong>\t\t\t<br>   \
+    \ The section contains produced report(s) resulting from the Calculation.<br>\
+    \    Here the report can be viewed as well as verified and sent.<br>    Once a\
+    \ report is sent it will be set to Approved and Locked.</p><p>\t\t<strong style=\"\
+    color: rgb(0, 0, 153);\">Report Administration</strong>\t\t\t<br>    The lower\
+    \ section is the same as for the Tabs in the Report Administration screen (BF\
+    \ RP.0003) and contains 4 Sub-Tabs:<br>\t\t<strong>\t\t\t\t<em>1. Parameter Values\
+    \ Sub-Tab:</em>\t\t</strong>    It shows the parameters used for generating the\
+    \ report.<br>\t\t<strong>\t\t<em>2. Distribution of Report Sub-Tab:</em>\t\t</strong>\
+    \    It shows the information to whom to send the report.<br>\t\t<strong>\t\t\t\
+    <em>3. Send Log Sub-Tab:</em>\t\t</strong>    It shows the information when and\
+    \ to whom the report was sent.<br>\t\t<strong>\t\t\t<em>4. Publish Report Sub-Tab:</em>\t\
+    \t</strong>    It is to publish the report, meaning that the user makes it available\
+    \ for the Report Publishing screen (BF RP.0014) and Display Published Report screen\
+    \    (RP.0015). These screens are there for users that should only have access\
+    \ to see reports that are published.<br>\t\t<strong>Button <span style=\"color:\
+    \ rgb(0, 153, 0);\">Verify Report</span>:</strong>    Allows to change the Status\
+    \ of the Report to Approved.<br>\t\t<strong>Button <span style=\"color: rgb(0,\
+    \ 153, 0);\">Unverify Report</span>:</strong>    Allows to set the Status of the\
+    \ Report back to Provisional.<br>\t\t<strong>Button <span style=\"color: rgb(0,\
+    \ 153, 0);\">Trace Document</span>:</strong>    Allows to see what data went into\
+    \ the report and where the data from the report was picked up.<br>\t\t<strong>Button\
+    \ <span style=\"color: rgb(0, 153, 0);\">View Report</span>:</strong>    Allows\
+    \ to open the chosen report.<br>\t\t<strong>Button <span style=\"color: rgb(0,\
+    \ 153, 0);\">Clear Report</span>:</strong>    Allows to clear the chosen report.<br>\t\
+    \t<strong>Button <span style=\"color: rgb(0, 153, 0);\">Send</span>:</strong>\
+    \    Flags the Report for sending.<br>\t\t<strong>Button <span style=\"color:\
+    \ rgb(0, 153, 0);\">Refresh</span>:</strong>    Allows simply to update the table\
+    \ below, pulling the data from the database again.</p>\t\t\t\t\t\t\t\t\t\t\t\t\
+    \t\t\t\t\t\t\t\t\t\t\t"
+related: {}

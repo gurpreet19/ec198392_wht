@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1851700496'
+keys:
+  BF_CODE: CO.2070
+  CLASS_NAME: CANAL_TRANSIT
+  COMP_CODE: canal_transit
+  T: BF_COMPONENT
+  URL: /canal_transit
+parentKeys: {}
+properties:
+  BF_CODE: CO.2070
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/canal_transit' )
+  CLASS_NAME: CANAL_TRANSIT
+  COMP_CODE: canal_transit
+  NAME: Canal Transit
+  SIGNING_REQ_IND: null
+  URL: /canal_transit
+related: {}

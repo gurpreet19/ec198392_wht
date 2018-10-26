@@ -1,0 +1,1 @@
+CREATE OR REPLACE TYPE qstrm_pmass_arr as table of qstrm_pmass_rec;

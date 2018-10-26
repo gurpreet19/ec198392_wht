@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1376768832'
+keys:
+  BF_CODE: PO.0125
+  CLASS_NAME: BAL_GRP_DAY_DATA
+  COMP_CODE: treetable
+  T: BF_COMPONENT
+  URL: /treetable
+parentKeys: {}
+properties:
+  BF_CODE: PO.0125
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_fcty_balancing/GROUPMODEL/FCTY_CLASS_1' )
+  CLASS_NAME: BAL_GRP_DAY_DATA
+  COMP_CODE: treetable
+  NAME: null
+  SIGNING_REQ_IND: null
+  URL: /treetable
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1299210991'
+keys:
+  COMPONENT_ID: CTRL_CHECK_GROUP
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_table/CLASS_NAME/CTRL_CHECK_GROUP?screentemplate=/com.ec.frmw.co.screens/manage_table
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CTRL_CHECK_GROUP
+  COMPONENT_LABEL: Check Group
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: SYSTEM_VALIDATION
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 70.0
+  WINDOW_ID: ENERGYX
+related: {}

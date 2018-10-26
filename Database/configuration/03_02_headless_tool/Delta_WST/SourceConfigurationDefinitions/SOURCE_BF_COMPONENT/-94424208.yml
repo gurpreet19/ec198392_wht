@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-94424208'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: INTERFACE_PENDING_CARGO
+  COMP_CODE: interface_pending_doc
+  T: BF_COMPONENT
+  URL: /interface_pending_doc
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: INTERFACE_PENDING_CARGO
+  COMP_CODE: interface_pending_doc
+  NAME: Pending
+  SIGNING_REQ_IND: null
+  URL: /interface_pending_doc
+related: {}

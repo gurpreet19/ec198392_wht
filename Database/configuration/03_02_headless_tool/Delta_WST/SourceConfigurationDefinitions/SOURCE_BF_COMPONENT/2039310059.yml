@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2039310059'
+keys:
+  BF_CODE: CO.2073
+  CLASS_NAME: CNTR_CAPACITY_LIST
+  COMP_CODE: object
+  T: BF_COMPONENT
+  URL: /object
+parentKeys: {}
+properties:
+  BF_CODE: CO.2073
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/object_connection/TARGET/CONTRACT_CAPACITY/CLASS_LIST/CNTR_CAPACITY_LIST/CLASS/CNTR_CAP_LOC_CONNECTION' )
+  CLASS_NAME: CNTR_CAPACITY_LIST
+  COMP_CODE: object
+  NAME: object
+  SIGNING_REQ_IND: null
+  URL: /object
+related: {}

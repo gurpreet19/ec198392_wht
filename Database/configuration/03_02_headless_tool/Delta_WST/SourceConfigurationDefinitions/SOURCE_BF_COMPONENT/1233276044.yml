@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1233276044'
+keys:
+  BF_CODE: RC.0058
+  CLASS_NAME: CONTRACT
+  COMP_CODE: daytimes
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: RC.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/royalty_contract_us/CLASS_NAME/CONTRACT/DATA_CLASS/DIVISION_ORDER/NAVMODEL/DIV_ORDER/BF_PROFILE/RC.0058/ACCESS_COLUMN/REVN_CODE' )
+  CLASS_NAME: CONTRACT
+  COMP_CODE: daytimes
+  NAME: New Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

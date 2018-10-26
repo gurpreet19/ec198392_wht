@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '512711753'
+keys:
+  COMPONENT_ID: CHEM_TANK_PRODUCT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.co.screens/chem_tank_product
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CHEM_TANK_PRODUCT
+  COMPONENT_LABEL: Chemical Tank Product Combination
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: CHEM_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 50.0
+  WINDOW_ID: ENERGYX
+related: {}

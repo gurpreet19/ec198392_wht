@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1442324977'
+keys:
+  BF_CODE: RC.0062
+  CLASS_NAME: RECONCILE_JE_DIF
+  COMP_CODE: unreconcilejeqty
+  T: BF_COMPONENT
+  URL: /unreconcilejeqty
+parentKeys: {}
+properties:
+  BF_CODE: RC.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/rty_recon' )
+  CLASS_NAME: RECONCILE_JE_DIF
+  COMP_CODE: unreconcilejeqty
+  NAME: unreconcilejeqty
+  SIGNING_REQ_IND: null
+  URL: /unreconcilejeqty
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1049750348'
+keys:
+  BF_DESCRIPTION_NO: CD.0012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_NODE_ITEM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Product Description screen</strong>    is used to define and maintain Product Description objects.</p><p>    <strong>Product Description object</strong>    is a description of a Product being available to one of the Financial Codes    for a given Product at a given Node. <br> There is no limit on how many Product    Description objects one can have for a given combination of Financial Code    / Product / Node.</p><p>    <u>Note</u>    that the Product Description object is mandatory when defining the main    Stream Item for a Transaction Template (at screen Contract / Transaction    Mapping) .</p><p>    <u>The main purpose</u>    of the Product Description objects is for reporting where one can classify    a financial transaction further to just the Product, i.e. one can sell    various qualities of Crude at a certain delivery point (node) and report on    the various qualities WITHOUT creating separate Product objects for the    various qualities.</p>
+related: {}

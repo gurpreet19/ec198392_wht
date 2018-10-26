@@ -1,0 +1,326 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_TASKINSTANCE
+cnstPrimaryKey:
+  columns:
+  - ID_
+  name: SYS_C0015693
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  ACTORID_:
+    columnName: ACTORID_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  CLASS_:
+    columnName: CLASS_
+    typeName: CHAR(1 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  CREATE_:
+    columnName: CREATE_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  DESCRIPTION_:
+    columnName: DESCRIPTION_
+    typeName: VARCHAR2(4000 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  DUEDATE_:
+    columnName: DUEDATE_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  END_:
+    columnName: END_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  ID_:
+    columnName: ID_
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  ISBLOCKING_:
+    columnName: ISBLOCKING_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  ISCANCELLED_:
+    columnName: ISCANCELLED_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  ISOPEN_:
+    columnName: ISOPEN_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  ISSIGNALLING_:
+    columnName: ISSIGNALLING_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  ISSUSPENDED_:
+    columnName: ISSUSPENDED_
+    typeName: NUMBER(1,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  NAME_:
+    columnName: NAME_
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  PRIORITY_:
+    columnName: PRIORITY_
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  PROCINST_:
+    columnName: PROCINST_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+  START_:
+    columnName: START_
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  SWIMLANINSTANCE_:
+    columnName: SWIMLANINSTANCE_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '20'
+  TASKMGMTINSTANCE_:
+    columnName: TASKMGMTINSTANCE_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '21'
+  TASK_:
+    columnName: TASK_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  TOKEN_:
+    columnName: TOKEN_
+    typeName: NUMBER(19,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+  VERSION_:
+    columnName: VERSION_
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+cnstForeignKeys:
+  FK_TASKINST_SLINST:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_SWIMLANEINSTANCE
+    columns:
+      SWIMLANINSTANCE_: ID_
+    name: FK_TASKINST_SLINST
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TASKINST_TASK:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_TASK
+    columns:
+      TASK_: ID_
+    name: FK_TASKINST_TASK
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TASKINST_TMINST:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_MODULEINSTANCE
+    columns:
+      TASKMGMTINSTANCE_: ID_
+    name: FK_TASKINST_TMINST
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TASKINST_TOKEN:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_TOKEN
+    columns:
+      TOKEN_: ID_
+    name: FK_TASKINST_TOKEN
+    type: FOREIGNKEY
+    status: UNDEFINED
+  FK_TSKINS_PRCINS:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: JBPM_PROCESSINSTANCE
+    columns:
+      PROCINST_: ID_
+    name: FK_TSKINS_PRCINS
+    type: FOREIGNKEY
+    status: UNDEFINED
+indexes:
+  IDX_TASKINST_TOKN:
+    indexName: IDX_TASKINST_TOKN
+    columns:
+    - TOKEN_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TASKINST_TSK:
+    indexName: IDX_TASKINST_TSK
+    columns:
+    - TASK_
+    - PROCINST_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TASK_ACTORID:
+    indexName: IDX_TASK_ACTORID
+    columns:
+    - ACTORID_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TSKINST_SLINST:
+    indexName: IDX_TSKINST_SLINST
+    columns:
+    - SWIMLANINSTANCE_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  IDX_TSKINST_TMINST:
+    indexName: IDX_TSKINST_TMINST
+    columns:
+    - TASKMGMTINSTANCE_
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

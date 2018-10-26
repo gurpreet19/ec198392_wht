@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '527248106'
+keys:
+  BF_CODE: GD.0046
+  CLASS_NAME: CALC_DISP_LOG
+  COMP_CODE: alarms
+  T: BF_COMPONENT
+  URL: /alarms
+parentKeys: {}
+properties:
+  BF_CODE: GD.0046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/monthly_disp_calc/NOMINATION_CYCLE/false' )
+  CLASS_NAME: CALC_DISP_LOG
+  COMP_CODE: alarms
+  NAME: Alarms
+  SIGNING_REQ_IND: null
+  URL: /alarms
+related: {}

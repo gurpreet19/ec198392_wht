@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2070157725'
+keys:
+  BF_CODE: TO.0016
+  CLASS_NAME: CARGO_STR_BTH_ULD_LIFT
+  COMP_CODE: lifting_uld
+  T: BF_COMPONENT
+  URL: /lifting_uld
+parentKeys: {}
+properties:
+  BF_CODE: TO.0016
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/batch_quantity_unload' )
+  CLASS_NAME: CARGO_STR_BTH_ULD_LIFT
+  COMP_CODE: lifting_uld
+  NAME: Cargo Batch Lifting Unload
+  SIGNING_REQ_IND: null
+  URL: /lifting_uld
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1663573281'
+keys:
+  BF_CODE: CP.0046
+  CLASS_NAME: FCST_LIFT_ACC_ADJ
+  COMP_CODE: between_account_adjustment
+  T: BF_COMPONENT
+  URL: /between_account_adjustment
+parentKeys: {}
+properties:
+  BF_CODE: CP.0046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_lift_acc_adj' )
+  CLASS_NAME: FCST_LIFT_ACC_ADJ
+  COMP_CODE: between_account_adjustment
+  NAME: Between Account Adjustments
+  SIGNING_REQ_IND: null
+  URL: /between_account_adjustment
+related: {}

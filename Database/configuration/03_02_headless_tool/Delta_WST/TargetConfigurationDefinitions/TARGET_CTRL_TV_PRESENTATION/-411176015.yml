@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-411176015'
+keys:
+  COMPONENT_ID: CAP_PERIOD_OPER_REST
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.gd.screens/period_operational_restriction/CLASS/OPRES_PERIOD_RESTRICTION?screentemplate=/com.ec.tran.gd.screens/period_operational_restriction
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CAP_PERIOD_OPER_REST
+  COMPONENT_LABEL: Period Operational Restriction
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_GD_CA
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 10.0
+  WINDOW_ID: ENERGYX
+related: {}

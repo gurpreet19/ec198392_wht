@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1706463644'
+keys:
+  BF_CODE: SP.0039
+  CLASS_NAME: REVN_DATA_FILTER
+  COMP_CODE: SetupButton/updateAttributes
+  T: BF_COMPONENT
+  URL: /SetupButton/updateAttributes
+parentKeys: {}
+properties:
+  BF_CODE: SP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_cost_mapping' )
+  CLASS_NAME: REVN_DATA_FILTER
+  COMP_CODE: SetupButton/updateAttributes
+  NAME: SetupButton/Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /SetupButton/updateAttributes
+related: {}

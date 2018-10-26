@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '195128957'
+keys:
+  COMPONENT_ID: EXT_LOC_REFERENCE_VALUE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.co.screens/ext_loc_reference_value
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: EXT_LOC_REFERENCE_VALUE
+  COMPONENT_LABEL: External Location Reference Value
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FACILITY_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 42.0
+  WINDOW_ID: ENERGYX
+related: {}

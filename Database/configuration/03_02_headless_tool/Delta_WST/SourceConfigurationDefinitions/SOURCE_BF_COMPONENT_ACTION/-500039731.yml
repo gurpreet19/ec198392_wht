@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-500039731'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.00941' AND NVL(URL,'IS_NULL') = '/network' AND COMP_CODE ='allocation_network' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  T: BF_COMPONENT_ACTION
+  URL: /zoom_resetMenuBtn
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.00941' AND NVL(URL,'IS_NULL') = '/network' AND COMP_CODE ='allocation_network' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  COMMENTS: null
+  NAME: zoom_reset
+  URL: /zoom_resetMenuBtn
+related: {}

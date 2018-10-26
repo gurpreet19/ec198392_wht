@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1590077034'
+keys:
+  COMPONENT_ID: ACCOUNT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_ACCOUNT?screentemplate=/com.ec.revn.cd/manage_object_object_list
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ACCOUNT
+  COMPONENT_LABEL: Account
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FINANCIAL_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 60.0
+  WINDOW_ID: ENERGYX
+related: {}

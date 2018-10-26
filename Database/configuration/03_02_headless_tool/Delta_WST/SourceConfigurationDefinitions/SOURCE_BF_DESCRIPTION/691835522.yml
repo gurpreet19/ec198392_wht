@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '691835522'
+keys:
+  BF_DESCRIPTION_NO: HA.0007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: HA.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/mth_data_lock' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen gives the opportunity on a monthly basis to lock records associated with the classes of information used by the monthly allocation process. The purpose is to prevent unauthorized operations like insert/delete and update to ensure that the result of a rerun of an allocation process yields the expected or same result for a given month. The locking process is global and independent of group levels and will run procedures invoked from the screen event associated with the given month record checked for locking. The record status in tables associated with class views will not be updated. Instead, the lock status must persist as a lock indicator in a structure holding all the distinct months available for the system. Only a full month can be locked and it is typically done after a successful monthly allocation.</p>
+
+    <p>Only system administrators will have update access on this screen. Other users will get restricted access to other screens affected by the locking but the check whether an update is allowed is postponed until the save event is issued. Hence, the updates are not prevented through the standard screen access control, like protecting fields and buttons. Monthly locking takes precedence over record-status dependent access in any screen where locking is activated.</p>
+
+    <p>The result of the locking process will have an impact on the behavior of the screens participating in the locking mechanism. Class view instead-of-triggers must include check on lock before allowing insert/delete or update preventing locked data to be changed. If a change need to be done, an unlock process has to be run first to unlock the data.</p>
+
+    <p>The suggested locking concept also introduces an enhancement in the class metadata concept. Two additional metadata attributes, Lock rule and lock category will be added in the configuration screen CO.1013. Class will include these properties.</p>
+
+    <p>The daily instantiate screen business logic will be extended to also instantiate the system_month table.</p>
+
+    <p>If a lock violation is detected during an operation, the view layer will raise an application error, stating what object and period was validated, and the first month lock that caused the exception</p>
+related: {}

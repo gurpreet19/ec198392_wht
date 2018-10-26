@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '126247271'
+keys:
+  ATTRIBUTE_TYPE: ORIG_COUNTRY_AT_TRANS
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: Y
+  ATTRIBUTE_TYPE: ORIG_COUNTRY_AT_TRANS
+  ATTRIBUTE_VALUE: null
+  COMMENTS: 'Indicates whether the Origin Country at the document transactions is
+    used. Valid choices: Y | N.'
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-919608184'
+keys:
+  BF_DESCRIPTION_NO: CO.0132
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0132
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_scheduler' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is based on runtime information pulled live from the Wildfly cluster. Because of this, if a node is down it will not show up. You are able to see whether or not the Quartz instance is running and whether it starts on boot. You can start and stop each node on this screen.</p>
+related: {}

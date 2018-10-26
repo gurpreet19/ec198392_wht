@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2059287094'
+keys:
+  BF_CODE: WR.0010
+  CLASS_NAME: null
+  COMP_CODE: mol_to_wt_button
+  T: BF_COMPONENT
+  URL: /mol_to_wt_btn
+parentKeys: {}
+properties:
+  BF_CODE: WR.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_oil_component_analysis/COMP_SET/WELL_OIL_COMP' )
+  CLASS_NAME: null
+  COMP_CODE: mol_to_wt_button
+  NAME: Mol to Wt Button
+  SIGNING_REQ_IND: null
+  URL: /mol_to_wt_btn
+related: {}

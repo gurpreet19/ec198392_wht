@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-518046836'
+keys:
+  BF_CODE: PD.0022
+  CLASS_NAME: null
+  COMP_CODE: new_masterEvent_button/nav
+  T: BF_COMPONENT
+  URL: /new_masterEvent_button/navigator
+parentKeys: {}
+properties:
+  BF_CODE: PD.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/equip_downtime' )
+  CLASS_NAME: null
+  COMP_CODE: new_masterEvent_button/nav
+  NAME: New Master Event Button/Navigator
+  SIGNING_REQ_IND: null
+  URL: /new_masterEvent_button/navigator
+related: {}

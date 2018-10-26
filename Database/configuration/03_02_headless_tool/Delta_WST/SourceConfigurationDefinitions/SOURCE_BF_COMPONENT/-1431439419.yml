@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1431439419'
+keys:
+  BF_CODE: SP.0017
+  CLASS_NAME: CONT_DOCUMENT_LIST
+  COMP_CODE: DocumentTable
+  T: BF_COMPONENT
+  URL: /document_table
+parentKeys: {}
+properties:
+  BF_CODE: SP.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/transaction_general' )
+  CLASS_NAME: CONT_DOCUMENT_LIST
+  COMP_CODE: DocumentTable
+  NAME: Document Table
+  SIGNING_REQ_IND: null
+  URL: /document_table
+related: {}

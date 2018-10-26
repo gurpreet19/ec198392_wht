@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1863129746'
+keys:
+  BF_CODE: FC.1002
+  CLASS_NAME: null
+  COMP_CODE: populateQtyFcst
+  T: BF_COMPONENT
+  URL: /populate_qty_fcst
+parentKeys: {}
+properties:
+  BF_CODE: FC.1002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_quantity_setup/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST' )
+  CLASS_NAME: null
+  COMP_CODE: populateQtyFcst
+  NAME: Populate Forecast Button
+  SIGNING_REQ_IND: null
+  URL: /populate_qty_fcst
+related: {}

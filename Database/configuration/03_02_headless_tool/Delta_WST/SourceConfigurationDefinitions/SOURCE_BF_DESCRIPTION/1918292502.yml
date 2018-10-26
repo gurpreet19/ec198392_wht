@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1918292502'
+keys:
+  BF_DESCRIPTION_NO: GD.0120
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0120
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_renomination/NOM_CLASS/TRNP_DAY_RENOM_LIST/RENOM_CLASS/TRNP_DAY_RENOMINATION/RENOM_SUB_CLASS/TRNP_SUB_DAY_RENOM/TARGET/NOMINATION_POINT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain re-nominations when using the cycle approach is not adequate.</p><p>The business function contains three data sections, a daily nomination section, a daily re&ndash;nomination section and a sub daily re&ndash;nomination section. The daily nomination section shows all available nomination points with its current nomination for the selected date. The daily re&ndash;nomination section displays all the re-nominations for the selected nomination point on the selected date. When a record is selected the sub daily section displays all the hourly re-nominations belonging to the selected daily re-nomination. To insert new records on sub daily level with the same daytime, a new record must be created first on daily level.</p><p>To view the entire trail of all sub daily nominations the button &quot;View all hourly nominations&quot; is used. This displays a popup window with all the hourly nominations for the selected nomination point/date combination.</p><p>It will be up to the implementation project to include any required validation and handling of the renominations.</p><p>For more information about the nomination process please see Daily Input Nomination / Daily Input Nomination.</p>
+related: {}

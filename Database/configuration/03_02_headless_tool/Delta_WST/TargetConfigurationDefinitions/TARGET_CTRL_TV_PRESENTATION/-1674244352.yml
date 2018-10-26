@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1674244352'
+keys:
+  COMPONENT_ID: DAY_STRM_COMP_PC
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.po.screens/daily_stream_profit_centre_component
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: DAY_STRM_COMP_PC
+  COMPONENT_LABEL: Daily Stream Component Split by Profit Centre
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_PO_GRP_BY_DAY
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 220.0
+  WINDOW_ID: ENERGYX
+related: {}

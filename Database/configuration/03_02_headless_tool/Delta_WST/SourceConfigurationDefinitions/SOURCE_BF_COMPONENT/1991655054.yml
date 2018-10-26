@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1991655054'
+keys:
+  BF_CODE: PO.0118
+  CLASS_NAME: TRUCK_TICKET_FINDER
+  COMP_CODE: objects
+  T: BF_COMPONENT
+  URL: /objects
+parentKeys: {}
+properties:
+  BF_CODE: PO.0118
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_finder' )
+  CLASS_NAME: TRUCK_TICKET_FINDER
+  COMP_CODE: objects
+  NAME: Objects
+  SIGNING_REQ_IND: null
+  URL: /objects
+related: {}

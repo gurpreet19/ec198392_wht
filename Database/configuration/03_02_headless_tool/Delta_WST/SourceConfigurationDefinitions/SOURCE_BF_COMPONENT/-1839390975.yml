@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1839390975'
+keys:
+  BF_CODE: GD.0056
+  CLASS_NAME: CAPACITY_BID_CONTACT
+  COMP_CODE: capContact
+  T: BF_COMPONENT
+  URL: /capContact
+parentKeys: {}
+properties:
+  BF_CODE: GD.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_bid' )
+  CLASS_NAME: CAPACITY_BID_CONTACT
+  COMP_CODE: capContact
+  NAME: Contact
+  SIGNING_REQ_IND: null
+  URL: /capContact
+related: {}

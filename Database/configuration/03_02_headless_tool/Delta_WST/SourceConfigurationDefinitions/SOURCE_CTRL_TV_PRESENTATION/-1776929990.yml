@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1776929990'
+keys:
+  COMPONENT_ID: MAINTAIN_OPPORTUNITIES
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.co.screens/maintain_opportunities
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: MAINTAIN_OPPORTUNITIES
+  COMPONENT_LABEL: Maintain Opportunities
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 410.0
+  WINDOW_ID: ENERGYX
+related: {}

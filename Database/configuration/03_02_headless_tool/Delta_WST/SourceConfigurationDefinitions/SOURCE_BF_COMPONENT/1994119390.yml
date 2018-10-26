@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1994119390'
+keys:
+  BF_CODE: SP.0068
+  CLASS_NAME: REPORT_REF_GRP_CLS_SETUP
+  COMP_CODE: mappingclassitem
+  T: BF_COMPONENT
+  URL: /mappingclassitem
+parentKeys: {}
+properties:
+  BF_CODE: SP.0068
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_report_ref_item_setup' )
+  CLASS_NAME: REPORT_REF_GRP_CLS_SETUP
+  COMP_CODE: mappingclassitem
+  NAME: Class Mapping
+  SIGNING_REQ_IND: null
+  URL: /mappingclassitem
+related: {}

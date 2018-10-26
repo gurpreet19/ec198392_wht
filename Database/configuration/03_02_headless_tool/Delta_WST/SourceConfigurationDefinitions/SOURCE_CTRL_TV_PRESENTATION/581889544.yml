@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '581889544'
+keys:
+  COMPONENT_ID: TRAN_CP_FCST_SUB_ENT_LA
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.cp.screens/fcst_sub_day_entitlement_lift_acc
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TRAN_CP_FCST_SUB_ENT_LA
+  COMPONENT_LABEL: Sub Day Entitlement - Lifting Account
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_CP_FCST_SUB_DAY
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 30.0
+  WINDOW_ID: ENERGYX
+related: {}

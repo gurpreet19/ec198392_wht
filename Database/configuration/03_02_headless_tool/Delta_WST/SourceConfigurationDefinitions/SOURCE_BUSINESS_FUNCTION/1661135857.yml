@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1661135857'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/cd_ec_codes/SYSTEM_CODE_IND/N
+parentKeys: {}
+properties:
+  BF_CODE: CD.0034
+  NAME: EC Codes - Non-System Codes
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/cd_ec_codes/SYSTEM_CODE_IND/N
+related: {}

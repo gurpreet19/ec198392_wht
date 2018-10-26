@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-388681593'
+keys:
+  BF_CODE: CO.1051
+  CLASS_NAME: null
+  COMP_CODE: navButton
+  T: BF_COMPONENT
+  URL: /navButton
+parentKeys: {}
+properties:
+  BF_CODE: CO.1051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_finder' )
+  CLASS_NAME: null
+  COMP_CODE: navButton
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /navButton
+related: {}

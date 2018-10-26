@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1145758654'
+keys:
+  BF_CODE: SP.0022
+  CLASS_NAME: CONT_PAY_TRACKING_ITEM
+  COMP_CODE: payment_tracking_items
+  T: BF_COMPONENT
+  URL: /pay_tracking_items
+parentKeys: {}
+properties:
+  BF_CODE: SP.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/payment_tracking' )
+  CLASS_NAME: CONT_PAY_TRACKING_ITEM
+  COMP_CODE: payment_tracking_items
+  NAME: Payment Tracking Items
+  SIGNING_REQ_IND: null
+  URL: /pay_tracking_items
+related: {}

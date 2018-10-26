@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1250776281'
+keys:
+  BF_CODE: SD.0048
+  CLASS_NAME: null
+  COMP_CODE: button
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: SD.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/period_dp_np_data/CLASS1/SLNP_DAY_NOMINATION/CLASS2/SLNP_DAY_NOMINATION/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0048' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

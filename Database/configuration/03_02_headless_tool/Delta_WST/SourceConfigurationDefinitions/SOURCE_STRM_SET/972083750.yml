@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '972083750'
+keys:
+  STREAM_SET: PO.0123_T
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Monthly Balancing Adjustment - To Object
+  STREAM_SET: PO.0123_T
+related: {}

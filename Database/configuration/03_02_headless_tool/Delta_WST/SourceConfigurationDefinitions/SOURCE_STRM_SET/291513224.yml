@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291513224'
+keys:
+  STREAM_SET: PO.0081
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Daily Steam Stream Status, by Stream
+  STREAM_SET: PO.0081
+related: {}

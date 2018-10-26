@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1419157368'
+keys:
+  COMPONENT_ID: VERSIONS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /xhtml/pages/versions.jsf
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: VERSIONS
+  COMPONENT_LABEL: Versions
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: RUNTIME
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 20.0
+  WINDOW_ID: ENERGYX
+related: {}

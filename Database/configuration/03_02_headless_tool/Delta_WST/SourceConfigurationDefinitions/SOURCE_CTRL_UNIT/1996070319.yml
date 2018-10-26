@@ -1,0 +1,43 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1996070319'
+keys:
+  T: CTRL_UNIT
+  UNIT: MILLISIEMENSPERM
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Milli Siemens per meter
+  FIN_CODE: null
+  LABEL: mS/m
+  PREFIX: null
+  PREFIX_FACTOR: null
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+  UNIT: MILLISIEMENSPERM
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  CTRL_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: CONDUCTIVITY
+      T: CTRL_UOM_SETUP
+      UNIT: MILLISIEMENSPERM
+    parentKeys:
+      CTRL_UNIT.UNIT: MILLISIEMENSPERM
+    properties:
+      DB_UNIT_IND: Y
+      FORMAT_MASK: null
+      MEASUREMENT_TYPE: CONDUCTIVITY
+      REPORT_UNIT_IND: Y
+      UNIT: MILLISIEMENSPERM
+      VIEW_UNIT_IND: Y

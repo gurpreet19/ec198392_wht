@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1699602233'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/fcst_cargo_planning
+parentKeys: {}
+properties:
+  BF_CODE: CP.0030
+  NAME: Forecast - Cargo Planning
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/fcst_cargo_planning
+related: {}

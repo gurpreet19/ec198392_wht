@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2022949663'
+keys:
+  BF_CODE: CO.1002
+  CLASS_NAME: T_BASIS_ACCESS
+  COMP_CODE: roles
+  T: BF_COMPONENT
+  URL: /roles
+parentKeys: {}
+properties:
+  BF_CODE: CO.1002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_access_objects' )
+  CLASS_NAME: T_BASIS_ACCESS
+  COMP_CODE: roles
+  NAME: Roles
+  SIGNING_REQ_IND: null
+  URL: /roles
+related: {}

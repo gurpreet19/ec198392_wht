@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1333873212'
+keys:
+  BF_CODE: GD.0120
+  CLASS_NAME: TRNP_DAY_RENOM_LIST
+  COMP_CODE: daynom
+  T: BF_COMPONENT
+  URL: /daynom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0120
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_renomination/NOM_CLASS/TRNP_DAY_RENOM_LIST/RENOM_CLASS/TRNP_DAY_RENOMINATION/RENOM_SUB_CLASS/TRNP_SUB_DAY_RENOM/TARGET/NOMINATION_POINT' )
+  CLASS_NAME: TRNP_DAY_RENOM_LIST
+  COMP_CODE: daynom
+  NAME: Daily Nominations
+  SIGNING_REQ_IND: null
+  URL: /daynom
+related: {}

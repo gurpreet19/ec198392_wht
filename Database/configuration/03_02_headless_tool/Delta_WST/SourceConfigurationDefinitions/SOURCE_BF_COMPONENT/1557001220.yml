@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1557001220'
+keys:
+  BF_CODE: FC.0025
+  CLASS_NAME: FCST_SP_DAY_AFS
+  COMP_CODE: afs_location
+  T: BF_COMPONENT
+  URL: /afs_location
+parentKeys: {}
+properties:
+  BF_CODE: FC.0025
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/daily_afs/TARGET/SUPPLY_POINT/CLASS1/FCST_SP_DAY_AFS/CLASS2/FCST_SP_DAY_CPY_AFS' )
+  CLASS_NAME: FCST_SP_DAY_AFS
+  COMP_CODE: afs_location
+  NAME: AFS by Location
+  SIGNING_REQ_IND: null
+  URL: /afs_location
+related: {}

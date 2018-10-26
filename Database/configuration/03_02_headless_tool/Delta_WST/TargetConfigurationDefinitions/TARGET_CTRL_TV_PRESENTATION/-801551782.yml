@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-801551782'
+keys:
+  COMPONENT_ID: GD_INV_LOC_SWP
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.gd.screens/daily_contract_loc_swap/CLASS_NAME/CNTR_DAY_INV_LOC_SWAP/BF_PROFILE/GD.0033.LS?screentemplate=/com.ec.tran.gd.screens/daily_contract_loc_swap
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: GD_INV_LOC_SWP
+  COMPONENT_LABEL: Daily Contract Location Inventory - Location Swap
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_GD_IN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 50.0
+  WINDOW_ID: ENERGYX
+related: {}

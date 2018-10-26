@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-865859805'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/period_day_np_data/CLASS/SLNP_DAY_NOMINATION/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0042
+parentKeys: {}
+properties:
+  BF_CODE: SD.0042
+  NAME: Daily Sales Nomination
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/period_day_np_data/CLASS/SLNP_DAY_NOMINATION/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0042
+related: {}

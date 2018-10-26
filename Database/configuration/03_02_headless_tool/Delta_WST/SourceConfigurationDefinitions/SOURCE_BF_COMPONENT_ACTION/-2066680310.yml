@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2066680310'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0014' AND NVL(URL,'IS_NULL') = '/insert' AND COMP_CODE ='objectForm' AND NVL(CLASS_NAME,'IS_NULL') = 'TRANSACTION_TEMPLATE')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0014' AND NVL(URL,'IS_NULL') = '/insert' AND COMP_CODE ='objectForm' AND NVL(CLASS_NAME,'IS_NULL') = 'TRANSACTION_TEMPLATE')
+  COMMENTS: null
+  NAME: New Object /save
+  URL: /save
+related: {}

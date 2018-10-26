@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '384636700'
+keys:
+  BF_CODE: MHM.0011
+  CLASS_NAME: null
+  COMP_CODE: minutes
+  T: BF_COMPONENT
+  URL: /minutes
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_workflow_overview' )
+  CLASS_NAME: null
+  COMP_CODE: minutes
+  NAME: Minutes
+  SIGNING_REQ_IND: null
+  URL: /minutes
+related: {}

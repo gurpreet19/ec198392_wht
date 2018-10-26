@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1385943883'
+keys:
+  BF_CODE: CP.0045
+  CLASS_NAME: FCST_LIFT_ACC_INIT
+  COMP_CODE: table
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CP.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_initialize_lifting_account' )
+  CLASS_NAME: FCST_LIFT_ACC_INIT
+  COMP_CODE: table
+  NAME: Initialize Lifting Account
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

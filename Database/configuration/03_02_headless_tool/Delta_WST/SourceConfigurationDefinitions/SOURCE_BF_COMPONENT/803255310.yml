@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '803255310'
+keys:
+  BF_CODE: CO.1032
+  CLASS_NAME: null
+  COMP_CODE: data_class_date
+  T: BF_COMPONENT
+  URL: /data_class_date
+parentKeys: {}
+properties:
+  BF_CODE: CO.1032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/object_validation/GROUP_MODEL/operational' )
+  CLASS_NAME: null
+  COMP_CODE: data_class_date
+  NAME: dataClassDate
+  SIGNING_REQ_IND: null
+  URL: /data_class_date
+related: {}

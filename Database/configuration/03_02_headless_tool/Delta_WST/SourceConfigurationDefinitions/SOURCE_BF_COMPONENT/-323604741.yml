@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-323604741'
+keys:
+  BF_CODE: PO.0005.01
+  CLASS_NAME: TANK_DAY_INV_MASS
+  COMP_CODE: StatusMass
+  T: BF_COMPONENT
+  URL: /StatusMass
+parentKeys: {}
+properties:
+  BF_CODE: PO.0005.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_tank_status_mass' )
+  CLASS_NAME: TANK_DAY_INV_MASS
+  COMP_CODE: StatusMass
+  NAME: Daily Tank Status Mass
+  SIGNING_REQ_IND: null
+  URL: /StatusMass
+related: {}

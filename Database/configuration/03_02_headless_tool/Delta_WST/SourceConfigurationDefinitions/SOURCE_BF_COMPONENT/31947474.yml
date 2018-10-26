@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '31947474'
+keys:
+  BF_CODE: CD.0104
+  CLASS_NAME: STREAM_CATEGORY_SETUP
+  COMP_CODE: StreamCategoryItemSetup
+  T: BF_COMPONENT
+  URL: /tableSetup
+parentKeys: {}
+properties:
+  BF_CODE: CD.0104
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/setup_stream_category' )
+  CLASS_NAME: STREAM_CATEGORY_SETUP
+  COMP_CODE: StreamCategoryItemSetup
+  NAME: Stream Category Item Setup
+  SIGNING_REQ_IND: null
+  URL: /tableSetup
+related: {}

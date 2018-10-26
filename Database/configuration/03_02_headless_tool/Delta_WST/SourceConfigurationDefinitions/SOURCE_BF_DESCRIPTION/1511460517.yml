@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1511460517'
+keys:
+  BF_DESCRIPTION_NO: CO.1053
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1053
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/component_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used to define Component Template and associate objects with templates.</p>
+
+    <p>A component template is specific for a Calculation Context and is used to store intermediate calculation result. These results can then be put into a report and a user will get detailed overview on how an end result is produced. One example of such a report is a Price Component Report found in EC Sale.</p>
+related: {}

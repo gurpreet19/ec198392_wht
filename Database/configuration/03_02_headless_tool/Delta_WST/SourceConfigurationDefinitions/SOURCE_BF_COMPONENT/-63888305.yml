@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-63888305'
+keys:
+  BF_CODE: CP.0068
+  CLASS_NAME: FCST_CNTR_KPI_MONITORING
+  COMP_CODE: cntr_KPI
+  T: BF_COMPONENT
+  URL: /cntr_KPI
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: FCST_CNTR_KPI_MONITORING
+  COMP_CODE: cntr_KPI
+  NAME: Contract KPIs
+  SIGNING_REQ_IND: null
+  URL: /cntr_KPI
+related: {}

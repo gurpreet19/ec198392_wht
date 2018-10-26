@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-127212861'
+keys:
+  BF_CODE: PO.0075
+  CLASS_NAME: null
+  COMP_CODE: sum
+  T: BF_COMPONENT
+  URL: /sum
+parentKeys: {}
+properties:
+  BF_CODE: PO.0075
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_strm_component_splitby_profit_centre' )
+  CLASS_NAME: null
+  COMP_CODE: sum
+  NAME: Sum per Component
+  SIGNING_REQ_IND: null
+  URL: /sum
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-395142720'
+keys:
+  BF_CODE: PO.0056
+  CLASS_NAME: STRM_TRUCK_IN_TRANSIT
+  COMP_CODE: transit_m
+  T: BF_COMPONENT
+  URL: /trucks_in_transit_mass
+parentKeys: {}
+properties:
+  BF_CODE: PO.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_single_load_multiple_offload' )
+  CLASS_NAME: STRM_TRUCK_IN_TRANSIT
+  COMP_CODE: transit_m
+  NAME: Trucks in transit (Mass)
+  SIGNING_REQ_IND: null
+  URL: /trucks_in_transit_mass
+related: {}

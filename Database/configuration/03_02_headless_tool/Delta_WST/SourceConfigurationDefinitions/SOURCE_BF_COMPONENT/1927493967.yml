@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1927493967'
+keys:
+  BF_CODE: GD.0024
+  CLASS_NAME: TRNP_DAY_NOM_OUTPUT
+  COMP_CODE: dayoutputnom
+  T: BF_COMPONENT
+  URL: /dayoutputnom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_input_output_nomination/IN_CLASS/TRNP_DAY_NOM_INPUT/CATEGORY/ENTRY_PATH/SHOW_OPERATIONAL/N/OUT_CLASS/TRNP_DAY_NOM_OUTPUT/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNP_DAY_NOM_OUTPUT
+  COMP_CODE: dayoutputnom
+  NAME: Daily Output Nominations
+  SIGNING_REQ_IND: null
+  URL: /dayoutputnom
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-773604717'
+keys:
+  COMPONENT_ID: PIPELINE_SEGMENT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/PIPELINE_SEGMENT/CLASS_NAME/PIPELINE_SEGMENT?screentemplate=/com.ec.frmw.co.screens/manage_object_navmodel_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PIPELINE_SEGMENT
+  COMPONENT_LABEL: Pipeline Segment
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: DISP_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 30.0
+  WINDOW_ID: ENERGYX
+related: {}

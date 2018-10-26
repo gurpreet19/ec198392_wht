@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1803403486'
+keys:
+  NAME: SeriesMode
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: PROD_MONTH_AREA_OIL
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: null
+  MANDATORY_IND: null
+  NAME: SeriesMode
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: COLUMNS
+  RESOLVE_TYPE: null
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: PROD_MONTH_AREA_OIL
+related: {}

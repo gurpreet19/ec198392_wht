@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1713363141'
+keys:
+  COMPONENT_ID: NOM_LOC_CONN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.co.screens/nomination_location_connection/NAV_MODEL/TRAN_OPERATIONAL/TARGET/NOMINATION_LOCATION/BF_PROFILE/CO.2076/CLASS/NOMLOC_CONNECTION/TRAN_NOMLOC_CONN/NETFLOW/TRAN_NOMLOC_CONN_POPUP/NetFlow?screentemplate=/com.ec.tran.co.screens/nomination_location_connection
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: NOM_LOC_CONN
+  COMPONENT_LABEL: Nomination Location Connection
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: DISP_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 170.0
+  WINDOW_ID: ENERGYX
+related: {}

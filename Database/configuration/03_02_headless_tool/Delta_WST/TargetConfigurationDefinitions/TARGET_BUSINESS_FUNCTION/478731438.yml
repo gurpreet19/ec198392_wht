@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '478731438'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.pr.screens/price_index_yearly
+parentKeys: {}
+properties:
+  BF_CODE: PR.0005
+  NAME: Yearly Index Values
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.pr.screens/price_index_yearly
+related: {}

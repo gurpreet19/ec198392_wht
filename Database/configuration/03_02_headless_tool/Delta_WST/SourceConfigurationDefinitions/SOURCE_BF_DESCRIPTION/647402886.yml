@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '647402886'
+keys:
+  BF_DESCRIPTION_NO: PA.0003
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PA.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_process_execution' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is designed to manually execute the process template business actions defined in the Process Template screen. Normally the purpose will be to test the process before creating a schedule (automated execution). Simply fill the parameters section and click Start Process to trigger an execution of a template. Each execution will initiate a new process instance. This process instance will have an isolated context of variables and can be monitored in the Process Overview screen. If the process template has prior executions, the system will populate the input fields with the variables used in the last execution of the selected process template.</p>
+related: {}

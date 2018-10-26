@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '494069726'
+keys:
+  BF_CODE: PO.0100.01
+  CLASS_NAME: OBJ_SINGLE_TRANSFER_FORM
+  COMP_CODE: ticket_data
+  T: BF_COMPONENT
+  URL: /ticket_data
+parentKeys: {}
+properties:
+  BF_CODE: PO.0100.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_single_transfer_object_form' )
+  CLASS_NAME: OBJ_SINGLE_TRANSFER_FORM
+  COMP_CODE: ticket_data
+  NAME: Ticket Data Section
+  SIGNING_REQ_IND: null
+  URL: /ticket_data
+related: {}

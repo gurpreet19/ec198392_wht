@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1403451739'
+keys:
+  BF_CODE: PP.0037
+  CLASS_NAME: FCST_STREAM_DAY_STATUS
+  COMP_CODE: daily_forecast
+  T: BF_COMPONENT
+  URL: /daily_forecast
+parentKeys: {}
+properties:
+  BF_CODE: PP.0037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_stream_forecast/GROUPMODEL/STREAM/TARGET/STREAM/CLASS_NAME/FCST_STREAM_DAY_STATUS/STRM_SET/PP.0037' )
+  CLASS_NAME: FCST_STREAM_DAY_STATUS
+  COMP_CODE: daily_forecast
+  NAME: Forecast Data
+  SIGNING_REQ_IND: null
+  URL: /daily_forecast
+related: {}

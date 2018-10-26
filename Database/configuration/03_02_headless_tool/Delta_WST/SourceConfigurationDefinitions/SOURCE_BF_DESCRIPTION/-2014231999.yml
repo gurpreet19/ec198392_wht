@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2014231999'
+keys:
+  BF_DESCRIPTION_NO: CO.2072
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/nompnt_code_connection' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used for setting up codes connected to nomination points. This will typically be used to configure upstream shippers or transaction types used by the Gas Dispatching nomination screens. </p><p> The user selects date and objects in the navigator. Any associated nomination points are displayed. Select a nomination point to see the codes connected to the selected nomination point. The user can add new rows, and set date ranges for which the association is valid. </p><p> This screen takes NAV_MODEL, TARGET, CLASS_LIST and CLASS as parameters on the treeview to make it possible for projects to create separate screens for different objects. The database table is generic and it is possible to build different classes on top of it for different objects. </p>
+related: {}

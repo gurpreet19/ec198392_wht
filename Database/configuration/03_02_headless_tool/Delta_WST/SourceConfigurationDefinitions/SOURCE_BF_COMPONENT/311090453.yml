@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '311090453'
+keys:
+  BF_CODE: SP.0055
+  CLASS_NAME: null
+  COMP_CODE: journal_entry_filters
+  T: BF_COMPONENT
+  URL: /journal_entry_filters
+parentKeys: {}
+properties:
+  BF_CODE: SP.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/ifac_journal_entry/NAV_MODEL/DATA_INTERFACE/NAV_TARGET/BUSINESS_UNIT' )
+  CLASS_NAME: null
+  COMP_CODE: journal_entry_filters
+  NAME: Journal Entry Filters
+  SIGNING_REQ_IND: null
+  URL: /journal_entry_filters
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1251892795'
+keys:
+  BF_CODE: CD.0069
+  CLASS_NAME: CUSTOMER
+  COMP_CODE: search
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0069
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/CUSTOMER/FROM_CLASS_NAME/CUSTOMER/TO_CLASS_NAME/CUSTOMER' )
+  CLASS_NAME: CUSTOMER
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

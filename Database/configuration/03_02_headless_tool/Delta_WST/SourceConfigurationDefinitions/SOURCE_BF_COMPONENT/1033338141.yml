@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1033338141'
+keys:
+  BF_CODE: PP.0046
+  CLASS_NAME: FCST_SHORTFALL_FACTORS
+  COMP_CODE: shortfall_factors
+  T: BF_COMPONENT
+  URL: /shortfall_factors
+parentKeys: {}
+properties:
+  BF_CODE: PP.0046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_shortfall_factors/CLASS_NAME/FCST_SHORTFALL_FACTORS/CLASS_NAME_2/FCST_SHORTFALL_OVERRIDES' )
+  CLASS_NAME: FCST_SHORTFALL_FACTORS
+  COMP_CODE: shortfall_factors
+  NAME: Shortfall Factors
+  SIGNING_REQ_IND: null
+  URL: /shortfall_factors
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1918527902'
+keys:
+  BF_CODE: WR.0049
+  CLASS_NAME: null
+  COMP_CODE: summarizeAllPwelSubToDailyButtonID
+  T: BF_COMPONENT
+  URL: /summarizeAllPwelSubToDailyButtonID
+parentKeys: {}
+properties:
+  BF_CODE: WR.0049
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2' )
+  CLASS_NAME: null
+  COMP_CODE: summarizeAllPwelSubToDailyButtonID
+  NAME: Aggregate Facility All
+  SIGNING_REQ_IND: null
+  URL: /summarizeAllPwelSubToDailyButtonID
+related: {}

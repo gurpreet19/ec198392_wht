@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1491676015'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.pr.screens/price_index_daily/CLASS/PRICE_RATE_DAY_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_RATE/TARGET_TYPE/self
+parentKeys: {}
+properties:
+  BF_CODE: PR.0034
+  NAME: Daily Price Rate
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.pr.screens/price_index_daily/CLASS/PRICE_RATE_DAY_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_RATE/TARGET_TYPE/self
+related: {}

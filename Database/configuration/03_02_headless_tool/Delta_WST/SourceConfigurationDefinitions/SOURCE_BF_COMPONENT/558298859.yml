@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '558298859'
+keys:
+  BF_CODE: GD.0045
+  CLASS_NAME: CALC_SUB_DAY_DISP_LOG
+  COMP_CODE: logcontent
+  T: BF_COMPONENT
+  URL: /logcontent
+parentKeys: {}
+properties:
+  BF_CODE: GD.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_disp_calc/NOMINATION_CYCLE/false' )
+  CLASS_NAME: CALC_SUB_DAY_DISP_LOG
+  COMP_CODE: logcontent
+  NAME: LogContent
+  SIGNING_REQ_IND: null
+  URL: /logcontent
+related: {}

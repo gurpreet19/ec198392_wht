@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-128207286'
+keys:
+  COMPONENT_ID: CO_SY_CP_LM
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/lock_module
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CO_SY_CP_LM
+  COMPONENT_LABEL: Revenue Lock Module
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: CP_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 5380.0
+  WINDOW_ID: ENERGYX
+related: {}

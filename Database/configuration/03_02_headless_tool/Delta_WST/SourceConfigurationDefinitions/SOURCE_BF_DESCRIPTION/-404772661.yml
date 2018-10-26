@@ -1,0 +1,26 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-404772661'
+keys:
+  BF_DESCRIPTION_NO: PA.0008
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PA.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/process_monitor_configuration' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This screen is designed to configure the Process Monitor screen.
+    It consists of two sections. The fist section defines the basic properties of
+    the process monitor including: code (unique), name, functional area, type and
+    description. In the second section, users can define which process templates to
+    monitor, which nodes of the process templates to be displayed and the display
+    settings of the process monitor.&nbsp;</p><p>The PROCESS TEMPLATES tab is used
+    to define the process templates to monitor. The dropdown lists all the process
+    templates registered in the Process Template screen.</p><p>The NODES tab is for
+    defining the specific nodes of the selected process template to monitor. If the
+    selected node is a sub-process node, users can also monitor the node of the sub-process
+    by adding it to the Sub-Node column.&nbsp;</p><p>The SETTINGS tab is for display
+    configuration, such as display time unit (Hours, days, months, production hours)
+    and sub-process associated nodes merging policy, and applying process instance
+    tag option.</p>'
+related: {}

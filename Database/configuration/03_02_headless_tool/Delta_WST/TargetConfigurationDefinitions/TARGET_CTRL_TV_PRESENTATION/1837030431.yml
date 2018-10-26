@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1837030431'
+keys:
+  COMPONENT_ID: PRODUCTION_TEST_SAMPLES
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.pt.screens/prod_test_samples
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PRODUCTION_TEST_SAMPLES
+  COMPONENT_LABEL: Production Test Samples
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_MULTI_RECORD_TESTING
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 20.0
+  WINDOW_ID: ENERGYX
+related: {}

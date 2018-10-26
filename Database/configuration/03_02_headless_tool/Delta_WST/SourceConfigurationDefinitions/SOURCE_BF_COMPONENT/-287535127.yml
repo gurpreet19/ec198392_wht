@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-287535127'
+keys:
+  BF_CODE: GD.0078
+  CLASS_NAME: METER_EVENT_FCST_QUALITY
+  COMP_CODE: meter_event
+  T: BF_COMPONENT
+  URL: /meter_event
+parentKeys: {}
+properties:
+  BF_CODE: GD.0078
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/meter_event_fcst_quality/CLASS/METER_EVENT_FCST_QUALITY/NAV_MODEL/TRAN_OPERATIONAL' )
+  CLASS_NAME: METER_EVENT_FCST_QUALITY
+  COMP_CODE: meter_event
+  NAME: Meter Event
+  SIGNING_REQ_IND: null
+  URL: /meter_event
+related: {}

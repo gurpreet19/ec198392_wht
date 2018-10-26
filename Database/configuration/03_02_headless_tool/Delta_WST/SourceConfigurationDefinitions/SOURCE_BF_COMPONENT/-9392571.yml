@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-9392571'
+keys:
+  BF_CODE: PD.0017
+  CLASS_NAME: WELL_EQPM_EVENT
+  COMP_CODE: deferment_event
+  T: BF_COMPONENT
+  URL: /deferment_event
+parentKeys: {}
+properties:
+  BF_CODE: PD.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/deferment_corrective_action' )
+  CLASS_NAME: WELL_EQPM_EVENT
+  COMP_CODE: deferment_event
+  NAME: Deferment Events for Master Events (PD.0006)
+  SIGNING_REQ_IND: null
+  URL: /deferment_event
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-512111606'
+keys:
+  BF_CODE: CD.0101
+  CLASS_NAME: CONTRACT
+  COMP_CODE: nav
+  T: BF_COMPONENT
+  URL: /contract_navigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0101
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_attribute/CLASS_NAME/REVN_CONTRACT/ACCESS_COLUMN/REVN_CODE' )
+  CLASS_NAME: CONTRACT
+  COMP_CODE: nav
+  NAME: Contract Navigator
+  SIGNING_REQ_IND: null
+  URL: /contract_navigator
+related: {}

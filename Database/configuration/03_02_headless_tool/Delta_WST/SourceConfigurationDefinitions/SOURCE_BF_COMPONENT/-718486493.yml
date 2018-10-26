@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-718486493'
+keys:
+  BF_CODE: SP.0057
+  CLASS_NAME: UNKNOWN
+  COMP_CODE: OpenPeriodForm
+  T: BF_COMPONENT
+  URL: /OpenPeriodForm
+parentKeys: {}
+properties:
+  BF_CODE: SP.0057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cont_summary_year' )
+  CLASS_NAME: UNKNOWN
+  COMP_CODE: OpenPeriodForm
+  NAME: Open Period Form
+  SIGNING_REQ_IND: null
+  URL: /OpenPeriodForm
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2114873440'
+keys:
+  BF_DESCRIPTION_NO: GD.0108
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0108
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_point_transfer/CLASS/TRNP_DAY_NOM_TRANSFER/NOMINATION_CYCLE/false/CATEGORY/ENTRY_EXIT_PATH/SHOW_OPERATIONAL/N' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to view and enter requested transfers between nomination points sharing the same nomination location. The counter nomination point&nbsp;popup shows all nomination points related to the same location based on the nomination point&rsquo;s entry or exit nomination location relation.&nbsp;</p><p>The business function also supports a third, optional dimension. This dimension can be used for relating the transfer to the counterparty&rsquo;s supplier nomination point.&nbsp;The supplier nomination point popup shows nomination points based on the counter nomination point&rsquo;s allowed supplier connections. These connections are created&nbsp;and maintained via CO.2052 - Nomination Point Connection.</p><p>Transfer nominations can either be entered into the system by this business function or via electronic messaging.</p><p>The navigation model uses by default TRAN_COMMERCIAL, but a different navigational model can be used by sending the navigational model as an argument from&nbsp;the treeview (argument NAV_MODEL).</p><p>Mandatory arguments which are needed in the url are CLASS.</p>
+related: {}

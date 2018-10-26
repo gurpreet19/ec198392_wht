@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1785032728'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: UPTIME
+parentKeys: {}
+properties:
+  CACHE_POLICY: NONE
+  CATEGORY: null
+  DESCRIPTION: Show the uptime of app server
+  LABEL: Uptime
+  NAME: Uptime
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.UptimeWidget
+  WIDGET_CODE: UPTIME
+related: {}

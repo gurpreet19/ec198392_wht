@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '24854716'
+keys:
+  BF_CODE: WL.0001
+  CLASS_NAME: TASK_LIST
+  COMP_CODE: tasks
+  T: BF_COMPONENT
+  URL: /tasks
+parentKeys: {}
+properties:
+  BF_CODE: WL.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/task_list' )
+  CLASS_NAME: TASK_LIST
+  COMP_CODE: tasks
+  NAME: Tasks
+  SIGNING_REQ_IND: null
+  URL: /tasks
+related: {}

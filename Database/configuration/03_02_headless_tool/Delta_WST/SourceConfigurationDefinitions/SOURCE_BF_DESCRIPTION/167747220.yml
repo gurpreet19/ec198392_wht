@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '167747220'
+keys:
+  BF_DESCRIPTION_NO: PO.0076
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0076
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_strm_profit_centre_splitby_co' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen is used to specify monthly Weight stream % splits per profit centre and company. The split should sum up to 100% for each profit centre. The <em>Profit </em><em>Centre </em>dropdown in the navigator is not mandatory. The screen consists of two sections.</p>
+
+    <p>The upper section shows actual splits based on the navigator choices. The lower section shows the sum per profit centre and is used to verify that the sum of entered splits should sums up to 100%.</p>
+
+    <p>All streams that should be available in this screen must be added to the stream set PO.0076 with label &lsquo;Monthly Stream Profit Centre Split By Company&rsquo;. This screen relies on instantiation procedure. Typically this screen will be used in combination with screen <em>CO.0155 Stream Profit Centre Connection </em>that is used to define profit centres being relevant for the various streams showing up in this Business Function.</p>
+related: {}

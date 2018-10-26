@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1072587174'
+keys:
+  BF_CODE: WR.0067
+  CLASS_NAME: null
+  COMP_CODE: save_upd_data_button
+  T: BF_COMPONENT
+  URL: /save_upd_data_button
+parentKeys: {}
+properties:
+  BF_CODE: WR.0067
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/webo_pressure_test' )
+  CLASS_NAME: null
+  COMP_CODE: save_upd_data_button
+  NAME: Save and Update Data Button
+  SIGNING_REQ_IND: null
+  URL: /save_upd_data_button
+related: {}

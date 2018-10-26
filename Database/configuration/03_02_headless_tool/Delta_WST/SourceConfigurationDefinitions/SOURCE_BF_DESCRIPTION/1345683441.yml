@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1345683441'
+keys:
+  BF_DESCRIPTION_NO: PP.0030
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This business function is used to define available Injection daily Well Forecast data, based on the selected scenario object. A scenario data can be created using insert functionality, and existing scenario data can be modified as per requirement. It is also possible to delete scenario data records that are no longer required.</p>
+    <p>The same well may also have monthly scenario data and it is registered in a separate business function screen. </p>
+related: {}

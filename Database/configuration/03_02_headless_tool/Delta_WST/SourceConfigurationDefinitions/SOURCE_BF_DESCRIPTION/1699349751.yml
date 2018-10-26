@@ -1,0 +1,53 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1699349751'
+keys:
+  BF_DESCRIPTION_NO: PO.0046
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_load_from_wells' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This Business Function is used to keep track of oil transported
+    from one or more production wells to a given single facility stream.</p><p>A typical
+    example of use can be when:</p><ul style="list-style-type:disc;margin-left:40px;"><li>Trucks
+    are used to transport produced oil from wells not connected to a production pipeline.
+    These wells produce into a tank. Trucks will then lift oil volumes from the tank
+    and transport the oil to a facility or pump it into a nearby transport pipeline.</li><li>Transporting
+    oil from wells when the transport pipeline is out of service</li></ul><p>A truck
+    will load up fluids from one or more well. Below is a simple illustration of the
+    scenario.</p><p><span style="font-size: 10pt;">When loading fluids from each of
+    the wells the truck driver will register the loaded amount into the trucking company
+    registration system (laptop or a paper form). This will include:</span></p><ul
+    style="list-style-type:disc;margin-left:40px;"><li>Gross volume</li><li>BSW%</li></ul><p>At
+    the receiving stream the following values will be registered:</p><ul style="list-style-type:disc;margin-left:40px;"><li>Gross
+    volume (excluding free water.)</li><li>BSW% (for the gross volume.)</li><li>Free
+    Water (free water settled during transport will typically be drained of the truck
+    and not pumping into the receiving stream.)</li></ul><p></p><p>Each loading/unloading
+    operation has an associated <em>Ticket. </em>All tickets volumes transported in
+    the same truck roundtrip are grouped into a <em>batch.&nbsp; </em>Typical usage
+    of the screen is that an operator at the receiving facility will receive all tickets
+    from the truck driver after loading is completed. The operator will then enter
+    all information related to the transport into EC.</p><p>Note! The well volumes
+    entered and calculated within this business function are not used by the production
+    allocation. Theoretical volumes used in allocation are found based on the <em>Theoretical
+    Calc Method </em>specified in the well configuration. Note that the facility where
+    the truck delivers the well fluids should match the operational facility (<em>Op
+    Facility Class 1) </em>in the well configuration.</p><p>Some projects only register
+    ticket number and not batch numbers. These projects can simply deactivate the
+    <em>Batch Number </em>attribute and it will then not show up on the screen.</p><p><u>Prorate
+    functionality</u></p><p>In theory, the sum of loaded oil and water volumes should
+    match the oil and water volumes unloaded at the receiving facility. In practice,
+    these will differ since the loaded quantities and unloaded quantities are measured
+    with different measurement devices with various accuracy. The receiving meter
+    is assumed to have higher accuracy compared to the field measurements taken at
+    the wells during truck loading. The business function, therefore, includes an
+    automatic calculation of prorated well gross oil, net oil and water volumes.</p><p>Well
+    gross and net oil volumes will be prorated to match the corresponding gross and
+    net volumes on the receiving stream as illustrated below:</p><p>Well<span style="font-size:
+    10pt;"> water volumes will be prorated to match the receipt stream water volume
+    + free water volume (drained off the truck).</span></p><p><span style="font-size:
+    10pt;">Both the original and prorated well volumes are maintained within the system
+    and are visible </span>on<span style="font-size: 10pt;"> the screen.</span></p>'
+related: {}

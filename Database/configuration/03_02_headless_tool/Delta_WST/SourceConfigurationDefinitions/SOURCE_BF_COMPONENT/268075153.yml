@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '268075153'
+keys:
+  BF_CODE: SA.0014
+  CLASS_NAME: SALE_CONTRACT
+  COMP_CODE: contracts
+  T: BF_COMPONENT
+  URL: /contracts
+parentKeys: {}
+properties:
+  BF_CODE: SA.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/monthly_expenditure' )
+  CLASS_NAME: SALE_CONTRACT
+  COMP_CODE: contracts
+  NAME: Contracts
+  SIGNING_REQ_IND: null
+  URL: /contracts
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1432306601'
+keys:
+  BF_DESCRIPTION_NO: CO.0089
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0089
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/ORIFICE_PLATE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This is a generic screen; see description of generic screens in the beginning of the configuration manual.</p>
+
+    <p>The orifice plate is the physical plate (circular plate having an internal opening) located in the meter. AGA 3 specifies various parameters relating to plate dimensions.</p>
+
+    <p>There are several physical orifice plates having identical manufacture data. EC does not keep track of each individual plate, but rather all distinct different types plates. When configuring a new AGA Stream, a reference to an orifice plate must be made.</p>
+related: {}

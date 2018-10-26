@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1689243201'
+keys:
+  COMPONENT_ID: IN_SU_RS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.in/rate_objects_selection/STREAM_CATEGORY_CODE/INV?screentemplate=/com.ec.revn.in/rate_objects_selection
+  COMPONENT_EXT_NAV_NAME: /STREAM_CATEGORY_CODE/INV?screentemplate=/com.ec.revn.in/rate_objects_selection
+  COMPONENT_ID: IN_SU_RS
+  COMPONENT_LABEL: Inventory Rate Selection
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: IN_SU_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4590.0
+  WINDOW_ID: ENERGYX
+related: {}

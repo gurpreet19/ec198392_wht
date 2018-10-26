@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '718913843'
+keys:
+  BF_CODE: CO.0220
+  CLASS_NAME: BLEND_CONTENT
+  COMP_CODE: lastsplits
+  T: BF_COMPONENT
+  URL: /lastsplits
+parentKeys: {}
+properties:
+  BF_CODE: CO.0220
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/blend_content_split' )
+  CLASS_NAME: BLEND_CONTENT
+  COMP_CODE: lastsplits
+  NAME: Last Effective Object Splits
+  SIGNING_REQ_IND: null
+  URL: /lastsplits
+related: {}

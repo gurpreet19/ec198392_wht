@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2098172821'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens.snd/stream_node_diagram/OBJ_CLASS/ALLOC_NETWORK/DATA_CLASS/ALLOC_NETWORK_LIST
+parentKeys: {}
+properties:
+  BF_CODE: CO.00941
+  NAME: Stream Node Diagram
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens.snd/stream_node_diagram/OBJ_CLASS/ALLOC_NETWORK/DATA_CLASS/ALLOC_NETWORK_LIST
+related: {}

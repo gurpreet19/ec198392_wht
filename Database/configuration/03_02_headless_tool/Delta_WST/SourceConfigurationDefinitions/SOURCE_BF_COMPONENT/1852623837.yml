@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1852623837'
+keys:
+  BF_CODE: CO.3020
+  CLASS_NAME: null
+  COMP_CODE: CopyNewSetButton
+  T: BF_COMPONENT
+  URL: /CopyNewSetButton
+parentKeys: {}
+properties:
+  BF_CODE: CO.3020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/price_index_factor/CLASS/PRICE_INDEX_FACTOR/NAV_MODEL/FINANCIAL/TARGET/PRICE_OBJECT/TARGET_TYPE/self' )
+  CLASS_NAME: null
+  COMP_CODE: CopyNewSetButton
+  NAME: CopySet
+  SIGNING_REQ_IND: null
+  URL: /CopyNewSetButton
+related: {}

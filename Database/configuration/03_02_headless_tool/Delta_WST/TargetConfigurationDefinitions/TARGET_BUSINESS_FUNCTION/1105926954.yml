@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1105926954'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.bs.xls/load_xls_workbook_tmpl
+parentKeys: {}
+properties:
+  BF_CODE: CO.0198
+  NAME: XLS Workbook Template - Import/Export
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.bs.xls/load_xls_workbook_tmpl
+related: {}

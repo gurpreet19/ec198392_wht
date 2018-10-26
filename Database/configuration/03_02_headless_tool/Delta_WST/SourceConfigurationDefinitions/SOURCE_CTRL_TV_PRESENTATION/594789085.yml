@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '594789085'
+keys:
+  COMPONENT_ID: CURRENCY_CREATE_MAINTAIN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CURRENCY?screentemplate=/com.ec.frmw.co.screens/manage_object_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CURRENCY_CREATE_MAINTAIN
+  COMPONENT_LABEL: Currency
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FINANCIAL_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 10.0
+  WINDOW_ID: ENERGYX
+related: {}

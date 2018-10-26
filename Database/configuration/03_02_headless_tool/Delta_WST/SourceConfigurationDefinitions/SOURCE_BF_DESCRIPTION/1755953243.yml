@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1755953243'
+keys:
+  BF_DESCRIPTION_NO: CD.0129
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0129
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_COST_CENTER' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Cost Centre screen</strong>    is used to manage the Cost Centre objects in EC.<br>    The Cost Centre is used for allocating cost and income in the financial    system.</p><p>    New Cost Centre objects can be generated from interfaced data entries by    Data Entry Interface screen (BF SP.0055).</p><p>    <u>The Cost Center attribute</u>    is the link to financial system.<br>    The Cost Centre should match in its entirety to a cost centre found in the    company financial system.</p>
+related: {}

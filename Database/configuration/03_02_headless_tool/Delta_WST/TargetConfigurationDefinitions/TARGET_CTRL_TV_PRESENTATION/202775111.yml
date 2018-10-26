@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '202775111'
+keys:
+  COMPONENT_ID: PROD_STORAGE_FCST
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/STORAGE/TARGET/STORAGE/DATA_CLASS/PROD_STORAGE_FORECAST?screentemplate=/com.ec.prod.pp.screens/prod_object_forecast
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PROD_STORAGE_FCST
+  COMPONENT_LABEL: Storage Forecast
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_OBJECT_FCST
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 210.0
+  WINDOW_ID: ENERGYX
+related: {}

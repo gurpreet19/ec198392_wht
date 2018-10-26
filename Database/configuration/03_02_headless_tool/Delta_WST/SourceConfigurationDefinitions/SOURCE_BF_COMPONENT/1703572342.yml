@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1703572342'
+keys:
+  BF_CODE: TO.0032
+  CLASS_NAME: CARGO_ANALYSIS_BASIC
+  COMP_CODE: cargoBasicAnalysis
+  T: BF_COMPONENT
+  URL: /cargoBasicAnalysis
+parentKeys: {}
+properties:
+  BF_CODE: TO.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/tab_harbour_menu' )
+  CLASS_NAME: CARGO_ANALYSIS_BASIC
+  COMP_CODE: cargoBasicAnalysis
+  NAME: Cargo Basic Analysis
+  SIGNING_REQ_IND: null
+  URL: /cargoBasicAnalysis
+related: {}

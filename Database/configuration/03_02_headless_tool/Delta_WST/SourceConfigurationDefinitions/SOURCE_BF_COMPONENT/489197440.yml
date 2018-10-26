@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '489197440'
+keys:
+  BF_CODE: SP.0017
+  CLASS_NAME: CONT_TRANSACTION
+  COMP_CODE: TransactionFormCustAttr
+  T: BF_COMPONENT
+  URL: /TransactionFormCustAttr
+parentKeys: {}
+properties:
+  BF_CODE: SP.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/transaction_general' )
+  CLASS_NAME: CONT_TRANSACTION
+  COMP_CODE: TransactionFormCustAttr
+  NAME: Customer Attributes
+  SIGNING_REQ_IND: null
+  URL: /TransactionFormCustAttr
+related: {}

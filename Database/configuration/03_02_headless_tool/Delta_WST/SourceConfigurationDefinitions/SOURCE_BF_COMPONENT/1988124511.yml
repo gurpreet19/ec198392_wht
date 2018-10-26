@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1988124511'
+keys:
+  BF_CODE: CP.0004
+  CLASS_NAME: STORAGE_LIFT_NOM_DETAIL
+  COMP_CODE: nominationDetail
+  T: BF_COMPONENT
+  URL: /nominationDetail
+parentKeys: {}
+properties:
+  BF_CODE: CP.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/nomination_details' )
+  CLASS_NAME: STORAGE_LIFT_NOM_DETAIL
+  COMP_CODE: nominationDetail
+  NAME: Nomination Detail
+  SIGNING_REQ_IND: null
+  URL: /nominationDetail
+related: {}

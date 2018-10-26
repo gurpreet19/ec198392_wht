@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1962660248'
+keys:
+  BF_CODE: PD.0013
+  CLASS_NAME: DEFER_LOSS_STRM_EVENT
+  COMP_CODE: table_stream_reading
+  T: BF_COMPONENT
+  URL: /table_stream_reading
+parentKeys: {}
+properties:
+  BF_CODE: PD.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_facility_loss_accounting' )
+  CLASS_NAME: DEFER_LOSS_STRM_EVENT
+  COMP_CODE: table_stream_reading
+  NAME: Streams
+  SIGNING_REQ_IND: null
+  URL: /table_stream_reading
+related: {}

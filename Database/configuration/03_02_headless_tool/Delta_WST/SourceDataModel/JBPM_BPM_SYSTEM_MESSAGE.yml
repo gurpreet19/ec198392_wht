@@ -1,0 +1,166 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_BPM_SYSTEM_MESSAGE
+cnstPrimaryKey:
+  columns:
+  - MESSAGE_SYSTEM_ID
+  - MESSAGE_ID
+  name: SYS_C008810
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  LINKED_MESSAGE_ID:
+    columnName: LINKED_MESSAGE_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  MESSAGE_CLASS_NAME:
+    columnName: MESSAGE_CLASS_NAME
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  MESSAGE_CONTENT_JSON:
+    columnName: MESSAGE_CONTENT_JSON
+    typeName: CLOB
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  MESSAGE_ID:
+    columnName: MESSAGE_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  MESSAGE_SYSTEM_CLASS_NAME:
+    columnName: MESSAGE_SYSTEM_CLASS_NAME
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  MESSAGE_SYSTEM_ID:
+    columnName: MESSAGE_SYSTEM_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  MESSAGE_SYSTEM_NAME:
+    columnName: MESSAGE_SYSTEM_NAME
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  MESSAGE_TIME:
+    columnName: MESSAGE_TIME
+    typeName: TIMESTAMP(6)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  MESSAGE_TYPE:
+    columnName: MESSAGE_TYPE
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+indexes:
+  I_JBPM_BPM_SYSTEM_MESSAGE_1:
+    indexName: I_JBPM_BPM_SYSTEM_MESSAGE_1
+    columns:
+    - MESSAGE_TYPE
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_JBPM_BPM_SYSTEM_MESSAGE_2:
+    indexName: I_JBPM_BPM_SYSTEM_MESSAGE_2
+    columns:
+    - LINKED_MESSAGE_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_JBPM_BPM_SYSTEM_MESSAGE_3:
+    indexName: I_JBPM_BPM_SYSTEM_MESSAGE_3
+    columns:
+    - MESSAGE_SYSTEM_NAME
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_JBPM_BPM_SYSTEM_MESSAGE_4:
+    indexName: I_JBPM_BPM_SYSTEM_MESSAGE_4
+    columns:
+    - MESSAGE_TIME
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

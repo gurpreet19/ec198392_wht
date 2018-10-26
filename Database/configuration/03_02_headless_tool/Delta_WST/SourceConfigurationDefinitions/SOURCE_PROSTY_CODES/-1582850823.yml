@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1582850823'
+keys:
+  CODE: KG
+  CODE_TYPE: MESSAGE_UNIT
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: Y
+  CODE: KG
+  CODE_TEXT: KiloGram
+  CODE_TYPE: MESSAGE_UNIT
+  DESCRIPTION: KiloGram
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 10.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-57176942'
+keys:
+  BF_CODE: IS.0001
+  CLASS_NAME: IMP_SOURCE_MAPPING
+  COMP_CODE: imp_source_mapping_table
+  T: BF_COMPONENT
+  URL: /imp_source_mapping_table
+parentKeys: {}
+properties:
+  BF_CODE: IS.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_src_mapping_setup' )
+  CLASS_NAME: IMP_SOURCE_MAPPING
+  COMP_CODE: imp_source_mapping_table
+  NAME: Source Mapping
+  SIGNING_REQ_IND: null
+  URL: /imp_source_mapping_table
+related: {}

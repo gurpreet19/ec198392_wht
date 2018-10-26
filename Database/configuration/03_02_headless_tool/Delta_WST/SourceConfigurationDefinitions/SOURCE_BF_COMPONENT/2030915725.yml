@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2030915725'
+keys:
+  BF_CODE: SP.0062
+  CLASS_NAME: null
+  COMP_CODE: refresh_cost_mapping_document_button
+  T: BF_COMPONENT
+  URL: /refresh_cost_mapping_document_button
+parentKeys: {}
+properties:
+  BF_CODE: SP.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/Y' )
+  CLASS_NAME: null
+  COMP_CODE: refresh_cost_mapping_document_button
+  NAME: Refresh Data Mapping Document Button
+  SIGNING_REQ_IND: null
+  URL: /refresh_cost_mapping_document_button
+related: {}

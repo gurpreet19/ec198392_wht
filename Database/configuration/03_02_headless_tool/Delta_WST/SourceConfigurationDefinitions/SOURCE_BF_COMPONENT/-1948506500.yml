@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1948506500'
+keys:
+  BF_CODE: CO.2063
+  CLASS_NAME: CARRIER_TANK_COOLDOWN
+  COMP_CODE: cooldown_table
+  T: BF_COMPONENT
+  URL: /cooldown_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.2063
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/carrier_cooldown' )
+  CLASS_NAME: CARRIER_TANK_COOLDOWN
+  COMP_CODE: cooldown_table
+  NAME: Carrier Tank Cooldown
+  SIGNING_REQ_IND: null
+  URL: /cooldown_table
+related: {}

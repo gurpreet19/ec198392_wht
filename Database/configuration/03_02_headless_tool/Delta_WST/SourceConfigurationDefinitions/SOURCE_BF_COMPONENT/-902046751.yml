@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-902046751'
+keys:
+  BF_CODE: RP.0015
+  CLASS_NAME: REPORT_PUBLISHED_RO
+  COMP_CODE: report_published_ro
+  T: BF_COMPONENT
+  URL: /report_published_ro
+parentKeys: {}
+properties:
+  BF_CODE: RP.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_publishing_read_only' )
+  CLASS_NAME: REPORT_PUBLISHED_RO
+  COMP_CODE: report_published_ro
+  NAME: Report Published Read Only
+  SIGNING_REQ_IND: null
+  URL: /report_published_ro
+related: {}

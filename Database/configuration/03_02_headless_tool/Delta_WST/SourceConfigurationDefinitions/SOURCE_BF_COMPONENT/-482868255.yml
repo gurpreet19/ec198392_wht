@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-482868255'
+keys:
+  BF_CODE: CD.0019
+  CLASS_NAME: null
+  COMP_CODE: tab
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.tab/tab
+parentKeys: {}
+properties:
+  BF_CODE: CD.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CUSTOMER' )
+  CLASS_NAME: null
+  COMP_CODE: tab
+  NAME: Tab control
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.tab/tab
+related: {}

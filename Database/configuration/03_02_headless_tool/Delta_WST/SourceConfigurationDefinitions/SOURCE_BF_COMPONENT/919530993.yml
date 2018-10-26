@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '919530993'
+keys:
+  BF_CODE: WR.0061
+  CLASS_NAME: WELL_CHEM_ANA_DETAIL
+  COMP_CODE: analysis_detail
+  T: BF_COMPONENT
+  URL: /analysis_detail
+parentKeys: {}
+properties:
+  BF_CODE: WR.0061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_chemical_sample_analysis' )
+  CLASS_NAME: WELL_CHEM_ANA_DETAIL
+  COMP_CODE: analysis_detail
+  NAME: Chemical Analysis Details
+  SIGNING_REQ_IND: null
+  URL: /analysis_detail
+related: {}

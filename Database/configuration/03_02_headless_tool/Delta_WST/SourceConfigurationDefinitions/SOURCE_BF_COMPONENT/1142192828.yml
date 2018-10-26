@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1142192828'
+keys:
+  BF_CODE: SP.0039
+  CLASS_NAME: JOURNAL_MAPPING_DATA_EXT
+  COMP_CODE: classForm
+  T: BF_COMPONENT
+  URL: /insert1
+parentKeys: {}
+properties:
+  BF_CODE: SP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_cost_mapping' )
+  CLASS_NAME: JOURNAL_MAPPING_DATA_EXT
+  COMP_CODE: classForm
+  NAME: New Class Mapping
+  SIGNING_REQ_IND: null
+  URL: /insert1
+related: {}

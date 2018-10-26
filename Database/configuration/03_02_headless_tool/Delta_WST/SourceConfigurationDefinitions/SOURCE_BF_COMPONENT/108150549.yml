@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '108150549'
+keys:
+  BF_CODE: GD.0001
+  CLASS_NAME: TCTR_DAY_DP_OUT_NOM
+  COMP_CODE: daynom
+  T: BF_COMPONENT
+  URL: /daynom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/output_nomination' )
+  CLASS_NAME: TCTR_DAY_DP_OUT_NOM
+  COMP_CODE: daynom
+  NAME: Daily Nominations
+  SIGNING_REQ_IND: null
+  URL: /daynom
+related: {}

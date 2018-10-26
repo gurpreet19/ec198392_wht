@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1430143553'
+keys:
+  BF_CODE: RP.0009
+  CLASS_NAME: null
+  COMP_CODE: settab
+  T: BF_COMPONENT
+  URL: /settab
+parentKeys: {}
+properties:
+  BF_CODE: RP.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/xls_report_set_definition' )
+  CLASS_NAME: null
+  COMP_CODE: settab
+  NAME: Set Setup Tab
+  SIGNING_REQ_IND: null
+  URL: /settab
+related: {}

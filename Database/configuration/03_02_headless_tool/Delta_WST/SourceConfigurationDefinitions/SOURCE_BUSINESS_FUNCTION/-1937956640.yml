@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1937956640'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/tt_validation_overview/ROOT_GROUP/D_ASSET_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: CO.0203
+  NAME: Validation Overview
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/tt_validation_overview/ROOT_GROUP/D_ASSET_STATUS
+related: {}

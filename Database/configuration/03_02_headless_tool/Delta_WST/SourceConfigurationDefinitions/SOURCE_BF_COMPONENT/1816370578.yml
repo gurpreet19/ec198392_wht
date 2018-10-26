@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1816370578'
+keys:
+  BF_CODE: MHM.0007
+  CLASS_NAME: journal_orig_msg
+  COMP_CODE: ResendInboundButton/editmsg
+  T: BF_COMPONENT
+  URL: /ResendInboundButton/editmsg
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_journal' )
+  CLASS_NAME: journal_orig_msg
+  COMP_CODE: ResendInboundButton/editmsg
+  NAME: Resend Inbound/Edit Message
+  SIGNING_REQ_IND: null
+  URL: /ResendInboundButton/editmsg
+related: {}

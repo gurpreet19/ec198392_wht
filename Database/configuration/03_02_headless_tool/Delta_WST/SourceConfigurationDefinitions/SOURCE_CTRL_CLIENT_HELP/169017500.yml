@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '169017500'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.fc/split_key_year/SPLIT_TYPE/SPLIT_ITEM_OTHER/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.fc/split_key_year/SPLIT_TYPE/SPLIT_ITEM_OTHER/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

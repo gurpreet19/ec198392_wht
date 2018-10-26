@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2080824383'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/cost_object_popup/SHOW_CLOSE_BUTTON/false
+parentKeys: {}
+properties:
+  BF_CODE: CD.0145
+  NAME: Cost Object Mapping Assistance
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/cost_object_popup/SHOW_CLOSE_BUTTON/false
+related: {}

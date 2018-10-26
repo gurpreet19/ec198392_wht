@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1326029490'
+keys:
+  BF_CODE: WR.0055
+  CLASS_NAME: IWEL_DAY_STATUS_GAS
+  COMP_CODE: period_gas_injection_well_status
+  T: BF_COMPONENT
+  URL: /period_gas_injection_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/period_gas_injection_well_status' )
+  CLASS_NAME: IWEL_DAY_STATUS_GAS
+  COMP_CODE: period_gas_injection_well_status
+  NAME: Period Gas Injection Well Status
+  SIGNING_REQ_IND: null
+  URL: /period_gas_injection_well_status
+related: {}

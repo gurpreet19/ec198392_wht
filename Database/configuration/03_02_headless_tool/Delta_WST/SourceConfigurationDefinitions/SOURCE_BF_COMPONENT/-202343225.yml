@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-202343225'
+keys:
+  BF_CODE: CO.1042
+  CLASS_NAME: CALC_STATIC_PARAMETER
+  COMP_CODE: static_param
+  T: BF_COMPONENT
+  URL: /static_param
+parentKeys: {}
+properties:
+  BF_CODE: CO.1042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/create_calculation' )
+  CLASS_NAME: CALC_STATIC_PARAMETER
+  COMP_CODE: static_param
+  NAME: Static Parameters
+  SIGNING_REQ_IND: null
+  URL: /static_param
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-908767017'
+keys:
+  COMPONENT_ID: PROCESSING_UNIT_MAINTAIN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/PROCESSING_UNIT/TARGET/PROCESSING_UNIT/CLASS_NAME/PROCESSING_UNIT?screentemplate=/com.ec.frmw.co.screens/manage_object_groupmodel_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PROCESSING_UNIT_MAINTAIN
+  COMPONENT_LABEL: Processing Unit
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: EQ_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 190.0
+  WINDOW_ID: ENERGYX
+related: {}

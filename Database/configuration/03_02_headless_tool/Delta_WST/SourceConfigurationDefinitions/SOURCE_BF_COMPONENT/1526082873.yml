@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1526082873'
+keys:
+  BF_CODE: PT.0018
+  CLASS_NAME: IWEL_EVENT_WATER
+  COMP_CODE: event_water_inj_well_data
+  T: BF_COMPONENT
+  URL: /event_water_inj_well_data
+parentKeys: {}
+properties:
+  BF_CODE: PT.0018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_water_injection_well_data' )
+  CLASS_NAME: IWEL_EVENT_WATER
+  COMP_CODE: event_water_inj_well_data
+  NAME: Event Water Injection Well Data
+  SIGNING_REQ_IND: null
+  URL: /event_water_inj_well_data
+related: {}

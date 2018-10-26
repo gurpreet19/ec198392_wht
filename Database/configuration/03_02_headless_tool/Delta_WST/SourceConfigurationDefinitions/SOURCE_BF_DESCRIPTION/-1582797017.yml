@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1582797017'
+keys:
+  BF_DESCRIPTION_NO: CO.0087
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0087
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/comp_set' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is a front end where the user is able to view the existing component sets and adding new component sets. It is not possible to delete existing component sets. The product is pre-configured with four components sets which are configured to support the business functions in Well Oil Component Analysis (WR.0010), Well Gas Component Analysis (WR.0010.01), Stream Oil Component Analysis (PO.0019) and Stream Gas Component Analysis (PO.0019.01).</p>
+related: {}

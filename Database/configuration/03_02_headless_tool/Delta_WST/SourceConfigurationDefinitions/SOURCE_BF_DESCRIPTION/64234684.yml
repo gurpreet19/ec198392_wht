@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '64234684'
+keys:
+  BF_DESCRIPTION_NO: TO.0003
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/exported_not_lifted' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Since most hydrocarbon accounting functions are performed on a monthly basis, it is essential to get monthly numbers as precise as possible for use in<br />reconciliation and official reporting purposes. A very common method is to determine the monthly inflow to each storage system by summarizing all completed&nbsp;lifting&rsquo;s during the month and add delta stock (difference between opening and closing stock over the month).</p><p>However in situations where a cargo is being lifted at month end, one must determine how much have been taken out of the storage at month end. This is done be&nbsp;making a recording of the gross meter reading at the appropriate time of the month end day. Note that officially, this quantity is not considered lifted, rather it is&nbsp;considered to be part of the storage &ndash; only when a bill of lading is issued, the quantity is lifted. Hence this month-end number will not result in any transactions to the&nbsp;lift accounts.</p><p>The definition of month end can vary from site to site. In many cases it is at midnight, but where a manual dip is used (sometimes government inspector will survey&nbsp;the dip), this could be during the morning 1st day of the month.</p><p>The purpose of the Month End Not Lifted business function is to enter the actual lifted value at month end, meaning at the time of doing the tank dip. Month End Not&nbsp;Lifted is only registered for Cargos where lifting has started, but not completed at month end.</p>
+related: {}

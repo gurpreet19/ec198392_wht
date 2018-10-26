@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1327694659'
+keys:
+  BF_CODE: CO.2036
+  CLASS_NAME: null
+  COMP_CODE: nav
+  T: BF_COMPONENT
+  URL: /nav
+parentKeys: {}
+properties:
+  BF_CODE: CO.2036
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/manage_contract_group_list/OBJ_CLASS/CONTRACT_GROUP/DATA_CLASS/CONTRACT_GROUP_LIST' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /nav
+related: {}

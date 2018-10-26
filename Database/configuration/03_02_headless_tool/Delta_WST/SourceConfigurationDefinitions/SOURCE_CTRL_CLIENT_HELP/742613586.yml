@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '742613586'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/manage_doc_sequence/CLASS_NAME/DOC_SEQUENCE
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/manage_doc_sequence/CLASS_NAME/DOC_SEQUENCE
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

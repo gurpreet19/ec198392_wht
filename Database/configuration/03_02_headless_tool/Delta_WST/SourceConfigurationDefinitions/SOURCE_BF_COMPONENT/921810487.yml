@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '921810487'
+keys:
+  BF_CODE: PT.0007
+  CLASS_NAME: PROD_TEST
+  COMP_CODE: prod_test_meas_data_set
+  T: BF_COMPONENT
+  URL: /prod_test_meas_data_set
+parentKeys: {}
+properties:
+  BF_CODE: PT.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_events' )
+  CLASS_NAME: PROD_TEST
+  COMP_CODE: prod_test_meas_data_set
+  NAME: Production Test Measurement Data Sets
+  SIGNING_REQ_IND: null
+  URL: /prod_test_meas_data_set
+related: {}

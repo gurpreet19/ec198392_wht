@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2038019073'
+keys:
+  BF_CODE: PO.0045
+  CLASS_NAME: STRM_LOAD_TO_WELLS
+  COMP_CODE: truck_ticket_load_to_wells_source_stream
+  T: BF_COMPONENT
+  URL: /truck_ticket_load_to_wells_source_stream
+parentKeys: {}
+properties:
+  BF_CODE: PO.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_load_to_wells' )
+  CLASS_NAME: STRM_LOAD_TO_WELLS
+  COMP_CODE: truck_ticket_load_to_wells_source_stream
+  NAME: Source Stream Data
+  SIGNING_REQ_IND: null
+  URL: /truck_ticket_load_to_wells_source_stream
+related: {}

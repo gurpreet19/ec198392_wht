@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '745365196'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/trans_inv_prod_stream/OBJ_CLASS/REVN_PROD_STREAM/DATA_CLASS/TRANS_INV_PROD_STREAM
+parentKeys: {}
+properties:
+  BF_CODE: IN.0036
+  NAME: Transactional Inventory Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/trans_inv_prod_stream/OBJ_CLASS/REVN_PROD_STREAM/DATA_CLASS/TRANS_INV_PROD_STREAM
+related: {}

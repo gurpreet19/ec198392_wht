@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1867807303'
+keys:
+  BF_DESCRIPTION_NO: CO.0131
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0131
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/schedule_history' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This screen allows a user to view the history of business actions which were run by the scheduler. This includes business actions which were run asynchronously such as the allocation jobs are today. You are able to rerun the business action from this screen; doing so will run the business action with exactly the same run time parameters as the previous time. You are also able to view the schedules currently running on all nodes.</p>
+related: {}

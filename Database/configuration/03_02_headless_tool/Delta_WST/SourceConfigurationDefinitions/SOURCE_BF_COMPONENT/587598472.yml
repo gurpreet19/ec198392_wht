@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '587598472'
+keys:
+  BF_CODE: PT.0003
+  CLASS_NAME: CURVE_PTST_RESULT
+  COMP_CODE: test_result_table
+  T: BF_COMPONENT
+  URL: /test_result_table
+parentKeys: {}
+properties:
+  BF_CODE: PT.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/well_performance_curve' )
+  CLASS_NAME: CURVE_PTST_RESULT
+  COMP_CODE: test_result_table
+  NAME: Test Results
+  SIGNING_REQ_IND: null
+  URL: /test_result_table
+related: {}

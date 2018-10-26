@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1040145598'
+keys:
+  CODE: hours_of_production_day
+  CODE_TYPE: BPM_DAYTIME_RANGE_STRATEGY
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: com.ec.bpm.ext.ec.daytime.HoursOfProductionDay
+  CODE: hours_of_production_day
+  CODE_TEXT: Hours of a production day
+  CODE_TYPE: BPM_DAYTIME_RANGE_STRATEGY
+  DESCRIPTION: Provides all hours (first minute in each hour) in a given day. Start of a day is calculated using the Production Day Offset.
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 10.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

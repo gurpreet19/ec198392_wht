@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1298422261'
+keys:
+  BF_CODE: CO.1026
+  CLASS_NAME: null
+  COMP_CODE: GenerateAllViews
+  T: BF_COMPONENT
+  URL: /GenerateAllViews
+parentKeys: {}
+properties:
+  BF_CODE: CO.1026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_class_attr_property' )
+  CLASS_NAME: null
+  COMP_CODE: GenerateAllViews
+  NAME: Generate All Class Views
+  SIGNING_REQ_IND: null
+  URL: /GenerateAllViews
+related: {}

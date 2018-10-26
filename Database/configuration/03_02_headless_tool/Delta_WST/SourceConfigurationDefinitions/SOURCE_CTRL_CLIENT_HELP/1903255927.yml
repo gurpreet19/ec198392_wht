@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1903255927'
+keys:
+  EC_CLIENT_OBJ: /com.ec.bpm.ext.ec.web/task_management
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.bpm.ext.ec.web/task_management
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

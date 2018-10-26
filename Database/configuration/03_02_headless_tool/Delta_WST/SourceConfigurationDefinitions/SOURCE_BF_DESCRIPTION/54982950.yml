@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '54982950'
+keys:
+  BF_DESCRIPTION_NO: SD.0003
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_delivery' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Once the gas-day is completed, the exact delivery under each contract must be determined.</p><p>Actual delivered quantities at a given delivery point are determined by actual measurements at same point and any allocation procedure in the event that multiple&nbsp;suppliers (often referred to as &ldquo;shippers&rdquo;) are delivering gas through same meter. It is the task of the transport operator to determine actual quantities delivered at&nbsp;each delivery point.</p><p>In some cases, there is a one-to-one relationship between gas sales contract and delivery point, meaning that the metered gas quantity will equal the delivery under&nbsp;that contract. In other cases, the actual metered quantity will need to be split down to multiple sales contracts at the same delivery point (referred to as &ldquo;Sales&nbsp;Allocation&rdquo;).</p><p>The Daily Delivery business function is a screen for entering/viewing actual gas quantity deliveries for a given contract / delivery point. Basic nomination and delivery&nbsp;information will be listed for the selected date range, and contracts and delivery points satisfying the navigator selection. When selecting one day, hourly values for&nbsp;this day will be listed, if available. The days in the middle section of the screen are the same found in Monthly Delivery (SD.0008) and same rules apply.</p><p>Delivery data in this business function will normally be &ldquo;instantiated&rdquo; by the system, i.e. empty rows are periodically written automatically. Alternatively, the delivery&nbsp;data can be automatically populated from interface, for instance from another EC product. When receiving data from an interface, the interface source will be the&nbsp;master. This means that if updated set of data is delivered from the interface, existing delivery data for the given period (day or hour) is overwritten.</p><p>Data will be stored (independently) at both daily and hourly (if available) level. This means that when they hourly values are changed, the monthly Delivered Qty is&nbsp;not updated (but the Aggregated Delivered Qty will reflect the update). Similarly, updates at daily level will not influence the hourly values.</p>
+related: {}

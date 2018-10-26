@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1967289560'
+keys:
+  COMPONENT_ID: BLEND_CONTENT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.co.screens/blend_content_split
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: BLEND_CONTENT
+  COMPONENT_LABEL: Maintain Blend Content Split
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: HYDROCARBON_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 113.0
+  WINDOW_ID: ENERGYX
+related: {}

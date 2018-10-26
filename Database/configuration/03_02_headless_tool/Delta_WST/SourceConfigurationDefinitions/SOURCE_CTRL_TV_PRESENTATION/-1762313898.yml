@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1762313898'
+keys:
+  COMPONENT_ID: TUG_BOAT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STORAGE/TARGET/STORAGE/CLASS_NAME/TUG_BOAT?screentemplate=/com.ec.frmw.co.screens/manage_object_groupmodel_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TUG_BOAT
+  COMPONENT_LABEL: Tug Boat
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 400.0
+  WINDOW_ID: ENERGYX
+related: {}

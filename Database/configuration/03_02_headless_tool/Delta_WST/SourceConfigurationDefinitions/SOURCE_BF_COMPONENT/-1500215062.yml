@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1500215062'
+keys:
+  BF_CODE: CO.1002
+  CLASS_NAME: T_BASIS_OBJECT
+  COMP_CODE: objects
+  T: BF_COMPONENT
+  URL: /objects
+parentKeys: {}
+properties:
+  BF_CODE: CO.1002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_access_objects' )
+  CLASS_NAME: T_BASIS_OBJECT
+  COMP_CODE: objects
+  NAME: Objects
+  SIGNING_REQ_IND: null
+  URL: /objects
+related: {}

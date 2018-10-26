@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1850874607'
+keys:
+  BF_CODE: WR.0080
+  CLASS_NAME: WELL_BLOWDOWN_EVENT
+  COMP_CODE: well_blowdown_event
+  T: BF_COMPONENT
+  URL: /well_blowdown_event
+parentKeys: {}
+properties:
+  BF_CODE: WR.0080
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_blowdown' )
+  CLASS_NAME: WELL_BLOWDOWN_EVENT
+  COMP_CODE: well_blowdown_event
+  NAME: Well Blowdown Event
+  SIGNING_REQ_IND: null
+  URL: /well_blowdown_event
+related: {}

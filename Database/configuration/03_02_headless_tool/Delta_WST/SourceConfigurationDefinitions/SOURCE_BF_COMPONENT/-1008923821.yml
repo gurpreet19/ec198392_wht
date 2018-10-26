@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1008923821'
+keys:
+  BF_CODE: SD.0002
+  CLASS_NAME: SCTR_DAY_NOM
+  COMP_CODE: daily_data
+  T: BF_COMPONENT
+  URL: /daily_data
+parentKeys: {}
+properties:
+  BF_CODE: SD.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_nomination' )
+  CLASS_NAME: SCTR_DAY_NOM
+  COMP_CODE: daily_data
+  NAME: Daily Data
+  SIGNING_REQ_IND: null
+  URL: /daily_data
+related: {}

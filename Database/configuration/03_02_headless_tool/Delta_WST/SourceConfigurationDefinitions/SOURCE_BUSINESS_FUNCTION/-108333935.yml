@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-108333935'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/STORAGE/TARGET/STORAGE/CLASS_NAME/FCST_STORAGE_DAY_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: PP.0035
+  NAME: Daily Storage Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/STORAGE/TARGET/STORAGE/CLASS_NAME/FCST_STORAGE_DAY_STATUS
+related: {}

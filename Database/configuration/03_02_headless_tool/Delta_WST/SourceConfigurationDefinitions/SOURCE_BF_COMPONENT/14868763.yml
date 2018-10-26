@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '14868763'
+keys:
+  BF_CODE: PO.0013
+  CLASS_NAME: FCTY_DAY_VESSEL
+  COMP_CODE: marine_operations
+  T: BF_COMPONENT
+  URL: /marine_operations
+parentKeys: {}
+properties:
+  BF_CODE: PO.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/marine_logistics' )
+  CLASS_NAME: FCTY_DAY_VESSEL
+  COMP_CODE: marine_operations
+  NAME: Marine Operations
+  SIGNING_REQ_IND: null
+  URL: /marine_operations
+related: {}

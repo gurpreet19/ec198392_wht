@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2070867928'
+keys:
+  BF_DESCRIPTION_NO: CO.0220
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0220
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/blend_content_split' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The blend content split defines the product split in percentage for a specific product corresponding to start date and blend selection.</p>
+
+    <p>The &lsquo;Copy Current Split&rsquo; button will create a new split based on the date and blend selected in navigator. The rows from previous split are copied and the end date is set to the new start date.</p>
+
+    <p>The &lsquo;Set End Date&rsquo; button will set the date from the navigator as the end date for rows in the Current Effective Split.</p>
+
+    <p>The last row in the screen contains a sum row. If the sum is more or less than 100 an error message is shown to the user.</p>
+
+    <p>To validate blend content split the rounding is set to 2 decimals.</p>
+related: {}

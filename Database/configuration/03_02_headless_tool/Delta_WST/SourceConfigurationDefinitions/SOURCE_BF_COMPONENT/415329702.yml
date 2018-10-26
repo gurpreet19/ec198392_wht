@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '415329702'
+keys:
+  BF_CODE: CP.0054
+  CLASS_NAME: STOR_DAY_PC_GRAPH
+  COMP_CODE: pc_graph
+  T: BF_COMPONENT
+  URL: /pc_graph
+parentKeys: {}
+properties:
+  BF_CODE: CP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/daily_rundown_actual_vs_forecast' )
+  CLASS_NAME: STOR_DAY_PC_GRAPH
+  COMP_CODE: pc_graph
+  NAME: Profit Centre Graph
+  SIGNING_REQ_IND: null
+  URL: /pc_graph
+related: {}

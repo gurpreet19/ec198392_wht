@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1308886978'
+keys:
+  BF_CODE: SA.0038
+  CLASS_NAME: SLCN_MTH_PRODUCT_QTY
+  COMP_CODE: monthly_data
+  T: BF_COMPONENT
+  URL: /monthly_data
+parentKeys: {}
+properties:
+  BF_CODE: SA.0038
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/monthly_np_data/CLASS/SLCN_MTH_PRODUCT_QTY/CLASS_DAY/SLCN_DAY_PRODUCT_QTY/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0038' )
+  CLASS_NAME: SLCN_MTH_PRODUCT_QTY
+  COMP_CODE: monthly_data
+  NAME: Monthly Data
+  SIGNING_REQ_IND: null
+  URL: /monthly_data
+related: {}

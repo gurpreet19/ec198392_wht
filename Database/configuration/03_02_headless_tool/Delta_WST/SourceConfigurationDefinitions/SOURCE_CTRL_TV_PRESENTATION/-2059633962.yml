@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2059633962'
+keys:
+  COMPONENT_ID: FCST_MONTHLY_PROD_UNIT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/monthly_prod_unit_forecast/CLASS_NAME/FCST_PRODUNIT_MTH_STATUS?screentemplate=/com.ec.prod.pp.screens/monthly_prod_unit_forecast
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: FCST_MONTHLY_PROD_UNIT
+  COMPONENT_LABEL: Monthly Production Unit Forecast
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_MONTHLY_FCST
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 44.0
+  WINDOW_ID: ENERGYX
+related: {}

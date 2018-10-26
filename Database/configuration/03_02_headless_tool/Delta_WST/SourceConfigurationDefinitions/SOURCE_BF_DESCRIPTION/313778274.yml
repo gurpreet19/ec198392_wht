@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '313778274'
+keys:
+  BF_DESCRIPTION_NO: SD.0021
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/monthly_forecast' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Monthly Forecast business function is a screen for entering/viewing forecasted gas deliveries for a given contract / delivery point. Forecast delivery information&nbsp;will be listed for selected months, and contracts and delivery points satisfying the navigator selection.</p><p>When selecting one month, daily values for this month will be listed, if available. The data in section 2 of the screen are the same as those found in Daily Gas Sales&nbsp;Forecast (SD.0001) and same rules apply. The data in this section are displayed in ascending order - e.g. the first day of the month is displayed at the top.&nbsp;The DCQ might be an adjusted value applied in the screen &ndash; Planned Delivery Restrictions.</p><p>Data will be stored (independently) at both monthly and daily (if available) level. This means that when the daily values are changed, the monthly Forecast Qty is not&nbsp;updated (but the Aggregated Forecast Qty will reflect the update). Similarly, updates at monthly level will not influence the daily values.</p>
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '188952929'
+keys:
+  BF_CODE: GD.0054
+  CLASS_NAME: CAPACITY_REL_OTHER
+  COMP_CODE: capRelOther
+  T: BF_COMPONENT
+  URL: /capRelOther
+parentKeys: {}
+properties:
+  BF_CODE: GD.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release' )
+  CLASS_NAME: CAPACITY_REL_OTHER
+  COMP_CODE: capRelOther
+  NAME: Other Terms
+  SIGNING_REQ_IND: null
+  URL: /capRelOther
+related: {}

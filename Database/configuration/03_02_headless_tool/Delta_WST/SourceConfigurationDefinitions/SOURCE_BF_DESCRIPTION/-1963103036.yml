@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1963103036'
+keys:
+  BF_DESCRIPTION_NO: SD.0012
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/planned_delivery_restrictions' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This BF handles planned maintenance events for contracts. The screen is typically used for maintenance days, where the capacity is planned to be lower than usual.&nbsp;The user selects the contract and the date for the planned event in the navigator, and uses the insert button to create new entries. The Adjusted DCQ number&nbsp;should not be larger than the DCQ on the contract. When an adjusted DCQ has been registered, this will override the DCQ on the contract for that day.</p>
+related: {}

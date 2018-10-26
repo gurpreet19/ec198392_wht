@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291513072'
+keys:
+  STREAM_SET: PO.0034
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Maintain Stream Company Split
+  STREAM_SET: PO.0034
+related: {}

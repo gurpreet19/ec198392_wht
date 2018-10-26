@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1240565562'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.co.screens/stream_mapping
+parentKeys: {}
+properties:
+  BF_CODE: CO.3018
+  NAME: Maintain Stream Mappings
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.co.screens/stream_mapping
+related: {}

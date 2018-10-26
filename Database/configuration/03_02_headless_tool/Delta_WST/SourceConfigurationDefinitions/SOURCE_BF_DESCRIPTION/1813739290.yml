@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1813739290'
+keys:
+  BF_DESCRIPTION_NO: GD.0003
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/delivery_point_target' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to view / edit delivery point targets. Initially the delivery point target is equal the the (last sent) output nominations. The dispatcher can change&nbsp;the target if required. If required the target can be imported from external interfaces, e.g Process Model. The target is stored at sub daily level, and summarized to&nbsp;day level. This target is normally edited on d-1 (meaning, one day before a given day).</p><p>In the Navigator, the user selects the date to which the delivery point target relates. The &ldquo;Go&rdquo; button will execute a search on the database and return for delivery&nbsp;points, the sum of the output nominations and the target. When a delivery point is selected in Day Target section, all the hourly rates are listed in Hourly Target&nbsp;section.</p><p>New sub daily delivery point targets are instantiated on d-2.</p>
+related: {}

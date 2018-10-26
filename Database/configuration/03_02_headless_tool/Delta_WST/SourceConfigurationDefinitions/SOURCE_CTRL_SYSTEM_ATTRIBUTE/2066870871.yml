@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2066870871'
+keys:
+  ATTRIBUTE_TYPE: DOC_GEN_LOG_LEVEL
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: INFO
+  ATTRIBUTE_TYPE: DOC_GEN_LOG_LEVEL
+  ATTRIBUTE_VALUE: null
+  COMMENTS: 'Default log level for document generation in EC Revenue. Valid choices:
+    INFO or DEBUG.'
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

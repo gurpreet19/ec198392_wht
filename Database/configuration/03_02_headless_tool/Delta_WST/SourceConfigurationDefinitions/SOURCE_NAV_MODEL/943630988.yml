@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '943630988'
+keys:
+  FROM_CLASS_NAME: CONTRACT_AREA
+  MODEL: ROYALTY
+  ROLE_NAME: CONTRACT_AREA
+  T: NAV_MODEL
+  TO_CLASS_NAME: CONTRACT
+parentKeys: {}
+properties:
+  DISABLED_IND: null
+  FORCE_NAV: null
+  FROM_CLASS_NAME: CONTRACT_AREA
+  MODEL: ROYALTY
+  MULTIPLICITY: 1:N
+  ROLE_NAME: CONTRACT_AREA
+  TO_CLASS_NAME: CONTRACT
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1551942044'
+keys:
+  BF_CODE: SP.0039
+  CLASS_NAME: REVN_DATA_FILTER
+  COMP_CODE: SetupButton/datafilter
+  T: BF_COMPONENT
+  URL: /SetupButton/DataFilter
+parentKeys: {}
+properties:
+  BF_CODE: SP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_cost_mapping' )
+  CLASS_NAME: REVN_DATA_FILTER
+  COMP_CODE: SetupButton/datafilter
+  NAME: SetupButton/DataFilter
+  SIGNING_REQ_IND: null
+  URL: /SetupButton/DataFilter
+related: {}

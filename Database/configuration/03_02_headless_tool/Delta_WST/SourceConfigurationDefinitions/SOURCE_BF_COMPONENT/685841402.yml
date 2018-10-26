@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '685841402'
+keys:
+  BF_CODE: CD.0067
+  CLASS_NAME: null
+  COMP_CODE: relations
+  T: BF_COMPONENT
+  URL: /relations
+parentKeys: {}
+properties:
+  BF_CODE: CD.0067
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/STREAM_ITEM_CATEGORY/FROM_CLASS_NAME/STREAM_ITEM_CATEGORY/TO_CLASS_NAME/STREAM_ITEM_CATEGORY' )
+  CLASS_NAME: null
+  COMP_CODE: relations
+  NAME: Relations
+  SIGNING_REQ_IND: null
+  URL: /relations
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1653359719'
+keys:
+  BF_CODE: IN.0024
+  CLASS_NAME: CALC_SALE_LOG
+  COMP_CODE: log_list
+  T: BF_COMPONENT
+  URL: /log_list
+parentKeys: {}
+properties:
+  BF_CODE: IN.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inventory_overview/ACCRUAL_IND/N' )
+  CLASS_NAME: CALC_SALE_LOG
+  COMP_CODE: log_list
+  NAME: Calculation Log
+  SIGNING_REQ_IND: null
+  URL: /log_list
+related: {}

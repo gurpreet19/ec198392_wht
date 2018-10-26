@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2107260771'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: SESSIONS
+parentKeys: {}
+properties:
+  CACHE_POLICY: '30'
+  CATEGORY: null
+  DESCRIPTION: Show number of active users on app server
+  LABEL: Active Sessions
+  NAME: Active Sessions
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.ActiveSessionsWidget
+  WIDGET_CODE: SESSIONS
+related: {}

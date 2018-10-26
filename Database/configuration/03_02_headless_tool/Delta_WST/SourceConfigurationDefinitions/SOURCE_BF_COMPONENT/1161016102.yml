@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1161016102'
+keys:
+  BF_CODE: CP.0068
+  CLASS_NAME: STOR_DAY_BAL_FCST_GRAPH
+  COMP_CODE: nomination_graph
+  T: BF_COMPONENT
+  URL: /nomination_graph
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: STOR_DAY_BAL_FCST_GRAPH
+  COMP_CODE: nomination_graph
+  NAME: Graph
+  SIGNING_REQ_IND: null
+  URL: /nomination_graph
+related: {}

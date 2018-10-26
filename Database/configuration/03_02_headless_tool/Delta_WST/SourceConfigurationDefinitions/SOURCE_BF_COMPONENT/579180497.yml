@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '579180497'
+keys:
+  BF_CODE: CD.0070
+  CLASS_NAME: null
+  COMP_CODE: StandardNavigator
+  T: BF_COMPONENT
+  URL: /standard_navigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0070
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/vatregno/CLASS_NAME/CUSTOMER/SETUP_CLASS/CUSTOMER_COUNTRY_SETUP' )
+  CLASS_NAME: null
+  COMP_CODE: StandardNavigator
+  NAME: Standard Navigator
+  SIGNING_REQ_IND: null
+  URL: /standard_navigator
+related: {}

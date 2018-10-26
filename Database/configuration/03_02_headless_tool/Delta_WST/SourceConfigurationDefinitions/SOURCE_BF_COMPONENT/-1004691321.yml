@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1004691321'
+keys:
+  BF_CODE: VO.0031
+  CLASS_NAME: PENDING_STIM_SI
+  COMP_CODE: si_list
+  T: BF_COMPONENT
+  URL: /stream_item_list
+parentKeys: {}
+properties:
+  BF_CODE: VO.0031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/stream_item_pending_updates/CLASS_NAME/STIM_DAY_PENDING' )
+  CLASS_NAME: PENDING_STIM_SI
+  COMP_CODE: si_list
+  NAME: SI List
+  SIGNING_REQ_IND: null
+  URL: /stream_item_list
+related: {}

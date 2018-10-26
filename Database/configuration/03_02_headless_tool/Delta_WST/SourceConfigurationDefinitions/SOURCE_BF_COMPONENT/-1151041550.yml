@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1151041550'
+keys:
+  BF_CODE: TO.0035
+  CLASS_NAME: PORT_RES_USAGE_POOL
+  COMP_CODE: pool
+  T: BF_COMPONENT
+  URL: /pool
+parentKeys: {}
+properties:
+  BF_CODE: TO.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/port_resource_usage' )
+  CLASS_NAME: PORT_RES_USAGE_POOL
+  COMP_CODE: pool
+  NAME: Port Resource Usage Pool
+  SIGNING_REQ_IND: null
+  URL: /pool
+related: {}

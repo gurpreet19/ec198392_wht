@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1822508501'
+keys:
+  BF_CODE: SP.0049
+  CLASS_NAME: SUMMARY_SET
+  COMP_CODE: daytimes
+  T: BF_COMPONENT
+  URL: /daytimes/insert
+parentKeys: {}
+properties:
+  BF_CODE: SP.0049
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/SUMMARY_SET' )
+  CLASS_NAME: SUMMARY_SET
+  COMP_CODE: daytimes
+  NAME: New Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes/insert
+related: {}

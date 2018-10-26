@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '749242208'
+keys:
+  BF_DESCRIPTION_NO: CO.0080
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0080
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/check_rule_group_comb' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The Rule Group Combination screen provides a user interface for creating new rule-group combinations, and maintenance of existing combinations. This screen is used to connect check rules to check groups.</p>
+related: {}

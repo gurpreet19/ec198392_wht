@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1385046769'
+keys:
+  BF_CODE: HA.0007
+  CLASS_NAME: MONTHLY_DATA_LOCK
+  COMP_CODE: month_lock_table
+  T: BF_COMPONENT
+  URL: /mth_lock_table
+parentKeys: {}
+properties:
+  BF_CODE: HA.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/mth_data_lock' )
+  CLASS_NAME: MONTHLY_DATA_LOCK
+  COMP_CODE: month_lock_table
+  NAME: Monthly Lock Table
+  SIGNING_REQ_IND: null
+  URL: /mth_lock_table
+related: {}

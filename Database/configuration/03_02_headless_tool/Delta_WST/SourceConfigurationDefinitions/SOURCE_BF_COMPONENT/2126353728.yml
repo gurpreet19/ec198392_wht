@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2126353728'
+keys:
+  BF_CODE: CO.2060
+  CLASS_NAME: null
+  COMP_CODE: button
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: CO.2060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/meter_allocation_method/TARGET/METER/NAV_MODEL/TRAN_OPERATIONAL' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Buttton
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

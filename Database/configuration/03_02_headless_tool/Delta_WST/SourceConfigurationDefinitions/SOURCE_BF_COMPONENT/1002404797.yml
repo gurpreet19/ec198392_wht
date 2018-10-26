@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1002404797'
+keys:
+  BF_CODE: SP.0062
+  CLASS_NAME: CONT_SUMMARY_DOC
+  COMP_CODE: summary_documents
+  T: BF_COMPONENT
+  URL: /summary_documents
+parentKeys: {}
+properties:
+  BF_CODE: SP.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/Y' )
+  CLASS_NAME: CONT_SUMMARY_DOC
+  COMP_CODE: summary_documents
+  NAME: Data Extract Documents
+  SIGNING_REQ_IND: null
+  URL: /summary_documents
+related: {}

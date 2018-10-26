@@ -1,0 +1,30 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-259890610'
+keys:
+  BF_COMPONENT_ACTION_NO: (SELECT BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION  WHERE BF_COMPONENT_NO = (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.00941' AND NVL(URL,'IS_NULL') = '/network' AND COMP_CODE ='allocation_network' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL') AND NVL(BF_COMPONENT_ACTION.URL, 'IS_NULL') = '/add_allocnode_port_topMenuBtn')
+  ITEM_CODE: add_allocnode_port_top
+  T: CNTX_MENU_ITEM
+parentKeys: {}
+properties:
+  ACTION_CLASS_NAME: null
+  ACTION_ROW_SCOPE: null
+  AUTO_SAVE_IND: null
+  BF_CODE: CO.00941
+  BF_COMPONENT_ACTION_NO: (SELECT BF_COMPONENT_ACTION_NO FROM BF_COMPONENT_ACTION  WHERE BF_COMPONENT_NO = (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CO.00941' AND NVL(URL,'IS_NULL') = '/network' AND COMP_CODE ='allocation_network' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL') AND NVL(BF_COMPONENT_ACTION.URL, 'IS_NULL') = '/add_allocnode_port_topMenuBtn')
+  COMP_CODE: allocation_network
+  CONFIRM_MESSAGE: null
+  DESCRIPTION: null
+  DIVIDER_IND: null
+  FUNC_HIDDEN: null
+  FUNC_MESSAGE: null
+  FUNC_VALIDATION: null
+  ITEM_CODE: add_allocnode_port_top
+  MAX_SELECTED_ROW: null
+  MIN_SELECTED_ROW: null
+  NAME: Top
+  PARENT_ITEM_CODE: add_allocnode_port
+  REMARK_IND: null
+  RENDER_TYPE: null
+  SORT_ORDER: 100.0
+  THRESHOLD_LEVEL: null
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1230650041'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/sub_daily_np_data/CLASS/SLNP_DAY_DELIVERY/CLASS_SUB/SLNP_SUB_DAY_DELIVERY/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0045
+parentKeys: {}
+properties:
+  BF_CODE: SD.0045
+  NAME: Sub Daily Sales Delivery
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/sub_daily_np_data/CLASS/SLNP_DAY_DELIVERY/CLASS_SUB/SLNP_SUB_DAY_DELIVERY/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0045
+related: {}

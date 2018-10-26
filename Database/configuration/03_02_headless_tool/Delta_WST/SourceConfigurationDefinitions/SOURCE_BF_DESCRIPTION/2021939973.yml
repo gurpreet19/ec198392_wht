@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2021939973'
+keys:
+  BF_DESCRIPTION_NO: CO.2054
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/CONTRACT/TARGET/CONTRACT_INVENTORY/CLASS_NAME/CONTRACT_INVENTORY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business function is used to create and maintain a contract inventory.</p>
+related: {}

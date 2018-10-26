@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1281296485'
+keys:
+  BF_CODE: CD.0061
+  CLASS_NAME: null
+  COMP_CODE: createRelationsTable1
+  T: BF_COMPONENT
+  URL: /table1
+parentKeys: {}
+properties:
+  BF_CODE: CD.0061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/NODE/FROM_CLASS_NAME/NODE/TO_CLASS_NAME/NODE' )
+  CLASS_NAME: null
+  COMP_CODE: createRelationsTable1
+  NAME: Create Relations - Main Table
+  SIGNING_REQ_IND: null
+  URL: /table1
+related: {}

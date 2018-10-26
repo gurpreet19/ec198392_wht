@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1140039430'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/rate_values/STREAM_CATEGORY_CODE/INV
+parentKeys: {}
+properties:
+  BF_CODE: IN.0015
+  NAME: Inventory Rate Values
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/rate_values/STREAM_CATEGORY_CODE/INV
+related: {}

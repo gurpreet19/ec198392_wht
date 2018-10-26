@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-654029235'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.sa.screens/daily_contract_calc_result/BF_PROFILE/SA.0019.DS/CLASS/SCTR_ACC_DAY_DS_ALLOC
+parentKeys: {}
+properties:
+  BF_CODE: SA.0019.DS
+  NAME: Daily Contract Account Result – Dataset
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.sa.screens/daily_contract_calc_result/BF_PROFILE/SA.0019.DS/CLASS/SCTR_ACC_DAY_DS_ALLOC
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-387970296'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/trans_tag_activity
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/trans_tag_activity
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

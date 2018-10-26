@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-369929562'
+keys:
+  BF_CODE: SP.0048
+  CLASS_NAME: CONT_ERP_POSTINGS
+  COMP_CODE: postings
+  T: BF_COMPONENT
+  URL: /get_cont_erp_posting
+parentKeys: {}
+properties:
+  BF_CODE: SP.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_erp_documents' )
+  CLASS_NAME: CONT_ERP_POSTINGS
+  COMP_CODE: postings
+  NAME: Postings
+  SIGNING_REQ_IND: null
+  URL: /get_cont_erp_posting
+related: {}

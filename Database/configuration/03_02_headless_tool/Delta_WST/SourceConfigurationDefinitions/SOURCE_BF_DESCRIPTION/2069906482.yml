@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2069906482'
+keys:
+  BF_DESCRIPTION_NO: CD.0131
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0131
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/OBJECT_LIST' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Object List screen</strong>    defines Object Lists to be used in Cost Mapping source setup.</p><p>    Object Lists can be used with all object classes, but the initial intention    is to use the lists for Cost Mapping related classes.</p><p>    Class name is mandatory. The lists themselves can contain both Actual    Objects and keyed in codes.</p><p>    For more information see Object List Setup screen (BF CD.0132).</p>
+related: {}

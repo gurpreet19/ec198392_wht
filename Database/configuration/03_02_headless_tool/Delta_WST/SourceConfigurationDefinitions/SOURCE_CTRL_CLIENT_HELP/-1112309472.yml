@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1112309472'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.mhm.screens/message_workflow_overview
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.mhm.screens/message_workflow_overview
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

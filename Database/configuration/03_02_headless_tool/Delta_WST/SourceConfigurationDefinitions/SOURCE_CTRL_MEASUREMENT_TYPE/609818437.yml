@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '609818437'
+keys:
+  MEASUREMENT_TYPE: WATER_MASS_RATE_MTH
+  T: CTRL_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: Water mass rate per month
+  FORMAT_MASK: '###,###,##0.0'
+  MEASUREMENT_TYPE: WATER_MASS_RATE_MTH
+related: {}

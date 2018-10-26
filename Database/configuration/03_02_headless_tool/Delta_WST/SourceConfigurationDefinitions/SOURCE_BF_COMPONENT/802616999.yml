@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '802616999'
+keys:
+  BF_CODE: CO.1024
+  CLASS_NAME: null
+  COMP_CODE: sources
+  T: BF_COMPONENT
+  URL: /sources
+parentKeys: {}
+properties:
+  BF_CODE: CO.1024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/text_translation' )
+  CLASS_NAME: null
+  COMP_CODE: sources
+  NAME: Sources
+  SIGNING_REQ_IND: null
+  URL: /sources
+related: {}

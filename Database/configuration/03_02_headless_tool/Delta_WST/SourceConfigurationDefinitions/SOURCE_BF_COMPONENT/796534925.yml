@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '796534925'
+keys:
+  BF_CODE: SP.0062
+  CLASS_NAME: null
+  COMP_CODE: run_cost_mapping_tracing_report_button
+  T: BF_COMPONENT
+  URL: /run_cost_mapping_tracing_report_button
+parentKeys: {}
+properties:
+  BF_CODE: SP.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/Y' )
+  CLASS_NAME: null
+  COMP_CODE: run_cost_mapping_tracing_report_button
+  NAME: Run Data Mapping Tracing Report Button
+  SIGNING_REQ_IND: null
+  URL: /run_cost_mapping_tracing_report_button
+related: {}

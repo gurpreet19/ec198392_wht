@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2015160998'
+keys:
+  BF_CODE: CO.0226
+  CLASS_NAME: EVENT_ATTACHMENT
+  COMP_CODE: attachments
+  T: BF_COMPONENT
+  URL: /attachments
+parentKeys: {}
+properties:
+  BF_CODE: CO.0226
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/mismeasurement_event' )
+  CLASS_NAME: EVENT_ATTACHMENT
+  COMP_CODE: attachments
+  NAME: Attachments
+  SIGNING_REQ_IND: null
+  URL: /attachments
+related: {}

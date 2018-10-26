@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1564054133'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/forecast_quality_factors/CLASS_NAME/FCST_QUALITY_FACTORS
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/forecast_quality_factors/CLASS_NAME/FCST_QUALITY_FACTORS
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '117297861'
+keys:
+  COMPONENT_ID: CUSTOMER_VAT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/vatregno/CLASS_NAME/CUSTOMER/SETUP_CLASS/CUSTOMER_COUNTRY_SETUP?screentemplate=/com.ec.revn.cd/vatregno&NAVQUERY=/com.ec.revn.cd/query/get_customer_vatregno_filternavigator.xml&NAVLAYOUT=/com.ec.revn.cd/layout/customer_vatregno_filternavigator.xml
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CUSTOMER_VAT
+  COMPONENT_LABEL: Customer VAT Reg No
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: COMMERCIAL_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 80.0
+  WINDOW_ID: ENERGYX
+related: {}

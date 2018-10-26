@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-997726919'
+keys:
+  BF_DESCRIPTION_NO: GD.0035
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_confirmation/CLASS/TRNP_DAY_NOM_LOC_CONF/SUB_CLASS/TRNP_SUB_DAY_LOC_CONF/NAV_MODEL/TRAN_COMMERCIAL/NOMINATION_CYCLE/false/USE_NOM_CON/N/COUNTER_BF_PROFILE/DEF_TRAN' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function offer the operator manual control over the data used in the matching process. It is possible to modify an existing nomination pair or add new nomination pairs for a matching case when a problem occurs.</p><p>Data can be inserted manually for daily and sub daily, inserting data in the 1st data section will instantiate the sub daily record defaulting the production day, summer&nbsp;time, daytime, nomination point.<br />Standard aggregation from sub daily records to daily record will result from the difference between the sum of the sub daily TRAN_INPUT and TRAN_OUTPUT, the&nbsp;result is always positive and the greater sum between the TRAN_INPUT and TRAN_OUTPUT will own the Confirmation Status in the daily record, the confirmation&nbsp;Status denotes that the quantity is positive or negative; TRAN_INPUT is negative and TRAN_OUTPUT is positive.</p><p>The split and copy functionality will not currently be supported by the product. The project must add this functionality (project-specific buttons).<br />The project should keep the &ldquo;Upstream&rdquo; and &ldquo;Downstream&rdquo; columns of the first table editable. This will make it possible to enter the daily quantities to split.</p><p>The navigation model uses by default TRAN_COMMERCIAL, but a different navigational model can be used by sending the navigational model as an argument from&nbsp;the treeview (argument NAV_MODEL). When using a different navigational model it is important to be aware of the owner of the data class and the target must be&nbsp;the same object.</p><p>To see arguments made available for this business function please see section 1.2.4.2.</p><p>Mandatory arguments which are needed in the url are only CLASS and SUB_CLASS.</p>
+related: {}

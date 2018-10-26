@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1459826580'
+keys:
+  BF_CODE: GD.0032
+  CLASS_NAME: null
+  COMP_CODE: tab
+  T: BF_COMPONENT
+  URL: /tab
+parentKeys: {}
+properties:
+  BF_CODE: GD.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_contract_loc_inventory' )
+  CLASS_NAME: null
+  COMP_CODE: tab
+  NAME: Tab control
+  SIGNING_REQ_IND: null
+  URL: /tab
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1786389517'
+keys:
+  BF_CODE: WR.0048
+  CLASS_NAME: IWEL_PERIOD_STATUS
+  COMP_CODE: table_well_status
+  T: BF_COMPONENT
+  URL: /table_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/injection_well_active_status' )
+  CLASS_NAME: IWEL_PERIOD_STATUS
+  COMP_CODE: table_well_status
+  NAME: Well Status
+  SIGNING_REQ_IND: null
+  URL: /table_well_status
+related: {}

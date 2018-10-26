@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1801959390'
+keys:
+  KEY: EQPM_EVENT_MANDATORY_OP
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Mandatory level options for Operational group model:PRODUCTIONUNIT|SUB_UNIT|AREA|SUB_AREA|FCTY_CLASS_2|FCTY_CLASS_1
+  KEY: EQPM_EVENT_MANDATORY_OP
+  LABEL: Equipment Event Data(PO.0064):Custom Mandatory Navigation-Operational
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

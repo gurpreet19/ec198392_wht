@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-922451444'
+keys:
+  BF_DESCRIPTION_NO: CP.0005
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/loading_instruction' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used for issuing lifting instructions to the terminal with the possibility of adjusting scheduled quantity without violating the agreement with&nbsp;the lifter/consignee.</p><p>The scheduler typically sets the Scheduled Quantity and Tolerance Type. Tolerance Type defines the agreed tolerances between Scheduled and Lifted quantities.</p><p>Further, the scheduler approves the cargos (and implicitly the nominations). Approving the cargos at this level means that a cargo changes status from &lsquo;Official and&nbsp;Ready for Harbour&rsquo;. When a cargo is set to &lsquo;Official and Ready for Harbour&rsquo;, it will be available in the Terminal Operations business functions. Further, the data for&nbsp;Cargo Activity Timesheet (TO.0001), Cargo Analysis (TO.0006), and BLMR Info (TO.0005) is instantiated. For more information on cargo status rules please refer EC Transport Cargo Status Rules.</p><p>If required, Voyage No and Berth can be entered. Voyage No is an unique identifier, related to the specific shipment. Berth is the ships position at the terminal quay.</p><p>Balance indicator is used to indicate what nomination should get the balance from the total lifted quantity. This is typically used together with the Batch Quantity&nbsp;(TO.0013) business function. There can only be one nomination with balance indicator set for each storage/product.</p>
+related: {}

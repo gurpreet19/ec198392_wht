@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-930218545'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: AREA_TOP5_MTH_OIL_PROD
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Top 5 Monthly Oil Producers at Area
+  LABEL: Top 5 Monthly Oil Producers at Area
+  NAME: AreaTop5MthOilProducers
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: AREA_TOP5_MTH_OIL_PROD
+related: {}

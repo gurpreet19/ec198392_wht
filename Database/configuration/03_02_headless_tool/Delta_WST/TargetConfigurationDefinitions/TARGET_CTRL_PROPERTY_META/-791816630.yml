@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-791816630'
+keys:
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/groupmodel/GENERATOR
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: NAV_DEF_VALUE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Default values in group model for generator navigators
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/groupmodel/GENERATOR
+  LABEL: Default values in group model for generator navigators
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

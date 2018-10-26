@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1811705731'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pd.screens/automatic_deferment_raw_data
+parentKeys: {}
+properties:
+  BF_CODE: PD.0024
+  NAME: Automatic Deferment Raw Data
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pd.screens/automatic_deferment_raw_data
+related: {}

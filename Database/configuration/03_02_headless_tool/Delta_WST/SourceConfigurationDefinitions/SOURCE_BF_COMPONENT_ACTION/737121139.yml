@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '737121139'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0022' AND NVL(URL,'IS_NULL') = '/pay_tracking_items' AND COMP_CODE ='payment_tracking_items' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_PAY_TRACKING_ITEM')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0022' AND NVL(URL,'IS_NULL') = '/pay_tracking_items' AND COMP_CODE ='payment_tracking_items' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_PAY_TRACKING_ITEM')
+  COMMENTS: null
+  NAME: Payment Tracking Items /save
+  URL: /save
+related: {}

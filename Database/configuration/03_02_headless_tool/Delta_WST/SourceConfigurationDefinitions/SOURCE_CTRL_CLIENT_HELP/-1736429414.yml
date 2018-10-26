@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1736429414'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.report.screens/export_to_excel_express
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.report.screens/export_to_excel_express
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

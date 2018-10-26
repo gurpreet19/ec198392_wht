@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2063413681'
+keys:
+  BF_CODE: CO.0070
+  CLASS_NAME: CHEM_TANK
+  COMP_CODE: objectdates
+  T: BF_COMPONENT
+  URL: /objectdates
+parentKeys: {}
+properties:
+  BF_CODE: CO.0070
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CHEM_TANK/TARGET/CHEM_TANK/CLASS_NAME/CHEM_TANK' )
+  CLASS_NAME: CHEM_TANK
+  COMP_CODE: objectdates
+  NAME: Object Start Date and End Date
+  SIGNING_REQ_IND: null
+  URL: /objectdates
+related: {}

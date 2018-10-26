@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1477116445'
+keys:
+  BF_CODE: GD.0006
+  CLASS_NAME: null
+  COMP_CODE: download
+  T: BF_COMPONENT
+  URL: /download
+parentKeys: {}
+properties:
+  BF_CODE: GD.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_day_delivery_calc' )
+  CLASS_NAME: null
+  COMP_CODE: download
+  NAME: Download
+  SIGNING_REQ_IND: null
+  URL: /download
+related: {}

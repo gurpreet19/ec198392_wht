@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1188337194'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/create_calc_rule
+parentKeys: {}
+properties:
+  BF_CODE: CO.0104
+  NAME: Create Calculation Rule
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens/create_calc_rule
+related: {}

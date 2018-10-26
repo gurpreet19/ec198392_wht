@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-250164592'
+keys:
+  BF_CODE: CP.0072
+  CLASS_NAME: STORAGE_LIFT_NOM_SCHED
+  COMP_CODE: nominations
+  T: BF_COMPONENT
+  URL: /nominations
+parentKeys: {}
+properties:
+  BF_CODE: CP.0072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/schedule_lifting_overview' )
+  CLASS_NAME: STORAGE_LIFT_NOM_SCHED
+  COMP_CODE: nominations
+  NAME: Nominations
+  SIGNING_REQ_IND: null
+  URL: /nominations
+related: {}

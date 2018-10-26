@@ -1,0 +1,886 @@
+ATTRIBUTE_TYPE=ACC_REV_INTERFACE_IND DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1881990019'
+  keys:
+    ATTRIBUTE_TYPE: ACC_REV_INTERFACE_IND
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=ACC_REV_VALIDATION_LEVEL DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '761596540'
+  keys:
+    ATTRIBUTE_TYPE: ACC_REV_VALIDATION_LEVEL
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=ACNT_LOGIC_DATE_METHOD DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1834931714'
+  keys:
+    ATTRIBUTE_TYPE: ACNT_LOGIC_DATE_METHOD
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=ADJUST_POTENTIAL_DST DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2017573944'
+  keys:
+    ATTRIBUTE_TYPE: ADJUST_POTENTIAL_DST
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties:
+    ATTRIBUTE_TEXT: Y
+  related: {}
+  status: MODIFIED
+ATTRIBUTE_TYPE=ALIGN_REPORTING_BOOKING DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1701933746'
+  keys:
+    ATTRIBUTE_TYPE: ALIGN_REPORTING_BOOKING
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=ALLOW_ALLOC_LOCK_MONTH DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '998543120'
+  keys:
+    ATTRIBUTE_TYPE: ALLOW_ALLOC_LOCK_MONTH
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties:
+    COMMENTS: Indicates whether daily/monthly allocation is allowed on locked months
+  related: {}
+  status: MODIFIED
+ATTRIBUTE_TYPE=ALLOW_BATCH_OPTION DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1022899308'
+  keys:
+    ATTRIBUTE_TYPE: ALLOW_BATCH_OPTION
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=ALLOW_WT_MULTISELECT DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2124892749'
+  keys:
+    ATTRIBUTE_TYPE: ALLOW_WT_MULTISELECT
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=ALWAYS_GEN_POSTING DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1940667033'
+  keys:
+    ATTRIBUTE_TYPE: ALWAYS_GEN_POSTING
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=API_CALC_BIT_DENSITY_MAX DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1784735802'
+  keys:
+    ATTRIBUTE_TYPE: API_CALC_BIT_DENSITY_MAX
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=API_CALC_BIT_DENSITY_MIN DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-760784856'
+  keys:
+    ATTRIBUTE_TYPE: API_CALC_BIT_DENSITY_MIN
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=API_CALC_DIL_DENSITY_MAX DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-807244364'
+  keys:
+    ATTRIBUTE_TYPE: API_CALC_DIL_DENSITY_MAX
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=API_CALC_DIL_DENSITY_MIN DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '942202274'
+  keys:
+    ATTRIBUTE_TYPE: API_CALC_DIL_DENSITY_MIN
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=API_CALC_MAX_ITERATIONS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2021482758'
+  keys:
+    ATTRIBUTE_TYPE: API_CALC_MAX_ITERATIONS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=API_CALC_TOLERANCE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1791711124'
+  keys:
+    ATTRIBUTE_TYPE: API_CALC_TOLERANCE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=API_VCF_PRESS_CORR DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1697332617'
+  keys:
+    ATTRIBUTE_TYPE: API_VCF_PRESS_CORR
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=CASCADE_BOE_FACT_CHANGE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1744906987'
+  keys:
+    ATTRIBUTE_TYPE: CASCADE_BOE_FACT_CHANGE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=CASCADE_CONV_FACT_CHANGE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-894761689'
+  keys:
+    ATTRIBUTE_TYPE: CASCADE_CONV_FACT_CHANGE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=CASCADE_LOG_LEVEL DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '146859298'
+  keys:
+    ATTRIBUTE_TYPE: CASCADE_LOG_LEVEL
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=CASCADE_SI_CHANGE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-294074286'
+  keys:
+    ATTRIBUTE_TYPE: CASCADE_SI_CHANGE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=CASCADE_SK_SHARE_CHANGE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-809339760'
+  keys:
+    ATTRIBUTE_TYPE: CASCADE_SK_SHARE_CHANGE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DB_DEBUG_LEVEL DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1992129381'
+  keys:
+    ATTRIBUTE_TYPE: DB_DEBUG_LEVEL
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties:
+    COMMENTS: 'Sets debug level for writing debug text. Values: ''DEBUG'', ''ERROR''
+      or ''FALSE'' (default)'
+  related: {}
+  status: MODIFIED
+ATTRIBUTE_TYPE=DEFAULT_BOOKING_PERIOD DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1739485719'
+  keys:
+    ATTRIBUTE_TYPE: DEFAULT_BOOKING_PERIOD
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DEFAULT_EC_RPT_SET_DATE DAYTIME=01-01-2010 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-259781210'
+  keys:
+    ATTRIBUTE_TYPE: DEFAULT_EC_RPT_SET_DATE
+    DAYTIME: 2010-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DEFAULT_REVERSAL_CODE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-466430940'
+  keys:
+    ATTRIBUTE_TYPE: DEFAULT_REVERSAL_CODE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DEFAULT_REVERSAL_DATE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1383258725'
+  keys:
+    ATTRIBUTE_TYPE: DEFAULT_REVERSAL_DATE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DEFERMENT_VERSION DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1806217005'
+  keys:
+    ATTRIBUTE_TYPE: DEFERMENT_VERSION
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties:
+    ATTRIBUTE_TEXT: PD.0020
+    COMMENTS: Choose between PD.0001 / PD.0004 / PD.0020
+  related: {}
+  status: MODIFIED
+ATTRIBUTE_TYPE=DEF_USE_STREAM_ITEMS_IND DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1933678359'
+  keys:
+    ATTRIBUTE_TYPE: DEF_USE_STREAM_ITEMS_IND
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DEL_DOC_W_DOCNUM DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1035701035'
+  keys:
+    ATTRIBUTE_TYPE: DEL_DOC_W_DOCNUM
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DEST_COUNTRY_AT_TRANS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '522861222'
+  keys:
+    ATTRIBUTE_TYPE: DEST_COUNTRY_AT_TRANS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DOC_GEN_LOG_LEVEL DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2066870871'
+  keys:
+    ATTRIBUTE_TYPE: DOC_GEN_LOG_LEVEL
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DOC_GEN_MONTHS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1110577939'
+  keys:
+    ATTRIBUTE_TYPE: DOC_GEN_MONTHS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DOC_PROCESS_DEBUG DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1037215008'
+  keys:
+    ATTRIBUTE_TYPE: DOC_PROCESS_DEBUG
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=DT_OVERWRITE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1621421440'
+  keys:
+    ATTRIBUTE_TYPE: DT_OVERWRITE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=ENABLE_DOC_TRACING DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1008612285'
+  keys:
+    ATTRIBUTE_TYPE: ENABLE_DOC_TRACING
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=ENABLE_VISUAL_TRACING DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-615997469'
+  keys:
+    ATTRIBUTE_TYPE: ENABLE_VISUAL_TRACING
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=EX_VAT_PRECISION DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-501582048'
+  keys:
+    ATTRIBUTE_TYPE: EX_VAT_PRECISION
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=GAS_CONST_15_DEG_TO_K DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-555175683'
+  keys:
+    ATTRIBUTE_TYPE: GAS_CONST_15_DEG_TO_K
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=GAS_CONST_1ATM_TO_kPA DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-667203920'
+  keys:
+    ATTRIBUTE_TYPE: GAS_CONST_1ATM_TO_kPA
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=GAS_CONST_DEN_AIR_15_DEG DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '401608920'
+  keys:
+    ATTRIBUTE_TYPE: GAS_CONST_DEN_AIR_15_DEG
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=GAS_CONST_MOL_MASS_AIR DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1788436006'
+  keys:
+    ATTRIBUTE_TYPE: GAS_CONST_MOL_MASS_AIR
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=GAS_CONST_UNIVERSAL DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1217632595'
+  keys:
+    ATTRIBUTE_TYPE: GAS_CONST_UNIVERSAL
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=GAS_CONST_Z_FACTOR_AIR DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1582819451'
+  keys:
+    ATTRIBUTE_TYPE: GAS_CONST_Z_FACTOR_AIR
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=HOLD_FINAL_WHEN_ACL_IND DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-491843406'
+  keys:
+    ATTRIBUTE_TYPE: HOLD_FINAL_WHEN_ACL_IND
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=INV_4EYE_VALIDATION DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1995338191'
+  keys:
+    ATTRIBUTE_TYPE: INV_4EYE_VALIDATION
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=JOURNAL_ENTRY_THRESHOLD DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '137453050'
+  keys:
+    ATTRIBUTE_TYPE: JOURNAL_ENTRY_THRESHOLD
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=JOURNAL_MAP_EXT_TRAC_IND DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '928706157'
+  keys:
+    ATTRIBUTE_TYPE: JOURNAL_MAP_EXT_TRAC_IND
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=JOURNAL_MAP_LOG_LEVEL DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1145650526'
+  keys:
+    ATTRIBUTE_TYPE: JOURNAL_MAP_LOG_LEVEL
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=JOURNAL_MAP_TRAC_MODE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2123324421'
+  keys:
+    ATTRIBUTE_TYPE: JOURNAL_MAP_TRAC_MODE
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=JOUR_EXT_PROC_LOG_LEVEL DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1235247969'
+  keys:
+    ATTRIBUTE_TYPE: JOUR_EXT_PROC_LOG_LEVEL
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=MOVE_TO_LONG_TERM DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1989907773'
+  keys:
+    ATTRIBUTE_TYPE: MOVE_TO_LONG_TERM
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=ORIG_COUNTRY_AT_TRANS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '126247271'
+  keys:
+    ATTRIBUTE_TYPE: ORIG_COUNTRY_AT_TRANS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=PROCESS_ONLY_OPEN_DOCS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1452627377'
+  keys:
+    ATTRIBUTE_TYPE: PROCESS_ONLY_OPEN_DOCS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=PROD_FCST_PERIOD DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1359487394'
+  keys:
+    ATTRIBUTE_TYPE: PROD_FCST_PERIOD
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=RESTRICT_CUSTOMERS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1791281270'
+  keys:
+    ATTRIBUTE_TYPE: RESTRICT_CUSTOMERS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=RESTRICT_VENDORS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '538020492'
+  keys:
+    ATTRIBUTE_TYPE: RESTRICT_VENDORS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=SELECT_BOOKING_PERIOD DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '920130222'
+  keys:
+    ATTRIBUTE_TYPE: SELECT_BOOKING_PERIOD
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=UTC2LOCALDEFAULT DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '694941096'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCALDEFAULT
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=25-03-2001 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-189498606'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2001-03-25T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=25-03-2007 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1368579636'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2007-03-25T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=25-03-2012 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2112003826'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2012-03-25T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=25-10-2009 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1795972490'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2009-10-25T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=26-03-2000 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-990057454'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2000-03-26T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=26-03-2006 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2125828812'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2006-03-26T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=26-10-2003 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1977981167'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2003-10-26T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=26-10-2008 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '995413642'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2008-10-26T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=27-03-2005 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1325269964'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2005-03-27T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=27-03-2011 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '314372625'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2011-03-27T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=27-10-2002 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1177422319'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2002-10-27T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=28-03-2004 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '524711116'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2004-03-28T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=28-03-2010 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-486186223'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2010-03-28T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=28-10-2001 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '376863471'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2001-10-28T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=28-10-2007 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-802217559'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2007-10-28T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=28-10-2012 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1616601393'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2012-10-28T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=29-03-2009 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1454928762'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2009-03-29T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=29-10-2000 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-423695377'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2000-10-29T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=29-10-2006 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1602776407'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2006-10-29T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=30-03-2003 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-736603018'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2003-03-30T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=30-03-2008 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1719170543'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2008-03-30T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=30-10-2005 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1867018188'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2005-10-30T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=30-10-2011 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1417051769'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2011-10-30T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=31-03-2002 01:03:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1537161866'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2002-03-31T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=31-10-1999 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1187690130'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 1999-10-31T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=31-10-2004 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1627390260'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2004-10-31T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=UTC2LOCAL_DIFF DAYTIME=31-10-2010 01:10:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '616492921'
+  keys:
+    ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+    DAYTIME: 2010-10-31T01:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+ATTRIBUTE_TYPE=VAT_ON_ACCRUALS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2088230226'
+  keys:
+    ATTRIBUTE_TYPE: VAT_ON_ACCRUALS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=VAT_REG_NO_MANDATORY_IND DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1142386400'
+  keys:
+    ATTRIBUTE_TYPE: VAT_REG_NO_MANDATORY_IND
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ATTRIBUTE_TYPE=VO_STIM_CASCADE_TABLE DAYTIME=01-01-2010 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2090272258'
+  keys:
+    ATTRIBUTE_TYPE: VO_STIM_CASCADE_TABLE
+    DAYTIME: 2010-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

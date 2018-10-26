@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1210547107'
+keys:
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/groupmodel/CONDENSATE_SURGE_DRUM
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: NAV_DEF_VALUE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Default values in group model for condensate surge drum navigators
+  KEY: /com/ec/eccommon/genericmodel/navigator/defaultvalue/groupmodel/CONDENSATE_SURGE_DRUM
+  LABEL: Default values in group model for condensate surge drum navigators
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

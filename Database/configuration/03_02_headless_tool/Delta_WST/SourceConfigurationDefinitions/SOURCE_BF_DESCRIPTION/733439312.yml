@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '733439312'
+keys:
+  BF_DESCRIPTION_NO: PO.0050
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/pipeline_profit_centre_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used when pipeline per profit centre data is available, this is typically data related to stock numbers (when the pipeline is used as a stock), and when the user may want to distribute ownership manually. Data can be entered manually in screen or be automatically loaded in to EC. The sub daily interval could be each 2nd hour / hourly / 30min or at other fixed intervals.</p>
+
+    <p>For each day, the hours for the production days in the navigator range will be displayed. The production day should be retrieved from the Pipeline object, where the user exit procedure is first attempted, and then the standard EC production day from the facility (facility found from the Pipeline object).</p>
+
+    <p>A business function for daily input exists in the product (PO.0049 &ndash; Daily Sub Daily Pipeline Profit Centre Status).</p>
+related: {}

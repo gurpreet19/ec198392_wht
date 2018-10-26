@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1182712304'
+keys:
+  COMPONENT_ID: LETTER_PROTEST_TEMPLATE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.co.screens/letter_of_protest_template
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: LETTER_PROTEST_TEMPLATE
+  COMPONENT_LABEL: Letter of Protest Template
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 260.0
+  WINDOW_ID: ENERGYX
+related: {}

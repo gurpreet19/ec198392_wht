@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '138043323'
+keys:
+  COMPONENT_ID: VAT_COUNTRY_SETUP
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/setup_vat_code_relations_basic
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: VAT_COUNTRY_SETUP
+  COMPONENT_LABEL: VAT Country Setup
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FINANCIAL_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 150.0
+  WINDOW_ID: ENERGYX
+related: {}

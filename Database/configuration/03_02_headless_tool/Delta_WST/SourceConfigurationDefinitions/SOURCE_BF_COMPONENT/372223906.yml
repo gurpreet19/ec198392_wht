@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '372223906'
+keys:
+  BF_CODE: SP.0062
+  CLASS_NAME: CONT_JOURNAL_SUMMARY
+  COMP_CODE: summary_list_data
+  T: BF_COMPONENT
+  URL: /summary_list_data
+parentKeys: {}
+properties:
+  BF_CODE: SP.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/Y' )
+  CLASS_NAME: CONT_JOURNAL_SUMMARY
+  COMP_CODE: summary_list_data
+  NAME: Extract List Data
+  SIGNING_REQ_IND: null
+  URL: /summary_list_data
+related: {}

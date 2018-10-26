@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1339684492'
+keys:
+  BF_CODE: CO.1061
+  CLASS_NAME: CALC_VARIABLE_LOCAL
+  COMP_CODE: inherited_vars
+  T: BF_COMPONENT
+  URL: /inherited_vars
+parentKeys: {}
+properties:
+  BF_CODE: CO.1061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/create_library_calculation' )
+  CLASS_NAME: CALC_VARIABLE_LOCAL
+  COMP_CODE: inherited_vars
+  NAME: Expected Inherited Local Variables
+  SIGNING_REQ_IND: null
+  URL: /inherited_vars
+related: {}

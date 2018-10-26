@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2044694885'
+keys:
+  BF_CODE: PR.0008.01
+  CLASS_NAME: CALC_PRICE_OBJECT_LOG
+  COMP_CODE: log_list
+  T: BF_COMPONENT
+  URL: /log_list
+parentKeys: {}
+properties:
+  BF_CODE: PR.0008.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/price_calc_price_object' )
+  CLASS_NAME: CALC_PRICE_OBJECT_LOG
+  COMP_CODE: log_list
+  NAME: Price Calculation
+  SIGNING_REQ_IND: null
+  URL: /log_list
+related: {}

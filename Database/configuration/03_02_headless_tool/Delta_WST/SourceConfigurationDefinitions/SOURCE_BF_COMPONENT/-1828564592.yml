@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1828564592'
+keys:
+  BF_CODE: MHM.0015
+  CLASS_NAME: MANAGE_OUTGOING_MSG
+  COMP_CODE: outgoing_messages
+  T: BF_COMPONENT
+  URL: /outgoing_messages
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/manage_outgoing_messages' )
+  CLASS_NAME: MANAGE_OUTGOING_MSG
+  COMP_CODE: outgoing_messages
+  NAME: Outgoing Messages
+  SIGNING_REQ_IND: null
+  URL: /outgoing_messages
+related: {}

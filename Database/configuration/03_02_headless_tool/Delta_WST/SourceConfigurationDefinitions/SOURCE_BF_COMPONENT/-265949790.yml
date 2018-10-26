@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-265949790'
+keys:
+  BF_CODE: RP.0008
+  CLASS_NAME: REPT_OBJECT_ATTRIBUTE
+  COMP_CODE: attrList
+  T: BF_COMPONENT
+  URL: /attrList
+parentKeys: {}
+properties:
+  BF_CODE: RP.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/xls_rept_object_type' )
+  CLASS_NAME: REPT_OBJECT_ATTRIBUTE
+  COMP_CODE: attrList
+  NAME: Attributes
+  SIGNING_REQ_IND: null
+  URL: /attrList
+related: {}

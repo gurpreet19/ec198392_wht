@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-412588803'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/perforation_active_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0071
+  NAME: Perforation Active Status
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.wr.screens/perforation_active_status
+related: {}

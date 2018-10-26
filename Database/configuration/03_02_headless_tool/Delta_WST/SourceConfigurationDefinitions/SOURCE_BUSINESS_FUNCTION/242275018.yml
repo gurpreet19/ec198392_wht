@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '242275018'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/daily_forecast_parent/GROUPMODEL/PROD_SUB_UNIT/TARGET/PROD_SUB_UNIT/CLASS_NAME/FCST_SPRDUNIT_DAY_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: PP.0073
+  NAME: Daily Production Sub Unit Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/daily_forecast_parent/GROUPMODEL/PROD_SUB_UNIT/TARGET/PROD_SUB_UNIT/CLASS_NAME/FCST_SPRDUNIT_DAY_STATUS
+related: {}

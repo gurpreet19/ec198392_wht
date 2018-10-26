@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1563421803'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.ecdm.co.screens/mapping_code
+parentKeys: {}
+properties:
+  BF_CODE: IS.0008
+  NAME: Mapping Codes
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.ecdm.co.screens/mapping_code
+related: {}

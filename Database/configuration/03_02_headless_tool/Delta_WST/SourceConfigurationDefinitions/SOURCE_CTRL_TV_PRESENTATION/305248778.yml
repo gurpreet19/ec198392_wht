@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '305248778'
+keys:
+  COMPONENT_ID: FT_CO_REVN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: null
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: FT_CO_REVN
+  COMPONENT_LABEL: Contract
+  COMPONENT_TYPE: FOLDER
+  PARENT_COMPONENT_ID: FT_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4860.0
+  WINDOW_ID: ENERGYX
+related: {}

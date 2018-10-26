@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1628925188'
+keys:
+  BF_CODE: PR.0008.01
+  CLASS_NAME: CALC_PRICE_BATCH_LOG
+  COMP_CODE: batch_log
+  T: BF_COMPONENT
+  URL: /batch_log
+parentKeys: {}
+properties:
+  BF_CODE: PR.0008.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/price_calc_price_object' )
+  CLASS_NAME: CALC_PRICE_BATCH_LOG
+  COMP_CODE: batch_log
+  NAME: Batch Log
+  SIGNING_REQ_IND: null
+  URL: /batch_log
+related: {}

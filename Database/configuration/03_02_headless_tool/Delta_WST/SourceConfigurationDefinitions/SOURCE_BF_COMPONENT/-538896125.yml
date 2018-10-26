@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-538896125'
+keys:
+  BF_CODE: SD.0031
+  CLASS_NAME: FCST_NOMPNT_MTH_STATUS
+  COMP_CODE: monthly_data
+  T: BF_COMPONENT
+  URL: /monthly_data
+parentKeys: {}
+properties:
+  BF_CODE: SD.0031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/forecast_nompnt_mth_status' )
+  CLASS_NAME: FCST_NOMPNT_MTH_STATUS
+  COMP_CODE: monthly_data
+  NAME: Monthly Data
+  SIGNING_REQ_IND: null
+  URL: /monthly_data
+related: {}

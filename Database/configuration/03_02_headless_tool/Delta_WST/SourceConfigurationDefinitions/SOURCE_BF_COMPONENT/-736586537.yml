@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-736586537'
+keys:
+  BF_CODE: MHM.0007
+  CLASS_NAME: null
+  COMP_CODE: outboundButton
+  T: BF_COMPONENT
+  URL: /outboundButton
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_journal' )
+  CLASS_NAME: null
+  COMP_CODE: outboundButton
+  NAME: resendoutbound
+  SIGNING_REQ_IND: null
+  URL: /outboundButton
+related: {}

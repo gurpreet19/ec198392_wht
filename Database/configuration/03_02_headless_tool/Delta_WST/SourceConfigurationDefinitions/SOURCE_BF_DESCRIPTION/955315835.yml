@@ -1,0 +1,21 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '955315835'
+keys:
+  BF_DESCRIPTION_NO: WR.0035
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_well_bore_interval_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is part of the Business Process to gather and QA daily well bore interval data, e.g. from a DIACS completion interval (DIACS: Downhole Instrumentation and Control System). The data displayed may originate by automatic transfer directly from signal sources and historians producing daily averages, by manual entry, or as a result of Calculate and Aggregate -operations performed in the business function for Sub Daily Well Bore Interval Status. The BF can cater for one record per well bore interval per day, and Energy Components automatically creates new records for a new production day for all active well bore intervals of wells belonging to the classes &lsquo;P&rsquo;, &lsquo;PI&rsquo; and &lsquo;I&rsquo;. The screen lists all well bore interval day data currently available for specified date and well. The attributes shown on the screen represent the well bore interval data normally associated with one single DIACS completion interval and each DIACS interval installed should therefore be configured as a separate well bore interval. In order to participate in the daily instantiation and appear in this business function, the well bore interval must have its attribute INTERVAL_TYPE set to &ldquo;DIACS&rdquo;.</p>
+
+    <p>The illustration shows a schematic diagram of the bottom section of a DIACS completion (alternatively called SCRAMS&reg; : Surface Controlled Reservoir Analysis and Management System). A combination of sliding sleeves, pipe ports and sensors control and monitor the fluid flow from/to various parts of the reservoir. The system can be installed for both producers and injectors and can play an important role in optimized reservoir management. In Energy Components, each interval between packers is defined as a Well Bore Interval. The average sleeve position and sensor data for each interval is available for inspection/edit in the daily business function WR.0035 and the associated subdaily business function WR.0036.</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

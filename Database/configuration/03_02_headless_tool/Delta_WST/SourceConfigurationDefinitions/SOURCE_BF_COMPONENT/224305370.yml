@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '224305370'
+keys:
+  BF_CODE: CO.0055
+  CLASS_NAME: WELL_BORE_SPLIT_FACTOR
+  COMP_CODE: lastsplits
+  T: BF_COMPONENT
+  URL: /lastsplits
+parentKeys: {}
+properties:
+  BF_CODE: CO.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/well_bore_split' )
+  CLASS_NAME: WELL_BORE_SPLIT_FACTOR
+  COMP_CODE: lastsplits
+  NAME: Last Effective Object Splits
+  SIGNING_REQ_IND: null
+  URL: /lastsplits
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1997943972'
+keys:
+  BF_DESCRIPTION_NO: CO.1074
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1074
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/xhtml/pages/app-server-perf' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Application Server Performance business function is used to monitor the performance of different part of the Energy Component application and application server.</p>
+related: {}

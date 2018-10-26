@@ -1,0 +1,205 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1721596426'
+keys:
+  BF_DESCRIPTION_NO: FI.0005
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FI.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_entry/TIME_SPAN/DAY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>    <strong>Daily Financial Item screen</strong>    is used to\
+    \ hold daily transactional data for the Financial Item objects. </p>\t<p>Monthly\
+    \ transactional data is available in Monthly Financial Item screen (BF FI.0003)\
+    \ and yearly - in Yearly Financial Item screen (BF FI.0006).\t</p><h2><strong\
+    \ style=\"color: rgb(0, 0, 153);\">Navigator</strong></h2><p>    Navigator settings\
+    \ allow user to define the search criteria for the    Financial Item entries and\
+    \ display them in the List Tab.</p><p>    <u>Navigator has these selection options:</u></p>\
+    \    <p>    <strong>- Date</strong>    -  Auto filled with the first date of the\
+    \ current month. This is the date FI transactional entries are Valid to.   <br><strong>-\
+    \ Business Unit</strong>    - Optional - This is the Business Unit the FI entries\
+    \ belong to.  <br><strong>- Contract Area</strong>    - Optional - This is the\
+    \ Contract Area the FI entries belong to.  <br>    <strong>- Financial Item Template</strong>\
+    \    - Optional - This is the Financial Item Template the FI entries belong to.\t\
+    \  <br>       <strong>- Financial Item Name</strong>    - Optional - This is the\
+    \ name of the Financial Item or part of the name in case    of using a wildcard\
+    \ search by *name*.  <br><strong>- Dataset</strong>    - Optional - This is a\
+    \ dataset of the FI entries.   <br><strong>- Object Link Type</strong>    - Optional\
+    \ - This is a type of the Object the FI entries can be linked to.    <br><strong>-\
+    \ Object Link</strong>    - Optional - This is a certain Object the FI entries\
+    \ can be linked to.    <br><strong>- Cost Object Type</strong>    - Optional -\
+    \ This is a type of a Cost Object the FI entries can be linked to.    <br><strong>-\
+    \ Cost Object</strong>    - Optional - This is a certain Cost Object the FI entries\
+    \ can be linked to.   <br><strong>- Company</strong>    - Optional - This is a\
+    \ certain Company the FI entries can be linked to.     <br><strong>- Status</strong>\
+    \    - Optional - This is a status of the FI entry (Provisional, Verified or Approved).\
+    \    <br><strong>- Comment</strong>    - Optional - This is a comment or part\
+    \ of it for the FI entry. </p><h2><strong style=\"color: rgb(0, 0, 153);\">List\
+    \ Tab</strong></h2><p>    This Tab is used for the actual work with FI transactional\
+    \ data, where FI records can be overridden, edited and verified/approved. The\
+    \ tab displays FI entries matching Navigator criteria.</p><p><u>FI entries can\
+    \ be populated in two ways:</u></p><ul>1. From the Template (with and without\
+    \ values optionally). For more details, please, see section \"Create Entries from\
+    \ Template buttons\" below.</ul><ul>2. By using \"Insert\" option and selecting\
+    \ one of the existing FI objects listed in the dropdown (from the FI Definition\
+    \ screen).</ul><p>        <strong>Button <span style=\"color: rgb(0, 153, 0);\"\
+    >Create Entries from Template </span></strong>    <br>This button allows getting\
+    \ empty FI entries (attributes) linked to the FI Template chosen in the dropdown.\
+    \ Rows of the FI entries (attributes) will appear empty - <u>no</u> transactional\
+    \ data in Interfaced / Calculated / Override Value fields. <br>If the user chooses\
+    \ a new FI Template in the dropdown and executes the button's function, new entries\
+    \ will be appended to the existing records.</p><p>        <strong>Button <span\
+    \ style=\"color: rgb(0, 153, 0);\">Create Entries from Template and Date</span></strong>\
+    \    <br>This button allows getting FI entries (attributes) linked to the FI Template\
+    \ chosen in the dropdown <u>with</u> transactional data from a selected date in\
+    \ the dropdown. Rows of the FI entries (attributes) will appear with transactional\
+    \ data in Interfaced / Calculated / Override Value fields.<br>If the user chooses\
+    \ a new FI Template in the dropdown and executes the button's function, new entries\
+    \ will be appended to the existing records. </p>\t<h3><strong style=\"color: rgb(0,\
+    \ 0, 153);\">FI Transactional Data Section</strong></h3>\t\t<p>This section shows\
+    \ the transactional data for FI entries. <u>FI Transactional Data section has\
+    \ these features:</u></p><p>    <strong>Sort Order: </strong></p>        <ul>\
+    \            <li>                This is a sort order of the FI entry. It gives\
+    \ a possibility                to sort all records in the screen.            </li>\
+    \            <li>                By default, a newer FI entry is set to the lowest\
+    \ number of the                sort order to appear on top of the list of FI entries.\
+    \            </li>        </ul> <p>        <strong>Financial Item Source Object\
+    \ Name:</strong></p>        <ul>            <li>                This is an original\
+    \ Name of the FI object created in the FI                Definition screen.  \
+    \          </li>            <li>                It can't be changed by the user\
+    \ in any other screen, but it can                be replaced with the selected\
+    \ FI object in the dropdown.                </li>        </ul>    <p>        <strong>Financial\
+    \ Item Name:</strong></p>        <ul>            <li>                This is an\
+    \ optional name given to FI entry by the user. Can not be left               \
+    \ blank.            </li>            <li>                By default it has the\
+    \ same Name as FI Source Object.            </li>        </ul>    <p>        <strong>Item\
+    \ Type:</strong></p>        <ul>            <li>                This is a type\
+    \ of the FI that can be either Cost, Income or                Quantity. Read-only\
+    \ data.                            </li>        </ul>    <p>        <strong>Value\
+    \ for the FI entry</strong>        can be:</p>        <ul>            <li>   \
+    \             Interfaced Value - interfaced from the external system,        \
+    \    </li>            <li>                Calculated Value - calculated inside\
+    \ EC,            </li>            <li>                Override Value - manually\
+    \ adjusted by the user.            </li>        </ul>       <p>        <strong>Value\
+    \ by Priority:</strong></p>        <ul>            <li>                This column\
+    \ shows the boss-value for the FI entry.            </li>\t\t\t<li>          \
+    \      Override value has always highest priority among others.            </li>\t\
+    \t\t<li>                Calculated or Interfaced value priority is controlled\
+    \ by Fallback method that is set in FI Definition screen (for the FI Source object).\
+    \            </li>        </ul>       <p>        <strong>Currency / UOM:</strong></p>\
+    \               <ul>            <li>                Represents the unit of measure\
+    \ for the FI object. It is either                a list of currencies or a list\
+    \ of UOMs.            </li>            <li>Unit can't be left blank. It should\
+    \ always have a value                <u>at transactional level.</u>          \
+    \  </li>        </ul>       <p>        <strong>Derived checkbox:</strong></p>\
+    \        <ul>            <li>                If it is set, it means that the FI\
+    \ value was calculated from                the other FI entry (that the value\
+    \ is coming from another                value). The thinking behind is to avoid\
+    \ doubling of the data                and values (for reporting purposes) as one\
+    \ FI entry can already                hold other entries in.            </li>\
+    \        </ul>     <p>        <strong>Dataset:</strong></p>        <ul>      \
+    \      <li>                Datasets are created for the FI object in the FI Definition\
+    \                screen (Dataset Tab).            </li>            <li>      \
+    \          Inserting a FI entry in the screen the user can:                <ul>\
+    \                    <li>                        choose one of the available datasets\
+    \ in the dropdown.                        After saving the chosen dataset will\
+    \ be displayed in                        the screen.                    </li>\
+    \                    <li>                        leave the Dataset field blank.\
+    \ After saving EC will                        automatically create one FI record\
+    \ for each of the                        datasets that are configured for the\
+    \ FI object                    </li>                </ul>            </li>   \
+    \         <li>                Dataset field can't be left blank. It should always\
+    \ have a                value <u>at transactional level.</u>            </li>\
+    \        </ul>       <p>        <strong>Object Link Type:</strong></p>       \
+    \ <ul>            <li>                Even though Object Link Type is defined\
+    \ for the FI object in                the FI Definition screen, the field is still\
+    \ editable.            </li>            <li>                Object Link Type field\
+    \ can't be left blank. It should always                have value <u>at transactional\
+    \ level.</u>            </li>        </ul>       <p>        <strong>Object Link:</strong></p>\
+    \        <ul>            <li>                Object Link field can't be left blank.\
+    \ It should always have                value <u>at transactional level.</u>  \
+    \          </li>        </ul>   <p>        <strong>Financial Account</strong>\
+    \        and <strong>ERP Account Co</strong><strong>de</strong> are coming from\
+    \        FI Template screen.</p>   <p>        <strong>Cost Object Type:</strong></p>\
+    \        <ul>            <li>                Cost Object Type is a mandatory field\
+    \ defined for the FI object                in the FI Definition screen.      \
+    \      </li>            <li>                If Cost Object Type is set to \"None\"\
+    \ for the FI object in the                FI Definition screen, the field is empty\
+    \ at transactional level.            </li>        </ul>    <p>        <strong>Cost\
+    \ Object: </strong></p>        <ul>            <li>                The list of\
+    \ cost objects in the dropdown is dependent on the                Cost Object\
+    \ Type.            </li>            <li>                If Cost Object Type is\
+    \ set to \"None\" for the FI object in the                FI Definition screen,\
+    \ Cost Object field is disabled at                transactional level.       \
+    \     </li>        </ul>    <p>        <strong>ERP Cost Object Code</strong> \
+    \       is coming from FI Template screen.    </p>    <p>        <strong>Company</strong>\
+    \ is a certain Company the FI entry can be linked to.    </p>   <p>        <strong>Status:</strong></p>\
+    \        <ul>            <li>        The user must be able to control what kind\
+    \ of access to the FI record        he has. And it is dependent on the status\
+    \ of the record: </li>        <ul>            <li>                Provisional\
+    \ - a record is available to any user and ready for                editing.  \
+    \          </li>            <li>                Verified - a record is read-only\
+    \ and can be set back to Provisonal by manager.            </li>            <li>\
+    \                Approved - a record is read-only and is controlled by a manager\
+    \ only - can be approved or un-approved.            </li>        </ul></ul>  \
+    \ <p>        <strong>Dataset Priority</strong>        (more details are in FI\
+    \ Definition screen (Dataset Tab).</p>        <ul>            <li>The field can't\
+    \ be left blank. It should always have a value <u>at transactional level.</u>\
+    \            </li>        </ul>    <p>        <strong>Financial Item Template:</strong></p>\
+    \        <ul>            <li>                    If user doesn't change config\
+    \ of FI entry, than FI                    Template field has a reference for the\
+    \ entry telling from                    which Template it came from.         \
+    \                   </li>            <li>                                   If\
+    \ user changes config of FI entry, than FI Template field                    looses\
+    \ Template reference and becomes empty. It gives an                    option\
+    \ to filter entries and see all modified entries for                    the selected\
+    \ date. They can be selected and collected in a new                    Template.\
+    \                            </li>        </ul>        <p>        <strong>Contract\
+    \ Area </strong>        is coming from FI Template screen if entry was populated\
+    \ from a        Template or from FI Definition screen if entry was inserted. </p>\
+    \   <p>        <strong>Comment</strong>        is a comment field for the FI entry.</p>\
+    \    <p>        <strong>Description</strong>        is a a voluntary description\
+    \ of the FI entry.</p>  <p><strong>    <em>        The user should be aware that\
+    \ if a Template with a certain set of FI        records (attributes) is inserted,\
+    \ and        configuration of some of them were modified, i.e. Company Reference,\
+    \        Cost Object and etc., these changes will not be saved back to the   \
+    \     original Template. If user wants, a new set of modified FI records can \
+    \       be formed into a new Template.    </em></strong></p>  <p><em><strong>Note:\
+    \         If Financial Item entries are modified in the Daily or any other   \
+    \     transactional screens, changes are not written back to the FI        Definition\
+    \ screen either and set of rules for the FI object are not        being changed\
+    \    </strong></em></p>\t\t<p><u>The lower part of the List Tab holds a set of\
+    \ Buttons with following functionality: </u> </p><p>        <strong>Button <span\
+    \ style=\"color: rgb(0, 153, 0);\">View Financial Item Definition</span></strong>\
+    \    <br>    The button opens the Financial Item Definition screen in a popup\
+    \ window with a set of rules for the selected FI entry. </p>\t\t<p>        <strong>Buttons\
+    \ <span style=\"color: rgb(0, 153, 0);\">Verify Selected</span> and <span style=\"\
+    color: rgb(0, 153, 0);\">Un-verify Selected </span></strong>    </p>\t<ul>\t <li>FI\
+    \ entry can be verified or un-verified by these buttons. Record would become read-only.</li>\
+    \        <li>FI Transactional Data Section is a multi-select table where Shift-Ctrl\
+    \ or Ctrl key-board buttons can be used to select more than one row in the table.\
+    \ </li>\t\t\t\t<li>Only users with a right access would be able to bring the verified\
+    \ record back to Provisional Status. </li></ul><p>        <strong>Buttons <span\
+    \ style=\"color: rgb(0, 153, 0);\">Verify All</span> and <span style=\"color:\
+    \ rgb(0, 153, 0);\">Un-verify All </span></strong>    </p>\t<ul>\t <li>All FI\
+    \ entries can be verified or un-verified by clicking these buttons. Records would\
+    \ become read-only.</li>        <li>Only users with a right access would be able\
+    \ to bring the verified records back to Provisional Status. </li></ul><p> <strong>Buttons\
+    \ <span style=\"color: rgb(0, 153, 0);\">Approve Selected</span> and <span style=\"\
+    color: rgb(0, 153, 0);\">Un-approve Selected </span></strong>    </p>\t<ul>  \
+    \      <li>FI entry can be approved or un-approved by these buttons. Record would\
+    \ become read-only.</li>\t\t\t\t <li>FI Transactional Data Section is a multi-select\
+    \ table where Shift-Ctrl or Ctrl key-board buttons can be used to select more\
+    \ than one row in the table. </li>\t\t\t\t<li>Only users with a right access would\
+    \ be able to bring the approved record back to Provisional Status. </li></ul>\t\
+    \t\t<p>        <strong>Buttons <span style=\"color: rgb(0, 153, 0);\">Approve\
+    \ All</span> and <span style=\"color: rgb(0, 153, 0);\">Un-approve All </span></strong>\
+    \    </p>\t<ul>\t <li>All FI entries can be approved or un-approved by clicking\
+    \ these buttons. Records would become read-only.</li>        <li>Only users with\
+    \ a right access would be able to bring the approved records back to Provisional\
+    \ Status. </li></ul>\t<h2><strong style=\"color: rgb(0, 0, 153);\">Dataset Matrix\
+    \ Tab</strong></h2><p>Tab presents the List Tab data in a flipped version regarding\
+    \ Datasets. All data is read-only.</p><p>All different datasets for the same FI\
+    \ entry present Dataset Values (Values by Priority) in a one row-view.</p> "
+related: {}

@@ -1,0 +1,51 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-511243464'
+keys:
+  BF_DESCRIPTION_NO: GD.0056
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_bid' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>This business function is used to create and maintain bids on submitted\
+    \ and biddable capacity release(s) on a pipeline.</p><p>For more information on\
+    \ capacity release see Maintain Capacity Release&nbsp;(GD.0055).</p><p>When a\
+    \ capacity release is available for auctioning&nbsp;(Submitted and biddable flag\
+    \ set), other users can create a bid against that capacity release. The bid must\
+    \ in general match the capacity release, but a bid can if possible have its own\
+    \ terms and conditions.</p><p>In the first data section a user can see all bid(s)\
+    \ for the selected period, company and bid status&nbsp;(optional). The first data\
+    \ section gives the user a quick overview of the bid and by selecting a bid, more\
+    \ details about the bid will be visible in the next data section. Further individual\
+    \ terms and conditions about the bid can be seen in the tab control section at\
+    \ the bottom.</p><p>A bid follows a bid process where the bid status tells the\
+    \ user where the bid is at any given point in time. The following bid statuses\
+    \ are available (Note that these statuses are examples only)<ul style=\"list-style-type:disc\"\
+    ><li>Provisional &ndash; Not yet submitted. User able to updated bid</li><li>Pending\
+    \ &ndash; Validation successful, but manual interaction is required\t<ul style=\"\
+    list-style-type:circle\">\t<li>The user needs to be checked if it is credit worthy</li>\t\
+    <li>Bid value must be calculated manually</li>\t<li>When a capacity release is\
+    \ prearranged the replacement company needs to confirm</li>\t</ul></li><li>Submitted\
+    \ &ndash; The bid is validated and made visible to other users.</li><li>Awarded\
+    \ &ndash; The trade period is over and this bid was awarded. Other users can see\
+    \ this bid</li><li>Closed &ndash; The trade period is over and this bid was not\
+    \ awarded</li><li>Rejected &ndash; Validation failed on submit or rejected by\
+    \ user. User able to updated bid</li></ul></p><p>To create a new bid the user\
+    \ must press the new button. The form section will then be made available for\
+    \ input. The bid becomes provisional as soon as it is saved. No validation is\
+    \ done on save. When the user is ready to submit the bid he/she should press the\
+    \ submit button. The submit process will validate the bid and different bids can\
+    \ have different validation. If validation fails, the bid will be rejected and\
+    \ the validation error can be seen in the status description attribute. The user\
+    \ has to fix the problem and resubmit the bid. The submit process will also know\
+    \ if a bid is a matching bid.</p><p>When it is a prearranged capacity release\
+    \ the releasing company would normally enter the bid into the system. When this\
+    \ is done the replacement company must confirm the bid by clicking the confirm\
+    \ button.</p><p>To prevent users from viewing bid details for other users, row\
+    \ level security can be used.</p><p>The user is only allowed to update or delete\
+    \ a bid if it has status provisional or rejected.</p><p>The locations popup, in\
+    \ the location tab, can be limited to only show objects of specific interface\
+    \ classes.</p>"
+related: {}

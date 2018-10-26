@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1761387648'
+keys:
+  CODE: MEASURED_MTH_XTPL_DAY
+  CODE_TYPE: CALC_WATER_INJ_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: MEASURED_MTH_XTPL_DAY
+  CODE_TEXT: Measured monthly extrapolate daily
+  CODE_TYPE: CALC_WATER_INJ_METHOD
+  DESCRIPTION: Calculate daily theoretical net volume based on monthly volume and daily on time. If no volume for that month, previous monthly volume will be used but adjusted according to daily on time.
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 70.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

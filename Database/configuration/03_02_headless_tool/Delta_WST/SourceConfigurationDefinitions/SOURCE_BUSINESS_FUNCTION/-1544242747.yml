@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1544242747'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.to.screens/cargo_document/COLUMN_SORT/RUN_DATE/SORT_TYPE/DESC
+parentKeys: {}
+properties:
+  BF_CODE: TO.0009
+  NAME: Cargo Document
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.to.screens/cargo_document/COLUMN_SORT/RUN_DATE/SORT_TYPE/DESC
+related: {}

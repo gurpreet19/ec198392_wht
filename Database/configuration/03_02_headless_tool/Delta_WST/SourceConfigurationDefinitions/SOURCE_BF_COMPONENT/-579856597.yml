@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-579856597'
+keys:
+  BF_CODE: RC.0061
+  CLASS_NAME: DATASET_FLOW_REPORT_DIST
+  COMP_CODE: msg
+  T: BF_COMPONENT
+  URL: /msg
+parentKeys: {}
+properties:
+  BF_CODE: RC.0061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/Y' )
+  CLASS_NAME: DATASET_FLOW_REPORT_DIST
+  COMP_CODE: msg
+  NAME: Distribution of report
+  SIGNING_REQ_IND: null
+  URL: /msg
+related: {}

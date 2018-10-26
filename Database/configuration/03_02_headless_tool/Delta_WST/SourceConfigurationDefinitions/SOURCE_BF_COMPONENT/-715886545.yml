@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-715886545'
+keys:
+  BF_CODE: SP.0041
+  CLASS_NAME: SUMMARY_SET_SETUP
+  COMP_CODE: summary_set_setup_table
+  T: BF_COMPONENT
+  URL: /summary_set_setup_table
+parentKeys: {}
+properties:
+  BF_CODE: SP.0041
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/run_cost_mapping/ACCRUAL_IND/N' )
+  CLASS_NAME: SUMMARY_SET_SETUP
+  COMP_CODE: summary_set_setup_table
+  NAME: Data Extract Set Setup
+  SIGNING_REQ_IND: null
+  URL: /summary_set_setup_table
+related: {}

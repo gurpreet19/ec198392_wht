@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1357605101'
+keys:
+  BF_CODE: GD.0070
+  CLASS_NAME: METER_DAY_MEASUREMENT
+  COMP_CODE: meterMeas
+  T: BF_COMPONENT
+  URL: /meterMeas
+parentKeys: {}
+properties:
+  BF_CODE: GD.0070
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_meter_measurement/CLASS/METER_DAY_MEASUREMENT' )
+  CLASS_NAME: METER_DAY_MEASUREMENT
+  COMP_CODE: meterMeas
+  NAME: Meter Measurement
+  SIGNING_REQ_IND: null
+  URL: /meterMeas
+related: {}

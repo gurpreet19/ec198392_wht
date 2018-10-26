@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2092116462'
+keys:
+  COMPONENT_ID: CONTRACT_LIFT_ACC_CONN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_lift_acc_conn
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CONTRACT_LIFT_ACC_CONN
+  COMPONENT_LABEL: Contract Lifting Account Connection
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 250.0
+  WINDOW_ID: ENERGYX
+related: {}

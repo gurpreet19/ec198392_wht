@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1535456518'
+keys:
+  BF_DESCRIPTION_NO: CO.2033
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/cargo_doc_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain cargo document templates.</p><p>A list of all the Cargo Documents can be found for the EC Code type CARGO_DOCUMENT. Examples of these documents are Bill of Lading, Certificate of Quality,&nbsp;Certificate of Quantity and Cargo Timesheet.</p><p>This business function is typically used together with the Lifting Account Document Receiver Template (CO.2031) and Lifting Account Document Instruction&nbsp;Template(CO.2031). If a Cargo Document Template is not defined or not selected in the Lifting Account Document Receiver Template, all cargo documents for the&nbsp;EC Code are selected.</p>
+related: {}

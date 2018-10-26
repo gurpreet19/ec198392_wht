@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1342312584'
+keys:
+  COMPONENT_ID: DAILY_ENT_VARIANT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.cp.screens/daily_entitlement_single_la
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: DAILY_ENT_VARIANT
+  COMPONENT_LABEL: Daily Entitlement - Single Lifting Account
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_CP
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 125.0
+  WINDOW_ID: ENERGYX
+related: {}

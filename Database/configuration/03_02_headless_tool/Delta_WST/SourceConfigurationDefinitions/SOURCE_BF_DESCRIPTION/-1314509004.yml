@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1314509004'
+keys:
+  BF_DESCRIPTION_NO: WR.0072
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_product_analysis' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to enter product yield factors for production wells.</p>
+related: {}

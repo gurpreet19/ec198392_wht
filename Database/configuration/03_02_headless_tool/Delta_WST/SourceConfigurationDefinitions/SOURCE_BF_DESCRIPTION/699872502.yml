@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '699872502'
+keys:
+  BF_DESCRIPTION_NO: SP.0032
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/revn_calc_log' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Calculation Log screen </strong>    is used to review the calculation log when the calculation fails.</p><p>    The user selects the day for which the calculations where run, it could be a single day, or a range of date within the same month. A list of previous runs    of the calculations for the selected date range and calculation job is displayed (if there are any), one row for each run, along with the outcome (e.g.    Success of Failure).</p><p>    By highlighting a row from the upper section of the screen, i.e. an individual calculation run, the associated log file summary from that run is displayed    in the lower section of the screen and the user can press the Download button to examine the full log file.</p>
+related: {}

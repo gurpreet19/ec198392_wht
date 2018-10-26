@@ -1,0 +1,41 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1763199370'
+keys:
+  BF_DESCRIPTION_NO: CO.1025
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1025
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/bf_profile' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>There is a requirement to limit a list of objects that appear in
+    a screen based on a type, etc. The initial requirement was on Gas Sales Contracts,
+    but we have similar solutions for Streams, Tanks and Wells today. This specification
+    will specify a generic concept that enable this functionality. The focus is on
+    Gas Sale Contracts, but in the future this can be adopted by existing and future
+    requirements.</p><p>The idea of a business function profile or a class profile
+    is that whenever a new Gas Sale Contract is created it will be associated with
+    a profile from a list of different profiles. Each profile is associated with one
+    or several business functions. Each business function will then have to implement
+    functionality which ensures that only contracts associated with profiles that
+    uses the business function will be listed/available in the screen.</p><p>An attribute
+    called BF_PROFILE must be added to the class where this is used.</p><p>The list
+    of business functions and classes (GAS_CONTRACT, STREAM, TANK and WELL) that uses
+    the profile concept is part of the products. The profiles and usage of the business
+    functions are decided by the individual implementation projects.</p><p>Note! The
+    screen is part of EC Framework, but the different classes and business functions
+    are individually configured in the product.</p><p>The Business Function Profile
+    was also introduced for Well Finder screen use. It is preconfigured with 4 types
+    of PROFILE_CODE for Well Class as following:</p><p><strong>PROD</strong> Production
+    Well Profile</p><p><strong>INJ</strong> Injection Well Profile</p><p><strong>PRODINJ</strong>
+    Production and Injection Well Profile</p><p><strong>OBSERV</strong> Observation
+    Well Profile</p><p>These Business Function Profile codes were configured with
+    the selected WR.XXXX Well Business Functions based on its usage. The Well Finder
+    screen will lead users to go to the respective Well Business Function directly
+    if the Well object has been configured with the correct Business Function Profile
+    code. It offers users another way to navigate to the Well Business Function screens
+    without using the Tree view.</p><p>In addition, users would define their own profile
+    codes with a specific scope of business functions. For instance: the Steam Injector
+    Business Functions.</p>'
+related: {}

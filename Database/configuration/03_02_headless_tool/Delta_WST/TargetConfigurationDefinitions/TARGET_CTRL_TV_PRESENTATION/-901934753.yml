@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-901934753'
+keys:
+  COMPONENT_ID: INJ_GAS_FLW_SUB_DAY_STATUS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.wr.screens/sub_daily_gas_injection_flowline_status
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: INJ_GAS_FLW_SUB_DAY_STATUS
+  COMPONENT_LABEL: Sub Daily Gas Injection Flowline Status
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_WELL_RES_SUB_DAY
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 70.0
+  WINDOW_ID: ENERGYX
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '225469763'
+keys:
+  BF_CODE: SP.0039
+  CLASS_NAME: null
+  COMP_CODE: SetupButton/parameters
+  T: BF_COMPONENT
+  URL: /SetupButton/parameters
+parentKeys: {}
+properties:
+  BF_CODE: SP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_cost_mapping' )
+  CLASS_NAME: null
+  COMP_CODE: SetupButton/parameters
+  NAME: SetupButton/parameters
+  SIGNING_REQ_IND: null
+  URL: /SetupButton/parameters
+related: {}

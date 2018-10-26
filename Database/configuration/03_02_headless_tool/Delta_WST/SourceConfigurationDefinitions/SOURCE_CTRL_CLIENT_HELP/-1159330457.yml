@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1159330457'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/vatregno/CLASS_NAME/CUSTOMER/SETUP_CLASS/CUSTOMER_COUNTRY_SETUP
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/vatregno/CLASS_NAME/CUSTOMER/SETUP_CLASS/CUSTOMER_COUNTRY_SETUP
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

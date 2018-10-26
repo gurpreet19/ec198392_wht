@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1751795192'
+keys:
+  BF_CODE: GD.0039
+  CLASS_NAME: TRDP_SUB_DAY_NOM_TARGET
+  COMP_CODE: subDayDpTarget
+  T: BF_COMPONENT
+  URL: /subDayDpTarget
+parentKeys: {}
+properties:
+  BF_CODE: GD.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_delivery_point_target/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRDP_SUB_DAY_NOM_TARGET
+  COMP_CODE: subDayDpTarget
+  NAME: Delivery Point Target
+  SIGNING_REQ_IND: null
+  URL: /subDayDpTarget
+related: {}

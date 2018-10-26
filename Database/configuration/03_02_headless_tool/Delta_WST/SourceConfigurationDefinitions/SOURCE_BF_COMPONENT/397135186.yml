@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '397135186'
+keys:
+  BF_CODE: VO.0017
+  CLASS_NAME: STIM_DAY_VALUE_OVERV
+  COMP_CODE: table
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: VO.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/daily_node_overview' )
+  CLASS_NAME: STIM_DAY_VALUE_OVERV
+  COMP_CODE: table
+  NAME: Overview Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

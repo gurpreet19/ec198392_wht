@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1413467127'
+keys:
+  BF_CODE: PO.0112
+  CLASS_NAME: TANK_EVENT_DIP_STATUS
+  COMP_CODE: gauged
+  T: BF_COMPONENT
+  URL: /gauged
+parentKeys: {}
+properties:
+  BF_CODE: PO.0112
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/event_tank_status_dip_and_export' )
+  CLASS_NAME: TANK_EVENT_DIP_STATUS
+  COMP_CODE: gauged
+  NAME: Gauged
+  SIGNING_REQ_IND: null
+  URL: /gauged
+related: {}

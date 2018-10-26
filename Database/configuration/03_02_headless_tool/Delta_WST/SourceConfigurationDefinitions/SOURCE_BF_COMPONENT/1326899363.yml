@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1326899363'
+keys:
+  BF_CODE: CA.0002
+  CLASS_NAME: PARCEL_LOAD
+  COMP_CODE: Parcel_load
+  T: BF_COMPONENT
+  URL: /parcelLoad
+parentKeys: {}
+properties:
+  BF_CODE: CA.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ca.screens/cargo_load' )
+  CLASS_NAME: PARCEL_LOAD
+  COMP_CODE: Parcel_load
+  NAME: Parcel Load
+  SIGNING_REQ_IND: null
+  URL: /parcelLoad
+related: {}

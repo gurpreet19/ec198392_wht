@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1711273275'
+keys:
+  BF_CODE: FC.0027
+  CLASS_NAME: FCST_SP_DAY_AFS_GRAPH
+  COMP_CODE: afs_graph
+  T: BF_COMPONENT
+  URL: /afs_graph
+parentKeys: {}
+properties:
+  BF_CODE: FC.0027
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/monthly_afs_chart/TARGET/SUPPLY_POINT/CLASS1/FCST_SP_DAY_AFS_LIST/CLASS2/FCST_SP_DAY_AFS_GRAPH/CLASS3/FCST_SP_DAY_AFS_OVERVIEW' )
+  CLASS_NAME: FCST_SP_DAY_AFS_GRAPH
+  COMP_CODE: afs_graph
+  NAME: Graph
+  SIGNING_REQ_IND: null
+  URL: /afs_graph
+related: {}

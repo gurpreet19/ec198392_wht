@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2146577548'
+keys:
+  BF_CODE: PO.0073
+  CLASS_NAME: STRM_DAY_OVERVIEW_WATER
+  COMP_CODE: daily_stream_overview_water
+  T: BF_COMPONENT
+  URL: /daily_stream_overview_water
+parentKeys: {}
+properties:
+  BF_CODE: PO.0073
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_stream_overview' )
+  CLASS_NAME: STRM_DAY_OVERVIEW_WATER
+  COMP_CODE: daily_stream_overview_water
+  NAME: null
+  SIGNING_REQ_IND: null
+  URL: /daily_stream_overview_water
+related: {}

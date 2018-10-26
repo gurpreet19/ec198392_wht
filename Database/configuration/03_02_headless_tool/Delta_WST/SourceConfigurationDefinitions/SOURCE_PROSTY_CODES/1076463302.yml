@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1076463302'
+keys:
+  CODE: POSD_PLUS_1MTH
+  CODE_TYPE: TRANS_FOREX_BASE_CODE
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: POSD_PLUS_1MTH
+  CODE_TEXT: Point of Sales Date Plus One Month
+  CODE_TYPE: TRANS_FOREX_BASE_CODE
+  DESCRIPTION: The Forex date will be one month after the Point of Sale Date
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 220.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

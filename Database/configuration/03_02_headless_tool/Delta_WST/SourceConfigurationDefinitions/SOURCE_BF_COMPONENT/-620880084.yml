@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-620880084'
+keys:
+  BF_CODE: CP.0047
+  CLASS_NAME: FCST_LIFT_ACC_DAY_GRAPH
+  COMP_CODE: entitlement_chart
+  T: BF_COMPONENT
+  URL: /entitlement_chart
+parentKeys: {}
+properties:
+  BF_CODE: CP.0047
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_lift_acc_entitlement_chart' )
+  CLASS_NAME: FCST_LIFT_ACC_DAY_GRAPH
+  COMP_CODE: entitlement_chart
+  NAME: Chart
+  SIGNING_REQ_IND: null
+  URL: /entitlement_chart
+related: {}

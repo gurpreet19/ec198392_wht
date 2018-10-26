@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-196755903'
+keys:
+  BF_DESCRIPTION_NO: SD.0031
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SD.0031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/forecast_nompnt_mth_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Forecast - Monthly business function is a screen for entering/viewing forecasted gas deliveries for a given contract / delivery point and forecast name created&nbsp;SD.0030 Forecast &ndash; Sales Dispatching BF . After selecting period start, contract, delivery point and forecast name, forecast delivery information will be listed for&nbsp;selected month and 12 months forward in time (if available). Data will be stored (independently) at monthly level.</p>
+related: {}

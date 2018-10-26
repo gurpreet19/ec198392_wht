@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '788409037'
+keys:
+  BF_CODE: PO.0086
+  CLASS_NAME: null
+  COMP_CODE: save_upd_data_button_2
+  T: BF_COMPONENT
+  URL: /save_upd_data_button_2
+parentKeys: {}
+properties:
+  BF_CODE: PO.0086
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_vent_flare' )
+  CLASS_NAME: null
+  COMP_CODE: save_upd_data_button_2
+  NAME: Save and Update Data Button
+  SIGNING_REQ_IND: null
+  URL: /save_upd_data_button_2
+related: {}

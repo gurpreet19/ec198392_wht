@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1169851755'
+keys:
+  BF_CODE: WR.0059
+  CLASS_NAME: WEBO_INT_PRESSURE_TEST
+  COMP_CODE: table_well_bore_pressure_test
+  T: BF_COMPONENT
+  URL: /table_well_bore_pressure_test
+parentKeys: {}
+properties:
+  BF_CODE: WR.0059
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/webo_interval_pressure_test' )
+  CLASS_NAME: WEBO_INT_PRESSURE_TEST
+  COMP_CODE: table_well_bore_pressure_test
+  NAME: Well Bore Interval Pressure Test
+  SIGNING_REQ_IND: null
+  URL: /table_well_bore_pressure_test
+related: {}

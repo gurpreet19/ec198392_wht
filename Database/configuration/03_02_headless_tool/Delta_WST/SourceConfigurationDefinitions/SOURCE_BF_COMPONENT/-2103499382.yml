@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2103499382'
+keys:
+  BF_CODE: CO.2018
+  CLASS_NAME: CONTRACT_PARTIES
+  COMP_CODE: contract_parties
+  T: BF_COMPONENT
+  URL: /contract_parties
+parentKeys: {}
+properties:
+  BF_CODE: CO.2018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_parties' )
+  CLASS_NAME: CONTRACT_PARTIES
+  COMP_CODE: contract_parties
+  NAME: Contract Parties
+  SIGNING_REQ_IND: null
+  URL: /contract_parties
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1359581326'
+keys:
+  BF_CODE: SP.0042
+  CLASS_NAME: null
+  COMP_CODE: journal_entry_tab_ctrl
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.tab/tab
+parentKeys: {}
+properties:
+  BF_CODE: SP.0042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cont_journal_entry' )
+  CLASS_NAME: null
+  COMP_CODE: journal_entry_tab_ctrl
+  NAME: Journal Entry Tab Control
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.tab/tab
+related: {}

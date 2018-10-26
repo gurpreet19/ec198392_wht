@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '85656698'
+keys:
+  BF_CODE: CP.0072
+  CLASS_NAME: CARGO_SUB_DAY_BERTH
+  COMP_CODE: gantt_chart
+  T: BF_COMPONENT
+  URL: /gantt_chart
+parentKeys: {}
+properties:
+  BF_CODE: CP.0072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/schedule_lifting_overview' )
+  CLASS_NAME: CARGO_SUB_DAY_BERTH
+  COMP_CODE: gantt_chart
+  NAME: Berth Utilisation Chart Daily
+  SIGNING_REQ_IND: null
+  URL: /gantt_chart
+related: {}

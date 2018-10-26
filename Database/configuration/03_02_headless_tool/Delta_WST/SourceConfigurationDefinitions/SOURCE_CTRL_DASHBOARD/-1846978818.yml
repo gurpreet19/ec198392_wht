@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1846978818'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: REVN_INV_CL_VAL_CO
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: REVN
+  DESCRIPTION: Inventory Closing Value by Company/Product/UOM/Group Currency
+  LABEL: Inventory Closing Value by Company/Product/UOM/Group Currency
+  NAME: Inventory Closing Value by Company/Product/UOM/Group Currency
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.LineChartWidget
+  WIDGET_CODE: REVN_INV_CL_VAL_CO
+related: {}

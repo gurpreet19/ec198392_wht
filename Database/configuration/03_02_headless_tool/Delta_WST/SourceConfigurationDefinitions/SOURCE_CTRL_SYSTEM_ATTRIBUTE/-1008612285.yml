@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1008612285'
+keys:
+  ATTRIBUTE_TYPE: ENABLE_DOC_TRACING
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: ENABLE_DOC_TRACING
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Enable Tracing functionality in EC Revenue. Alternatives Y (Tracing enabled) or N (No tracing)
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

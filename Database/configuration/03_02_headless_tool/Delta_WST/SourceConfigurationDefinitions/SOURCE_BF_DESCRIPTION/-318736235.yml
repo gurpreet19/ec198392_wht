@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-318736235'
+keys:
+  BF_DESCRIPTION_NO: PO.0055
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/pipeline_pigging_events' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used to log pipeline pigging events. A new pipeline pigging event will be created when clicking on the insert button in the toolbar and saving the record after the mandatory values have been specified. This business function can registers the pig type, pig diameter, launch time, estimated arrival time, actual arrival time, travel time, slug size and comments. Additional attributes can be specified by mapping to generic columns.</p>
+
+    <p>The travel time of the pig will be calculated (actual arrival &ndash; launch daytime) once the launch daytime and actual arrival time are inserted.</p>
+related: {}

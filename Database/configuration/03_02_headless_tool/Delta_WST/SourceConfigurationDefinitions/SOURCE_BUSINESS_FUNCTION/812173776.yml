@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '812173776'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_REVENUE_ORDER
+parentKeys: {}
+properties:
+  BF_CODE: CD.0130
+  NAME: Revenue Order
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_REVENUE_ORDER
+related: {}

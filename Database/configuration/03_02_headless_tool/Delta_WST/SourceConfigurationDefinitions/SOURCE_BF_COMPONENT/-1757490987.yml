@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1757490987'
+keys:
+  BF_CODE: CO.1006
+  CLASS_NAME: VALUES
+  COMP_CODE: prop_table
+  T: BF_COMPONENT
+  URL: /prop_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.1006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_system_settings' )
+  CLASS_NAME: VALUES
+  COMP_CODE: prop_table
+  NAME: Property Table
+  SIGNING_REQ_IND: null
+  URL: /prop_table
+related: {}

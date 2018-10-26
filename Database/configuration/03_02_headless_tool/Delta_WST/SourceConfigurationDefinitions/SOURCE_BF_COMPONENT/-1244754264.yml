@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1244754264'
+keys:
+  BF_CODE: SP.0042
+  CLASS_NAME: CONT_JOURNAL_ENTRY
+  COMP_CODE: mapped_general_entries
+  T: BF_COMPONENT
+  URL: /mapped_general_entries
+parentKeys: {}
+properties:
+  BF_CODE: SP.0042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/cont_journal_entry' )
+  CLASS_NAME: CONT_JOURNAL_ENTRY
+  COMP_CODE: mapped_general_entries
+  NAME: Mapped Data Entries
+  SIGNING_REQ_IND: null
+  URL: /mapped_general_entries
+related: {}

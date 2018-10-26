@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1563463206'
+keys:
+  BF_CODE: PO.0055
+  CLASS_NAME: PIPE_PIGGING_EVENT
+  COMP_CODE: pigging_event
+  T: BF_COMPONENT
+  URL: /pigging_event
+parentKeys: {}
+properties:
+  BF_CODE: PO.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/pipeline_pigging_events' )
+  CLASS_NAME: PIPE_PIGGING_EVENT
+  COMP_CODE: pigging_event
+  NAME: Pipeline Pigging Event
+  SIGNING_REQ_IND: null
+  URL: /pigging_event
+related: {}

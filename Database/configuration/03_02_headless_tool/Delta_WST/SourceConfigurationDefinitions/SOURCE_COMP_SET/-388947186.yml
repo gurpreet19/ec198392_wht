@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-388947186'
+keys:
+  COMPONENT_SET: STRM_LPG_COMP
+  T: COMP_SET
+parentKeys: {}
+properties:
+  COMPONENT_SET: STRM_LPG_COMP
+  DESCRIPTION: Stream LPG Component Analysis
+related: {}
