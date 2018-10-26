@@ -46,7 +46,7 @@ define NLS_LANG='AMERICAN'
 define version_from='10.3.SP06_WST'
 define version_to='12.0'
 define DELTA_FOLDER_NAME='Delta_WST'
-define headlesstool='headless-5.0.0'
+define headlesstool='headless-5.1.0'
 
 -- ## Parameters how to run the upgrade script
 -- ## Simulate query will only generate the queries but not execute the queries when set to 1 (possible values 1 or 0)
