@@ -375,3 +375,11 @@ Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OW
 
 Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) values 
 ('DEMURRAGE','INTERMEDIATE_LAYTIME','viewformatmask',2500,'/EC','STATIC_PRESENTATION','hh:mm');
+
+---------------------------------------------------------------------------------
+
+-- TV_CLASS_ATTR_PRES_CONFIG_JN
+
+DROP VIEW TV_CLASS_ATTR_PRES_CONFIG_JN;
+
+---------------------------------------------------------------------------------
