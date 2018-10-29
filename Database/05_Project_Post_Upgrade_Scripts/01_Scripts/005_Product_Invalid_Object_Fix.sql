@@ -109,7 +109,7 @@ Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OW
 Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) values 
 ('CARGO_INFO','LOADING_START_TIME','pickerheight',2500,'/EC','STATIC_PRESENTATION','310');
 
-================================================================================================================================================================
+------------------------------------------------------------------------------------------------------------
 
 --RV_DEMURRAGE
 --DV_DEMURRAGE
@@ -382,4 +382,17 @@ Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OW
 
 DROP VIEW TV_CLASS_ATTR_PRES_CONFIG_JN;
 
----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+-- IUD_SCTR_ACC_DAY_DS_ALLOC
+
+Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) 
+values ('SCTR_ACC_DAY_DS_ALLOC','DATASET_NAME','DISABLED_IND',2500,'/','VIEWLAYER','Y');
+
+----------------------------------------------------------------------------------
+
+-- IUD_CARGO_FCST_STATUS
+
+Insert into class_tra_property_cnfg (CLASS_NAME,TRIGGERING_EVENT,TRIGGER_TYPE,SORT_ORDER,PROPERTY_CODE,OWNER_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) 
+values ('CARGO_FCST_STATUS','UPDATING','AFTER',100,'DISABLED_IND',2500,'VIEWLAYER','Y');
+
