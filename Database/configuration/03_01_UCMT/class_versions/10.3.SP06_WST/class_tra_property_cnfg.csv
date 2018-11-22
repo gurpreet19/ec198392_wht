@@ -1335,4 +1335,3 @@
 "WELL_TEST_DEF";"DELETING";"BEFORE";"2000";"DESCRIPTION";"-100";"APPLICATION";"To delete plot parameters in ptst_define";
 "WELL_TEST_DEF";"INSERTING";"AFTER";"700";"DESCRIPTION";"-100";"APPLICATION";"To insert active well bore interval that owns by the well";
 "WELL_TEST_DEF";"INSERTING";"AFTER";"1000";"DESCRIPTION";"-100";"APPLICATION";"To insert plot parameters of the well in ptst_graph_define table";
-Elapsed: 00:00:00.78
