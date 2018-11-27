@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '217775879'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/VAT_CODE
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/VAT_CODE
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

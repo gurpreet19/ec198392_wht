@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '404734063'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.fi/calculation_group_context
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.fi/calculation_group_context
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

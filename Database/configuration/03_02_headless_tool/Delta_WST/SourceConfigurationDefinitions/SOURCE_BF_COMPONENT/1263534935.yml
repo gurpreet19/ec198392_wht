@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1263534935'
+keys:
+  BF_CODE: IN.0026
+  CLASS_NAME: TRANS_INV_MSG_VAR
+  COMP_CODE: transaction_msg_variable
+  T: BF_COMPONENT
+  URL: /transaction_msg_variable
+parentKeys: {}
+properties:
+  BF_CODE: IN.0026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inv_line' )
+  CLASS_NAME: TRANS_INV_MSG_VAR
+  COMP_CODE: transaction_msg_variable
+  NAME: Message Variable
+  SIGNING_REQ_IND: null
+  URL: /transaction_msg_variable
+related: {}

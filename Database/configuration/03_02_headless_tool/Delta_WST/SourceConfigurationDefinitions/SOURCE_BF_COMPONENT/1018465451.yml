@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1018465451'
+keys:
+  BF_CODE: SD.0013
+  CLASS_NAME: null
+  COMP_CODE: apportion
+  T: BF_COMPONENT
+  URL: /apportion
+parentKeys: {}
+properties:
+  BF_CODE: SD.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/wet_gas_export_fuel' )
+  CLASS_NAME: null
+  COMP_CODE: apportion
+  NAME: Corrected Qty
+  SIGNING_REQ_IND: null
+  URL: /apportion
+related: {}

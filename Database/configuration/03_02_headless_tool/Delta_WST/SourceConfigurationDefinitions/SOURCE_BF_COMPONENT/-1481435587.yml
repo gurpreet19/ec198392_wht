@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1481435587'
+keys:
+  BF_CODE: CO.2063
+  CLASS_NAME: null
+  COMP_CODE: copy_carrier_popup
+  T: BF_COMPONENT
+  URL: /copy_carrier_popup
+parentKeys: {}
+properties:
+  BF_CODE: CO.2063
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/carrier_cooldown' )
+  CLASS_NAME: null
+  COMP_CODE: copy_carrier_popup
+  NAME: Copy Carrier Popup
+  SIGNING_REQ_IND: null
+  URL: /copy_carrier_popup
+related: {}

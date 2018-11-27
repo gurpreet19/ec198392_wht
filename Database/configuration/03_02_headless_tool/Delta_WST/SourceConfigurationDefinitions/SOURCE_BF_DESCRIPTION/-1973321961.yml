@@ -1,0 +1,32 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1973321961'
+keys:
+  BF_DESCRIPTION_NO: CD.0103
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0103
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/setup_report' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Report Document Setup screen</strong>    is used to
+    connect specific Report Templates to the Document Templates that    exist in the
+    EC Revenue configuration.</p><p><u>    The screen is divided into these sections:
+    </u><br>    <strong><em>- Document Template Section</em></strong><br>    It shows
+    existing Document Templates defined in Document Template screen    (BF CD.0013).<br>
+    <br>    <strong><em> - Report Template Section</em></strong><br>    The section
+    contains Reports available for the chosen Document Template.<br>More Reports can
+    be added and versioned. Here we can choose what action needs to be perfomed when
+    the document is moved from one validation level to another.<br>For eg: If we choose
+    ''Generate Report'' in&nbsp;''Open to valid 1 Action'' dropdown, then everytime
+    when the document is moved from ''Open'' to ''Valid1'', the report will be generated.<br><br>Following
+    are the 4 options that can be chosen in the dropdowns:</p><ul><li><b>Generate
+    Report:</b> The report will be generated, if missing. Will not be regenerated
+    if already generated.</li>  <li><b>Delete Report:</b>&nbsp;The report will be
+    deleted.</li>  <li><b>Regenerate Report:</b> The report will be regenerated, if
+    it is already generated. Otherwise the report will be generated.</li>  <li><b>No
+    Action: </b>No action will be performed.</li></ul><p></p><p>Report Templates are
+    defined in Report Template screen (BF RP.0001).<br>Configured templates will then
+    be available in the    <em>Select Document Setup</em> popup for selecting a report
+    to run in the Document General screen (BF SP.0016).</p>'
+related: {}

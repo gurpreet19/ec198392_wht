@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1173745802'
+keys:
+  BF_CODE: PO.0097
+  CLASS_NAME: STOR_DAY_OVERVIEW_DETAIL
+  COMP_CODE: tankDetails
+  T: BF_COMPONENT
+  URL: /tankDetails
+parentKeys: {}
+properties:
+  BF_CODE: PO.0097
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_storage_overview' )
+  CLASS_NAME: STOR_DAY_OVERVIEW_DETAIL
+  COMP_CODE: tankDetails
+  NAME: Tank Details
+  SIGNING_REQ_IND: null
+  URL: /tankDetails
+related: {}

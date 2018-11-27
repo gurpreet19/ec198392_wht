@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1328738175'
+keys:
+  BF_CODE: CD.0119
+  CLASS_NAME: FIN_POSTING_SETUP
+  COMP_CODE: fin_posting_setup_table
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CD.0119
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/fin_posting_setup' )
+  CLASS_NAME: FIN_POSTING_SETUP
+  COMP_CODE: fin_posting_setup_table
+  NAME: Financial Posting Setup Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

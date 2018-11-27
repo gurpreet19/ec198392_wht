@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '49053144'
+keys:
+  COMPONENT_ID: PRICE_IDX_DS_PO_MTH_VAL
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_IDX_DS_PO_MTH_VAL?screentemplate=/com.ec.sale.pr.screens/price_index_monthly_with_dim
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PRICE_IDX_DS_PO_MTH_VAL
+  COMPONENT_LABEL: Monthly Price Index - Dataset and Price Object
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_SALE_PR
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 112.0
+  WINDOW_ID: ENERGYX
+related: {}

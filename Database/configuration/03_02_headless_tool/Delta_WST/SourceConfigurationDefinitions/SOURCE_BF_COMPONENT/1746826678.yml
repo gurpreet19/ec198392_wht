@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1746826678'
+keys:
+  BF_CODE: PD.0013
+  CLASS_NAME: DEF_LOSS_STRM_DAY_REPORT
+  COMP_CODE: report
+  T: BF_COMPONENT
+  URL: /report
+parentKeys: {}
+properties:
+  BF_CODE: PD.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_facility_loss_accounting' )
+  CLASS_NAME: DEF_LOSS_STRM_DAY_REPORT
+  COMP_CODE: report
+  NAME: report
+  SIGNING_REQ_IND: null
+  URL: /report
+related: {}

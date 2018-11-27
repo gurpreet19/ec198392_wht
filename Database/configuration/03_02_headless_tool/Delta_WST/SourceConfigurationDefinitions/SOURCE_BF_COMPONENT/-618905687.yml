@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-618905687'
+keys:
+  BF_CODE: WR.0057
+  CLASS_NAME: IWEL_DAY_STATUS_CO2
+  COMP_CODE: daily_co2_injection_well_status
+  T: BF_COMPONENT
+  URL: /daily_co2_injection_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_co2_injection_well_status' )
+  CLASS_NAME: IWEL_DAY_STATUS_CO2
+  COMP_CODE: daily_co2_injection_well_status
+  NAME: Daily Co2 Injection Well Status
+  SIGNING_REQ_IND: null
+  URL: /daily_co2_injection_well_status
+related: {}

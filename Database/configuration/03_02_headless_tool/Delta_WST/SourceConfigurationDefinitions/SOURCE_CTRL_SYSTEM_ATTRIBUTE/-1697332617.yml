@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1697332617'
+keys:
+  ATTRIBUTE_TYPE: API_VCF_PRESS_CORR
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: Y
+  ATTRIBUTE_TYPE: API_VCF_PRESS_CORR
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Include the calculation of CPL when the Observe Pressure is not null.
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

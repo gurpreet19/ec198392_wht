@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-813521895'
+keys:
+  BF_CODE: WR.0003
+  CLASS_NAME: IWEL_DAY_STATUS_WATER
+  COMP_CODE: daily_water_injection_well_status
+  T: BF_COMPONENT
+  URL: /daily_water_injection_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_water_injection_well_status' )
+  CLASS_NAME: IWEL_DAY_STATUS_WATER
+  COMP_CODE: daily_water_injection_well_status
+  NAME: Daily Water Injection Well Status
+  SIGNING_REQ_IND: null
+  URL: /daily_water_injection_well_status
+related: {}

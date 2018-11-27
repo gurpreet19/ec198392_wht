@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1718699337'
+keys:
+  BF_CODE: CP.0024
+  CLASS_NAME: TRAIN_STORAGE_YIELD
+  COMP_CODE: storage_yield
+  T: BF_COMPONENT
+  URL: /storage_yield
+parentKeys: {}
+properties:
+  BF_CODE: CP.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/process_train_storage_yield' )
+  CLASS_NAME: TRAIN_STORAGE_YIELD
+  COMP_CODE: storage_yield
+  NAME: Process Train Storage Yield
+  SIGNING_REQ_IND: null
+  URL: /storage_yield
+related: {}

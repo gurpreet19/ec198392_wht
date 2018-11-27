@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-550716808'
+keys:
+  BF_CODE: CO.2066
+  CLASS_NAME: CONTRACT_PORT
+  COMP_CODE: contract_port
+  T: BF_COMPONENT
+  URL: /contract_port
+parentKeys: {}
+properties:
+  BF_CODE: CO.2066
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_port' )
+  CLASS_NAME: CONTRACT_PORT
+  COMP_CODE: contract_port
+  NAME: Contract Port
+  SIGNING_REQ_IND: null
+  URL: /contract_port
+related: {}

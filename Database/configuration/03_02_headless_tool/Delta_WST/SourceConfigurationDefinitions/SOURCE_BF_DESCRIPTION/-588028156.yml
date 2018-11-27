@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-588028156'
+keys:
+  BF_DESCRIPTION_NO: HA.0009
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: HA.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/period_process_calc' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This business function is used to start a process. What the process is, is up to the customer, but is typically a set of operations that should happen in a given order.</p>
+
+    <p>To configure this, a specific java class should be implemented. The business action &lsquo;PeriodProcessCalculations&rsquo; should map to that java class. The business action can be seen in &lsquo;Business Actions&rsquo; (part of scheduler) configuration screen. The java class that is part of the product will do nothing and return an error.</p>
+
+    <p>A log table is available. This can be used to log the steps in the process. The log is a master/detail where the master section holds the Run Date and navigator values, while the detail section list all the log messages.</p>
+
+    <p>Note that the Start Process button is using the scheduler. This means that the process is asynchronous. The user must press the go button to update the log sections and see the progress of the process.</p>
+related: {}

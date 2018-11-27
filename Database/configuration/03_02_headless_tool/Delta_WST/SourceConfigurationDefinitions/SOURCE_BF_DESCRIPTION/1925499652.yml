@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1925499652'
+keys:
+  BF_DESCRIPTION_NO: PD.0015
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PD.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/locked_in_potential' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function (BF) will allow registration of future possible opportunities to increase production (or reduce decline).</p>
+
+    <p>The first section is the parent and the opportunity itself. It has many attributes and amongst them a Date when the opportunity can be realized and it has a link to the parent choke model which can be improved by this opportunity. Date and Choke Model is the key.</p>
+
+    <p>The second data section will be used to record which sub choke model object that can increase its MPP by this opportunity, how much it can change and the date for when it&rsquo;s expected. The To Date is used when the opportunity is not longer an opportunity or when the increase has been realized and the new rate is included in the choke MPP.</p>
+
+    <p>The third section will be created by EC automatically upon save of a new opportunity. It will have three rows, one for current year, one for current year + 1 and the last for current year + 2. It will be used to record how much production that can be gained pr year for the whole opportunity (all sub chokes). The user can insert more rows (several years) or delete existing.</p>
+related: {}

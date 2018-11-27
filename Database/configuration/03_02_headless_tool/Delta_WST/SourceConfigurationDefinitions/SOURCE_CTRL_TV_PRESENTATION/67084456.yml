@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '67084456'
+keys:
+  COMPONENT_ID: TRAN_ZONE_CONN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.co.screens/transport_zone_connection/NAV_MODEL/TRAN_OPERATIONAL/TARGET/TRANSPORT_SYSTEM?screentemplate=/com.ec.tran.co.screens/transport_zone_connection
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TRAN_ZONE_CONN
+  COMPONENT_LABEL: Transport Zone Connection
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: DISP_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 171.0
+  WINDOW_ID: ENERGYX
+related: {}

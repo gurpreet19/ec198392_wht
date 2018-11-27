@@ -1,0 +1,175 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2055960592'
+keys:
+  BF_DESCRIPTION_NO: PT.0011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PT.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_comb' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p class="MsoNormal"><b>Terminology and
+    definitions<o:p></o:p></b></p><p class="MsoNormal"><i><span lang="EN-GB">Active
+    well</span></i><span lang="EN-GB"> : A well that
+    contributes with sensor or flow -data in the well test or well test
+    result.&nbsp;</span></p><p class="MsoNormal"><i><span lang="EN-GB">Flow
+    data set:&nbsp; </span></i><span lang="EN-GB">The group of data elements for a test device,
+    flowline or well that describes flowrates during the test.</span></p><p class="MsoNormal"><i><span lang="EN-GB">Sensor
+    data set:&nbsp; </span></i><span lang="EN-GB">The group of data elements for a test device,
+    flowline or well that describes sensor data (e.g. pressure, temperature) during
+    the test.</span></p><p class="MsoNormal"><i><span lang="EN-GB">Flowing
+    well: </span></i><span lang="EN-GB">&nbsp;A well that has the flowing indicator set to
+    &lsquo;yes&rsquo; in a production test result.&nbsp; The
+    well contributes to the flow rates measured on test device.&nbsp; A non-flowing well is a well that has the
+    flowing indicator set to &lsquo;no&rsquo;.&nbsp; It does
+    not contribute to the flow rates measured on test device. It may, however,
+    still may provide sensor data.&nbsp; The
+    flowing indicator is set in PT.0010.</span></p><p class="MsoNormal"><i><span lang="EN-GB">Primary
+    well: </span></i><span lang="EN-GB">&nbsp;A well that has the primary indicator set to
+    &lsquo;yes&rsquo; in a production test result.&nbsp; The
+    well is a target for result generation in a specific test result.&nbsp; Each test result can have multiple primary
+    wells.&nbsp;&nbsp; A non-primary well is a well
+    with primary indicator set to &lsquo;no&rsquo;.&nbsp; The
+    well is not a target for result generation in a specific test result.&nbsp; The primary indicator is set in PT.0010.</span></p><p class="MsoNormal"><i><span lang="EN-GB">Target
+    result: </span></i><span lang="EN-GB">The
+    production test result data set that is the target for the addition of a
+    combined test result.&nbsp; The result for one
+    of the <i>Primary wells</i> within the <i>Target result</i> will be created
+    when pressing the [generate result] -button in PT.0011.</span></p><p class="MsoNormal"><i><span lang="EN-GB">Combination
+    result:</span></i><span lang="EN-GB"> The
+    production test result data set that is the source of the additional fluid rate
+    data needed in order to accomplish a successful combination test result
+    generation.</span></p><p class="MsoNormal"><span lang="EN-GB">The <i>Fluid
+    state context </i>defines the referred state for the fluids rate
+    measurements.&nbsp; All rate data in this
+    business function refer to <i>process adjusted standard conditions</i>.&nbsp; This means that phases are pure, that P,T
+    shrinkage and expansion has been applied, and that fluids have been subject to
+    flash down- and processing- calculations that simulate the actual process
+    treatment (if applicable).</span></p><p class="MsoNormal"><b><span lang="EN-GB">Examples
+    of how to use this business function<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-GB">The
+    business function for &ldquo;Production Test Combination&rdquo; applies to various
+    situations where the individual well test result must be calculated based on a
+    reference to another test result, involving one or more wells flowing simultaneously
+    to the test device and measured as one combined well stream.&nbsp;</span></p><p class="MsoNormal"><span lang="EN-GB">The
+    following examples illustrate three typical approaches for combining production
+    tests.&nbsp; In the examples, all steps that
+    relate to the physical operation of the assets (well, flowline, test device)
+    are prefixed with OP.&nbsp; Steps that relate
+    to operations within Energy Component are prefixed with EC</span></p><p class="MsoNormal"><u><span lang="EN-GB">Spiking
+    of test device flow by combination with stable high flow producers</span></u><span lang="EN-GB"><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">OP: A well
+    with low flowrate is tested against a test device and falls below the
+    acceptable flow window of the available measurement devices for one or more
+    phases.&nbsp; The test device is then spiked
+    with production from one or more stable high-flow producers in order to bring
+    the total flow rates inside the calibration window of the measurement device.</span></p><ol style="margin-top:0in" start="1" type="1">
+     <li class="MsoNormal"><span lang="EN-GB">OP: Flow all wells.&nbsp; We assume that W-01 is the low flow
+         primary well and W-06 is the high flow stable producer.&nbsp; <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 + W-06 =&gt; &ldquo;result A&rdquo;. (PT.0005 =&gt; PT.0006 =&gt; PT.0007
+         =&gt; PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate a well result for
+         W-01 by subtracting a recent the test device result for W-06 from &ldquo;result
+         A&rdquo;. (PT.0011)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Alternatively, generate a
+         well result for W-01 by subtracting a theoretical rate for W-06 using the
+         configured theoretical method and test measurement input data taken from
+         W-06 in the actual test situation (PT.0011)</span></li></ol><p class="MsoNormal"><u><span lang="EN-GB">Differential
+    testing of a cluster/template :</span></u><span lang="EN-GB"><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">OP: Test
+    combination is also relevant for the testing of well clusters or well templates
+    when trying to minimise the deferred production caused by the testing procedure
+    itself.&nbsp; It also applies to testing of
+    cluster/template wells where flowline conditions and rates must be kept as
+    close as possible to normal operating conditions for the test to be valid.&nbsp; Also when using the entire processing plant
+    as a test device the ability to generate combined test results is
+    imperative.&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><ol style="margin-top:0in" start="1" type="1">
+     <li class="MsoNormal"><span lang="EN-GB">OP: Flow all wells W-01, W-02,
+         W-03, W-04. <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Define and run test
+         (PT.0005 =&gt; PT.0006 =&gt; PT.0007) <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 + W-02 + W-03 + W-04 =&gt; &ldquo;result A&rdquo;. (PT.0005 =&gt; PT.0006
+         =&gt; PT.0007 =&gt; PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">OP: Close W-04.&nbsp; <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 + W-02 + W-03 =&gt; &ldquo;result B&rdquo;. (PT.0005 =&gt; PT.0006 =&gt;
+         PT.0007 =&gt; PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Compare &ldquo;result A&rdquo; with
+         &ldquo;result B&rdquo; and generate a well result for W-04. (PT.0011).<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">OP: Open W-04, close W-03.&nbsp; <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 + W-02 + W-04 =&gt; &ldquo;result C&rdquo;. (PT.0005 =&gt; PT.0006 =&gt;
+         PT.0007 =&gt; PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Compare A with test device
+         &ldquo;result C&rdquo; and generate a well result for W-03. (PT.0011).<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">OP: Open W-03, close W-02. <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 + W-03 + W-04 =&gt; &ldquo;result D&rdquo;. (PT.0005 =&gt; PT.0006 =&gt;
+         PT.0007 =&gt; PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Compare A with test device
+         &ldquo;result D&rdquo; and generate a well result for W-02. (PT.0011).<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">OP: Open W-02, close W-01.<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-02 + W-03 + W-04 =&gt; &ldquo;result E&rdquo;. (PT.0005 =&gt; PT.0006 =&gt;
+         PT.0007 =&gt; PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Compare A with test device
+         &ldquo;result E&rdquo; and generate a well result for W-01. (PT.0011).</span></li></ol><p class="MsoNormal"><u><span lang="EN-GB">Combination
+    testing of a cluster/template</span></u><span lang="EN-GB"><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">Another way
+    of producing test results from a cluster/template is to sequentially close or
+    open all wells involved and thereby generate all the flow differences necessary
+    for the calculation of individual well results</span></p><ol style="margin-top:0in" start="1" type="1">
+     <li class="MsoNormal"><span lang="EN-GB">OP: Flow all wells W-01, W-02,
+         W-03, W-04.&nbsp;&nbsp; <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Define and run test
+         (PT.0005 =&gt; PT.0006 =&gt; PT.0007)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 + W-02 + W-03 + W-04 =&gt; &ldquo;result A&rdquo;.&nbsp; (PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">OP: Close W-04.&nbsp; <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 + W-02 + W-03 =&gt; &ldquo;result B&rdquo;. (PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Compare test device &ldquo;result
+         A&rdquo; with &ldquo;result B&rdquo; and generate a well result for W-04. (PT.0011)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">OP: Close W-03.&nbsp; <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 + W-02 =&gt; &ldquo;result C&rdquo;. (PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Compare test device &ldquo;result
+         A&rdquo; with &ldquo;result C&rdquo; and generate a well result for W-03. (PT.0011)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">OP: Close W-02.&nbsp; <o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Generate test device result
+         for W-01 =&gt; &ldquo;result D&rdquo;. (PT.0009 =&gt; PT.0010)<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">EC: Compare test device &ldquo;result
+         A&rdquo; with &ldquo;result D&rdquo; and generate a well result for W-02. (PT.0011)</span></li></ol><p class="MsoNormal"><span lang="EN-GB">All test
+    combination calculations are in principle performed on standard, process
+    adjusted test device results.&nbsp; However,
+    there is an option for correcting the results using estimated well production
+    instead.&nbsp; This is relevant when there is
+    a mismatch between flowing wells in target and combination test result.&nbsp; This mismatch can be compensated by estimating
+    the production for the missing well.&nbsp; The
+    use of estimated flow rates is also relevant when flowing conditions for a
+    certain well do not exactly match the flowing conditions found in the
+    referenced result.&nbsp; The correction based
+    on well flow estimates will use the theoretical calculation method configured
+    for each specific well, taking necessary input data from the relevant target
+    test result.</span></p><p class="MsoNormal"><span lang="EN-GB">Test
+    combinations are created between generated or manually entered single record
+    test device results.&nbsp; All test result
+    data used must be available from PT.0010.&nbsp;
+    There is no mandatory reference to any information on the multi-record
+    level (PT.0005, PT.0006, PT.0007, PT.0009) and combination results can be
+    generated directly from data entered in PT.0010.&nbsp; After successfully having generated a well test
+    result through a combination procedure, the new result will be available in the
+    normal test result PT.0010 context.</span></p><p>
+
+    <span lang="EN-GB" style="font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:
+    &quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+    &quot;Times New Roman&quot;;mso-ansi-language:EN-GB;mso-fareast-language:EN-US;
+    mso-bidi-language:AR-SA">All data in PT.0011 are also available from
+    PT.0010.&nbsp; The elements available in
+    PT.0011 represent a subset of the elements available in PT.0010.&nbsp; This subset contains mainly fluid rate data
+    and is designed for supporting combination procedures.&nbsp; The results generated in PT.0011 will after
+    save be available in PT.0010 as ordinary well results that can be validated and
+    accepted just as any other result.&nbsp;
+    Results generated through PT.0011 will also have the same downstream
+    impact as results generated or entered in PT.0010</span></p>
+related: {}

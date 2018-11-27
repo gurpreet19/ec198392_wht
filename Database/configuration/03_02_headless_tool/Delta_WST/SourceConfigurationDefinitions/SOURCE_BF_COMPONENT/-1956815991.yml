@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1956815991'
+keys:
+  BF_CODE: PO.0112
+  CLASS_NAME: TANK_SEAL
+  COMP_CODE: DispositionsTankSeal
+  T: BF_COMPONENT
+  URL: /DispositionsTankSeal
+parentKeys: {}
+properties:
+  BF_CODE: PO.0112
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/event_tank_status_dip_and_export' )
+  CLASS_NAME: TANK_SEAL
+  COMP_CODE: DispositionsTankSeal
+  NAME: Dispositions Tank Seal
+  SIGNING_REQ_IND: null
+  URL: /DispositionsTankSeal
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-747516499'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/totalform' AND COMP_CODE ='TransactionTotalForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/totalform' AND COMP_CODE ='TransactionTotalForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
+  COMMENTS: null
+  NAME: Transaction Value Total Form /save
+  URL: /save
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1308334348'
+keys:
+  BF_CODE: SD.0019
+  CLASS_NAME: SCTR_DAY_NOM_WITHIN_TARG
+  COMP_CODE: within_day_target
+  T: BF_COMPONENT
+  URL: /within_day_target
+parentKeys: {}
+properties:
+  BF_CODE: SD.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/within_day_target' )
+  CLASS_NAME: SCTR_DAY_NOM_WITHIN_TARG
+  COMP_CODE: within_day_target
+  NAME: Within Day Target
+  SIGNING_REQ_IND: null
+  URL: /within_day_target
+related: {}

@@ -1,0 +1,372 @@
+CODE=BOL_CALCULATIONS VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-529846613'
+  keys:
+    CODE: BOL_CALCULATIONS
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: DAY
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='BOL_CALCULATIONS' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='BOL_CALCULATIONS' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=BOL_UNLOAD_CALCULATIONS VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1145545867'
+  keys:
+    CODE: BOL_UNLOAD_CALCULATIONS
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: DAY
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='BOL_UNLOAD_CALCULATIONS' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='BOL_UNLOAD_CALCULATIONS' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=DAILY_ALLOC_MASS VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '441859057'
+  keys:
+    CODE: DAILY_ALLOC_MASS
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_ALLOC_RESERVOIR VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-267526282'
+  keys:
+    CODE: DAILY_ALLOC_RESERVOIR
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_ALLOC_VOL VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1149031278'
+  keys:
+    CODE: DAILY_ALLOC_VOL
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_DEFERMENT_CALCULATIONS VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '515074806'
+  keys:
+    CODE: DAILY_DEFERMENT_CALCULATIONS
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_DISP_ADJ_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1795948657'
+  keys:
+    CODE: DAILY_DISP_ADJ_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: DAY
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='DAILY_DISP_ADJ_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='DAILY_DISP_ADJ_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=DAILY_DISP_DEL_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-664437803'
+  keys:
+    CODE: DAILY_DISP_DEL_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: DAY
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='DAILY_DISP_DEL_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='DAILY_DISP_DEL_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=DAILY_DISP_SCH_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1836728290'
+  keys:
+    CODE: DAILY_DISP_SCH_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: DAY
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='DAILY_DISP_SCH_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='DAILY_DISP_SCH_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD: DISPATCHING_SCHD
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=DAILY_WELL_THEOR_MASS_PRECALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-679923182'
+  keys:
+    CODE: DAILY_WELL_THEOR_MASS_PRECALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=DAILY_WELL_THEOR_VOL_PRECALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '355339967'
+  keys:
+    CODE: DAILY_WELL_THEOR_VOL_PRECALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=HOURLY_ALLOC_VOL VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '538547514'
+  keys:
+    CODE: HOURLY_ALLOC_VOL
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=LIFTING_PROGRAM VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '483730361'
+  keys:
+    CODE: LIFTING_PROGRAM
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: DAY
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='LIFTING_PROGRAM' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='LIFTING_PROGRAM' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=LINE_ITEM_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-248315105'
+  keys:
+    CODE: LINE_ITEM_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=MONTHLY_ALLOC_MASS VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1141511909'
+  keys:
+    CODE: MONTHLY_ALLOC_MASS
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=MONTHLY_ALLOC_RESERVOIR VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2131803394'
+  keys:
+    CODE: MONTHLY_ALLOC_RESERVOIR
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=MONTHLY_ALLOC_VOL VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '120464158'
+  keys:
+    CODE: MONTHLY_ALLOC_VOL
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=MONTHLY_WELL_THEOR_MASS_PRECALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1841021854'
+  keys:
+    CODE: MONTHLY_WELL_THEOR_MASS_PRECALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=MONTHLY_WELL_THEOR_VOL_PRECALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '852302771'
+  keys:
+    CODE: MONTHLY_WELL_THEOR_VOL_PRECALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+CODE=PAYMENT_DUE_DATE_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '430639603'
+  keys:
+    CODE: PAYMENT_DUE_DATE_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SUB_DAILY_DISP_ADJ_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1072919664'
+  keys:
+    CODE: SUB_DAILY_DISP_ADJ_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: 1H
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='SUB_DAILY_DISP_ADJ_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='SUB_DAILY_DISP_ADJ_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=SUB_DAILY_DISP_DEL_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1387466796'
+  keys:
+    CODE: SUB_DAILY_DISP_DEL_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: 1H
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='SUB_DAILY_DISP_DEL_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='SUB_DAILY_DISP_DEL_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=SUB_DAILY_DISP_SCH_CALC VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1113699297'
+  keys:
+    CODE: SUB_DAILY_DISP_SCH_CALC
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: 1H
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='SUB_DAILY_DISP_SCH_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='SUB_DAILY_DISP_SCH_CALC' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD: DISPATCHING_SCHD
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED
+CODE=WET_GAS_EXPORT VALID_FROM_DATE=01-01-1900: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-207149086'
+  keys:
+    CODE: WET_GAS_EXPORT
+    T: ALLOC_JOB_DEFINITION
+    VALID_FROM_DATE: 1900-01-01T00:00:00Z
+  parentKeys: {}
+  properties: {}
+  related:
+    ALLOC_JOB_PASS:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CALC_SEQ_ORDERING: ASCENDING
+        EXEC_FREQ: DAY
+        JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='WET_GAS_EXPORT' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+        SORT_ORDER: 1.0
+        T: ALLOC_JOB_PASS
+      parentKeys:
+        ALLOC_JOB_DEFINITION.JOB_NO: (SELECT JOB_NO FROM ALLOC_JOB_DEFINITION WHERE CODE ='WET_GAS_EXPORT' AND VALID_FROM_DATE = TO_DATE('01-01-1900' ,'DD-MM-YYYY'))
+      properties:
+        METHOD_CODE: ALLOC_PASS_METHOD
+      status: MODIFIED
+  status: UNDEFINED

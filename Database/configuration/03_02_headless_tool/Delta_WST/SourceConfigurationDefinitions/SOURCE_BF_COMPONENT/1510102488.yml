@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1510102488'
+keys:
+  BF_CODE: WR.0052
+  CLASS_NAME: WELL_EVENT_SINGLE
+  COMP_CODE: event_well_status
+  T: BF_COMPONENT
+  URL: /event_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0052
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_well_status_2' )
+  CLASS_NAME: WELL_EVENT_SINGLE
+  COMP_CODE: event_well_status
+  NAME: Event Production Well Status
+  SIGNING_REQ_IND: null
+  URL: /event_well_status
+related: {}

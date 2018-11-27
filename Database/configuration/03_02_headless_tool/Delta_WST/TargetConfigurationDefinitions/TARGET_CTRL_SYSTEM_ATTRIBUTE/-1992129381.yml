@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1992129381'
+keys:
+  ATTRIBUTE_TYPE: DB_DEBUG_LEVEL
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: 'FALSE'
+  ATTRIBUTE_TYPE: DB_DEBUG_LEVEL
+  ATTRIBUTE_VALUE: null
+  COMMENTS: 'Sets debug level for witing debug text. Values: ''DEBUG'', ''ERROR''
+    or ''FALSE'' (default)'
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

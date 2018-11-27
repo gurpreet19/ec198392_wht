@@ -1,0 +1,139 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-368300047'
+keys:
+  BF_DESCRIPTION_NO: IN.0035
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inventory_overview/ACCRUAL_IND/Y' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>\t<span style=\"color: rgb(0, 0, 153);\">\t\t<em> Transactional\
+    \ Inventory module in EC Revenue allows complex inventory valuations using the\
+    \ EC calculation engine. It is a standard calculation where minimal calculation\
+    \ knowledge is required and can be fully configured through creating EC objects\
+    \ and configuration. It has been designed with the intention of creating templates\
+    \ with standard functionality. And for the cases that do not conform to the normal\
+    \ rules, overrides can be created to cater for the exceptions. </em>\t</span></p><p>\t\
+    <strong>Monthly Transactional Inventory Process Accrual screen</strong> is used\
+    \ to view the monthly volumes and monetary values associated with a Transactional\
+    \ Inventory object and a Product Stream.<br>This screen is for Accrual numbers\
+    \ where there is also a screen for Actuals - Monthly Transactional Inventory Process\
+    \ screen (BF IN.0024). \t<br>Runs that were done as actual will also be available\
+    \ as preceding runs (Prior Month/Opening Value) or previous runs (when running\
+    \ redistribution of cost only).</p>\t\t<h2>\t\t\t<strong style=\"color: rgb(0,\
+    \ 0, 153);\">Navigator</strong>\t\t</h2>\t\t<p>The Navigator filter data based\
+    \ on:\t\t<br>\t\t\t<strong>- Business Unit</strong> is connected to the Product\
+    \ Stream and allows ring-fencing when needed.\t\t\t\t\t\t\t<br>\t\t\t\t\t\t\t\t\
+    <strong>- Product Stream Group</strong> is required for both tabs.\t\t\t\t\t\t\
+    \t\t<br>\t\t\t\t\t\t\t\t\t<strong>- Product Stream</strong> is not required and\
+    \ when not chosen the calculation will run for all streams in the group in the\
+    \ order they have within the group. </p>\t\t\t\t\t\t\t\t<h2>\t\t\t\t\t\t\t\t\t\
+    <strong style=\"color: rgb(0, 0, 153);\">Tab Calculation</strong>\t\t\t\t\t\t\t\
+    \t</h2>\t\t\t\t\t\t\t\t<p>- Calculation Tab allows running a calculation (by <strong>Button\
+    \ </strong>\t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 153, 0);\">RUN CALCULATION</strong>)\
+    \ for the Product Stream group that will produce the values needed.\t\t\t\t\t\t\
+    \t\t\t<br>- Calculation Tab allows viewing any logs generated that may contain\
+    \ additional information such as should the calculation fail or provide warnings\
+    \ based on the data used.</p>\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t<strong>From\
+    \ Month</strong> and<strong> to Month</strong> chooses the months that the calculation\
+    \ will run for. By default, the calculation requires that a run is verified before\
+    \ the next month is being run in order to verify the opening values are correct.\
+    \ There is an override for this in the Create Calculation Screen. By finding the\
+    \ calculation the project is using and adding the Calculation Parameter ALLOW_PREC_PROVISIONAL\
+    \ with value YES. The calculation will not take only verified or approved but\
+    \ also provisional runs as the opening values.</p>\t\t\t\t\t\t\t\t\t<p>    <strong>Job\
+    \ Start Time</strong>    is an option for the user to decide when the Calculation\
+    \ run will be    executed by the system. By default, it is blank meaning the Calculation\
+    \ run    will be triggered right now.</p><p>    <strong>Log Level</strong>   \
+    \ is a level of calculation information to be given to the user after the    calculation\
+    \ execution. It can be chosen between Full, Medium or No Details.    In case of\
+    \ calculation fail, Full Log level becomes a useful tool to    analyse the reasons.</p><p>\
+    \    <strong>Calculation Scope </strong>    is an option to rerun the calculation\
+    \ to reallocate only one of the cost    columns in the calculation keeping all\
+    \ the other quantities, values and    costs unchanged.<br>            This required\
+    \ adding configuration to the EC codes. To use this, the        user needs to\
+    \ add a new CODE to EC Code TIN_REALLOC_COST where the CODE        is the name\
+    \ of the cost column in the database that needs to be        reallocated.    <br>\
+    \    When the calculation is run with something other than Full Scope, it will\
+    \    read all the values for all other columns except the given column and pull\
+    \    them from the previous run and then only do redistribution for the cost \
+    \   column given.</p><p>    <u>Note</u>    : The system accepts the preceding\
+    \ run will be approved or verified. There    is also an override for this in the\
+    \ Create Calculation screen by finding    the calculation the project is using\
+    \ and adding the Calculation Parameter    ALLOW_PREV_PROVISIONAL with value YES.</p><ul><li><strong>Button\
+    \ <span style=\"color: rgb(0, 153, 0);\">Download </span></strong></li> \t\t\t\
+    \t\t\t\t\t\t\t\t\t\t\tThis button will download a calculation log as XML.</ul>\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t\t<br><ul><li><strong>Button <span style=\"color: rgb(0,\
+    \ 153, 0);\">View </span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> </li>\t\t\t\t\t\
+    \t\t\t\t\t\t\t\t\tThis button will open a Calculation Log Summary in an additional\
+    \ browser window.</ul>\t\t\t\t\t\t\t\t\t\t\t\t<h2>\t\t\t\t\t\t\t\t\t\t<strong\
+    \ style=\"color: rgb(0, 0, 153);\">Tab Report</strong>\t\t\t\t\t\t\t\t\t</h2>\t\
+    \t\t\t\t\t\t\t\t<p>Report Tab allows the user to view the result of a successful\
+    \ Calculation Run.\t\t\t\t\t\t\t</p>\t\t\t\t\t\t\t\t<p><strong>Transaction Inventory\
+    \ Calculations Section </strong> will display all Documents generated by the Calculation\
+    \ Run. By default, they appear in Provisional status.\t\t\t\t\t\t\t</p>\t\t\t\t\
+    \t\t\t\t<ul><li><strong>Button <span style=\"color: rgb(0, 153, 0);\">Verify Document</span></strong></li>\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t\tThis button will change the Status from Provisional\
+    \ to Verified for a selected Document.</ul><br><ul><li><strong>Button <span style=\"\
+    color: rgb(0, 153, 0);\">Unverify Document</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
+    </strong></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\tThis button will change the status from\
+    \ Verified back to Provisional for a selected Document.</ul><br><ul><li><strong>Button\
+    \ <span style=\"color: rgb(0, 153, 0);\">Trace Document</span>\t\t\t\t\t\t\t\t\
+    \t\t\t\t\t\t</strong></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\tThis button will open a\
+    \ popup window containing the Tracing information for the selected Document.</ul><br><ul><li><strong>Button\
+    \ <span style=\"color: rgb(0, 153, 0);\">Generate Pending Report</span>\t\t\t\t\
+    \t\t\t\t\t\t\t\t\t\t</strong></li> \t\t\t\t\t\t\t\t\t\t\t\t\t\tThis button will\
+    \ generate reports that have not been generated.</ul>\t\t\t\t\t<p><strong>Reports\
+    \ Section </strong> will list all Reports generated.\t\t\t\t\t\t\t</p>\t\t\t\t\
+    \t\t\t\t\t\t<ul><li><strong>Button <span style=\"color: rgb(0, 153, 0);\">Verify\
+    \ Report</span></strong></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\tThis button will change\
+    \ the Status from Provisional to Verified for a selected Report.</ul><br><ul><li><strong>Button\
+    \ <span style=\"color: rgb(0, 153, 0);\">Unverify Report</span>\t\t\t\t\t\t\t\t\
+    \t\t\t\t\t\t</strong></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\tThis button will change\
+    \ the status from Verified back to Provisional for a selected Report.</ul><br><ul><li><strong>Button\
+    \ <span style=\"color: rgb(0, 153, 0);\">Trace Document</span>\t\t\t\t\t\t\t\t\
+    \t\t\t\t\t\t</strong></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\tThis button will open a\
+    \ popup window containing the Tracing information for the selected Report - where\
+    \ the selected Report values have been used.</ul><br><ul><li><strong>Button <span\
+    \ style=\"color: rgb(0, 153, 0);\">View Report</span></strong></li>\t\t\t\t\t\t\
+    \t\t\t\t\t\t\t\tThis button will download for the viewing the selected Report\
+    \ in the established format.</ul><br><ul><li><strong>Button <span style=\"color:\
+    \ rgb(0, 153, 0);\">Clear Report</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong></li>\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t\tThis button will delete the selected Report and regenerate\
+    \ it. <u>Note:</u> Verified report can not be deleted. It should be transfered\
+    \ back to a Provisional status.</ul><br><ul><li><strong>Button <span style=\"\
+    color: rgb(0, 153, 0);\">Send</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong></li>\t\
+    \t\t\t\t\t\t\t\t\t\t\t\t\tThis button will open a popup window to send the selected\
+    \ Report. \t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>When the Send button is clicked, a dialog\
+    \ box will show up, listing the    messages to be sent (based on configuration\
+    \ and report status). The report    is sent by clicking the Send button in the\
+    \ dialog box.<br>    To be able to send a report, it has to be linked to at least\
+    \ one    distribution list. This is done in the Distribution of Report Tab.</ul>\t\
+    \t\t\t\t\t\t<br><ul><li><strong>Button <span style=\"color: rgb(0, 153, 0);\"\
+    >Refresh</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong></li> \t\t\t\t\t\t\t\t\t\t\
+    \t\t\t\tThis button will refresh the Reports table.</ul>\t\t\t\t\t\t\t\t\t<p><u>When\
+    \ selecting a generated Report following sub-tabs will show values for the run:</u>\t\
+    \t\t\t\t\t\t</p>\t\t<h3>\t\t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\"\
+    >Sub-tab Parameter Values</strong>\t\t\t\t\t\t\t\t\t</h3>\t\t\t\t\t\t\t\t\t<p>Parameter\
+    \ Values are the values used to generate the selected Report. There can be multiple\
+    \ reports with the same name of the Calculation run <u>but</u> with different\
+    \ parameter values.</p>\t\t\t\t\t\t\t\t<h3>\t\t\t\t\t\t\t\t\t\t<strong style=\"\
+    color: rgb(0, 0, 153);\">Sub-tab Distribution of Report</strong>\t\t\t\t\t\t\t\
+    \t\t</h3>\t\t\t\t\t\t\t\t\t<p>    This tab is used for the configuration of messages\
+    \ to send. Messages types and    distribution lists need to be configured first\
+    \ (in other screens).    Different message types and distribution list can then\
+    \ be added here, per    report status.</p><p>    When a message type and distribution\
+    \ lists is configured here, the system    will add the parameters 'Report Name'\
+    \ and 'Accept Status' (same as report    status) to the message type, and then\
+    \ add the distribution lists to    this message type (See Message Distribution\
+    \ screen).</p><p>    When the user choose to send the report, the configured messages\
+    \ for    current report status will be used.</p><h3>\t\t\t\t\t\t\t\t\t\t<strong\
+    \ style=\"color: rgb(0, 0, 153);\">Sub-tab Send Log</strong>\t\t\t\t\t\t\t\t\t\
+    </h3>\t\t\t\t\t\t\t\t\t\t<p>The Tab shows all messages sent.\t\t\t\t\t\t\t</p>\t\
+    \t\t\t\t\t\t\t\t<h3>\t\t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\"\
+    >Sub-tab Publish Report</strong>\t\t\t\t\t\t\t\t\t</h3>\t\t\t\t\t\t\t\t\t\t\t\t\
+    \t\t\t\t\t<p>The Tab shows publication information regarding the selected Report.\t\
+    \t\t\t\t\t\t</p>"
+related: {}

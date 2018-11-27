@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1343925718'
+keys:
+  BF_CODE: SA.0003.01
+  CLASS_NAME: CALC_SALE_CNTR_LOG
+  COMP_CODE: logcontent
+  T: BF_COMPONENT
+  URL: /logcontent
+parentKeys: {}
+properties:
+  BF_CODE: SA.0003.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/sale_calc_yr_contract' )
+  CLASS_NAME: CALC_SALE_CNTR_LOG
+  COMP_CODE: logcontent
+  NAME: LogContent
+  SIGNING_REQ_IND: null
+  URL: /logcontent
+related: {}

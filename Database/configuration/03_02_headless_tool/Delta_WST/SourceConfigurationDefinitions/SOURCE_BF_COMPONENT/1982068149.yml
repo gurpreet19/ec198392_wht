@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1982068149'
+keys:
+  BF_CODE: IN.0020
+  CLASS_NAME: null
+  COMP_CODE: OpenPeriodForm
+  T: BF_COMPONENT
+  URL: /open_period_form
+parentKeys: {}
+properties:
+  BF_CODE: IN.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/inv_validation/LEVEL/UNBOOKED/MODE/SET_TO_PREV' )
+  CLASS_NAME: null
+  COMP_CODE: OpenPeriodForm
+  NAME: Open Period Form
+  SIGNING_REQ_IND: null
+  URL: /open_period_form
+related: {}

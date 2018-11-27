@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-21822559'
+keys:
+  FUNCTIONAL_AREA_ID: null
+  NAME: FinItemYearlyCalculation
+  T: BUSINESS_ACTION
+parentKeys: {}
+properties:
+  ACTION_CLASS_NAME: com.ec.frmw.bs.calc.engine.CalcAction
+  BA_TYPE: SCHEDULER
+  FUNCTIONAL_AREA_ID: null
+  JBPM_DEPLOYMENT_ID: null
+  JBPM_PROCESS_NAME: null
+  JBPM_PROCESS_VERSION: null
+  NAME: FinItemYearlyCalculation
+related: {}

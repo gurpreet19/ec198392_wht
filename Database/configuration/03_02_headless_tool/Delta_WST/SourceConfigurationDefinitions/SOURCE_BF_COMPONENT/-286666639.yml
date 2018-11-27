@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-286666639'
+keys:
+  BF_CODE: GD.0080
+  CLASS_NAME: null
+  COMP_CODE: button
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: GD.0080
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_nomination_point_share/CLASS_SHARE/TRNP_EVENT_SHARE/CLASS_SHARE_SPLIT/TRNP_EVENT_SHARE_SPLIT/BF_PROFILE_2/DEF_TRAN/CATEGORY/ENTRY_EXIT_PATH/SHOW_OPERATIONAL/N' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Buttton
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

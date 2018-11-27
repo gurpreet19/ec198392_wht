@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1467324302'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/Y
+parentKeys: {}
+properties:
+  BF_CODE: RC.0061
+  NAME: Monthly Royalty Process Accrual
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/Y
+related: {}

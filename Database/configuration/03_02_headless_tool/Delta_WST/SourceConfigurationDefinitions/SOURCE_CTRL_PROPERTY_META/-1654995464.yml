@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1654995464'
+keys:
+  KEY: PERFORMANCE_CURVE_PRESSURE_UOM
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: PRESS_GAUGE
+  DESCRIPTION: Pressure UOM for Well(PT.0003)/Flowline(PT.0014) Performance Curves screens-WH_PRESS,BH_PRESS,DH_PRESS,ANNULUS_PRESS,GL_PRESS,DP_FLOWLINE
+  KEY: PERFORMANCE_CURVE_PRESSURE_UOM
+  LABEL: 'Well/Flowline Performance Curves: Default UOM for WH_PRESS,BH_PRESS,DH_PRESS,ANNULUS_PRESS,GL_PRESS,DP_FLOWLINE'
+  LIST_OF_VALUES: PopupQueryURL=/com.ec.frmw.co.screens/query/ec_code_popup.xml;PopupLayout=/com.ec.frmw.co.screens/layout/ec_code_popup.xml;PopupWhereColumn=CODE_TYPE;PopupWhereValue=PERFORMANCE_CURVE_PRESS_UOM;PopupWhereOperator=;PopupReturnColumn=1;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.CODE
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

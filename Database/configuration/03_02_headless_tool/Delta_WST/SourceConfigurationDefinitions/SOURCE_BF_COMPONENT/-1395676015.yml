@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1395676015'
+keys:
+  BF_CODE: CD.0105
+  CLASS_NAME: null
+  COMP_CODE: createRelationsTable2
+  T: BF_COMPONENT
+  URL: /create_relation_main_tables
+parentKeys: {}
+properties:
+  BF_CODE: CD.0105
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION' )
+  CLASS_NAME: null
+  COMP_CODE: createRelationsTable2
+  NAME: Create Relations - Main Tables
+  SIGNING_REQ_IND: null
+  URL: /create_relation_main_tables
+related: {}

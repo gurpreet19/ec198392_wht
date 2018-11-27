@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1413318283'
+keys:
+  BF_CODE: CP.0063
+  CLASS_NAME: CARGO_INFO
+  COMP_CODE: tab10
+  T: BF_COMPONENT
+  URL: /tab10
+parentKeys: {}
+properties:
+  BF_CODE: CP.0063
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/tab_cargo_menu/CARGO_NAV_CLASS/CARGO_PLANNING_NAVIGATOR/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT' )
+  CLASS_NAME: CARGO_INFO
+  COMP_CODE: tab10
+  NAME: Cargo Information
+  SIGNING_REQ_IND: null
+  URL: /tab10
+related: {}

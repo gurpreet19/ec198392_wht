@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-110071518'
+keys:
+  COMPONENT_ID: FC_RV_GS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: null
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: FC_RV_GS
+  COMPONENT_LABEL: Gas Sales
+  COMPONENT_TYPE: FOLDER
+  PARENT_COMPONENT_ID: FC_RV_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 5270.0
+  WINDOW_ID: ENERGYX
+related: {}

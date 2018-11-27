@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '299850131'
+keys:
+  COMPONENT_ID: VO_DA_AL_CA
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.vo/edit_daily_alloc_revn
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: VO_DA_AL_CA
+  COMPONENT_LABEL: Daily Quantity Allocation
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: VO_DA_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4180.0
+  WINDOW_ID: ENERGYX
+related: {}

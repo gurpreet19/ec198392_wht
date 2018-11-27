@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1262190779'
+keys:
+  NAME: RowYColName
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: FCTY_TOP5_MTH_COND_PROD
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: null
+  MANDATORY_IND: null
+  NAME: RowYColName
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: MTH_COND_SUM
+  RESOLVE_TYPE: null
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: FCTY_TOP5_MTH_COND_PROD
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '129174656'
+keys:
+  BF_CODE: TO.0007
+  CLASS_NAME: null
+  COMP_CODE: demurrage_type
+  T: BF_COMPONENT
+  URL: /demurrage_type
+parentKeys: {}
+properties:
+  BF_CODE: TO.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/demurrage' )
+  CLASS_NAME: null
+  COMP_CODE: demurrage_type
+  NAME: Demurrage Type
+  SIGNING_REQ_IND: null
+  URL: /demurrage_type
+related: {}

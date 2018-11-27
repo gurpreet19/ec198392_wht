@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-32225383'
+keys:
+  BF_CODE: CO.0039
+  CLASS_NAME: TANK_STRAPPING_DAYTIME
+  COMP_CODE: tank_strapping_daytime
+  T: BF_COMPONENT
+  URL: /tank_strapping_daytime
+parentKeys: {}
+properties:
+  BF_CODE: CO.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/tank_strapping' )
+  CLASS_NAME: TANK_STRAPPING_DAYTIME
+  COMP_CODE: tank_strapping_daytime
+  NAME: Tank Strapping Daytime
+  SIGNING_REQ_IND: null
+  URL: /tank_strapping_daytime
+related: {}

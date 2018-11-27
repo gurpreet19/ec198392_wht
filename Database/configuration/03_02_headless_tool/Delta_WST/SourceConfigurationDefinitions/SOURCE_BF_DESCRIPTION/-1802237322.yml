@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1802237322'
+keys:
+  BF_DESCRIPTION_NO: PO.0023
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/batch_oil_tank_export' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This Business Function is used to enter data for a batch export from a tank when there is no outgoing meter measuring the export. There can be many exports per day per tank. The exported volume belongs to only one production day. API calculations will be used to calculate Net volume. Ticket volume is the official volume and is by default set to net volume, but can be manually updated.</p><p>The result of the double dip is stored on an outgoing stream. There must always be one outgoing stream per tank for this BF. The connection between tank and stream is configured when you create a new tank. The attribute "Export Stream" is used.</p><p>Liquid Dip &amp; Water Dip depends on the type of Dip UOM Specified:</p><ul style="list-style-type:disc;margin-left:40px;"><li>If the DIP UOM is Percentage, then the format mask would be X,XX0.0</li><li>If the DIP UOM is Meter, then the format mask would be X,XX0.000</li><li>If the DIP UOM is Centimeters, then the format mask would be X,XX0.0</li><li>If the DIP UOM is Railcars, then the format mask would be X,XX0</li><li>If the DIP UOM is Inch, then the format mask would be n/4"</li></ul>
+related: {}

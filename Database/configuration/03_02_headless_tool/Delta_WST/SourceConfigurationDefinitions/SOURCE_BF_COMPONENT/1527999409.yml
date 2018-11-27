@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1527999409'
+keys:
+  BF_CODE: CO.2019
+  CLASS_NAME: CONTRACT_PREPARE_LIST
+  COMP_CODE: cntr_prep_list
+  T: BF_COMPONENT
+  URL: /cntr_prep_list
+parentKeys: {}
+properties:
+  BF_CODE: CO.2019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_prepare/CLASS_NAME/CONTRACT_PREPARE' )
+  CLASS_NAME: CONTRACT_PREPARE_LIST
+  COMP_CODE: cntr_prep_list
+  NAME: Contract
+  SIGNING_REQ_IND: null
+  URL: /cntr_prep_list
+related: {}

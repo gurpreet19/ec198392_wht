@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-667814438'
+keys:
+  BF_CODE: CO.2021
+  CLASS_NAME: CONTRACT_ATTRIBUTE
+  COMP_CODE: version
+  T: BF_COMPONENT
+  URL: /version
+parentKeys: {}
+properties:
+  BF_CODE: CO.2021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/TRAN_CODE' )
+  CLASS_NAME: CONTRACT_ATTRIBUTE
+  COMP_CODE: version
+  NAME: Attribute Version
+  SIGNING_REQ_IND: null
+  URL: /version
+related: {}

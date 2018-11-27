@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-184452452'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.sa.screens/sale_calc_day_contract
+parentKeys: {}
+properties:
+  BF_CODE: SA.0001.01
+  NAME: Daily Contract Calculation - by Contract
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.sa.screens/sale_calc_day_contract
+related: {}

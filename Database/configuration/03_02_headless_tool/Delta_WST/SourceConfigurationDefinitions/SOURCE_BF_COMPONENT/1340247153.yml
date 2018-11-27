@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1340247153'
+keys:
+  BF_CODE: PA.0007
+  CLASS_NAME: BPM_EC_GCOMMAND_ATT
+  COMP_CODE: action_attributes
+  T: BF_COMPONENT
+  URL: /action_attributes
+parentKeys: {}
+properties:
+  BF_CODE: PA.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/process_action' )
+  CLASS_NAME: BPM_EC_GCOMMAND_ATT
+  COMP_CODE: action_attributes
+  NAME: Action Attributes
+  SIGNING_REQ_IND: null
+  URL: /action_attributes
+related: {}

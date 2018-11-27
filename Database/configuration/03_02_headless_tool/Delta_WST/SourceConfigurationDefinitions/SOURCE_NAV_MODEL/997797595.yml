@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '997797595'
+keys:
+  FROM_CLASS_NAME: BUSINESS_UNIT
+  MODEL: TRAN_OPERATIONAL
+  ROLE_NAME: BUSINESS_UNIT
+  T: NAV_MODEL
+  TO_CLASS_NAME: BERTH
+parentKeys: {}
+properties:
+  DISABLED_IND: null
+  FORCE_NAV: null
+  FROM_CLASS_NAME: BUSINESS_UNIT
+  MODEL: TRAN_OPERATIONAL
+  MULTIPLICITY: 1:N
+  ROLE_NAME: BUSINESS_UNIT
+  TO_CLASS_NAME: BERTH
+related: {}

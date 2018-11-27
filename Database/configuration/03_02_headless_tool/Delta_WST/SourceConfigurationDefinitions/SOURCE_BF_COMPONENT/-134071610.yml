@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-134071610'
+keys:
+  BF_CODE: CO.1028
+  CLASS_NAME: CLASS_PROPERTY_CNFG
+  COMP_CODE: classPropertyList
+  T: BF_COMPONENT
+  URL: /classPropertyList
+parentKeys: {}
+properties:
+  BF_CODE: CO.1028
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_configuration' )
+  CLASS_NAME: CLASS_PROPERTY_CNFG
+  COMP_CODE: classPropertyList
+  NAME: Class Properties list
+  SIGNING_REQ_IND: null
+  URL: /classPropertyList
+related: {}

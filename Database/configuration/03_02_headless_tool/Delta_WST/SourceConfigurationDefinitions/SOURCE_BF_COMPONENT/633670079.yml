@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '633670079'
+keys:
+  BF_CODE: FC.0022
+  CLASS_NAME: FCST_RECOVERY_FACTOR
+  COMP_CODE: recoveryfactors
+  T: BF_COMPONENT
+  URL: /recoveryfactors
+parentKeys: {}
+properties:
+  BF_CODE: FC.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_period_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/FCST_RECOVERY_FACTOR/BF_PROFILE/FC.0022/CLASS_DAY/FCST_RECOVERY_FACTOR_DAY' )
+  CLASS_NAME: FCST_RECOVERY_FACTOR
+  COMP_CODE: recoveryfactors
+  NAME: Recovery Factors
+  SIGNING_REQ_IND: null
+  URL: /recoveryfactors
+related: {}

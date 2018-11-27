@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1134720076'
+keys:
+  BF_CODE: WR.0010.02
+  CLASS_NAME: null
+  COMP_CODE: copy_button
+  T: BF_COMPONENT
+  URL: /copy_button
+parentKeys: {}
+properties:
+  BF_CODE: WR.0010.02
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_gas_inj_analysis/COMP_SET/WELL_INJ_COMP' )
+  CLASS_NAME: null
+  COMP_CODE: copy_button
+  NAME: Copy Analysis Button
+  SIGNING_REQ_IND: null
+  URL: /copy_button
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1791866361'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/manage_doc_sequence/CLASS_NAME/DOC_SEQUENCE
+parentKeys: {}
+properties:
+  BF_CODE: CD.0109
+  NAME: Document Sequence
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/manage_doc_sequence/CLASS_NAME/DOC_SEQUENCE
+related: {}

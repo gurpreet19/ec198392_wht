@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1686841825'
+keys:
+  COMPONENT_ID: PERIOD_STEAM_STREAM_STATUS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.po.screens/period_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_STM/STRM_SET/PO.0081?screentemplate=/com.ec.prod.po.screens/period_stream_status
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PERIOD_STEAM_STREAM_STATUS
+  COMPONENT_LABEL: Daily Steam Stream Status, by Stream
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_PO_GRP_BY_ASSET
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 92.0
+  WINDOW_ID: ENERGYX
+related: {}

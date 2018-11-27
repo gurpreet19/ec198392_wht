@@ -1,0 +1,1968 @@
+CLASS_ATTR_PROPERTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: CLASS_ATTR_PROPERTY
+  status: DELETED
+  type: VIEW
+CLASS_REL_PROPERTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: CLASS_REL_PROPERTY
+  status: DELETED
+  type: VIEW
+DAO_CLASS_DEPENDENCY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: DAO_CLASS_DEPENDENCY
+  status: MODIFIED
+  type: VIEW
+DAO_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: DAO_META
+  status: MODIFIED
+  type: VIEW
+RV_BANK_ACCOUNT_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_BANK_ACCOUNT_INFO
+  status: ADDED
+  type: VIEW
+RV_BOOK_CTRL_REP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_BOOK_CTRL_REP
+  status: ADDED
+  type: VIEW
+RV_BOOK_CTRL_REP_ERP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_BOOK_CTRL_REP_ERP
+  status: ADDED
+  type: VIEW
+RV_CARGO_INT_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_CARGO_INT_LINE_ITEM
+  status: ADDED
+  type: VIEW
+RV_CARGO_INVOICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_CARGO_INVOICE
+  status: ADDED
+  type: VIEW
+RV_CARGO_INVOICE_TOTAL_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_CARGO_INVOICE_TOTAL_VALUE
+  status: ADDED
+  type: VIEW
+RV_CARGO_PERCENT_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_CARGO_PERCENT_LINE_ITEM
+  status: ADDED
+  type: VIEW
+RV_CARGO_QTY_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_CARGO_QTY_LINE_ITEM
+  status: ADDED
+  type: VIEW
+RV_INVOICE_CUSTOMER_ADD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_INVOICE_CUSTOMER_ADD
+  status: ADDED
+  type: VIEW
+RV_INVOICE_HEADER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_INVOICE_HEADER
+  status: ADDED
+  type: VIEW
+RV_INVOICE_TEXT_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_INVOICE_TEXT_ITEM
+  status: ADDED
+  type: VIEW
+RV_INVOICE_VENDOR_ADD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_INVOICE_VENDOR_ADD
+  status: ADDED
+  type: VIEW
+RV_INV_BOOK_CTRL_REP_FULL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_INV_BOOK_CTRL_REP_FULL
+  status: ADDED
+  type: VIEW
+RV_INV_BOOK_CTRL_REP_GROUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_INV_BOOK_CTRL_REP_GROUP
+  status: ADDED
+  type: VIEW
+RV_INV_PYMNT_TRACKING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_INV_PYMNT_TRACKING
+  status: ADDED
+  type: VIEW
+RV_PERIOD_INVOICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_PERIOD_INVOICE
+  status: ADDED
+  type: VIEW
+RV_PERIOD_INVOICE_TOTAL_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_PERIOD_INVOICE_TOTAL_VALUE
+  status: ADDED
+  type: VIEW
+RV_PERIOD_INV_INT_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_PERIOD_INV_INT_LINE_ITEM
+  status: ADDED
+  type: VIEW
+RV_PERIOD_PERCENT_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_PERIOD_PERCENT_LINE_ITEM
+  status: ADDED
+  type: VIEW
+RV_PERIOD_QTY_LINE_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_PERIOD_QTY_LINE_ITEM
+  status: ADDED
+  type: VIEW
+RV_SP_INVOICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_SP_INVOICE
+  status: ADDED
+  type: VIEW
+RV_SP_INVOICE_ADDRESSES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_SP_INVOICE_ADDRESSES
+  status: ADDED
+  type: VIEW
+RV_SP_INVOICE_BANK_DETAILS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_SP_INVOICE_BANK_DETAILS
+  status: ADDED
+  type: VIEW
+RV_VALUE_PART_RECEIVER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_VALUE_PART_RECEIVER
+  status: ADDED
+  type: VIEW
+RV_VALUE_PART_RECEIVER_EXVAT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_VALUE_PART_RECEIVER_EXVAT
+  status: ADDED
+  type: VIEW
+RV_VALUE_PART_RECEIVER_VAT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_VALUE_PART_RECEIVER_VAT
+  status: ADDED
+  type: VIEW
+RV_VENDOR_SHARES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: RV_VENDOR_SHARES
+  status: ADDED
+  type: VIEW
+TRANS_TARGET_TAG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: TRANS_TARGET_TAG
+  status: MODIFIED
+  type: VIEW
+V_APPROVALRECORDS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_APPROVALRECORDS
+  status: MODIFIED
+  type: VIEW
+V_APPROVALRECORDSALL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_APPROVALRECORDSALL
+  status: MODIFIED
+  type: VIEW
+V_AREA_DASHBRD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_AREA_DASHBRD
+  status: ADDED
+  type: VIEW
+V_AREA_DASHBRD_GAS_UTLZ: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_AREA_DASHBRD_GAS_UTLZ
+  status: ADDED
+  type: VIEW
+V_AREA_DASHBRD_OIL_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_AREA_DASHBRD_OIL_SUMMARY
+  status: ADDED
+  type: VIEW
+V_AREA_MONTH_DASHBRD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_AREA_MONTH_DASHBRD
+  status: ADDED
+  type: VIEW
+V_BALANCE_GROUP_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_BALANCE_GROUP_DATA
+  status: ADDED
+  type: VIEW
+V_BALANCE_GROUP_REPORT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_BALANCE_GROUP_REPORT
+  status: ADDED
+  type: VIEW
+V_BALANCE_GROUP_TOTAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_BALANCE_GROUP_TOTAL
+  status: ADDED
+  type: VIEW
+V_BALANCE_SUB_GROUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_BALANCE_SUB_GROUP
+  status: ADDED
+  type: VIEW
+V_BAL_GRP_DAY_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_BAL_GRP_DAY_DATA
+  status: ADDED
+  type: VIEW
+V_BAL_GRP_DAY_SUB: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_BAL_GRP_DAY_SUB
+  status: ADDED
+  type: VIEW
+V_BAL_GRP_DAY_TOTAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_BAL_GRP_DAY_TOTAL
+  status: ADDED
+  type: VIEW
+V_BU_DAY_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_BU_DAY_SUMMARY
+  status: ADDED
+  type: VIEW
+V_CALC_ATTRIBUTE_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_ATTRIBUTE_META
+  status: MODIFIED
+  type: VIEW
+V_CALC_OBJECT_FILTER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_OBJECT_FILTER
+  status: MODIFIED
+  type: VIEW
+V_CALC_OBJECT_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_OBJECT_META
+  status: MODIFIED
+  type: VIEW
+V_CALC_OBJ_ATTR_SYSREF: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_OBJ_ATTR_SYSREF
+  status: MODIFIED
+  type: VIEW
+V_CALC_OBJ_TYPE_IMPL_CLS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_OBJ_TYPE_IMPL_CLS
+  status: MODIFIED
+  type: VIEW
+V_CALC_PROCESS_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_PROCESS_META
+  status: MODIFIED
+  type: VIEW
+V_CALC_SET_ALL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_SET_ALL
+  status: MODIFIED
+  type: VIEW
+V_CALC_SET_INHERITED: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_SET_INHERITED
+  status: MODIFIED
+  type: VIEW
+V_CALC_VARIABLE_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_VARIABLE_META
+  status: MODIFIED
+  type: VIEW
+V_CALC_VAR_ALL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_VAR_ALL
+  status: MODIFIED
+  type: VIEW
+V_CALC_VAR_INHERITED: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALC_VAR_INHERITED
+  status: MODIFIED
+  type: VIEW
+V_CALENDAR_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALENDAR_SETUP
+  status: ADDED
+  type: VIEW
+V_CALENDAR_USAGE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALENDAR_USAGE
+  status: ADDED
+  type: VIEW
+V_CALENDAR_YEAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALENDAR_YEAR
+  status: ADDED
+  type: VIEW
+V_CAL_COLL_BUSINESS_DAY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CAL_COLL_BUSINESS_DAY
+  status: ADDED
+  type: VIEW
+V_CARGO_BERTH_CHART: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_BERTH_CHART
+  status: ADDED
+  type: VIEW
+V_CARGO_CALENDAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_CALENDAR
+  status: ADDED
+  type: VIEW
+V_CARGO_DOCUMENT_PROCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_DOCUMENT_PROCESS
+  status: ADDED
+  type: VIEW
+V_CARGO_FILTER_NAVIGATOR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_FILTER_NAVIGATOR
+  status: MODIFIED
+  type: VIEW
+V_CARGO_FILTER_NAV_CNTR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_FILTER_NAV_CNTR
+  status: MODIFIED
+  type: VIEW
+V_CARGO_LINE_ITEM_LEVEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_LINE_ITEM_LEVEL
+  status: ADDED
+  type: VIEW
+V_CARGO_QTY_CONTRACT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_QTY_CONTRACT
+  status: ADDED
+  type: VIEW
+V_CARGO_SUB_DAY_BERTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_SUB_DAY_BERTH
+  status: ADDED
+  type: VIEW
+V_CARGO_TRANSACTION_LEVEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_TRANSACTION_LEVEL
+  status: ADDED
+  type: VIEW
+V_CARRIER_DAY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARRIER_DAY
+  status: MODIFIED
+  type: VIEW
+V_CASCADE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CASCADE
+  status: ADDED
+  type: VIEW
+V_CASCADING_DAILY_VALUES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CASCADING_DAILY_VALUES
+  status: ADDED
+  type: VIEW
+V_CASCADING_MONTHLY_VALUES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CASCADING_MONTHLY_VALUES
+  status: ADDED
+  type: VIEW
+V_CHOKE_MODEL_MPP_LIP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CHOKE_MODEL_MPP_LIP
+  status: MODIFIED
+  type: VIEW
+V_CLASS_ATTR_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CLASS_ATTR_PROPERTY_CNFG
+  status: ADDED
+  type: VIEW
+V_CLASS_KEYS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CLASS_KEYS
+  status: MODIFIED
+  type: VIEW
+V_CLASS_MAPPING_DATA_EXT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CLASS_MAPPING_DATA_EXT
+  status: ADDED
+  type: VIEW
+V_CLASS_MAPPING_DATA_EXT_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CLASS_MAPPING_DATA_EXT_SETUP
+  status: ADDED
+  type: VIEW
+V_CLASS_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CLASS_PROPERTY_CNFG
+  status: ADDED
+  type: VIEW
+V_CLASS_REL_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CLASS_REL_PROPERTY_CNFG
+  status: ADDED
+  type: VIEW
+V_CLASS_TRA_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CLASS_TRA_PROPERTY_CNFG
+  status: ADDED
+  type: VIEW
+V_CLASS_VAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CLASS_VAL
+  status: ADDED
+  type: VIEW
+V_CNTR_DAY_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CNTR_DAY_NOMINATION
+  status: MODIFIED
+  type: VIEW
+V_CNTR_INV_OPER_MATRIX: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CNTR_INV_OPER_MATRIX
+  status: MODIFIED
+  type: VIEW
+V_CNTR_MTH_CPY_EXP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CNTR_MTH_CPY_EXP
+  status: MODIFIED
+  type: VIEW
+V_CNTR_MTH_CPY_EXP_FCST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CNTR_MTH_CPY_EXP_FCST
+  status: MODIFIED
+  type: VIEW
+V_CNTR_MTH_EXP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CNTR_MTH_EXP
+  status: MODIFIED
+  type: VIEW
+V_CNTR_MTH_EXP_FCST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CNTR_MTH_EXP_FCST
+  status: MODIFIED
+  type: VIEW
+V_CNTR_PG_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CNTR_PG_SETUP
+  status: ADDED
+  type: VIEW
+V_COENT_DAY_CPY_EQUITY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_COENT_DAY_CPY_EQUITY
+  status: MODIFIED
+  type: VIEW
+V_CONTRACT_PRICE_OBJECTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONTRACT_PRICE_OBJECTS
+  status: ADDED
+  type: VIEW
+V_CONTRACT_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONTRACT_VERSION_HIST
+  status: ADDED
+  type: VIEW
+V_CONTRACT_YEAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONTRACT_YEAR
+  status: MODIFIED
+  type: VIEW
+V_CONT_JOURNAL_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONT_JOURNAL_SUMMARY
+  status: ADDED
+  type: VIEW
+V_CONT_JOURNAL_UNMAPPED: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONT_JOURNAL_UNMAPPED
+  status: ADDED
+  type: VIEW
+V_CONT_JS_REPORT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONT_JS_REPORT
+  status: ADDED
+  type: VIEW
+V_CONT_JS_REPORT_TAG_SUM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONT_JS_REPORT_TAG_SUM
+  status: ADDED
+  type: VIEW
+V_CONT_LINE_ITEM_DIST_SUM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONT_LINE_ITEM_DIST_SUM
+  status: ADDED
+  type: VIEW
+V_CONT_LI_DIST_COMPANY_SUM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONT_LI_DIST_COMPANY_SUM
+  status: ADDED
+  type: VIEW
+V_CONT_SUM_DOC_RPT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONT_SUM_DOC_RPT
+  status: ADDED
+  type: VIEW
+V_CONVERSION_FACTOR_LEVEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CONVERSION_FACTOR_LEVEL
+  status: ADDED
+  type: VIEW
+V_COST_MAPPING_FIN_ACCOUNT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_COST_MAPPING_FIN_ACCOUNT
+  status: ADDED
+  type: VIEW
+V_COST_MAPPING_FIN_WBS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_COST_MAPPING_FIN_WBS
+  status: ADDED
+  type: VIEW
+V_COST_MAPPING_HISTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_COST_MAPPING_HISTORY
+  status: ADDED
+  type: VIEW
+V_COST_MAPPING_SRC_OBJECT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_COST_MAPPING_SRC_OBJECT
+  status: ADDED
+  type: VIEW
+V_COST_MAPPING_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_COST_MAPPING_VERSION_HIST
+  status: ADDED
+  type: VIEW
+V_COST_MAP_SRC_SETUP_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_COST_MAP_SRC_SETUP_HIST
+  status: ADDED
+  type: VIEW
+V_CURR_UNIT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CURR_UNIT
+  status: ADDED
+  type: VIEW
+V_CURVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CURVE
+  status: MODIFIED
+  type: VIEW
+V_DAILY_DEFERMENT_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAILY_DEFERMENT_SUMMARY
+  status: MODIFIED
+  type: VIEW
+V_DAILY_ENTITLEMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAILY_ENTITLEMENT
+  status: MODIFIED
+  type: VIEW
+V_DAILY_ENTITLEMENT2: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAILY_ENTITLEMENT2
+  status: MODIFIED
+  type: VIEW
+V_DAO_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAO_META
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_BP_ALL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_BP_ALL
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_BP_BU: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_BP_BU
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_BP_BU_CO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_BP_BU_CO
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_BP_CA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_BP_CA
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_BP_CA_CO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_BP_CA_CO
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_BP_CO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_BP_CO
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_DD_ALL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_DD_ALL
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_DD_BU: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_DD_BU
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_DD_BU_CO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_DD_BU_CO
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_DD_CA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_DD_CA
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_DD_CA_CO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_DD_CA_CO
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_CNT_DD_CO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_CNT_DD_CO
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_BP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_BP
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_BP_BC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_BP_BC
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_BP_BC_BU: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_BP_BC_BU
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_BP_BC_CA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_BP_BC_CA
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_BP_GC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_BP_GC
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_BP_GC_BU: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_BP_GC_BU
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_BP_GC_CA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_BP_GC_CA
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_DD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_DD
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_DD_BC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_DD_BC
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_DD_BC_BU: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_DD_BC_BU
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_DD_BC_CA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_DD_BC_CA
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_DD_GC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_DD_GC
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_DD_GC_BU: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_DD_GC_BU
+  status: ADDED
+  type: VIEW
+V_DASH_DOC_VAL_DD_GC_CA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_DOC_VAL_DD_GC_CA
+  status: ADDED
+  type: VIEW
+V_DASH_INV_CNT_ALL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_INV_CNT_ALL
+  status: ADDED
+  type: VIEW
+V_DASH_INV_CNT_BU: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_INV_CNT_BU
+  status: ADDED
+  type: VIEW
+V_DASH_INV_CNT_CO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_INV_CNT_CO
+  status: ADDED
+  type: VIEW
+V_DASH_INV_CNT_CO_BU: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_INV_CNT_CO_BU
+  status: ADDED
+  type: VIEW
+V_DASH_INV_CNT_CO_IA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_INV_CNT_CO_IA
+  status: ADDED
+  type: VIEW
+V_DASH_INV_CNT_IA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_INV_CNT_IA
+  status: ADDED
+  type: VIEW
+V_DASH_INV_VALUES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_INV_VALUES
+  status: ADDED
+  type: VIEW
+V_DASH_REVN_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DASH_REVN_QTY
+  status: ADDED
+  type: VIEW
+V_DATASET_FLOW_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DATASET_FLOW_MAPPING
+  status: ADDED
+  type: VIEW
+V_DATA_RULE_VALUES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DATA_RULE_VALUES
+  status: ADDED
+  type: VIEW
+V_DAYLIGHT_SAVING_CHANGES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAYLIGHT_SAVING_CHANGES
+  status: MODIFIED
+  type: VIEW
+V_DAYS_IN_MONTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAYS_IN_MONTH
+  status: ADDED
+  type: VIEW
+V_DAY_ALLOC_COND_SUM_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAY_ALLOC_COND_SUM_MTH
+  status: ADDED
+  type: VIEW
+V_DAY_ALLOC_COND_SUM_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAY_ALLOC_COND_SUM_YR
+  status: ADDED
+  type: VIEW
+V_DAY_ALLOC_GAS_SUM_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAY_ALLOC_GAS_SUM_MTH
+  status: ADDED
+  type: VIEW
+V_DAY_ALLOC_GAS_SUM_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAY_ALLOC_GAS_SUM_YR
+  status: ADDED
+  type: VIEW
+V_DAY_ALLOC_OIL_SUM_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAY_ALLOC_OIL_SUM_MTH
+  status: ADDED
+  type: VIEW
+V_DAY_ALLOC_OIL_SUM_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DAY_ALLOC_OIL_SUM_YR
+  status: ADDED
+  type: VIEW
+V_DEFERMENT_ASSET_TYPES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEFERMENT_ASSET_TYPES
+  status: MODIFIED
+  type: VIEW
+V_DEFERMENT_CALC_ASSET_ID: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEFERMENT_CALC_ASSET_ID
+  status: ADDED
+  type: VIEW
+V_DEFERMENT_CANDIDATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEFERMENT_CANDIDATE
+  status: ADDED
+  type: VIEW
+V_DEFERMENT_DAY_SUM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEFERMENT_DAY_SUM
+  status: ADDED
+  type: VIEW
+V_DEFER_LOSS_STRM_DAY_REPORT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEFER_LOSS_STRM_DAY_REPORT
+  status: MODIFIED
+  type: VIEW
+V_DEFER_SUM_GRAPH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEFER_SUM_GRAPH
+  status: ADDED
+  type: VIEW
+V_DEF_MASTER_ASSET_TYPES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_MASTER_ASSET_TYPES
+  status: MODIFIED
+  type: VIEW
+V_DEF_WELL_DEF_SUM_VIEW: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_WELL_DEF_SUM_VIEW
+  status: ADDED
+  type: VIEW
+V_DIMENSION_ITEMS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DIMENSION_ITEMS
+  status: ADDED
+  type: VIEW
+V_DIMENSION_ITEMS_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DIMENSION_ITEMS_HIST
+  status: ADDED
+  type: VIEW
+V_DIMENSION_ITEMS_LINE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DIMENSION_ITEMS_LINE
+  status: ADDED
+  type: VIEW
+V_DIMENSION_ITEMS_LINE_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DIMENSION_ITEMS_LINE_HIST
+  status: ADDED
+  type: VIEW
+V_DOCUMENT_INSTR_TEMPLATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DOCUMENT_INSTR_TEMPLATE
+  status: MODIFIED
+  type: VIEW
+V_DOC_KEY_COLUMN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DOC_KEY_COLUMN
+  status: ADDED
+  type: VIEW
+V_DOWNTIME_EVENT_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DOWNTIME_EVENT_LOG
+  status: DELETED
+  type: VIEW
+V_DSF_DETAIL_CALC_ROY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_CALC_ROY
+  status: ADDED
+  type: VIEW
+V_DSF_DETAIL_CALC_TIN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_CALC_TIN
+  status: ADDED
+  type: VIEW
+V_DSF_DETAIL_CLASS_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_CLASS_MAPPING
+  status: ADDED
+  type: VIEW
+V_DSF_DETAIL_CONT_ACC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_CONT_ACC
+  status: ADDED
+  type: VIEW
+V_DSF_DETAIL_CONT_DOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_CONT_DOC
+  status: ADDED
+  type: VIEW
+V_DSF_DETAIL_IFAC_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_IFAC_MAPPING
+  status: ADDED
+  type: VIEW
+V_DSF_DETAIL_JOUR_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_JOUR_MAPPING
+  status: ADDED
+  type: VIEW
+V_DSF_DETAIL_NONE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_NONE
+  status: ADDED
+  type: VIEW
+V_DSF_DETAIL_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSF_DETAIL_SUMMARY
+  status: ADDED
+  type: VIEW
+V_DSHBD_AREA_T5_COND_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_AREA_T5_COND_MTH
+  status: ADDED
+  type: VIEW
+V_DSHBD_AREA_T5_COND_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_AREA_T5_COND_YR
+  status: ADDED
+  type: VIEW
+V_DSHBD_AREA_T5_GAS_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_AREA_T5_GAS_MTH
+  status: ADDED
+  type: VIEW
+V_DSHBD_AREA_T5_GAS_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_AREA_T5_GAS_YR
+  status: ADDED
+  type: VIEW
+V_DSHBD_AREA_T5_OIL_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_AREA_T5_OIL_MTH
+  status: ADDED
+  type: VIEW
+V_DSHBD_AREA_T5_OIL_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_AREA_T5_OIL_YR
+  status: ADDED
+  type: VIEW
+V_DSHBD_FCTY_T5_COND_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_FCTY_T5_COND_MTH
+  status: ADDED
+  type: VIEW
+V_DSHBD_FCTY_T5_COND_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_FCTY_T5_COND_YR
+  status: ADDED
+  type: VIEW
+V_DSHBD_FCTY_T5_GAS_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_FCTY_T5_GAS_MTH
+  status: ADDED
+  type: VIEW
+V_DSHBD_FCTY_T5_GAS_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_FCTY_T5_GAS_YR
+  status: ADDED
+  type: VIEW
+V_DSHBD_FCTY_T5_OIL_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_FCTY_T5_OIL_MTH
+  status: ADDED
+  type: VIEW
+V_DSHBD_FCTY_T5_OIL_YR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DSHBD_FCTY_T5_OIL_YR
+  status: ADDED
+  type: VIEW
+V_DYNAMIC_TYPES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DYNAMIC_TYPES
+  status: MODIFIED
+  type: VIEW
+V_EC_CODE_TYPES_REVN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_EC_CODE_TYPES_REVN
+  status: ADDED
+  type: VIEW
+V_EQPM_TYPE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_EQPM_TYPE
+  status: ADDED
+  type: VIEW
+V_EQUIPMENT_FINDER_OBJECTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_EQUIPMENT_FINDER_OBJECTS
+  status: ADDED
+  type: VIEW
+V_FCST_CARGO_BERTH_CHART: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CARGO_BERTH_CHART
+  status: ADDED
+  type: VIEW
+V_FCST_CARGO_CALENDAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CARGO_CALENDAR
+  status: ADDED
+  type: VIEW
+V_FCST_CARGO_PLAN_NAVIGATOR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CARGO_PLAN_NAVIGATOR
+  status: MODIFIED
+  type: VIEW
+V_FCST_CARGO_SUB_DAY_BERTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CARGO_SUB_DAY_BERTH
+  status: ADDED
+  type: VIEW
+V_FCST_CARRIER_CHART: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CARRIER_CHART
+  status: ADDED
+  type: VIEW
+V_FCST_CARRIER_DAY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CARRIER_DAY
+  status: MODIFIED
+  type: VIEW
+V_FCST_CARRIER_UTIL_CALC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CARRIER_UTIL_CALC
+  status: ADDED
+  type: VIEW
+V_FCST_CONTRACT_YEAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CONTRACT_YEAR
+  status: MODIFIED
+  type: VIEW
+V_FCST_CON_OBJ_TYPE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_CON_OBJ_TYPE
+  status: ADDED
+  type: VIEW
+V_FCST_DAILY_ENTITLEMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_DAILY_ENTITLEMENT
+  status: MODIFIED
+  type: VIEW
+V_FCST_DAILY_ENTITLEMENT2: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_DAILY_ENTITLEMENT2
+  status: MODIFIED
+  type: VIEW
+V_FCST_GPURCH_MEMBER_PRIC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_GPURCH_MEMBER_PRIC
+  status: ADDED
+  type: VIEW
+V_FCST_GPURCH_MEMBER_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_GPURCH_MEMBER_QTY
+  status: ADDED
+  type: VIEW
+V_FCST_GPURCH_MEMBER_REVN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_GPURCH_MEMBER_REVN
+  status: ADDED
+  type: VIEW
+V_FCST_GSALES_MEMBER_PRIC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_GSALES_MEMBER_PRIC
+  status: ADDED
+  type: VIEW
+V_FCST_GSALES_MEMBER_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_GSALES_MEMBER_QTY
+  status: ADDED
+  type: VIEW
+V_FCST_GSALES_MEMBER_REVN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_GSALES_MEMBER_REVN
+  status: ADDED
+  type: VIEW
+V_FCST_LIFT_ACC_DAY_ENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIFT_ACC_DAY_ENT
+  status: MODIFIED
+  type: VIEW
+V_FCST_LIFT_ACC_DAY_RECEIPT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIFT_ACC_DAY_RECEIPT
+  status: MODIFIED
+  type: VIEW
+V_FCST_LIFT_ACC_DAY_RECEIPT2: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIFT_ACC_DAY_RECEIPT2
+  status: MODIFIED
+  type: VIEW
+V_FCST_LIFT_ACC_MTH_BAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIFT_ACC_MTH_BAL
+  status: MODIFIED
+  type: VIEW
+V_FCST_LIFT_ACC_SUB_DAY_ENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIFT_ACC_SUB_DAY_ENT
+  status: MODIFIED
+  type: VIEW
+V_FCST_LIFT_ACC_SUB_DAY_RCPT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIFT_ACC_SUB_DAY_RCPT
+  status: MODIFIED
+  type: VIEW
+V_FCST_LIQUID_MEMBER_PRIC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIQUID_MEMBER_PRIC
+  status: ADDED
+  type: VIEW
+V_FCST_LIQUID_MEMBER_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIQUID_MEMBER_QTY
+  status: ADDED
+  type: VIEW
+V_FCST_LIQUID_MEMBER_REVN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_LIQUID_MEMBER_REVN
+  status: ADDED
+  type: VIEW
+V_FCST_MNGR_CARGO_CALENDAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MNGR_CARGO_CALENDAR
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_GPURCH_MEMBER_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_GPURCH_MEMBER_QTY
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_GPURCH_MEMBER_REVN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_GPURCH_MEMBER_REVN
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_GPURCH_PRICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_GPURCH_PRICE
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_GSALES_MEMBER_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_GSALES_MEMBER_QTY
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_GSALES_MEMBER_REVN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_GSALES_MEMBER_REVN
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_GSALES_PRICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_GSALES_PRICE
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_LIQUID_MEMBER_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_LIQUID_MEMBER_QTY
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_LIQUID_MEMBER_REVN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_LIQUID_MEMBER_REVN
+  status: ADDED
+  type: VIEW
+V_FCST_MTH_LIQUID_PRICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_MTH_LIQUID_PRICE
+  status: ADDED
+  type: VIEW
+V_FCST_OBJECT_TYPE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_OBJECT_TYPE
+  status: ADDED
+  type: VIEW
+V_FCST_OBJ_EVT_DIM1_CP_FAC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_OBJ_EVT_DIM1_CP_FAC
+  status: ADDED
+  type: VIEW
+V_FCST_RECOVERY_FACTOR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_RECOVERY_FACTOR
+  status: MODIFIED
+  type: VIEW
+V_FCST_SP_DAY_AFS_OVERVIEW: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SP_DAY_AFS_OVERVIEW
+  status: ADDED
+  type: VIEW
+V_FCST_STORAGE_YEAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_STORAGE_YEAR
+  status: ADDED
+  type: VIEW
+V_FCST_STOR_MTH_BALANCE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_STOR_MTH_BALANCE
+  status: MODIFIED
+  type: VIEW
+V_FCST_STOR_NOM_RECEIPT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_STOR_NOM_RECEIPT
+  status: ADDED
+  type: VIEW
+V_FCST_STOR_SUB_DAY_ENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_STOR_SUB_DAY_ENT
+  status: MODIFIED
+  type: VIEW
+V_FCST_SUMM_PHASE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_PHASE
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_PHASES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_PHASES
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_PHASE_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_PHASE_CPR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_PHASE_DAY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_PHASE_DAY
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_PHASE_DAY_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_PHASE_DAY_CPR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_PHASE_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_PHASE_MTH
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_PHASE_MTH_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_PHASE_MTH_CPR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_REASON: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_REASON
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_REASON_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_REASON_CPR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_REASON_DAY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_REASON_DAY
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_REASON_DAY_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_REASON_DAY_CPR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_REASON_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_REASON_MTH
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_REASON_MTH_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_REASON_MTH_CPR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_VAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_VAR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_VARIABLES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_VARIABLES
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_VAR_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_VAR_CPR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_VAR_DAY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_VAR_DAY
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_VAR_DAY_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_VAR_DAY_CPR
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_VAR_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_VAR_MTH
+  status: ADDED
+  type: VIEW
+V_FCST_SUMM_VAR_MTH_CPR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCST_SUMM_VAR_MTH_CPR
+  status: ADDED
+  type: VIEW
+V_FCTY1_HISTORICAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY1_HISTORICAL
+  status: ADDED
+  type: VIEW
+V_FCTY_ACCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_ACCESS
+  status: MODIFIED
+  type: VIEW
+V_FCTY_DASHBRD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_DASHBRD
+  status: ADDED
+  type: VIEW
+V_FCTY_DASHBRD_GAS_UTLZ: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_DASHBRD_GAS_UTLZ
+  status: ADDED
+  type: VIEW
+V_FCTY_DASHBRD_IWEL_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_DASHBRD_IWEL_STATUS
+  status: ADDED
+  type: VIEW
+V_FCTY_DASHBRD_OIL_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_DASHBRD_OIL_SUMMARY
+  status: ADDED
+  type: VIEW
+V_FCTY_DASHBRD_ONSTREAM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_DASHBRD_ONSTREAM
+  status: ADDED
+  type: VIEW
+V_FCTY_DASHBRD_PWEL_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_DASHBRD_PWEL_STATUS
+  status: ADDED
+  type: VIEW
+V_FCTY_MONTH_DASHBRD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_MONTH_DASHBRD
+  status: ADDED
+  type: VIEW
+V_FCTY_SND_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_SND_DATA
+  status: ADDED
+  type: VIEW
+V_FCTY_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FCTY_VERSION_HIST
+  status: ADDED
+  type: VIEW
+V_FIN_ITEM_DATASET_MATRIX: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FIN_ITEM_DATASET_MATRIX
+  status: ADDED
+  type: VIEW
+V_FI_DATASET_POPUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FI_DATASET_POPUP
+  status: ADDED
+  type: VIEW
+V_FI_DATASET_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FI_DATASET_VALUE
+  status: ADDED
+  type: VIEW
+V_FLUID_ANALYSIS_COMP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FLUID_ANALYSIS_COMP
+  status: MODIFIED
+  type: VIEW
+V_FROM_NODE_CONCAT_TO_NODE_AC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FROM_NODE_CONCAT_TO_NODE_AC
+  status: ADDED
+  type: VIEW
+V_GEN_PERIOD_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_GEN_PERIOD_DOCUMENT
+  status: ADDED
+  type: VIEW
+V_GET_ATTRIBUTE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_GET_ATTRIBUTE
+  status: ADDED
+  type: VIEW
+V_GROUP_LEVEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_GROUP_LEVEL
+  status: MODIFIED
+  type: VIEW
+V_IFAC_CARGO_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IFAC_CARGO_VALUE
+  status: ADDED
+  type: VIEW
+V_IFAC_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IFAC_DOCUMENT
+  status: ADDED
+  type: VIEW
+V_IFAC_ERP_POSTINGS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IFAC_ERP_POSTINGS
+  status: ADDED
+  type: VIEW
+V_IFAC_JOURNAL_ENTRY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IFAC_JOURNAL_ENTRY
+  status: ADDED
+  type: VIEW
+V_IFAC_JOURNAL_ENTRY_DOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IFAC_JOURNAL_ENTRY_DOC
+  status: ADDED
+  type: VIEW
+V_IFAC_SALES_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IFAC_SALES_QTY
+  status: ADDED
+  type: VIEW
+V_IMP_HISTORIC_FILENAME: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IMP_HISTORIC_FILENAME
+  status: ADDED
+  type: VIEW
+V_IMP_HISTORIC_INTERFACE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IMP_HISTORIC_INTERFACE
+  status: ADDED
+  type: VIEW
+V_IMP_STAGING_FILENAME: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IMP_STAGING_FILENAME
+  status: ADDED
+  type: VIEW
+V_IMP_STAGING_INTERFACE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IMP_STAGING_INTERFACE
+  status: ADDED
+  type: VIEW
+V_IMP_STAGING_POPUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IMP_STAGING_POPUP
+  status: ADDED
+  type: VIEW
+V_INV_LAYER_F_TOTAL_POSITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_INV_LAYER_F_TOTAL_POSITION
+  status: ADDED
+  type: VIEW
+V_INV_LAYER_TOTAL_POSITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_INV_LAYER_TOTAL_POSITION
+  status: ADDED
+  type: VIEW
+V_IS_SOURCE_TAG_LIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IS_SOURCE_TAG_LIST
+  status: MODIFIED
+  type: VIEW
+V_IS_TARGET_TAG_LIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IS_TARGET_TAG_LIST
+  status: MODIFIED
+  type: VIEW
+V_IWEL_DAY_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IWEL_DAY_COMBINATION
+  status: MODIFIED
+  type: VIEW
+V_IWEL_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IWEL_DAY_STATUS
+  status: ADDED
+  type: VIEW
+V_IWEL_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_IWEL_SUB_DAY_STATUS
+  status: ADDED
+  type: VIEW
+V_JOUR_MAP_DATA_EXT_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_JOUR_MAP_DATA_EXT_HIST
+  status: ADDED
+  type: VIEW
+V_JOU_MAP_DE_SETUP_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_JOU_MAP_DE_SETUP_HIST
+  status: ADDED
+  type: VIEW
+V_LA_DAY_ENT_DETAIL_FCST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LA_DAY_ENT_DETAIL_FCST
+  status: MODIFIED
+  type: VIEW
+V_LA_DAY_ENT_DETAIL_FCST2: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LA_DAY_ENT_DETAIL_FCST2
+  status: MODIFIED
+  type: VIEW
+V_LIFT_ACC_DAY_ENTITLEMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LIFT_ACC_DAY_ENTITLEMENT
+  status: MODIFIED
+  type: VIEW
+V_LIFT_ACC_DAY_ENT_DETAIL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LIFT_ACC_DAY_ENT_DETAIL
+  status: MODIFIED
+  type: VIEW
+V_LIFT_ACC_DAY_ENT_DETAIL2: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LIFT_ACC_DAY_ENT_DETAIL2
+  status: MODIFIED
+  type: VIEW
+V_LIFT_ACC_DAY_RECEIPT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LIFT_ACC_DAY_RECEIPT
+  status: MODIFIED
+  type: VIEW
+V_LIFT_ACC_DAY_RECEIPT2: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LIFT_ACC_DAY_RECEIPT2
+  status: MODIFIED
+  type: VIEW
+V_LIFT_ACC_SUB_DAY_ENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LIFT_ACC_SUB_DAY_ENT
+  status: MODIFIED
+  type: VIEW
+V_LIFT_ACC_SUB_DAY_RECEIPT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LIFT_ACC_SUB_DAY_RECEIPT
+  status: MODIFIED
+  type: VIEW
+V_LOW_OFF_DEFERMENT_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_LOW_OFF_DEFERMENT_SUMMARY
+  status: DELETED
+  type: VIEW
+V_METER_COMPOSITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_METER_COMPOSITION
+  status: MODIFIED
+  type: VIEW
+V_MSG_GENERATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_MSG_GENERATION
+  status: MODIFIED
+  type: VIEW
+V_MSG_GEN_OUTGOING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_MSG_GEN_OUTGOING
+  status: ADDED
+  type: VIEW
+V_MSG_MANAGE_OUTGOING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_MSG_MANAGE_OUTGOING
+  status: ADDED
+  type: VIEW
+V_NETWORK_EDITOR_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_NETWORK_EDITOR_META
+  status: ADDED
+  type: VIEW
+V_NODE_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_NODE_HIST
+  status: ADDED
+  type: VIEW
+V_NODE_HISTORICAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_NODE_HISTORICAL
+  status: ADDED
+  type: VIEW
+V_NODE_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_NODE_VERSION_HIST
+  status: ADDED
+  type: VIEW
+V_NOMLOC_DAY_TRANSFER_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_NOMLOC_DAY_TRANSFER_SUMMARY
+  status: ADDED
+  type: VIEW
+V_NOM_LOCATION_MATCHING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_NOM_LOCATION_MATCHING
+  status: MODIFIED
+  type: VIEW
+V_OBJECT_FLUID_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OBJECT_FLUID_ANALYSIS
+  status: MODIFIED
+  type: VIEW
+V_OBJECT_FLUID_ANALYSIS_JN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OBJECT_FLUID_ANALYSIS_JN
+  status: MODIFIED
+  type: VIEW
+V_OBJECT_LIST_SETUP_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OBJECT_LIST_SETUP_HIST
+  status: ADDED
+  type: VIEW
+V_OBJECT_LIST_UPLOAD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OBJECT_LIST_UPLOAD
+  status: ADDED
+  type: VIEW
+V_OBJECT_VAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OBJECT_VAL
+  status: ADDED
+  type: VIEW
+V_OBJ_EVENT_CP_TRAN_FACTOR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OBJ_EVENT_CP_TRAN_FACTOR
+  status: MODIFIED
+  type: VIEW
+V_OBJ_EVENT_DIM1_CP_TRAN_FAC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OBJ_EVENT_DIM1_CP_TRAN_FAC
+  status: MODIFIED
+  type: VIEW
+V_OBJ_LIST_CONTRACT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OBJ_LIST_CONTRACT
+  status: ADDED
+  type: VIEW
+V_OPERATIONAL_FCTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OPERATIONAL_FCTY
+  status: MODIFIED
+  type: VIEW
+V_OVERRIDE_DIMENSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OVERRIDE_DIMENSION_HIST
+  status: ADDED
+  type: VIEW
+V_OVERRIDE_DIM_DIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_OVERRIDE_DIM_DIST
+  status: ADDED
+  type: VIEW
+V_PENDING_STIM_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PENDING_STIM_LOG
+  status: ADDED
+  type: VIEW
+V_PENDING_STIM_PERIOD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PENDING_STIM_PERIOD
+  status: ADDED
+  type: VIEW
+V_PENDING_STIM_SI: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PENDING_STIM_SI
+  status: ADDED
+  type: VIEW
+V_PERIOD_DOCUMENT_PROCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PERIOD_DOCUMENT_PROCESS
+  status: ADDED
+  type: VIEW
+V_PERIOD_LINE_ITEM_LEVEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PERIOD_LINE_ITEM_LEVEL
+  status: ADDED
+  type: VIEW
+V_PERIOD_MTH_CONTRACT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PERIOD_MTH_CONTRACT
+  status: ADDED
+  type: VIEW
+V_PERIOD_TRANSACTION_LEVEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PERIOD_TRANSACTION_LEVEL
+  status: ADDED
+  type: VIEW
+V_PRICE_CNTR_ATTRIBUTE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PRICE_CNTR_ATTRIBUTE
+  status: ADDED
+  type: VIEW
+V_PRODUCTION_DAY_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PRODUCTION_DAY_COMBINATION
+  status: MODIFIED
+  type: VIEW
+V_PRODUCTION_FACILITY_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PRODUCTION_FACILITY_HIST
+  status: ADDED
+  type: VIEW
+V_PRODUCT_GROUP_COST_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PRODUCT_GROUP_COST_HIST
+  status: ADDED
+  type: VIEW
+V_PRODUCT_GROUP_SETUP_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PRODUCT_GROUP_SETUP_HIST
+  status: ADDED
+  type: VIEW
+V_PTST_PWEL_RESULT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PTST_PWEL_RESULT
+  status: MODIFIED
+  type: VIEW
+V_PTST_PWEL_RESULT_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PTST_PWEL_RESULT_DATA
+  status: ADDED
+  type: VIEW
+V_PTST_PWEL_SINGLE_RES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PTST_PWEL_SINGLE_RES
+  status: MODIFIED
+  type: VIEW
+V_PVT_SIM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_PVT_SIM
+  status: MODIFIED
+  type: VIEW
+V_REVN_PROD_STREAM_HISTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_REVN_PROD_STREAM_HISTORY
+  status: ADDED
+  type: VIEW
+V_RE_ACROSS_NODE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_ACROSS_NODE
+  status: ADDED
+  type: VIEW
+V_RE_BETWEEN_NODE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_BETWEEN_NODE
+  status: ADDED
+  type: VIEW
+V_RE_HCB_ACCROSS_NODE_AC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_ACCROSS_NODE_AC
+  status: ADDED
+  type: VIEW
+V_RE_HCB_ACCROSS_NODE_BOO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_ACCROSS_NODE_BOO
+  status: ADDED
+  type: VIEW
+V_RE_HCB_ACCROSS_NODE_REP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_ACCROSS_NODE_REP
+  status: ADDED
+  type: VIEW
+V_RE_HCB_ACCR_NODE_DAY_AC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_ACCR_NODE_DAY_AC
+  status: ADDED
+  type: VIEW
+V_RE_HCB_BETWEEN_NODES_AC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_BETWEEN_NODES_AC
+  status: ADDED
+  type: VIEW
+V_RE_HCB_BETWEEN_NODES_BOO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_BETWEEN_NODES_BOO
+  status: ADDED
+  type: VIEW
+V_RE_HCB_BETWEEN_NODES_REP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_BETWEEN_NODES_REP
+  status: ADDED
+  type: VIEW
+V_RE_HCB_BETW_NODES_DAY_AC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_BETW_NODES_DAY_AC
+  status: ADDED
+  type: VIEW
+V_RE_HCB_SYSTEM_AC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_SYSTEM_AC
+  status: ADDED
+  type: VIEW
+V_RE_HCB_SYSTEM_BOO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_SYSTEM_BOO
+  status: ADDED
+  type: VIEW
+V_RE_HCB_SYSTEM_DAY_AC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_SYSTEM_DAY_AC
+  status: ADDED
+  type: VIEW
+V_RE_HCB_SYSTEM_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_SYSTEM_MTH
+  status: ADDED
+  type: VIEW
+V_RE_HCB_SYSTEM_REP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RE_HCB_SYSTEM_REP
+  status: ADDED
+  type: VIEW
+V_ROYALTY_PARTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_ROYALTY_PARTY
+  status: ADDED
+  type: VIEW
+V_RR_CONTRACT_BK: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RR_CONTRACT_BK
+  status: ADDED
+  type: VIEW
+V_RR_CONTRACT_DOCDATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RR_CONTRACT_DOCDATE
+  status: ADDED
+  type: VIEW
+V_RR_CONTRACT_TR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RR_CONTRACT_TR
+  status: ADDED
+  type: VIEW
+V_RR_TI_BAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RR_TI_BAL
+  status: ADDED
+  type: VIEW
+V_RR_TI_TRANS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_RR_TI_TRANS
+  status: ADDED
+  type: VIEW
+V_SCHEDULE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SCHEDULE
+  status: MODIFIED
+  type: VIEW
+V_SND_UE_SCREEN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SND_UE_SCREEN
+  status: ADDED
+  type: VIEW
+V_SPLIT_KEY_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SPLIT_KEY_SETUP
+  status: ADDED
+  type: VIEW
+V_STIM_FCST_FORMULA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STIM_FCST_FORMULA
+  status: ADDED
+  type: VIEW
+V_STOR_BERTH_DAY_RESTRICTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STOR_BERTH_DAY_RESTRICTION
+  status: MODIFIED
+  type: VIEW
+V_STOR_DAY_OVERVIEW_DETAIL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STOR_DAY_OVERVIEW_DETAIL
+  status: MODIFIED
+  type: VIEW
+V_STOR_NOM_RECEIPT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STOR_NOM_RECEIPT
+  status: ADDED
+  type: VIEW
+V_STOR_SUB_DAY_BALANCE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STOR_SUB_DAY_BALANCE
+  status: ADDED
+  type: VIEW
+V_STOR_SUB_DAY_ENTITLEMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STOR_SUB_DAY_ENTITLEMENT
+  status: MODIFIED
+  type: VIEW
+V_STREAM_DAY_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STREAM_DAY_COMBINATION
+  status: MODIFIED
+  type: VIEW
+V_STREAM_DAY_LIQUID_ALL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STREAM_DAY_LIQUID_ALL
+  status: MODIFIED
+  type: VIEW
+V_STREAM_DAY_PC_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STREAM_DAY_PC_COMBINATION
+  status: MODIFIED
+  type: VIEW
+V_STREAM_FINDER_OBJECTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STREAM_FINDER_OBJECTS
+  status: ADDED
+  type: VIEW
+V_STREAM_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STREAM_HIST
+  status: ADDED
+  type: VIEW
+V_STREAM_HISTORICAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STREAM_HISTORICAL
+  status: ADDED
+  type: VIEW
+V_STREAM_MTH_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STREAM_MTH_COMBINATION
+  status: MODIFIED
+  type: VIEW
+V_STREAM_NODE_DIAGRAM_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STREAM_NODE_DIAGRAM_META
+  status: MODIFIED
+  type: VIEW
+V_STRM_BAL_CATEGORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_BAL_CATEGORY
+  status: ADDED
+  type: VIEW
+V_STRM_COMP_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_COMP_ANALYSIS
+  status: MODIFIED
+  type: VIEW
+V_STRM_DAY_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_DAY_DATA
+  status: MODIFIED
+  type: VIEW
+V_STRM_DAY_NR_WELL_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_DAY_NR_WELL_DATA
+  status: MODIFIED
+  type: VIEW
+V_STRM_DAY_ROU_GEN_VAP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_DAY_ROU_GEN_VAP
+  status: MODIFIED
+  type: VIEW
+V_STRM_DAY_ROU_REC_VAP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_DAY_ROU_REC_VAP
+  status: MODIFIED
+  type: VIEW
+V_STRM_FORMULA_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_FORMULA_HIST
+  status: ADDED
+  type: VIEW
+V_STRM_FORMULA_VARIABLE_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_FORMULA_VARIABLE_HIST
+  status: ADDED
+  type: VIEW
+V_STRM_NODE_DIAGRAM_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_NODE_DIAGRAM_META
+  status: ADDED
+  type: VIEW
+V_STRM_PC_COMP_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_PC_COMP_ANALYSIS
+  status: MODIFIED
+  type: VIEW
+V_STRM_SET_LIST_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_SET_LIST_HIST
+  status: ADDED
+  type: VIEW
+V_STRM_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_VERSION_HIST
+  status: ADDED
+  type: VIEW
+V_SUMMARY_SETUP_HISTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUMMARY_SETUP_HISTORY
+  status: ADDED
+  type: VIEW
+V_SUMMARY_SETUP_LIST_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUMMARY_SETUP_LIST_HIST
+  status: ADDED
+  type: VIEW
+V_SUMMARY_SETUP_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUMMARY_SETUP_VERSION_HIST
+  status: ADDED
+  type: VIEW
+V_SUMMARY_SET_SETUP_DOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUMMARY_SET_SETUP_DOC
+  status: ADDED
+  type: VIEW
+V_SUMMARY_TRACING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUMMARY_TRACING
+  status: ADDED
+  type: VIEW
+V_SUMMARY_YEARLY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUMMARY_YEARLY
+  status: ADDED
+  type: VIEW
+V_SUMMARY_YEARLY_BASIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUMMARY_YEARLY_BASIS
+  status: ADDED
+  type: VIEW
+V_SUM_RR_CONTRACT_BK: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUM_RR_CONTRACT_BK
+  status: ADDED
+  type: VIEW
+V_SUM_RR_CONTRACT_DOCDATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUM_RR_CONTRACT_DOCDATE
+  status: ADDED
+  type: VIEW
+V_SUM_RR_CONTRACT_TR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUM_RR_CONTRACT_TR
+  status: ADDED
+  type: VIEW
+V_SUM_RR_TI_BAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUM_RR_TI_BAL
+  status: ADDED
+  type: VIEW
+V_SUM_RR_TI_TRANS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SUM_RR_TI_TRANS
+  status: ADDED
+  type: VIEW
+V_SYSTEM_MTH_STATUS_BOOK: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SYSTEM_MTH_STATUS_BOOK
+  status: ADDED
+  type: VIEW
+V_SYSTEM_MTH_STATUS_REPORT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SYSTEM_MTH_STATUS_REPORT
+  status: ADDED
+  type: VIEW
+V_SYSTEM_SETTING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_SYSTEM_SETTING
+  status: ADDED
+  type: VIEW
+V_TANK_EVENT_DIP_AND_EXP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TANK_EVENT_DIP_AND_EXP
+  status: ADDED
+  type: VIEW
+V_TANK_FINDER_OBJECTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TANK_FINDER_OBJECTS
+  status: MODIFIED
+  type: VIEW
+V_TANK_TAPS_DAYTIME: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TANK_TAPS_DAYTIME
+  status: MODIFIED
+  type: VIEW
+V_TASK_LIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TASK_LIST
+  status: MODIFIED
+  type: VIEW
+V_TDEV_METER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TDEV_METER
+  status: ADDED
+  type: VIEW
+V_TD_FINDER_OBJECTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TD_FINDER_OBJECTS
+  status: ADDED
+  type: VIEW
+V_TRACING_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRACING_DATA
+  status: ADDED
+  type: VIEW
+V_TRACING_DATA_EXTRACT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRACING_DATA_EXTRACT
+  status: ADDED
+  type: VIEW
+V_TRACING_DATA_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRACING_DATA_MAPPING
+  status: ADDED
+  type: VIEW
+V_TRACING_DATA_UPLOADS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRACING_DATA_UPLOADS
+  status: ADDED
+  type: VIEW
+V_TRACING_FIN_DOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRACING_FIN_DOC
+  status: ADDED
+  type: VIEW
+V_TRACING_MTH_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRACING_MTH_ALLOC
+  status: ADDED
+  type: VIEW
+V_TRACING_REPORT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRACING_REPORT
+  status: ADDED
+  type: VIEW
+V_TRACING_REVN_CALC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRACING_REVN_CALC
+  status: ADDED
+  type: VIEW
+V_TRANSACTION_DISTRIBUTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANSACTION_DISTRIBUTION
+  status: ADDED
+  type: VIEW
+V_TRANSACTION_VALUE_OVERVIEW: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANSACTION_VALUE_OVERVIEW
+  status: ADDED
+  type: VIEW
+V_TRANS_CONFIG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_CONFIG
+  status: MODIFIED
+  type: VIEW
+V_TRANS_CONFIG_JN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_CONFIG_JN
+  status: MODIFIED
+  type: VIEW
+V_TRANS_INVENTORY_HISTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INVENTORY_HISTORY
+  status: ADDED
+  type: VIEW
+V_TRANS_INVENTORY_SINGLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INVENTORY_SINGLE
+  status: ADDED
+  type: VIEW
+V_TRANS_INVENTORY_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INVENTORY_VERSION_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LINE_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LINE_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LINE_OVERRIDE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LINE_OVERRIDE
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LINE_OVER_H: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LINE_OVER_H
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LINE_OVER_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LINE_OVER_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PRODUCT_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PRODUCT_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_OVER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_OVER
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_OVER_H: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_OVER_H
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_OVER_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_OVER_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_VAR_DIM_H: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_VAR_DIM_H
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_VAR_DIM_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_VAR_DIM_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_VAR_D_HI: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_VAR_D_HI
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_VAR_D_OV: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_VAR_D_OV
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_VAR_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_VAR_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_VAR_HISTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_VAR_HISTORY
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_VAR_OVER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_VAR_OVER
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_LI_PR_VAR_OVER_H: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_LI_PR_VAR_OVER_H
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_NAV_INV: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_NAV_INV
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_NAV_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_NAV_MTH
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_NAV_TMPL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_NAV_TMPL
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_NETWORK: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_NETWORK
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_OPEN_DSI: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_OPEN_DSI
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_OPEN_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_OPEN_MTH
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_PROD_STREAM_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_PROD_STREAM_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_PROD_STREAM_HISTO: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_PROD_STREAM_HISTO
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_SKIP_INV: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_SKIP_INV
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_SKIP_LINE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_SKIP_LINE
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_SKIP_PROD: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_SKIP_PROD
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_SKIP_VAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_SKIP_VAR
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_STREAM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_STREAM
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_SUMMARY_ITEM_H: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_SUMMARY_ITEM_H
+  status: ADDED
+  type: VIEW
+V_TRANS_INV_SUMMARY_ITEM_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_INV_SUMMARY_ITEM_HIST
+  status: ADDED
+  type: VIEW
+V_TRANS_PROD_SET_ITEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_PROD_SET_ITEM
+  status: ADDED
+  type: VIEW
+V_TRANS_TAG_ACTIVITY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRANS_TAG_ACTIVITY
+  status: MODIFIED
+  type: VIEW
+V_TRAN_TREEVIEW: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRAN_TREEVIEW
+  status: MODIFIED
+  type: VIEW
+V_TREND_ANALYSIS_CONFIG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TREND_ANALYSIS_CONFIG
+  status: ADDED
+  type: VIEW
+V_TRNP_DAY_NOM_PATH_MATRIX: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRNP_DAY_NOM_PATH_MATRIX
+  status: ADDED
+  type: VIEW
+V_TRUCK_TICKET_FINDER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_TRUCK_TICKET_FINDER
+  status: MODIFIED
+  type: VIEW
+V_VAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_VAL
+  status: ADDED
+  type: VIEW
+V_WELL_ACCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_ACCESS
+  status: MODIFIED
+  type: VIEW
+V_WELL_COMP_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_COMP_ANALYSIS
+  status: MODIFIED
+  type: VIEW
+V_WELL_DAY_COENT_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_DAY_COENT_COMBINATION
+  status: MODIFIED
+  type: VIEW
+V_WELL_DEFERMENT_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_DEFERMENT_SUMMARY
+  status: DELETED
+  type: VIEW
+V_WELL_EVENT_DAY_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_EVENT_DAY_COMBINATION
+  status: DELETED
+  type: VIEW
+V_WELL_FINDER_OBJECTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_FINDER_OBJECTS
+  status: ADDED
+  type: VIEW
+V_WELL_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_HIST
+  status: ADDED
+  type: VIEW
+V_WELL_HISTORICAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_HISTORICAL
+  status: ADDED
+  type: VIEW
+V_WELL_HOOKUP_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_HOOKUP_HIST
+  status: ADDED
+  type: VIEW
+V_WELL_HOOKUP_HISTORICAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_HOOKUP_HISTORICAL
+  status: ADDED
+  type: VIEW
+V_WELL_HOOKUP_SND_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_HOOKUP_SND_DATA
+  status: ADDED
+  type: VIEW
+V_WELL_HOOKUP_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_HOOKUP_VERSION_HIST
+  status: ADDED
+  type: VIEW
+V_WELL_IN_OTHER_EVENTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_IN_OTHER_EVENTS
+  status: DELETED
+  type: VIEW
+V_WELL_PERF_INTERVAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_PERF_INTERVAL
+  status: MODIFIED
+  type: VIEW
+V_WELL_PERF_INTERVAL_COMP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_PERF_INTERVAL_COMP
+  status: MODIFIED
+  type: VIEW
+V_WELL_RESV_BLOCK_FORMATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_RESV_BLOCK_FORMATION
+  status: MODIFIED
+  type: VIEW
+V_WELL_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_VERSION_HIST
+  status: ADDED
+  type: VIEW
+Z_RV_INV_BOOK_CTRL_REP_FULL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: Z_RV_INV_BOOK_CTRL_REP_FULL
+  status: ADDED
+  type: VIEW
+Z_RV_INV_BOOK_CTRL_REP_GROUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: Z_RV_INV_BOOK_CTRL_REP_GROUP
+  status: ADDED
+  type: VIEW

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1318193234'
+keys:
+  BF_CODE: PT.0009
+  CLASS_NAME: ACTIVE_WELL
+  COMP_CODE: active_well
+  T: BF_COMPONENT
+  URL: /active_well
+parentKeys: {}
+properties:
+  BF_CODE: PT.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_stable_periods_summarise' )
+  CLASS_NAME: ACTIVE_WELL
+  COMP_CODE: active_well
+  NAME: Data Well
+  SIGNING_REQ_IND: null
+  URL: /active_well
+related: {}

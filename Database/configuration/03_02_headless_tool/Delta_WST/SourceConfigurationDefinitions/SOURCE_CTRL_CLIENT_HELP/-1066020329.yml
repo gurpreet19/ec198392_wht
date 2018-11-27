@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1066020329'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.vo/monthly_list_input
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.vo/monthly_list_input
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

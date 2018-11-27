@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-748379229'
+keys:
+  FROM_CLASS_NAME: PROPERTY
+  MODEL: DATA_INTERFACE
+  ROLE_NAME: PROPERTY
+  T: NAV_MODEL
+  TO_CLASS_NAME: PROJECT
+parentKeys: {}
+properties:
+  DISABLED_IND: null
+  FORCE_NAV: Y
+  FROM_CLASS_NAME: PROPERTY
+  MODEL: DATA_INTERFACE
+  MULTIPLICITY: 1:N
+  ROLE_NAME: PROPERTY
+  TO_CLASS_NAME: PROJECT
+related: {}

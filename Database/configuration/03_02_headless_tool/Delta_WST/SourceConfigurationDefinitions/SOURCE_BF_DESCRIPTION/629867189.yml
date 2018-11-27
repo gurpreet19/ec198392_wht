@@ -1,0 +1,41 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '629867189'
+keys:
+  BF_DESCRIPTION_NO: TO.0009.01
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0009.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_document_parcel' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This business function is used to generate and upload cargo documents.
+    Both generated and uploaded documents can be downloaded from this screen. The
+    cargo&nbsp;documents setup is done in Document Instruction (CP.0013). This is
+    typically done by the scheduler in cargo planning screens.</p><p>Before the Carrier
+    leaves, the cargo documents must be printed and sent with the Carrier. A signed
+    copy is typically kept on the terminal.<br />When selecting a nomination the list
+    of generated documents will be listed in the last section. If no documents have
+    been generated, the &lsquo;Generate&rsquo; button can be&nbsp;pressed. After the
+    documents are generated the download button can be used to get and view a generated
+    document. To bundle a set of documents together the&nbsp;&lsquo;Download PDFs&rsquo;
+    button can be used. Only the selected rows will be merged.</p><p>Use the &lsquo;Document
+    Set&rsquo; drop-down to generate a sub set of the total documents configured in
+    the &lsquo;Document Instruction&rsquo; / &lsquo;Document Receivers&rsquo;. Typical
+    usage of&nbsp;this feature is setting up some documents to be generated &lsquo;pre-arrival&rsquo;,
+    &lsquo;on arrival&rsquo; and &lsquo;post arrival&rsquo; of a carrier.</p><p>Third-party
+    documents can be uploaded on either a nomination or on the cargo itself. Supported
+    document upload formats can be configured using the system property &quot;Allowed
+    File Extensions for Upload Cargo Documents Parcel&quot. Only pdf files can be
+    merged.</p><p>To display a message with the option of ok or cancel there is a
+    system setting called: Cargo Doc Generate - Confirmation Message. This property
+    should be a text&nbsp;which will be displayed to the end-user upon clicking the
+    Generate button.</p><p>System setting Cargo Doc Generate - Receipt List is a text
+    list of Message Contact Codes of the form: &lsquo;RECIPIENT1&rsquo;,&rsquo;RECIPIENT2&rsquo;,..
+    which will impose that only&nbsp;the documents for this/these receipients will
+    generated regardless of the complete document instruction.</p><p>When using an
+    external report generation system, there exists an option to generate the documents
+    for the individual parcels as a scheduled task, this can result in&nbsp;a major
+    performance increase if there is a cluster of servers used to generate reports.
+    Check out the boolean system setting Cargo Doc Generate &ndash; Scheduled.</p>'
+related: {}

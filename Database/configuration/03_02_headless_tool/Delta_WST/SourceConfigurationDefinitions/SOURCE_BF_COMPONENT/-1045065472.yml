@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1045065472'
+keys:
+  BF_CODE: CO.2050
+  CLASS_NAME: NOMPNT_PROFIT_CENTRE
+  COMP_CODE: nompnt_pc_list
+  T: BF_COMPONENT
+  URL: /nompnt_pc_list
+parentKeys: {}
+properties:
+  BF_CODE: CO.2050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/nomination_point_profit_centre_list' )
+  CLASS_NAME: NOMPNT_PROFIT_CENTRE
+  COMP_CODE: nompnt_pc_list
+  NAME: NomPnt PC List
+  SIGNING_REQ_IND: null
+  URL: /nompnt_pc_list
+related: {}

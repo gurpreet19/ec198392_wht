@@ -1,0 +1,118 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '636477303'
+keys:
+  T: REPORT_TEMPLATE
+  TEMPLATE_CODE: JOURNAL_MAP_TRACING
+parentKeys: {}
+properties:
+  NAME: Data Mapping Tracing
+  REPORTING_PERIOD: MTH
+  REPORT_SYSTEM_CODE: EXCEL
+  TEMPLATE_BLOB: null
+  TEMPLATE_CODE: JOURNAL_MAP_TRACING
+related:
+  REPORT_TEMPLATE_PARAM:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: EC_SHEET_REMOVAL
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: JOURNAL_MAP_TRACING
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: JOURNAL_MAP_TRACING
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: EC_SHEET_REMOVAL
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: BOOL
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: 4.0
+      TEMPLATE_CODE: JOURNAL_MAP_TRACING
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: context_id
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: JOURNAL_MAP_TRACING
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: JOURNAL_MAP_TRACING
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: Y
+      PARAMETER_NAME: context_id
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: REPT_CONTEXT
+      PARAMETER_TYPE: EC_OBJECT_TYPE
+      SORT_ORDER: 0.0
+      TEMPLATE_CODE: JOURNAL_MAP_TRACING
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: daytime
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: JOURNAL_MAP_TRACING
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: JOURNAL_MAP_TRACING
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: daytime
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: DATE
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: 1.0
+      TEMPLATE_CODE: JOURNAL_MAP_TRACING
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: document_key
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: JOURNAL_MAP_TRACING
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: JOURNAL_MAP_TRACING
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: document_key
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: 3.0
+      TEMPLATE_CODE: JOURNAL_MAP_TRACING
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null

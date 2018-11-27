@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-535362688'
+keys:
+  BF_CODE: SA.0017
+  CLASS_NAME: SCTR_ACC_NOM_STATUS
+  COMP_CODE: cntr_account
+  T: BF_COMPONENT
+  URL: /cntr_account
+parentKeys: {}
+properties:
+  BF_CODE: SA.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/cargo_contract_account_status' )
+  CLASS_NAME: SCTR_ACC_NOM_STATUS
+  COMP_CODE: cntr_account
+  NAME: Account Status
+  SIGNING_REQ_IND: null
+  URL: /cntr_account
+related: {}

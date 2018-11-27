@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-216052339'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0037' AND NVL(URL,'IS_NULL') = '/UnReconciled_Entries' AND COMP_CODE ='UnReconciled_Entries' AND NVL(CLASS_NAME,'IS_NULL') = 'RECONCILE_TILP_SRC_DIFF')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='IN.0037' AND NVL(URL,'IS_NULL') = '/UnReconciled_Entries' AND COMP_CODE ='UnReconciled_Entries' AND NVL(CLASS_NAME,'IS_NULL') = 'RECONCILE_TILP_SRC_DIFF')
+  COMMENTS: null
+  NAME: UnReconciled Entries /save
+  URL: /save
+related: {}

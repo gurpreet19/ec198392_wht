@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1164866492'
+keys:
+  COMPONENT_ID: FC_QT_FS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.fc/fcst_quantity_setup/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST?screentemplate=/com.ec.revn.fc/fcst_quantity_setup
+  COMPONENT_EXT_NAV_NAME: /FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST?screentemplate=/com.ec.revn.fc/fcst_quantity_setup
+  COMPONENT_ID: FC_QT_FS
+  COMPONENT_LABEL: Forecast Quantity setup
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FC_QT_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 5150.0
+  WINDOW_ID: ENERGYX
+related: {}

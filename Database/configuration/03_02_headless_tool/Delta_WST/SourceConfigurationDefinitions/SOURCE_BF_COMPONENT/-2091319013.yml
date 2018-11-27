@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2091319013'
+keys:
+  BF_CODE: CD.0133
+  CLASS_NAME: REVN__LOG
+  COMP_CODE: revnLog
+  T: BF_COMPONENT
+  URL: /revnLog
+parentKeys: {}
+properties:
+  BF_CODE: CD.0133
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/revn_log' )
+  CLASS_NAME: REVN__LOG
+  COMP_CODE: revnLog
+  NAME: Revenue Logs
+  SIGNING_REQ_IND: null
+  URL: /revnLog
+related: {}

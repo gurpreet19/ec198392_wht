@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-962247627'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: GEN_PERIOD_DOCUMENT
+  COMP_CODE: interface_pending_records
+  T: BF_COMPONENT
+  URL: /interface_pending_records
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: GEN_PERIOD_DOCUMENT
+  COMP_CODE: interface_pending_records
+  NAME: Pending Detail
+  SIGNING_REQ_IND: null
+  URL: /interface_pending_records
+related: {}

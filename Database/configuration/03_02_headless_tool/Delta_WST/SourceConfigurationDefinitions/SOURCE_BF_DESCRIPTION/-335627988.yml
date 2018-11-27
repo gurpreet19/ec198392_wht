@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-335627988'
+keys:
+  BF_DESCRIPTION_NO: CO.0224
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0224
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/SHIFT/TARGET/SHIFT/CLASS_NAME/SHIFT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used to setup the shift (work) objects. The shifts are connected to a given facility and have a start and end time (sub daily interval) giving the shift&lsquo;s active hours. The shift dimension can be used in order to track utilization between shifts on the facility.</p>
+related: {}

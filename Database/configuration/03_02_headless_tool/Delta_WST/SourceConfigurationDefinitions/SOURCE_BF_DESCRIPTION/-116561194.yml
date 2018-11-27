@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-116561194'
+keys:
+  BF_DESCRIPTION_NO: IN.0007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/inv_setup_item_selection/STREAM_CATEGORY_CODE/INV' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Inventory Item Selection screen</strong>    is used for selecting the stream items holding the inventory quantities for each Field. At least one stream item has to be defined for each field in the    inventory definition.</p><p>    <u>The screen is divided into these sections:</u></p><p>    <strong><em>- Static Navigator</em></strong><br>    Defines the search criteria for the Inventory.</p><p>    <strong><em>- Inventory List</em></strong><br>    Lists all the Inventories valid for the Month selected in the Month column of the Filter Navigator. The default value of the Month selector is the current    booking period.</p><p>    <strong><em>- Field List</em></strong><br>    Lists all the Fields taking part in the Inventory.</p><p>    <strong><em>- Stream Item Selection section</em></strong><br>    In this section the user can add inventory Stream Items. Stream Items can be configured for underlift, overlift and physical stock.</p>
+related: {}

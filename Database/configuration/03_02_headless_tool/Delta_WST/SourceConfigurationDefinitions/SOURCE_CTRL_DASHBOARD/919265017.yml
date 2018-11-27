@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '919265017'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: TRAN_LOGBOOK
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Logbook
+  LABEL: Logbook
+  NAME: Logbook
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.TableWidget
+  WIDGET_CODE: TRAN_LOGBOOK
+related: {}

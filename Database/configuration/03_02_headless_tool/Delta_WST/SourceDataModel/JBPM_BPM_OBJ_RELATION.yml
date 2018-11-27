@@ -1,0 +1,99 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_BPM_OBJ_RELATION
+cnstPrimaryKey:
+  columns:
+  - ID
+  name: PK_JBPM_BPM_OBJ_RELATION
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CORRELATION_JSON:
+    columnName: CORRELATION_JSON
+    typeName: VARCHAR2(255)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  ID:
+    columnName: ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  REF_JSON:
+    columnName: REF_JSON
+    typeName: VARCHAR2(255)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  RELATED_REF_JSON:
+    columnName: RELATED_REF_JSON
+    typeName: VARCHAR2(255)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  RELATION_NAME:
+    columnName: RELATION_NAME
+    typeName: VARCHAR2(255)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+indexes:
+  I_BPM_OBJ_RELATION_1:
+    indexName: I_BPM_OBJ_RELATION_1
+    columns:
+    - REF_JSON
+    - RELATION_NAME
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_BPM_OBJ_RELATION_2:
+    indexName: I_BPM_OBJ_RELATION_2
+    columns:
+    - CORRELATION_JSON
+    - RELATION_NAME
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

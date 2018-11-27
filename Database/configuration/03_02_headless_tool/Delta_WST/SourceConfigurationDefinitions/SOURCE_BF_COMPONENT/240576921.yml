@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '240576921'
+keys:
+  BF_CODE: TO.0012
+  CLASS_NAME: STOR_DAY_EXPORT_STATUS
+  COMP_CODE: storageDayEnd
+  T: BF_COMPONENT
+  URL: /storageDayEnd
+parentKeys: {}
+properties:
+  BF_CODE: TO.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/day_end_not_lifted' )
+  CLASS_NAME: STOR_DAY_EXPORT_STATUS
+  COMP_CODE: storageDayEnd
+  NAME: Storage Day End
+  SIGNING_REQ_IND: null
+  URL: /storageDayEnd
+related: {}

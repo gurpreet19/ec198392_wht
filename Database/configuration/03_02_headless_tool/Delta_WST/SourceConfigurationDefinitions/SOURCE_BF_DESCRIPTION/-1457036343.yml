@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1457036343'
+keys:
+  BF_DESCRIPTION_NO: CP.0046
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_lift_acc_adj' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to log lifting account adjustments between two lifting accounts or single adjustment to a lifting account for a forecast / scenario.</p><p>If the date for the Lifting Account Adjustments are to be entered with an hour specified, the system setting /com/ec/tran/cargo/storage_level/use_production_day needs to be set to Y for the timestamp to be converted to production day when calculating Daily Closing Balance.</p><p>For more details with regards to basic functionality please read &quot;LA.0001 &ndash; Monthly Account Adjustment&quot;.<br />&nbsp;</p>
+related: {}

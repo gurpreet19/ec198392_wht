@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1059020486'
+keys:
+  EC_CLIENT_OBJ: /com.ec.ecdm.co.screens/imp_staging
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.ecdm.co.screens/imp_staging
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

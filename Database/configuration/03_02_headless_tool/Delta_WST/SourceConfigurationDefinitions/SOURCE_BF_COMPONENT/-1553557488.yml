@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1553557488'
+keys:
+  BF_CODE: PO.0120
+  CLASS_NAME: null
+  COMP_CODE: btnGoto
+  T: BF_COMPONENT
+  URL: /gotoBF
+parentKeys: {}
+properties:
+  BF_CODE: PO.0120
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/test_device_finder' )
+  CLASS_NAME: null
+  COMP_CODE: btnGoto
+  NAME: Go To BF
+  SIGNING_REQ_IND: null
+  URL: /gotoBF
+related: {}

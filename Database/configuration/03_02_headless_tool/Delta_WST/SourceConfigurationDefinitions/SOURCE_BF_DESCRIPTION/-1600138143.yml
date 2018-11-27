@@ -1,0 +1,104 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1600138143'
+keys:
+  BF_DESCRIPTION_NO: PD.0023
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PD.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/deferment_day/CLASS_NAME/DEFERMENT_EVENT/DAILY_CLASS_NAME/DEFERMENT_DAY/TABLE_NAME/DEFERMENT_EVENT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>The Deferment Day screen (PD.0023) is a simplified deferment screen
+    used to manage deferment events caused by the registered asset.</p><p>This BF
+    supports adjusting the volume and mass loss quantities for each production day
+    independently for the reported deferment event. Only single events are supported
+    in this business function. Both operational and collection point group models
+    are supported.</p><p>Deferment Day has two data sections:</p><p>Deferment Event:
+    To capture overall date and time of the event, event type, scheduled event, selected
+    object type, name and its active phase, linked event or equipment, the enabled
+    4 reason(s) attribute for the event, the not editable event loss quantities which
+    are the function attributes to display the related sum-up daily Loss quantities.
+    User is able to insert, update and delete events in this section. Object Types
+    are populated based on the group model. Example is as below :</p><div class="ui-widget"><div
+    class="ui-datatable-tablewrapper"><table role="grid" cellpadding="10"><thead><tr
+    role="row"><th width="350" class="ui-state-default" role="columnheader" aria-label="Group"
+    scope="col"><span><center>Group Model Type</center></span></th><th class="ui-state-default"
+    role="columnheader" aria-label="Object" scope="col"><span><center>Available Object
+    Types</center></span></th></tr></thead><tbody class="ui-datatable-data ui-widget-content"><tr
+    class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell"><span>Operational</span></td><td
+    role="gridcell" colspan="2"><span>Facility Class 1, Well Hookup, Well, Equipment
+    and Tank.</span></td></tr><tr><td><span>Collection Point</span></td><td role="gridcell"><span>Operator
+    Route, Collection Point, Well, Equipment and Tank.</span></td></tr></tbody></table><p>Deleting
+    the parent record, it will delete the related child deferment day records and
+    no prompt to user on the deletion on the Deferment Event. However, there is a
+    screen alert message to inform the user when updating the ''Start Daytime'' or
+    ''End Daytime'' will result in deletion of all related deferment day records when
+    the modified start Daytime is after the original start Daytime and it is more
+    than a day. And the similar logic applied on the modified end Daytime to check
+    before the original end Daytime.</p><p>This BF allows future Deferment Event with
+    start and end daytime which is after current production day, and it will populate
+    the child deferment day records based on the closed event. There is a class trigger
+    action which can be enabled to prevent the future Deferment Event entry.</p><p>Tab
+    1 : Deferment Day: To capture data for daily loss quantities based on date range
+    entered at its parent data-section. Insertion or deletion of records in Deferment
+    day data is automatically handled based on start daytime and end daytime of the
+    parent event. For open event, data is generated until current valid production
+    day when the start Daytime is before or on the current Production Day. However,
+    no record will be generated for the open event with the start Daytime after the
+    current Production Day. Instantiation process can also automatically generate
+    new deferment day records for open event and loss quantities will be copied from
+    the previous day. The entered daily loss quantities for volume and mass for each
+    deferment day record will be aggregated and summed up immediately to update the
+    event loss quantities attributes at the parent Deferment Event after saving the
+    entries. Deferment day records will be sorted in descending order.</p><p>Tab 2
+    : Graphical View: The graphical view will show the daily loss quantity for the
+    selected production phase for the span of the event.</p><div class="ui-widget-header
+    ui-corner-top"><span class="ecTextHeader">Configuration in Maintain System Settings
+    (CO.1006)</span><ol type="1" style="font-weight:bold"><li><p>Deferment: Allow
+    overlapping events</p><div style="font-weight:normal"><p>Setting between Yes,
+    No, Costraint and Down Constraints</p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
+    role="grid" cellpadding="10"><thead><tr role="row"><th width="350" class="ui-state-default"
+    role="columnheader" aria-label="Value" scope="col"><span><center>Value</center></span></th><th
+    class="ui-state-default" role="columnheader" aria-label="Scenario" scope="col"
+    colspan="2"><span><center>Scenario</center></span></th></tr></thead><tbody class="ui-datatable-data
+    ui-widget-content"><tr><td>Y</td><td>Allow all types of overlapping.</td></tr><tr><td>N</td><td>Do
+    not allow any types of overlapping.</td></tr><tr><td>CONSTRAINT</td><td><ul style="list-style-type:
+    disc; margin-left: 10px;"><li>Allow constraints overlapping only.</li><li>Overlapping
+    between down events are not allowed.</li><li>Overlapping between down and constraint
+    events are not allowed.</li></ul></td></tr><tr><td>DOWN_CONSTRAINT</td><td><ul
+    style="list-style-type: disc; margin-left: 10px;"><li>Allow overlapping between
+    down-constraints events.</li><li>Allow overlapping between constraints overlapping.</li><li>Don''t
+    allow overlapping between down-down events.</li></ul></td></tr></tbody></table></div></div></div></li><li><p>Deferment:
+    Idle Well Days Popup </p><div style="font-weight:normal"><p>Setting to true will
+    enable the Idle Well Days popup in the Deferment Day screen. This is to filter
+    the open event(s) based on the selection from the drop down.</p></div></li></ol><div
+    class="ui-widget-header ui-corner-top"><span class="ecTextHeader">Configuration
+    in Maintain User Settings (CO.1008)</span><p>This screen has a configurable mandatory
+    level for navigator. It enables the user to define mandatory level for the given
+    group model. This can be configured in Maintain User Settings (CO.1008):</p><div
+    class="ui-widget"><div class="ui-datatable-tablewrapper"><table role="grid" cellpadding="10"><thead><tr
+    role="row"><th width="350" class="ui-state-default" role="columnheader" aria-label="Property"
+    scope="col"><span>Property</span></th><th class="ui-state-default" role="columnheader"
+    aria-label="Value" scope="col"><span>Value</span></th></tr></thead><tbody class="ui-datatable-data
+    ui-widget-content"><tr class="ui-widget-content ui-datatable-even" role="row"><td
+    role="gridcell"><span>Deferment: Custom Mandatory Navigation - Operational</span></td><td
+    role="gridcell"><span>Mandatory level in Operational group model navigator. Options:PRODUCTIONUNIT|SUB_UNIT|AREA|SUB_AREA|FCTY_CLASS_2|FCTY_CLASS_1</span></td></tr><tr><td>Deferment:Custom
+    Mandatory Navigation-Collection Point</td><td role="gridcell""><span>Mandatory
+    level in Collection point group model navigator. Options:PRODUCTIONUNIT|AREA|OPERATOR_ROUTE|COLLECTION_POINT</span></td></tr></tbody></table></div></div></div><div
+    class="ui-widget-header ui-corner-top"><span class="ecTextHeader">Buttons in Deferment
+    Day</span><p></p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
+    role="grid" cellpadding="10"><thead><tr role="row"><th scope="col" aria-label="Button"
+    role="columnheader" class="ui-state-default" width="200"><span>Button</span></th><th
+    class="ui-state-default" role="columnheader" aria-label="Description" scope="col"><span>Description</span></th></tr></thead><tbody
+    class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-even"
+    role="row"><td role="gridcell"><span>Verify Record</span></td><td role="gridcell"><span>This
+    button is used to update the record status from Provision to Verified.</span></td></tr><tr
+    class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell"><span>Approve
+    Record</span></td><td role="gridcell"><span>This button is used to update the
+    record status from Verified/Provision to Approved.</span></td></tr><tr class="ui-widget-content
+    ui-datatable-even" role="row"><td role="gridcell"><span>New Master Event</span></td><td
+    role="gridcell"><span>This button will open Master Events(PD.0006) in a new window
+    to allow the user to create a new master event which can then be linked to the
+    deferment event.</span></td></tr></tbody></table></div></div>'
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1472906483'
+keys:
+  BF_DESCRIPTION_NO: WR.0071
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0071
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/perforation_active_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function supports end users in registration of perforation status data for perforation intervals linked to all well types being producers or injectors.</p>
+
+    <p>The perforation status can be changed many times per day. This screen allows for data registration on an event basis.</p>
+
+    <p>Additional data items can be added to the data class. The relation between Status and Active status must be configured using screen <em>EC Codes </em>(CO.1011). Customer controls Status (EC Code = PERF_STATUS), but Active Status (EC Code = ACTIVE_PERF_STATUS) can only be OPEN, CLOSED or CLOSED_LT. Each customer status must be mapped to the correct active status used EC configuration screen for EC Codes.</p>
+related: {}

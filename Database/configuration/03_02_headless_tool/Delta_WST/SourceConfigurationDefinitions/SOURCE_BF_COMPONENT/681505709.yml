@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '681505709'
+keys:
+  BF_CODE: CO.0040
+  CLASS_NAME: TESTSEPARATOR
+  COMP_CODE: objectForm
+  T: BF_COMPONENT
+  URL: /insert
+parentKeys: {}
+properties:
+  BF_CODE: CO.0040
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/TESTSEPARATOR/TARGET/TESTSEPARATOR/CLASS_NAME/TESTSEPARATOR' )
+  CLASS_NAME: TESTSEPARATOR
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /insert
+related: {}

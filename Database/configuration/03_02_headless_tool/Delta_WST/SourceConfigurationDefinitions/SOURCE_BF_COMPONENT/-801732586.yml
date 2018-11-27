@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-801732586'
+keys:
+  BF_CODE: CO.2064
+  CLASS_NAME: PORT_CARRIER
+  COMP_CODE: carrier_port
+  T: BF_COMPONENT
+  URL: /carrier_port
+parentKeys: {}
+properties:
+  BF_CODE: CO.2064
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/carrier_port_acc' )
+  CLASS_NAME: PORT_CARRIER
+  COMP_CODE: carrier_port
+  NAME: Carrier Port
+  SIGNING_REQ_IND: null
+  URL: /carrier_port
+related: {}

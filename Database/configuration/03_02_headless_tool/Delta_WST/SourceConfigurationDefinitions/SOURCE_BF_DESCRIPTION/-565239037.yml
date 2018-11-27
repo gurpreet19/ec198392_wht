@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-565239037'
+keys:
+  BF_DESCRIPTION_NO: VO.0008
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: VO.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/split_key/DAILY/TRUE/SPLIT_TYPE/SPLIT_ITEM_OTHER' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Daily Split Key Other screen </strong>    is used to create and maintain profit Other Split Key shares.</p><p>    The Other Split Key is used by the Cascade Logic to calculate values in the Volume module when a value should be split.</p><p>    The cascade logic is run after saving in this business function and e.g. might influence all instantiated stream items for the timespan valid for the share    that uses this split key.</p>
+related: {}

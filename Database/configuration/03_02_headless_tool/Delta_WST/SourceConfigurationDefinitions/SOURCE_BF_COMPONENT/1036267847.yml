@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1036267847'
+keys:
+  BF_CODE: CO.0201
+  CLASS_NAME: ASSET_CALC_ATTRIBUTE
+  COMP_CODE: Asset Calculation Attribute
+  T: BF_COMPONENT
+  URL: /asset_calc_attribute_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.0201
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/asset_calc_attribute' )
+  CLASS_NAME: ASSET_CALC_ATTRIBUTE
+  COMP_CODE: Asset Calculation Attribute
+  NAME: Asset Calculation Attribute
+  SIGNING_REQ_IND: null
+  URL: /asset_calc_attribute_table
+related: {}

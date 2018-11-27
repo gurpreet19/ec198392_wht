@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1431511308'
+keys:
+  COMPONENT_ID: CAP_CONTRACT_REQUEST
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.gd.screens/daily_contract_capacity_request/CLASS_1/CNTR_DAY_CAPACITY_REQ/CLASS_2/CNTR_CAPACITY_DAY_TRANS?screentemplate=/com.ec.tran.gd.screens/daily_contract_capacity_request
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CAP_CONTRACT_REQUEST
+  COMPONENT_LABEL: Daily Contract Capacity Request
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_GD_CA
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 100.0
+  WINDOW_ID: ENERGYX
+related: {}

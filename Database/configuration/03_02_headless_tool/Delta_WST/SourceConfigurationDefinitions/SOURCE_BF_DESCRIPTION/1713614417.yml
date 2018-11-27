@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1713614417'
+keys:
+  BF_DESCRIPTION_NO: CD.0042
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/STREAM_ITEM_CATEGORY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Stream Item Category Split Key screen</strong>    is used to create and maintain the Stream Item Category Split Key.</p><p>    The Stream Item Category Split Key is used by the cascade logic to    calculate values in the Volume module when a value should be split into    values for different Steam Item Categories.</p><p>    The Split Key Shares are maintained in Stream Item Category    Shares screen (BF CD.0043).</p>
+related: {}

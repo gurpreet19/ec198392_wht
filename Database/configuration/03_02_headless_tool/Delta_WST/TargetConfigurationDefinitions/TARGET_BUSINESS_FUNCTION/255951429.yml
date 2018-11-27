@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '255951429'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.co.screens/contract_exp_code
+parentKeys: {}
+properties:
+  BF_CODE: CO.3005
+  NAME: Contract Expenditure
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.co.screens/contract_exp_code
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1500748904'
+keys:
+  BF_CODE: FI.0001
+  CLASS_NAME: null
+  COMP_CODE: navButton
+  T: BF_COMPONENT
+  URL: /navButton
+parentKeys: {}
+properties:
+  BF_CODE: FI.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_definition' )
+  CLASS_NAME: null
+  COMP_CODE: navButton
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /navButton
+related: {}

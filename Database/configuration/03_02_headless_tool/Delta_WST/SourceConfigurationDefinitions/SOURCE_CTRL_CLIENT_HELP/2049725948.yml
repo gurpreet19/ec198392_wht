@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2049725948'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_relation/CLASS_NAME/TRANS_DIM_SET_ITEM/FROM_CLASS_NAME/TRANS_DIM_SET/ROLE_ID/TRANS_DIM_SET_ID
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_relation/CLASS_NAME/TRANS_DIM_SET_ITEM/FROM_CLASS_NAME/TRANS_DIM_SET/ROLE_ID/TRANS_DIM_SET_ID
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

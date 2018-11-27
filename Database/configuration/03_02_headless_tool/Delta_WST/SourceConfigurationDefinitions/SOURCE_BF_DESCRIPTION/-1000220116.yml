@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1000220116'
+keys:
+  BF_DESCRIPTION_NO: CO.2006
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/CARGO_STATUS_MAPPING' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain Cargo Statuses and map them to EC Cargo Statuses. Additional, if EC Revenue is installed, it is possible indicate which&nbsp;cargo status should lead to an insert into EC Revenue.</p><p>Each individual project can have as many statuses as they need, but they must have a minimum list of status that is mapped to the list of EC Cargo Status. The list&nbsp;of EC Cargo Statuses<br />&middot; Tentative<br />&middot; Ready for harbour<br />&middot; Closed<br />&middot; Approved<br />&middot; Cancelled</p><p>The mapping to EC Revenue by defining what cargo status should initiate the transfer of different quantity types. Then there is a mapping from the quantity to a&nbsp;quantity in EC Transport.</p><p>Note that selecting the revenue quantity type LOAD will always lead to the transfer of EST_UNLOAD if the Incoterm is CIF.</p>
+related: {}

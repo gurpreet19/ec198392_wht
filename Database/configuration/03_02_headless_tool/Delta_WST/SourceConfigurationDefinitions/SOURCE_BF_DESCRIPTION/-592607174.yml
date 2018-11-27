@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-592607174'
+keys:
+  BF_DESCRIPTION_NO: CA.0004
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CA.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ca.screens/mth_account_balance' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p class="MsoNormal">This business function is used to calculate closing month inventory balance for all accounts for a storage. Running this procedure will speed up next months inventory calculations, as the calculation always will start with latest stored balance. If this procedure is not running, calculations will always start from day one of production.</p><p class="MsoNormal">This is only used when cargo module is installed and accounts are configured.<o:p></o:p></p>
+related: {}

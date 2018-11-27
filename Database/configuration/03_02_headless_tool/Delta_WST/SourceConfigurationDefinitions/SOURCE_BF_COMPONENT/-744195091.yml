@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-744195091'
+keys:
+  BF_CODE: FI.0002
+  CLASS_NAME: null
+  COMP_CODE: copyTemplate
+  T: BF_COMPONENT
+  URL: /copyTemplate
+parentKeys: {}
+properties:
+  BF_CODE: FI.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_template' )
+  CLASS_NAME: null
+  COMP_CODE: copyTemplate
+  NAME: Copy Template
+  SIGNING_REQ_IND: null
+  URL: /copyTemplate
+related: {}

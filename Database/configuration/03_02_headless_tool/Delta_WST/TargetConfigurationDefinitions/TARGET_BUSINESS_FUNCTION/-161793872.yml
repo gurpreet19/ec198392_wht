@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-161793872'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/capacity_release_result
+parentKeys: {}
+properties:
+  BF_CODE: GD.0059
+  NAME: Capacity Release Result
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.gd.screens/capacity_release_result
+related: {}

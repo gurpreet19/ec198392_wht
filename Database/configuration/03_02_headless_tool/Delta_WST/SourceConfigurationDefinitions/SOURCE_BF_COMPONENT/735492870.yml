@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '735492870'
+keys:
+  BF_CODE: CP.0063
+  CLASS_NAME: CARGO_PROTEST
+  COMP_CODE: tab80
+  T: BF_COMPONENT
+  URL: /tab80
+parentKeys: {}
+properties:
+  BF_CODE: CP.0063
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/tab_cargo_menu/CARGO_NAV_CLASS/CARGO_PLANNING_NAVIGATOR/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT' )
+  CLASS_NAME: CARGO_PROTEST
+  COMP_CODE: tab80
+  NAME: Letter of protest
+  SIGNING_REQ_IND: null
+  URL: /tab80
+related: {}

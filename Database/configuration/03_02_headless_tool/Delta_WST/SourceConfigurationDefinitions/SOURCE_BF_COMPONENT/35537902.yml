@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '35537902'
+keys:
+  BF_CODE: CO.1041
+  CLASS_NAME: CALC_GLOBAL_ATTRIBUTE
+  COMP_CODE: systemAttr
+  T: BF_COMPONENT
+  URL: /systemAttr
+parentKeys: {}
+properties:
+  BF_CODE: CO.1041
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/global_attribute' )
+  CLASS_NAME: CALC_GLOBAL_ATTRIBUTE
+  COMP_CODE: systemAttr
+  NAME: System Defined Attributes
+  SIGNING_REQ_IND: null
+  URL: /systemAttr
+related: {}

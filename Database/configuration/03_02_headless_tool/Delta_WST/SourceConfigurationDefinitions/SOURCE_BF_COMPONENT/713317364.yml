@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '713317364'
+keys:
+  BF_CODE: TO.0003
+  CLASS_NAME: STOR_MTH_EXPORT_STATUS
+  COMP_CODE: storageMonthEnd
+  T: BF_COMPONENT
+  URL: /storageMonthEnd
+parentKeys: {}
+properties:
+  BF_CODE: TO.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/exported_not_lifted' )
+  CLASS_NAME: STOR_MTH_EXPORT_STATUS
+  COMP_CODE: storageMonthEnd
+  NAME: Storage Month End
+  SIGNING_REQ_IND: null
+  URL: /storageMonthEnd
+related: {}

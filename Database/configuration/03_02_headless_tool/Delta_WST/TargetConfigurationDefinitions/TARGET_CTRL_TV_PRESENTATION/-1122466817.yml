@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1122466817'
+keys:
+  COMPONENT_ID: MONTLY_LOCAL_DATA_LOCK
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.ha.screens/mth_local_data_lock
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: MONTLY_LOCAL_DATA_LOCK
+  COMPONENT_LABEL: Monthly Local Data Locking
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_HYDRO_ACC
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 45.0
+  WINDOW_ID: ENERGYX
+related: {}

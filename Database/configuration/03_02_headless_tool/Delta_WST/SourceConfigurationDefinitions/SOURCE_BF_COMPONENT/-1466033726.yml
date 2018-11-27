@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1466033726'
+keys:
+  BF_CODE: SP.0033
+  CLASS_NAME: CONTRACT_DEAL
+  COMP_CODE: deals
+  T: BF_COMPONENT
+  URL: /deals
+parentKeys: {}
+properties:
+  BF_CODE: SP.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/spot_agreement' )
+  CLASS_NAME: CONTRACT_DEAL
+  COMP_CODE: deals
+  NAME: Deals
+  SIGNING_REQ_IND: null
+  URL: /deals
+related: {}

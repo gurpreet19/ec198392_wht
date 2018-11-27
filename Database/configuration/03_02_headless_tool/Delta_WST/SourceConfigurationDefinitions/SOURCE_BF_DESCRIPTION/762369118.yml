@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '762369118'
+keys:
+  BF_DESCRIPTION_NO: WR.0001.02
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0001.02
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_production_well_status_cp/CLASS_NAME/PWEL_DAY_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is identical to Daily Prod Well Status 1. The only difference is that it will use the Collection Point group model in the navigator and list Wells based on Collection Point Connection BF.</p>
+related: {}

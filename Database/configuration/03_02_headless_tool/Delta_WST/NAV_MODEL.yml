@@ -1,0 +1,216 @@
+' FROM_CLASS_NAME=AREA MODEL=TRAN_OPERATIONAL ROLE_NAME=OP_AREA TO_CLASS_NAME=FCTY_CLASS_1': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '986949283'
+  keys:
+    FROM_CLASS_NAME: AREA
+    MODEL: TRAN_OPERATIONAL
+    ROLE_NAME: OP_AREA
+    T: NAV_MODEL
+    TO_CLASS_NAME: FCTY_CLASS_1
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=DATA_INTERFACE ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=PROPERTY': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-717547913'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: DATA_INTERFACE
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: PROPERTY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=FINANCIAL ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=PRICE_RATE': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '322795841'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: FINANCIAL
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: PRICE_RATE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=FINANCIAL_PRODUCT ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=PRICE_OBJECT': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1101754320'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: FINANCIAL_PRODUCT
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: PRICE_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=INVENTORY ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=INVENTORY_AREA': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2039858248'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: INVENTORY
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: INVENTORY_AREA
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=PROPERTY ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=PROPERTY': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '485345798'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: PROPERTY
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: PROPERTY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=ROYALTY ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=CONTRACT_AREA': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1349541554'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: ROYALTY
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: CONTRACT_AREA
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=SALE_COMMERCIAL ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=NOMINATION_LOCATION': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-281212898'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: SALE_COMMERCIAL
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: NOMINATION_LOCATION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=TRAN_OPERATIONAL ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=AREA': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '170716629'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: TRAN_OPERATIONAL
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: AREA
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=BUSINESS_UNIT MODEL=TRAN_OPERATIONAL ROLE_NAME=BUSINESS_UNIT TO_CLASS_NAME=BERTH': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '997797595'
+  keys:
+    FROM_CLASS_NAME: BUSINESS_UNIT
+    MODEL: TRAN_OPERATIONAL
+    ROLE_NAME: BUSINESS_UNIT
+    T: NAV_MODEL
+    TO_CLASS_NAME: BERTH
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=COMPANY MODEL=FIN_PERIOD ROLE_NAME=COMPANY TO_CLASS_NAME=CONTRACT': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1074542653'
+  keys:
+    FROM_CLASS_NAME: COMPANY
+    MODEL: FIN_PERIOD
+    ROLE_NAME: COMPANY
+    T: NAV_MODEL
+    TO_CLASS_NAME: CONTRACT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=CONTRACT_AREA MODEL=ROYALTY ROLE_NAME=CONTRACT_AREA TO_CLASS_NAME=CONTRACT': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '943630988'
+  keys:
+    FROM_CLASS_NAME: CONTRACT_AREA
+    MODEL: ROYALTY
+    ROLE_NAME: CONTRACT_AREA
+    T: NAV_MODEL
+    TO_CLASS_NAME: CONTRACT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=COUNTRY MODEL=FIN_PERIOD ROLE_NAME=COUNTRY TO_CLASS_NAME=COMPANY': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-497598228'
+  keys:
+    FROM_CLASS_NAME: COUNTRY
+    MODEL: FIN_PERIOD
+    ROLE_NAME: COUNTRY
+    T: NAV_MODEL
+    TO_CLASS_NAME: COMPANY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=FCTY_CLASS_1 MODEL=TRAN_OPERATIONAL ROLE_NAME=OP_FCTY_1 TO_CLASS_NAME=SUPPLY_POINT': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-70577105'
+  keys:
+    FROM_CLASS_NAME: FCTY_CLASS_1
+    MODEL: TRAN_OPERATIONAL
+    ROLE_NAME: OP_FCTY_1
+    T: NAV_MODEL
+    TO_CLASS_NAME: SUPPLY_POINT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=INVENTORY_AREA MODEL=INVENTORY ROLE_NAME=INVENTORY_AREA TO_CLASS_NAME=INVENTORY': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1654730432'
+  keys:
+    FROM_CLASS_NAME: INVENTORY_AREA
+    MODEL: INVENTORY
+    ROLE_NAME: INVENTORY_AREA
+    T: NAV_MODEL
+    TO_CLASS_NAME: INVENTORY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=PROPERTY MODEL=DATA_INTERFACE ROLE_NAME=PROPERTY TO_CLASS_NAME=PROJECT': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-748379229'
+  keys:
+    FROM_CLASS_NAME: PROPERTY
+    MODEL: DATA_INTERFACE
+    ROLE_NAME: PROPERTY
+    T: NAV_MODEL
+    TO_CLASS_NAME: PROJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=PROPERTY MODEL=PROPERTY ROLE_NAME=PROPERTY TO_CLASS_NAME=PROJECT': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1407593714'
+  keys:
+    FROM_CLASS_NAME: PROPERTY
+    MODEL: PROPERTY
+    ROLE_NAME: PROPERTY
+    T: NAV_MODEL
+    TO_CLASS_NAME: PROJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' FROM_CLASS_NAME=UNIT_AGR MODEL=WELL_SETUP ROLE_NAME=UNIT_AGR TO_CLASS_NAME=TRACT': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '380039086'
+  keys:
+    FROM_CLASS_NAME: UNIT_AGR
+    MODEL: WELL_SETUP
+    ROLE_NAME: UNIT_AGR
+    T: NAV_MODEL
+    TO_CLASS_NAME: TRACT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

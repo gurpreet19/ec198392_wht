@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1007093337'
+keys:
+  BF_CODE: CO.1055
+  CLASS_NAME: null
+  COMP_CODE: classNameNav
+  T: BF_COMPONENT
+  URL: /classNameNav
+parentKeys: {}
+properties:
+  BF_CODE: CO.1055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_attr_pres_config' )
+  CLASS_NAME: null
+  COMP_CODE: classNameNav
+  NAME: Class Navigator
+  SIGNING_REQ_IND: null
+  URL: /classNameNav
+related: {}

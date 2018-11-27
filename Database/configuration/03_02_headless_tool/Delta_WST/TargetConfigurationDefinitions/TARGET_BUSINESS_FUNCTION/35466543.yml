@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '35466543'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/DEHYDRATOR/TARGET/DEHYDRATOR/CLASS_NAME/DEHYDRATOR
+parentKeys: {}
+properties:
+  BF_CODE: CO.0181
+  NAME: Dehydrator
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/DEHYDRATOR/TARGET/DEHYDRATOR/CLASS_NAME/DEHYDRATOR
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1739016489'
+keys:
+  BF_CODE: RP.0001
+  CLASS_NAME: null
+  COMP_CODE: exportButton
+  T: BF_COMPONENT
+  URL: /exportButton
+parentKeys: {}
+properties:
+  BF_CODE: RP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_template' )
+  CLASS_NAME: null
+  COMP_CODE: exportButton
+  NAME: Export report template
+  SIGNING_REQ_IND: null
+  URL: /exportButton
+related: {}

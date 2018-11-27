@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '92951775'
+keys:
+  BF_CODE: PO.0100.01
+  CLASS_NAME: OBJ_SINGLE_TRANSFER_VIEW
+  COMP_CODE: truck_ticket_sto_stream_data_inFormLayout
+  T: BF_COMPONENT
+  URL: /truck_ticket_sto_stream_data_inFormLayout
+parentKeys: {}
+properties:
+  BF_CODE: PO.0100.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_single_transfer_object_form' )
+  CLASS_NAME: OBJ_SINGLE_TRANSFER_VIEW
+  COMP_CODE: truck_ticket_sto_stream_data_inFormLayout
+  NAME: Truck Ticket Single Transfer Object Stream Data
+  SIGNING_REQ_IND: null
+  URL: /truck_ticket_sto_stream_data_inFormLayout
+related: {}

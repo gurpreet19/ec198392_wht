@@ -1,0 +1,27 @@
+PROD_CALCS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1771128394'
+  keys:
+    OBJECT_CODE: PROD_CALCS
+    T: CALC_LIBRARY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+REVN_FI: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1818109271'
+  keys:
+    OBJECT_CODE: REVN_FI
+    T: CALC_LIBRARY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+REVN_TI: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1818109705'
+  keys:
+    OBJECT_CODE: REVN_TI
+    T: CALC_LIBRARY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

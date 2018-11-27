@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-395324289'
+keys:
+  BF_CODE: WL.0002
+  CLASS_NAME: null
+  COMP_CODE: versions
+  T: BF_COMPONENT
+  URL: /versions
+parentKeys: {}
+properties:
+  BF_CODE: WL.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.workflow.screens/four_eye_approval' )
+  CLASS_NAME: null
+  COMP_CODE: versions
+  NAME: Versions
+  SIGNING_REQ_IND: null
+  URL: /versions
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-596281343'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.sa.screens/monthly_contract_calc_result/BF_PROFILE/SA.0020.PC/CLASS/SCTR_ACC_MTH_PC_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: SA.0020.PC
+  NAME: Monthly Contract Account Result – Profit Center
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.sale.sa.screens/monthly_contract_calc_result/BF_PROFILE/SA.0020.PC/CLASS/SCTR_ACC_MTH_PC_STATUS
+related: {}

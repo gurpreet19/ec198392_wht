@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-844134393'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.ecdm.co.screens/imp_src_mapping_setup
+parentKeys: {}
+properties:
+  BF_CODE: IS.0001
+  NAME: Mapping Configuration
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.ecdm.co.screens/imp_src_mapping_setup
+related: {}

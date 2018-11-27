@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '661139043'
+keys:
+  BF_CODE: VO.0024
+  CLASS_NAME: null
+  COMP_CODE: table9
+  T: BF_COMPONENT
+  URL: /table9
+parentKeys: {}
+properties:
+  BF_CODE: VO.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/fcst_stim_mth_query_quantities' )
+  CLASS_NAME: null
+  COMP_CODE: table9
+  NAME: Sep
+  SIGNING_REQ_IND: null
+  URL: /table9
+related: {}

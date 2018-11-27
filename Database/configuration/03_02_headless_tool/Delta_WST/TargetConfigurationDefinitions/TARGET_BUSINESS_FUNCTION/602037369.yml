@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '602037369'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/ext_loc_reference_value
+parentKeys: {}
+properties:
+  BF_CODE: CO.0229
+  NAME: External Location Reference Values
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.co.screens/ext_loc_reference_value
+related: {}

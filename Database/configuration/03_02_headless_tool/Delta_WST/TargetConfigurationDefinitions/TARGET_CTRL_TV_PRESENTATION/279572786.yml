@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '279572786'
+keys:
+  COMPONENT_ID: ELE_STREAM_SUB_DAILY_STATUS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.po.screens/sub_daily_electrical_stream_status
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ELE_STREAM_SUB_DAILY_STATUS
+  COMPONENT_LABEL: Sub Daily Electrical Stream Status
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_PROD_OPER_SUB_DAY
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 45.0
+  WINDOW_ID: ENERGYX
+related: {}

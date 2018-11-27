@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-700397311'
+keys:
+  BF_CODE: CO.2009
+  CLASS_NAME: LIFTING_ACC_MTH_INIT
+  COMP_CODE: table
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CO.2009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/initialize_lifting_account' )
+  CLASS_NAME: LIFTING_ACC_MTH_INIT
+  COMP_CODE: table
+  NAME: Initialize Lifting Account
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

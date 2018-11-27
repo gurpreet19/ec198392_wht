@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '984163581'
+keys:
+  CODE: GAS_WGR
+  CODE_TYPE: FLWL_CALC_SUB_DAY_WAT_MTD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: GAS_WGR
+  CODE_TEXT: Gas * WGR
+  CODE_TYPE: FLWL_CALC_SUB_DAY_WAT_MTD
+  DESCRIPTION: Gas * Water Gas Ratio
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 70.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

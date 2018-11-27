@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1297099752'
+keys:
+  BF_CODE: SA.0035
+  CLASS_NAME: null
+  COMP_CODE: dateStartJob
+  T: BF_COMPONENT
+  URL: /dateStartJob
+parentKeys: {}
+properties:
+  BF_CODE: SA.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/fcst_sale_calc_mth' )
+  CLASS_NAME: null
+  COMP_CODE: dateStartJob
+  NAME: Date Start Job
+  SIGNING_REQ_IND: null
+  URL: /dateStartJob
+related: {}

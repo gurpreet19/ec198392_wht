@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '336942589'
+keys:
+  COMPONENT_ID: PR0007_PRICE_INDEX_DAILY
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.sale.pr.screens/price_index_daily
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PR0007_PRICE_INDEX_DAILY
+  COMPONENT_LABEL: Daily Price Index
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_SALE_PR
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 100.0
+  WINDOW_ID: ENERGYX
+related: {}

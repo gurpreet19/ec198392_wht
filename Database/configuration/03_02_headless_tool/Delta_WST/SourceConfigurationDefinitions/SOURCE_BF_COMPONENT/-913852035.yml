@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-913852035'
+keys:
+  BF_CODE: VO.0022
+  CLASS_NAME: STIM_MTH_VALUE_OVERV
+  COMP_CODE: table
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: VO.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/monthly_node_overview' )
+  CLASS_NAME: STIM_MTH_VALUE_OVERV
+  COMP_CODE: table
+  NAME: Overview Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

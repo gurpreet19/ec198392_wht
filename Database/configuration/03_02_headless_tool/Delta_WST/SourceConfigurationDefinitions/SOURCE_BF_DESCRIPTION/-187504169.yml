@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-187504169'
+keys:
+  BF_DESCRIPTION_NO: TO.0031
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/daily_capacity_adjustment' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to adjust the available capacity and or the minimum daily send out on a delivery point.</p><p>For an LNG import terminal there is typically a re-gasification from the storage into a pipeline through a delivery point. The delivery point got a capacity, and a set of&nbsp;contracts got rights to re-gas on that delivery point. Depending on that configuration there can be excess capacity available. The size of what is available can be&nbsp;adjusted on a daily basis based on how much operation risk the terminal is willing to expose.</p><p>Additional there is a minimum quantity of gas that needs to be flow in order to keep the terminal in operation. This business function allows the terminal to increase&nbsp;the minimum daily send out at the terminals discretion for either commercial reasons, making space for a spot cargo, or due to weather conditions.</p>
+related: {}

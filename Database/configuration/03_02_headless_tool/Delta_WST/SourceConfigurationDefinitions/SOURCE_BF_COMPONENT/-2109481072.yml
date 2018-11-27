@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2109481072'
+keys:
+  BF_CODE: PP.0049
+  CLASS_NAME: FCST_CONSTRAINT_OBJ_TYPE
+  COMP_CODE: forecast_object_type_constraints
+  T: BF_COMPONENT
+  URL: null
+parentKeys: {}
+properties:
+  BF_CODE: PP.0049
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_object_constraints/CLASS_NAME/FCST_OBJ_CONSTRAINTS' )
+  CLASS_NAME: FCST_CONSTRAINT_OBJ_TYPE
+  COMP_CODE: forecast_object_type_constraints
+  NAME: Object Type Constraints
+  SIGNING_REQ_IND: null
+  URL: null
+related: {}

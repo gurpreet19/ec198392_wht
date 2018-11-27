@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-762511253'
+keys:
+  BF_CODE: CO.2020
+  CLASS_NAME: CONTRACT_TEMPLATE
+  COMP_CODE: cntr_template
+  T: BF_COMPONENT
+  URL: /cntr_template
+parentKeys: {}
+properties:
+  BF_CODE: CO.2020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_template' )
+  CLASS_NAME: CONTRACT_TEMPLATE
+  COMP_CODE: cntr_template
+  NAME: Contract Template
+  SIGNING_REQ_IND: null
+  URL: /cntr_template
+related: {}

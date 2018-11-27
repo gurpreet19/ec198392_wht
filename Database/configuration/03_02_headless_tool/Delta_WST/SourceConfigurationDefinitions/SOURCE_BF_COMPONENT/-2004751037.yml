@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2004751037'
+keys:
+  BF_CODE: CO.2013
+  CLASS_NAME: LIFTING_DELAY_CODE
+  COMP_CODE: lift_delay_code
+  T: BF_COMPONENT
+  URL: /lift_delay_code
+parentKeys: {}
+properties:
+  BF_CODE: CO.2013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/lifting_delay_code' )
+  CLASS_NAME: LIFTING_DELAY_CODE
+  COMP_CODE: lift_delay_code
+  NAME: Lifting Delay Code
+  SIGNING_REQ_IND: null
+  URL: /lift_delay_code
+related: {}

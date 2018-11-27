@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-460726617'
+keys:
+  COMPONENT_ID: SIC_SK_SH
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/split_key/SPLIT_TYPE/STREAM_ITEM_CATEGORY?screentemplate=/com.ec.revn.cd/split_key
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: SIC_SK_SH
+  COMPONENT_LABEL: Stream Item Category Shares
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: REVENUE_SPLIT_KEYS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 80.0
+  WINDOW_ID: ENERGYX
+related: {}

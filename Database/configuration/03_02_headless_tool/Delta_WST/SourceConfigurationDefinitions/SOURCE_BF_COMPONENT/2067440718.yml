@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2067440718'
+keys:
+  BF_CODE: RP.0003
+  CLASS_NAME: REPORT_RUNABLE_PARAM
+  COMP_CODE: runable_report_params
+  T: BF_COMPONENT
+  URL: /runable_reports_params
+parentKeys: {}
+properties:
+  BF_CODE: RP.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_administration' )
+  CLASS_NAME: REPORT_RUNABLE_PARAM
+  COMP_CODE: runable_report_params
+  NAME: Report Parameters
+  SIGNING_REQ_IND: null
+  URL: /runable_reports_params
+related: {}

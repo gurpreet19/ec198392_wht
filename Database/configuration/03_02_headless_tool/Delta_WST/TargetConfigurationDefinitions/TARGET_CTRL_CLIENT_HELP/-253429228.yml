@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-253429228'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO_GEN_UNIT/TARGET/CO_GEN_UNIT/CLASS_NAME/CO_GEN_UNIT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO_GEN_UNIT/TARGET/CO_GEN_UNIT/CLASS_NAME/CO_GEN_UNIT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

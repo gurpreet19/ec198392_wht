@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-202134337'
+keys:
+  BF_CODE: PP.0066
+  CLASS_NAME: FCST_SCENARIO_GRAPHS
+  COMP_CODE: scenarios_selection
+  T: BF_COMPONENT
+  URL: /scenarios_selection
+parentKeys: {}
+properties:
+  BF_CODE: PP.0066
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_scenarios_graphs/CLASS_NAME/FCST_SCENARIO_GRAPHS/DAILY_CLASS_NAME/FCST_SUMM_VAR_DAY/MONTHLY_CLASS_NAME/FCST_SUMM_VAR_MTH' )
+  CLASS_NAME: FCST_SCENARIO_GRAPHS
+  COMP_CODE: scenarios_selection
+  NAME: Scenarios Selection
+  SIGNING_REQ_IND: null
+  URL: /scenarios_selection
+related: {}

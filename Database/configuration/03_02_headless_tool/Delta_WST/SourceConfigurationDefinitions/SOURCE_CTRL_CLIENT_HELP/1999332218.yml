@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1999332218'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.in/manage_inventory/CLASS_NAME/INVENTORY
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.in/manage_inventory/CLASS_NAME/INVENTORY
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

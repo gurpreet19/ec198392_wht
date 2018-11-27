@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1679873987'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/project_properties/CLASS_NAME/CONTRACT/DATA_CLASS/PROJECT/BF_PROFILE/SP.0058/ACCESS_COLUMN/REVN_CODE
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.sp/project_properties/CLASS_NAME/CONTRACT/DATA_CLASS/PROJECT/BF_PROFILE/SP.0058/ACCESS_COLUMN/REVN_CODE
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

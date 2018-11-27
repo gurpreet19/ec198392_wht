@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '916359868'
+keys:
+  BF_CODE: SA.0017
+  CLASS_NAME: SCTR_ACC_NOM_PC_STATUS
+  COMP_CODE: profit_centre
+  T: BF_COMPONENT
+  URL: /profit_centre
+parentKeys: {}
+properties:
+  BF_CODE: SA.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/cargo_contract_account_status' )
+  CLASS_NAME: SCTR_ACC_NOM_PC_STATUS
+  COMP_CODE: profit_centre
+  NAME: Profit Centre
+  SIGNING_REQ_IND: null
+  URL: /profit_centre
+related: {}

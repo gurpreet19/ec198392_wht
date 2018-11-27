@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1318241111'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/YR
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/YR
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

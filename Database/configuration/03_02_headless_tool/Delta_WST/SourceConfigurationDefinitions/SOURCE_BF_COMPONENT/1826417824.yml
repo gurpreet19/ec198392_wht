@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1826417824'
+keys:
+  BF_CODE: PT.0011
+  CLASS_NAME: PRIM_WELL_TARGET_RES
+  COMP_CODE: prim_well_target_result
+  T: BF_COMPONENT
+  URL: /prim_well_target_result
+parentKeys: {}
+properties:
+  BF_CODE: PT.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_comb' )
+  CLASS_NAME: PRIM_WELL_TARGET_RES
+  COMP_CODE: prim_well_target_result
+  NAME: Primary Well Target Result
+  SIGNING_REQ_IND: null
+  URL: /prim_well_target_result
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-855998726'
+keys:
+  BF_CODE: PO.0025
+  CLASS_NAME: null
+  COMP_CODE: dataGenerationMethodPopup
+  T: BF_COMPONENT
+  URL: /dataGenerationMethodPopup
+parentKeys: {}
+properties:
+  BF_CODE: PO.0025
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_oil_stream_status' )
+  CLASS_NAME: null
+  COMP_CODE: dataGenerationMethodPopup
+  NAME: Data Generation Method Popup
+  SIGNING_REQ_IND: null
+  URL: /dataGenerationMethodPopup
+related: {}

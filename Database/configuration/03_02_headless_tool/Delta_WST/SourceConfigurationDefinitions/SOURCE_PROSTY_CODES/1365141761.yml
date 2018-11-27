@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1365141761'
+keys:
+  CODE: EXAMPLE3
+  CODE_TYPE: SA_DAY_CALC_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: EXAMPLE3
+  CODE_TEXT: 'Reconciliate '
+  CODE_TYPE: SA_DAY_CALC_METHOD
+  DESCRIPTION: null
+  IS_ACTIVE: N
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: N
+  SORT_ORDER: 30.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-940139769'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/CUSTOMER/FROM_CLASS_NAME/CUSTOMER/TO_CLASS_NAME/CUSTOMER
+parentKeys: {}
+properties:
+  BF_CODE: CD.0069
+  NAME: Customer Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/CUSTOMER/FROM_CLASS_NAME/CUSTOMER/TO_CLASS_NAME/CUSTOMER
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '303175453'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.bpm.ext.ec.web/process_overview_config
+parentKeys: {}
+properties:
+  BF_CODE: PA.0011
+  NAME: Process Overview Configuration
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.bpm.ext.ec.web/process_overview_config
+related: {}

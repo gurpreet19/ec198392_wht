@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '231596839'
+keys:
+  BF_DESCRIPTION_NO: CO.1055
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_attr_pres_config' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Class Attributes Presentation Configuration screen is used to override the presentation syntax of classes. The intention is to be able to hide columns with respect to:</p><p></p><ul><li>General override of the class attribute presentation, e.g. viewwidth can be changed without changing the class delivered by the product.</li><li>An object selected in the navigator.</li><li>The URL of the screen (not implemented yet).</li><li>The current profile of the user.</li></ul><p></p><p>If several overrides for one class attribute exists, the priority is:</p><p></p><ul><li>URL.</li><li>Profile.</li><li>Object.</li></ul><p></p><p>When overriding viewhidden it can only be set to true. It is not possible to unhide attributes initially configured as hidden.</p><p>To remove an override it should be deleted and not set to a value equal to the product.</p><p>When selecting an object it has to belong to one of the objects that can be selected in the navigator for the business function that the override should apply to.</p><p>Overriding presentation syntax it typically useful if a class attribute does not make sense for e.g. an area, facility etc.</p>
+related: {}

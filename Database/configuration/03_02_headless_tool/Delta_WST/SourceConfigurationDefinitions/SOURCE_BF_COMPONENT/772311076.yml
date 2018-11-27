@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '772311076'
+keys:
+  BF_CODE: FI.0005
+  CLASS_NAME: null
+  COMP_CODE: unverify_all_button
+  T: BF_COMPONENT
+  URL: /unverify_all_button
+parentKeys: {}
+properties:
+  BF_CODE: FI.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_entry/TIME_SPAN/DAY' )
+  CLASS_NAME: null
+  COMP_CODE: unverify_all_button
+  NAME: Un-Verify All Button
+  SIGNING_REQ_IND: null
+  URL: /unverify_all_button
+related: {}

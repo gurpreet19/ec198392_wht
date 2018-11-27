@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1661808896'
+keys:
+  BF_CODE: GD.0060
+  CLASS_NAME: CAPACITY_REL_REPUT
+  COMP_CODE: capacityReleaseRecallReput
+  T: BF_COMPONENT
+  URL: /capacityReleaseRecallReput
+parentKeys: {}
+properties:
+  BF_CODE: GD.0060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_recall_reput' )
+  CLASS_NAME: CAPACITY_REL_REPUT
+  COMP_CODE: capacityReleaseRecallReput
+  NAME: Reput
+  SIGNING_REQ_IND: null
+  URL: /capacityReleaseRecallReput
+related: {}

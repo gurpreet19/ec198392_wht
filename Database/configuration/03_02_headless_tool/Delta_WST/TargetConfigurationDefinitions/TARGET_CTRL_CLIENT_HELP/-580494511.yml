@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-580494511'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/REVERSE_OSMOSIS_UNIT/TARGET/REVERSE_OSMOSIS_UNIT/CLASS_NAME/REVERSE_OSMOSIS_UNIT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/REVERSE_OSMOSIS_UNIT/TARGET/REVERSE_OSMOSIS_UNIT/CLASS_NAME/REVERSE_OSMOSIS_UNIT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

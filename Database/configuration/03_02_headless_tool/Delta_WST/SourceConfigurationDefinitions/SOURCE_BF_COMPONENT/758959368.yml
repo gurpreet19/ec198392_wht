@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '758959368'
+keys:
+  BF_CODE: PT.0011
+  CLASS_NAME: PROD_TEST_RESULT
+  COMP_CODE: target_result
+  T: BF_COMPONENT
+  URL: /target_result
+parentKeys: {}
+properties:
+  BF_CODE: PT.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_comb' )
+  CLASS_NAME: PROD_TEST_RESULT
+  COMP_CODE: target_result
+  NAME: Target Production Test Results
+  SIGNING_REQ_IND: null
+  URL: /target_result
+related: {}

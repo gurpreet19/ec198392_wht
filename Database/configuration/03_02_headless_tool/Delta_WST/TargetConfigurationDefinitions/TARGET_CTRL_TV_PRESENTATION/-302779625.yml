@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-302779625'
+keys:
+  COMPONENT_ID: LIFT_ACC_MEAS_SETUP
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.co.screens/lift_acc_meas_setup
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: LIFT_ACC_MEAS_SETUP
+  COMPONENT_LABEL: Lifting Account Measurement Setup
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 95.0
+  WINDOW_ID: ENERGYX
+related: {}

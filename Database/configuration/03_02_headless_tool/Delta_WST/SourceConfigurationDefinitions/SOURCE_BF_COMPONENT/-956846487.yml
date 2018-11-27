@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-956846487'
+keys:
+  BF_CODE: PO.0071
+  CLASS_NAME: null
+  COMP_CODE: copy_button
+  T: BF_COMPONENT
+  URL: /copy_button
+parentKeys: {}
+properties:
+  BF_CODE: PO.0071
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_lng_component_analysis/STRM_SET/PO.0071/COMP_SET/STRM_LNG_COMP' )
+  CLASS_NAME: null
+  COMP_CODE: copy_button
+  NAME: Copy Analysis Button
+  SIGNING_REQ_IND: null
+  URL: /copy_button
+related: {}

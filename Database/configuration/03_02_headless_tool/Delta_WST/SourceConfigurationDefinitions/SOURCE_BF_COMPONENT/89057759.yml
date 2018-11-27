@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '89057759'
+keys:
+  BF_CODE: WR.0039
+  CLASS_NAME: WELL_INJ_ION_ANALYSIS
+  COMP_CODE: injection_water
+  T: BF_COMPONENT
+  URL: /injection_water
+parentKeys: {}
+properties:
+  BF_CODE: WR.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/WELL/TARGET/WELL/OWNER/WELL' )
+  CLASS_NAME: WELL_INJ_ION_ANALYSIS
+  COMP_CODE: injection_water
+  NAME: Injection Water Baseline
+  SIGNING_REQ_IND: null
+  URL: /injection_water
+related: {}

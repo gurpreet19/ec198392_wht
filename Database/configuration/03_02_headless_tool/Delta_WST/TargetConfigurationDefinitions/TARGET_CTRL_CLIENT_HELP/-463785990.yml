@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-463785990'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/FCTY_CLASS_1/TARGET/FCTY_CLASS_1/DATA_CLASS/PROD_FCTY1_FORECAST
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/FCTY_CLASS_1/TARGET/FCTY_CLASS_1/DATA_CLASS/PROD_FCTY1_FORECAST
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

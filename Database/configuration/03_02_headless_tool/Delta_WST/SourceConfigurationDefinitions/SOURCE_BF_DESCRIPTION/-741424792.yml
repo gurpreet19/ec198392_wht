@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-741424792'
+keys:
+  BF_DESCRIPTION_NO: CO.2024
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/CONTRACT/TARGET/NOMINATION_POINT/CLASS_NAME/NOMINATION_POINT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Gas is delivered and measured at delivery points. In many cases there is a one-to-one relationship between contracts and delivery points, meaning that the metered&nbsp;gas quantity will equal the delivery under that contract. However, cases where several delivery points is specified in one contract, or cases where the actual metered&nbsp;quantity will need to be split down to multiple contracts at the same delivery point might occur. Typically in a transport network, you have relation to both an &lsquo;Entry&rsquo;&nbsp;and &lsquo;Exit&rsquo; Delivery Point. The relation between a contract and a delivery point is called Nomination Point.</p><p>The Nomination Point can be valid in the whole lifetime of the contract, or only for a given period. If the end date for a relation is not specified it will be valid until the&nbsp;first end date of the associated contract or delivery point.</p><p>There exist separate screens for creating and maintaining both contracts (CO.2016 ) and delivery points (CO.2026 ).</p>
+related: {}

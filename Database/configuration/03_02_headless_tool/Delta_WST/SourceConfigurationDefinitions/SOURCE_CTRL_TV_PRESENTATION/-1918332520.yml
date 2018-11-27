@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1918332520'
+keys:
+  COMPONENT_ID: FCTY_EXT_LOCATION_CONN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.co.screens/fcty_ext_location_conn
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: FCTY_EXT_LOCATION_CONN
+  COMPONENT_LABEL: Facility - External Location Connection
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FACILITY_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 43.0
+  WINDOW_ID: ENERGYX
+related: {}

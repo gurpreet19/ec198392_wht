@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1077534365'
+keys:
+  KEY: /com/ec/frmw/calc/screens/maintain_calculation/ALLOWED_FILE_EXTENSIONS
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: .xls,.xlsx
+  DESCRIPTION: Comma separated list of allowed file extensions for calculation workbooks
+  KEY: /com/ec/frmw/calc/screens/maintain_calculation/ALLOWED_FILE_EXTENSIONS
+  LABEL: Maintain Calculation Allowed File Extensions
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '320142226'
+keys:
+  STREAM_SET: PP.0037
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Daily Stream Forecast
+  STREAM_SET: PP.0037
+related: {}

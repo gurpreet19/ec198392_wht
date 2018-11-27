@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-656869877'
+keys:
+  BF_CODE: CO.1004
+  CLASS_NAME: T_BASIS_OBJECT_PARTITION
+  COMP_CODE: operator
+  T: BF_COMPONENT
+  URL: /operator
+parentKeys: {}
+properties:
+  BF_CODE: CO.1004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_access_partitions' )
+  CLASS_NAME: T_BASIS_OBJECT_PARTITION
+  COMP_CODE: operator
+  NAME: Operator
+  SIGNING_REQ_IND: null
+  URL: /operator
+related: {}

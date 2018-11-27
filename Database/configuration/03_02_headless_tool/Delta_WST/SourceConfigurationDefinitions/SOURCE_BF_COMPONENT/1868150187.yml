@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1868150187'
+keys:
+  BF_CODE: HA.0003
+  CLASS_NAME: null
+  COMP_CODE: view
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/view
+parentKeys: {}
+properties:
+  BF_CODE: HA.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/edit_monthly_alloc' )
+  CLASS_NAME: null
+  COMP_CODE: view
+  NAME: View
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/view
+related: {}

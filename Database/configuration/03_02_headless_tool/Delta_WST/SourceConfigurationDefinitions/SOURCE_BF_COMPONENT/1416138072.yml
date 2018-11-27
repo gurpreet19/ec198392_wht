@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1416138072'
+keys:
+  BF_CODE: CD.0049
+  CLASS_NAME: SYSTEM_MTH_STATUS
+  COMP_CODE: tabitem5
+  T: BF_COMPONENT
+  URL: /tabitem5
+parentKeys: {}
+properties:
+  BF_CODE: CD.0049
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/fin_period/CLASS/SYSTEM_MTH_STATUS_BOOK/ACTION/CLOSE/PERIOD_TYPE/BOOKING' )
+  CLASS_NAME: SYSTEM_MTH_STATUS
+  COMP_CODE: tabitem5
+  NAME: Tariff Cost
+  SIGNING_REQ_IND: null
+  URL: /tabitem5
+related: {}

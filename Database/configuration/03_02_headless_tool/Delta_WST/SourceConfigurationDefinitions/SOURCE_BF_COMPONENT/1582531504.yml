@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1582531504'
+keys:
+  BF_CODE: PO.0112
+  CLASS_NAME: TANK_EVENT_DIP_AND_EXP
+  COMP_CODE: dip_export
+  T: BF_COMPONENT
+  URL: /dip_export
+parentKeys: {}
+properties:
+  BF_CODE: PO.0112
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/event_tank_status_dip_and_export' )
+  CLASS_NAME: TANK_EVENT_DIP_AND_EXP
+  COMP_CODE: dip_export
+  NAME: dip_export
+  SIGNING_REQ_IND: null
+  URL: /dip_export
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1379888047'
+keys:
+  BF_CODE: GD.0152
+  CLASS_NAME: TRNP_DAY_NOM_PATH_MATRIX
+  COMP_CODE: daypathnommatrix
+  T: BF_COMPONENT
+  URL: /daypathnommatrix
+parentKeys: {}
+properties:
+  BF_CODE: GD.0152
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DAY_NOM_PATH_MATRIX' )
+  CLASS_NAME: TRNP_DAY_NOM_PATH_MATRIX
+  COMP_CODE: daypathnommatrix
+  NAME: Daily Path Nominations Matrix
+  SIGNING_REQ_IND: null
+  URL: /daypathnommatrix
+related: {}

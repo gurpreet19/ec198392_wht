@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1082621850'
+keys:
+  BF_CODE: SP.0061
+  CLASS_NAME: PROPERTY_JOB_CONN
+  COMP_CODE: property_list
+  T: BF_COMPONENT
+  URL: /property_list
+parentKeys: {}
+properties:
+  BF_CODE: SP.0061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='' )
+  CLASS_NAME: PROPERTY_JOB_CONN
+  COMP_CODE: property_list
+  NAME: Property List
+  SIGNING_REQ_IND: null
+  URL: /property_list
+related: {}

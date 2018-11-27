@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '83559226'
+keys:
+  BF_CODE: PO.0088
+  CLASS_NAME: CHEM_INJ_POINT_STATUS
+  COMP_CODE: chemUsage
+  T: BF_COMPONENT
+  URL: /chemUsage
+parentKeys: {}
+properties:
+  BF_CODE: PO.0088
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_chem_inj_point_status' )
+  CLASS_NAME: CHEM_INJ_POINT_STATUS
+  COMP_CODE: chemUsage
+  NAME: Chemical Usage
+  SIGNING_REQ_IND: null
+  URL: /chemUsage
+related: {}

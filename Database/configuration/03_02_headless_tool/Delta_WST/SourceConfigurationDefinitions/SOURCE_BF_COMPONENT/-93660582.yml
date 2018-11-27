@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-93660582'
+keys:
+  BF_CODE: CO.0246
+  CLASS_NAME: ALLOC_NETWORK_LIST
+  COMP_CODE: calc_group_list_table
+  T: BF_COMPONENT
+  URL: /alloc_network_list_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.0246
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/calculation_group' )
+  CLASS_NAME: ALLOC_NETWORK_LIST
+  COMP_CODE: calc_group_list_table
+  NAME: Members List
+  SIGNING_REQ_IND: null
+  URL: /alloc_network_list_table
+related: {}

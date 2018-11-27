@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2034851592'
+keys:
+  BF_CODE: CO.0130
+  CLASS_NAME: ACTION_INSTANCE
+  COMP_CODE: busAction
+  T: BF_COMPONENT
+  URL: /busAction
+parentKeys: {}
+properties:
+  BF_CODE: CO.0130
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/create_and_maintain_schedules' )
+  CLASS_NAME: ACTION_INSTANCE
+  COMP_CODE: busAction
+  NAME: Business Action
+  SIGNING_REQ_IND: null
+  URL: /busAction
+related: {}

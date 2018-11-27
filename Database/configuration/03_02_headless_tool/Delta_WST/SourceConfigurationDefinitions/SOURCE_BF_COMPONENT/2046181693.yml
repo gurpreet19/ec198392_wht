@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2046181693'
+keys:
+  BF_CODE: SA.0017
+  CLASS_NAME: SCTR_ACC_CARGO_PARCEL
+  COMP_CODE: nomination_data
+  T: BF_COMPONENT
+  URL: /nomination_data
+parentKeys: {}
+properties:
+  BF_CODE: SA.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/cargo_contract_account_status' )
+  CLASS_NAME: SCTR_ACC_CARGO_PARCEL
+  COMP_CODE: nomination_data
+  NAME: Nomination Data
+  SIGNING_REQ_IND: null
+  URL: /nomination_data
+related: {}

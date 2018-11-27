@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-896649586'
+keys:
+  BF_CODE: CP.0040
+  CLASS_NAME: FCST_DAY_ENT_LIFT_ACC
+  COMP_CODE: entitlement
+  T: BF_COMPONENT
+  URL: /entitlement
+parentKeys: {}
+properties:
+  BF_CODE: CP.0040
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_daily_entitlement_la' )
+  CLASS_NAME: FCST_DAY_ENT_LIFT_ACC
+  COMP_CODE: entitlement
+  NAME: Enitlement
+  SIGNING_REQ_IND: null
+  URL: /entitlement
+related: {}

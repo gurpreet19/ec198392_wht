@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-66114915'
+keys:
+  BF_CODE: TO.0028
+  CLASS_NAME: SAILING_ADVICE_MESSAGE
+  COMP_CODE: sailing_advice_list
+  T: BF_COMPONENT
+  URL: /sailing_advice_list
+parentKeys: {}
+properties:
+  BF_CODE: TO.0028
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/send_sailing_advice' )
+  CLASS_NAME: SAILING_ADVICE_MESSAGE
+  COMP_CODE: sailing_advice_list
+  NAME: Sailing Advice Messages
+  SIGNING_REQ_IND: null
+  URL: /sailing_advice_list
+related: {}

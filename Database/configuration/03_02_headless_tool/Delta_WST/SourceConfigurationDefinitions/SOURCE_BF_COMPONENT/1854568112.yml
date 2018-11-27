@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1854568112'
+keys:
+  BF_CODE: PR.0002
+  CLASS_NAME: PRODUCT_PRICE_LIST
+  COMP_CODE: product_price_list
+  T: BF_COMPONENT
+  URL: /product_price_list
+parentKeys: {}
+properties:
+  BF_CODE: PR.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/product_price_list' )
+  CLASS_NAME: PRODUCT_PRICE_LIST
+  COMP_CODE: product_price_list
+  NAME: Product Price List
+  SIGNING_REQ_IND: null
+  URL: /product_price_list
+related: {}

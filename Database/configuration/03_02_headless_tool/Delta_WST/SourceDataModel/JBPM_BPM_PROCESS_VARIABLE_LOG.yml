@@ -1,0 +1,144 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_BPM_PROCESS_VARIABLE_LOG
+cnstPrimaryKey:
+  columns:
+  - NAME
+  - NODE_ID
+  - PROCESS_INSTANCE_ID
+  - VARIABLE_TYPE
+  name: SYS_C008801
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  LAST_UPDATED:
+    columnName: LAST_UPDATED
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  NAME:
+    columnName: NAME
+    typeName: VARCHAR2(512 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  NODE_ID:
+    columnName: NODE_ID
+    typeName: VARCHAR2(512 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  OWNER_GLOBAL_ID:
+    columnName: OWNER_GLOBAL_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  PROCESS_INSTANCE_ID:
+    columnName: PROCESS_INSTANCE_ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  VALUE_JSON:
+    columnName: VALUE_JSON
+    typeName: CLOB
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  VARIABLE_GLOBAL_ID:
+    columnName: VARIABLE_GLOBAL_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  VARIABLE_TYPE:
+    columnName: VARIABLE_TYPE
+    typeName: NUMBER(10,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+indexes:
+  I_JBPM_BPM_PROCESS_VAR_LOG_1:
+    indexName: I_JBPM_BPM_PROCESS_VAR_LOG_1
+    columns:
+    - PROCESS_INSTANCE_ID
+    - NODE_ID
+    - NAME
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_JBPM_BPM_PROCESS_VAR_LOG_2:
+    indexName: I_JBPM_BPM_PROCESS_VAR_LOG_2
+    columns:
+    - OWNER_GLOBAL_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_JBPM_BPM_PROCESS_VAR_LOG_3:
+    indexName: I_JBPM_BPM_PROCESS_VAR_LOG_3
+    columns:
+    - VARIABLE_GLOBAL_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

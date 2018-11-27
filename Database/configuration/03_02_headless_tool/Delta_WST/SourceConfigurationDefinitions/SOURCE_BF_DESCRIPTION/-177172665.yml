@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-177172665'
+keys:
+  BF_DESCRIPTION_NO: CP.0044
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_sub_day_entitlement' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p> This business function is used to view Forecast daily and sub daily entitlements for the Storage. </p>
+related: {}

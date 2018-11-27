@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1792148042'
+keys:
+  BF_CODE: CO.1061
+  CLASS_NAME: CALC_SET
+  COMP_CODE: inherited_sets
+  T: BF_COMPONENT
+  URL: /inherited_sets
+parentKeys: {}
+properties:
+  BF_CODE: CO.1061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/create_library_calculation' )
+  CLASS_NAME: CALC_SET
+  COMP_CODE: inherited_sets
+  NAME: Expected Inherited Sets
+  SIGNING_REQ_IND: null
+  URL: /inherited_sets
+related: {}

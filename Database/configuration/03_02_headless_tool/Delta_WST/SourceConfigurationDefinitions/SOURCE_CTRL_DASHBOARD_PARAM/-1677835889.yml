@@ -1,0 +1,34 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1677835889'
+keys:
+  NAME: QUERY
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: TRAN_LAENTCHART
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: query
+  MANDATORY_IND: null
+  NAME: QUERY
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n    <renderer>\n \
+    \       <model class=\"com.ec.eccommon.genericmodel.model.web.GenericDaoModel\"\
+    >\n            <arg name=\"daoQueryXml\" value=\"data\" valuetype=\"subXml\">\n\
+    \                <data>\n\t\t\t\t\t<query>\n\t\t\t\t\t  <fromdate>$FROMDATE$</fromdate>\n\
+    \t\t\t\t\t  <todate>$TODATE$</todate>\n\t\t\t\t\t</query>\n\t\t\t\t\t<class name=\"\
+    LIFT_ACC_DAY_GRAPH\">\n\t\t\t\t\t</class>\n\t\t\t\t\t<object name=\"LIFT_ACC_DAY_GRAPH\"\
+    >\n\t\t\t\t\t  <property name=\"OBJECT_ID\" datavalue=\"$LIFTING_ACCOUNT_ID$\"\
+    \ operator=\"=\"/>\n\t\t\t\t\t</object>\n\t\t\t\t\t<sort name=\"LIFT_ACC_DAY_GRAPH\"\
+    >\n\t\t\t\t\t  <property name=\"DAYTIME\" order=\"ASC\"/>\n\t\t\t\t\t</sort>\n\
+    \t\t\t\t </data>\n            </arg>\n\t\t\t<arg name=\"transform\" value=\"com.ec.pf.screenlet.common.model.web.ModifyAttributesTransformer\"\
+    >\n\t\t\t   <arg name=\"property1_name\" value=\"DAYTIME\" valuetype=\"constant\"\
+    />\n\t\t\t   <arg name=\"attribute1_name\" value=\"viewformatmask\" valuetype=\"\
+    constant\"/>\n\t\t\t   <arg name=\"attribute1_value\" value=\"yyyy-MM-dd\" valuetype=\"\
+    constant\"/>\n\t\t\t   <arg name=\"update_object\" value=\"false\" valuetype=\"\
+    constant\"/>\n\t\t\t</arg>\n        </model>\n    </renderer>"
+  RESOLVE_TYPE: null
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: TRAN_LAENTCHART
+related: {}

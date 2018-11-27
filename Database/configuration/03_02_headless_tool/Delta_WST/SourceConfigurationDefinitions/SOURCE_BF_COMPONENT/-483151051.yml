@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-483151051'
+keys:
+  BF_CODE: CD.0045
+  CLASS_NAME: SPLIT_KEY_SETUP
+  COMP_CODE: SplitkeyTable
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CD.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/split_key/SPLIT_TYPE/COMPANY' )
+  CLASS_NAME: SPLIT_KEY_SETUP
+  COMP_CODE: SplitkeyTable
+  NAME: Shares Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

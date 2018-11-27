@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-180058226'
+keys:
+  BF_CODE: CO.1030
+  CLASS_NAME: null
+  COMP_CODE: GetXSDBtn
+  T: BF_COMPONENT
+  URL: /GetXSDBtn
+parentKeys: {}
+properties:
+  BF_CODE: CO.1030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/xsd_downloads' )
+  CLASS_NAME: null
+  COMP_CODE: GetXSDBtn
+  NAME: Get XSD Button
+  SIGNING_REQ_IND: null
+  URL: /GetXSDBtn
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '517042648'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_nomination_point_transfer/CLASS/TRNP_DAY_NOM_TRANSFER/NOMINATION_CYCLE/false/CATEGORY/ENTRY_EXIT_PATH/SHOW_OPERATIONAL/Y
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_nomination_point_transfer/CLASS/TRNP_DAY_NOM_TRANSFER/NOMINATION_CYCLE/false/CATEGORY/ENTRY_EXIT_PATH/SHOW_OPERATIONAL/Y
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

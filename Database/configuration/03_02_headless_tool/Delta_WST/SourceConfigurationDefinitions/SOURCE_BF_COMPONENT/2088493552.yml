@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2088493552'
+keys:
+  BF_CODE: CP.0018
+  CLASS_NAME: null
+  COMP_CODE: productionApportion
+  T: BF_COMPONENT
+  URL: /productionApportion
+parentKeys: {}
+properties:
+  BF_CODE: CP.0018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/daily_stor_forecast' )
+  CLASS_NAME: null
+  COMP_CODE: productionApportion
+  NAME: apportion
+  SIGNING_REQ_IND: null
+  URL: /productionApportion
+related: {}

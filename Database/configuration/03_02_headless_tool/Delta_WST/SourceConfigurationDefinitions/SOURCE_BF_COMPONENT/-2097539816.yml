@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2097539816'
+keys:
+  BF_CODE: PR.0031
+  CLASS_NAME: SALE_CONTRACT
+  COMP_CODE: contracts
+  T: BF_COMPONENT
+  URL: /contracts
+parentKeys: {}
+properties:
+  BF_CODE: PR.0031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/fcst_contract_price_list' )
+  CLASS_NAME: SALE_CONTRACT
+  COMP_CODE: contracts
+  NAME: Contracts
+  SIGNING_REQ_IND: null
+  URL: /contracts
+related: {}

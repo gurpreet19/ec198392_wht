@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1719399212'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/daily_electrical_stream_status
+parentKeys: {}
+properties:
+  BF_CODE: PO.0066
+  NAME: Daily Electrical Stream Status
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.po.screens/daily_electrical_stream_status
+related: {}

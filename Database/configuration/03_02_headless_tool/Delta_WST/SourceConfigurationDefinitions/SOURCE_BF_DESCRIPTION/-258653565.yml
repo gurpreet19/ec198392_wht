@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-258653565'
+keys:
+  BF_DESCRIPTION_NO: MHM.0005
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: MHM.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/communication_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The &ldquo;Communication Status&rdquo; screen is used by end&ndash;users to view the latest status report of the message agents. The information is fetched from the message broker used by EC.</p>
+
+    <p>The information displayed in this screen is resistant in an external system. An interface to communicate with the external system has been made. This screen communicates with this interface. This means that it is not depending on the external system, and it would be easy to change it in the future. The screen shows the current status on the different delivery methods in the external system. It refreshes itself in a rate configured in Customized Properties with a property called REFRESH_RATE</p>
+related: {}

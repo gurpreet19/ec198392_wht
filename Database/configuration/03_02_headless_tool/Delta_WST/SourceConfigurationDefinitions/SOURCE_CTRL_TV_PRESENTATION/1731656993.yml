@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1731656993'
+keys:
+  COMPONENT_ID: SA0037_DAY_CONTR_VOL
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.gd.screens/period_day_np_data/CLASS/SLCN_DAY_PRODUCT_QTY/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0037?screentemplate=/com.ec.tran.gd.screens/period_day_np_data&LAYOUT=/com.ec.tran.gd.screens/layout/daily_contractual_volume.xml
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: SA0037_DAY_CONTR_VOL
+  COMPONENT_LABEL: Daily Contractual Volume
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_SALE_SA
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 150.0
+  WINDOW_ID: ENERGYX
+related: {}

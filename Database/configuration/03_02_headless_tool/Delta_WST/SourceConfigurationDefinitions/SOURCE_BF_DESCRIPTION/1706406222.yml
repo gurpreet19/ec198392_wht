@@ -1,0 +1,34 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1706406222'
+keys:
+  BF_DESCRIPTION_NO: PO.0092
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0092
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_water_stream_status_by_period' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |-
+    <p>This Business Function is part of the Business Process to gather and QA sub daily water stream data. It should be used when SCADA systems provide records each 2nd hour / hourly / 30min or at other fixed intervals.</p>
+
+    <p>This screen was built based on the further improvements from the existing screen [Sub Daily Water Stream Status] (PO.0029), the existing [Sub Daily Water Stream Status] was renamed to [Sub Daily Water Stream Status &ndash; by Stream].</p>
+
+    <p>The improvements include the Navigator [From Date], [To Date] and the [Stream] Object is optional in the Navigator. However, the [Generate Missing Rows] button is not available in this screen as this was built for single date use only. Therefore, the [Generate Missing Rows] should be performed in the [Sub Daily Water Stream Status &ndash; by Stream] screen only.</p>
+
+    <p>The improvements are also made available in the data section, the [Stream Name] is editable in Insert Mode allowing user to choose the right Stream object when the Navigator Stream object is omitted. The [Time hh:mm] column has been changed to [Daytime] format to facilitate the display of meaningful daytime information when user tried to browse for the records more than a single date.</p>
+
+    <p>The event handling of &quot;Aggregate Current&quot; button was changed to adopt the use of the optional Navigator Stream object, so the &quot;Aggregate Current&quot; button will aggregate all sub-daily water stream data for the day based on the fetched stream name in the data section.</p>
+
+    <p>Similar event handling applied to the &quot;Aggregate Facility All&quot; button as well, it will aggregate all sub-daily water stream data for all type of streams which have the stream set equal to PO.0029 for the day based on the fetched stream object&rsquo;s facility in the data section.</p>
+
+    <p>In addition to the columns shown on the sample screen above, the customer may select to configure and display one or more additional columns. A list of available attributes is found in Section 1.1.5.2. The column &quot;Is Active&quot; indicates whether they are activated in the initial product setup or not. Non activated attributes can be activated from <em>Class Attributes (CO.1014</em>) configuration screen<em>. </em></p>
+
+    <p>If aggregation of sub daily data for all streams in one is desirable this must be defined as a dbms_scheduler job and is to be implemented by the individual project.</p>
+
+    <p>The <strong>navigator </strong>section enables the selection of specific (From/To) dates for which the water stream sub day measurement data will be displayed. The navigator is based on the configured group model down to the facility level but the stream is optional. All levels are mandatory and can be defaulted.</p>
+
+    <p><strong>Data section 1 </strong>has two buttons and a dropdown that enables the operator to fill in blank records or trigger an aggregation of sub-day data to daily representative values.</p>
+
+    <p><strong>Data section 2 </strong>lists all sub day measurement data available for the st
+related: {}

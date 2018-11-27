@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-765677131'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/newobjectdates' AND COMP_CODE ='newobjectdates' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR')
+  T: BF_COMPONENT_ACTION
+  URL: /newobjectdates
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/newobjectdates' AND COMP_CODE ='newobjectdates' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR')
+  COMMENTS: null
+  NAME: New Object Start Date and End Date
+  URL: /newobjectdates
+related: {}

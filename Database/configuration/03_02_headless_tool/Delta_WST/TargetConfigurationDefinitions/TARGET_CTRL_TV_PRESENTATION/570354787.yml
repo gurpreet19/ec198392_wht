@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '570354787'
+keys:
+  COMPONENT_ID: WELL_COPY
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_copy_object_well/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/WELL?screentemplate=/com.ec.frmw.co.screens/manage_copy_object_well&initialNavigate=false
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: WELL_COPY
+  COMPONENT_LABEL: Maintain Wells
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: WELL_RESV_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 55.0
+  WINDOW_ID: ENERGYX
+related: {}

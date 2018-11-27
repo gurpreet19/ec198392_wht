@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-634557660'
+keys:
+  BF_CODE: VO.0018
+  CLASS_NAME: null
+  COMP_CODE: OpenPeriodForm1
+  T: BF_COMPONENT
+  URL: /open_period_form1
+parentKeys: {}
+properties:
+  BF_CODE: VO.0018
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/daily_query_quantities' )
+  CLASS_NAME: null
+  COMP_CODE: OpenPeriodForm1
+  NAME: Overview Table
+  SIGNING_REQ_IND: null
+  URL: /open_period_form1
+related: {}

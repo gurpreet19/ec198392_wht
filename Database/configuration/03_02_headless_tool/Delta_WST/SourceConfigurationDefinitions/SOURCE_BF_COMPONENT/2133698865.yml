@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2133698865'
+keys:
+  BF_CODE: CO.0147
+  CLASS_NAME: DEF_GROUP_WELL_CONN
+  COMP_CODE: connected_wells
+  T: BF_COMPONENT
+  URL: /connected_wells
+parentKeys: {}
+properties:
+  BF_CODE: CO.0147
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/deferment_group_well_conn' )
+  CLASS_NAME: DEF_GROUP_WELL_CONN
+  COMP_CODE: connected_wells
+  NAME: Connected Wells
+  SIGNING_REQ_IND: null
+  URL: /connected_wells
+related: {}

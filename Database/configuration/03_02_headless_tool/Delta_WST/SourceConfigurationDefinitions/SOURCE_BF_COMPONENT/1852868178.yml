@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1852868178'
+keys:
+  BF_CODE: WR.0011
+  CLASS_NAME: WELL_CHRONOLOGY
+  COMP_CODE: table_well_chronology
+  T: BF_COMPONENT
+  URL: /table_well_chronology
+parentKeys: {}
+properties:
+  BF_CODE: WR.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/maintain_well_chronology' )
+  CLASS_NAME: WELL_CHRONOLOGY
+  COMP_CODE: table_well_chronology
+  NAME: Well Chronology
+  SIGNING_REQ_IND: null
+  URL: /table_well_chronology
+related: {}

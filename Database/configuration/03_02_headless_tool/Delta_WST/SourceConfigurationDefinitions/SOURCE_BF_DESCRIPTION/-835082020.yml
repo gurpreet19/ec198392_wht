@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-835082020'
+keys:
+  BF_DESCRIPTION_NO: WR.0047
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0047
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/monthly_water_injection_well_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used when only monthly well water injection data are available per well. Data can be entered manually or uploaded automatically. The BF requires one entry per well per month, and Energy Components automatically creates new records for a new production day for all active water injection wells.</p>
+
+    <p>EC will calculate how many hours wells have been open based on the Active Well Status in the BF Maintain Injection Well Status and the Well Type maintained in the configuration BF for Wells. EC will also calculate how many days it has been injecting based on a system_flag ON_STRM_DAYS_METHOD which can either be HRS_DIV_24 or DAYS_GREAT_0. This will return either total hours injecting this month divided by 24 or it will return number of days where the well has on time &gt;0.</p>
+related: {}

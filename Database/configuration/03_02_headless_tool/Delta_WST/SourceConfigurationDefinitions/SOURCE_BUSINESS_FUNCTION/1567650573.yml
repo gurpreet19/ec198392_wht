@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1567650573'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/daily_query_quantities
+parentKeys: {}
+properties:
+  BF_CODE: VO.0018
+  NAME: Daily Quantity Overview
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/daily_query_quantities
+related: {}

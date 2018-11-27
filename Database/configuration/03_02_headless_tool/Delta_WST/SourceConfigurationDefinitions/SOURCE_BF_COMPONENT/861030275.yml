@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '861030275'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: FIN_DOC_PROFIT_CENTER
+  COMP_CODE: btnDocDetail/btnTransDetail/pc
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/button/com.ec.pf.screenlet.button/button/pc
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: FIN_DOC_PROFIT_CENTER
+  COMP_CODE: btnDocDetail/btnTransDetail/pc
+  NAME: document_detail/classic_trans/Distributions
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/button/com.ec.pf.screenlet.button/button/pc
+related: {}

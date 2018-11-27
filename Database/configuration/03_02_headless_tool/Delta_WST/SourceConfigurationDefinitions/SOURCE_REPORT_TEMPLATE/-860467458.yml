@@ -1,0 +1,326 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-860467458'
+keys:
+  T: REPORT_TEMPLATE
+  TEMPLATE_CODE: CARGO_BASED_INVOICE
+parentKeys: {}
+properties:
+  NAME: Cargo Based Invoice
+  REPORTING_PERIOD: null
+  REPORT_SYSTEM_CODE: INTERNAL
+  TEMPLATE_BLOB: null
+  TEMPLATE_CODE: CARGO_BASED_INVOICE
+related:
+  REPORT_TEMPLATE_PARAM:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: JRXML
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: JRXML
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_10
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_10
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_1
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_1
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: CONTRACT
+      PARAMETER_TYPE: EC_OBJECT_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_2
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_2
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_3
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_3
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_4
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_4
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_5
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_5
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_6
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_6
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_7
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_7
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_8
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_8
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: PARAMETER_9
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: PARAMETER_9
+      PARAMETER_STATIC_VALUE: null
+      PARAMETER_SUB_TYPE: STRING
+      PARAMETER_TYPE: BASIC_TYPE
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      PARAMETER_NAME: Template Name
+      T: REPORT_TEMPLATE_PARAM
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+    parentKeys:
+      REPORT_TEMPLATE.TEMPLATE_CODE: CARGO_BASED_INVOICE
+    properties:
+      ACCESS_CHECK_IND: null
+      DESCR: null
+      MANDATORY_IND: N
+      PARAMETER_NAME: Template Name
+      PARAMETER_STATIC_VALUE: /com.ec.frmw.report.model.web.jasper.GenerateAndDownloadJasperReport
+      PARAMETER_SUB_TYPE: TEMPLATE
+      PARAMETER_TYPE: REPORT_SYSTEM_PARAM
+      SORT_ORDER: null
+      TEMPLATE_CODE: CARGO_BASED_INVOICE
+      TEXT_1: null
+      TEXT_2: null
+      TEXT_3: null
+      TEXT_4: null
+      VALUE_1: null
+      VALUE_2: null
+      VALUE_3: null
+      VALUE_4: null
+      VALUE_5: null

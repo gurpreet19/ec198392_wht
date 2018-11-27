@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1749229296'
+keys:
+  COMPONENT_ID: PKI_SIGNATURE_VERIFICATION
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/pki_signature_verification
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PKI_SIGNATURE_VERIFICATION
+  COMPONENT_LABEL: PKI Signature Verification
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: SYSTEM
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 15.0
+  WINDOW_ID: ENERGYX
+related: {}

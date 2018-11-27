@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2035664546'
+keys:
+  BF_CODE: TO.0006
+  CLASS_NAME: CARGO_ANALYSIS_COMPONENT
+  COMP_CODE: cargoComponentAnalysis
+  T: BF_COMPONENT
+  URL: /cargoComponentAnalysis
+parentKeys: {}
+properties:
+  BF_CODE: TO.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_analysis' )
+  CLASS_NAME: CARGO_ANALYSIS_COMPONENT
+  COMP_CODE: cargoComponentAnalysis
+  NAME: Cargo Component Analysis
+  SIGNING_REQ_IND: null
+  URL: /cargoComponentAnalysis
+related: {}

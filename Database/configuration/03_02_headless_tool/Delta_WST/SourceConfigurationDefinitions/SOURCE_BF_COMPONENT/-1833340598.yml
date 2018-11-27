@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1833340598'
+keys:
+  BF_CODE: SP.0039
+  CLASS_NAME: null
+  COMP_CODE: SetupButton/button
+  T: BF_COMPONENT
+  URL: /SetupButton/com.ec.pf.screenlet.button/button
+parentKeys: {}
+properties:
+  BF_CODE: SP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_cost_mapping' )
+  CLASS_NAME: null
+  COMP_CODE: SetupButton/button
+  NAME: SetupButton/Go Button
+  SIGNING_REQ_IND: null
+  URL: /SetupButton/com.ec.pf.screenlet.button/button
+related: {}

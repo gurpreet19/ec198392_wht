@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-47126049'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.mhm.screens/message_group
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0014
+  NAME: Message Group List
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.mhm.screens/message_group
+related: {}

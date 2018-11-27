@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1559224929'
+keys:
+  BF_CODE: TO.0009.01
+  CLASS_NAME: null
+  COMP_CODE: select_all_docs
+  T: BF_COMPONENT
+  URL: /select_all_docs
+parentKeys: {}
+properties:
+  BF_CODE: TO.0009.01
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_document_parcel' )
+  CLASS_NAME: null
+  COMP_CODE: select_all_docs
+  NAME: SelectAllDocuments
+  SIGNING_REQ_IND: null
+  URL: /select_all_docs
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '274837454'
+keys:
+  COMPONENT_ID: GD_DAY_INOUT_NOM
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.gd.screens/daily_input_output_nomination/IN_CLASS/TRNP_DAY_NOM_INPUT/CATEGORY/ENTRY_PATH/SHOW_OPERATIONAL/N/OUT_CLASS/TRNP_DAY_NOM_OUTPUT/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false?screentemplate=/com.ec.tran.gd.screens/daily_input_output_nomination
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: GD_DAY_INOUT_NOM
+  COMPONENT_LABEL: Daily Input and Output Nomination
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_GD_NO_RE
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 30.0
+  WINDOW_ID: ENERGYX
+related: {}

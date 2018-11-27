@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '196188223'
+keys:
+  BF_CODE: GD.0102
+  CLASS_NAME: TRNP_DAY_NOM_OPER_CTR
+  COMP_CODE: daynom
+  T: BF_COMPONENT
+  URL: /daynom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0102
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_operational_nomination/CLASS/TRNP_DAY_NOM_OPER_CTR/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNP_DAY_NOM_OPER_CTR
+  COMP_CODE: daynom
+  NAME: Daily Nominations
+  SIGNING_REQ_IND: null
+  URL: /daynom
+related: {}

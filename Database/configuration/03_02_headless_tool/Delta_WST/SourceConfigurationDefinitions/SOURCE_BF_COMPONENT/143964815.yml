@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '143964815'
+keys:
+  BF_CODE: CA.0001
+  CLASS_NAME: PARCEL_DESTINATION
+  COMP_CODE: Parcel_Destination
+  T: BF_COMPONENT
+  URL: /destination
+parentKeys: {}
+properties:
+  BF_CODE: CA.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ca.screens/cargo' )
+  CLASS_NAME: PARCEL_DESTINATION
+  COMP_CODE: Parcel_Destination
+  NAME: Destination Information
+  SIGNING_REQ_IND: null
+  URL: /destination
+related: {}

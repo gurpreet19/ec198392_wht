@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1859716601'
+keys:
+  BF_CODE: WR.0053
+  CLASS_NAME: PWEL_DAY_STATUS_WS
+  COMP_CODE: period_well_data_water_source_wells
+  T: BF_COMPONENT
+  URL: /period_water_source_well
+parentKeys: {}
+properties:
+  BF_CODE: WR.0053
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/period_well_data_water_source_wells' )
+  CLASS_NAME: PWEL_DAY_STATUS_WS
+  COMP_CODE: period_well_data_water_source_wells
+  NAME: Period Well Data Water Source Wells
+  SIGNING_REQ_IND: null
+  URL: /period_water_source_well
+related: {}

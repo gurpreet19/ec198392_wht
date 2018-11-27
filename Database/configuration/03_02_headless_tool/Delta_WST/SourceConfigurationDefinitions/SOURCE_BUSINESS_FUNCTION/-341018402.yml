@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-341018402'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/company_splits
+parentKeys: {}
+properties:
+  BF_CODE: SP.0009
+  NAME: Contract Company Splits
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/company_splits
+related: {}

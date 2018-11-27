@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1572357436'
+keys:
+  BF_CODE: PO.0078
+  CLASS_NAME: MTH_COMPOSITE_ANALYSIS
+  COMP_CODE: composite_analysis
+  T: BF_COMPONENT
+  URL: /composite_analysis
+parentKeys: {}
+properties:
+  BF_CODE: PO.0078
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/calc_mth_composite_analysis/STRM_SET/PO.0078/COMP_SET/CALC_MTH_COMP' )
+  CLASS_NAME: MTH_COMPOSITE_ANALYSIS
+  COMP_CODE: composite_analysis
+  NAME: Monthly Composite Analysis
+  SIGNING_REQ_IND: null
+  URL: /composite_analysis
+related: {}

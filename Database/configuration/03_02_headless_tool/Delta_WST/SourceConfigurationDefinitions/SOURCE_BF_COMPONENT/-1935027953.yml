@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1935027953'
+keys:
+  BF_CODE: PP.0039
+  CLASS_NAME: FORECAST_PROD
+  COMP_CODE: scenarios
+  T: BF_COMPONENT
+  URL: /Scenarios
+parentKeys: {}
+properties:
+  BF_CODE: PP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast' )
+  CLASS_NAME: FORECAST_PROD
+  COMP_CODE: scenarios
+  NAME: Scenarios
+  SIGNING_REQ_IND: null
+  URL: /Scenarios
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1801959762'
+keys:
+  KEY: EQPM_EVENT_MANDATORY_CP
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Mandatory level options for Collection point group model:PRODUCTIONUNIT|AREA|OPERATOR_ROUTE|COLLECTION_POINT
+  KEY: EQPM_EVENT_MANDATORY_CP
+  LABEL: Equipment Event Data(PO.0064):Custom Mandatory Navigation-Collection Point
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

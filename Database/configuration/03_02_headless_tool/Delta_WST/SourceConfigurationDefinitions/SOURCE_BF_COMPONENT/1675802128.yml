@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1675802128'
+keys:
+  BF_CODE: PO.0086
+  CLASS_NAME: STRM_DAY_NR_WELL
+  COMP_CODE: data_class_2
+  T: BF_COMPONENT
+  URL: /data_class_2
+parentKeys: {}
+properties:
+  BF_CODE: PO.0086
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_vent_flare' )
+  CLASS_NAME: STRM_DAY_NR_WELL
+  COMP_CODE: data_class_2
+  NAME: Well Work
+  SIGNING_REQ_IND: null
+  URL: /data_class_2
+related: {}

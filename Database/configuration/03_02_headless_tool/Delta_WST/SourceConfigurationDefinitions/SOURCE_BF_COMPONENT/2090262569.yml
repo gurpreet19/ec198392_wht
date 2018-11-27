@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2090262569'
+keys:
+  BF_CODE: SP.0033
+  CLASS_NAME: null
+  COMP_CODE: start_date
+  T: BF_COMPONENT
+  URL: /start_date
+parentKeys: {}
+properties:
+  BF_CODE: SP.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/spot_agreement' )
+  CLASS_NAME: null
+  COMP_CODE: start_date
+  NAME: start_date
+  SIGNING_REQ_IND: null
+  URL: /start_date
+related: {}

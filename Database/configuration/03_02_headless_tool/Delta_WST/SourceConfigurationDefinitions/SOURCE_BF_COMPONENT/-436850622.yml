@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-436850622'
+keys:
+  BF_CODE: CO.1063
+  CLASS_NAME: DUMMY_TAG_EVENT
+  COMP_CODE: objectForm
+  T: BF_COMPONENT
+  URL: /objectForm
+parentKeys: {}
+properties:
+  BF_CODE: CO.1063
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DUMMY_TAG_EVENT' )
+  CLASS_NAME: DUMMY_TAG_EVENT
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /objectForm
+related: {}

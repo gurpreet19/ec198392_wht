@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1680371398'
+keys:
+  BF_CODE: HA.0002
+  CLASS_NAME: CALC_DAY_PROD_LOG
+  COMP_CODE: log_list
+  T: BF_COMPONENT
+  URL: /log_list
+parentKeys: {}
+properties:
+  BF_CODE: HA.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/edit_daily_alloc' )
+  CLASS_NAME: CALC_DAY_PROD_LOG
+  COMP_CODE: log_list
+  NAME: Daily Allocation
+  SIGNING_REQ_IND: null
+  URL: /log_list
+related: {}

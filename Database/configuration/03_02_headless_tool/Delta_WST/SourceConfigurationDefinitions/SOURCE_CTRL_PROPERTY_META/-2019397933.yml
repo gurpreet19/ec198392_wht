@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2019397933'
+keys:
+  KEY: CUSTOM_TARGET_MANDATORY_CP
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Mandatory level in Collection point group model navigator for Deferment (PD.0020), Equipment Downtime (PD.0022) and Deferment Day (PD.0023) screen. Options:PRODUCTIONUNIT|AREA|OPERATOR_ROUTE|COLLECTION_POINT
+  KEY: CUSTOM_TARGET_MANDATORY_CP
+  LABEL: Deferment:Custom Mandatory Navigation-Collection Point
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-212638429'
+keys:
+  KEY: /com/ec/revn/sp/docprocess/defaultvalue/log_retrieve_records
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: '2000'
+  DESCRIPTION: Period/Cargo document process log records
+  KEY: /com/ec/revn/sp/docprocess/defaultvalue/log_retrieve_records
+  LABEL: Period/Cargo document process log records
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

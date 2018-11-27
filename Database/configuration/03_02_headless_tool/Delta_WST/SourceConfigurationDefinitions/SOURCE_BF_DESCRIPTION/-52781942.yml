@@ -1,0 +1,54 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-52781942'
+keys:
+  BF_DESCRIPTION_NO: CO.0211
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0211
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/swing_well_conn' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to handle the wells that can swing between multiple assets. These assets are the well hookup, facility class 1 and node objects. Assets a well can swing to can be configured in the Object Group Connection.</p>
+
+    <p>All swing wells must be connected to a well hookup and not directly to a facility. For continuation, this BF also provides the user with &lsquo;Swung from Asset&rsquo;.</p>
+
+    <p>The two supported methods to handle swing well are;</p>
+
+    <p>TIME, Simply pro-rate according to time of split. This method does not require any volumes to be recorded. If all volumes are empty, the EC will split according to the fraction of the day when the swing took place. The theoretical volume method of the selected swing well must not be configured with &lsquo;Measured Swing Well&rsquo;.</p>
+
+    <p>VOLUME, Using meters to assign volume to the swing time. These volumes will be the volume from production day start OR previous swing time whichever is newest, till the time of swing. The theoretical volume method of the selected swing well must be configured with &lsquo;Measured Swing Well&rsquo;.</p>
+
+    <p>For the [TIME] method, user can utilize this screen to enter the individual swing well event with the [Daytime], [Well object] that is linked to a Well Hookup and [Swing to Asset]. No values should be entered for [Volumes prior to swing]. The user can swing the same [Well object] to various [Swing to Asset] on various daytimes within a production day or on a different production day.</p>
+
+    <p>For the [VOLUME] method, user can utilize this screen to enter the same as for [TIME] and in addition the [Volumes prior to swing] for [HP Wet Gas] or [Dry Gas Sales].</p>
+
+    <p>Well wet gas: This is used when the well has a wet gas meter. Typically when the well is flowing to a shared separator before the swing.</p>
+
+    <p>Dry gas: This is used if there is a single export meter dedicated to the well before the swing.</p>
+
+    <p>The screen calculates gas, condensate and water volumes using DWF (Dry Wet Factor) or WDF (Wet Dry Factor), CGR (Condensate Gas Ratio) and WGR (Water Gas Ratio) factors if [Volumes prior to swing] is entered.</p>
+
+    <p>Gas: If dry gas is not null, then calculated gas = dry gas, else if DWF is null, then wet gas / WDF, else if DWF is not null, then wet gas * DWF.</p>
+
+    <p>Condensate: calculated gas * CGR</p>
+
+    <p>Water: calculated gas * WGR</p>
+
+    <p>Factors: These factors are whatever is configured for WDF, DWF, CGR and WGR methods for the well. Available methods are:</p>
+
+    <p>Get the factor from the last accepted well test</p>
+
+    <p>Get the factor from well reference value</p>
+
+    <p>Get the factor from a user exit</p>
+
+    <p>Or a constant = 1 or 0 if it&rsquo;s dry gas only.</p>
+
+    <p>See CO.0049 &ndash; Well for more information.</p>
+
+    <p>An allocation network can have streams between the Well Hookup and the assets (Node, Well Hookup and Facility Class 1) that the wells can swing to for each phase. The streams will have a Stream Formula which will calculate the total theoretical well volumes flowing into the assets based on the Stream From and To Node. The stream formula will be the Total theoretical well oil/gas/condensate/water production to the well hookup.</p>
+
+    <p>In addition to the total theoretical well volumes will there also be classes that list theoretical oil, gas, condensate and water per stream, well and day that can be used by the allocation (DV_STRM_PC_DAY_DATA / DV_STRM_WELL_DAY_DATA).</p>
+related: {}

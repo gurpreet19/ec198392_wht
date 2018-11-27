@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1141963624'
+keys:
+  COMPONENT_ID: TRANS_TAG_ACTIVITY
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/trans_tag_activity
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TRANS_TAG_ACTIVITY
+  COMPONENT_LABEL: Transform Tag Activity
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: ECIS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 100.0
+  WINDOW_ID: ENERGYX
+related: {}

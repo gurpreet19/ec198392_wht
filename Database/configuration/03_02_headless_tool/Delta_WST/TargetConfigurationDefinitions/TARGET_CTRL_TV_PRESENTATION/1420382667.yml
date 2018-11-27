@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1420382667'
+keys:
+  COMPONENT_ID: UTILITY_EQPM_MAINTAIN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/UTILITY_EQPM/TARGET/UTILITY_EQPM/CLASS_NAME/UTILITY_EQPM?screentemplate=/com.ec.frmw.co.screens/manage_object_groupmodel_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: UTILITY_EQPM_MAINTAIN
+  COMPONENT_LABEL: Utility Equipment
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: EQ_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 290.0
+  WINDOW_ID: ENERGYX
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1385204446'
+keys:
+  COMPONENT_ID: CONST_STD_VI_INTERPOL
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.co.screens/constant_standard/CLASS_NAME/CONST_STD_VI_INTERPOL?screentemplate=/com.ec.prod.co.screens/constant_standard&LAYOUT_NAME=/com.ec.prod.co.screens/layout/const_std_vi_interpol.xml
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CONST_STD_VI_INTERPOL
+  COMPONENT_LABEL: Vi Interpolation
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: CONSTANT_STD_VALUES
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 210.0
+  WINDOW_ID: ENERGYX
+related: {}

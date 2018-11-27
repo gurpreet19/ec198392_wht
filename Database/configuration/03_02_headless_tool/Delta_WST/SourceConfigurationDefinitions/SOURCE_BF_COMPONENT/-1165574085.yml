@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1165574085'
+keys:
+  BF_CODE: PO.0045
+  CLASS_NAME: WELL_LOADED_FROM_TRUCK
+  COMP_CODE: truck_ticket_load_to_wells_target_wells
+  T: BF_COMPONENT
+  URL: /truck_ticket_load_to_wells_target_wells
+parentKeys: {}
+properties:
+  BF_CODE: PO.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/truck_ticket_load_to_wells' )
+  CLASS_NAME: WELL_LOADED_FROM_TRUCK
+  COMP_CODE: truck_ticket_load_to_wells_target_wells
+  NAME: Target Wells Data
+  SIGNING_REQ_IND: null
+  URL: /truck_ticket_load_to_wells_target_wells
+related: {}

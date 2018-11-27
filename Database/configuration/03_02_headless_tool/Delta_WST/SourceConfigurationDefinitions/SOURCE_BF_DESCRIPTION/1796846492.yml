@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1796846492'
+keys:
+  BF_DESCRIPTION_NO: PO.0117
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0117
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_dashboard' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The &ldquo;Daily Dashboard&rdquo; business function is used for graphical presentation of data for a facility object in a day. Basically, it provides information as below:-</p>
+
+    <p>- Actual Produced Volume vs Planned Volume (<em>for oil/gas/water phases)</em></p>
+
+    <p>- Oil Production summary</p>
+
+    <p>- Gas Utilization</p>
+
+    <p>- Reconciliation factor (<em>for oil/gas/water phases)</em></p>
+
+    <p>The graphs will be rendered based on valid configuration for stream readings, planned data of a facility, deferment and allocated volumes.</p>
+related: {}

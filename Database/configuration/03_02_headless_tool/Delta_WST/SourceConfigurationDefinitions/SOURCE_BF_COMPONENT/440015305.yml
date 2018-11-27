@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '440015305'
+keys:
+  BF_CODE: CO.0088
+  CLASS_NAME: COMPONENT_SET_LIST
+  COMP_CODE: comp_set_list_table
+  T: BF_COMPONENT
+  URL: /comp_set_list_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.0088
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/comp_set_list' )
+  CLASS_NAME: COMPONENT_SET_LIST
+  COMP_CODE: comp_set_list_table
+  NAME: Component List
+  SIGNING_REQ_IND: null
+  URL: /comp_set_list_table
+related: {}

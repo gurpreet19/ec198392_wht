@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1628510792'
+keys:
+  BF_CODE: CO.2032
+  CLASS_NAME: LIFT_ACC_DOC_TEMPLATE
+  COMP_CODE: template
+  T: BF_COMPONENT
+  URL: /template
+parentKeys: {}
+properties:
+  BF_CODE: CO.2032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/lift_acc_doc_instruction_templ' )
+  CLASS_NAME: LIFT_ACC_DOC_TEMPLATE
+  COMP_CODE: template
+  NAME: Template
+  SIGNING_REQ_IND: null
+  URL: /template
+related: {}

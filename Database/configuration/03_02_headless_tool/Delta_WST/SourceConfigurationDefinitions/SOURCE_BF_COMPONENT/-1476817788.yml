@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1476817788'
+keys:
+  BF_CODE: CD.0144
+  CLASS_NAME: null
+  COMP_CODE: costMapping/costNavigator
+  T: BF_COMPONENT
+  URL: /costMapping/costNavigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0144
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/account_mapping_popup/SHOW_CLOSE_BUTTON/false' )
+  CLASS_NAME: null
+  COMP_CODE: costMapping/costNavigator
+  NAME: costMapping/costNavigator
+  SIGNING_REQ_IND: null
+  URL: /costMapping/costNavigator
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1718373207'
+keys:
+  BF_CODE: MHM.0009
+  CLASS_NAME: null
+  COMP_CODE: ResetButton
+  T: BF_COMPONENT
+  URL: /ResetButton
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/outgoing_messages' )
+  CLASS_NAME: null
+  COMP_CODE: ResetButton
+  NAME: Reset
+  SIGNING_REQ_IND: null
+  URL: /ResetButton
+related: {}

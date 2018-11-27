@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1409586200'
+keys:
+  BF_CODE: CP.0072
+  CLASS_NAME: null
+  COMP_CODE: refreshButton
+  T: BF_COMPONENT
+  URL: /refreshButton
+parentKeys: {}
+properties:
+  BF_CODE: CP.0072
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/schedule_lifting_overview' )
+  CLASS_NAME: null
+  COMP_CODE: refreshButton
+  NAME: Refresh Button
+  SIGNING_REQ_IND: null
+  URL: /refreshButton
+related: {}

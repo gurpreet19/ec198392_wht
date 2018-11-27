@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1020359067'
+keys:
+  BF_DESCRIPTION_NO: GD.0026
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_matrix/CLASS/TRNP_DAY_NOM_MATRIX/QTY/REQUESTED_QTY/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain input and output nominations as a cross-tab. The order of the nomination-columns is dictated by globally looking up the&nbsp;sort order of the Nomination Point definitions.</p><p>This business function is basically the same as other daily nomination business functions, but it presents the data differently. The user will see the data over a&nbsp;selected period. Each nomination point for selected navigation object will be listed across. Only one quantity can be entered for the combination of date and&nbsp;nomination point. If more quantities required use the Daily Input Nomination / Daily Output Nomination.</p><p>For more information about the nomination process pls. See Daily Input Nomination / Daily Input Nomination.</p>
+related: {}

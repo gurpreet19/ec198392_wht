@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1993848380'
+keys:
+  BF_CODE: IN.0026
+  CLASS_NAME: null
+  COMP_CODE: PasteProdVarSetButton
+  T: BF_COMPONENT
+  URL: /PasteVariables
+parentKeys: {}
+properties:
+  BF_CODE: IN.0026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inv_line' )
+  CLASS_NAME: null
+  COMP_CODE: PasteProdVarSetButton
+  NAME: PasteVariables
+  SIGNING_REQ_IND: null
+  URL: /PasteVariables
+related: {}

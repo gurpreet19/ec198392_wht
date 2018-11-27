@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1218441000'
+keys:
+  BF_CODE: TO.0032
+  CLASS_NAME: null
+  COMP_CODE: tab50
+  T: BF_COMPONENT
+  URL: /tab50
+parentKeys: {}
+properties:
+  BF_CODE: TO.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/tab_harbour_menu' )
+  CLASS_NAME: null
+  COMP_CODE: tab50
+  NAME: Timesheet
+  SIGNING_REQ_IND: null
+  URL: /tab50
+related: {}

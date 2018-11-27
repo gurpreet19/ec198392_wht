@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-765366072'
+keys:
+  BF_DESCRIPTION_NO: CO.0033
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/AREA_CODE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The area codes screen provides an interface for specification of area codes in the system. Area codes are sub areas on a facility</p>
+related: {}

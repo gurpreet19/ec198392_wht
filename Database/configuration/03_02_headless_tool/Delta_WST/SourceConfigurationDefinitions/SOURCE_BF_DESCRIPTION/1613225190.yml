@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1613225190'
+keys:
+  BF_DESCRIPTION_NO: CP.0032
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_nomination_entry' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to create new nominations for a forecast / scenario.</p><p>For more details with regards to basic functionality please read "CP.0001 - Nomination Entry" [online help]</p>
+related: {}

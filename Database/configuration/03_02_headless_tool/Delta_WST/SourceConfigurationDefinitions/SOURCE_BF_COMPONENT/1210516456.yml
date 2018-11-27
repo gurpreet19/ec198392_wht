@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1210516456'
+keys:
+  BF_CODE: RC.0061
+  CLASS_NAME: CALC_REF_ROY
+  COMP_CODE: calc_ref_roy
+  T: BF_COMPONENT
+  URL: /calc_ref_roy
+parentKeys: {}
+properties:
+  BF_CODE: RC.0061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/Y' )
+  CLASS_NAME: CALC_REF_ROY
+  COMP_CODE: calc_ref_roy
+  NAME: Calculation Reference
+  SIGNING_REQ_IND: null
+  URL: /calc_ref_roy
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1993871817'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/FIELD/FROM_CLASS_NAME/FIELD/TO_CLASS_NAME/FIELD
+parentKeys: {}
+properties:
+  BF_CODE: CD.0092
+  NAME: Field Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/FIELD/FROM_CLASS_NAME/FIELD/TO_CLASS_NAME/FIELD
+related: {}

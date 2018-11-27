@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1659497178'
+keys:
+  BF_DESCRIPTION_NO: GD.0102
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0102
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_operational_nomination/CLASS/TRNP_DAY_NOM_OPER_CTR/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used by the transport service provider to view and manually enter operational nominations into the system and for a given period of time (From Date &ndash; To Date in the navigator).</p><p>Operational nominations are special nominations that only the transport service operator is allowed to enter into the system. These nominations can, depending on&nbsp;project implementation, adhere to different validation rules than normal nominations. Since operational nominations can only be entered by the transport service&nbsp;operator, they are per definition accepted by the operator. The initial nomination status will therefore always be &lsquo;Accepted&rsquo;.</p><p>An example of an operational nomination will be imbalance payback from and to the pipeline. Imbalance nominations are used to adjust the gas flow according to&nbsp;the agreed Operational Balancing Agreement (OBA) between interconnected pipelines and the transport service provider.</p>
+related: {}

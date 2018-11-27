@@ -1,0 +1,155 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-534131844'
+keys:
+  BF_DESCRIPTION_NO: VO.0023
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: VO.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/monthly_query_quantities' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>Monthly Quantity Overview </strong>    shows a list
+    of Stream Items for a particular month based on a set of query parameters. The
+    result of the query will list all stream items matching the    selection criteria.<br>    The
+    date parameter has to be filled out. Also some of the other parameters have to
+    be set in order to avoid download of too many stream items. Leaving a    parameter
+    blank will act as a wildcard for the parameter.</p><h3>    <strong style="color:
+    rgb(0, 0, 153);">Value Table Tab</strong></h3><p>    The quantities and UOMs can
+    be updated in this data section in the same way as in Monthly Node Overview screen
+    (BF VO.0022).</p><p>    <strong>Button <span style="color: rgb(0, 153, 0);">RESET
+    SELECTED CALC METHOD</span></strong><br>    The button enables to reset the Calc
+    Method for the selected Stream Item.</p><p>    <strong>Button <span style="color:
+    rgb(0, 153, 0);">RESET SELECTED CONVERSION FACTORS</span></strong><span style="color:
+    rgb(0, 153, 0);"></span><br>    The button enables to reset the Conversion Factor
+    for the selected Stream Item.</p><p>    <strong>Button <span style="color: rgb(0,
+    153, 0);">VIEW CASCADE</span></strong><br>    The button explains how the selected
+    number was calculated using other numbers.</p><h3>    <strong style="color: rgb(0,
+    0, 153);">Conversion Table Tab</strong></h3><p>    This tab enables the user to
+    select an existing Node and view/modify conversion factors for each Stream Item
+    on this Node.<br>    The conversion factors will be stored at Stream Item value
+    level.<br>    A change in the conversion factors here will generate updates on
+    the quantities entered in Monthly List/Node Input/Overview. The cascade logic
+    will start    to update relevant stream items.</p><p>    <u>Definition of the
+    conversion factors</u><br>    <strong><em>- Gross Calorific Value Energy per Volume</em></strong><br>    GCV
+    is the factor used to convert between Energy and Volume.<br>    <strong><em>-
+    Density Mass per Volume</em></strong><br>    DENSITY is the factor used to convert
+    between Mass and Volume.<br>    <strong><em>- Mass Calorific Value Energy per
+    Mass</em></strong><br>    MCV is the factor used to convert between Energy and
+    Mass.</p><h3>    <strong style="color: rgb(0, 0, 153);">Actual Table Tab</strong></h3><p>    This
+    section is mostly used for reporting purposes. It lists all Stream Items and their
+    conversion result of a master-quantity to different units.</p><h3>    <strong
+    style="color: rgb(0, 0, 153);">Booked Table Tab</strong></h3><p>    The quantities
+    shown here are in the same structure as described above in the Actual table, but
+    from the STM_MTH_BOOKED table.<br>    This table represent the quantities that
+    are posted in a booking periods/months that matches the accounting system book
+    periods.<br>    Any prior period adjustments booked during the month is including.
+    See example under.</p><h3>    <strong style="color: rgb(0, 0, 153);">Reported
+    Table Tab</strong></h3><p>    The quantities shown here are in the same structure
+    as described above in the Actual table, but from the STM_MTH_REPORTED table.<br>    This
+    table represents the quantities that are posted in a reporting periods/months
+    which is similar to the book period.<br>    In Revenue Reporting Period - Close
+    screen (BF CD.0050) and Revenue Reporting Period - Re-open screen (BF CD.0052)
+    the reporting periods are    closed/reopened usually in line with a financial
+    reporting system, i.e. offset a few days later than the book close. See example
+    under.</p><h3>    <strong style="color: rgb(153, 0, 0);">Example of concurrent
+    periods</strong> </h3><p>    The "as is" periods correspond to the normal calendar
+    months of the year. Book (accounting) periods are often closed a few days into
+    the following month    (i.e. Feb 4th).<br>    For example, on Feb 2<sup>nd</sup>
+    it will still be the Jan book month.<br>    The reporting periods close usually
+    some days after the booking close (i.e. 10th working day of the following month),
+    i.e. Jan report period closes on    Feb.10th.</p><p>    This leads to a different
+    combination of periods being open at any time in the month: </p> <p> <table align="left"
+    cellspacing="0" cellpadding="0">    <tbody>        <tr>            <td width="238"
+    height="86">            </td>        </tr>        <tr>            <td>            </td>            <td>                <img                    width="300"                    height="101"                    src="data:image/png;base64,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"                />            </td>        </tr>    </tbody></table><br/><p>  <br><br><br><br><br><br><br><br><br><br>1.
+    At point 1 on the diagram, Feb 2nd, it is the February calendar month and so is
+    actual period. However it is still the January book month and reporting    month.<br>    2.
+    At point 2, say the Feb 7th, it is the February actual period, the January books
+    have closed so February is the current book period, but it is still the    January
+    reporting period.<br>    3. At point 3, Feb 14th the reporting period has also
+    closed, so the actual, book and reporting period is February.</p><p>    For this
+    example, the registration of quantities on a Stream Item will show in the different
+    tables as described under. There are 5 steps in this example:</p><p>    <strong><span
+    style="color: rgb(153, 0, 0);">Step 1:</span> </strong>    An accrual of 50 is
+    entered January production Jan 20th.</p><p>    <u>Result:</u>   <br>   <table
+    border="1" cellspacing="0" cellpadding="0">    <tbody>        <tr>            <td
+    width="100" valign="top">            </td>            <td width="84" valign="top">                                    January                           </td>            <td
+    width="84" valign="top">                                   February                           </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                   Actual                            </td>            <td
+    width="84" valign="top">                                   50                            </td>            <td
+    width="84" valign="top">            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                    Booked                          </td>            <td
+    width="84" valign="top">                                    50                            </td>            <td
+    width="84" valign="top">            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                   Reported                            </td>            <td
+    width="84" valign="top">                                   50                           </td>            <td
+    width="84" valign="top">            </td>        </tr>    </tbody></table><p>    <span
+    style="color: rgb(153, 0, 0);"><strong>Step 2:</strong></span>    The original
+    January accrual turned out to be wrong, so it is changed Feb 2nd to 35 before
+    the books close.</p><p>    <u>Result:</u><br>   <table border="1" cellspacing="0"
+    cellpadding="0">    <tbody>        <tr>            <td width="100" valign="top">            </td>            <td
+    width="84" valign="top">                                    January                           </td>            <td
+    width="84" valign="top">                                   February                           </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                   Actual                            </td>            <td
+    width="84" valign="top">                                   35                            </td>            <td
+    width="84" valign="top">            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                    Booked                          </td>            <td
+    width="84" valign="top">                                    35                            </td>            <td
+    width="84" valign="top">            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                   Reported                            </td>            <td
+    width="84" valign="top">                                   35                           </td>            <td
+    width="84" valign="top">            </td>        </tr>    </tbody></table> <p>    <span
+    style="color: rgb(153, 0, 0);"><strong>Step 3:</strong></span>    The January
+    production is again changed, this time Feb 6th. This is after the books have closed.
+    The new number is 40.</p><p>    <u>Result:</u><br>    <table border="1" cellspacing="0"
+    cellpadding="0">    <tbody>        <tr>            <td width="100" valign="top">            </td>            <td
+    width="84" valign="top">                                   January                           </td>            <td
+    width="84" valign="top">                                   February                          </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                  Actual                          </td>            <td
+    width="84" valign="top">                                   40                           </td>            <td
+    width="84" valign="top">            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                   Booked                           </td>            <td
+    width="84" valign="top">                                  35                           </td>            <td
+    width="84" valign="top">                                   5                          </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                   Reported                           </td>            <td
+    width="84" valign="top">                                  40                          </td>            <td
+    width="84" valign="top">            </td>        </tr>    </tbody></table><p>    The
+    actual number is increased with 5 units from 35 to 40. Since the booking period
+    for January is closed the 5 units added on January production is a    prior period
+    adjustment and end up in February booking period. Since the reporting period is
+    not closed yet the production of 40 end up in January    reporting period.</p><p>    <strong
+    style="color: rgb(153, 0, 0);">Step 4:</strong>    The final statement is issues
+    Feb 16th. The new number is 45 for January. Both the booking and the reporting
+    period are closed for January.</p><p>    <u>Result:</u><br>  <table border="1"
+    cellspacing="0" cellpadding="0">    <tbody>        <tr>            <td width="100"
+    valign="top">            </td>            <td width="84" valign="top">                                  January                            </td>            <td
+    width="84" valign="top">                                    February                           </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                    Actual                            </td>            <td
+    width="84" valign="top">                                    45                           </td>            <td
+    width="84" valign="top">            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                    Booked                          </td>            <td
+    width="84" valign="top">                                    35                            </td>            <td
+    width="84" valign="top">                                   10                            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                   Reported                            </td>            <td
+    width="84" valign="top">                                    40                            </td>            <td
+    width="84" valign="top">                                    5                            </td>        </tr>    </tbody></table><p>    January
+    actual production was 40 and has now been changed to 45. The prior period adjustment
+    of 5 is booked on February booking period and reporting    period.</p><p>    <strong
+    style="color: rgb(153, 0, 0);">Step 5:</strong>    The monthly cycle starts again,
+    an accrual of 30 units for February production is entered Feb 20th .</p><p>    <u>Result:</u><br>    <table
+    border="1" cellspacing="0" cellpadding="0">    <tbody>        <tr>            <td
+    width="100" valign="top">            </td>            <td width="84" valign="top">                                   January                            </td>            <td
+    width="84" valign="top">                                    February                            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                    Actual                           </td>            <td
+    width="84" valign="top">                                    45                            </td>            <td
+    width="84" valign="top">                                    30                           </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                    Booked                            </td>            <td
+    width="84" valign="top">                                   35                            </td>            <td
+    width="84" valign="top">                                    40                            </td>        </tr>        <tr>            <td
+    width="100" valign="top">                                    Reported                            </td>            <td
+    width="84" valign="top">                                   40                            </td>            <td
+    width="84" valign="top">                                    35                            </td>        </tr>    </tbody></table><p>    The
+    30 units for February are booked on February for both booked and reporting period.
+    These 30 units are added to the already booked prior period    adjustments of
+    10 for booked and 5 for reported.</p>'
+related: {}

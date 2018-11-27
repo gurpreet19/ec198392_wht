@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1262503834'
+keys:
+  MEASUREMENT_TYPE: RATIO_GAS_LIQ
+  T: CTRL_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: GOR, GLR etc.
+  FORMAT_MASK: '###,###,##0.00'
+  MEASUREMENT_TYPE: RATIO_GAS_LIQ
+related: {}

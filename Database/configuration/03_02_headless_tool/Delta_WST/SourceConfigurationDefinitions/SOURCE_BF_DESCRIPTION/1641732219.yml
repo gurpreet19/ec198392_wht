@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1641732219'
+keys:
+  BF_DESCRIPTION_NO: SP.0059
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0059
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/property_properties/CLASS_NAME/CONTRACT_AREA/DATA_CLASS/PROPERTY' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p><strong>Property screen</strong> is used to create and maintain Property objects.</p><p>- Property object is a Contract Area type of object.</p><p>- Property object is a grouping entity in EC used for grouping Contract / Project objects.</p><p><strong>Project Properties screen</strong> (BF SP.0058) is used to connect a Property to a Project.</p>
+related: {}

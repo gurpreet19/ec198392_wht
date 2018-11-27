@@ -1,0 +1,206 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1777008981'
+keys:
+  BF_DESCRIPTION_NO: PP.0067
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0067
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_well_curves/CLASS_NAME/FCST_CURVE/CLASS_NAME_1/FCST_CURVE_SEGMENT/CLASS_NAME_2/FCST_VOLUME/CLASS_NAME_3/FCST_POTENTIAL_VOLUME/CLASS_NAME_4/FCST_ACTUAL_VOLUME' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p class="MsoNormal" style="font-weight: normal; text-align: justify;
+    line-height: normal;"><span style="font-size: 10.5pt;">This business function
+    is used to populate well production forecasts in EC using well decline curves
+    for the selected well, forecast and scenario. Based on the provided curve parameters,
+    forecasted values can be calculated for each day in the forecast period.</span><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">&nbsp;The "Scenario Selection" data
+    section contains records for multiple scenarios which can be assigned to the well
+    selected on the navigator. The date range can be chosen using Start Date and End
+    Date of the record for the required Forecast-Scenario combination and curve type
+    (i.e. either imported or calculated.) The curve type can be configured using EC
+    Codes - All Screen -&gt; Select Code Type=''FCST_CURVE_TYPE'' -&gt; Configure
+    Code as required. The segments for curve will only be created if CURVE_TYPE="Calculated".
+    When CURVE_TYPE="Imported", the data points are will be available in the ''POTENTIAL
+    VOLUME TAB'' after successful importing to the relevant table.<o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><b><span style="font-size: 10.5pt;">CALCULATE FORECAST VOLUME BUTTON:</span></b><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">This button is used to calculate the
+    forecast volume for the selected segment date range, well, forecast and scenario.<o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">The Forecast Volume is calculated as:<o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;"><span style="font-weight: bold;">Condition
+    1: </span>If Event allocated Volume is available (PP.0047).<o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">Forecast Volume = Potential Volume (PP.0055)
+    - Event Allocated volume (PP.0047) + Compensation Events from</span><span style="font-size:13.5pt;mso-bidi-font-family:Arial;color:#4067A5;background:white">
+    </span><span style="font-size: 10.5pt;">Forecast Event (PP.0047).<o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;"><span style="font-weight: bold;">Condition
+    2:</span> If Event allocated Volume is not available (PP.0047) then use Forecast
+    Shortfall Factors (PP.0046).<o:p></o:p></span></p><p class="MsoNormal" style="font-weight:
+    normal; text-align: justify; line-height: normal;"><span style="font-size: 10.5pt;">Forecast
+    Volume = Potential Volume (PP.0055) - [ ( Potential Volume *&nbsp; Planned Shortfall
+    Factor )&nbsp; - ( Potential Volume *&nbsp; Unplanned Shortfall Factor )&nbsp;
+    - ( Potential Volume *&nbsp; Non-Operational Shortfall Factor ) ] (PP.0055) &nbsp;+
+    Compensation Events from</span><span style="font-size:13.5pt;mso-bidi-font-family:Arial;color:#4067A5;background:white">
+    </span><span style="font-size: 10.5pt;">Forecast Event (PP.0047).<o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">Note:</span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"></p><ol
+    style="font-weight: normal;"><li><span style="font-variant-numeric: normal; font-variant-east-asian:
+    normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family:
+    " times="" new="" roman";"="">&nbsp;&nbsp;</span><span style="text-indent: -0.25in;
+    font-size: 10.5pt;">The above is the same formula for Oil/Gas/Wat/Cond.</span></li><li><span
+    style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch:
+    normal; font-size: 7pt; line-height: normal; font-family: " times="" new="" roman";"="">&nbsp;&nbsp;</span><span
+    style="text-indent: -0.25in; font-size: 10.5pt;">Shortfall factors are based on
+    the availability of the well override factors or&nbsp; shortfall factors for the
+    parent facility/field</span></li><li><span style="font-variant-numeric: normal;
+    font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height:
+    normal; font-family: " times="" new="" roman";"="">&nbsp;&nbsp;</span><span style="text-indent:
+    -0.25in; font-size: 10.5pt;">Planned Shortfall Factor&nbsp; =&gt; S1P</span></li><li><span
+    style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch:
+    normal; font-size: 7pt; line-height: normal; font-family: " times="" new="" roman";"="">&nbsp;&nbsp;</span><span
+    style="text-indent: -0.25in; font-size: 10.5pt;">Unplanned Shortfall Factor =&gt;
+    S1U</span></li><li><span style="font-variant-numeric: normal; font-variant-east-asian:
+    normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family:
+    " times="" new="" roman";"="">&nbsp;&nbsp;</span><span style="text-indent: -0.25in;
+    font-size: 10.5pt;">Non-Operational Shortfall Factor =&gt;S2</span></li></ol><p
+    style="font-weight: normal;"></p><p class="MsoNormal" style="font-weight: normal;
+    text-align: justify; line-height: normal;"><span style="font-size: 10.5pt;">The
+    detailed logic for the calculation is present in EcDp_Forecast_Curve.calcForecastVolume.
+    The volume will be updated if the record exists else new records will be inserted.
+    <o:p></o:p></span></p><p class="MsoNormal" style="font-weight: normal; text-align:
+    justify; line-height: normal;"><b><span style="font-size: 10.5pt;">CURVE TAB:</span></b><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">The "CURVE" tab on the&nbsp;well&nbsp;production
+    curves screen works in conjunction with the forecasting graph. As the user changes
+    parameters on the "CURVE" tab, the volumes are recalculated immediately and the
+    graph is refreshed without the user having to click "Save". Volumes and curve
+    parameters are saved to the permanent data tables only when the data is saved.
+    Types of curves which are supported are Hyperbolic, Harmonic, Exponential and
+    Linear. Each type is based on a formula that renders a different shaped curve.</span><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">The following input is required to render
+    the curve points (volumes):-</span><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><b><span
+    style="font-size: 10.5pt;">1. Phase:</span></b><span style="font-size: 10.5pt;">&nbsp;This
+    parameter is used to show the phase of segment i.e. Oil, Gas, Water etc. The phase
+    can be configured using EC Codes - All Screen -&gt; Select Code Type=''FCST_CURVE_PHASE''
+    -&gt; Configure Code as required.</span><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><b><span
+    style="font-size: 10.5pt;">2. Segment:</span></b><span style="font-size: 10.5pt;">&nbsp;Segment
+    id provides information about the order of each segment defined for a phase. Automatically
+    incremented when new segments are added for a phase. If segments are deleted,
+    then the segments are automatically consecutively re-sequenced for the phase starting
+    with "1" for the first segment.</span><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><b><span
+    style="font-size: 10.5pt;">3. Method:</span></b><span style="font-size: 10.5pt;">&nbsp;This
+    dropdown is used to select a decline curve method. i.e. Hyperbolic, Harmonic etc.
+    The method can be configured using EC Codes - All Screen -&gt; Select Code Type=''FCST_CURVE_METHOD''
+    -&gt; Configure Code as required.</span><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><b><span
+    style="font-size: 10.5pt;">4. Curve Parameters:</span></b><span style="font-size:
+    10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">Formula for calculation: Qf = Qi / (1
+    + B * Di * t)^(1/B)</span><span style="font-size: 10.5pt; font-family: " times=""
+    new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal" style="font-weight:
+    normal; text-align: justify; line-height: normal;"><span style="font-size: 10.5pt;">The
+    parameters are as follows:</span><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><span style="font-size:
+    10.5pt;">a. Qf: This parameter indicates the final rate of production for a segment.</span><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">b. Qi: The rate of production at the
+    start of the curve. (i.e. at t0.) Required for the first segment. For segments
+    &gt; 1, Qi is displayed only and equals the quantity on the last day of the preceding
+    segment for the phase.</span><span style="font-size: 10.5pt; font-family: " times=""
+    new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal" style="font-weight:
+    normal; text-align: justify; line-height: normal;"><span style="font-size: 10.5pt;">c.
+    B: The exponent, which defines the curvature of the line. Exponential and Harmonic
+    curves are special cases of the Hyperbolic curve where B is 0 and 1 respectively.
+    It is disabled for Linear curves and user input is required for a Hyperbolic curve.</span><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">d. Di: This parameter indicates the
+    initial rate of decline. This is required for all curve types except for Ratios.</span><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">e. Tf: This parameter is used to define
+    segment length. The Tf value is optional if this is the last segment of the phase.
+    If this is not the last segment of the phase, then Tf is required to calculate
+    the date for next segment.</span><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><span style="font-size:
+    10.5pt;">f. Ratio: This parameter is only enabled in case of "Ratio" curve method
+    is selected for calculating ratios like GOR, WOR etc. Otherwise, this parameter
+    is disabled for other methods.</span><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="text-align: justify; line-height: normal;"><span style="font-size: 10.5pt;"><span
+    style="font-weight: bold;">5. Start Date and End Date: </span>These parameters
+    indicate the start and end date of a segment.</span><span style="font-weight:
+    normal; font-size: 10.5pt;" times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><b><span style="font-size: 10.5pt;">DRAW CURVE BUTTON:</span></b><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">This button is used to draw the curve
+    as per the parameters provided in the segment configuration. The graph is rendered
+    in a new popup window.</span><span style="font-size: 10.5pt; font-family: " times=""
+    new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal" style="font-weight:
+    normal; text-align: justify; line-height: normal;"><b><span style="font-size:
+    10.5pt;">COMPARE CURVE BUTTON:</span></b><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><span style="font-size:
+    10.5pt;">This button is used to draw comparison curve for various scenarios as
+    per the selection using Include in Curve checkbox. The graph is rendered in a
+    new popup window.<o:p></o:p></span></p><p class="MsoNormal" style="font-weight:
+    normal; text-align: justify; line-height: normal;"><b><span style="font-size:
+    10.5pt;">POTENTIAL VOLUME TAB:</span></b><span style="font-size: 10.5pt; font-family:
+    " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><span style="font-size:
+    10.5pt;">This tab is used to display the potential volumes as per the selected
+    well and scenario. The volumes will be updated as per the segment configuration
+    in the Curve tab upon saving. &nbsp;The calculated volume can also be viewed in
+    Forecast Production Well Potential (PP.0055). Thus, any changes to the segment
+    configuration will also be reflected on this screen. Existing data that is outside
+    the period defined in the Curve Tab will be removed.</span><span style="font-size:
+    10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">The data in Potential Volume tab is
+    filtered on basis of date range i.e. Start Date, End Date, Forecast, Scenario
+    from "Scenario Selection" data section and well selected from the navigator.</span><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><b><span style="font-size: 10.5pt;">FORECAST VOLUME TAB:</span></b><span
+    style="font-size: 10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">This tab is used to display forecast
+    volumes from Daily Production Well Forecast (PP.0029) as per selected well and
+    scenario. The data in Forecast Volume tab is filtered on basis of date range i.e.
+    Start Date, End Date, Forecast, Scenario from "Scenario Selection" data section
+    and well selected from the navigator.<o:p></o:p></span></p><p class="MsoNormal"
+    style="font-weight: normal; text-align: justify; line-height: normal;"><b><span
+    style="font-size: 10.5pt;">ACTUAL VOLUME TAB:</span></b><span style="font-size:
+    10.5pt; font-family: " times="" new="" roman",="" serif;"=""><o:p></o:p></span></p><p
+    class="MsoNormal" style="font-weight: normal; text-align: justify; line-height:
+    normal;"><span style="font-size: 10.5pt;">This tab is used to display&nbsp;actual&nbsp;allocated
+    volumes for the selected well once the allocation has been run successfully. The&nbsp;
+    "Actual Volume From Date"&nbsp; is used to filter actual volume records based
+    on selected date and curve end date in the&nbsp;</span><span style="font-size:
+    14px;">"Scenario Selection" data section</span><span style="font-size: 10.5pt;">.</span></p>'
+related: {}

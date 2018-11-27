@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '217334985'
+keys:
+  BF_CODE: RC.0059
+  CLASS_NAME: null
+  COMP_CODE: version
+  T: BF_COMPONENT
+  URL: /version
+parentKeys: {}
+properties:
+  BF_CODE: RC.0059
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/royalty_contract/CLASS_NAME/CONTRACT/DATA_CLASS/ROYALTY_CONTRACT/ATTR_CLASS/ROYALTY_CNTR_ATTR/NAVMODEL/ROYALTY/BF_PROFILE/RC.0059/ACCESS_COLUMN/REVN_CODE' )
+  CLASS_NAME: null
+  COMP_CODE: version
+  NAME: Attribute Version
+  SIGNING_REQ_IND: null
+  URL: /version
+related: {}

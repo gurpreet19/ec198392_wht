@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1925645014'
+keys:
+  BF_CODE: CP.0068
+  CLASS_NAME: FCST_MAN_OPPORTUNITY
+  COMP_CODE: opportunity
+  T: BF_COMPONENT
+  URL: /opportunity
+parentKeys: {}
+properties:
+  BF_CODE: CP.0068
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_manager' )
+  CLASS_NAME: FCST_MAN_OPPORTUNITY
+  COMP_CODE: opportunity
+  NAME: Opportunity Tab
+  SIGNING_REQ_IND: null
+  URL: /opportunity
+related: {}

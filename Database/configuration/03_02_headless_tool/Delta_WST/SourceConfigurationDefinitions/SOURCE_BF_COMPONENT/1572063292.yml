@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1572063292'
+keys:
+  BF_CODE: VO.0023
+  CLASS_NAME: STIM_MTH_BOOKED
+  COMP_CODE: table_booked
+  T: BF_COMPONENT
+  URL: /table_booked
+parentKeys: {}
+properties:
+  BF_CODE: VO.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/monthly_query_quantities' )
+  CLASS_NAME: STIM_MTH_BOOKED
+  COMP_CODE: table_booked
+  NAME: Booked Table
+  SIGNING_REQ_IND: null
+  URL: /table_booked
+related: {}

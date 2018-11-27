@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '405672705'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/monthly_list_overview
+parentKeys: {}
+properties:
+  BF_CODE: VO.0020
+  NAME: Monthly List Overview
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/monthly_list_overview
+related: {}

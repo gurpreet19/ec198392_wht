@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1763144649'
+keys:
+  BF_DESCRIPTION_NO: CO.2036
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2036
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/manage_contract_group_list/OBJ_CLASS/CONTRACT_GROUP/DATA_CLASS/CONTRACT_GROUP_LIST' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This Business Function is used to identify the contracts that belong to a given contrcat group. A contract can belong to any number of contrcat groups and a contract&nbsp;group can have any number of contract members. A contract&#39;s group membership is date effective. I.e The association between a given contract and a given&nbsp;contract group has a start and an end date. The end date is optional.</p><p>The contract group is identified using the navigator popup. Contracts can be added and removed using the toolbar Insert and Delete icons. The Delete icon removes&nbsp;the selected contract from the current contract group; it does not delete the contract object itself.</p><p>The Daily, Monthly and Yearly Contract Calculation screens have an optional contract group as as input. If a contract group is identified, the contract calculations will&nbsp;process all contracts that belong to the given group on the given date.</p>
+related: {}

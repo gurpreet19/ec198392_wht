@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1416732387'
+keys:
+  BF_DESCRIPTION_NO: PA.0011
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PA.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/process_overview_config' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This screen enables users to customize the Process Overview screen.
+    It consists of two sections: process instance list configuration and external
+    data panel configuration.&nbsp;</p><p>For the process instance list configuration,
+    users can define the default properties to show in the process instance list when
+    no process template is selected. These defined properties will show as columns
+    in the process instance list section in the Process Overview screen. Besides,
+    users can make customization for each process template.&nbsp;</p><p>For external
+    data panel configuration, users can define the Query XML URL and Layout XML URL
+    of the concerned data to show in the external data section in the Process Overview
+    screen. Besides, users can define operations to further process the data. Now
+    EC supports two types of operation:&nbsp;</p><ul><li>Show an EC URL in a new browser
+    window</li><li>Executing a business action</li></ul>'
+related: {}

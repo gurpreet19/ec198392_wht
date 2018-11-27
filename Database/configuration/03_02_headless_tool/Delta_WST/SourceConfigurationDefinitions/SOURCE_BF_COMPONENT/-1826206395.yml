@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1826206395'
+keys:
+  BF_CODE: CD.0024
+  CLASS_NAME: CALENDAR_SETUP
+  COMP_CODE: show_year
+  T: BF_COMPONENT
+  URL: /show_year
+parentKeys: {}
+properties:
+  BF_CODE: CD.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar' )
+  CLASS_NAME: CALENDAR_SETUP
+  COMP_CODE: show_year
+  NAME: Show Year
+  SIGNING_REQ_IND: null
+  URL: /show_year
+related: {}

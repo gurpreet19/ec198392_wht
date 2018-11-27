@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1276661194'
+keys:
+  BF_DESCRIPTION_NO: CO.2015
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/MEASUREMENT_ITEM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain all measurement items that should be available in the screen Product Measurement Setup (CO.2002).</p>
+related: {}

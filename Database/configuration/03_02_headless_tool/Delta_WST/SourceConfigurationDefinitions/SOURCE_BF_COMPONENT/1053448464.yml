@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1053448464'
+keys:
+  BF_CODE: GD.0083
+  CLASS_NAME: TRNP_DAY_LOC_MATCHING
+  COMP_CODE: nomMatch
+  T: BF_COMPONENT
+  URL: /nomMatch
+parentKeys: {}
+properties:
+  BF_CODE: GD.0083
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_matching/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT/CLASS/TRNL_DAY_NOM_MATCH2/DAY_CLASS/TRNP_DAY_LOC_MATCHING/SUB_DAY/TRNP_SUB_DAY_LOC_MATCH' )
+  CLASS_NAME: TRNP_DAY_LOC_MATCHING
+  COMP_CODE: nomMatch
+  NAME: Nomination Matching
+  SIGNING_REQ_IND: null
+  URL: /nomMatch
+related: {}

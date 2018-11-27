@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1430303341'
+keys:
+  KEY: SUB_DAY_VALID_GRAPH_NAV
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Column to be used for the timelapse in the graph for Sub Daily Production Well Status 1 - Validation screen
+  KEY: SUB_DAY_VALID_GRAPH_NAV
+  LABEL: 'Sub Daily Prod. Well Status 1 - Validation: Column used for timelapse'
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

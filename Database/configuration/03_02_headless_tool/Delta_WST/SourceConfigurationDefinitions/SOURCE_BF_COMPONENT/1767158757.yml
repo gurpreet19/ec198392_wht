@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1767158757'
+keys:
+  BF_CODE: RP.0011
+  CLASS_NAME: QBL_EXPORT_ORDER_BY
+  COMP_CODE: order_by
+  T: BF_COMPONENT
+  URL: /order_by
+parentKeys: {}
+properties:
+  BF_CODE: RP.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/export_to_excel_express' )
+  CLASS_NAME: QBL_EXPORT_ORDER_BY
+  COMP_CODE: order_by
+  NAME: Order By
+  SIGNING_REQ_IND: null
+  URL: /order_by
+related: {}

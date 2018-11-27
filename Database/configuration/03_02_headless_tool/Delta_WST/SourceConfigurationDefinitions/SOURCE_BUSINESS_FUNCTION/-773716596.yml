@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-773716596'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_COLLECTION
+parentKeys: {}
+properties:
+  BF_CODE: CD.0035
+  NAME: Input List
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_COLLECTION
+related: {}

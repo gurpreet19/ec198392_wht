@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-620317152'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.to.screens/port_resources_restriction
+parentKeys: {}
+properties:
+  BF_CODE: TO.0034
+  NAME: Port Resources Restriction
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.to.screens/port_resources_restriction
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-547885821'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.cp.screens/nomination_split/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.cp.screens/nomination_split/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

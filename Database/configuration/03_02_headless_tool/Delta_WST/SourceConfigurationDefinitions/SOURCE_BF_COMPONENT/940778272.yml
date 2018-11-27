@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '940778272'
+keys:
+  BF_CODE: VO.0017
+  CLASS_NAME: STIM_DAY_VALUE_CONV
+  COMP_CODE: table_conv
+  T: BF_COMPONENT
+  URL: /table_conv
+parentKeys: {}
+properties:
+  BF_CODE: VO.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/daily_node_overview' )
+  CLASS_NAME: STIM_DAY_VALUE_CONV
+  COMP_CODE: table_conv
+  NAME: Conversion Table
+  SIGNING_REQ_IND: null
+  URL: /table_conv
+related: {}

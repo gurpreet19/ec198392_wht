@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1958621221'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.jbpm/jbpm_monitor_config
+parentKeys: {}
+properties:
+  BF_CODE: PA.0008
+  NAME: Process Monitor Config
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.jbpm/jbpm_monitor_config
+related: {}

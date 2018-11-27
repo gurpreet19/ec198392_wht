@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-757361036'
+keys:
+  COMPONENT_ID: GD_CNTR_DAY_LOC_BAL
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.gd.screens/daily_location_contract_balance/NAV_MODEL/TRAN_OPERATIONAL/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_NOM_CNTR_BAL/CLASS_2/TRCN_DAY_NOM_BAL_IN_OUT/CLASS_3/TRCN_DAY_NOM_SUPP_BAL/NOMINATION_CYCLE/false?screentemplate=/com.ec.tran.gd.screens/daily_location_contract_balance
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: GD_CNTR_DAY_LOC_BAL
+  COMPONENT_LABEL: Daily Location Contract Balance
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_GD_CV
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 120.0
+  WINDOW_ID: ENERGYX
+related: {}

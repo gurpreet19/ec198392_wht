@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2021288470'
+keys:
+  BF_DESCRIPTION_NO: CO.2026
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2026
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/DELIVERY_POINT/CLASS_NAME/DELIVERY_POINT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This is a generic maintain screen; see description of generic maintain screens in the beginning of the configuration manual.</p><p>Gas is delivered and measured at delivery points. There can be several delivery points specified in one contract, but in some cases there is a one-to-one relationship&nbsp;between gas sales contract and delivery point, meaning that the metered gas quantity will equal the delivery under that contract. In other cases, the actual metered&nbsp;quantity will need to be split down to multiple sales contracts at the same delivery point (referred to as &ldquo;Sales Allocation&rdquo;).</p><p>The Delivery Point screens are used to create new delivery points, and to maintain attributes of the created delivery points.</p>
+related: {}

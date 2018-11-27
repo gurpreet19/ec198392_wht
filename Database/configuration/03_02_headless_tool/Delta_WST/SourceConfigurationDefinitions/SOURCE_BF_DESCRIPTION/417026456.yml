@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '417026456'
+keys:
+  BF_DESCRIPTION_NO: SP.0045
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_summary_list' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Data Extract Setup List screen</strong>    is used to create and maintain a list of Data Extract entries. Each entry has a Reference Tag as the key data element.</p><p>    In the Data Extract Setup List screen the user can set up tag based data elements that will contain values for the Data Extract documents. When designing    regulatory reports the tags are used to map Data Extract values to the report data elements.</p>    Attributes outline:<br>     <strong><em> - Each tag </em></strong> is versioned, meaning that it can be valid for a certain period or from the start date (daytime) and onwards.<br>    <strong><em> - Sort order </em></strong> determines in which order the data elements are presented in the listing table in current screen and in the Data Extract document.<br>    <strong><em> - Label </em></strong> is the full name of the data element.<br>    <strong><em> - Tag </em></strong> is the data element identifier. One tag can only appear in a Data Extract document once<br>    <strong><em> - Account, Cost Center, Order, WBS and Dataset </em></strong> values are during processing used to sum up journal entry values that have been made available for the    period in question. A detailed constellation of these values (all attributes set) will give a pinpointed journal entry result, while a more general setup    (one or two attributes set) will sum up a larger set of journal entry records. At least one of the attributes mentioned must be set.<br>    <strong><em> - Source and Target Time Concept </em></strong> indicates what the values represent. Source indicates whether the journal entry values are monthly (period) or    year-to-date.<br>   <strong><em>  - Target </em></strong> indicates what the Data Extract setup values should be, either monthly (period), year-to-date or Total (from start of available Data Entries to    date).<br>    <strong><em> - Value type </em></strong> indicates if the tag is a monetary or quantity value. Monetary values require a currency and quantity values require a unit of measure. UOM    and Currency describe the tag value. Monetary values require a currency and quantity values require a unit of measure<p></p><div><img src="/onlinehelp/img?type=description&amp;bfDescNo=SP.0045&amp;imgNo=6&amp;dataLevel=2&amp;pfdrid_c=true" class="ecImg"></div>
+related: {}

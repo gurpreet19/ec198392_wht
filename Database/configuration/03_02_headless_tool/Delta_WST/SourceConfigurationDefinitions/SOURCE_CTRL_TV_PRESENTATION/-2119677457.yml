@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2119677457'
+keys:
+  COMPONENT_ID: VO_DA_ND_IN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.vo/daily_node_input
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: VO_DA_ND_IN
+  COMPONENT_LABEL: Daily Node Input
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: VO_DA_ND_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4130.0
+  WINDOW_ID: ENERGYX
+related: {}

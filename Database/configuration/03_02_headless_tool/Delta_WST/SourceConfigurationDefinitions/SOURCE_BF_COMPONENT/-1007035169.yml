@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1007035169'
+keys:
+  BF_CODE: TO.0032
+  CLASS_NAME: PROD_LIFTING_ACTIVITY
+  COMP_CODE: ProductActivities
+  T: BF_COMPONENT
+  URL: /ProductActivities
+parentKeys: {}
+properties:
+  BF_CODE: TO.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/tab_harbour_menu' )
+  CLASS_NAME: PROD_LIFTING_ACTIVITY
+  COMP_CODE: ProductActivities
+  NAME: Product Activity
+  SIGNING_REQ_IND: null
+  URL: /ProductActivities
+related: {}

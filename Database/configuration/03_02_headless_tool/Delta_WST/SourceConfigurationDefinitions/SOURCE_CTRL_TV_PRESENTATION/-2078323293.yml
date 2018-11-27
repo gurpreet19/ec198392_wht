@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2078323293'
+keys:
+  COMPONENT_ID: AEI_IMP_SRC_MAPPING
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.ecdm.co.screens/imp_src_mapping_setup
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: AEI_IMP_SRC_MAPPING
+  COMPONENT_LABEL: Mapping Configuration
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_ADVEXCEL
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 80050.0
+  WINDOW_ID: ENERGYX
+related: {}

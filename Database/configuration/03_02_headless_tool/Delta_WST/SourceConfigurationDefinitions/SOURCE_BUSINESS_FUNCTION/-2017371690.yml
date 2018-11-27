@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2017371690'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/contract_company_details
+parentKeys: {}
+properties:
+  BF_CODE: SP.0035
+  NAME: Document Vendors
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/contract_company_details
+related: {}

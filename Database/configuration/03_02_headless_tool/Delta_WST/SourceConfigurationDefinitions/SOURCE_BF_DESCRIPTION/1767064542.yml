@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1767064542'
+keys:
+  BF_DESCRIPTION_NO: RC.0050
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RC.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/well_setup/CLASS_NAME/UNIT_AGR/DATA_CLASS/UNIT_WELL_SETUP/NAVMODEL/WELL_SETUP/TARGET/UNIT_AGR' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Unit - Well Setup screen</strong>    is used to connect Wells to an Unit Agreement.</p><p>    For each connected Well there is a Start Date and an optional End Date for the connection.</p>
+related: {}

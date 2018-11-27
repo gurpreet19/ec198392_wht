@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1403343859'
+keys:
+  BF_CODE: CO.2076
+  CLASS_NAME: NOMLOC_CONNECTION
+  COMP_CODE: nomloc_connection
+  T: BF_COMPONENT
+  URL: /nomination_loc_connection
+parentKeys: {}
+properties:
+  BF_CODE: CO.2076
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/nomination_location_connection/NAV_MODEL/TRAN_OPERATIONAL/TARGET/NOMINATION_LOCATION/BF_PROFILE/CO.2076/CLASS/NOMLOC_CONNECTION/TRAN_NOMLOC_CONN/NETFLOW/TRAN_NOMLOC_CONN_POPUP/NetFlow' )
+  CLASS_NAME: NOMLOC_CONNECTION
+  COMP_CODE: nomloc_connection
+  NAME: Nomination Location Connection
+  SIGNING_REQ_IND: null
+  URL: /nomination_loc_connection
+related: {}

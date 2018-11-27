@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1563957520'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.rty/manage_object_navmodel_nav/CLASS_NAME/TRACT/NAVMODEL/WELL_SETUP/TARGET/TRACT/TARGET_TYPE/parent
+parentKeys: {}
+properties:
+  BF_CODE: RC.0056
+  NAME: Tract
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.rty/manage_object_navmodel_nav/CLASS_NAME/TRACT/NAVMODEL/WELL_SETUP/TARGET/TRACT/TARGET_TYPE/parent
+related: {}

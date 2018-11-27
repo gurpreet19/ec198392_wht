@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2007424138'
+keys:
+  BF_DESCRIPTION_NO: PP.0057
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_consumption_losses/CLASS_NAME/FCST_CONSUMPTION_LOSS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>This business function is used to add or update the consumption,\
+    \ injection and losses of Oil, Condensate and Gas for a scenario.</p>\n\t<p> Internal\
+    \ consumption is the quantity of hydrocarbons produced and used on site as fuel.</p>\n\
+    \t<p>Injection corresponds to the quantity of hydrocarbons injected into the wells\
+    \ to maintain pressure.</p>\n\t"
+related: {}

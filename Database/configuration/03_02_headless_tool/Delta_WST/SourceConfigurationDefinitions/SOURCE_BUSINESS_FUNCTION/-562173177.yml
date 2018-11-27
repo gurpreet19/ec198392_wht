@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-562173177'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.pr.screens/price_index_daily/CLASS/PRICE_INDEX_DAY_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self
+parentKeys: {}
+properties:
+  BF_CODE: PR.0007
+  NAME: Daily Price Index
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.pr.screens/price_index_daily/CLASS/PRICE_INDEX_DAY_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self
+related: {}

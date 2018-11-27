@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1971590446'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/FCTY_CLASS_2/TARGET/FCTY_CLASS_2/DATA_CLASS/PROD_FCTY2_FORECAST
+parentKeys: {}
+properties:
+  BF_CODE: PP.0018
+  NAME: Facility Class 2 Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/FCTY_CLASS_2/TARGET/FCTY_CLASS_2/DATA_CLASS/PROD_FCTY2_FORECAST
+related: {}

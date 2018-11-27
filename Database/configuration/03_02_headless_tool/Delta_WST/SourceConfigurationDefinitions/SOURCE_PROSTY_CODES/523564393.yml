@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '523564393'
+keys:
+  CODE: UPDATE_IFAC
+  CODE_TYPE: SYSTEM_DOC_ACTION
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: UPDATE_IFAC
+  CODE_TEXT: Update I/F data
+  CODE_TYPE: SYSTEM_DOC_ACTION
+  DESCRIPTION: The system has discovered new data from interface. Available update routines must be runned to fetch the update
+  IS_ACTIVE: Y
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 110.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

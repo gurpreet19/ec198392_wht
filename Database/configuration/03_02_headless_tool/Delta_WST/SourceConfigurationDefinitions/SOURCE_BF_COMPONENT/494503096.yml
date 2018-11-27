@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '494503096'
+keys:
+  BF_CODE: FC.1012
+  CLASS_NAME: null
+  COMP_CODE: RunningJobs
+  T: BF_COMPONENT
+  URL: /running_jobs
+parentKeys: {}
+properties:
+  BF_CODE: FC.1012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_qty_value_gpurch/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_PURCHASE' )
+  CLASS_NAME: null
+  COMP_CODE: RunningJobs
+  NAME: RunningJobs
+  SIGNING_REQ_IND: null
+  URL: /running_jobs
+related: {}

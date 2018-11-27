@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-447117226'
+keys:
+  BF_CODE: PO.0053
+  CLASS_NAME: PIPE_PC_TRANSACTION
+  COMP_CODE: profit_centre_transactions
+  T: BF_COMPONENT
+  URL: /profit_centre_transactions
+parentKeys: {}
+properties:
+  BF_CODE: PO.0053
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/profit_centre_transactions' )
+  CLASS_NAME: PIPE_PC_TRANSACTION
+  COMP_CODE: profit_centre_transactions
+  NAME: Profit Centre Transactions
+  SIGNING_REQ_IND: null
+  URL: /profit_centre_transactions
+related: {}

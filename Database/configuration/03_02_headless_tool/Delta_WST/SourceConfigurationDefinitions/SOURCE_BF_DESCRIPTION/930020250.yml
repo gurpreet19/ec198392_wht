@@ -1,0 +1,21 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '930020250'
+keys:
+  BF_DESCRIPTION_NO: PO.0038
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0038
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_gas_stream_company_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used to display and store mass per company on streams. The streams that you can select in the navigator must be part of the stream set <em>Daily Gas Stream Company Status</em>. The data can be manually inserted by the user. The business function is typically used in commercial allocation when a user may want to distribute ownership manually.</p>
+
+    <p>The last row &quot;Sum&quot; shows the sum of net mass on all companies to help the user when inserting data manually, the sum should be equal the total mass for the selected stream.</p>
+
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

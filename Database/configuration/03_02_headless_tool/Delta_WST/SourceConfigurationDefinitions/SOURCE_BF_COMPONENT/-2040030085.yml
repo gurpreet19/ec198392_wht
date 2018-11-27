@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2040030085'
+keys:
+  BF_CODE: WR.0020
+  CLASS_NAME: null
+  COMP_CODE: dataGenerationMethodPopup
+  T: BF_COMPONENT
+  URL: /dataGenerationMethodPopup
+parentKeys: {}
+properties:
+  BF_CODE: WR.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_oil_production_flowline_status' )
+  CLASS_NAME: null
+  COMP_CODE: dataGenerationMethodPopup
+  NAME: Data Generation Method Popup
+  SIGNING_REQ_IND: null
+  URL: /dataGenerationMethodPopup
+related: {}

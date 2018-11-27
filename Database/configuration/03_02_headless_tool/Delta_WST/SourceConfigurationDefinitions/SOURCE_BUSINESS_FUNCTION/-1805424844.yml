@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1805424844'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/intergr_boe_conversion
+parentKeys: {}
+properties:
+  BF_CODE: CD.0126
+  NAME: BOE Conversion
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/intergr_boe_conversion
+related: {}

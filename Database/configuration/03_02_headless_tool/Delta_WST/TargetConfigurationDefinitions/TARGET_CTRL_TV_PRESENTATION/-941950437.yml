@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-941950437'
+keys:
+  COMPONENT_ID: LOW_OFF_DEFERMENTS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.pd.screens/low_off_deferments
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: LOW_OFF_DEFERMENTS
+  COMPONENT_LABEL: Low and Off - set end date
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_LOW_OFF_DEFERMENT
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 80.0
+  WINDOW_ID: ENERGYX
+related: {}

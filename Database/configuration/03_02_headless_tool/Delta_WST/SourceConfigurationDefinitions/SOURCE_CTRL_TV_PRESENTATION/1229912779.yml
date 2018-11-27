@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1229912779'
+keys:
+  COMPONENT_ID: TRAN_ANALYSIS_UNLOAD
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.to.screens/cargo_analysis_unload?screentemplate=/com.ec.tran.to.screens/cargo_analysis_unload&CARGO_NAV_CLASS=TERM_OP_NAVIGATOR_ULD
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TRAN_ANALYSIS_UNLOAD
+  COMPONENT_LABEL: Cargo Analysis Unload
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_TO
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 220.0
+  WINDOW_ID: ENERGYX
+related: {}

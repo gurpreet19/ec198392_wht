@@ -1,0 +1,33 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1322731931'
+keys:
+  CODE: POTENTIAL_DEFERED
+  CODE_TYPE: CALC_COND_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: POTENTIAL_DEFERED
+  CODE_TEXT: Potential minus Deferred
+  CODE_TYPE: CALC_COND_METHOD
+  DESCRIPTION: |-
+    Calculates daily theoretical production volume rate for condensate as:
+    For DEFERMENT_VERSION = PD.0001 the theoretical rate is found as Daily Potential volume rate minus Total Deferred daily volume (regardless of well active status).
+    For DEFERMENT_VERSION = PD.0001.01 the theoretical rate is found as Daily Potential volume rate adjusted for number of hours the well active status is OPEN and then subtract the Total Daily deferred volume.
+    For DEFERMENT_VERSION = PD.0020 the theoretical rate is found as  Daily Potential volume rate( or adjusted for number of hours the well active status is OPEN) minus Total Deferred daily volume.
+    Note that only parts of deferments with well active status OPEN is included within the calculation of daily deferred volume
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 30.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

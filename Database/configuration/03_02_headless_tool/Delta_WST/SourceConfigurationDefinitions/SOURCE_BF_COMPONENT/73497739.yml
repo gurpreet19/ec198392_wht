@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '73497739'
+keys:
+  BF_CODE: IN.0021
+  CLASS_NAME: INV_LAYER_OL
+  COMP_CODE: overlift
+  T: BF_COMPONENT
+  URL: /overlift
+parentKeys: {}
+properties:
+  BF_CODE: IN.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/inv_historic_layer/STREAM_CATEGORY_CODE/INV' )
+  CLASS_NAME: INV_LAYER_OL
+  COMP_CODE: overlift
+  NAME: Overlift
+  SIGNING_REQ_IND: null
+  URL: /overlift
+related: {}

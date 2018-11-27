@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '253013558'
+keys:
+  BF_CODE: PO.0120
+  CLASS_NAME: TD_FINDER_OBJECTS
+  COMP_CODE: objects
+  T: BF_COMPONENT
+  URL: /objects
+parentKeys: {}
+properties:
+  BF_CODE: PO.0120
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/test_device_finder' )
+  CLASS_NAME: TD_FINDER_OBJECTS
+  COMP_CODE: objects
+  NAME: Objects
+  SIGNING_REQ_IND: null
+  URL: /objects
+related: {}

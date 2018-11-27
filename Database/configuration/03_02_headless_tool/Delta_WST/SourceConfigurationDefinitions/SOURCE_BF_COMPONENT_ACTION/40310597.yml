@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '40310597'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0103' AND NVL(URL,'IS_NULL') = '/tableSetup' AND COMP_CODE ='documentTemplateReportSetup' AND NVL(CLASS_NAME,'IS_NULL') = 'DOC_TEMPL_REPORT_SETUP')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0103' AND NVL(URL,'IS_NULL') = '/tableSetup' AND COMP_CODE ='documentTemplateReportSetup' AND NVL(CLASS_NAME,'IS_NULL') = 'DOC_TEMPL_REPORT_SETUP')
+  COMMENTS: null
+  NAME: Document Table Report Setup /save
+  URL: /save
+related: {}

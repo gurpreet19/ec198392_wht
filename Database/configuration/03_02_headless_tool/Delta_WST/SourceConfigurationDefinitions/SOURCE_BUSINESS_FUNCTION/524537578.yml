@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '524537578'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/period_day_np_data/CLASS/SLNP_DAY_FORECAST/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0040
+parentKeys: {}
+properties:
+  BF_CODE: SD.0040
+  NAME: Daily Sales Forecast
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/period_day_np_data/CLASS/SLNP_DAY_FORECAST/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0040
+related: {}

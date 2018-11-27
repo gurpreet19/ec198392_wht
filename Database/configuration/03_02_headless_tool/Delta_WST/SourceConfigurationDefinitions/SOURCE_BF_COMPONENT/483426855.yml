@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '483426855'
+keys:
+  BF_CODE: CO.2033
+  CLASS_NAME: CARGO_DOC_TEMPLATE_LIST
+  COMP_CODE: doc_template_list
+  T: BF_COMPONENT
+  URL: /doc_template_list
+parentKeys: {}
+properties:
+  BF_CODE: CO.2033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/cargo_doc_template' )
+  CLASS_NAME: CARGO_DOC_TEMPLATE_LIST
+  COMP_CODE: doc_template_list
+  NAME: Document Template List
+  SIGNING_REQ_IND: null
+  URL: /doc_template_list
+related: {}

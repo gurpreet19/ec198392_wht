@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1456525568'
+keys:
+  SOURCE_ID: 110053.0
+  T: T_BASIS_LANGUAGE_SOURCE
+parentKeys: {}
+properties:
+  SOURCE_ID: 110053.0
+  SOURCE_TEXT: ORA-20461
+related:
+  T_BASIS_LANGUAGE_TARGET:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      LANGUAGE_ID: 1.0
+      SOURCE_ID: 110053.0
+      T: T_BASIS_LANGUAGE_TARGET
+    parentKeys:
+      T_BASIS_LANGUAGE_SOURCE.SOURCE_ID: 110053.0
+    properties:
+      LANGUAGE_ID: 1.0
+      SOURCE_ID: 110053.0
+      TARGET_TEXT: AGA 8 base pressure must be between 0.08 and 0.11 Mpa

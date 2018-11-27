@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1219929844'
+keys:
+  COMPONENT_ID: FT_PR_DG
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.sp/document_general?screenlet_form=/com.ec.revn.sp/layout/document_general_form_sale.xml&screenlet_query=/com.ec.revn.sp/query/get_document_general_form_sale.xml
+  COMPONENT_EXT_NAV_NAME: ?screenlet_form=/com.ec.revn.sp/layout/document_general_form_sale.xml&screenlet_query=/com.ec.revn.sp/query/get_document_general_form_sale.xml
+  COMPONENT_ID: FT_PR_DG
+  COMPONENT_LABEL: Document General
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FT_PR_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 5020.0
+  WINDOW_ID: ENERGYX
+related: {}

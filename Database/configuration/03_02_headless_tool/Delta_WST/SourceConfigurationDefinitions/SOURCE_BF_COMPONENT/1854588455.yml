@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1854588455'
+keys:
+  BF_CODE: CD.0024
+  CLASS_NAME: CALENDAR_SETUP
+  COMP_CODE: calendar_day_comment
+  T: BF_COMPONENT
+  URL: /calendar_day_comment
+parentKeys: {}
+properties:
+  BF_CODE: CD.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar' )
+  CLASS_NAME: CALENDAR_SETUP
+  COMP_CODE: calendar_day_comment
+  NAME: Calendar Day Comment
+  SIGNING_REQ_IND: null
+  URL: /calendar_day_comment
+related: {}

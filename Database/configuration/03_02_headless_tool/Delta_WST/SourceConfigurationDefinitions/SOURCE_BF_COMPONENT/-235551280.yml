@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-235551280'
+keys:
+  BF_CODE: PP.0069
+  CLASS_NAME: FCST_SUB_AREA_DAY_STATUS
+  COMP_CODE: daily_forecast
+  T: BF_COMPONENT
+  URL: /daily_forecast
+parentKeys: {}
+properties:
+  BF_CODE: PP.0069
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/SUB_AREA/TARGET/SUB_AREA/CLASS_NAME/FCST_SUB_AREA_DAY_STATUS' )
+  CLASS_NAME: FCST_SUB_AREA_DAY_STATUS
+  COMP_CODE: daily_forecast
+  NAME: Forecast Data
+  SIGNING_REQ_IND: null
+  URL: /daily_forecast
+related: {}

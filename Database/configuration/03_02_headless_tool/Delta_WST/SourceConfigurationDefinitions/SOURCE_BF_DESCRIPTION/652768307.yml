@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '652768307'
+keys:
+  BF_DESCRIPTION_NO: IN.0015
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/rate_values/STREAM_CATEGORY_CODE/INV' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Inventory Rate Values screen</strong>    is used to configure the values for the Rate Objects. The values might also be calculated.</p><p>    <u>The screen is divided into these sections:</u></p><p>    <strong><em>- Static Navigator</em></strong><br>    Defines the search criteria for the Inventory.</p><p>    <strong><em>- Inventory List</em></strong><br>    Lists all the Inventories valid for the Month selected in the Month column of the Filter Navigator. The default value of the Month selector is the current    booking period.</p><p>    <strong><em>- Price Object List</em></strong><br>    Lists all the Price Objects and Adjusted Prices taking part in the selected Inventory.</p>
+related: {}

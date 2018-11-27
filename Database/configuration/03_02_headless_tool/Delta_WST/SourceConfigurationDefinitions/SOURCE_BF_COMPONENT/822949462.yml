@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '822949462'
+keys:
+  BF_CODE: CD.0028
+  CLASS_NAME: null
+  COMP_CODE: nav
+  T: BF_COMPONENT
+  URL: /form
+parentKeys: {}
+properties:
+  BF_CODE: CD.0028
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/ex_rates' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Exchange Rates Navigator
+  SIGNING_REQ_IND: null
+  URL: /form
+related: {}

@@ -1,0 +1,43 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '293356430'
+keys:
+  T: CTRL_UNIT
+  UNIT: SM3PERDAYPERBAR
+parentKeys: {}
+properties:
+  BASE_UNIT: null
+  BASE_UNIT_IND: null
+  DESCRIPTION: Standard Cubic meter per day per bar
+  FIN_CODE: null
+  LABEL: Sm³/d/bar
+  PREFIX: null
+  PREFIX_FACTOR: null
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+  UNIT: SM3PERDAYPERBAR
+  UOM_GROUP: null
+  UOM_SUBGROUP: null
+related:
+  CTRL_UOM_SETUP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      MEASUREMENT_TYPE: PRODUCTIVITY_INDEX
+      T: CTRL_UOM_SETUP
+      UNIT: SM3PERDAYPERBAR
+    parentKeys:
+      CTRL_UNIT.UNIT: SM3PERDAYPERBAR
+    properties:
+      DB_UNIT_IND: Y
+      FORMAT_MASK: '###,##0.00'
+      MEASUREMENT_TYPE: PRODUCTIVITY_INDEX
+      REPORT_UNIT_IND: Y
+      UNIT: SM3PERDAYPERBAR
+      VIEW_UNIT_IND: Y

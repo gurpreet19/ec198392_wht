@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1583944265'
+keys:
+  BF_CODE: GD.0077
+  CLASS_NAME: TRTZ_FACTOR
+  COMP_CODE: objectfactors
+  T: BF_COMPONENT
+  URL: /objectfactors
+parentKeys: {}
+properties:
+  BF_CODE: GD.0077
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_factors/NAV_MODEL/TRAN_OPERATIONAL/TARGET/TRANSPORT_ZONE/CLASS/TRTZ_FACTOR' )
+  CLASS_NAME: TRTZ_FACTOR
+  COMP_CODE: objectfactors
+  NAME: Object Factors
+  SIGNING_REQ_IND: null
+  URL: /objectfactors
+related: {}

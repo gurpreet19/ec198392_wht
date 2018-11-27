@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1555592528'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: DAYGASUTL
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Gas Utilization For Facility
+  LABEL: Gas Utilization For Facility
+  NAME: Gas Utilization Widget
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.PieChartWidget
+  WIDGET_CODE: DAYGASUTL
+related: {}

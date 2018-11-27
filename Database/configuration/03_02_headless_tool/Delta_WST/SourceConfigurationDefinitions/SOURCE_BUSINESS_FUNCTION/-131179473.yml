@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-131179473'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/revn_log
+parentKeys: {}
+properties:
+  BF_CODE: CD.0133
+  NAME: Revenue Detailed Log
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/revn_log
+related: {}

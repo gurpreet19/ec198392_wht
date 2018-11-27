@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1714694240'
+keys:
+  BF_CODE: SD.0030
+  CLASS_NAME: null
+  COMP_CODE: CopyFromForecastButton
+  T: BF_COMPONENT
+  URL: /CopyFromForecastButton
+parentKeys: {}
+properties:
+  BF_CODE: SD.0030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/forecast_sales_dispatching' )
+  CLASS_NAME: null
+  COMP_CODE: CopyFromForecastButton
+  NAME: CopyFromForecastButton
+  SIGNING_REQ_IND: null
+  URL: /CopyFromForecastButton
+related: {}

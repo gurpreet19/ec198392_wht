@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '45868850'
+keys:
+  BF_CODE: WR.0010
+  CLASS_NAME: WELL_OIL_ANALYSIS
+  COMP_CODE: analysis
+  T: BF_COMPONENT
+  URL: /analysis
+parentKeys: {}
+properties:
+  BF_CODE: WR.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_oil_component_analysis/COMP_SET/WELL_OIL_COMP' )
+  CLASS_NAME: WELL_OIL_ANALYSIS
+  COMP_CODE: analysis
+  NAME: Analysis
+  SIGNING_REQ_IND: null
+  URL: /analysis
+related: {}

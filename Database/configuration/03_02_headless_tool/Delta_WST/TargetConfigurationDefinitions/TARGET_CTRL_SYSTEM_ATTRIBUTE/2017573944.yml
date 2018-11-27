@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2017573944'
+keys:
+  ATTRIBUTE_TYPE: ADJUST_POTENTIAL_DST
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: ADJUST_POTENTIAL_DST
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Y – Means that EC will adjust the well potential for daylight saving dates
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

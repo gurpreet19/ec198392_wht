@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1041478818'
+keys:
+  COMPONENT_ID: DATA_VALIDATION_TTV
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/tt_validation_overview/ROOT_GROUP/D_ASSET_STATUS?screentemplate=/com.ec.frmw.co.screens/tt_validation_overview
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: DATA_VALIDATION_TTV
+  COMPONENT_LABEL: Validation Overview
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: SYSTEM_VALIDATION
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 100.0
+  WINDOW_ID: ENERGYX
+related: {}

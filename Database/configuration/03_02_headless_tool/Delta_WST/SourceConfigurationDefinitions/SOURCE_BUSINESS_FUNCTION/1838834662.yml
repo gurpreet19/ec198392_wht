@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1838834662'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.co.screens/contract_account_list
+parentKeys: {}
+properties:
+  BF_CODE: CO.3025
+  NAME: Contract Account List
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.co.screens/contract_account_list
+related: {}

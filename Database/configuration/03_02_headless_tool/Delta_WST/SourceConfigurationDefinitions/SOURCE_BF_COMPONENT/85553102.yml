@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '85553102'
+keys:
+  BF_CODE: GD.0083
+  CLASS_NAME: null
+  COMP_CODE: button
+  T: BF_COMPONENT
+  URL: /button
+parentKeys: {}
+properties:
+  BF_CODE: GD.0083
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_matching/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT/CLASS/TRNL_DAY_NOM_MATCH2/DAY_CLASS/TRNP_DAY_LOC_MATCHING/SUB_DAY/TRNP_SUB_DAY_LOC_MATCH' )
+  CLASS_NAME: null
+  COMP_CODE: button
+  NAME: Go Button
+  SIGNING_REQ_IND: null
+  URL: /button
+related: {}

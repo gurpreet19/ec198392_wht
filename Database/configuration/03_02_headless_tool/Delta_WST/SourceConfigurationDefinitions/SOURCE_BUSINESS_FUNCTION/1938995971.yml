@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1938995971'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.fc.screens/forecast_period_product_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/FCST_TRNL_PRD_CP_REC_FAC/BF_PROFILE/FC.0023/CLASS_DAY/FCST_TRNL_PRD_CP_REC_DAY/DIM1/PRODUCT_ID_POPUP/FCST_CLASS/FORECAST_TRAN_FC
+parentKeys: {}
+properties:
+  BF_CODE: FC.0023
+  NAME: Forecast Period Product Component Recovery Factors
+  PROFILE_CLASS_NAME: NOMINATION_LOCATION
+  URL: /com.ec.tran.fc.screens/forecast_period_product_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/FCST_TRNL_PRD_CP_REC_FAC/BF_PROFILE/FC.0023/CLASS_DAY/FCST_TRNL_PRD_CP_REC_DAY/DIM1/PRODUCT_ID_POPUP/FCST_CLASS/FORECAST_TRAN_FC
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1860600791'
+keys:
+  BF_CODE: PD.0022
+  CLASS_NAME: EQUIP_DOWNTIME_CHILD
+  COMP_CODE: child_event
+  T: BF_COMPONENT
+  URL: /child_event
+parentKeys: {}
+properties:
+  BF_CODE: PD.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/equip_downtime' )
+  CLASS_NAME: EQUIP_DOWNTIME_CHILD
+  COMP_CODE: child_event
+  NAME: Child of Event
+  SIGNING_REQ_IND: null
+  URL: /child_event
+related: {}

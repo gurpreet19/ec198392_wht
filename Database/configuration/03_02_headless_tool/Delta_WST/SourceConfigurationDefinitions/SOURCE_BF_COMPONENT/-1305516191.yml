@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1305516191'
+keys:
+  BF_CODE: CO.0076
+  CLASS_NAME: STATUS_PROCESS
+  COMP_CODE: processForm
+  T: BF_COMPONENT
+  URL: /processForm
+parentKeys: {}
+properties:
+  BF_CODE: CO.0076
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/status_processes' )
+  CLASS_NAME: STATUS_PROCESS
+  COMP_CODE: processForm
+  NAME: Status Process
+  SIGNING_REQ_IND: null
+  URL: /processForm
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1748628814'
+keys:
+  BF_DESCRIPTION_NO: PP.0075
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PP.0075
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_prod_unit_forecast/CLASS_NAME/FCST_PRODUNIT_DAY_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>This business function is used to define available Daily Production\
+    \ Unit Forecast data, based on date and the selected scenario object. A scenario\
+    \ data can be created using insert functionality, and existing scenario data can\
+    \ be modified as per requirement.\n\tIt is also possible to delete scenario data\
+    \ records that are no longer required.</p><p>The same Production Unit may also\
+    \ have monthly scenario data and it is registered in a separate business function\
+    \ screen Monthly Production Unit Forecast(PP.0076).</p>"
+related: {}

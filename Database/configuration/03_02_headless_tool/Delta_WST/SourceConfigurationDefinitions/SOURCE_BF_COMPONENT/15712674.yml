@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '15712674'
+keys:
+  BF_CODE: CO.0221
+  CLASS_NAME: STOR_INTERMED_PROD
+  COMP_CODE: intermed_stor_prod_table
+  T: BF_COMPONENT
+  URL: /intermed_stor_prod_table
+parentKeys: {}
+properties:
+  BF_CODE: CO.0221
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/intermed_stor_prod' )
+  CLASS_NAME: STOR_INTERMED_PROD
+  COMP_CODE: intermed_stor_prod_table
+  NAME: Intermediate Storage Products
+  SIGNING_REQ_IND: null
+  URL: /intermed_stor_prod_table
+related: {}

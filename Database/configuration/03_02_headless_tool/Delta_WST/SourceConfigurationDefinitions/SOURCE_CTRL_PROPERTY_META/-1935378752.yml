@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1935378752'
+keys:
+  KEY: /com.ec.prod.co.screens/tank_strapping/nav/defaultvalue/FROMDATE
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: NAV_DEF_VALUE
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: FIRST_OF_LAST_YEAR
+  DESCRIPTION: Default value on From Date fields in Tank Strapping navigators
+  KEY: /com.ec.prod.co.screens/tank_strapping/nav/defaultvalue/FROMDATE
+  LABEL: Default From Date - Tank Strapping
+  LIST_OF_VALUES: PopupQueryURL=/com.ec.frmw.co.screens/query/ec_code_popup.xml;PopupLayout=/com.ec.frmw.co.screens/layout/ec_code_popup.xml;PopupWhereColumn=CODE_TYPE;PopupWhereValue=CUSTOMISE_DATE_CODE;PopupWhereOperator=;PopupReturnColumn=1;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.CODE
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

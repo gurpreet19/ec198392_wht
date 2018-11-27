@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '495795198'
+keys:
+  BF_CODE: CP.0050
+  CLASS_NAME: LIFT_ACC_SUB_DAY_RECEIPT
+  COMP_CODE: rec_sub_day
+  T: BF_COMPONENT
+  URL: /rec_sub_day
+parentKeys: {}
+properties:
+  BF_CODE: CP.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/sub_day_receipts_lift_acc' )
+  CLASS_NAME: LIFT_ACC_SUB_DAY_RECEIPT
+  COMP_CODE: rec_sub_day
+  NAME: Receipt Sub Day
+  SIGNING_REQ_IND: null
+  URL: /rec_sub_day
+related: {}

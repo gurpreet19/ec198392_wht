@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1422533138'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CONDENSATE_SURGE_DRUM/TARGET/CONDENSATE_SURGE_DRUM/CLASS_NAME/CONDENSATE_SURGE_DRUM
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CONDENSATE_SURGE_DRUM/TARGET/CONDENSATE_SURGE_DRUM/CLASS_NAME/CONDENSATE_SURGE_DRUM
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

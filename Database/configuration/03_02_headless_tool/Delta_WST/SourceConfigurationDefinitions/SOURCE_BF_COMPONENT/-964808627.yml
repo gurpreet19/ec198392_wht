@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-964808627'
+keys:
+  BF_CODE: CD.0058
+  CLASS_NAME: null
+  COMP_CODE: createRelationsTable1
+  T: BF_COMPONENT
+  URL: /table1
+parentKeys: {}
+properties:
+  BF_CODE: CD.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/COUNTRY/FROM_CLASS_NAME/COUNTRY/TO_CLASS_NAME/COUNTRY' )
+  CLASS_NAME: null
+  COMP_CODE: createRelationsTable1
+  NAME: Create Relations - Main Table
+  SIGNING_REQ_IND: null
+  URL: /table1
+related: {}

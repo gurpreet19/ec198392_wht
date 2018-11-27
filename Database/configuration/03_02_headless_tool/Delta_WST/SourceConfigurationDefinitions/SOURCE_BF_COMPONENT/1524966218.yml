@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1524966218'
+keys:
+  BF_CODE: CO.0044
+  CLASS_NAME: VESSEL
+  COMP_CODE: table
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CO.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/VESSEL' )
+  CLASS_NAME: VESSEL
+  COMP_CODE: table
+  NAME: Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

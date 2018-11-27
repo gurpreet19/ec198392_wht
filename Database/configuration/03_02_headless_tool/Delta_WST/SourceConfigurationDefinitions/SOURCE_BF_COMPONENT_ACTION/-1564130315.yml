@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1564130315'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0017' AND NVL(URL,'IS_NULL') = '/TransactionFormCustAttr' AND COMP_CODE ='TransactionFormCustAttr' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0017' AND NVL(URL,'IS_NULL') = '/TransactionFormCustAttr' AND COMP_CODE ='TransactionFormCustAttr' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
+  COMMENTS: null
+  NAME: Customer Attributes /save
+  URL: /save
+related: {}

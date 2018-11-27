@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1640314591'
+keys:
+  BF_CODE: SP.0035
+  CLASS_NAME: CONTRACT
+  COMP_CODE: nav
+  T: BF_COMPONENT
+  URL: /nav
+parentKeys: {}
+properties:
+  BF_CODE: SP.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_company_details' )
+  CLASS_NAME: CONTRACT
+  COMP_CODE: nav
+  NAME: Navigator1
+  SIGNING_REQ_IND: null
+  URL: /nav
+related: {}

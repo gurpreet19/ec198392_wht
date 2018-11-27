@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '971252486'
+keys:
+  STREAM_SET: PO.0056_U
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Truck Ticket - Single Load Multiple Offload,Unload
+  STREAM_SET: PO.0056_U
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '427398659'
+keys:
+  BF_CODE: PT.0016
+  CLASS_NAME: null
+  COMP_CODE: accept2
+  T: BF_COMPONENT
+  URL: /accept_no_alloc
+parentKeys: {}
+properties:
+  BF_CODE: PT.0016
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_gas_injection_well_data' )
+  CLASS_NAME: null
+  COMP_CODE: accept2
+  NAME: Accept, no alloc
+  SIGNING_REQ_IND: null
+  URL: /accept_no_alloc
+related: {}

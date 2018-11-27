@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1337753116'
+keys:
+  BF_CODE: CO.0130
+  CLASS_NAME: JOB_SCHEDULE_HISTORY
+  COMP_CODE: JobScheduleMonitorHistory
+  T: BF_COMPONENT
+  URL: /JobScheduleMonitorHistory
+parentKeys: {}
+properties:
+  BF_CODE: CO.0130
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/create_and_maintain_schedules' )
+  CLASS_NAME: JOB_SCHEDULE_HISTORY
+  COMP_CODE: JobScheduleMonitorHistory
+  NAME: Monitor
+  SIGNING_REQ_IND: null
+  URL: /JobScheduleMonitorHistory
+related: {}

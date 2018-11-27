@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-263531065'
+keys:
+  BF_CODE: HA.0010
+  CLASS_NAME: null
+  COMP_CODE: view
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/view
+parentKeys: {}
+properties:
+  BF_CODE: HA.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/edit_daily_single_date_alloc' )
+  CLASS_NAME: null
+  COMP_CODE: view
+  NAME: View
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/view
+related: {}

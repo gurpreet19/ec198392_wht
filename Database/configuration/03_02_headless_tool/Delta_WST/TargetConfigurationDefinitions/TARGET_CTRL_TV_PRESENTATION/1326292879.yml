@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1326292879'
+keys:
+  COMPONENT_ID: TRAIN_STORAGE_YIELD
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.cp.screens/process_train_storage_yield
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TRAIN_STORAGE_YIELD
+  COMPONENT_LABEL: Period Process Train Storage Yield
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_CP
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 530.0
+  WINDOW_ID: ENERGYX
+related: {}

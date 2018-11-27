@@ -1,0 +1,34 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1458125707'
+keys:
+  NAME: QUERY
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: WAT_RECONCILIATION_FACTOR
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: query
+  MANDATORY_IND: null
+  NAME: QUERY
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: |-
+    <?xml version="1.0" encoding="utf-8"?>
+    <renderer>
+        <model class="com.ec.eccommon.genericmodel.model.web.GenericSqlModel">
+            <arg name="sqlXml" value="data" valuetype="subXml">
+                <data>
+                    <sql>SELECT OBJECT_ID, DAYTIME, ROUND(WATER_FACTOR,3) AS WATER_FACTOR, OBJECT_CODE, HEADER
+                         FROM DV_DASHBRD_DAY_WAT_RF
+                         WHERE OBJECT_ID = '$FACILITY$'
+                           AND daytime = nvl(to_date('$DATE$', 'YYYY-MM-DD"T"HH24:MI:SS'),trunc(ecdp_timestamp.getCurrentSysdate) - 1)
+                    </sql>
+                 </data>
+            </arg>
+        </model>
+    </renderer>
+  RESOLVE_TYPE: null
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: WAT_RECONCILIATION_FACTOR
+related: {}

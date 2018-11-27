@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '420050270'
+keys:
+  BF_CODE: GD.0058
+  CLASS_NAME: CAPACITY_BID_INTERNAL
+  COMP_CODE: bids
+  T: BF_COMPONENT
+  URL: /bids
+parentKeys: {}
+properties:
+  BF_CODE: GD.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_internal/CLASS/CAPACITY_BID_LOC_INTER' )
+  CLASS_NAME: CAPACITY_BID_INTERNAL
+  COMP_CODE: bids
+  NAME: Bids Internal
+  SIGNING_REQ_IND: null
+  URL: /bids
+related: {}

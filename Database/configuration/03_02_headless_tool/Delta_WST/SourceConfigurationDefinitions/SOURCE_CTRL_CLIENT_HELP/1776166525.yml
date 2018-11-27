@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1776166525'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/capacity_release_result/CLASS/CAP_REL_RESULT_LOCATION
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/capacity_release_result/CLASS/CAP_REL_RESULT_LOCATION
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

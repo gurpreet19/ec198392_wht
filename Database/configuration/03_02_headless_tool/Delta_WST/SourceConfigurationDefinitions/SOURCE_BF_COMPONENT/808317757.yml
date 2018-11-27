@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '808317757'
+keys:
+  BF_CODE: PA.0004
+  CLASS_NAME: null
+  COMP_CODE: event_message
+  T: BF_COMPONENT
+  URL: /event_message
+parentKeys: {}
+properties:
+  BF_CODE: PA.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/process_overview' )
+  CLASS_NAME: null
+  COMP_CODE: event_message
+  NAME: Event Message
+  SIGNING_REQ_IND: null
+  URL: /event_message
+related: {}

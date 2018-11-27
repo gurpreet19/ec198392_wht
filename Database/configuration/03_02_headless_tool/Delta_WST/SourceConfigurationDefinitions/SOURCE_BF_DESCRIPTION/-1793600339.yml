@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1793600339'
+keys:
+  BF_DESCRIPTION_NO: CO.2029
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2029
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/lift_acc_meas_setup' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This is a configuration screen for associating measurement items with lifting accounts. This overrides the ones configured in Product Measurement Setup (CO.2002).</p><p>The setup is used to instantiate Storage Lifting used in BL/MR Info screen. This instantiation takes place when changing the cargo status from Tentative to Ready for&nbsp;Harbor. I.e. adding new units for cargoes with status set to Ready for Harbor will not reflect these modifications.</p><p>Upon inserting, only Measurement Setup is editable. This popup retrieves from the Product Measurement Setup business function. Once saved, the other columns&nbsp;will then be populated based on saved data in the Product Measurement Setup screen.</p><p>One of the Product Measurement Units must be selected as nomination unit. This unit will be reflected in all screens where you have a quantity. The selected&nbsp;nomination unit for a given product should not be updated after the measurement settings have been taken into action. Such a change will affect all historical data.<br />Nominated unit indicator must be the same on &lsquo;Load&rsquo; and &lsquo;Unload&rsquo;.</p><p>The calculated attribute will make the measurement item protected in either BL/Mr Info or Unload Info depending on the lifting event. A calculate button can be used&nbsp;to set the values in those business functions.</p><p>The attribute &lsquo;Mapping to Revenue&rsquo; is by default disabled, but if integration with EC Revenue is required. It identifies what units should be available in EC Revenue.&nbsp;If both net and gross values are used they should be connected to the same mapping code. Meaning Net Mass is connected to Qty 1 and Gross Mass is connected&nbsp;to Qty 1. It is important that the unit is the same if a mapping is set on two items. Qty 1 is mandatory.</p>
+related: {}

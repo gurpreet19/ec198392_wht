@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-943603774'
+keys:
+  COMPONENT_ID: IN_SU_PR
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.in/manage_inventory/CLASS_NAME/INVENTORY?screentemplate=/com.ec.revn.in/manage_inventory
+  COMPONENT_EXT_NAV_NAME: ?screentemplate=/com.ec.revn.in/manage_inventory
+  COMPONENT_ID: IN_SU_PR
+  COMPONENT_LABEL: Inventory Properties
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: IN_SU_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4570.0
+  WINDOW_ID: ENERGYX
+related: {}

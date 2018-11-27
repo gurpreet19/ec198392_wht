@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1757374586'
+keys:
+  BF_CODE: GD.0087
+  CLASS_NAME: TRNP_DAY_NOM_BAL_CNT_IN2
+  COMP_CODE: daycntrinputnom_tab2
+  T: BF_COMPONENT
+  URL: /daycntrinputnom_tab2
+parentKeys: {}
+properties:
+  BF_CODE: GD.0087
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_contract_balance/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT/CLASS/TRCN_DAY_NOM_BAL2/CLASS_2/TRNP_DAY_NOM_BAL_CNT_IN2/CLASS_3/TRNP_DAY_NOM_TRANSF_BAL/CLASS_4/TRNP_DAY_NOM_BAL_CN_OUT2/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNP_DAY_NOM_BAL_CNT_IN2
+  COMP_CODE: daycntrinputnom_tab2
+  NAME: Input Nomination Balance tab2
+  SIGNING_REQ_IND: null
+  URL: /daycntrinputnom_tab2
+related: {}

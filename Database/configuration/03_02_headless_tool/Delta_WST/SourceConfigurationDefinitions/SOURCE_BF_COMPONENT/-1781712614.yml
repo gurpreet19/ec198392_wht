@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1781712614'
+keys:
+  BF_CODE: SD.0014
+  CLASS_NAME: null
+  COMP_CODE: qtyApportion
+  T: BF_COMPONENT
+  URL: /qtyApportion
+parentKeys: {}
+properties:
+  BF_CODE: SD.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/ngl_export' )
+  CLASS_NAME: null
+  COMP_CODE: qtyApportion
+  NAME: qtyApportion
+  SIGNING_REQ_IND: null
+  URL: /qtyApportion
+related: {}

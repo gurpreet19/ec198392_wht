@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1496957205'
+keys:
+  BF_DESCRIPTION_NO: WR.0040
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0040
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/event_waste_injection_well_status' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to enter event based Waste Injectors well data. All wells having well type &lsquo;Waste&rsquo; (WA) will show up in the well popup. The BF is event based and all records within from and to date in the navigator are listed. Pressing Insert, a new row will be created open for input. Default date is similar to &ldquo;To Date&rdquo; in the navigator. The list of events is sorted on date (descending) and then well. The Waste Type popup can be configured in EC_CODES. There are no calculations associated with this BF, it&rsquo;s purely for data registration.</p>
+related: {}

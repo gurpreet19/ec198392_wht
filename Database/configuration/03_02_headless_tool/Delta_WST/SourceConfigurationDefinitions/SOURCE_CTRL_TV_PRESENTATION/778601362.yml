@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '778601362'
+keys:
+  COMPONENT_ID: RTY_CNTR_USA
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.rty/royalty_contract_us/CLASS_NAME/CONTRACT/DATA_CLASS/DIVISION_ORDER/NAVMODEL/DIV_ORDER/BF_PROFILE/RC.0058/ACCESS_COLUMN/REVN_CODE?screentemplate=/com.ec.revn.rty/royalty_contract_us
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: RTY_CNTR_USA
+  COMPONENT_LABEL: Division Order
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: RTY_USA
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 400.0
+  WINDOW_ID: ENERGYX
+related: {}

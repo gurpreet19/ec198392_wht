@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-738090696'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/period_steam_stream_status
+parentKeys: {}
+properties:
+  BF_CODE: PO.0081
+  NAME: Daily Steam Stream Status, by Stream
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.po.screens/period_steam_stream_status
+related: {}

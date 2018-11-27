@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1039376302'
+keys:
+  COMPONENT_ID: CARGO_DOC
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.to.screens/cargo_document?screentemplate=/com.ec.tran.to.screens/cargo_document&CARGO_NAV_CLASS=TERM_OPERATION_NAVIGATOR
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CARGO_DOC
+  COMPONENT_LABEL: Cargo Document
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_TO
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 120.0
+  WINDOW_ID: ENERGYX
+related: {}

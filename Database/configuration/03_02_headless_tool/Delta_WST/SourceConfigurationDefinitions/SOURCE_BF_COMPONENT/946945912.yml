@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '946945912'
+keys:
+  BF_CODE: CO.2046
+  CLASS_NAME: null
+  COMP_CODE: CPCL_nav
+  T: BF_COMPONENT
+  URL: /CPCL_nav
+parentKeys: {}
+properties:
+  BF_CODE: CO.2046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_profit_centre_list' )
+  CLASS_NAME: null
+  COMP_CODE: CPCL_nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /CPCL_nav
+related: {}

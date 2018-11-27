@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '914601167'
+keys:
+  BF_CODE: CD.0051
+  CLASS_NAME: SYSTEM_MTH_STATUS
+  COMP_CODE: tabitem6
+  T: BF_COMPONENT
+  URL: /tabitem6
+parentKeys: {}
+properties:
+  BF_CODE: CD.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/fin_period/CLASS/SYSTEM_MTH_STATUS_BOOK/ACTION/REOPEN/PERIOD_TYPE/BOOKING' )
+  CLASS_NAME: SYSTEM_MTH_STATUS
+  COMP_CODE: tabitem6
+  NAME: Journal Entry
+  SIGNING_REQ_IND: null
+  URL: /tabitem6
+related: {}

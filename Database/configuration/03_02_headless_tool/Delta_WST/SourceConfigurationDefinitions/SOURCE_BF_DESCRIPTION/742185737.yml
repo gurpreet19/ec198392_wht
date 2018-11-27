@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '742185737'
+keys:
+  BF_DESCRIPTION_NO: CO.0034
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0034
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STORAGE/TARGET/STORAGE/CLASS_NAME/STORAGE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>Storage is a logical concept in EC, holding all tanks having the same product and purpose. One example of a storage object can be CRUDE_EXPORT, which holds all tanks having Crude and are available for export. That storage does not include dehydration tanks or other tanks not direct available for export. Other examples can be CRUDE_DEHY, which holds all dehydration tanks, or COND_EXPORT, which holds all condensate export tanks.</p>
+
+    <p>Storage is used in the cargo business functions. All parcels lifted must be from storage and not from individual tanks (even if that is what physically happens). Storage is also used to keep track of over / under lifting per lifting account.</p>
+
+    <p>Storage can also be used for reporting purpose only. Rather than report on individual tanks, storage will automatically include all tanks connected and report totals.</p>
+
+    <p>Storage is connected to facility, either facility class 1 or facility class 2. A terminal can be of facility class 2, or facility class 1 if it is a FSO/FPSO (Floating Storage and Offloading / Floating Production Storage and Offloading) vessel. Facility class 2 is not default configured in the product, that&rsquo;s why its not listed in the screen shot.</p>
+
+    <p>Storage does not have its own data classes. Storage functions calculate the sum of closing volumes from connected tanks. It is often recommended to create a Formula Stream holding the closing volume minus the opening volume. This stream can be used to easily get the delta storage change for a day, which is needed to calculate total production.</p>
+
+    <p>Note! EC Transport specific attributes will not be available if only EC Production is installed.</p>
+related: {}

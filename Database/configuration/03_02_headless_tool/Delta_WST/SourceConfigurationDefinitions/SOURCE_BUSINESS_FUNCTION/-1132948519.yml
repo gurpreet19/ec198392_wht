@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1132948519'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/split_key/DAILY/TRUE/SPLIT_TYPE/FIELD
+parentKeys: {}
+properties:
+  BF_CODE: VO.0005
+  NAME: Daily Split Key Field
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/split_key/DAILY/TRUE/SPLIT_TYPE/FIELD
+related: {}

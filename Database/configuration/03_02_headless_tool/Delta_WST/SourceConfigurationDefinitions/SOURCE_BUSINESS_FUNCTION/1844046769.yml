@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1844046769'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/VENDOR/FROM_CLASS_NAME/VENDOR/TO_CLASS_NAME/VENDOR
+parentKeys: {}
+properties:
+  BF_CODE: CD.0071
+  NAME: Vendors Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/VENDOR/FROM_CLASS_NAME/VENDOR/TO_CLASS_NAME/VENDOR
+related: {}

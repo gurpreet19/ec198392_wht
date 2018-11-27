@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1914489623'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/STREAM/FROM_CLASS_NAME/STREAM/TO_CLASS_NAME/STREAM
+parentKeys: {}
+properties:
+  BF_CODE: CD.0062
+  NAME: Stream Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/STREAM/FROM_CLASS_NAME/STREAM/TO_CLASS_NAME/STREAM
+related: {}

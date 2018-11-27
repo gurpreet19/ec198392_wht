@@ -1,0 +1,65 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-320720652'
+keys:
+  BF_DESCRIPTION_NO: PT.0015
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PT.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/well_decline_curve' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p class="MsoNormal"><span lang="EN-GB">The decline
+    curve functionality in EC enables the calculation of estimated production based
+    on a declined/Inclined reference estimate.&nbsp;
+    The source of the reference estimate is defined by the calculation
+    method setting (e.g performance curve, last accepted well test etc ) whereas
+    the decline curve defined in this business function determines how much the
+    reference well performance should be changed.&nbsp;
+    This depends on the decline curve constants in addition to the number of
+    days between the production day and the date of the reference well performance.</span></p><p class="MsoNormal"><span lang="EN-GB">This business
+    function provides the logic necessary for handling well decline curves and the
+    accompanying decline constants.&nbsp;&nbsp; Time-dependant
+    decline curves can be defined individually for 9 different trend parameters,
+    including phases like oil, water, gas, condensate, water and also for phase
+    ratios such as GOR, water cut, WOR, CGR and WGR.&nbsp;&nbsp; Four classical decline trend methods are
+    available, including Constant, Linear, Exponential, Hyperbolic and Harmonic.</span></p><p class="MsoNormal"><b><span lang="EN-GB">Typical use<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-GB">A reference
+    estimate has been established for an oil producer and is defined in the system
+    as a performance curve that express the oil production as a function of choke
+    position.&nbsp; Limited well testing capacity
+    makes it difficult to keep this reference estimate updated.&nbsp; However, an extensive well test history shows
+    that the well has been on a steady decline for any months and is expected to
+    continue on the same trend. <o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">Navigate to
+    the well using the navigator well dropdown.&nbsp;&nbsp;
+    <o:p></o:p></span></p><p class="MsoNormal" style="text-indent:.5in"><span lang="EN-GB">A. Insert a new empty record and <o:p></o:p></span></p><p class="MsoNormal" style="text-indent:.5in"><span lang="EN-GB">B. Select a Valid from date. <o:p></o:p></span></p><p class="MsoNormal" style="text-indent:.5in"><span lang="EN-GB">C. Select a trend parameter from dropdown.<o:p></o:p></span></p><p class="MsoNormal" style="text-indent:.5in"><span lang="EN-GB">D. Select trend method from dropdown.<o:p></o:p></span></p><p class="MsoNormal" style="text-indent:.5in"><span lang="EN-GB">E. Fill in data for decline factor and curve exponent.&nbsp; <o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">Repeat
+    steps A through E for other required trend parameters.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">Save the
+    trend curve.</span></p><p class="MsoNormal"><span lang="EN-GB">The well
+    estimation process will go through these steps in this specific case.<o:p></o:p></span></p><ol style="margin-top:0in" start="1" type="A">
+     <li class="MsoNormal"><span lang="EN-GB">Find the reference performance
+         for the well primary phase (oil) from performance curve given the choke
+         setting and the on stream hours.<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">Locate the valid decline curve
+         for this well<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">Create a modified estimate
+         based on initial estimate and decline curve function for oil and the
+         number of days since the initial estimate day.<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">Find decline function for GOR
+         and apply the modified GOR to the modified oil in order to calculate the
+         gas production estimate<o:p></o:p></span></li>
+     <li class="MsoNormal"><span lang="EN-GB">Find decline function for WCT
+         and apply the modified WCT to the modified oil in order to calculate the
+         water production estimate.</span></li></ol><p class="MsoNormal"><b><span lang="EN-GB">Navigation<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-GB">From Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Defines the start of the
+    time range to be selected <o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">To Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Defines the end of the
+    time range to be selected <o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">&lt;operational
+    navigator&gt;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">Well&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Decline curves
+    are defined at the well level only</span></p><p class="MsoNormal"><b><span lang="EN-GB">Data section 1:&nbsp;
+    Decline trend parameters<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-GB">Oil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary phase
+    for oil producers<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">Gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary phase for
+    gas producers, secondary phase for oil producers<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">Condensate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary phase for condensate
+    producers, secondary phase for gas producers<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">Water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secondary phase for
+    oil, gas, condensate producers<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">GOR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gas oil ratio<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">WCT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Water cut [%] of
+    gross hydrocarbon liquid<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">WOR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Water - dry Oil&nbsp; ratio for oil producers<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-GB">CGR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Condensate&nbsp; - Gas ratio for gas or condensate producers<o:p></o:p></span></p><p>
+    </p><p class="MsoNormal"><span lang="EN-GB">WGR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Water - Gas ratio
+    for gas or condensate producers<o:p></o:p></span></p>
+related: {}

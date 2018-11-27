@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1975511776'
+keys:
+  BF_CODE: SD.0009
+  CLASS_NAME: SLNL_DEL_ANALYSIS_COMP
+  COMP_CODE: component_analysis_data
+  T: BF_COMPONENT
+  URL: /component_analysis_data
+parentKeys: {}
+properties:
+  BF_CODE: SD.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/delivery_comp_analysis' )
+  CLASS_NAME: SLNL_DEL_ANALYSIS_COMP
+  COMP_CODE: component_analysis_data
+  NAME: Component Analysis Data
+  SIGNING_REQ_IND: null
+  URL: /component_analysis_data
+related: {}

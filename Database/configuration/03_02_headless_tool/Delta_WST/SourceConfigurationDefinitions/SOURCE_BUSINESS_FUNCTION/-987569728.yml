@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-987569728'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.co.screens/contract_group_job_conn
+parentKeys: {}
+properties:
+  BF_CODE: CO.2075
+  NAME: Contract Group Calculation Job Connection
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.co.screens/contract_group_job_conn
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1717585205'
+keys:
+  KEY: com/ec/frmw/bs/calc/engine/data_read_batch_size
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: EC_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: '1000'
+  DESCRIPTION: Batch size used when reading calculation data for filtered objects. A higher value improves performance, but must be lower or equal to the max number of IN elements supported by your version of Oracle.
+  KEY: com/ec/frmw/bs/calc/engine/data_read_batch_size
+  LABEL: Calculation Data Read Batch Size
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

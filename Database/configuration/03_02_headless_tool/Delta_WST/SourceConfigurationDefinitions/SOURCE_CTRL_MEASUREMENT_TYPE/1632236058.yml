@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1632236058'
+keys:
+  MEASUREMENT_TYPE: RATIO_LIQ_GAS
+  T: CTRL_MEASUREMENT_TYPE
+parentKeys: {}
+properties:
+  DESCRIPTION: WGR, CGR etc
+  FORMAT_MASK: '#0.000000'
+  MEASUREMENT_TYPE: RATIO_LIQ_GAS
+related: {}

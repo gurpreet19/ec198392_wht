@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1313229948'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/period_factors/TARGET/NOMINATION_POINT/CLASS/TRNP_FACTOR
+parentKeys: {}
+properties:
+  BF_CODE: GD.0077.02
+  NAME: Period Nomination Point Factors
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/period_factors/TARGET/NOMINATION_POINT/CLASS/TRNP_FACTOR
+related: {}

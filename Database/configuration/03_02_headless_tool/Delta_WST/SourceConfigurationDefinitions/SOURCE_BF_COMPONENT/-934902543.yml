@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-934902543'
+keys:
+  BF_CODE: SP.0056
+  CLASS_NAME: CONT_JOURNAL_ENTRY
+  COMP_CODE: qty
+  T: BF_COMPONENT
+  URL: /qty
+parentKeys: {}
+properties:
+  BF_CODE: SP.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/journal_entry_reconciliation/RECON_TYPE/PROJECT' )
+  CLASS_NAME: CONT_JOURNAL_ENTRY
+  COMP_CODE: qty
+  NAME: Quantity
+  SIGNING_REQ_IND: null
+  URL: /qty
+related: {}

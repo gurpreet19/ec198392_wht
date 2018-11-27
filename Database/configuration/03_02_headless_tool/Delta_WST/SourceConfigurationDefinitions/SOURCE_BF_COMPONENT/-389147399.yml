@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-389147399'
+keys:
+  BF_CODE: CO.0131
+  CLASS_NAME: null
+  COMP_CODE: params
+  T: BF_COMPONENT
+  URL: /params
+parentKeys: {}
+properties:
+  BF_CODE: CO.0131
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/schedule_history' )
+  CLASS_NAME: null
+  COMP_CODE: params
+  NAME: Parameters
+  SIGNING_REQ_IND: null
+  URL: /params
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-575447732'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.fi/calculation_group
+parentKeys: {}
+properties:
+  BF_CODE: FI.0004
+  NAME: Calculation Group Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.fi/calculation_group
+related: {}

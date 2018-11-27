@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '251798878'
+keys:
+  BF_CODE: TO.0032
+  CLASS_NAME: CARGO_STOR_BATCH
+  COMP_CODE: batch
+  T: BF_COMPONENT
+  URL: /batch
+parentKeys: {}
+properties:
+  BF_CODE: TO.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/tab_harbour_menu' )
+  CLASS_NAME: CARGO_STOR_BATCH
+  COMP_CODE: batch
+  NAME: Cargo Batch
+  SIGNING_REQ_IND: null
+  URL: /batch
+related: {}

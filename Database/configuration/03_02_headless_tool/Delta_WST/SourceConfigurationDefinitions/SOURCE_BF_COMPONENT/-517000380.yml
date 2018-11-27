@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-517000380'
+keys:
+  BF_CODE: PP.0045
+  CLASS_NAME: SCENARIO_ASSUMPTIONS
+  COMP_CODE: scenario_assumptions
+  T: BF_COMPONENT
+  URL: /scenario_assumptions
+parentKeys: {}
+properties:
+  BF_CODE: PP.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_assumptions' )
+  CLASS_NAME: SCENARIO_ASSUMPTIONS
+  COMP_CODE: scenario_assumptions
+  NAME: Scenario Assumptions
+  SIGNING_REQ_IND: null
+  URL: /scenario_assumptions
+related: {}

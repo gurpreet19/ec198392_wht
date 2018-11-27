@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1073036346'
+keys:
+  BF_CODE: PR.0008
+  CLASS_NAME: null
+  COMP_CODE: PriceCalculationButton
+  T: BF_COMPONENT
+  URL: /PriceCalculationButton
+parentKeys: {}
+properties:
+  BF_CODE: PR.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/price_calc' )
+  CLASS_NAME: null
+  COMP_CODE: PriceCalculationButton
+  NAME: Price Calculation Button
+  SIGNING_REQ_IND: null
+  URL: /PriceCalculationButton
+related: {}

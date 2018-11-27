@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2055605311'
+keys:
+  COMPONENT_ID: CONTRACT_INV
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/CONTRACT/TARGET/CONTRACT_INVENTORY/CLASS_NAME/CONTRACT_INVENTORY?screentemplate=/com.ec.frmw.co.screens/manage_object_navmodel_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CONTRACT_INV
+  COMPONENT_LABEL: Contract Inventory
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: CONTRACT_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 400.0
+  WINDOW_ID: ENERGYX
+related: {}

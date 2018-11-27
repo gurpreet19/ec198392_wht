@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-695305418'
+keys:
+  BF_CODE: WR.0036
+  CLASS_NAME: null
+  COMP_CODE: summarizeAllWbiSubToDailyButtonID
+  T: BF_COMPONENT
+  URL: /summarizeAllWbiSubToDailyButtonID
+parentKeys: {}
+properties:
+  BF_CODE: WR.0036
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_well_bore_interval_status' )
+  CLASS_NAME: null
+  COMP_CODE: summarizeAllWbiSubToDailyButtonID
+  NAME: Aggregate Facility All
+  SIGNING_REQ_IND: null
+  URL: /summarizeAllWbiSubToDailyButtonID
+related: {}

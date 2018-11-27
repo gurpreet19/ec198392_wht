@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '490337442'
+keys:
+  BF_DESCRIPTION_NO: CO.2084
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2084
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/port_resource_usage_template' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>This screen will hold port resource usage template objects.This
+    template will be instantiated in CO.2085: Port Resource Usage when cargo status
+    is changed to Official. Screen navigator has a Date, Product and Lifting Event.
+    All attributes are mandatory in the screen.</p><p>The attribute Port Resource
+    Type will show the type of port resources available. Cargo Timeline and Expected
+    Duration are EC Codes  with code type TIMELINE_CODE and DURATION_CODE respectively.</p>'
+related: {}

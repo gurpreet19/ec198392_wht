@@ -1,0 +1,20 @@
+' CODE=JOURNAL_MAP_TRACING DAYTIME=01-01-1900': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1725912619'
+  keys:
+    CODE: JOURNAL_MAP_TRACING
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: OV_REPT_CONTEXT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' CODE=SUMMARY_TRACING DAYTIME=01-01-1900': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1441101603'
+  keys:
+    CODE: SUMMARY_TRACING
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: OV_REPT_CONTEXT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

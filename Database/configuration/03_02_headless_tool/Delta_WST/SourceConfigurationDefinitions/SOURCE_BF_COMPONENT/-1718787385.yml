@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1718787385'
+keys:
+  BF_CODE: IN.0032
+  CLASS_NAME: CONFIG_VARIABLE
+  COMP_CODE: from_class
+  T: BF_COMPONENT
+  URL: /from_class
+parentKeys: {}
+properties:
+  BF_CODE: IN.0032
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_relation/CLASS_NAME/CONFIG_VARIABLE_PARAM/FROM_CLASS_NAME/CONFIG_VARIABLE/ROLE_ID/CONFIG_VARIABLE_ID' )
+  CLASS_NAME: CONFIG_VARIABLE
+  COMP_CODE: from_class
+  NAME: From_Class
+  SIGNING_REQ_IND: null
+  URL: /from_class
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-999299498'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STABILIZER/TARGET/STABILIZER/CLASS_NAME/STABILIZER
+parentKeys: {}
+properties:
+  BF_CODE: CO.0176
+  NAME: Stabilizer
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STABILIZER/TARGET/STABILIZER/CLASS_NAME/STABILIZER
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-771069685'
+keys:
+  BF_CODE: PO.0034
+  CLASS_NAME: STRM_COMPANY_SPLIT
+  COMP_CODE: maintainStreamCompanySplitTable
+  T: BF_COMPONENT
+  URL: /maintainStreamCompanySplitTable
+parentKeys: {}
+properties:
+  BF_CODE: PO.0034
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_company_split' )
+  CLASS_NAME: STRM_COMPANY_SPLIT
+  COMP_CODE: maintainStreamCompanySplitTable
+  NAME: Maintain Stream Company Split
+  SIGNING_REQ_IND: null
+  URL: /maintainStreamCompanySplitTable
+related: {}

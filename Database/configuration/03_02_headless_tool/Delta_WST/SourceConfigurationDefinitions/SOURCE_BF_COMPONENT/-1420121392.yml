@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1420121392'
+keys:
+  BF_CODE: VO.0008
+  CLASS_NAME: null
+  COMP_CODE: SplitKeyValidFromForm
+  T: BF_COMPONENT
+  URL: /form2
+parentKeys: {}
+properties:
+  BF_CODE: VO.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/split_key/DAILY/TRUE/SPLIT_TYPE/SPLIT_ITEM_OTHER' )
+  CLASS_NAME: null
+  COMP_CODE: SplitKeyValidFromForm
+  NAME: ValidFrom Form
+  SIGNING_REQ_IND: null
+  URL: /form2
+related: {}

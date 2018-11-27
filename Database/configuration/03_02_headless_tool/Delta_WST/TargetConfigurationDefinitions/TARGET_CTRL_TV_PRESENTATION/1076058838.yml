@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1076058838'
+keys:
+  COMPONENT_ID: PR0008_CALC_PRICE_LOG
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.sale.pr.screens/price_calc
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PR0008_CALC_PRICE_LOG
+  COMPONENT_LABEL: Price Calculations
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_SALE_PR
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 200.0
+  WINDOW_ID: ENERGYX
+related: {}

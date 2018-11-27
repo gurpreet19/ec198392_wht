@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1989726773'
+keys:
+  BF_CODE: CO.2074
+  CLASS_NAME: null
+  COMP_CODE: attribute
+  T: BF_COMPONENT
+  URL: /attribute
+parentKeys: {}
+properties:
+  BF_CODE: CO.2074
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_attribute_dim_matrix/ACCESS_COLUMN/TRAN_CODE' )
+  CLASS_NAME: null
+  COMP_CODE: attribute
+  NAME: Attribute
+  SIGNING_REQ_IND: null
+  URL: /attribute
+related: {}

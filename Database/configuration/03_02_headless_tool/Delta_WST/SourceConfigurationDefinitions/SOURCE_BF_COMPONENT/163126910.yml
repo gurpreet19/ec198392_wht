@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '163126910'
+keys:
+  BF_CODE: HA.0002
+  CLASS_NAME: null
+  COMP_CODE: RunningJobs
+  T: BF_COMPONENT
+  URL: /running_jobs
+parentKeys: {}
+properties:
+  BF_CODE: HA.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/edit_daily_alloc' )
+  CLASS_NAME: null
+  COMP_CODE: RunningJobs
+  NAME: RunningJobs
+  SIGNING_REQ_IND: null
+  URL: /running_jobs
+related: {}

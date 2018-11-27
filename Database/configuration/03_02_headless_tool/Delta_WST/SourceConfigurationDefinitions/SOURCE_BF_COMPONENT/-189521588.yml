@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-189521588'
+keys:
+  BF_CODE: MHM.0013
+  CLASS_NAME: MESSAGE_GENERATION
+  COMP_CODE: message_generation
+  T: BF_COMPONENT
+  URL: /message_generation
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_generation' )
+  CLASS_NAME: MESSAGE_GENERATION
+  COMP_CODE: message_generation
+  NAME: Message Generation
+  SIGNING_REQ_IND: null
+  URL: /message_generation
+related: {}

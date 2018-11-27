@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1588825130'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.la.screens/monthly_account_status/BALANCE_QTY/EST_CLOSING_BALANCE
+parentKeys: {}
+properties:
+  BF_CODE: LA.0002
+  NAME: Monthly Account Status
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.la.screens/monthly_account_status/BALANCE_QTY/EST_CLOSING_BALANCE
+related: {}

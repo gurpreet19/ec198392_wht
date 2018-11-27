@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1815396607'
+keys:
+  BF_CODE: VO.0035
+  CLASS_NAME: CALC_MTH_PROD_LOG
+  COMP_CODE: log_list
+  T: BF_COMPONENT
+  URL: /log_list
+parentKeys: {}
+properties:
+  BF_CODE: VO.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/edit_monthly_alloc_revn' )
+  CLASS_NAME: CALC_MTH_PROD_LOG
+  COMP_CODE: log_list
+  NAME: Monthly Allocation
+  SIGNING_REQ_IND: null
+  URL: /log_list
+related: {}

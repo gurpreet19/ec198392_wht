@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1837838757'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/COMPANY
+parentKeys: {}
+properties:
+  BF_CODE: CD.0044
+  NAME: Company Split Key
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/COMPANY
+related: {}

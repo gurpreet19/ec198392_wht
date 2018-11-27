@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1039559563'
+keys:
+  BF_CODE: IN.0036
+  CLASS_NAME: REPORT_REF_CONN
+  COMP_CODE: InvReferenceButton
+  T: BF_COMPONENT
+  URL: /InvReferenceButton
+parentKeys: {}
+properties:
+  BF_CODE: IN.0036
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/trans_inv_prod_stream/OBJ_CLASS/REVN_PROD_STREAM/DATA_CLASS/TRANS_INV_PROD_STREAM' )
+  CLASS_NAME: REPORT_REF_CONN
+  COMP_CODE: InvReferenceButton
+  NAME: View Report References
+  SIGNING_REQ_IND: null
+  URL: /InvReferenceButton
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2045339192'
+keys:
+  BF_DESCRIPTION_NO: CO.2057
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/TRANSPORT_SYSTEM/CLASS_NAME/TRANSPORT_SYSTEM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to create and maintain the transport systems.<br />This object is typically used in operational navigation in screens. It is typically between Business Unit and Transport Zone.</p>
+related: {}

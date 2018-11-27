@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-760767202'
+keys:
+  BF_CODE: SD.0010
+  CLASS_NAME: null
+  COMP_CODE: generateDaysButton
+  T: BF_COMPONENT
+  URL: /generateDaysButton
+parentKeys: {}
+properties:
+  BF_CODE: SD.0010
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/forecast_comp_analysis' )
+  CLASS_NAME: null
+  COMP_CODE: generateDaysButton
+  NAME: Generate Days
+  SIGNING_REQ_IND: null
+  URL: /generateDaysButton
+related: {}

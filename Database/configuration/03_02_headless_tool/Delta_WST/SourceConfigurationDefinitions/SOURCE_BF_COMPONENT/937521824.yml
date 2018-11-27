@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '937521824'
+keys:
+  BF_CODE: SA.0035
+  CLASS_NAME: null
+  COMP_CODE: SaleCalculationButton
+  T: BF_COMPONENT
+  URL: /SaleCalculationButton
+parentKeys: {}
+properties:
+  BF_CODE: SA.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/fcst_sale_calc_mth' )
+  CLASS_NAME: null
+  COMP_CODE: SaleCalculationButton
+  NAME: Price Calculation Button
+  SIGNING_REQ_IND: null
+  URL: /SaleCalculationButton
+related: {}

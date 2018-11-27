@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '487200864'
+keys:
+  BF_DESCRIPTION_NO: RC.0052
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: RC.0052
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/ROYALTY_DEPOSITOR' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Royalty Depositor screen</strong>    defines the legal entities - corporations, trusts, and persons - that act as a depositor of royalty revenue on behalf of the Royalty Owner.</p><p>    For each defined for a Royalty Contract <em> <strong> Royalty Owner </strong> </em> it is possible to assign a Royalty Depositor object which then will be the receiver of the royalty    payments on behalf of the Royalty Owner.</p>
+related: {}

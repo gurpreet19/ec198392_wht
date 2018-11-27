@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1158804368'
+keys:
+  BF_CODE: GD.0056
+  CLASS_NAME: CAPACITY_BID_DAY_CAP
+  COMP_CODE: capBidCntrCapDay
+  T: BF_COMPONENT
+  URL: /capBidCntrCapDay
+parentKeys: {}
+properties:
+  BF_CODE: GD.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_bid' )
+  CLASS_NAME: CAPACITY_BID_DAY_CAP
+  COMP_CODE: capBidCntrCapDay
+  NAME: Daily Contract Capacity
+  SIGNING_REQ_IND: null
+  URL: /capBidCntrCapDay
+related: {}

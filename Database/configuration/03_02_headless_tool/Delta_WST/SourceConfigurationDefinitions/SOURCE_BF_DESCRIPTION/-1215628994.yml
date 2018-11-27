@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1215628994'
+keys:
+  BF_DESCRIPTION_NO: TO.0005
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/blmr_info' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function allows the user to recording the bill of lading date for each parcel as well as entering lifted volume per nomination (parcel).</p><p>In this business function, the navigator displays all cargos that are not Tentative and Official. When selecting a cargo, all nominations will be listed. For each<br />nomination, product measurements are instantiated (when cargo was set to Official and Ready for Harbour), making it possible to enter lifted values for different&nbsp;measurement types and units. One of the measurement types is used as the nominated lifted value (nominated unit), meaning this is the value used in further&nbsp;calculations. Note that the lifted value is not editable unless the B/L Date is set. Measurement types and units are configured for each product (export quality) in&nbsp;Product Measurement Setup (CO.2002).</p><p>Product measurement items that are set to &lsquo;Calculated&rsquo; in Product Measurement Setup will be protected in this screen. To calculate those values the &lsquo;Calculate&rsquo;&nbsp;button must be pressed. How the calculate values are calculated must be defined by each individual implementation in a Calculation Rule.<br />The &lsquo;Expected Unload&rsquo; attribute is by default not displayed. If Cost Insurance Freight (CIF) cargos are used and Unload values are of interest, the attribute can be&nbsp;activated. The values are calculated on retrieved. How the value should be calculated must be defined by each individual implementation. It is recommended that&nbsp;this function does not return any errors since this will prevent data from being loaded into the screen.</p><p>When the loading operations are finished, the cargo status should be set to Closed. For more information on Cargo Status see Cargo Status Rules.</p><p>To support operations that use sub daily data there is a column for storing the BL date and time.</p>
+related: {}

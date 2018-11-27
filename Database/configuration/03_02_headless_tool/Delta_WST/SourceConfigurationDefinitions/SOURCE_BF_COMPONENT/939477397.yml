@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '939477397'
+keys:
+  BF_CODE: PP.0070
+  CLASS_NAME: FCST_SUB_AREA_MTH_STATUS
+  COMP_CODE: monthly_forecast
+  T: BF_COMPONENT
+  URL: /monthly_forecast
+parentKeys: {}
+properties:
+  BF_CODE: PP.0070
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/monthly_forecast/GROUPMODEL/SUB_AREA/TARGET/SUB_AREA/CLASS_NAME/FCST_SUB_AREA_MTH_STATUS' )
+  CLASS_NAME: FCST_SUB_AREA_MTH_STATUS
+  COMP_CODE: monthly_forecast
+  NAME: Forecast Data
+  SIGNING_REQ_IND: null
+  URL: /monthly_forecast
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '510675936'
+keys:
+  BF_DESCRIPTION_NO: MHM.0013
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: MHM.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_generation' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Message Generation screen is used to generate messages that have message distribution (Parameter Set) assigned to it. Message distribution setup is essential for binding message type to receiver groups. Distribution parameters are given in screen “Message Distribution”. “Receivers” in the navigator are directly connected to Parameter Set. “To” column in the message generation table is Parameter Set. “To sub” column is each Parameter Value in this Parameter Set.</p>
+related: {}

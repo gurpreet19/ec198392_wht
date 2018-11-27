@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1860584898'
+keys:
+  BF_CODE: CD.0045
+  CLASS_NAME: SPLIT_KEY
+  COMP_CODE: splitkeysharedaytimes
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CD.0045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/split_key/SPLIT_TYPE/COMPANY' )
+  CLASS_NAME: SPLIT_KEY
+  COMP_CODE: splitkeysharedaytimes
+  NAME: New Split Key Version
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

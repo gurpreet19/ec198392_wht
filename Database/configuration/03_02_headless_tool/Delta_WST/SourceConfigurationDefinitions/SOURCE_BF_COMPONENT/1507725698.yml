@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1507725698'
+keys:
+  BF_CODE: MHM.0015
+  CLASS_NAME: DISTRIBUTION_SET_CONTACT
+  COMP_CODE: distribution_list_contacts
+  T: BF_COMPONENT
+  URL: /distribution_list_contacts
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0015
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/manage_outgoing_messages' )
+  CLASS_NAME: DISTRIBUTION_SET_CONTACT
+  COMP_CODE: distribution_list_contacts
+  NAME: Distribution List Contact
+  SIGNING_REQ_IND: null
+  URL: /distribution_list_contacts
+related: {}

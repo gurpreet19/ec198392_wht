@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1018474866'
+keys:
+  BF_CODE: PO.0108
+  CLASS_NAME: STRM_MTH_STREAM_STATUS
+  COMP_CODE: production
+  T: BF_COMPONENT
+  URL: /production
+parentKeys: {}
+properties:
+  BF_CODE: PO.0108
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_stream_status_extended' )
+  CLASS_NAME: STRM_MTH_STREAM_STATUS
+  COMP_CODE: production
+  NAME: Monthly Stream Status
+  SIGNING_REQ_IND: null
+  URL: /production
+related: {}

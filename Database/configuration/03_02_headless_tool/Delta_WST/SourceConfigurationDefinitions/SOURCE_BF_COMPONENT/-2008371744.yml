@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2008371744'
+keys:
+  BF_CODE: PO.0076
+  CLASS_NAME: STRM_MTH_PC_CPY_STAT_SUM
+  COMP_CODE: sum
+  T: BF_COMPONENT
+  URL: /sum
+parentKeys: {}
+properties:
+  BF_CODE: PO.0076
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_strm_profit_centre_splitby_co' )
+  CLASS_NAME: STRM_MTH_PC_CPY_STAT_SUM
+  COMP_CODE: sum
+  NAME: Sum per Profit Centre
+  SIGNING_REQ_IND: null
+  URL: /sum
+related: {}

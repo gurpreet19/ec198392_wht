@@ -1,0 +1,42 @@
+BEGIN
+--1.EQUIPMENT to TEST_DEVICE table.
+
+INSERT INTO TEST_DEVICE(
+  OBJECT_ID,
+  OBJECT_CODE,
+  START_DATE,
+  END_DATE,
+  DESCRIPTION,
+  RECORD_STATUS,
+  CREATED_BY,
+  CREATED_DATE,
+  LAST_UPDATED_BY,
+  LAST_UPDATED_DATE,
+  REV_NO,
+  REV_TEXT,
+  APPROVAL_BY,
+  APPROVAL_DATE,
+  APPROVAL_STATE,
+  REC_ID
+  ) SELECT OBJECT_ID,
+           OBJECT_CODE,
+           START_DATE,
+           END_DATE,
+           DESCRIPTION,
+           RECORD_STATUS,
+           CREATED_BY,
+           CREATED_DATE,
+           LAST_UPDATED_BY,
+           LAST_UPDATED_DATE,
+           REV_NO,
+           REV_TEXT,
+           APPROVAL_BY,
+           APPROVAL_DATE,
+           APPROVAL_STATE,
+           REC_ID   
+      FROM EQUIPMENT
+     WHERE CLASS_NAME = 'TEST_DEVICE';
+
+	 
+END;
+--~^UTDELIM^~--	

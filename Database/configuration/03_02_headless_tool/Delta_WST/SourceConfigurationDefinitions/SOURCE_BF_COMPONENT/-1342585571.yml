@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1342585571'
+keys:
+  BF_CODE: PO.0044
+  CLASS_NAME: null
+  COMP_CODE: dataGenerationMethodPopup
+  T: BF_COMPONENT
+  URL: /dataGenerationMethodPopup
+parentKeys: {}
+properties:
+  BF_CODE: PO.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_steam_stream_status' )
+  CLASS_NAME: null
+  COMP_CODE: dataGenerationMethodPopup
+  NAME: Data Generation Method Popup
+  SIGNING_REQ_IND: null
+  URL: /dataGenerationMethodPopup
+related: {}

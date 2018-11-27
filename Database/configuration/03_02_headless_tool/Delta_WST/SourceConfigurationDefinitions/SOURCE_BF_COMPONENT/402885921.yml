@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '402885921'
+keys:
+  BF_CODE: CO.1016
+  CLASS_NAME: UNIT_CONVERSION
+  COMP_CODE: table
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CO.1016
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/UNIT_CONVERSION' )
+  CLASS_NAME: UNIT_CONVERSION
+  COMP_CODE: table
+  NAME: Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

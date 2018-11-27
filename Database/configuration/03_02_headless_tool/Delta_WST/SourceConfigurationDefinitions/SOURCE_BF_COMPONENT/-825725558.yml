@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-825725558'
+keys:
+  BF_CODE: CP.0042
+  CLASS_NAME: FCST_LIFT_ACC_DAY_DEL
+  COMP_CODE: daily
+  T: BF_COMPONENT
+  URL: /daily
+parentKeys: {}
+properties:
+  BF_CODE: CP.0042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_sub_day_deliveries_lift_acc' )
+  CLASS_NAME: FCST_LIFT_ACC_DAY_DEL
+  COMP_CODE: daily
+  NAME: Daily Lifting Account
+  SIGNING_REQ_IND: null
+  URL: /daily
+related: {}

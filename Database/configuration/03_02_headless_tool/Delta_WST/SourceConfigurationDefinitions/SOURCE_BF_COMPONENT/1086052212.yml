@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1086052212'
+keys:
+  BF_CODE: SP.0014
+  CLASS_NAME: null
+  COMP_CODE: accountMapping/costMapping/Cost_Object_Result
+  T: BF_COMPONENT
+  URL: /accountMapping/costMapping/Cost_Object_Result
+parentKeys: {}
+properties:
+  BF_CODE: SP.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_transaction_general' )
+  CLASS_NAME: null
+  COMP_CODE: accountMapping/costMapping/Cost_Object_Result
+  NAME: accountMapping/costMapping/Cost_Object_Result
+  SIGNING_REQ_IND: null
+  URL: /accountMapping/costMapping/Cost_Object_Result
+related: {}

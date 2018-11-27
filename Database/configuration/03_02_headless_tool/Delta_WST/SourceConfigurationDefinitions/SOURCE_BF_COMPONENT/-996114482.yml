@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-996114482'
+keys:
+  BF_CODE: CO.1037
+  CLASS_NAME: CALC_DB_OBJECT_TYPE
+  COMP_CODE: dbObjectType
+  T: BF_COMPONENT
+  URL: /dbObjectType
+parentKeys: {}
+properties:
+  BF_CODE: CO.1037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/db_object_type' )
+  CLASS_NAME: CALC_DB_OBJECT_TYPE
+  COMP_CODE: dbObjectType
+  NAME: DB Object Types
+  SIGNING_REQ_IND: null
+  URL: /dbObjectType
+related: {}

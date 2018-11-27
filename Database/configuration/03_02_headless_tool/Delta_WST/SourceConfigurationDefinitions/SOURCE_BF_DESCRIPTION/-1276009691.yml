@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1276009691'
+keys:
+  BF_DESCRIPTION_NO: CO.2065
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2065
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_carrier' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to assign carriers to contracts indicating which carries are chartered to specific contracts. A contract can be linked to several carriers&nbsp;and a carrier can be linked to several contracts. This configuration is typically used when generating the Annual Delivery Plan (ADP). The first data section lists&nbsp;contracts selected in the navigator. The second data section enables configuration of carriers to a selected contract. The third data section reports other contracts&nbsp;linked to the selected carrier.</p>
+related: {}

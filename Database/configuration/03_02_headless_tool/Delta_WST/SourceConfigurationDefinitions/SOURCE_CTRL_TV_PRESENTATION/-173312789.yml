@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-173312789'
+keys:
+  COMPONENT_ID: EX_RATE_SOURCE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FOREX_SOURCE?screentemplate=/com.ec.frmw.co.screens/manage_object
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: EX_RATE_SOURCE
+  COMPONENT_LABEL: Exchange Rate Source
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FINANCIAL_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 20.0
+  WINDOW_ID: ENERGYX
+related: {}

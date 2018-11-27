@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1648694557'
+keys:
+  BF_CODE: SP.0020
+  CLASS_NAME: CONT_DOCUMENT_TEXT_ITEM
+  COMP_CODE: table2
+  T: BF_COMPONENT
+  URL: /table2
+parentKeys: {}
+properties:
+  BF_CODE: SP.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_information' )
+  CLASS_NAME: CONT_DOCUMENT_TEXT_ITEM
+  COMP_CODE: table2
+  NAME: Header section, single column
+  SIGNING_REQ_IND: null
+  URL: /table2
+related: {}

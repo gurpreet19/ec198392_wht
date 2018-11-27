@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291512980'
+keys:
+  STREAM_SET: PO.0005
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Daily Tank Status
+  STREAM_SET: PO.0005
+related: {}

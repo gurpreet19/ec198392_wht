@@ -1,0 +1,65 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '402643546'
+keys:
+  BF_DESCRIPTION_NO: CD.0029
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CD.0029
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/VAT_CODE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>    <strong>VAT Code screen</strong>    is used to maintain the
+    VAT (Value Added Tax) Codes that are in use by the    system.<br>    VAT Codes
+    vary depending on which countries one is selling to or buying    from.<br>    Country
+    is part of the primary key for the VAT objects as there may be a    VAT Code A0
+    for Norway with a certain rate, but at the same time there    may be an A0 VAT
+    code for UK with another rate.</p><p>    <u>The VAT Code objects are divided into
+    two types:</u><br>    <strong>1. Income</strong>    - to be used with Sales, Tariff
+    Income, and Journal Entry contracts<br>    <strong>2. Cost</strong>    - to be
+    used with Purchase and Tariff Cost contracts</p><p>    <u>Note </u>    that for
+    the contract configuration the system will require a VAT Code    object with rate
+    0.0% even if there is no VAT applicable for the contract.</p><p>    The attribute
+    Country Validation can be set on each VAT Code object. The    VAT Country Setup
+    screen (BF CD.0134) can be used to setup the related    countries of a VAT Code
+    object. <br> Multiple countries can be added to each    relation. <u>The following
+    types of relationships can be configured:</u><br>    <strong><em>- VAT Code Customer
+    Country:</em></strong>    Possible countries of the VAT Code object to be compared
+    to the country of    the customer of the contract in case of Sales, Tariff Income,
+    and Journal    Entry type of contracts.<br>    <strong><em>- VAT Code Origin Country:</em></strong>    Possible
+    countries of the VAT Code object to be compared to the origin of    product delivery
+    of the transaction.<br>    <strong><em>- VAT Code Destination Country:</em></strong>    Possible
+    countries of the VAT Code object to be compared to the destination    of the product
+    delivery of the transaction.<br>    <strong><em>- VAT Code Vendor Country:</em></strong>    Possible
+    countries of the VAT Code object to be compared to the country of    the vendor
+    of the contract in case of Purchase and Tariff Cost type of    contracts.</p><p>    A
+    special country Any Country can be used if a relation can be set to any    country.</p><p>    The
+    setup is used in the <strong>Financial Document Validation</strong>.<br>    <u>To
+    pass the validation the following rules apply:</u><br>    <strong><em>VAT Code
+    Customer Country: </em></strong><br>    The countries in this relation will be
+    used to match the country of the    customer of a Sale/Tariff Income contract.
+    If no country is configured, the    customer country on the document has to be
+    either the same as the country    of the VAT Code, or country Any Country. In
+    other cases, either a matching    country or country Any Country should be found
+    in the relation setup.<br>    <strong><em>VAT Code Vendor Country: </em></strong><br>    The
+    countries in this relation will be used to match the country of the    vendor
+    of a Purchase/Tariff Cost contract. If no country is configured, the    vendor
+    country on the document has to be either the same as the country of    the VAT
+    Code, or Any Country. In other cases, either a matching country or    country
+    Any Country should be found in the relation setup.<br>    <strong><em>Origin Country:
+    </em></strong><br>    The countries in this relation will be used to match the
+    origin country of    a document transaction when system attribute ORIG_COUNTRY_AT_TRANS
+    is set    to Y.<br>    If no country is configured, the transaction origin country
+    has to be    either the same as the country of the VAT Code, or country Any Country.<br>    In
+    other cases, either a matching country or Any Country should be found in    the
+    relation setup.<br>    <strong><em>Destination Country: </em></strong><br>    The
+    countries in this relation will be used to match the destination    country of
+    a document transaction when system attribute DEST_COUNTRY_AT_TRANS is set to Y.<br>    If
+    no country is configured, the transaction destination country has to be    either
+    the same as the country of the VAT Code object, or country Any    Country.<br>    In
+    other cases, either a matching country or Any Country should be found in    the
+    relation setup.</p><p>    <u>Note</u>    that when creating a new VAT Code object
+    the system will automatically    generate the Code of the new object as a concatenation
+    of the VAT Code    attribute and the Code of the country associated with the new
+    VAT object.</p>'
+related: {}

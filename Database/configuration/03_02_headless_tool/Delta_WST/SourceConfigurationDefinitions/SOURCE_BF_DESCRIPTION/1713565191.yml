@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1713565191'
+keys:
+  BF_DESCRIPTION_NO: CO.0230
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0230
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/tank_tap' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The Tank Tap Table screen provides an interface to configure the different heights where there is a physical tap on the tank to take samples from.</p>
+
+    <p>The group navigator on the top (see snapshot) is used for navigation down to the tank object where tank tap will be performed. The group navigator contains fromand to-date fields, which is a constraint on the group relation and limits the available tank objects, both on the navigator, but also in the tank dropdown. It also contains constant default values for the from- and to-date fields. The from- and to-date fields are also having the role as a filter on the &ldquo;Valid From&rdquo; dates in the table below the navigator.</p>
+
+    <p>The &ldquo;Valid From&rdquo; table displays all the tank tap dates on the selected tank object. The tank tap heights will use the existing tank attribute &quot;Strap Level UOM&quot;. Only &quot;height&quot; is recorded here, UOM is protected display function. When clicking on a row, the existing tank taps on the selected date are populated in the table on the bottom. In this table, Tank Height are displayed. Use the standard toolbar buttons for insertion and deletion on this table.</p>
+
+    <p>When inserting a new daytime on a tank object, a new row in the table on the bottom will appear when save is being performed. In this row, Tank Height is being set to 0 (initial value).</p>
+related: {}

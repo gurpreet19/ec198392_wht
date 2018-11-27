@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-283076255'
+keys:
+  BF_CODE: GD.0055
+  CLASS_NAME: CAPACITY_REL_CONTACT_RD
+  COMP_CODE: capRelContact
+  T: BF_COMPONENT
+  URL: /capRelContact
+parentKeys: {}
+properties:
+  BF_CODE: GD.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_details' )
+  CLASS_NAME: CAPACITY_REL_CONTACT_RD
+  COMP_CODE: capRelContact
+  NAME: Contact
+  SIGNING_REQ_IND: null
+  URL: /capRelContact
+related: {}

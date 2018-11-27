@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-823160174'
+keys:
+  COMPONENT_ID: PROD_FCTY2_FCST
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/FCTY_CLASS_2/TARGET/FCTY_CLASS_2/DATA_CLASS/PROD_FCTY2_FORECAST?screentemplate=/com.ec.prod.pp.screens/prod_object_forecast
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PROD_FCTY2_FCST
+  COMPONENT_LABEL: Facility Class 2 Forecast
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_OBJECT_FCST
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 140.0
+  WINDOW_ID: ENERGYX
+related: {}

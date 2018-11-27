@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-549292319'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pd.screens/off_deferment
+parentKeys: {}
+properties:
+  BF_CODE: PD.0002.02
+  NAME: Off Deferments
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pd.screens/off_deferment
+related: {}

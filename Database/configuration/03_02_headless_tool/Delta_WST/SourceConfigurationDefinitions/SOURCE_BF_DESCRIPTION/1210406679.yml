@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1210406679'
+keys:
+  BF_DESCRIPTION_NO: SP.0022
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SP.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/payment_tracking' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>    <strong>Payment Tracking screen</strong>    allows the user to enter the actual customer payment values and dates for EC Revenue Documents, i.e. invoices sent to the customer.</p><p>    When the customer pays invoices, the actual payment may be split into several part payments. These part payments will be monitored using this BF. The part    payments may be entered and maintained directly in this business function, or they might be populated from a Payment Scheme defined in CD (Common Data),    and connected to the document setup in use.</p><p>    - The payments registered in this business function might differ from the main invoice both in terms of received/paid amount and document date / payment    received date.<br>    - Document will be available in the Payment Tracking table when the document changes level from TRANSFER to BOOKED.<br>    Only documents with DOCUMENT_LEVEL_CODE= BOOKED will be displayed.<br>    Only documents with DOCUMENT_STATUS_CODE = FINAL will be displayed.<br>    - Documents that have been reversed will not be displayed.<br>    - Reversal document will not be displayed.</p><p>    <strong>This screen is divided into following sections:</strong><br>    <strong><em>- Static Navigator</em></strong><br>    Defines the search criteria for the Document List<br>    <strong><em>- Document List</em></strong><br>    Lists all the documents found matching the Static Navigator criteria.<br>    <strong><em>- Document Details</em></strong><br>    Shows additional document details for the document selected in the Document List section.</p>
+related: {}

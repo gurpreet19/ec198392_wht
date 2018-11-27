@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1178193884'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/transaction_general
+parentKeys: {}
+properties:
+  BF_CODE: SP.0017
+  NAME: Transaction General
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/transaction_general
+related: {}

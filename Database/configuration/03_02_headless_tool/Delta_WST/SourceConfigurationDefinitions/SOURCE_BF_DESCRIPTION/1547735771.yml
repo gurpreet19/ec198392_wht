@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1547735771'
+keys:
+  BF_DESCRIPTION_NO: TO.0035
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: TO.0035
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/port_resource_usage' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The Port Resource Usage screen is used to view and keep track the usage of the port resources assigned to a cargo during loading operation. The purpose of this screen is to get an understanding when these port resources will be needed during the timeline of a cargo in the port.</p><p>The list of port resource usage item can be configured in Port Resource Usage Template (CO.2084) and instantiated when cargo is set to Ready for Harbour. If required, additional port resources item can be added to this screen. Deletion of port resource items is also possible. The template are instantiated based on the product assign to storage. It captures resource template for LOAD event. User exit package is available for the project customization to instantiate Port Resource Usage template item, and also configure Planned Start Time, Planned Duration, Planned End Time.</p><p>Custom field for timeline code and duration type allows user to enter custom planned start time and planned duration in respective field.</p><p>The last section in the screen gives facility to observed last and next usage (-3/+3 days) of the selected port resource item. The Resource Item dropdown shows port resources which are mapped with storage in Storage Port Resource Mapping screen (CO.2067).</p>
+related: {}

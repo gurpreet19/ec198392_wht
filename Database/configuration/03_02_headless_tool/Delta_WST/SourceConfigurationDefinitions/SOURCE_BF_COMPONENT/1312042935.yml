@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1312042935'
+keys:
+  BF_CODE: PO.0121
+  CLASS_NAME: TEST_DEVICE_EVENT
+  COMP_CODE: test_device_event
+  T: BF_COMPONENT
+  URL: /test_device_event
+parentKeys: {}
+properties:
+  BF_CODE: PO.0121
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/test_device_event' )
+  CLASS_NAME: TEST_DEVICE_EVENT
+  COMP_CODE: test_device_event
+  NAME: Test Device Event
+  SIGNING_REQ_IND: null
+  URL: /test_device_event
+related: {}

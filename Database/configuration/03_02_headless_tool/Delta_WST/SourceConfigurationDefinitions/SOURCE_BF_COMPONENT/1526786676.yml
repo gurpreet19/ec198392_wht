@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1526786676'
+keys:
+  BF_CODE: GD.0036
+  CLASS_NAME: TRCP_DAY_NOM_SCH
+  COMP_CODE: cp_nom_balancing
+  T: BF_COMPONENT
+  URL: /cp_nom_balancing
+parentKeys: {}
+properties:
+  BF_CODE: GD.0036
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/gas_scheduling/CLASS/TRCP_DAY_NOM_SCH/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRCP_DAY_NOM_SCH
+  COMP_CODE: cp_nom_balancing
+  NAME: Daily Company Nominations Balancing
+  SIGNING_REQ_IND: null
+  URL: /cp_nom_balancing
+related: {}

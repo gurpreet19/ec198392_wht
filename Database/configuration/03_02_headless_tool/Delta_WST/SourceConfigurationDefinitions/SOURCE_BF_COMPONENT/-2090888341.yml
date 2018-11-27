@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2090888341'
+keys:
+  BF_CODE: CO.1042
+  CLASS_NAME: null
+  COMP_CODE: copyCalculationForm
+  T: BF_COMPONENT
+  URL: /copyCalculationForm
+parentKeys: {}
+properties:
+  BF_CODE: CO.1042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/create_calculation' )
+  CLASS_NAME: null
+  COMP_CODE: copyCalculationForm
+  NAME: Copy Form
+  SIGNING_REQ_IND: null
+  URL: /copyCalculationForm
+related: {}

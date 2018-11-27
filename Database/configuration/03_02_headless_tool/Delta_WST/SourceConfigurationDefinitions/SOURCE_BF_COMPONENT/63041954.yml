@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '63041954'
+keys:
+  BF_CODE: WR.0062
+  CLASS_NAME: WELL_FLASH_GAS_COMPONENT
+  COMP_CODE: component_set
+  T: BF_COMPONENT
+  URL: /component_set
+parentKeys: {}
+properties:
+  BF_CODE: WR.0062
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/well_flash_gas_component_analysis/COMP_SET/WELL_FLSH_GS_CMP' )
+  CLASS_NAME: WELL_FLASH_GAS_COMPONENT
+  COMP_CODE: component_set
+  NAME: Component Set
+  SIGNING_REQ_IND: null
+  URL: /component_set
+related: {}

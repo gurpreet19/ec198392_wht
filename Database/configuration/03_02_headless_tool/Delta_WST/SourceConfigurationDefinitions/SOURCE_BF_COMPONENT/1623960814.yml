@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1623960814'
+keys:
+  BF_CODE: CO.0235
+  CLASS_NAME: null
+  COMP_CODE: copy_insert_new_button
+  T: BF_COMPONENT
+  URL: /copy_insert_new_btn
+parentKeys: {}
+properties:
+  BF_CODE: CO.0235
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_seasonal_value' )
+  CLASS_NAME: null
+  COMP_CODE: copy_insert_new_button
+  NAME: Copy & Insert New
+  SIGNING_REQ_IND: null
+  URL: /copy_insert_new_btn
+related: {}

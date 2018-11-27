@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2070039863'
+keys:
+  BF_CODE: SD.0017
+  CLASS_NAME: SCTR_DAY_NOM_OVERVIEW
+  COMP_CODE: daily_nom_overview
+  T: BF_COMPONENT
+  URL: /daily_nom_overview
+parentKeys: {}
+properties:
+  BF_CODE: SD.0017
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_nom_overview' )
+  CLASS_NAME: SCTR_DAY_NOM_OVERVIEW
+  COMP_CODE: daily_nom_overview
+  NAME: Daily Nomination Overview
+  SIGNING_REQ_IND: null
+  URL: /daily_nom_overview
+related: {}

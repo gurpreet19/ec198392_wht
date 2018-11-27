@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1762869409'
+keys:
+  BF_CODE: CO.0076
+  CLASS_NAME: STATUS_PROCESS_TASK
+  COMP_CODE: processTask
+  T: BF_COMPONENT
+  URL: /processTask
+parentKeys: {}
+properties:
+  BF_CODE: CO.0076
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/status_processes' )
+  CLASS_NAME: STATUS_PROCESS_TASK
+  COMP_CODE: processTask
+  NAME: Process Task
+  SIGNING_REQ_IND: null
+  URL: /processTask
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2029539591'
+keys:
+  COMPONENT_ID: CALC_MTH_COMPOSITE_ANALYSIS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.po.screens/calc_mth_composite_analysis/STRM_SET/PO.0078/COMP_SET/CALC_MTH_COMP?screentemplate=/com.ec.prod.po.screens/calc_mth_composite_analysis
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CALC_MTH_COMPOSITE_ANALYSIS
+  COMPONENT_LABEL: Calculate Monthly Composite Analysis
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_PROD_OPER_EVENT
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 23.0
+  WINDOW_ID: ENERGYX
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1087744389'
+keys:
+  BF_CODE: CP.0031
+  CLASS_NAME: null
+  COMP_CODE: view
+  T: BF_COMPONENT
+  URL: /view
+parentKeys: {}
+properties:
+  BF_CODE: CP.0031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_lifting_program' )
+  CLASS_NAME: null
+  COMP_CODE: view
+  NAME: View
+  SIGNING_REQ_IND: null
+  URL: /view
+related: {}

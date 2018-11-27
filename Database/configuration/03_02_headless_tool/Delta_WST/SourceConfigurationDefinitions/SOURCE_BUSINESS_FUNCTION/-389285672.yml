@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-389285672'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.vo/split_key/MONTHLY/TRUE/SPLIT_TYPE/STREAM_ITEM_CATEGORY
+parentKeys: {}
+properties:
+  BF_CODE: VO.0012
+  NAME: Monthly Split Key Stream Item Categories
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.vo/split_key/MONTHLY/TRUE/SPLIT_TYPE/STREAM_ITEM_CATEGORY
+related: {}

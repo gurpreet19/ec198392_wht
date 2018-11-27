@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-464734319'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/fcst_cp_finder
+parentKeys: {}
+properties:
+  BF_CODE: CP.0070
+  NAME: Cargo Planning Forecast Finder
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/fcst_cp_finder
+related: {}

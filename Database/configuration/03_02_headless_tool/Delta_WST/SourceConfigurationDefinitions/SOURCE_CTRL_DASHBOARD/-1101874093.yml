@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1101874093'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: JAVAMEM
+parentKeys: {}
+properties:
+  CACHE_POLICY: NONE
+  CATEGORY: null
+  DESCRIPTION: Live view of application server memory usage
+  LABEL: Java VM Memory
+  NAME: JavaVMMemory
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.JavaVmMemoryWidget
+  WIDGET_CODE: JAVAMEM
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1201364328'
+keys:
+  BF_DESCRIPTION_NO: GD.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/output_nomination' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to validate the received output nominations on a daily and sub daily level for transport contracts.</p><p>Typically, the nominations are processed by a message loader and loaded into the system when received. The message loader can check the value of the<br />nomination against some customer specific rules. If the nomination is passes, the nomination value will be copied to the &ldquo;accepted nomination&rdquo;, otherwise this is set&nbsp;to blank. If the nomination is automatically accepted a confirmation message is also automatically sent and the sent qty is set. All nominations and re-nominations&nbsp;are loaded with a status of Provisional. The status sets as Accepted when both parties have accepted the nomination.</p><p>If the system received a nomination that already exists, it is called a re-nomination. The above process is repeated and the new nomination overrides the old values.</p><p>The business function lists both daily and sub daily values per contract. If the sub daily values are changed the total sub daily values are aggregated to daily level.</p><p>Output nomination on contracts is always received in energy; however it could be in different type of energy e. g. joule, B.T.U. The system has to convert all&nbsp;quantities to the same unit in order to perform calculations on them.</p><p>The nomination stratus is a way for the operator to get information on where in the process the nomination is. If status is provisional, the acknowledge message&nbsp;have not been sent. If accepted, acknowledge is sent, and number is copied to Nomination Last Sent. It is the message loading module that sets these statuses.</p><p>A typical scenario is that a contact requires lesser rule matching. If so the sum of shipper-pair are listed in this screen. If the dispatcher then changes the nomination&nbsp;(i.e. enter a new value in the accepted nomination column), the nomination for the shipper-pairs are changed based on rule. The rule will be priority list of the&nbsp;shipper-pairs or pro rata.</p>
+related: {}

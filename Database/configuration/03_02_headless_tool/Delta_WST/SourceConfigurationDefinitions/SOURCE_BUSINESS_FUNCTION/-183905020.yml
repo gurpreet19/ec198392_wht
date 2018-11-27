@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-183905020'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/vatregno/CLASS_NAME/CUSTOMER/SETUP_CLASS/CUSTOMER_COUNTRY_SETUP
+parentKeys: {}
+properties:
+  BF_CODE: CD.0070
+  NAME: Customer VAT Reg No
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/vatregno/CLASS_NAME/CUSTOMER/SETUP_CLASS/CUSTOMER_COUNTRY_SETUP
+related: {}

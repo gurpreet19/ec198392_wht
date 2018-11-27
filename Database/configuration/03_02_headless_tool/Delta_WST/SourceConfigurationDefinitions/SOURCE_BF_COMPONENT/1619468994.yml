@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1619468994'
+keys:
+  BF_CODE: SD.0007
+  CLASS_NAME: SCTR_DELIVERY_EVENT
+  COMP_CODE: delivery_events
+  T: BF_COMPONENT
+  URL: /delivery_events
+parentKeys: {}
+properties:
+  BF_CODE: SD.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/delivery_events' )
+  CLASS_NAME: SCTR_DELIVERY_EVENT
+  COMP_CODE: delivery_events
+  NAME: Gas Delivery Events
+  SIGNING_REQ_IND: null
+  URL: /delivery_events
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '755220693'
+keys:
+  COMPONENT_ID: IN_VA_VT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.in/validation/LEVEL/TRANSFER/MODE/SET_TO_NEXT?screentemplate=/com.ec.revn.in/validation&tquery=/com.ec.revn.in/query/get_validation_table.xml&tlayout=/com.ec.revn.in/layout/validation_transfer_table.xml&DLC=VALID1
+  COMPONENT_EXT_NAV_NAME: /LEVEL/TRANSFER/MODE/SET_TO_NEXT?screentemplate=/com.ec.revn.in/validation&tquery=/com.ec.revn.in/query/get_validation_table.xml&tlayout=/com.ec.revn.in/layout/validation_transfer_table.xml&DLC=VALID1
+  COMPONENT_ID: IN_VA_VT
+  COMPONENT_LABEL: Inventory Transfer
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: IN_VA_REVN
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 4460.0
+  WINDOW_ID: ENERGYX
+related: {}

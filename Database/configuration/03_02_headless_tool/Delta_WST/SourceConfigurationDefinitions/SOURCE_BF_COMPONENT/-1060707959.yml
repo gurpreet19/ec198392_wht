@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1060707959'
+keys:
+  BF_CODE: PT.0012
+  CLASS_NAME: TEST_TREND_CURVE
+  COMP_CODE: trend_curve
+  T: BF_COMPONENT
+  URL: /trend_curve
+parentKeys: {}
+properties:
+  BF_CODE: PT.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/trend_and_validate_test_result' )
+  CLASS_NAME: TEST_TREND_CURVE
+  COMP_CODE: trend_curve
+  NAME: Trend Analysis Result
+  SIGNING_REQ_IND: null
+  URL: /trend_curve
+related: {}

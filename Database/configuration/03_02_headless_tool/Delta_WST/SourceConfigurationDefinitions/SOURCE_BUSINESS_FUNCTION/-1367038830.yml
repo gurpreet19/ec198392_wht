@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1367038830'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.cp.screens/fcst_schedule_lifting_jsf/CLASS1/STOR_DAY_BAL_FCST_GRAPH/CLASS2/FCST_STOR_LIFT_NOM_SCHED
+parentKeys: {}
+properties:
+  BF_CODE: CP.0033.01
+  NAME: Forecast - Schedule Lifting Chart
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.cp.screens/fcst_schedule_lifting_jsf/CLASS1/STOR_DAY_BAL_FCST_GRAPH/CLASS2/FCST_STOR_LIFT_NOM_SCHED
+related: {}

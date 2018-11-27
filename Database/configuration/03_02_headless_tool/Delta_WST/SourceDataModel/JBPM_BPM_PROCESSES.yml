@@ -1,0 +1,87 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_BPM_PROCESSES
+cnstPrimaryKey:
+  columns:
+  - PROCESS_REF_GLOBAL_ID
+  name: SYS_C008862
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  COMMENTS:
+    columnName: COMMENTS
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  DEPLOYMENT_ID:
+    columnName: DEPLOYMENT_ID
+    typeName: VARCHAR2(240)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  FUNCTIONAL_AREA_ID:
+    columnName: FUNCTIONAL_AREA_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  NAME:
+    columnName: NAME
+    typeName: VARCHAR2(64)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  PROCESS_REF_GLOBAL_ID:
+    columnName: PROCESS_REF_GLOBAL_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  PROCESS_REF_JSON:
+    columnName: PROCESS_REF_JSON
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+indexes:
+  I_BPM_PROCESES_1:
+    indexName: I_BPM_PROCESES_1
+    columns:
+    - DEPLOYMENT_ID
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

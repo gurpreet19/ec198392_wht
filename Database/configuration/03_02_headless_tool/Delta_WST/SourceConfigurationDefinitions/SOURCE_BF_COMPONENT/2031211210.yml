@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2031211210'
+keys:
+  BF_CODE: CO.2056
+  CLASS_NAME: CNTR_LIFT_ACC_SHARE
+  COMP_CODE: LastEffectiveSplit
+  T: BF_COMPONENT
+  URL: /LastEffectiveSplit
+parentKeys: {}
+properties:
+  BF_CODE: CO.2056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_lifting_account_split' )
+  CLASS_NAME: CNTR_LIFT_ACC_SHARE
+  COMP_CODE: LastEffectiveSplit
+  NAME: Last Effective Splits
+  SIGNING_REQ_IND: null
+  URL: /LastEffectiveSplit
+related: {}

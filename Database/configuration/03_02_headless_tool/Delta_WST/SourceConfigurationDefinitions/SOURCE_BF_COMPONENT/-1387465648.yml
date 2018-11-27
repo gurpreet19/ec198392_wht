@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1387465648'
+keys:
+  BF_CODE: PO.0019
+  CLASS_NAME: STRM_OIL_COMPONENT
+  COMP_CODE: component_set
+  T: BF_COMPONENT
+  URL: /component_set
+parentKeys: {}
+properties:
+  BF_CODE: PO.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/stream_oil_component_analysis/STRM_SET/PO.0019/COMP_SET/STRM_OIL_COMP' )
+  CLASS_NAME: STRM_OIL_COMPONENT
+  COMP_CODE: component_set
+  NAME: Component Set
+  SIGNING_REQ_IND: null
+  URL: /component_set
+related: {}

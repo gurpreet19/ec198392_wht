@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1320206740'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.in/verify_quantities
+parentKeys: {}
+properties:
+  BF_CODE: IN.0010
+  NAME: Inventory Quantities
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.in/verify_quantities
+related: {}

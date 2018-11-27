@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2088230226'
+keys:
+  ATTRIBUTE_TYPE: VAT_ON_ACCRUALS
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: Y
+  ATTRIBUTE_TYPE: VAT_ON_ACCRUALS
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Indicates whether the system should calculate VAT for accruals. Options are Y | N
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

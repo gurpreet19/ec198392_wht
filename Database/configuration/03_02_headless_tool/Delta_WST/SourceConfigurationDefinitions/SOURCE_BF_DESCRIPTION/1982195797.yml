@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1982195797'
+keys:
+  BF_DESCRIPTION_NO: PO.0033
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0033
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_WAT/STRM_SET/PO.0033' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to list water stream data for a Period (From &ndash; To Date) and for only one Stream. Data can be entered manually or loaded automatically. The BF requires one entry per stream per day, and Energy Components automatically creates new records for a new production day for all water streams that are part of a stream set for this screen. Thus, this BF has value instantiation for the Day start where blank line for all measured water streams will be inserted.</p>
+related: {}

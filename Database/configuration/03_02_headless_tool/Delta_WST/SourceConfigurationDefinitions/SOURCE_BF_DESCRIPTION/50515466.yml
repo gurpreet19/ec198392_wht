@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '50515466'
+keys:
+  BF_DESCRIPTION_NO: CP.0047
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0047
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_lift_acc_entitlement_chart' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to graphically display the entitlement per lifting account.</p><p>For more details with regards to basic functionality please read &quot;CP.0026 &ndash; Lifting Account Entitlement Chart&quot;.</p>
+related: {}

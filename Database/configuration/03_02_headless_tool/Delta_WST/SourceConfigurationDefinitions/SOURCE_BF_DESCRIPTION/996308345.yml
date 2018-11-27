@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '996308345'
+keys:
+  BF_DESCRIPTION_NO: GD.0057
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_available' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to view available capacity release. This is releases that are Submitted and biddable flag set. All submitted bids on the releases can be seen.</p><p>The first data section will list all releases for the selected period. Only open releases will be visible here. Open releases mean capacity releases with status set to submitted and biddable flat set.</p><p>By selecting a release the next data section will list submitted bids for the selected release. Bids with other statuses like provisional or rejected will not be listed. The bids are anonymous and it is not possible to identify who created the bid. The bid value is calculated when the bid is submitted and can be seen here. If the system was not able to calculate one, a pipeline user can calculate and enter one in Capacity Release Internal&nbsp;(GD.0058). </p><p>Since this is typically a screen that all users can use and all releases are public after they are submitted, row level security should not be turned on for classes in this business function.</p>
+related: {}

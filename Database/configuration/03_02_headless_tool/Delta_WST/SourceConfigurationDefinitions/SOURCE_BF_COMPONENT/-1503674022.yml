@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1503674022'
+keys:
+  BF_CODE: CD.0123
+  CLASS_NAME: DOC_DATE_TERM
+  COMP_CODE: search
+  T: BF_COMPONENT
+  URL: /navigator
+parentKeys: {}
+properties:
+  BF_CODE: CD.0123
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_DATE_TERM/FROM_CLASS_NAME/DOC_DATE_TERM/TO_CLASS_NAME/DOC_DATE_TERM' )
+  CLASS_NAME: DOC_DATE_TERM
+  COMP_CODE: search
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /navigator
+related: {}

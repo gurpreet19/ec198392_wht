@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '386689971'
+keys:
+  BF_DESCRIPTION_NO: GD.0150
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0150
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/contract_bundle_transfer' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to administer bundles of services that are either bought from the operator or traded with other customers within a UGS. The business&nbsp;function will show all bundles that exist within the period specified for the contract selected. After selection of a row in the bundle section, the related bundle services&nbsp;are shown in the service section.</p><p>An underground storage (UGS) is typically a nearly empty reservoir with an installation providing production- and injection capacity to the grid. The production- and&nbsp;injection capacities, together with a working volume entitlement (the maximum amount of gas present inside the storage) are usually sold together in a bundle. The&nbsp;services are sold typically from a month up to two year.</p><p>The total UGS capabilities are upfront divided into several bundles. Those are in turn offered to (potential) customers. Before the start of a service period a contract&nbsp;is drafted that contains a number of (parts of) bundles.</p><p>During the lifetime of a contract customers have the option of buying or selling part of their initial bundle size to other customers and/or the operator.</p>
+related: {}

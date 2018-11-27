@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-662744142'
+keys:
+  COMPONENT_ID: ALLOC_DAILY_SINGLE_DATE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.ha.screens/edit_daily_single_date_alloc
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ALLOC_DAILY_SINGLE_DATE
+  COMPONENT_LABEL: Daily Allocation - Single Date
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_HYDRO_ACC
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 25.0
+  WINDOW_ID: ENERGYX
+related: {}

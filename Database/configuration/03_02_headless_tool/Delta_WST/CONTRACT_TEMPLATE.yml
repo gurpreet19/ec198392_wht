@@ -1,0 +1,9 @@
+DEFAULT_REVENUE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2145835042'
+  keys:
+    T: CONTRACT_TEMPLATE
+    TEMPLATE_CODE: DEFAULT_REVENUE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

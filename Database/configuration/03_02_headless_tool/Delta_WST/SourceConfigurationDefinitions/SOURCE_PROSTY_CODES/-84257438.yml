@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-84257438'
+keys:
+  CODE: GROSS_BSW
+  CODE_TYPE: NET_MASS_METHOD
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: GROSS_BSW
+  CODE_TEXT: Gross Mass * (1-Bsw)
+  CODE_TYPE: NET_MASS_METHOD
+  DESCRIPTION: Gross Mass * (1-Bsw)
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: Y
+  SORT_ORDER: 60.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

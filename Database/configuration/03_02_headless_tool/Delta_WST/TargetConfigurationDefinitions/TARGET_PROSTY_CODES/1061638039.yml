@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1061638039'
+keys:
+  CODE: LOW
+  CODE_TYPE: MESSAGE_PRIORITY
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: Y
+  CODE: LOW
+  CODE_TEXT: Low
+  CODE_TYPE: MESSAGE_PRIORITY
+  DESCRIPTION: Low
+  IS_ACTIVE: Y
+  IS_DEFAULT: null
+  IS_SYSTEM_CODE: null
+  SORT_ORDER: 30.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

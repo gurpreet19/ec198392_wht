@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-993163645'
+keys:
+  BF_DESCRIPTION_NO: CO.2052
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2052
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/nomination_point_connection' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used configure are relationship between nomination points.</p><p>The relations ship between can be used to connect different nominations to each other.</p>
+related: {}

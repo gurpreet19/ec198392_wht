@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1021210113'
+keys:
+  BF_DESCRIPTION_NO: MHM.0003
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: MHM.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/value_map' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to maintain the value map used by the message broker when transforming inbound and outbound messages. The value map is stored in the message broker extention and is external to EC. The data access for retrieving and storing the values is done by the project specific EC–MHM adapter.</p><p>Even if the EC–MHM adapter does the retrieving and storing to the value map, the column names have to be as described for the screen to behave properly.</p>
+related: {}

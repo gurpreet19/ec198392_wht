@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1676543922'
+keys:
+  BF_CODE: PD.0022
+  CLASS_NAME: null
+  COMP_CODE: new_masterEvent_button/go_button
+  T: BF_COMPONENT
+  URL: /new_masterEvent_button/com.ec.pf.screenlet.button/button
+parentKeys: {}
+properties:
+  BF_CODE: PD.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/equip_downtime' )
+  CLASS_NAME: null
+  COMP_CODE: new_masterEvent_button/go_button
+  NAME: New Master Event Button/Go Button
+  SIGNING_REQ_IND: null
+  URL: /new_masterEvent_button/com.ec.pf.screenlet.button/button
+related: {}

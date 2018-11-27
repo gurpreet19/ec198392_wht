@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1474632587'
+keys:
+  BF_CODE: GD.0111
+  CLASS_NAME: TRNL_EVENT_PROD_FAC_DAY
+  COMP_CODE: daytime
+  T: BF_COMPONENT
+  URL: /daytime
+parentKeys: {}
+properties:
+  BF_CODE: GD.0111
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/product_component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/TRNL_EVENT_PROD_CP_FAC/BF_PROFILE/GD.0111/CLASS_DAY/TRNL_EVENT_PROD_FAC_DAY/DIM1/PRODUCT_ID_POPUP' )
+  CLASS_NAME: TRNL_EVENT_PROD_FAC_DAY
+  COMP_CODE: daytime
+  NAME: Daytime
+  SIGNING_REQ_IND: null
+  URL: /daytime
+related: {}

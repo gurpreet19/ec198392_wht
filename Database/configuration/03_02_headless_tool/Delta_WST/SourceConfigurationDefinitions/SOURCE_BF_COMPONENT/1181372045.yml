@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1181372045'
+keys:
+  BF_CODE: PP.0044
+  CLASS_NAME: CALC_PROD_FCST_LOG
+  COMP_CODE: calculations
+  T: BF_COMPONENT
+  URL: /calculations
+parentKeys: {}
+properties:
+  BF_CODE: PP.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/calculate_forecast' )
+  CLASS_NAME: CALC_PROD_FCST_LOG
+  COMP_CODE: calculations
+  NAME: Process Diagram Calculation
+  SIGNING_REQ_IND: null
+  URL: /calculations
+related: {}

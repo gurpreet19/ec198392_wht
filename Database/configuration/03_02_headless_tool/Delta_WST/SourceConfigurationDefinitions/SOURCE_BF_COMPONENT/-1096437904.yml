@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1096437904'
+keys:
+  BF_CODE: CO.0151
+  CLASS_NAME: SYSTEM_REF_VALUE
+  COMP_CODE: systemRefTable
+  T: BF_COMPONENT
+  URL: /systemRefTable
+parentKeys: {}
+properties:
+  BF_CODE: CO.0151
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/system_ref_value' )
+  CLASS_NAME: SYSTEM_REF_VALUE
+  COMP_CODE: systemRefTable
+  NAME: System Reference Value Table
+  SIGNING_REQ_IND: null
+  URL: /systemRefTable
+related: {}

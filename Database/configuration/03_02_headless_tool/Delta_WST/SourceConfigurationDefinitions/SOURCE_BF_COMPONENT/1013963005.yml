@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1013963005'
+keys:
+  BF_CODE: VO.0019
+  CLASS_NAME: STIM_MTH_VALUE_CONV
+  COMP_CODE: table_conv
+  T: BF_COMPONENT
+  URL: /table_conv
+parentKeys: {}
+properties:
+  BF_CODE: VO.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/monthly_list_input' )
+  CLASS_NAME: STIM_MTH_VALUE_CONV
+  COMP_CODE: table_conv
+  NAME: Conversion Table
+  SIGNING_REQ_IND: null
+  URL: /table_conv
+related: {}

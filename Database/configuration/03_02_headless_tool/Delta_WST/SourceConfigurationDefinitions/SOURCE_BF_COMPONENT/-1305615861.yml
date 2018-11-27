@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1305615861'
+keys:
+  BF_CODE: IN.0013
+  CLASS_NAME: INV_PROCESS_GENERAL
+  COMP_CODE: process_general
+  T: BF_COMPONENT
+  URL: /process_general
+parentKeys: {}
+properties:
+  BF_CODE: IN.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/process_general' )
+  CLASS_NAME: INV_PROCESS_GENERAL
+  COMP_CODE: process_general
+  NAME: Process General
+  SIGNING_REQ_IND: null
+  URL: /process_general
+related: {}

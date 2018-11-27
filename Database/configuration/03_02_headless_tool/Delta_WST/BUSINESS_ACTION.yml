@@ -1,0 +1,561 @@
+NAME=BpmEventInboundWatcherAction FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1750765582'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: BpmEventInboundWatcherAction
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=BpmProcessInstanceCleanUpAction FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1449535025'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: BpmProcessInstanceCleanUpAction
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=BpmSchedulerEnvHandler FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '719409545'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: BpmSchedulerEnvHandler
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=CalculatePVTAction FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-392844988'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: CalculatePVTAction
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=DailyDefermentCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1516162708'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: DailyDefermentCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=DefermentRecalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1695454020'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: DefermentRecalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=Deleting FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '911773338'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: Deleting
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
+NAME=FinItemDailyCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-16966056'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: FinItemDailyCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=FinItemMonthlyCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1888724300'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: FinItemMonthlyCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=FinItemYearlyCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-21822559'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: FinItemYearlyCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=GenerateReportLayer FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-270174306'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: GenerateReportLayer
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=MonthlyGasComposite FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2100746389'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: MonthlyGasComposite
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=ProdForecastCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '369363279'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: ProdForecastCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_BOEConversionFactorSetup FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1221918706'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_BOEConversionFactorSetup
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_BatchImportERPMsg FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1423325113'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_BatchImportERPMsg
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_CalculateDocuments FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1800263840'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_CalculateDocuments
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_Cascade FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2084345826'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_Cascade
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_CascadeCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1197889597'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_CascadeCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_ConversionFactorSetup FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1781233634'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_ConversionFactorSetup
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_CreateDataExtractMonth FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1720401485'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_CreateDataExtractMonth
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_CreateDataExtractSetMonth FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1601034883'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_CreateDataExtractSetMonth
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_CreateDataExtractTracing FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1841833461'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_CreateDataExtractTracing
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_CreateDataExtractYear FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1898726946'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_CreateDataExtractYear
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_DocProcess FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1446898725'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_DocProcess
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_DocProcessDelLog FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1075078242'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_DocProcessDelLog
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_DsGenDataMappingTracing FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '530413943'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_DsGenDataMappingTracing
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_DsPostSetup FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1924751640'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_DsPostSetup
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_DsSourceSetup FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1934532637'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_DsSourceSetup
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_ERPDocProcess FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-892388868'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_ERPDocProcess
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_GenPendingReports FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1802958594'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_GenPendingReports
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_GenReverseDocuments FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1213078416'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_GenReverseDocuments
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_ImportVOQuantities FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1507499061'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_ImportVOQuantities
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_InstantiateDayVO FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1307240295'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_InstantiateDayVO
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_InstantiateDaysVO FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1495849988'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_InstantiateDaysVO
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_InstantiateMthVO FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1774619838'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_InstantiateMthVO
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_InstantiateNextDayVO FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1890917830'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_InstantiateNextDayVO
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_InstantiateNextMthVO FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-677810667'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_InstantiateNextMthVO
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_PopulateDataExtractYear FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1805665972'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_PopulateDataExtractYear
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_PopulateForecastCase FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1460812381'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_PopulateForecastCase
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_ReEstablishSTIMFCST FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-505857715'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_ReEstablishSTIMFCST
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_ResetAllDocSeqNumber FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '396213936'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_ResetAllDocSeqNumber
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_RunDataMapping FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-302892807'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_RunDataMapping
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_RunDataMappingTest FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '955699207'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_RunDataMappingTest
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_UpdateSplitKey FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1507949316'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_UpdateSplitKey
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_ValidateDayVO FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-424608617'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_ValidateDayVO
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=REVN_ValidateMthVO FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '788498546'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: REVN_ValidateMthVO
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=RefreshMaterializedClassViews FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1904496194'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: RefreshMaterializedClassViews
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=ReleaseFalseBlockingJobs FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-142818693'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: ReleaseFalseBlockingJobs
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=ReportEngine_Post FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2080692419'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: ReportEngine_Post
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=ReportEngine_Pre FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-246748376'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: ReportEngine_Pre
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=ReportSetEngine_v2 FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '691214455'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: ReportSetEngine_v2
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=RoyaltyCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1782812155'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: RoyaltyCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=RunForeCastPLSQLCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-514536695'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: RunForeCastPLSQLCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=SchedulesCleanup FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1492612602'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: SchedulesCleanup
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=TransInvCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1969878138'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: TransInvCalculation
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NAME=WebServiceGenerator FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1449514388'
+  keys:
+    FUNCTIONAL_AREA_ID: null
+    NAME: WebServiceGenerator
+    T: BUSINESS_ACTION
+  parentKeys: {}
+  properties:
+    ACTION_CLASS_NAME: com.ec.frmw.is.ws.businessaction.WebServiceGenerationBusinessAction
+  related: {}
+  status: MODIFIED

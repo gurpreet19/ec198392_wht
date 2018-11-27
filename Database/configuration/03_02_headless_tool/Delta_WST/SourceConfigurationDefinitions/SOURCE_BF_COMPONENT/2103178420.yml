@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2103178420'
+keys:
+  BF_CODE: PT.0012
+  CLASS_NAME: TREND_ANALYSIS_CONFIG
+  COMP_CODE: test_result_trend_analysis
+  T: BF_COMPONENT
+  URL: /test_result_trend_analysis
+parentKeys: {}
+properties:
+  BF_CODE: PT.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/trend_and_validate_test_result' )
+  CLASS_NAME: TREND_ANALYSIS_CONFIG
+  COMP_CODE: test_result_trend_analysis
+  NAME: Trend Analysis Configuration
+  SIGNING_REQ_IND: null
+  URL: /test_result_trend_analysis
+related: {}

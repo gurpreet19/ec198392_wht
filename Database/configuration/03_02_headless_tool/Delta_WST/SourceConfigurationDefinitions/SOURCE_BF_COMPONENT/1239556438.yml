@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1239556438'
+keys:
+  BF_CODE: CP.0004
+  CLASS_NAME: CARGO_NOM_DETAIL
+  COMP_CODE: cargoDetail
+  T: BF_COMPONENT
+  URL: /cargoDetail
+parentKeys: {}
+properties:
+  BF_CODE: CP.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/nomination_details' )
+  CLASS_NAME: CARGO_NOM_DETAIL
+  COMP_CODE: cargoDetail
+  NAME: Cargo Detail
+  SIGNING_REQ_IND: null
+  URL: /cargoDetail
+related: {}

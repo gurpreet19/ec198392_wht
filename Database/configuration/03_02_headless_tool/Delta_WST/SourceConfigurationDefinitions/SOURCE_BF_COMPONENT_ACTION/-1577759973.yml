@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1577759973'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0061' AND NVL(URL,'IS_NULL') = '/property_list' AND COMP_CODE ='property_list' AND NVL(CLASS_NAME,'IS_NULL') = 'PROPERTY_JOB_CONN')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0061' AND NVL(URL,'IS_NULL') = '/property_list' AND COMP_CODE ='property_list' AND NVL(CLASS_NAME,'IS_NULL') = 'PROPERTY_JOB_CONN')
+  COMMENTS: null
+  NAME: Property List /save
+  URL: /save
+related: {}

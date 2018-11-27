@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2000008172'
+keys:
+  STREAM_SET: WR.0078
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Monthly Allocated Production Well Data
+  STREAM_SET: WR.0078
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1287735296'
+keys:
+  BF_CODE: GD.0084
+  CLASS_NAME: TRCN_QUALITY_COMP
+  COMP_CODE: contract_quality_comp
+  T: BF_COMPONENT
+  URL: /contract_quality_comp
+parentKeys: {}
+properties:
+  BF_CODE: GD.0084
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/contract_quality_handling/CLASS/TRCN_QUALITY_HANDLING' )
+  CLASS_NAME: TRCN_QUALITY_COMP
+  COMP_CODE: contract_quality_comp
+  NAME: Contract Quality Comp
+  SIGNING_REQ_IND: null
+  URL: /contract_quality_comp
+related: {}

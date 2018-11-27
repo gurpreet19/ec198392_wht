@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-873774687'
+keys:
+  BF_CODE: PO.0107
+  CLASS_NAME: STRM_DAY_STREAM_ATTACH
+  COMP_CODE: daily_attach
+  T: BF_COMPONENT
+  URL: /daily_attach
+parentKeys: {}
+properties:
+  BF_CODE: PO.0107
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_stream_status_extended' )
+  CLASS_NAME: STRM_DAY_STREAM_ATTACH
+  COMP_CODE: daily_attach
+  NAME: Attachment
+  SIGNING_REQ_IND: null
+  URL: /daily_attach
+related: {}

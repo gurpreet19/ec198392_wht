@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1789048286'
+keys:
+  KEY: com/ec/frmw/jsf/maxtablepagesize
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: EC_SETTING
+  DATATYPE: NUMBER
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: 250.0
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Maximum Table Page Size
+  KEY: com/ec/frmw/jsf/maxtablepagesize
+  LABEL: Maximum Table Page Size
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

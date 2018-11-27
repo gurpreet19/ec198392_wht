@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '792737158'
+keys:
+  BF_CODE: PA.0002
+  CLASS_NAME: BUSINESS_ACTION_JBPM
+  COMP_CODE: busAction
+  T: BF_COMPONENT
+  URL: /busAction
+parentKeys: {}
+properties:
+  BF_CODE: PA.0002
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_process_template' )
+  CLASS_NAME: BUSINESS_ACTION_JBPM
+  COMP_CODE: busAction
+  NAME: Business Action
+  SIGNING_REQ_IND: null
+  URL: /busAction
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '174332758'
+keys:
+  BF_CODE: PD.0004
+  CLASS_NAME: DEF_DAY_MASTER_EVENT
+  COMP_CODE: MasterDefermentTable
+  T: BF_COMPONENT
+  URL: /MasterDefermentTable
+parentKeys: {}
+properties:
+  BF_CODE: PD.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_deferment_master' )
+  CLASS_NAME: DEF_DAY_MASTER_EVENT
+  COMP_CODE: MasterDefermentTable
+  NAME: Master Event
+  SIGNING_REQ_IND: null
+  URL: /MasterDefermentTable
+related: {}

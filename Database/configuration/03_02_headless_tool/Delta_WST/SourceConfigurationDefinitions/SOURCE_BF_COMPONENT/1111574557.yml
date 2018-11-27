@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1111574557'
+keys:
+  BF_CODE: CP.0025
+  CLASS_NAME: STORAGE_DAY_GRAPH
+  COMP_CODE: storage_graph
+  T: BF_COMPONENT
+  URL: /storage_graph
+parentKeys: {}
+properties:
+  BF_CODE: CP.0025
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/storage_tank_chart' )
+  CLASS_NAME: STORAGE_DAY_GRAPH
+  COMP_CODE: storage_graph
+  NAME: Storage Graph
+  SIGNING_REQ_IND: null
+  URL: /storage_graph
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-736603018'
+keys:
+  ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+  DAYTIME: 2003-03-30T01:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: UTC2LOCAL_DIFF
+  ATTRIBUTE_VALUE: 1.0
+  COMMENTS: Change to summertime 2003
+  DAYTIME: 2003-03-30T01:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

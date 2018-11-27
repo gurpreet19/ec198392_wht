@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-710614674'
+keys:
+  COMPONENT_ID: LIFTING_ACC_MAINTAIN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.co.screens/lifting_account
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: LIFTING_ACC_MAINTAIN
+  COMPONENT_LABEL: Lifting Account
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 30.0
+  WINDOW_ID: ENERGYX
+related: {}

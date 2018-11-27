@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1230231460'
+keys:
+  COMPONENT_ID: MSG_MAPPING_TABLE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.frmw.mhm.screens/value_map?screentemplate=/com.ec.frmw.mhm.screens/value_map
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: MSG_MAPPING_TABLE
+  COMPONENT_LABEL: Value Mapping Maintenance
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: SYS_MESSAGE
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 100.0
+  WINDOW_ID: ENERGYX
+related: {}

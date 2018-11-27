@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '881674514'
+keys:
+  BF_CODE: GD.0086
+  CLASS_NAME: TRNP_DAY_TRANSF_SUPP_VAL
+  COMP_CODE: nompntsummpliertransfervalidation
+  T: BF_COMPONENT
+  URL: /nompntsummpliertransfervalidation
+parentKeys: {}
+properties:
+  BF_CODE: GD.0086
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_nomination_point_transfer_validation/CLASS_1/TRNP_DAY_TRANSFER_VAL/CLASS_2/TRNP_DAY_TRANSF_SUPP_VAL/COLUMN_SORT/DAYTIME/SORT_TYPE/ASC' )
+  CLASS_NAME: TRNP_DAY_TRANSF_SUPP_VAL
+  COMP_CODE: nompntsummpliertransfervalidation
+  NAME: Nom Point Supplier Transfers Validation
+  SIGNING_REQ_IND: null
+  URL: /nompntsummpliertransfervalidation
+related: {}

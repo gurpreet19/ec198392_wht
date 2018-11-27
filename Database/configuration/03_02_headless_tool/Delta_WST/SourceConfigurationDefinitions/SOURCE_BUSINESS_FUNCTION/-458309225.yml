@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-458309225'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.sale.co.screens/price_index_factor/CLASS/PRICE_INDEX_FACTOR/NAV_MODEL/FINANCIAL/TARGET/PRICE_OBJECT/TARGET_TYPE/self
+parentKeys: {}
+properties:
+  BF_CODE: CO.3020
+  NAME: Price Index Factor
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.sale.co.screens/price_index_factor/CLASS/PRICE_INDEX_FACTOR/NAV_MODEL/FINANCIAL/TARGET/PRICE_OBJECT/TARGET_TYPE/self
+related: {}

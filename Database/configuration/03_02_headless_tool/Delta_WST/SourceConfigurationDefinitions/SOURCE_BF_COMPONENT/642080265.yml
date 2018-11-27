@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '642080265'
+keys:
+  BF_CODE: CO.0246
+  CLASS_NAME: FIN_ITEM_GROUP
+  COMP_CODE: objectForm
+  T: BF_COMPONENT
+  URL: /objectform_fin_item_group
+parentKeys: {}
+properties:
+  BF_CODE: CO.0246
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/calculation_group' )
+  CLASS_NAME: FIN_ITEM_GROUP
+  COMP_CODE: objectForm
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /objectform_fin_item_group
+related: {}

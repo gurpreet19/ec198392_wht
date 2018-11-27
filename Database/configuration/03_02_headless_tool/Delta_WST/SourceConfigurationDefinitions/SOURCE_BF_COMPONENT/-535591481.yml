@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-535591481'
+keys:
+  BF_CODE: GD.0046
+  CLASS_NAME: null
+  COMP_CODE: dateStartJob
+  T: BF_COMPONENT
+  URL: /dateStartJob
+parentKeys: {}
+properties:
+  BF_CODE: GD.0046
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/monthly_disp_calc/NOMINATION_CYCLE/false' )
+  CLASS_NAME: null
+  COMP_CODE: dateStartJob
+  NAME: Date Start Job
+  SIGNING_REQ_IND: null
+  URL: /dateStartJob
+related: {}

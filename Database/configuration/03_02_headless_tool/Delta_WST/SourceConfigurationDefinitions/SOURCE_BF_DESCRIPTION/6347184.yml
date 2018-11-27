@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '6347184'
+keys:
+  BF_DESCRIPTION_NO: GD.0092
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0092
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_contract_capacity_request/CLASS_1/CNTR_DAY_CAPACITY_REQ/CLASS_2/CNTR_CAPACITY_DAY_TRANS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business function is used to view and analyze each contract capacity daily planned Linepack changes based upon releasable operational capacity transactions, like Lineflex and Parking&nbsp;(future). This screen is typically used to review the planned Lineflex build-up and ramp-down before and during a maintenance period.</p><p>This screen is able to show requested, accepted and declined Linepack transaction requests per contract capacity, each change shown in this screen may originate from multiple overlapping requests, therefore no editing is allowed In the 1st data section.</p><p>The second data section in the first tab list all capacity transactions on the contract capacity for selected day. Transactions can be several types like, a transaction can be duplicated on the same day.</p><p>The graph found on the &quot;Capacity Graph&quot; tab will display all quantities in the Capacity tab graphically. The graph will show contract capacity Daily request and accumulated request.</p><p>Actual injections and withdrawals cannot be seen in this screen. This information&nbsp;(Linepack transaction) can be found in GD.0092 &ndash; Daily Contract Inventory Matrix screen. </p>
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1881990048'
+keys:
+  BF_CODE: CO.0132
+  CLASS_NAME: CLUSTER_JOB
+  COMP_CODE: jobs
+  T: BF_COMPONENT
+  URL: /jobs
+parentKeys: {}
+properties:
+  BF_CODE: CO.0132
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_scheduler' )
+  CLASS_NAME: CLUSTER_JOB
+  COMP_CODE: jobs
+  NAME: Running Jobs
+  SIGNING_REQ_IND: null
+  URL: /jobs
+related: {}

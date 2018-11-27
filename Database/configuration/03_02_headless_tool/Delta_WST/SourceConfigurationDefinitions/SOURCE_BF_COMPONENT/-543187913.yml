@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-543187913'
+keys:
+  BF_CODE: FC.0016
+  CLASS_NAME: FCST_ANALYSIS_COMPONENT
+  COMP_CODE: compo
+  T: BF_COMPONENT
+  URL: /compo
+parentKeys: {}
+properties:
+  BF_CODE: FC.0016
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.fc.screens/forecast_analysis_nomination_point/CLASS/FCST_NOMPNT_ANALYSIS' )
+  CLASS_NAME: FCST_ANALYSIS_COMPONENT
+  COMP_CODE: compo
+  NAME: Compo
+  SIGNING_REQ_IND: null
+  URL: /compo
+related: {}

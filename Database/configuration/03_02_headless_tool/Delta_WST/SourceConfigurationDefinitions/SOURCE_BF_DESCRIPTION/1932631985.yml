@@ -1,0 +1,165 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1932631985'
+keys:
+  BF_DESCRIPTION_NO: IN.0013
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: IN.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/process_general' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>\t<strong>Inventory Process screen</strong> gives an overview of\
+    \ a selected inventory, and the user might process the inventory for the first\
+    \ time or again in this screen.</p><p>As long as the selected Inventory has its\
+    \ Inventory Level set to OPEN it can be re-processed any number of times. <br>The\
+    \ same Process Inventory function is also available at Inventory Rates screen\
+    \ (BF IN.0011) for re-processing after any change of the underlift/overlift rates.</p><p>\t\
+    <strong>Button <span style=\"color: rgb(0, 153, 0);\">Process Inventory</span></strong>\
+    \ <br>The button trigges the process to calculate the total movement and positions\
+    \ for each of the inventory fields. <br>All quantity values have to be entered\
+    \ and updated through the VO module. The values will then be copied to the IN\
+    \ value table when pressing the \"Process Inventory\" button.</p><p>The \"Process\
+    \ Inventory\" procedure calculates all necessary quantities and financial values\
+    \ needed to evaluate inventories. The procedure is built up with the following\
+    \ sections: <br>- Instantiate the inventory processing table (INV_VALUATION) for\
+    \ the selected Inventory.<br>- Instantiate the valuation tables for distribution\
+    \ (INV_DIST_VALUATION) for the Fields taking part in the Inventory. <br>- Instantiate\
+    \ the layer table (INV_LAYER) <br>- Copy stream item values pr. Field from the\
+    \ VO tables to the IN tables according to the stream item definitions of the inventory\
+    \ as defined in the Inventory Item Selection screen (BF IN.0007). <br>These quantity\
+    \ values are copied to the STIM_MTH_INV_BOOKED table. <br>- Calculate inventory\
+    \ position per Field. The inventory position is stored at the INV_DIST_VALUATION\
+    \ table. <br>- Calculate a weighted average rate based on each Field rate and\
+    \ contribution to the inventory from each Field. The rate is stored at the INV_VALUATION\
+    \ table. <br>- Calculate total Inventory position, either underlift or overlift.\
+    \ Data is stored at the INV_LAYER and INV_VALUATION tables. <br>- Perform Field\
+    \ allocation of the financial values based on the production rates for each Field.\
+    \ Data is stored at the INV_DIST_VALUATION table.</p><p>The following sections\
+    \ describe these operations in more detail.</p><h3>\t<strong style=\"color: rgb(0,\
+    \ 0, 153);\">Instantiation of Valuation Tables</strong></h3>\t\t<p>When the processing\
+    \ of an inventory starts, the inventory to process is established with the inventory\
+    \ code and a date (month for the processing) in the INV_VALUATION table. <br>If\
+    \ an inventory is re-processed for a given month there will be no new instances\
+    \ in the INV_VALUATION table. This table will hold processing information at <br>inventory\
+    \ level: <br>- Total financial values for overlift / underlift, <br>- Opening\
+    \ position, <br>- Closing position, <br>- Movement for current month, <br>- Movement\
+    \ YTD, <br>- Total position, <br>- Underlift rate, <br>- Overlift price (entered\
+    \ by the user in case of Overlift).</p><p>Then the Field valuation records are\
+    \ instantiated in the INV_DIST_VALUATION table based on the Inventory (Field relation\
+    \ defined by the Field assigned to the inventory). <br>This table will hold Field\
+    \ allocated values where the allocation is based on each Fields production numbers.The\
+    \ table will hold both financial values and quantities. <br>This table also contains\
+    \ debit/credit posting information such as Posting key, Account, and Cost object\
+    \ / Revenue order.This table is the basis for posting to the financial system.</p><p>Then\
+    \ the STIM_MTH_INV_BOOKED is instantiated for all Inventory source stream items\
+    \ assigned to the inventory. This table will hold the monthly inventory movement\
+    \ quantities converted into 13 different UOMs used for reporting. <br>Once the\
+    \ Fields and Stream items are instantiated with the same date as the inventory,\
+    \ the source stream item values for the inventory movement pr. Field will be copied\
+    \ from the VO module to the IN-module for further use. <br>It is important that\
+    \ the quantities found in the stream items are converted to the UOM1 and UOM2\
+    \ defined for the inventory. The conversion of the quantities follows the standard\
+    \ EC Revenue conversion algorithm.</p><h3>\t<strong style=\"color: rgb(0, 0, 153);\"\
+    >Calculate Field Position</strong></h3>\t\t\t\t<p>When the stream item values\
+    \ are available for processing (converted to the right UOMs), the Field position\
+    \ can be calculated. <em>The following steps have to be performed for these calculations:</em>\
+    \ <br>1. Calculate and store the total movement for the Field for the current\
+    \ month by summing all quantities for the different line items defined for a Field.\
+    \ <br>2. Calculate and store the total YTD movement for the Field by summing the\
+    \ values for all stream items for the Field selected for all processed months\
+    \ in the current year. <br>3. Calculate the Prior Year Adjustment using the following\
+    \ method: <br>a. Find all the movements (stream_item_values in VO) that have adjustments\
+    \ entered in the current year for a month in a previous year. <br>b. Find the\
+    \ difference between the movements and the actual registered number for that month.\
+    \ <br>To do this find the latest revision (if any) for the stream item value from\
+    \ the prior period that have a last_updated_date in the current year, and subtract\
+    \ this from the latest revision of the same stream item value with entering date\
+    \ and last_updated_data prior to January 1 of the current year. <br>This is done\
+    \ by finding the difference for the stream item value by comparing the stream\
+    \ item values found in the as-is table (STIM_MTH_ACTUAL) and the booked table\
+    \ (STIM_MTH_BOOKED). <br>When changing a stream item value for a closed period\
+    \ the difference for the value is stored in the booked table for the current booking\
+    \ period. <br>4. Convert the found difference to the inventory UOMs <br>5. Calculate\
+    \ and store the new closing inventory position by adding the movement to the opening\
+    \ position for the Field selected. <br>If the inventory closing position &lt;\
+    \ 0 set the Closing Inventory Position = 0 and update the Closing Overlift Position\
+    \ with the difference between YTD Movement and Year Opening Position. <br>If the\
+    \ Inventory Closing Position &gt;= 0 set the Closing Overlift Position = 0</p><h3>\t\
+    \t<span style=\"color: rgb(0, 0, 153);\">\t<strong>Calculate Average Rates</strong>\t\
+    </span>\t</h3>\t<p>The next step in the processing of an inventory is the calculation\
+    \ and storage of an average production rate used for underlift valuation. <br>In\
+    \ case of an overlift situation the average sales price need to be entered into\
+    \ the system at valuation time.</p><p> <u> The process for calculation the weighted\
+    \ average production rate for the inventory is as follows:</u> <br>1. Convert\
+    \ and store production rates (defined by the production source stream items in\
+    \ the inventory set-up) and quantities (from the VO stream item) to the valuation\
+    \ object. <br>2. Calculate and store the YTD production for each Field by summing\
+    \ the values for all stream items defined in the Inventory set-up.<br>3. Copy\
+    \ the total production rates for each Field from the inventory set-up to the transaction.<br>4.\
+    \ Calculate and store the total YTD production for the total Inventory by summing\
+    \ the YTD production values for all Fields.<br>5. Calculate and store the weighted\
+    \ avg. production rate for the total inventory.</p><h3>\t<span style=\"color:\
+    \ rgb(0, 0, 153);\">\t<strong>Calculate Total Inventory Position</strong>\t</span>\t\
+    </h3>\t<p>The next step in the process is to calculate the Total Inventory Position\
+    \ and the calculation of the layers at the actual month.</p><p>To calculate the\
+    \ closing value for other currencies than the pricing values use the exchange\
+    \ rates defined by the fx-type specified on the inventory set-up. <br>The fx-type\
+    \ determines if conversions to other currencies should use the last available\
+    \ exchange rate or the average rate of the month.</p><p>Closing Position Quantity\
+    \ is calculated by adding the YTD Movement to the Year Opening Position.</p><p>Closing\
+    \ Position Value for the Inventory is calculated by multiplying the Closing Position\
+    \ Quantity with the average production rate. <br>If the inventory is in an overlift\
+    \ position, calculate the Overlift Closing Value as the overlift rate times Closing\
+    \ Overlift Quantity.</p><h3>\t<span style=\"color: rgb(0, 0, 153);\">\t<strong>Perform\
+    \ Field Allocation</strong>\t</span>\t</h3><p>In an underlift situation the Field\
+    \ allocation section uses the closing position for each Field to allocate the\
+    \ financial values. <br>To calculate the price values for each Field, the closing\
+    \ position for each Field has to be multiplied with the calculated avg. underlift\
+    \ rate for the total inventory.</p><p>The other currency values are then calculated\
+    \ using the exchange rates defined by the fx-type and the currencies for underlift\
+    \ (other, booking) defined for the inventory.</p><p>In case of the inventory being\
+    \ in overlift position the price value is calculated by multiplying each Fields\
+    \ overlift contribution with the avg. overlift price for the inventory. <br>The\
+    \ values for the other currencies are calculated using the exchange rates defined\
+    \ by the fx-type and the currencies for overlift (other, booking).</p><h3>\t<span\
+    \ style=\"color: rgb(0, 0, 153);\">\t<strong>Reports</strong></span></h3>\t\t\
+    <p>This tab shows the generated reports for current document, and contains sections\
+    \ for:</p><p>\t<strong><u>1.Data section:</u> Reports </strong>- This section\
+    \ allows creating various reports for the selected document. <br>Which report\
+    \ to run is selected in the 'Reports' drop-down. The content of this drop-down\
+    \ is controlled by the configuration in Report Document Setup screen (BF CD.0103).</p><p>\t\
+    <strong>Button <span style=\"color: rgb(0, 153, 0);\">Generate Report</span></strong>\t\
+    \t <br>Generate Report button will generate the report and store it in the EC\
+    \ database.\t</p><p>\t\t\t<strong><u>2.Data section:</u> Reports list </strong>-\
+    \ The section contains produced report(s). <br>Here the report can be viewed as\
+    \ well as verified and sent.</p><p>\t<strong>Button <span style=\"color: rgb(0,\
+    \ 153, 0);\"> Regenerate Selected Report</span></strong> <br>This button will\
+    \ delete the selected report and regenerate it. Provisional reports will be deleted\
+    \ only.<br><strong>Button <span style=\"color: rgb(0, 153, 0);\">Regenerate All\
+    \ Reports</span></strong>\t\t <br>This button will delete all reports and regenerate\
+    \ them. Provisional reports will be deleted only.\t<br>\t\t<strong>Button <span\
+    \ style=\"color: rgb(0, 153, 0);\">View</span></strong>\t\t <br>This button will\
+    \ download and view selected report.<br>\t\t\t<strong>Button <span style=\"color:\
+    \ rgb(0, 153, 0);\">Send</span></strong>\t\t <br>This button will open a pop up\
+    \ to send the selected report.\t<br>\t\t\t<strong>Button <span style=\"color:\
+    \ rgb(0, 153, 0);\">Refresh</span></strong>\t\t <br>This button will refresh the\
+    \ report list table.\t\t\t\t\t\t</p><h3>\t<span style=\"color: rgb(0, 0, 153);\"\
+    >\t<strong>Tab Parameter Values</strong></span></h3>\t\t\t<p>This tab shows the\
+    \ list of parameters used when the report was created\t\t</p>\t\t<h3>\t<span style=\"\
+    color: rgb(0, 0, 153);\">\t<strong>Tab Distribution Configuration</strong></span></h3><p>This\
+    \ tab is for maintaining the distribution list for the selected report name, which\
+    \ is to be used for the Send button. When a distribution is set for one report\
+    \ name, all reports with this report name will have the same distribution. <br>Then\
+    \ <u>all documents</u> which have reports with this report name,will have the\
+    \ same distribution.\t\t\t\t <br>The report will need at least one list per Report\
+    \ Status:</p>\t\t\t\t\t <dir>\t\t<li><u>Provisional:</u> To be able to send Provisonal\
+    \ reports, at least one Distribution List is needed.</li>\t\t<li><u>Verified:</u>\
+    \ To be able to send Verified reports, at least one Distribution List is needed.</li>\t\
+    \t<li><u>Approved:</u> To be able to send Approved reports, at least one Distribution\
+    \ List is needed.</li>\t\t</dir>\t\t\t\t<h3>\t<span style=\"color: rgb(0, 0, 153);\"\
+    >\t<strong>Tab Send Log</strong></span></h3><p>This tab shows a log of dates when\
+    \ the report was sent. It also shows a list of recipients for each send date.</p>\t\
+    \t\t\t<h3>\t<span style=\"color: rgb(0, 0, 153);\">\t<strong>Tab Publish Report</strong></span></h3><p>This\
+    \ tab is used to give users access to a limited number of generated reports.</p>\t"
+related: {}

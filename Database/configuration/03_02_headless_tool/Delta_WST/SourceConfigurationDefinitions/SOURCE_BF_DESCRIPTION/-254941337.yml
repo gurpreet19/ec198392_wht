@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-254941337'
+keys:
+  BF_DESCRIPTION_NO: CO.2045
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2045
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/contract_period_capacity/NAV_MODEL/TRAN_COMMERCIAL/BF_PROFILE/CO.2045/TARGET_TYPE/self/TARGET/CONTRACT_CAPACITY/FORCE_NAV_CLASS/CONTRACT' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function list all capacity overrides for contract capacity objects.</p><p>The default capacity a contract has against a operational location is stored in Contract Capacity (CO.2044), but if there for instance is a capacity release or a recall&nbsp;the capacity is reduced for a period. The reduced capacity can be seen here.</p><p>By using the insert button the user can manually override the design capacity for a period, and it can be adjusted to the capacity. It will allow multiple reserved capacity for the same contract capacity on a day.</p><p>The reserved capacities can be transferred from one contract capacity to another as well.</p>
+related: {}

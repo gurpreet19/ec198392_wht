@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1943616284'
+keys:
+  BF_CODE: SP.0055
+  CLASS_NAME: INTERFACED_ERP_ITEM
+  COMP_CODE: generated_items_table
+  T: BF_COMPONENT
+  URL: /generated_items_table
+parentKeys: {}
+properties:
+  BF_CODE: SP.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/ifac_journal_entry/NAV_MODEL/DATA_INTERFACE/NAV_TARGET/BUSINESS_UNIT' )
+  CLASS_NAME: INTERFACED_ERP_ITEM
+  COMP_CODE: generated_items_table
+  NAME: Generated Items Table
+  SIGNING_REQ_IND: null
+  URL: /generated_items_table
+related: {}

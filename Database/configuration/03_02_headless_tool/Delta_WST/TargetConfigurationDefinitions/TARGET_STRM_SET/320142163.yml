@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '320142163'
+keys:
+  STREAM_SET: PP.0016
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Stream Forecast Business Function
+  STREAM_SET: PP.0016
+related: {}

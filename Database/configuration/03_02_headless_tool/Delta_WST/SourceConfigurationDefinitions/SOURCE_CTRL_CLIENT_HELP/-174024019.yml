@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-174024019'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.fc.screens/monthly_afs_chart/TARGET/SUPPLY_POINT/CLASS1/FCST_SP_DAY_AFS_LIST/CLASS2/FCST_SP_DAY_AFS_GRAPH/CLASS3/FCST_SP_DAY_AFS_OVERVIEW
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.fc.screens/monthly_afs_chart/TARGET/SUPPLY_POINT/CLASS1/FCST_SP_DAY_AFS_LIST/CLASS2/FCST_SP_DAY_AFS_GRAPH/CLASS3/FCST_SP_DAY_AFS_OVERVIEW
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

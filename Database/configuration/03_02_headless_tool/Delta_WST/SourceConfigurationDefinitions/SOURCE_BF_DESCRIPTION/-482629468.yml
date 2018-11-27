@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-482629468'
+keys:
+  BF_DESCRIPTION_NO: CO.2042
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2042
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_table/CLASS_NAME/NOMINATION_CYCLE' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This screen is used to create and maintain the nomination cycle.</p><p>Nominations Cycle is used to define given cycles where the user of the pipeline can nominate within. This is typically used in North America. In Europe there is no&nbsp;standard nomination cycles, but the users of the pipeline are still allowed to re-nominate in the different systems. In both cases there will typically be different&nbsp;validation rules associated to when the nomination/re-nomination is entered into the system.</p><p>The gas dispatching module in EC Transport supports the usage of nomination cycles. Default out of the box the nomination cycles are turned off, but it can be&nbsp;turned on by changing a parameter on the url for the individual dispatching business functions.</p>
+related: {}

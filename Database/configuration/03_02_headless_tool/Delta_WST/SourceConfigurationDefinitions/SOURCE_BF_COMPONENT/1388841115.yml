@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1388841115'
+keys:
+  BF_CODE: CP.0057
+  CLASS_NAME: STOR_DAY_GRAPH
+  COMP_CODE: storage_graph
+  T: BF_COMPONENT
+  URL: /storage_graph
+parentKeys: {}
+properties:
+  BF_CODE: CP.0057
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/daily_rundown_total_actuals_vs_forecast' )
+  CLASS_NAME: STOR_DAY_GRAPH
+  COMP_CODE: storage_graph
+  NAME: Storage Graph
+  SIGNING_REQ_IND: null
+  URL: /storage_graph
+related: {}

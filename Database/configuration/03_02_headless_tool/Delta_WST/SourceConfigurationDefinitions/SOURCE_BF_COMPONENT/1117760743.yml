@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1117760743'
+keys:
+  BF_CODE: WR.0019
+  CLASS_NAME: IFLW_SUB_DAY_STATUS_GAS
+  COMP_CODE: subDailyGasInjectionFlowlineStatusTable
+  T: BF_COMPONENT
+  URL: /sub_daily_gas_injection_flowline_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_gas_injection_flowline_status' )
+  CLASS_NAME: IFLW_SUB_DAY_STATUS_GAS
+  COMP_CODE: subDailyGasInjectionFlowlineStatusTable
+  NAME: Sub Daily Gas Injection Flowline Status
+  SIGNING_REQ_IND: null
+  URL: /sub_daily_gas_injection_flowline_status
+related: {}

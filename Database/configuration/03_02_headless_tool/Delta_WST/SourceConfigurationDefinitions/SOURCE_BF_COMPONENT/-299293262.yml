@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-299293262'
+keys:
+  BF_CODE: CO.0127
+  CLASS_NAME: ACTION_PARAMETER
+  COMP_CODE: params
+  T: BF_COMPONENT
+  URL: /params
+parentKeys: {}
+properties:
+  BF_CODE: CO.0127
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/create_and_maintain_business_actions' )
+  CLASS_NAME: ACTION_PARAMETER
+  COMP_CODE: params
+  NAME: Parameters
+  SIGNING_REQ_IND: null
+  URL: /params
+related: {}

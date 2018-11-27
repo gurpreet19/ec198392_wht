@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1704877968'
+keys:
+  COMPONENT_ID: SD0009_DEL_COMP_ANALYSIS
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.sale.sd.screens/delivery_comp_analysis
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: SD0009_DEL_COMP_ANALYSIS
+  COMPONENT_LABEL: Delivery Component Analysis
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_SALE_SD
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 90.0
+  WINDOW_ID: ENERGYX
+related: {}

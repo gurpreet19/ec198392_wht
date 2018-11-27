@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1403017891'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: FCTY_TOP5_MTH_GAS_PROD
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: null
+  DESCRIPTION: Top 5 Monthly Gas Producers at Facility
+  LABEL: Top 5 Monthly Gas Producers at Facility
+  NAME: FctyTop5MthGasProducers
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.BarChartWidget
+  WIDGET_CODE: FCTY_TOP5_MTH_GAS_PROD
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '212137167'
+keys:
+  EC_CLIENT_OBJ: /com.ec.ecdm.co.screens/imp_target_mapping
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.ecdm.co.screens/imp_target_mapping
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

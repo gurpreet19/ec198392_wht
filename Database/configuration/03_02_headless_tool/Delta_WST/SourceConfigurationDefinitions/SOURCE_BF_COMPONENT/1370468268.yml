@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1370468268'
+keys:
+  BF_CODE: SP.0048
+  CLASS_NAME: CONT_ERP_DOCUMENT
+  COMP_CODE: documents
+  T: BF_COMPONENT
+  URL: /get_cont_erp_document
+parentKeys: {}
+properties:
+  BF_CODE: SP.0048
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_erp_documents' )
+  CLASS_NAME: CONT_ERP_DOCUMENT
+  COMP_CODE: documents
+  NAME: Document
+  SIGNING_REQ_IND: null
+  URL: /get_cont_erp_document
+related: {}

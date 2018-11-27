@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1081862912'
+keys:
+  BF_DESCRIPTION_NO: LA.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: LA.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.la.screens/monthly_account_adjustment' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to log monthly account adjustments between two lifter accounts or single adjustment to a lifting account.</p><p>A new between accounts adjustment can be created by clicking on the insert button in the toolbar. This business function registers the date, adjustment quantity, to lifting account name and comments for the selected account in the navigator.</p><p>A single account adjustment can be created by clicking on the insert button in the toolbar.</p><p>The business function also support doing adjustments in different unit. The attributes are default disabled.<br />&nbsp;</p>
+related: {}

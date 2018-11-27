@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2069146705'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.co.screens/tab_configuration
+parentKeys: {}
+properties:
+  BF_CODE: CO.2055
+  NAME: BF Tab Configuration
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.tran.co.screens/tab_configuration
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '68733803'
+keys:
+  BF_CODE: CD.0098
+  CLASS_NAME: BALANCE_SETUP
+  COMP_CODE: list_management_table
+  T: BF_COMPONENT
+  URL: /table
+parentKeys: {}
+properties:
+  BF_CODE: CD.0098
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/hcblist_management' )
+  CLASS_NAME: BALANCE_SETUP
+  COMP_CODE: list_management_table
+  NAME: List Management - Table
+  SIGNING_REQ_IND: null
+  URL: /table
+related: {}

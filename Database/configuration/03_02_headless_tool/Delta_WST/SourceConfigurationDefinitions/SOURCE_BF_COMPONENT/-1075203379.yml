@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1075203379'
+keys:
+  BF_CODE: CO.0038
+  CLASS_NAME: TANK_USAGE
+  COMP_CODE: tankUsage
+  T: BF_COMPONENT
+  URL: /tankUsage
+parentKeys: {}
+properties:
+  BF_CODE: CO.0038
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/tank_usage' )
+  CLASS_NAME: TANK_USAGE
+  COMP_CODE: tankUsage
+  NAME: Tank Usage
+  SIGNING_REQ_IND: null
+  URL: /tankUsage
+related: {}

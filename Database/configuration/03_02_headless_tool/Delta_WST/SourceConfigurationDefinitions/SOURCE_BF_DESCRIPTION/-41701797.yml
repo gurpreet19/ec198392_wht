@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-41701797'
+keys:
+  BF_DESCRIPTION_NO: WR.0024
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/period_gas_production_well_totalizer' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF will be used for Gas Production Wells where there is a totalizer installed on the well. Based on Closing, Opening and Overwrite entered by user for a certain period, Net Volume and Daily Rate are calculated and displayed on the screen.</p>
+
+    <p>Two new calculation methods are introduced to calculate Net Volume and Daily Rate which are: TOTALIZER_EVENT and TOTALIZER_EVENT_EXTRAPOLATE. Both methods are almost identical and the difference is TOTALIZER_EVENT_EXTRAPOLATE are for future events and only valid for current and next month totalizer periods.</p>
+related: {}

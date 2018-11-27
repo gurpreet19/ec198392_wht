@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '130479110'
+keys:
+  COMPONENT_ID: UNIT_WELL
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.revn.rty/well_setup/CLASS_NAME/UNIT_AGR/DATA_CLASS/UNIT_WELL_SETUP/NAVMODEL/WELL_SETUP/TARGET/UNIT_AGR?screentemplate=/com.ec.revn.rty/well_setup
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: UNIT_WELL
+  COMPONENT_LABEL: Unit - Well Setup
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: RTY_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 210.0
+  WINDOW_ID: ENERGYX
+related: {}

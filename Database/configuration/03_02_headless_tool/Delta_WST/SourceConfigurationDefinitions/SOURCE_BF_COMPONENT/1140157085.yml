@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1140157085'
+keys:
+  BF_CODE: CO.0130
+  CLASS_NAME: ACTION_INSTANCE_F_VALUE
+  COMP_CODE: fixed_params
+  T: BF_COMPONENT
+  URL: /fixed_params
+parentKeys: {}
+properties:
+  BF_CODE: CO.0130
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/create_and_maintain_schedules' )
+  CLASS_NAME: ACTION_INSTANCE_F_VALUE
+  COMP_CODE: fixed_params
+  NAME: Fixed Parameters
+  SIGNING_REQ_IND: null
+  URL: /fixed_params
+related: {}

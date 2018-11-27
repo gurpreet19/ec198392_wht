@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '138990195'
+keys:
+  BF_CODE: CO.2060
+  CLASS_NAME: METER_ALLOC_METHOD
+  COMP_CODE: meter
+  T: BF_COMPONENT
+  URL: /meter
+parentKeys: {}
+properties:
+  BF_CODE: CO.2060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/meter_allocation_method/TARGET/METER/NAV_MODEL/TRAN_OPERATIONAL' )
+  CLASS_NAME: METER_ALLOC_METHOD
+  COMP_CODE: meter
+  NAME: Meter Configuration
+  SIGNING_REQ_IND: null
+  URL: /meter
+related: {}

@@ -1,0 +1,75 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1043404418'
+keys:
+  BF_DESCRIPTION_NO: HA.0003
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: HA.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/edit_monthly_alloc' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p style="font-family: Arial, Verdana; font-size: 10pt; font-style:
+    normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight:
+    normal;">The user selects a monthly date(-span), a network, a job and the logging
+    level as parameters to the allocation process.</p><p style="font-family: Arial,
+    Verdana; font-size: 10pt; font-style: normal; font-variant-ligatures: normal;
+    font-variant-caps: normal; font-weight: normal;">Monthly allocation jobs will
+    be invoked within the range &lsquo;<em>From date&rsquo; </em>to &lsquo;<em>To
+    date&rsquo;</em>. The &lsquo;To date is inclusive in the range. The &lsquo;<em>From
+    date&rsquo; </em>most be equal or before the &lsquo;<em>To </em>date&rsquo;, or
+    else a warning will be displayed, and no allocation will take place. For each
+    month in the range a new row will be inserted in table holding allocation runs.
+    It should be noted that if the <em>From date </em>navigator is prior the start
+    date of an allocation network, the allocation network will not be shown in the
+    <em>Allocation Network </em>navigator. Only networks configured with one of the
+    monthly period codes will be visible in the Allocation Network navigator. Similarly,
+    only allocation jobs with period equal to month will be visible in the Allocation
+    Job navigator.</p><p style="font-family: Arial, Verdana; font-size: 10pt; font-style:
+    normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight:
+    normal;">Changing fields in navigator must be populated to the rest of the screen,
+    incl. Run Allocation button, by pressing the Go&hellip; button. If changes done
+    in navigator without pressing Go&hellip; the user will be notified when pressing
+    the Run Allocation button. To run an allocation, all fields of navigator must
+    be filled out. There are also Logging level-popup to choose log level and Simulate-checkbox.
+    Log Level is default to &lsquo;No Details&rsquo;. This is checked to perform a
+    simulation, no checkmark results in a normal allocation. When "Run Caocesses.
+    A Pop up message will be raised if there are dependant Status Process that have
+    not been executed during that period. The allocation is run in the background,
+    it is an asynchronous job, thus it is necessary to refresh the screen to see the
+    new run as a row in screen when the allocation is finished. Both daily and monthly
+    allocation screens have a list of the running allocation jobs.</p><p style=""><font
+    face="Arial, Verdana"><span style="font-size: 13.3333px;">Confirmation message
+    will be prompted prior to running an allocation if the flag is set to true in
+    Maintain System Settings (CO.1006) for the property Allocation Screens - Confirmation
+    Message.</span></font></p><p style="font-family: Arial, Verdana; font-size: 10pt;
+    font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal;
+    font-weight: normal;">To view an allocation log for a specific run, select the
+    appropriate row in the table, and press the View log button. If a log is available
+    it will show up in a separate screen. If no log is available, the user will be
+    presented with a "no log found" in the new screen.</p><p style="font-family: Arial,
+    Verdana; font-size: 10pt; font-style: normal; font-variant-ligatures: normal;
+    font-variant-caps: normal; font-weight: normal;">It is possible to verify or approve
+    a successful monthly run with the Approval Status popup. If a monthly run is approved,
+    it will not be possible to run a new allocation on that network in the same month,
+    nor will it be possible to run daily allocation on the network or any sub networks
+    unless the system property flag "Allow re-running of Approved calculation" in
+    Maintain System Settings is set to &lsquo;Y&rsquo;. However, it will not be possible
+    to delete an approved row. It is possible to save comments on the run, both the
+    successful and the failed runs if the run is not approved.</p><p style="font-family:
+    Arial, Verdana; font-size: 10pt; font-style: normal; font-variant-ligatures: normal;
+    font-variant-caps: normal;: normal;">View Configuration Button :</p><p style="font-family:
+    Arial, Verdana; font-size: 10pt; font-style: normal; font-variant-ligatures: normal;
+    font-variant-caps: normal; font-weight: normal;">Upon clicking on this button,a
+    read-only popup window will be opened. This popup window will allow users to view
+    the objects (wells/streams/well hookups/facilities) that were used in the selected
+    allocation run. When an object is selected the users will see the configuration(s)
+    that were valid for the applicable date/period. Users will also be able to view
+    Stream Set List and Stream Formula configurations for streams. </p><p style=""><font
+    face="Arial, Verdana"><span style="font-size: 13.3333px;">When a Status Process
+    is configured in Allocation Job Status Process Connection Screen (CO.0200) for
+    the selected Allocation job, you cannot start the Allocation Job for the period
+    until the Status Process has been run. A Popup error message will be prompted
+    displaying required process that needs to be executed when "Run Calculation" button
+    is clicked.</span></font></p>'
+related: {}

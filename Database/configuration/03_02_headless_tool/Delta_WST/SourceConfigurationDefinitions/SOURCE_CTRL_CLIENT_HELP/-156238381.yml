@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-156238381'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.cp.screens/fcst_manager
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.cp.screens/fcst_manager
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

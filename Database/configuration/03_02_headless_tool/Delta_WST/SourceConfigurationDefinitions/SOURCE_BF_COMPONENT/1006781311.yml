@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1006781311'
+keys:
+  BF_CODE: CP.0041
+  CLASS_NAME: FCST_LIFT_ACC_DAY_RCPT
+  COMP_CODE: rec_day
+  T: BF_COMPONENT
+  URL: /rec_day
+parentKeys: {}
+properties:
+  BF_CODE: CP.0041
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/fcst_sub_day_receipts_lift_acc' )
+  CLASS_NAME: FCST_LIFT_ACC_DAY_RCPT
+  COMP_CODE: rec_day
+  NAME: Receipt Day
+  SIGNING_REQ_IND: null
+  URL: /rec_day
+related: {}

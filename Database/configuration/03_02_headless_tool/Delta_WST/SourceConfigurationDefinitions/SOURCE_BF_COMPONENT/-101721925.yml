@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-101721925'
+keys:
+  BF_CODE: PO.0117
+  CLASS_NAME: DASHBRD_DAY_WAT_RF
+  COMP_CODE: graph_8
+  T: BF_COMPONENT
+  URL: /graph_8
+parentKeys: {}
+properties:
+  BF_CODE: PO.0117
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_dashboard' )
+  CLASS_NAME: DASHBRD_DAY_WAT_RF
+  COMP_CODE: graph_8
+  NAME: Water Reconciliation Factor
+  SIGNING_REQ_IND: null
+  URL: /graph_8
+related: {}

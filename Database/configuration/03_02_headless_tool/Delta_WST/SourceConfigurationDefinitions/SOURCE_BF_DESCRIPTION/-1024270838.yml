@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1024270838'
+keys:
+  BF_DESCRIPTION_NO: CO.2037
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.2037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/CONTRACT/TARGET/CONTRACT_AREA/CLASS_NAME/CONTRACT_AREA' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to maintain Contract Areas.</p><p>This object is typically used in navigation in screens. it is typically between business unit and contract.</p>
+related: {}

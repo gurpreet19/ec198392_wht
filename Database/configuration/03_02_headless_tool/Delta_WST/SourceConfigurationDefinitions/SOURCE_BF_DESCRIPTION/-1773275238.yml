@@ -1,0 +1,111 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1773275238'
+keys:
+  BF_DESCRIPTION_NO: FC.1004
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: FC.1004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_properties/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p>FUNCTION_AREA_CODE = REVENUE_FORECAST</p><p>This BF defines the
+    Revenue Forecast Cases for the system. </p><p>The Code attribute will uniquely
+    identify a revenue forecast object. </p><p>The Name attribute is a more user-friendly
+    version of the Code, and it does not have to be unique. </p><p>The Populate Method
+    is either YEAR_TO_MONTH or PLAN. If the latter is chosen, then the populate logic
+    does not look into the actual tables, which is the case if YEAR_TO_MONTH is chosen.
+    This means that the PLAN alternative should be chosen if the purpose of the forecast
+    case is an initial budget and YEAR_TO_MONTH if the purpose is a regular forecast
+    case. The YEAR_TO_MONTH alternative will be described in more detail in later
+    sections.</p><p>Year and month tell for which year and month the forecast case
+    is. In the screenshot above the code attribute is set accordingly to the year
+    and month. Note that this has to be done manually by the user.</p><p>The field
+    group type attribute tells which type of field groups that should be available
+    for selection when entering the data. This will be described later.</p><p>Scope
+    tells whether this forecast case should be available to all users or only the
+    user that created it. Available choices are PRIVATE and PUBLIC. If set to PRIVATE
+    this forecast object will be visible only to the user who created it. Otherwise
+    it is available to all users.</p><p>Official Forecast Case is either Y or N. Only
+    one forecast case for a given month and year can be official. There are no restrictions
+    when it comes to the number of unofficial forecast cases.</p><p>Quantity Forecast
+    Reference tells from which quantity forecast case the quantity data and for which
+    fields if applicable are members of the forecast case is to be copied. The revenue
+    forecast case can only be set to official if the referenced quantity case is official.</p><p>Rules
+    applying when connecting a QTY Forecast Case:<br>�&nbsp;Given that the Revenue
+    Forecast case is Official then it should only be allowed to connect an official
+    Qty Forecast case.<br>�&nbsp;If the Revenue Forecast case is Public, then it should
+    only be allowed to connect a Public Qty Forecast Case<br>�&nbsp;If the Revenue
+    Forecast case is Private, then it should be possible to connect either a Private
+    or a Public Qty Forecast Case<br>�&nbsp;It should be possible to connect an Approved
+    or a Provisional Qty Forecast case.<br>�&nbsp;When you connect a Qty Forecast
+    Case then its Plan Date, Populate Method, Official flag and Field Group Type should
+    be copied to the Revenue Forecast Case. </p><p><br>The Populate Forecast Case
+    button will be described in more detail in the sections that describes the different
+    forecast approaches. </p><p>The Copy Forecast Case button creates a copy of the
+    selected forecast case. The code and name attribute will get a postfix (_COPY)
+    compared to the original. The other attributes will be left as they are.</p><p><br>Through
+    this BF the user can:<br>�&nbsp;Create new Revenue Forecast Cases<br>Create a
+    completely new Revenue Forecast Case.</p><p>�&nbsp;Modify Revenue Forecast Cases<br>Modify
+    attributes of existing Revenue Forecast Cases.</p><p>�&nbsp;Populate Revenue Forecast
+    Cases<br>Populate Revenue Forecast Cases of type �Closing Forecast� (POPULATE_METHOD
+    = YEAR_TO_MONTH) with Final/Accrual data from the Quantities module. </p><p>�&nbsp;Copy
+    Revenue Forecast Cases<br>Copy an existing Revenue Forecast Case to a new Revenue
+    Forecast Case. Attributes of the new Revenue Forecast Case can be modified.</p><p>�&nbsp;Delete
+    Revenue Forecast Cases<br>It is not allowed to delete a Revenue Forecast Case
+    which is PUBLIC, set to OFFICIAL and has status APPROVED.</p><p>The BF consists
+    of these screen sections:</p><p>�&nbsp;Filter Navigator<br>the YEAR selector of
+    the Filter Navigator determines which forecast cases to show. It will list all
+    Revenue forecast cases being valid for the selected year.<br>Lists only the forecast
+    cases being PUBLIC or PRIVATE for the user logged in. </p><p>�&nbsp;Action Buttons<br>This
+    section has two buttons:<br>o&nbsp;Populate Forecast Case<br>o&nbsp;Copy Forecast
+    Case</p><p>�&nbsp;Revenue Forecast Cases Details<br>This section lists the attributes
+    of the selected Revenue Forecast Case in the Filter Navigator</p><p>Revenue Forecast
+    Case Validation </p><p>There can only exist ONE Revenue Forecast Case for each
+    combination of the following attributes:</p><p>FORECAST.POPULATE_METHOD&nbsp;=
+    YEAR_TO_MONTH<br>FORECAST.YEAR&nbsp;&nbsp;&nbsp;= &lt;year&gt;<br>FORECAST.MONTH&nbsp;&nbsp;&nbsp;=
+    &lt;month &gt;<br>FORECAST.FORECAST_SCOPE&nbsp;= &lt;PUBLIC &gt;<br>FORECAST.OFFICIAL_IND&nbsp;&nbsp;=
+    &lt;Y &gt;</p><p>In other words, there can only exist one official Closing Forecast
+    for each Month/Year. This must be validated when saving the attributes for a Revenue
+    Forecast Case, and an error message must be issued if this validation rule is
+    breached. </p><p>Also, there can only exist ONE Revenue Forecast Case for each
+    combination of the following attributes:</p><p>FORECAST.POPULATE_METHOD&nbsp;=
+    PLAN<br>FORECAST.YEAR&nbsp;&nbsp;&nbsp;= &lt;year&gt;<br>FORECAST. FORECAST_SCOPE&nbsp;=
+    &lt;PUBLIC &gt;<br>FORECAST.OFFICIAL_IND &nbsp;&nbsp;= &lt;Y &gt;</p><p>In other
+    words, there can only exist one official Plan for each Year. This must be validated
+    when saving the attributes for a Revenue Forecast Case, and an error message must
+    be issued if this validation rule is breached.</p><p>When the object start date
+    has been changed, all the related quantities will be removed and the plan date
+    year will automatically set to year same as object start year.</p><p>The plan
+    date year must be in between object start year and end year.</p><p>Only shows
+    public quantity forecast case in the quantity forecast reference selection.</p><p><br>Populating
+    Revenue Forecast Cases from external sources</p><p>Existing Revenue Forecast Cases
+    can be updated with Revenue data from external sources by executing a Scheduler
+    Job: �UpdateQtyForecast�. The input to the scheduler job will be a CSV file with
+    reference to which Revenue Forecast Case to update. The upload will update the
+    quantities for the stream items listed in the CSV file AND being part of the Revenue
+    Forecast Case in question. The upload will trigger the Cascade logic.<br>The business
+    function for &quot;Forecast Revenue Properties&quot; displays each forecast case
+    details by selecting one of the created forecast case in filter navigator/</p><p>The
+    business function contains a navigator section and details data sections.&nbsp;
+    The overall layout of the screen will be according to the following possible combinations:</p><p>Sections&nbsp;Description</p><p>Navigator&nbsp;Always
+    visible<br>Data Section 1&nbsp;Always visible, but collapse/expand functionality
+    active<br>Data Section 2&nbsp;Always visible, showing two functional buttons �
+    Populate Forecast Case and Copy Forecast Case<br>Data Section 3&nbsp;Showing the
+    active forecast case in the forecast case selected in Data section 1</p><p><br>The
+    navigator section enables the selection of a time window (Year Selector).&nbsp;
+    A set of Revenue Forecast Cases will be listed based on the selected forecast
+    year in Year Selector.&nbsp; OBJECT_START_DATE = YEAR.</p><p>Data section 1 lists
+    all Revenue Forecast Cases that satisfy the navigation criteria (Functional Area
+    Code = REVENUE_FORECAST) sorted descending on Year (most recent on top).&nbsp;
+    The list is scrollable and supports single record selection.&nbsp; Collapse/expand
+    functionality should be activated.&nbsp; There are no editable data elements in
+    data section 1.&nbsp; The selected record in this data section controls the content
+    of the data section 3.&nbsp; Initial focus is the top row in the data section.</p><p>Data
+    section 2 shows the two functional buttons which are Populate Forecast Case and
+    Copy Forecast Case. There are no editable data elements in data section 2.</p><p>Data
+    section 3 shows the details of selected Revenue forecast case in filter navigator
+    in Form style. The details of data can be updated and saved into database. This
+    section also shows an empty form to allow user insert/create a new Revenue forecast
+    case while user presses new button in navigator.<br></p>'
+related: {}

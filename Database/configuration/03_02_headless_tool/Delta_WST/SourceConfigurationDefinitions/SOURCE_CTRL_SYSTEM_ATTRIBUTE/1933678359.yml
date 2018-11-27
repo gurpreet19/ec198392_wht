@@ -1,0 +1,17 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1933678359'
+keys:
+  ATTRIBUTE_TYPE: DEF_USE_STREAM_ITEMS_IND
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: Y
+  ATTRIBUTE_TYPE: DEF_USE_STREAM_ITEMS_IND
+  ATTRIBUTE_VALUE: null
+  COMMENTS: 'Indicates the default value for "Use Stream Item Config" on a new transaction
+    template. Valid choices: Y | N.'
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

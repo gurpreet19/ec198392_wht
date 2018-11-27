@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '242129251'
+keys:
+  BF_CODE: PO.0085
+  CLASS_NAME: STRM_DAY_STREAM_LIQUID
+  COMP_CODE: data
+  T: BF_COMPONENT
+  URL: /data
+parentKeys: {}
+properties:
+  BF_CODE: PO.0085
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_liquid_stream_data' )
+  CLASS_NAME: STRM_DAY_STREAM_LIQUID
+  COMP_CODE: data
+  NAME: Daily Liquid Stream Data
+  SIGNING_REQ_IND: null
+  URL: /data
+related: {}

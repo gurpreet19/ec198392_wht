@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1181062783'
+keys:
+  BF_CODE: PT.0011
+  CLASS_NAME: EST_WELL_PROD
+  COMP_CODE: est_well_prod
+  T: BF_COMPONENT
+  URL: /est_well_prod
+parentKeys: {}
+properties:
+  BF_CODE: PT.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_comb' )
+  CLASS_NAME: EST_WELL_PROD
+  COMP_CODE: est_well_prod
+  NAME: Estimated Well Production
+  SIGNING_REQ_IND: null
+  URL: /est_well_prod
+related: {}

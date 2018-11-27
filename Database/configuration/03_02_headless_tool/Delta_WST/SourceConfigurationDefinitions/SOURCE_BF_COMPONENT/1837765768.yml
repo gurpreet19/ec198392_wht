@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1837765768'
+keys:
+  BF_CODE: WR.0050
+  CLASS_NAME: FLWL_FORM_ION_ANALYSIS
+  COMP_CODE: formation_water
+  T: BF_COMPONENT
+  URL: /formation_water
+parentKeys: {}
+properties:
+  BF_CODE: WR.0050
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE' )
+  CLASS_NAME: FLWL_FORM_ION_ANALYSIS
+  COMP_CODE: formation_water
+  NAME: Formation Water Baseline
+  SIGNING_REQ_IND: null
+  URL: /formation_water
+related: {}

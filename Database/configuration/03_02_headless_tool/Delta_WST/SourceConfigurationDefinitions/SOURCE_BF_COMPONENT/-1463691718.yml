@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1463691718'
+keys:
+  BF_CODE: CO.0156
+  CLASS_NAME: WELL_REFERENCE_VALUE
+  COMP_CODE: updateRefValues
+  T: BF_COMPONENT
+  URL: /updateRefValues
+parentKeys: {}
+properties:
+  BF_CODE: CO.0156
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/well_reference_value' )
+  CLASS_NAME: WELL_REFERENCE_VALUE
+  COMP_CODE: updateRefValues
+  NAME: Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /updateRefValues
+related: {}

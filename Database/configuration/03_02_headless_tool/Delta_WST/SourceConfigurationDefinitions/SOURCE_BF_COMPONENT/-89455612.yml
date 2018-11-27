@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-89455612'
+keys:
+  BF_CODE: TO.0005
+  CLASS_NAME: null
+  COMP_CODE: refreshComponents
+  T: BF_COMPONENT
+  URL: /refreshComponents
+parentKeys: {}
+properties:
+  BF_CODE: TO.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/blmr_info' )
+  CLASS_NAME: null
+  COMP_CODE: refreshComponents
+  NAME: Refresh Components
+  SIGNING_REQ_IND: null
+  URL: /refreshComponents
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-551137155'
+keys:
+  BF_CODE: MHM.0009
+  CLASS_NAME: null
+  COMP_CODE: viewMessageButton
+  T: BF_COMPONENT
+  URL: /viewMessageButton
+parentKeys: {}
+properties:
+  BF_CODE: MHM.0009
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/outgoing_messages' )
+  CLASS_NAME: null
+  COMP_CODE: viewMessageButton
+  NAME: View
+  SIGNING_REQ_IND: null
+  URL: /viewMessageButton
+related: {}

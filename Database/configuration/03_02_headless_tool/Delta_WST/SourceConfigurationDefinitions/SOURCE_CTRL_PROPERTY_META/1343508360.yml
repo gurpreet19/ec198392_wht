@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1343508360'
+keys:
+  KEY: /com/ec/prod/screens/forecast_define_scenarios/ALLOWED_FILE_EXTENSIONS
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: .*
+  DESCRIPTION: Comma separated list of allowed file extensions for Forecast Define Scenarios
+  KEY: /com/ec/prod/screens/forecast_define_scenarios/ALLOWED_FILE_EXTENSIONS
+  LABEL: Forecast Define Scenarios to Compare Allowed File Extensions
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

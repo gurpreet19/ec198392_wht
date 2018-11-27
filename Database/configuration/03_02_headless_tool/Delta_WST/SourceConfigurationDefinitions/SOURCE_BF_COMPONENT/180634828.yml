@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '180634828'
+keys:
+  BF_CODE: PO.0049
+  CLASS_NAME: PIPE_DAY_PC_STATUS
+  COMP_CODE: pc_status
+  T: BF_COMPONENT
+  URL: /pc_status
+parentKeys: {}
+properties:
+  BF_CODE: PO.0049
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_pipeline_profit_centre_status' )
+  CLASS_NAME: PIPE_DAY_PC_STATUS
+  COMP_CODE: pc_status
+  NAME: Profit Centre Status
+  SIGNING_REQ_IND: null
+  URL: /pc_status
+related: {}

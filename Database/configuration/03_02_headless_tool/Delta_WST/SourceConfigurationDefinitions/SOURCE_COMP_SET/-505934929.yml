@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-505934929'
+keys:
+  COMPONENT_SET: STRM_GC_COMP
+  T: COMP_SET
+parentKeys: {}
+properties:
+  COMPONENT_SET: STRM_GC_COMP
+  DESCRIPTION: Stream Gas Chromatograph Component Analysis
+related: {}

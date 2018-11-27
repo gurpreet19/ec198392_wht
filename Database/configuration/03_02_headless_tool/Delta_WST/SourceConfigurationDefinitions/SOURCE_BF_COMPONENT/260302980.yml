@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '260302980'
+keys:
+  BF_CODE: GD.0091
+  CLASS_NAME: TRNL_SUB_DAY_NOM_AGG
+  COMP_CODE: sub_day_loc_summary
+  T: BF_COMPONENT
+  URL: /sub_day_loc_summary
+parentKeys: {}
+properties:
+  BF_CODE: GD.0091
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/sub_daily_location_summary/TARGET/NOMINATION_LOCATION/CLASS/TRNL_DAY_NOM_AGG/SUB_CLASS/TRNL_SUB_DAY_NOM_AGG/GRAPH_CLASS/TRNL_SUB_DAY_NOM_AGG_GRA/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0091/NOMINATION_CYCLE/false' )
+  CLASS_NAME: TRNL_SUB_DAY_NOM_AGG
+  COMP_CODE: sub_day_loc_summary
+  NAME: Sub Daily Location Summary
+  SIGNING_REQ_IND: null
+  URL: /sub_day_loc_summary
+related: {}

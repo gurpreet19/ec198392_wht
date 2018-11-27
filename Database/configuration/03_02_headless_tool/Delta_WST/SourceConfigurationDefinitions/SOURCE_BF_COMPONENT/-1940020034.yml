@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1940020034'
+keys:
+  BF_CODE: SD.0044
+  CLASS_NAME: SLNP_DAY_DELIVERY
+  COMP_CODE: daily_data
+  T: BF_COMPONENT
+  URL: /daily_data
+parentKeys: {}
+properties:
+  BF_CODE: SD.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_day_np_data/CLASS/SLNP_DAY_DELIVERY/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0044' )
+  CLASS_NAME: SLNP_DAY_DELIVERY
+  COMP_CODE: daily_data
+  NAME: Daily Data
+  SIGNING_REQ_IND: null
+  URL: /daily_data
+related: {}

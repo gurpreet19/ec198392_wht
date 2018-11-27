@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1013151019'
+keys:
+  BF_CODE: WR.0030
+  CLASS_NAME: PWEL_ESTIMATE
+  COMP_CODE: table_well_estimate
+  T: BF_COMPONENT
+  URL: /table_well_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/maintain_production_well_estimate' )
+  CLASS_NAME: PWEL_ESTIMATE
+  COMP_CODE: table_well_estimate
+  NAME: Well Estimates
+  SIGNING_REQ_IND: null
+  URL: /table_well_status
+related: {}

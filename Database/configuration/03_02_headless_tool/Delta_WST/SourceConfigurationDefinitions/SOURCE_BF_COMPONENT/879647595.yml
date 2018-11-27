@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '879647595'
+keys:
+  BF_CODE: PT.0011
+  CLASS_NAME: TDEV_RESULT
+  COMP_CODE: tdev_target_res
+  T: BF_COMPONENT
+  URL: /tdev_target_res
+parentKeys: {}
+properties:
+  BF_CODE: PT.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/prod_test_comb' )
+  CLASS_NAME: TDEV_RESULT
+  COMP_CODE: tdev_target_res
+  NAME: Test Device Target Result
+  SIGNING_REQ_IND: null
+  URL: /tdev_target_res
+related: {}

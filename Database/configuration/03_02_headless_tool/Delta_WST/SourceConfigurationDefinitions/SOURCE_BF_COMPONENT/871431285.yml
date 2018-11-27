@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '871431285'
+keys:
+  BF_CODE: PD.0014
+  CLASS_NAME: DEF_LOSS_FLD_EFF_CALC
+  COMP_CODE: eff_calc
+  T: BF_COMPONENT
+  URL: /eff_calc
+parentKeys: {}
+properties:
+  BF_CODE: PD.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_field_loss_accounting' )
+  CLASS_NAME: DEF_LOSS_FLD_EFF_CALC
+  COMP_CODE: eff_calc
+  NAME: eff_calc
+  SIGNING_REQ_IND: null
+  URL: /eff_calc
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1115363132'
+keys:
+  BF_CODE: CO.1055
+  CLASS_NAME: CLASS_ATTRIBUTE
+  COMP_CODE: attrList
+  T: BF_COMPONENT
+  URL: /attrList
+parentKeys: {}
+properties:
+  BF_CODE: CO.1055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_attr_pres_config' )
+  CLASS_NAME: CLASS_ATTRIBUTE
+  COMP_CODE: attrList
+  NAME: Attribute List
+  SIGNING_REQ_IND: null
+  URL: /attrList
+related: {}

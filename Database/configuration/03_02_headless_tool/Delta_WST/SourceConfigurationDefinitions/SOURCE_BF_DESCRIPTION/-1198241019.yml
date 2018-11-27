@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1198241019'
+keys:
+  BF_DESCRIPTION_NO: CP.0064
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CP.0064
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.cp.screens/monthly_reference_entitlement' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to store and view monthly reference entitlement for an ADP year. Entitlements are received from the operator through an interface. Reference entitlements are issued a fixed point during the planning cycle for the next ADP year.</p><p>The navigator is a group model navigator, where it shows the Year, Production Unit, Area, Facility Class 1, Storage and Profit Centre. By selecting these navigator values, the reference entitlements for the lifting accounts connected on the profit centre can be viewed. This BF allows insert, update and delete of data.</p><p>The planned lifting volume is the sum of the planned liftings with terminal off take in an ADP year. The difference of the lifting volume is the difference between the total entitlement volume and the planned liftings.</p>
+related: {}

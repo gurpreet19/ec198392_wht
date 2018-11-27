@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1022899308'
+keys:
+  ATTRIBUTE_TYPE: ALLOW_BATCH_OPTION
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: Y
+  ATTRIBUTE_TYPE: ALLOW_BATCH_OPTION
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Y means batch option would be available in validation screens.
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

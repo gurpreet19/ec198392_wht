@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1010624011'
+keys:
+  BF_DESCRIPTION_NO: PR.0014
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PR.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/contract_price_list_sub_day' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to display and update sub daily prices for a contract.</p><p>This business function assumes the prices are calculated by the EC calculation engine, typically based on price indices. This would typically be a scheduled job, or&nbsp;can be initiated from the Price Calculation (PR.0008) business function. The calculated prices can be adjusted in the &ldquo;Adjusted Price&rdquo; column. The price value&nbsp;available externally (reporting, EC Revenue, etc) will be &ldquo;Adjusted Price&rdquo; if this is available, else it will be &ldquo;Calculated Price&rdquo;.</p><p>The user selects the required day and object in the navigator. A contract is selected in the first section and all prices that are valid at the start of the month and&nbsp;throughout the month for the selected contract will be listed. The last valid prices from an earlier month will also be listed if there are no valid prices on the first day of&nbsp;the month. Some price objects can appear more than once in a month if the prices have been calculated more than once.</p><p>General prices for individual products, i.e. not related to a contract, cannot be handled here. The business function Sub Daily Product Price List (PR.0013) should be&nbsp;used.</p><p>For details about Price Object, Price Concept and Price Element please read the EC Sales Configuration Manual.</p>
+related: {}

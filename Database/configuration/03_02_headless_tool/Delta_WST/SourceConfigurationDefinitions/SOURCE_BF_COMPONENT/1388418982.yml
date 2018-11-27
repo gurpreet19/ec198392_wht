@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1388418982'
+keys:
+  BF_CODE: PA.0005
+  CLASS_NAME: null
+  COMP_CODE: outputVariable_availableTasks
+  T: BF_COMPONENT
+  URL: /outputVariable_availableTasks
+parentKeys: {}
+properties:
+  BF_CODE: PA.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_todo_list' )
+  CLASS_NAME: null
+  COMP_CODE: outputVariable_availableTasks
+  NAME: Outputs
+  SIGNING_REQ_IND: null
+  URL: /outputVariable_availableTasks
+related: {}

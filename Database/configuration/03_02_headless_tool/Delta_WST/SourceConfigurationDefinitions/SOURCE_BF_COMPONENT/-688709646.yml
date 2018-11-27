@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-688709646'
+keys:
+  BF_CODE: SP.0019
+  CLASS_NAME: CONT_LINE_ITEM
+  COMP_CODE: lineitemcalc
+  T: BF_COMPONENT
+  URL: /lineitemcalc
+parentKeys: {}
+properties:
+  BF_CODE: SP.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/transaction_values' )
+  CLASS_NAME: CONT_LINE_ITEM
+  COMP_CODE: lineitemcalc
+  NAME: Calculated Line Items
+  SIGNING_REQ_IND: null
+  URL: /lineitemcalc
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-28589407'
+keys:
+  COMPONENT_ID: CO_GEN_UNIT_MAINTAIN
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CO_GEN_UNIT/TARGET/CO_GEN_UNIT/CLASS_NAME/CO_GEN_UNIT?screentemplate=/com.ec.frmw.co.screens/manage_object_groupmodel_nav
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CO_GEN_UNIT_MAINTAIN
+  COMPONENT_LABEL: Co Gen Unit
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: EQ_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 40.0
+  WINDOW_ID: ENERGYX
+related: {}

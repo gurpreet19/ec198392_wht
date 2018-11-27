@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-25194734'
+keys:
+  COMPONENT_ID: CONTRACT_DELIVERY_TRACKING
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.cp.screens/contract_delivery_tracking
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CONTRACT_DELIVERY_TRACKING
+  COMPONENT_LABEL: Contract Delivery Tracking
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_CP
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 560.0
+  WINDOW_ID: ENERGYX
+related: {}

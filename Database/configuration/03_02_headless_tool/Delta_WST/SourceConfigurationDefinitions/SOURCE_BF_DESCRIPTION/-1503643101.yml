@@ -1,0 +1,46 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1503643101'
+keys:
+  BF_DESCRIPTION_NO: CO.1051
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_finder' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business functions is used to find classes in EC.</p>
+
+    <p>Most business functions in EC are using Classes when retrieving/updating data. These classes are documented, but this is an alternative to getting that information.</p>
+
+    <p>Note that there may be limitations to the reported list of classes. The search is only successful if standard EC implementation is used. If, for some reason, a business functions is not using a class to retrieve date, the documentation should be used to get the details.</p>
+
+    <p>Many classes in EC are not tied to a business functions. These classes can be found using the All Classes option. By adding search statement on class name the list of classes returned can be limited. The search statement is only active for All Classes navigation type. No wild cards are needed in search. It is added for you.</p>
+    <p>Meaning typing in ALLOC will give a list of all classes with ALLOC in it.</p>
+
+    <p>For further details about classes see business functions Class (CO.1013), Class Relation (CO.1020), Class Attribute (CO.1014).</p>
+
+    <p>If needed there exist a class finder that can be used in Class popups. Use the following values on class attribute to activate it</p>
+
+    <p>
+    <table>
+    <tr>
+    <td><em>PopupURL</em></td>
+    <td><em>&frasl;FrontController&frasl;com.ec.frmw.co.screens&frasl;class_finder_popup</em></td>
+    </tr>
+    <tr>
+    <td><em>PopupReturnColumn</em></td>
+    <td><em>CLASS_NAME</em></td>
+    </tr>
+    <tr>
+    <td><em>PopupWidth</em></td>
+    <td><em>700</em></td>
+    </tr>
+    <tr>
+    <td><em>PopupHeight</em></td>
+    <td><em>500</em></td>
+    </tr>
+    </table>
+    </p>
+related: {}

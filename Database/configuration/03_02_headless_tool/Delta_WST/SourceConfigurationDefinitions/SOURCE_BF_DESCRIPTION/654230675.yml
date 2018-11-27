@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '654230675'
+keys:
+  BF_DESCRIPTION_NO: PO.0097
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0097
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_storage_overview' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>The business function is used to get an overview of one or several storages at a facility.</p>
+
+    <p>Process Plants keeping track of hydro carbons being moved between assets will do this by registering transactions. The accumulated transactions can provide a calculated opening and closing value for each day. The actual values or measurements are done at tank level and can be directly compared to the calculated values to see if we have a gain or loss.</p>
+
+    <p>The first section shows the measures (based on transaction type) for the storages at a specific facility, given a date range.</p>
+
+    <p>The second data section lists the tank details (volume, mass, density) for the selected storage and date in the first section.</p>
+
+    <p>When the calculate button is pressed, it will re-conciliate the values between the storage.</p>
+related: {}

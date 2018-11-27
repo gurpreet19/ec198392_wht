@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-766376610'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/commentsbefore' AND COMP_CODE ='commentsbefore' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANS_COMMENTS')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/commentsbefore' AND COMP_CODE ='commentsbefore' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANS_COMMENTS')
+  COMMENTS: null
+  NAME: Comments Before /save
+  URL: /save
+related: {}

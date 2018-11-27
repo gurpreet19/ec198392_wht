@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '682331198'
+keys:
+  BF_CODE: RC.0061
+  CLASS_NAME: DATASET_FLOW_REPORT
+  COMP_CODE: generated_reports
+  T: BF_COMPONENT
+  URL: /generated_reports
+parentKeys: {}
+properties:
+  BF_CODE: RC.0061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/Y' )
+  CLASS_NAME: DATASET_FLOW_REPORT
+  COMP_CODE: generated_reports
+  NAME: Generated Reports
+  SIGNING_REQ_IND: null
+  URL: /generated_reports
+related: {}

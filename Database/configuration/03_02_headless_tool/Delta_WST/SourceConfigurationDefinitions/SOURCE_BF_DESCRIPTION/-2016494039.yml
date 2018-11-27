@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2016494039'
+keys:
+  BF_DESCRIPTION_NO: SA.0014
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0014
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/monthly_expenditure' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to input forecasted monthly expenditure for a contract that is used in contractual calculations. Typical examples of calculations that&nbsp;require this information include Production Sharing Agreements (PSA) and operating fee calculations.</p><p>The expenditures are grouped into categories. Example categories include CAPEX (investments), OPEX (operating expenditure) and EXPEX (exploration<br />expenditure). The categories are defined in an EC Code and can be configured by authorised users. Note that expenditure should be input as they occur. Any&nbsp;depreciation of investments etc should be handled by the contractual calculations based on the input in this business function.</p><p>Expenditure can be configured to be company-specific, or it can apply to the full contract. Company specific costs typically apply to the operator but also other&nbsp;partners in the operation can have specific costs.</p><p>The forecasted expenditures input in this business function are used by contractual calculations. Even though it is possible to define several different expenditure&nbsp;items for each category, it is common practise to sum these and use the cost per category and company in the calculations. It is, however, possible to configure the&nbsp;calculations to use the individual expenditures.</p><p>The different expenditure items to input in this business function must be defined in the configuration function CO.3005 &ndash; Contract Expenditure.</p><p>The forecasted expenditure input in this business function will also be shown together with the actual values in SA.0013 - Monthly Contract Expenditure.<br />Note! There exist a business function Forecast - Monthly Expenditure that is recommended to use instead of this one</p>
+related: {}

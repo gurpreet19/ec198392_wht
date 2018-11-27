@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2133332920'
+keys:
+  BF_CODE: GD.0044
+  CLASS_NAME: CALC_DISP_LOG
+  COMP_CODE: log_list
+  T: BF_COMPONENT
+  URL: /log_list
+parentKeys: {}
+properties:
+  BF_CODE: GD.0044
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_disp_calc/NOMINATION_CYCLE/false' )
+  CLASS_NAME: CALC_DISP_LOG
+  COMP_CODE: log_list
+  NAME: Daily Calculation
+  SIGNING_REQ_IND: null
+  URL: /log_list
+related: {}

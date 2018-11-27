@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '458433673'
+keys:
+  BF_CODE: SD.0053
+  CLASS_NAME: SLNL_DAY_TARGET
+  COMP_CODE: last_target
+  T: BF_COMPONENT
+  URL: /last_target
+parentKeys: {}
+properties:
+  BF_CODE: SD.0053
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sd.screens/daily_nomloc_target' )
+  CLASS_NAME: SLNL_DAY_TARGET
+  COMP_CODE: last_target
+  NAME: Last Target
+  SIGNING_REQ_IND: null
+  URL: /last_target
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-616765225'
+keys:
+  COMPONENT_ID: TRAN_BLMR_LIGHT
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.to.screens/blmr_light
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TRAN_BLMR_LIGHT
+  COMPONENT_LABEL: BL/MR Light
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_TO
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 15.0
+  WINDOW_ID: ENERGYX
+related: {}

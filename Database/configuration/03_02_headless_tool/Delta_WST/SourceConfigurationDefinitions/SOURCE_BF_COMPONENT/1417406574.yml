@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1417406574'
+keys:
+  BF_CODE: PD.0013
+  CLASS_NAME: DEFER_LOSS_FCTY_EVENT
+  COMP_CODE: table_fcty
+  T: BF_COMPONENT
+  URL: /table_fcty
+parentKeys: {}
+properties:
+  BF_CODE: PD.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/daily_facility_loss_accounting' )
+  CLASS_NAME: DEFER_LOSS_FCTY_EVENT
+  COMP_CODE: table_fcty
+  NAME: Facility Loss Accounting
+  SIGNING_REQ_IND: null
+  URL: /table_fcty
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '745471731'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/REPORT_AREA
+parentKeys: {}
+properties:
+  BF_CODE: RP.0017
+  NAME: Report Area
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/REPORT_AREA
+related: {}

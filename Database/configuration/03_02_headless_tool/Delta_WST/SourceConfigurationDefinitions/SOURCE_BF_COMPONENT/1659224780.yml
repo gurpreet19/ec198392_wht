@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1659224780'
+keys:
+  BF_CODE: GD.0055
+  CLASS_NAME: CAPACITY_REL_TERMS_RD
+  COMP_CODE: capRelGenTerms
+  T: BF_COMPONENT
+  URL: /capRelGenTerms
+parentKeys: {}
+properties:
+  BF_CODE: GD.0055
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_details' )
+  CLASS_NAME: CAPACITY_REL_TERMS_RD
+  COMP_CODE: capRelGenTerms
+  NAME: General Terms
+  SIGNING_REQ_IND: null
+  URL: /capRelGenTerms
+related: {}

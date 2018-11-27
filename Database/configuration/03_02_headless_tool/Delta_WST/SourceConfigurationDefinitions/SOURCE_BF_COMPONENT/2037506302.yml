@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2037506302'
+keys:
+  BF_CODE: CO.1061
+  CLASS_NAME: null
+  COMP_CODE: copybutton
+  T: BF_COMPONENT
+  URL: /copybutton
+parentKeys: {}
+properties:
+  BF_CODE: CO.1061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.bs.calc.screens/create_library_calculation' )
+  CLASS_NAME: null
+  COMP_CODE: copybutton
+  NAME: Copy Button
+  SIGNING_REQ_IND: null
+  URL: /copybutton
+related: {}

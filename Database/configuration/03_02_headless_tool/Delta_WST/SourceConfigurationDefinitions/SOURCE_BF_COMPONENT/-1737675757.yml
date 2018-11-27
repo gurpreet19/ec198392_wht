@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1737675757'
+keys:
+  BF_CODE: PO.0098
+  CLASS_NAME: STOR_PROD_EVENT_OWNSHP
+  COMP_CODE: tran_ownshp_override
+  T: BF_COMPONENT
+  URL: /tran_ownshp_override
+parentKeys: {}
+properties:
+  BF_CODE: PO.0098
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/product_transaction_overview' )
+  CLASS_NAME: STOR_PROD_EVENT_OWNSHP
+  COMP_CODE: tran_ownshp_override
+  NAME: Transaction Ownership Override
+  SIGNING_REQ_IND: null
+  URL: /tran_ownshp_override
+related: {}

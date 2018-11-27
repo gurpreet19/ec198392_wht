@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1189788987'
+keys:
+  BF_CODE: SP.0027
+  CLASS_NAME: null
+  COMP_CODE: RunReportButton
+  T: BF_COMPONENT
+  URL: /com.ec.pf.screenlet.button/run
+parentKeys: {}
+properties:
+  BF_CODE: SP.0027
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/reallocation' )
+  CLASS_NAME: null
+  COMP_CODE: RunReportButton
+  NAME: Run Report Button
+  SIGNING_REQ_IND: null
+  URL: /com.ec.pf.screenlet.button/run
+related: {}

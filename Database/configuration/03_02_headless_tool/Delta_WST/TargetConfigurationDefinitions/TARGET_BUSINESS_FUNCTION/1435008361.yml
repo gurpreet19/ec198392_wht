@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1435008361'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/create_and_maintain_class
+parentKeys: {}
+properties:
+  BF_CODE: CO.1013
+  NAME: Class
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/create_and_maintain_class
+related: {}

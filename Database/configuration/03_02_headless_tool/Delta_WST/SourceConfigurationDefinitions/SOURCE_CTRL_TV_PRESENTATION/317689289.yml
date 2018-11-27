@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '317689289'
+keys:
+  COMPONENT_ID: TAB_CARGO_MENU
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.tran.cp.screens/tab_cargo_menu/CARGO_NAV_CLASS/CARGO_PLANNING_NAVIGATOR/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT?screentemplate=/com.ec.tran.cp.screens/tab_cargo_menu
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TAB_CARGO_MENU
+  COMPONENT_LABEL: Tab Cargo Menu
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_CP
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 1.0
+  WINDOW_ID: ENERGYX
+related: {}

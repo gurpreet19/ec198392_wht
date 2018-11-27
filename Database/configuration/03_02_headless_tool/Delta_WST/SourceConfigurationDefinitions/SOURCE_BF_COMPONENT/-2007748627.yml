@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2007748627'
+keys:
+  BF_CODE: TO.0008
+  CLASS_NAME: PROD_LIFT_ACT_UNLOAD
+  COMP_CODE: ProductActivitiesUnload
+  T: BF_COMPONENT
+  URL: /ProductActivitiesUnload
+parentKeys: {}
+properties:
+  BF_CODE: TO.0008
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_activity_timesheet_unload' )
+  CLASS_NAME: PROD_LIFT_ACT_UNLOAD
+  COMP_CODE: ProductActivitiesUnload
+  NAME: Product Activity
+  SIGNING_REQ_IND: null
+  URL: /ProductActivitiesUnload
+related: {}

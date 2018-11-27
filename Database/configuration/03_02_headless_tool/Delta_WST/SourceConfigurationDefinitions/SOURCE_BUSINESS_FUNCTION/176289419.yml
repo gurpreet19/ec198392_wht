@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '176289419'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_DATE_TERM/FROM_CLASS_NAME/DOC_DATE_TERM/TO_CLASS_NAME/DOC_DATE_TERM
+parentKeys: {}
+properties:
+  BF_CODE: CD.0123
+  NAME: Document Date Term Usage
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_DATE_TERM/FROM_CLASS_NAME/DOC_DATE_TERM/TO_CLASS_NAME/DOC_DATE_TERM
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1424641610'
+keys:
+  COMPONENT_ID: CALC_JOB_DEF
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.co.screens/alloc_job_definition
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CALC_JOB_DEF
+  COMPONENT_LABEL: Calculation Job Definition
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: CALC_OBJECTS_OLD
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 10.0
+  WINDOW_ID: ENERGYX
+related: {}

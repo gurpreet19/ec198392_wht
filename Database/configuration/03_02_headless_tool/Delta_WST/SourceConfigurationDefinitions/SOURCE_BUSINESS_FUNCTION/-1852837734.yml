@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1852837734'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/daily_dashboard
+parentKeys: {}
+properties:
+  BF_CODE: PO.0117
+  NAME: Daily Dashboard
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.po.screens/daily_dashboard
+related: {}

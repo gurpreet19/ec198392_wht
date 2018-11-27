@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1625715858'
+keys:
+  NAME: footer
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: WAT_RECONCILIATION_FACTOR
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: null
+  MANDATORY_IND: null
+  NAME: footer
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: null
+  SORT_ORDER: 140.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: WAT_RECONCILIATION_FACTOR
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '588052784'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.sp/manage_summary_set_setup
+parentKeys: {}
+properties:
+  BF_CODE: SP.0050
+  NAME: Data Extract Set Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.sp/manage_summary_set_setup
+related: {}

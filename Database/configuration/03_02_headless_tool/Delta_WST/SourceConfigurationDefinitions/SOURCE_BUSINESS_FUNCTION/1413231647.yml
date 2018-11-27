@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1413231647'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PAYMENT_SCHEME
+parentKeys: {}
+properties:
+  BF_CODE: CD.0113
+  NAME: Payment Scheme
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PAYMENT_SCHEME
+related: {}

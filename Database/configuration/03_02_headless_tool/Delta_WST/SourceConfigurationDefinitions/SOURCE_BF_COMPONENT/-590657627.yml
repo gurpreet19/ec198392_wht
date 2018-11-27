@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-590657627'
+keys:
+  BF_CODE: CO.0218
+  CLASS_NAME: CHOKE_MODEL_REF_VALUE
+  COMP_CODE: daytimes
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CO.0218
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/choke_model_ref_values' )
+  CLASS_NAME: CHOKE_MODEL_REF_VALUE
+  COMP_CODE: daytimes
+  NAME: daytimes
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

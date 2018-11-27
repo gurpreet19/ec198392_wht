@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1779370818'
+keys:
+  BF_CODE: FI.0003
+  CLASS_NAME: null
+  COMP_CODE: unapprove_selected_button
+  T: BF_COMPONENT
+  URL: /unapprove_selected_button
+parentKeys: {}
+properties:
+  BF_CODE: FI.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_entry/TIME_SPAN/MTH' )
+  CLASS_NAME: null
+  COMP_CODE: unapprove_selected_button
+  NAME: Un-Approve Selected Button
+  SIGNING_REQ_IND: null
+  URL: /unapprove_selected_button
+related: {}

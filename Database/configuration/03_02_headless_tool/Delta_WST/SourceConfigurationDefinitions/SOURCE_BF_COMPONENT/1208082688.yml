@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1208082688'
+keys:
+  BF_CODE: FI.0003
+  CLASS_NAME: null
+  COMP_CODE: useTemplateWithoutValue
+  T: BF_COMPONENT
+  URL: /useTemplateWithoutValue
+parentKeys: {}
+properties:
+  BF_CODE: FI.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/financial_item_entry/TIME_SPAN/MTH' )
+  CLASS_NAME: null
+  COMP_CODE: useTemplateWithoutValue
+  NAME: Use Template Without Value
+  SIGNING_REQ_IND: null
+  URL: /useTemplateWithoutValue
+related: {}

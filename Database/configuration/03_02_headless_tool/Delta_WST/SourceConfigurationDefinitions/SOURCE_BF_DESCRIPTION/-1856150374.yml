@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1856150374'
+keys:
+  BF_DESCRIPTION_NO: WR.0067
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0067
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/webo_pressure_test' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is used to enter well bore pressure tests. The main purpose for this BF is to calculate the datum pressure based on the pressure test.</p>
+related: {}

@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1791711124'
+keys:
+  ATTRIBUTE_TYPE: API_CALC_TOLERANCE
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: API_CALC_TOLERANCE
+  ATTRIBUTE_VALUE: 1.0E-6
+  COMMENTS: Default tolerance value used in the loop to calculate blend/diluent volume in EcBp_Vcf.calcAPIBlendShrinkage
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2117964385'
+keys:
+  BF_CODE: IS.0006
+  CLASS_NAME: IMP_SRC_INTERFACE_ATCM
+  COMP_CODE: AdditionalFile
+  T: BF_COMPONENT
+  URL: /AdditionalFile
+parentKeys: {}
+properties:
+  BF_CODE: IS.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.ecdm.co.screens/imp_upload' )
+  CLASS_NAME: IMP_SRC_INTERFACE_ATCM
+  COMP_CODE: AdditionalFile
+  NAME: Additional File
+  SIGNING_REQ_IND: null
+  URL: /AdditionalFile
+related: {}

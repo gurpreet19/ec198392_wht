@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1476092093'
+keys:
+  BF_CODE: CO.0058
+  CLASS_NAME: WELL_BORE_INTERVAL_SPLIT
+  COMP_CODE: splits
+  T: BF_COMPONENT
+  URL: /splits
+parentKeys: {}
+properties:
+  BF_CODE: CO.0058
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/well_bore_interval_split' )
+  CLASS_NAME: WELL_BORE_INTERVAL_SPLIT
+  COMP_CODE: splits
+  NAME: Object Splits
+  SIGNING_REQ_IND: null
+  URL: /splits
+related: {}

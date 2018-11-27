@@ -1,0 +1,2 @@
+	COMMENT ON COLUMN WELL_VERSION.GL_SOURCE_STRM_ID IS 'Gas lift source stream.'
+--~^UTDELIM^~--

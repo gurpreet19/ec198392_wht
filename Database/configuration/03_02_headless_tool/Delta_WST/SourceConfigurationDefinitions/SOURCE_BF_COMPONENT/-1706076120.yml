@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1706076120'
+keys:
+  BF_CODE: CO.1004
+  CLASS_NAME: T_BASIS_ACCESS_PARTITION
+  COMP_CODE: classAccess
+  T: BF_COMPONENT
+  URL: /classAccess
+parentKeys: {}
+properties:
+  BF_CODE: CO.1004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_access_partitions' )
+  CLASS_NAME: T_BASIS_ACCESS_PARTITION
+  COMP_CODE: classAccess
+  NAME: Class Access
+  SIGNING_REQ_IND: null
+  URL: /classAccess
+related: {}

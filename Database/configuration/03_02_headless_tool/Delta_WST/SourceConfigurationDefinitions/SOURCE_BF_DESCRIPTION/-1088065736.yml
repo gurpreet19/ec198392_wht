@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1088065736'
+keys:
+  BF_DESCRIPTION_NO: PO.0047
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0047
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/maintain_process_train_recovery_factors' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This business function is used to register recovery factors in EC. The recovery factor will be stored against a process train, and is a factory per profit centre and component.</p>
+
+    <p>A typical example will be a project with two process trains, one for the liquid recovery factors, and one for the gas recovery factors. Other projects might have more process trains if they had more recovery factors. The recovery factor tells how much of the gas or liquid export from a profit centre (for example a nomination point) that will contribute to the plant output gas. The value of the recovery factor can be calculated, received through an interface or manually registered.</p>
+
+    <p>The Recovery Factor for a profit centre and component is valid from the Start Date until the End Date. If no End Date is given, the recovery factor is still valid. The first record on the process train must be inserted with the insert button. The <em>Recovery Factors </em>data section will list all records associated with the process train selected in the navigator, and where the date selected in the navigator is between the Start Date and End Date. A record with an open End Date will be displayed if the navigator date is equal to or after the Start Date. An additional filter on Profit Centre can be sat in the navigator.</p>
+
+    <p>The screen will show recovery factors for all profit centers for the selected process train if the navigator has not selected a profit centre.</p>
+related: {}

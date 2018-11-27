@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-194926402'
+keys:
+  BF_CODE: PO.0091
+  CLASS_NAME: STRM_SUB_DAY_STATUS_GAS
+  COMP_CODE: subDailyGasStreamStatusTable
+  T: BF_COMPONENT
+  URL: /subDailyGasStreamStatusTable
+parentKeys: {}
+properties:
+  BF_CODE: PO.0091
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/sub_daily_gas_stream_status_by_period' )
+  CLASS_NAME: STRM_SUB_DAY_STATUS_GAS
+  COMP_CODE: subDailyGasStreamStatusTable
+  NAME: Sub Daily Gas Stream Status
+  SIGNING_REQ_IND: null
+  URL: /subDailyGasStreamStatusTable
+related: {}

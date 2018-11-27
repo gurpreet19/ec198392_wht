@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-74500930'
+keys:
+  BF_CODE: PO.0094
+  CLASS_NAME: CHEM_TANK_EVENT_STATUS
+  COMP_CODE: chemTankStatus
+  T: BF_COMPONENT
+  URL: /chem_tank_status
+parentKeys: {}
+properties:
+  BF_CODE: PO.0094
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_chemical_tank_status' )
+  CLASS_NAME: CHEM_TANK_EVENT_STATUS
+  COMP_CODE: chemTankStatus
+  NAME: Chemical Tank Status
+  SIGNING_REQ_IND: null
+  URL: /chem_tank_status
+related: {}

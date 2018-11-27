@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1589298507'
+keys:
+  BF_CODE: SP.0039
+  CLASS_NAME: REVN_DATA_FILTER_RULE
+  COMP_CODE: SetupButton/matchingRules
+  T: BF_COMPONENT
+  URL: /SetupButton/matchingRules
+parentKeys: {}
+properties:
+  BF_CODE: SP.0039
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/manage_cost_mapping' )
+  CLASS_NAME: REVN_DATA_FILTER_RULE
+  COMP_CODE: SetupButton/matchingRules
+  NAME: SetupButton/Matching Rules
+  SIGNING_REQ_IND: null
+  URL: /SetupButton/matchingRules
+related: {}

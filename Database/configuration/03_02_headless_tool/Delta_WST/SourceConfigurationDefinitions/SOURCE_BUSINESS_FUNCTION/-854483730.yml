@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-854483730'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/forecast
+parentKeys: {}
+properties:
+  BF_CODE: PP.0039
+  NAME: Forecast
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.pp.screens/forecast
+related: {}

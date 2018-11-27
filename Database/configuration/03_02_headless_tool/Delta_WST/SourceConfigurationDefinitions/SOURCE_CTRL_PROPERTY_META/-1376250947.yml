@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1376250947'
+keys:
+  KEY: /com.ec.tran.co.screens/maintain_opportunities/tab/misc
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: 'false'
+  DESCRIPTION: ON/OFF by Using true/false
+  KEY: /com.ec.tran.co.screens/maintain_opportunities/tab/misc
+  LABEL: Maintain Opportunities - Misc Tab
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

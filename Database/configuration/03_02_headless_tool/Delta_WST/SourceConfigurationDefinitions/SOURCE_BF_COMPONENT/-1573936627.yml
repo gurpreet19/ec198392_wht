@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1573936627'
+keys:
+  BF_CODE: CO.0131
+  CLASS_NAME: SCHEDULE_LIST
+  COMP_CODE: schedule
+  T: BF_COMPONENT
+  URL: /schedule
+parentKeys: {}
+properties:
+  BF_CODE: CO.0131
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/schedule_history' )
+  CLASS_NAME: SCHEDULE_LIST
+  COMP_CODE: schedule
+  NAME: Schedule
+  SIGNING_REQ_IND: null
+  URL: /schedule
+related: {}

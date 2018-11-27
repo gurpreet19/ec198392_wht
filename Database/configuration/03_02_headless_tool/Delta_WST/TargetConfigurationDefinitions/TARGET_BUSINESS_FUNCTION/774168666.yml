@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '774168666'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/access_control_class_relation
+parentKeys: {}
+properties:
+  BF_CODE: CO.1034
+  NAME: Access Control Class Relation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/access_control_class_relation
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2104631483'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/POWER_DISTRIBUTION_EQPM/TARGET/POWER_DISTRIBUTION_EQPM/CLASS_NAME/POWER_DISTRIBUTION_EQPM
+parentKeys: {}
+properties:
+  BF_CODE: CO.0114
+  NAME: Power Distribution Equipment
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/POWER_DISTRIBUTION_EQPM/TARGET/POWER_DISTRIBUTION_EQPM/CLASS_NAME/POWER_DISTRIBUTION_EQPM
+related: {}

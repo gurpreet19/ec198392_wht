@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '528034991'
+keys:
+  BF_DESCRIPTION_NO: PR.0030
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PR.0030
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.pr.screens/forecast_price' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to create and maintain forecast objects for the price module.</p><p>This business functions works in the same way as other maintain object business functions. The only difference is the buttons that can be used to copy data from other forecasts.</p><p><b>Copy Forecast:</b><br/>This button copies data from an existing forecast into the new forecast, but only for the date period selected. This means that if the start date and end date of the two&nbsp;forecasts don&rsquo;t overlap, no data will be copied.</p><p>Data that are copied are<ul style="list-style-type:disc">  <li>Forecast price</li></ul></p>
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-41540200'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/monthly_np_data/CLASS/SLCN_MTH_PRODUCT_QTY/CLASS_DAY/SLCN_DAY_PRODUCT_QTY/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0038
+parentKeys: {}
+properties:
+  BF_CODE: SA.0038
+  NAME: Monthly Contractual Volume
+  PROFILE_CLASS_NAME: CONTRACT
+  URL: /com.ec.tran.gd.screens/monthly_np_data/CLASS/SLCN_MTH_PRODUCT_QTY/CLASS_DAY/SLCN_DAY_PRODUCT_QTY/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0038
+related: {}

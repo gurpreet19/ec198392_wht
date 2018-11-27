@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '662590371'
+keys:
+  BF_CODE: TO.0011
+  CLASS_NAME: CARGO_ANALYSIS_BASIC_ULD
+  COMP_CODE: cargoBasicAnalysis
+  T: BF_COMPONENT
+  URL: /cargoBasicAnalysis
+parentKeys: {}
+properties:
+  BF_CODE: TO.0011
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.to.screens/cargo_analysis_unload' )
+  CLASS_NAME: CARGO_ANALYSIS_BASIC_ULD
+  COMP_CODE: cargoBasicAnalysis
+  NAME: Basic Analysis
+  SIGNING_REQ_IND: null
+  URL: /cargoBasicAnalysis
+related: {}

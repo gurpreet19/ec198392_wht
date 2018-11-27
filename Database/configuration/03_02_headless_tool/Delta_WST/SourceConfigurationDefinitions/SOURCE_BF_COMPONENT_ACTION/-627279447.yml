@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-627279447'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0015' AND NVL(URL,'IS_NULL') = '/line_item_table' AND COMP_CODE ='TransactionTemplateLineItem' AND NVL(CLASS_NAME,'IS_NULL') = 'LINE_ITEM_TEMPLATE')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0015' AND NVL(URL,'IS_NULL') = '/line_item_table' AND COMP_CODE ='TransactionTemplateLineItem' AND NVL(CLASS_NAME,'IS_NULL') = 'LINE_ITEM_TEMPLATE')
+  COMMENTS: null
+  NAME: Qty Line Item /save
+  URL: /save
+related: {}

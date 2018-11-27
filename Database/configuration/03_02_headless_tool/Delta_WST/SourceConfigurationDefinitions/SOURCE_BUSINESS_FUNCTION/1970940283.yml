@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1970940283'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/payment_scheme_setup
+parentKeys: {}
+properties:
+  BF_CODE: CD.0114
+  NAME: Payment Scheme Setup
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/payment_scheme_setup
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1139222760'
+keys:
+  BF_CODE: CO.1052
+  CLASS_NAME: null
+  COMP_CODE: syncModel
+  T: BF_COMPONENT
+  URL: /syncModel
+parentKeys: {}
+properties:
+  BF_CODE: CO.1052
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/navigation_model' )
+  CLASS_NAME: null
+  COMP_CODE: syncModel
+  NAME: Synchronise Model
+  SIGNING_REQ_IND: null
+  URL: /syncModel
+related: {}

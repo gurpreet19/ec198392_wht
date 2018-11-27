@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '997502266'
+keys:
+  BF_CODE: PO.0061
+  CLASS_NAME: STRM_LIQ_TOTALIZER
+  COMP_CODE: analysis
+  T: BF_COMPONENT
+  URL: /analysis_main
+parentKeys: {}
+properties:
+  BF_CODE: PO.0061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/period_liquid_stream_totalizer' )
+  CLASS_NAME: STRM_LIQ_TOTALIZER
+  COMP_CODE: analysis
+  NAME: Period Liquid Stream Totalizer
+  SIGNING_REQ_IND: null
+  URL: /analysis_main
+related: {}

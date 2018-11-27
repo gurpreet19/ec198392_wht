@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1913344820'
+keys:
+  BF_CODE: WR.0037
+  CLASS_NAME: IWEL_SUB_DAY_STATUS_STM
+  COMP_CODE: subDailySteamInjectionWellStatusTable
+  T: BF_COMPONENT
+  URL: /subDailySteamInjectionWellStatusTable
+parentKeys: {}
+properties:
+  BF_CODE: WR.0037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/sub_daily_steam_injection_well_status' )
+  CLASS_NAME: IWEL_SUB_DAY_STATUS_STM
+  COMP_CODE: subDailySteamInjectionWellStatusTable
+  NAME: Sub Daily Steam Injection Well Status
+  SIGNING_REQ_IND: null
+  URL: /subDailySteamInjectionWellStatusTable
+related: {}

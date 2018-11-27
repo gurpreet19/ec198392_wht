@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1485093034'
+keys:
+  BF_DESCRIPTION_NO: SA.0037
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0037
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_day_np_data/CLASS/SLCN_DAY_PRODUCT_QTY/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0037' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The business functions list the day production volumes by contract. The quantity and Uom can be calculated on volume, mass and/or energy. The calculated quantity and Uom displayed is the one mapping of the product on the contract. Besides, the quantity and Uom can be input manually on the screen when there are available quantities received from external sources.</p>
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-963791198'
+keys:
+  BF_CODE: PP.0056
+  CLASS_NAME: FORECAST_COMPARISON
+  COMP_CODE: Comparison
+  T: BF_COMPONENT
+  URL: /comparison
+parentKeys: {}
+properties:
+  BF_CODE: PP.0056
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_define_scenarios/CLASS_NAME/FORECAST_COMPARISON/CLASS_NAME_2/FCST_COMPARE_DOCUMENTS' )
+  CLASS_NAME: FORECAST_COMPARISON
+  COMP_CODE: Comparison
+  NAME: Scenario Comparison
+  SIGNING_REQ_IND: null
+  URL: /comparison
+related: {}

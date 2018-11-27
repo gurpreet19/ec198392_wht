@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1278271731'
+keys:
+  BF_DESCRIPTION_NO: SA.0007
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: SA.0007
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.sa.screens/contract_alloc_mth_adjustment' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function enables a company to adjust allocated quantity between contracts. The company is associated with a contract through a commercial entity/JV&nbsp;and is the seller of the contract. To learn more about gas contracts see Create/Maintain Gas Contract (CO.3001/3002).</p><p>The total allocated delivered quantity is the company&rsquo;s share of the total allocated delivered quantity to a contract. The production- or contract allocation must&nbsp;allocate the total quantity back to contracts and companies. If no allocated delivered quantities exist, no adjustments can be done.</p><p>After selecting a month and a company, all contracts that are valid for the selected month and where company is a seller will be listed. As mentioned above,<br />&lsquo;Allocated Quantity&rsquo; is the selected companies total share on the contract.</p><p>The user is allowed to move quantities between contracts by using the &lsquo;Add Qty&rsquo; and &lsquo;Subtract Qty&rsquo; columns. It is not allowed to take more from a contract than the&nbsp;total allocated to it. Also, the total subtracted from all the contracts must be the same as added to the contracts.</p>
+related: {}

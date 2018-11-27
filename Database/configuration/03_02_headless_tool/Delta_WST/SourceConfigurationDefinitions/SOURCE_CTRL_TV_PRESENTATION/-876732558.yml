@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-876732558'
+keys:
+  COMPONENT_ID: FCST_IWEL_POTENTIAL
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_POTENTIAL/INJ_TYPE/Y?screentemplate=/com.ec.prod.pp.screens/daily_injection_forecast&TARGETCONDITION=ISINJECTOR in ('Y')
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: FCST_IWEL_POTENTIAL
+  COMPONENT_LABEL: Forecast Injection Well Potential
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_DAY_FCST
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 240.0
+  WINDOW_ID: ENERGYX
+related: {}

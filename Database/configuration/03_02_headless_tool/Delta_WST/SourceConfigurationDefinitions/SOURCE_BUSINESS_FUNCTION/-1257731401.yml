@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1257731401'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.ca.screens/mth_account_balance
+parentKeys: {}
+properties:
+  BF_CODE: CA.0004
+  NAME: Monthly Account Balance Calculation
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.prod.ca.screens/mth_account_balance
+related: {}

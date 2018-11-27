@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-243713887'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.cd/lock_module
+parentKeys: {}
+properties:
+  BF_CODE: CD.0048
+  NAME: Revenue Lock Module
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.revn.cd/lock_module
+related: {}

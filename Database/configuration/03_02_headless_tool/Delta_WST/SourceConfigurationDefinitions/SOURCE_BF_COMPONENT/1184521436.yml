@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1184521436'
+keys:
+  BF_CODE: PA.0012
+  CLASS_NAME: null
+  COMP_CODE: availableTasks
+  T: BF_COMPONENT
+  URL: /availableTasks
+parentKeys: {}
+properties:
+  BF_CODE: PA.0012
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/task_management' )
+  CLASS_NAME: null
+  COMP_CODE: availableTasks
+  NAME: Available Tasks
+  SIGNING_REQ_IND: null
+  URL: /availableTasks
+related: {}

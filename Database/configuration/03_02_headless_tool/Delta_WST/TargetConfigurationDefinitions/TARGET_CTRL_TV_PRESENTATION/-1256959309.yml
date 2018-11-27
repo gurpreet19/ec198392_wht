@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1256959309'
+keys:
+  COMPONENT_ID: ANALYSIS_ITEM
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.frmw.co.screens/manage_table/CLASS_NAME/ANALYSIS_ITEM?screentemplate=/com.ec.frmw.co.screens/manage_table
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: ANALYSIS_ITEM
+  COMPONENT_LABEL: Analysis Item
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TRAN_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 100.0
+  WINDOW_ID: ENERGYX
+related: {}

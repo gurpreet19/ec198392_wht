@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1470083204'
+keys:
+  BF_CODE: CO.3005
+  CLASS_NAME: SCTR_EXPENDITURE_CODE
+  COMP_CODE: codes
+  T: BF_COMPONENT
+  URL: /codes
+parentKeys: {}
+properties:
+  BF_CODE: CO.3005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/contract_exp_code' )
+  CLASS_NAME: SCTR_EXPENDITURE_CODE
+  COMP_CODE: codes
+  NAME: Contract Exp Codes
+  SIGNING_REQ_IND: null
+  URL: /codes
+related: {}

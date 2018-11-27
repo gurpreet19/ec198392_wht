@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '564982805'
+keys:
+  BF_DESCRIPTION_NO: GD.0020
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_input_nomination/CLASS/TRNP_DAY_NOM_INPUT/NOMINATION_CYCLE/false/CATEGORY/ENTRY_PATH/SHOW_OPERATIONAL/N' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to enter and modify requested input nominations for contract and entry location.</p><p>Shippers need the ability to enter input nominations meaning nominations that are entering the pipeline at an entry delivery point.</p><p>The shipper will enter an input nomination that will consist of a valid contract, delivery point (entry location), upstream shipper (optional) and requested quantity (nominated input quantity).</p><p>The business function will validate the input nominations based upon a predefined set of validation rules when the records are saved to the database.</p><p>Input nominations can either be entered into the system by the Input Nomination business function or via electronic messaging.</p><p>Once successfully saved and validated in this business function the nomination&rsquo;s status will be set to Requested. If the nomination does not pass validation, the status will be set to Rejected. When the nomination has been submitted through the Nomination Balancing business function and passed nomination balancing validations, the nomination status will be set to Accepted. After the nomination has been confirmed the status will change to Confirmed, the figure below shows other possible nomination statuses.</p>
+related: {}

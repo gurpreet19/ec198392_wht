@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '767759831'
+keys:
+  COMPONENT_ID: CONTRACT_PREPARE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.tran.co.screens/contract_prepare/CLASS_NAME/CONTRACT_PREPARE?screentemplate=/com.ec.tran.co.screens/contract_prepare
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: CONTRACT_PREPARE
+  COMPONENT_LABEL: Prepare Contract
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: CONTRACT_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 95.0
+  WINDOW_ID: ENERGYX
+related: {}

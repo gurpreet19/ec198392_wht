@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '367825835'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_func_area/CLASS_NAME/CONTACT_GROUP_SET/FUNC_AREA_FK/FUNCTIONAL_AREA_ID
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_func_area/CLASS_NAME/CONTACT_GROUP_SET/FUNC_AREA_FK/FUNCTIONAL_AREA_ID
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

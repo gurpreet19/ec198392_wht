@@ -1,0 +1,24 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2145835042'
+keys:
+  T: CONTRACT_TEMPLATE
+  TEMPLATE_CODE: DEFAULT_REVENUE
+parentKeys: {}
+properties:
+  NAME: EC Revenue Template
+  TEMPLATE_CODE: DEFAULT_REVENUE
+  TEXT_1: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  VALUE_1: null
+  VALUE_10: null
+  VALUE_2: null
+  VALUE_3: null
+  VALUE_4: null
+  VALUE_5: null
+  VALUE_6: null
+  VALUE_7: null
+  VALUE_8: null
+  VALUE_9: null
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1496886563'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CONDENSATE_SURGE_DRUM/TARGET/CONDENSATE_SURGE_DRUM/CLASS_NAME/CONDENSATE_SURGE_DRUM
+parentKeys: {}
+properties:
+  BF_CODE: CO.0174
+  NAME: Condensate Surge Drum
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CONDENSATE_SURGE_DRUM/TARGET/CONDENSATE_SURGE_DRUM/CLASS_NAME/CONDENSATE_SURGE_DRUM
+related: {}

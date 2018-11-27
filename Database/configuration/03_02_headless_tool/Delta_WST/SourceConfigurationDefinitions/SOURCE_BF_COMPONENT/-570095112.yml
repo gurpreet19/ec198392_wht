@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-570095112'
+keys:
+  BF_CODE: CO.1031
+  CLASS_NAME: CLASS_ATTR_EDITABLE
+  COMP_CODE: editable_attr
+  T: BF_COMPONENT
+  URL: /editable_attr
+parentKeys: {}
+properties:
+  BF_CODE: CO.1031
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/class_validation' )
+  CLASS_NAME: CLASS_ATTR_EDITABLE
+  COMP_CODE: editable_attr
+  NAME: Editable Attributes
+  SIGNING_REQ_IND: null
+  URL: /editable_attr
+related: {}

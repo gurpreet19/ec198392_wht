@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1596748597'
+keys:
+  COMPONENT_ID: TANK_TAP
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: ../com.ec.prod.co.screens/tank_tap
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: TANK_TAP
+  COMPONENT_LABEL: Tank Tap
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: TANK_STO_OBJECTS
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 65.0
+  WINDOW_ID: ENERGYX
+related: {}

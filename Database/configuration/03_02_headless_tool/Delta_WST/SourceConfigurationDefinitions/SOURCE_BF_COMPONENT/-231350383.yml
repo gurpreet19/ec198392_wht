@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-231350383'
+keys:
+  BF_CODE: CO.0148
+  CLASS_NAME: STRM_ORF_COMPONENT
+  COMP_CODE: daytimes
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CO.0148
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/stream_orf_value' )
+  CLASS_NAME: STRM_ORF_COMPONENT
+  COMP_CODE: daytimes
+  NAME: daytimes
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

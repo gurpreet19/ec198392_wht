@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-14993496'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.bpm.ext.ec.web/viewer_tag
+parentKeys: {}
+properties:
+  BF_CODE: PA.0010
+  NAME: Viewer Tag
+  PROFILE_CLASS_NAME: null
+  URL: /com.ec.bpm.ext.ec.web/viewer_tag
+related: {}

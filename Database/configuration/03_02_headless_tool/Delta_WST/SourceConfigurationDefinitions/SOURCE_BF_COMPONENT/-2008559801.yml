@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2008559801'
+keys:
+  BF_CODE: GD.0060
+  CLASS_NAME: CAPACITY_RECALL
+  COMP_CODE: capacityRecall
+  T: BF_COMPONENT
+  URL: /capacityRecall
+parentKeys: {}
+properties:
+  BF_CODE: GD.0060
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/capacity_release_recall_reput' )
+  CLASS_NAME: CAPACITY_RECALL
+  COMP_CODE: capacityRecall
+  NAME: Capacity Recall
+  SIGNING_REQ_IND: null
+  URL: /capacityRecall
+related: {}

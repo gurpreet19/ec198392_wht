@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1839698534'
+keys:
+  BF_CODE: CO.2061
+  CLASS_NAME: COMPANY_DOC_TEMPLATE
+  COMP_CODE: docTemplate
+  T: BF_COMPONENT
+  URL: /docTemplate
+parentKeys: {}
+properties:
+  BF_CODE: CO.2061
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.co.screens/company_doc_receiver_templ' )
+  CLASS_NAME: COMPANY_DOC_TEMPLATE
+  COMP_CODE: docTemplate
+  NAME: Company Document Template
+  SIGNING_REQ_IND: null
+  URL: /docTemplate
+related: {}

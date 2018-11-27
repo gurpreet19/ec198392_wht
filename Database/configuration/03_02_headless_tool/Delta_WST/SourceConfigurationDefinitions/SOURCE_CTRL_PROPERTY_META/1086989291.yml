@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1086989291'
+keys:
+  KEY: GR_TR_HIGHLIGHT_COLOR
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: ED7D31
+  DESCRIPTION: This is the color for the text box outline for the Visual Tracing for the traced data entities. Given in RGB as HEX
+  KEY: GR_TR_HIGHLIGHT_COLOR
+  LABEL: Visual Tracing highlight color
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

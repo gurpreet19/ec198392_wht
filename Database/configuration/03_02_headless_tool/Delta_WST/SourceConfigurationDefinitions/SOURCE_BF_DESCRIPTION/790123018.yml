@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '790123018'
+keys:
+  BF_DESCRIPTION_NO: CO.3005
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.3005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.sale.co.screens/contract_exp_code' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is used to define the different expenditure items that can be input for a given contract. Contract expenditure is used in contractual calculations. Typical examples of calculations that require this information include Production Sharing Agreements (PSA) and operating fee calculations.</p><p>The expenditure items are grouped into categories. Example categories include CAPEX (investments), OPEX (operating expenditure) and EXPEX (exploration expenditure). The categories are defined in an EC Code and can be configured by authorised users. There can be any number of specific expenditure items for each category. Each item must be identified by a unique expenditure code.</p><p>Expenditure can be configured to be company-specific, or it can apply to the full contract. Company specific costs typically apply to the operator but also other partners in the operation can have specific costs.</p><p>The expenditures codes defined in this business function are used by the business functions SA.0013 - Monthly Contract Expenditure and SA.0014 - Monthly Contract Expenditure Forecast. Use these business functions to input the actual and forecasted expenditure for each of the defined expenditure codes.</p>
+related: {}
