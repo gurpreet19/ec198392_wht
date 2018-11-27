@@ -1,9 +1,0 @@
-'101.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '46731060'
-  keys:
-    CHECK_ID: 101.0
-    T: CTRL_CHECK_RULES
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED

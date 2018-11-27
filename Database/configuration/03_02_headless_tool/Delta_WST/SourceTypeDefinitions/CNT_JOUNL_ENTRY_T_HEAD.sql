@@ -1,1 +1,0 @@
-CREATE OR REPLACE TYPE cnt_jounl_entry_t IS TABLE OF cnt_jounl_entry_o;
