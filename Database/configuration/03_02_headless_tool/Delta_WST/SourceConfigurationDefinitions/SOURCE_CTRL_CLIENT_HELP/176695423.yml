@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '176695423'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

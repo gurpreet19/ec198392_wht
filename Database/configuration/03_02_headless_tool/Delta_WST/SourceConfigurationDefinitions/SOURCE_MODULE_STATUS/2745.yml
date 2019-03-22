@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2745'
+keys:
+  MODULE_CODE: VO
+  T: MODULE_STATUS
+parentKeys: {}
+properties:
+  LOCKED_DATE: null
+  MODULE_CODE: VO
+  MODULE_NAME: Volumes
+  SORT_ORDER: 1.0
+  STATUS: OPEN
+related: {}

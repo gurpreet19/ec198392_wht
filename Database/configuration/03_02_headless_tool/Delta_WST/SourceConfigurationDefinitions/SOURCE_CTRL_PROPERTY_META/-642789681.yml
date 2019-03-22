@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-642789681'
+keys:
+  KEY: DEFERMENT_STATUS_STOPPED
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: NUMBER
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: 0.0
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Customise the default stopped status of deferment event
+  KEY: DEFERMENT_STATUS_STOPPED
+  LABEL: 'Automatic Deferment Raw Data: Custom Status for Stopped'
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

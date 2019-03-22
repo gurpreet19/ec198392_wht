@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '234232251'
+keys:
+  BF_CODE: SP.0006
+  CLASS_NAME: null
+  COMP_CODE: current_periods
+  T: BF_COMPONENT
+  URL: /current_periods
+parentKeys: {}
+properties:
+  BF_CODE: SP.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/BOOKED' )
+  CLASS_NAME: null
+  COMP_CODE: current_periods
+  NAME: Navigator (form) > Document VALID2 Table (table) > Current Periods (form)
+  SIGNING_REQ_IND: null
+  URL: /current_periods
+related: {}

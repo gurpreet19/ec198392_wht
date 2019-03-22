@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1633458847'
+keys:
+  KEY: /com/ec/frmw/report/jasper/pdf_font_name_bold_italic
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: Times-BoldItalic
+  DESCRIPTION: Default Pdf Font Name - Bold and Italic
+  KEY: /com/ec/frmw/report/jasper/pdf_font_name_bold_italic
+  LABEL: Default Pdf Font Name - Bold and Italic
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

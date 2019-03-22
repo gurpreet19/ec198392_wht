@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1178284500'
+keys:
+  CODE: EC_TRAN
+  T: APP_SPACE_CNTX
+parentKeys: {}
+properties:
+  CODE: EC_TRAN
+  NAME: EC Transport
+  OWNER_CNTX: 0.0
+  SORT_ORDER: 40.0
+related: {}

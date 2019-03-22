@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '654550924'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: PP.0030
+  NAME: Daily Injection Well Forecast
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: ISINJECTOR in ('Y')
+  URL: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS
+related: {}

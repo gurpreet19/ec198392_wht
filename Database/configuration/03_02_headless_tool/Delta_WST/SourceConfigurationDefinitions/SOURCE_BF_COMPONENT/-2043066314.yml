@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2043066314'
+keys:
+  BF_CODE: PT.0019
+  CLASS_NAME: INJ_TEST_DEVICE_TEST_DEF
+  COMP_CODE: active_test_device
+  T: BF_COMPONENT
+  URL: /active_test_device
+parentKeys: {}
+properties:
+  BF_CODE: PT.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_define' )
+  CLASS_NAME: INJ_TEST_DEVICE_TEST_DEF
+  COMP_CODE: active_test_device
+  NAME: Test Device
+  SIGNING_REQ_IND: null
+  URL: /active_test_device
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-76697125'
+keys:
+  OBJECT_NAME: CTRL_REPORT_UNIT
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: null
+  OBJECT_NAME: CTRL_REPORT_UNIT
+  PINC_TRIGGER_IND: Y
+  VIEW_PK_TABLE_NAME: null
+related: {}

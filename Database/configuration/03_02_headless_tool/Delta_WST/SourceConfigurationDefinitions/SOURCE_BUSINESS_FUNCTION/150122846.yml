@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '150122846'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/daily_path_delivery
+parentKeys: {}
+properties:
+  BF_CODE: GD.0153
+  NAME: Daily Path Delivery
+  PROFILE_CLASS_NAME: NOMPNT_NP_DAY_DELIVERY
+  TARGET_CONDITION: null
+  URL: /com.ec.tran.gd.screens/daily_path_delivery
+related: {}

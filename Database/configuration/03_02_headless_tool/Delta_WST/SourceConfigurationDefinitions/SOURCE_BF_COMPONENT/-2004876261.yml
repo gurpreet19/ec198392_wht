@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2004876261'
+keys:
+  BF_CODE: PT.0022
+  CLASS_NAME: ACTIVE_INJ_WBI
+  COMP_CODE: active_wbi
+  T: BF_COMPONENT
+  URL: /active_wbi
+parentKeys: {}
+properties:
+  BF_CODE: PT.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_stable_periods_summarise' )
+  CLASS_NAME: ACTIVE_INJ_WBI
+  COMP_CODE: active_wbi
+  NAME: Data Well Bore Interval
+  SIGNING_REQ_IND: null
+  URL: /active_wbi
+related: {}

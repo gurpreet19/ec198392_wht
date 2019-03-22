@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1026701642'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__task_ready
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag on task node instances with status 'Ready'
+  TAG: ecbpm__task_ready
+related: {}

@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '52407'
+keys:
+  LANGUAGE_ID: 5.0
+  T: T_BASIS_LANGUAGE
+parentKeys: {}
+properties:
+  LANGUAGE: ES
+  LANGUAGE_ID: 5.0
+  NAME: Spanish
+related: {}

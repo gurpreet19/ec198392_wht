@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '51446'
+keys:
+  LANGUAGE_ID: 4.0
+  T: T_BASIS_LANGUAGE
+parentKeys: {}
+properties:
+  LANGUAGE: IT
+  LANGUAGE_ID: 4.0
+  NAME: Italian
+related: {}

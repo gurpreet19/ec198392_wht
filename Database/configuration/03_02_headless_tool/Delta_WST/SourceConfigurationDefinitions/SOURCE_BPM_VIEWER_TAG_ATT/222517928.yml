@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '222517928'
+keys:
+  NAME: text_color
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__node_active
+parentKeys: {}
+properties:
+  NAME: text_color
+  TAG: ecbpm__node_active
+  VALUE: '#fff'
+related: {}

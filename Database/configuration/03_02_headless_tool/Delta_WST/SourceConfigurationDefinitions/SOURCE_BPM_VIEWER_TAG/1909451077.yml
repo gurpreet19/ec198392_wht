@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1909451077'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__task_wip
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag on task node instances with status 'Work in Progress'
+  TAG: ecbpm__task_wip
+related: {}

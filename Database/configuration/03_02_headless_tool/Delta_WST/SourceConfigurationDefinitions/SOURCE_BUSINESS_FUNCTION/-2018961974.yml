@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2018961974'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/daily_water_overboard_status_by_stream
+parentKeys: {}
+properties:
+  BF_CODE: PO.0126
+  NAME: Daily Water Overboard Stream Status, by Stream
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.po.screens/daily_water_overboard_status_by_stream
+related: {}

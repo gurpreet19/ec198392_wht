@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '760219080'
+keys:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

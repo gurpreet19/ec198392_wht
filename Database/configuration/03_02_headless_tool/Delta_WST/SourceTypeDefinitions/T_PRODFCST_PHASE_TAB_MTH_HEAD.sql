@@ -1,0 +1,1 @@
+CREATE OR REPLACE TYPE t_prodfcst_phase_tab_mth IS TABLE OF t_prodfcst_phase_rec_mth;

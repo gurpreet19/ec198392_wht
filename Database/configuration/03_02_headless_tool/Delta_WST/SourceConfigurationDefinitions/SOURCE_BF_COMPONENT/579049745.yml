@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '579049745'
+keys:
+  BF_CODE: PT.0022
+  CLASS_NAME: IWEL_SAMPLE_
+  COMP_CODE: well_sample
+  T: BF_COMPONENT
+  URL: /well_sample
+parentKeys: {}
+properties:
+  BF_CODE: PT.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_stable_periods_summarise' )
+  CLASS_NAME: IWEL_SAMPLE_
+  COMP_CODE: well_sample
+  NAME: Well Sample
+  SIGNING_REQ_IND: null
+  URL: /well_sample
+related: {}

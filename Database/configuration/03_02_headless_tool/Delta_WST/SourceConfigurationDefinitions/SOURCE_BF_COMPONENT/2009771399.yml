@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2009771399'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: TRANS_DETAIL_FIXEDVALUE
+  COMP_CODE: lineitemfixedvalue
+  T: BF_COMPONENT
+  URL: /lineitemfixedvalue
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: TRANS_DETAIL_FIXEDVALUE
+  COMP_CODE: lineitemfixedvalue
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Line Items (tab) > Overview (table) > Fixed Value Line Items (tab) > Fixed Value Line Items (table)
+  SIGNING_REQ_IND: null
+  URL: /lineitemfixedvalue
+related: {}

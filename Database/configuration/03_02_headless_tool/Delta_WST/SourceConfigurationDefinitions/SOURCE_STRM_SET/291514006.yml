@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291514006'
+keys:
+  STREAM_SET: PO.0128
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Daily NGL Stream Status
+  STREAM_SET: PO.0128
+related: {}

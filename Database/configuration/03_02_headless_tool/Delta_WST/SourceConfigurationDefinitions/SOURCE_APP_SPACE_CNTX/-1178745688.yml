@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1178745688'
+keys:
+  CODE: EC_ECDM
+  T: APP_SPACE_CNTX
+parentKeys: {}
+properties:
+  CODE: EC_ECDM
+  NAME: EC Data Management
+  OWNER_CNTX: 0.0
+  SORT_ORDER: 80.0
+related: {}

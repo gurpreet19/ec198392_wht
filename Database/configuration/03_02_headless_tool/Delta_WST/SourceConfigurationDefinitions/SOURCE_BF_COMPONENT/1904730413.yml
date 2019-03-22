@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1904730413'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: FIN_CARGO_TRANS_DETAIL
+  COMP_CODE: transactionform
+  T: BF_COMPONENT
+  URL: /transactionform
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: FIN_CARGO_TRANS_DETAIL
+  COMP_CODE: transactionform
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Transaction Information (tab) > Transaction Form (form)
+  SIGNING_REQ_IND: null
+  URL: /transactionform
+related: {}

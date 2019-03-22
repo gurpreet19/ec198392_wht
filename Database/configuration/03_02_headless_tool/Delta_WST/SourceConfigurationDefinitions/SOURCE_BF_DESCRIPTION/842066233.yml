@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '842066233'
+keys:
+  BF_DESCRIPTION_NO: GD.0156
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0156
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_capacity_trades' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This Business function is used to create and maintain the information about capacity trades when trades are not matched on buyer and seller. This will typically be the case if an external platform is used to perform the trades, and EC is only receiving the result.</p><p>The standard Adjustment Type codes shipped with EC are Buy and Sell. More codes can be added under TRANSACTION_TYPE.</p><p>CLASS argument is used for the table data sections. Project can change the value for this argument through URL.</p>
+related: {}

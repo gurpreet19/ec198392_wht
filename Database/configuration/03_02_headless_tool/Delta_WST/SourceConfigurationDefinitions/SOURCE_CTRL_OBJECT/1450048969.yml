@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1450048969'
+keys:
+  OBJECT_NAME: PROPOSED_WELL_TESTS
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: Y
+  OBJECT_NAME: PROPOSED_WELL_TESTS
+  PINC_TRIGGER_IND: null
+  VIEW_PK_TABLE_NAME: null
+related: {}

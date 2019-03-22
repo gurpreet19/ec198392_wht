@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-638966942'
+keys:
+  BF_CODE: PT.0022
+  CLASS_NAME: TDEV_INJ_SAMPLE
+  COMP_CODE: tdev_sample
+  T: BF_COMPONENT
+  URL: /tdev_sample
+parentKeys: {}
+properties:
+  BF_CODE: PT.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_stable_periods_summarise' )
+  CLASS_NAME: TDEV_INJ_SAMPLE
+  COMP_CODE: tdev_sample
+  NAME: Test Device Sample
+  SIGNING_REQ_IND: null
+  URL: /tdev_sample
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '454666687'
+keys:
+  KEY: /com/ec/eccore/locale/country
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: REG_SETTINGS
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: GB
+  DESCRIPTION: Country
+  KEY: /com/ec/eccore/locale/country
+  LABEL: Country
+  LIST_OF_VALUES: PopupURL=/FrontController/com.ec.frmw.co.screens/object_popup?CLASS_NAME=COUNTRY;PopupReturnColumn=CODE;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.CODE
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

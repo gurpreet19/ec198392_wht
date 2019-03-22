@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1608073957'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pt.screens/automatic_test_define
+parentKeys: {}
+properties:
+  BF_CODE: PT.0021
+  NAME: Automated Production Test
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.pt.screens/automatic_test_define
+related: {}

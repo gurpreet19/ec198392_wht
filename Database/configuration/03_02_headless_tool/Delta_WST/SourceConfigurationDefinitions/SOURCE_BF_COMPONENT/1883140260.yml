@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1883140260'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: null
+  COMP_CODE: CopyRateSelAllOthrTrans
+  T: BF_COMPONENT
+  URL: /CopyRateSelAllOthrTrans
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: null
+  COMP_CODE: CopyRateSelAllOthrTrans
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Exchange Rates (tab) > Exchange Rates Parent (table) > Copy all Rates of Selected transaction to all other transactions (button)
+  SIGNING_REQ_IND: null
+  URL: /CopyRateSelAllOthrTrans
+related: {}

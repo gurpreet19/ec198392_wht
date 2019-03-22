@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-279431407'
+keys:
+  BF_CODE: PT.0013
+  CLASS_NAME: TDEV_PT_0013_1
+  COMP_CODE: test_device_result_1
+  T: BF_COMPONENT
+  URL: /test_device_result
+parentKeys: {}
+properties:
+  BF_CODE: PT.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/single_pwel_test_result' )
+  CLASS_NAME: TDEV_PT_0013_1
+  COMP_CODE: test_device_result_1
+  NAME: Test Device Result (Instrumentation Type = 1)
+  SIGNING_REQ_IND: null
+  URL: /test_device_result
+related: {}

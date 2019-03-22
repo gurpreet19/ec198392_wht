@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '190678306'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__node_active
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag when a node instance becomes active
+  TAG: ecbpm__node_active
+related: {}

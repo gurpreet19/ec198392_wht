@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '70002858'
+keys:
+  STREAM_SET: PO.0129_02
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Monthly NGL Stream Status, Derived
+  STREAM_SET: PO.0129_02
+related: {}

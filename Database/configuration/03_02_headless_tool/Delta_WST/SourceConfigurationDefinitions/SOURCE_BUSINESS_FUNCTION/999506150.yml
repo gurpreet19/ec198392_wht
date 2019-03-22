@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '999506150'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_TEMPLATE
+parentKeys: {}
+properties:
+  BF_CODE: CD.0013
+  NAME: Document Template
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_TEMPLATE
+related: {}

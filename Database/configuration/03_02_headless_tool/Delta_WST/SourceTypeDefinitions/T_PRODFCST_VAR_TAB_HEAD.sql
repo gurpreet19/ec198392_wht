@@ -1,0 +1,1 @@
+CREATE OR REPLACE TYPE t_prodfcst_var_tab IS TABLE OF t_prodfcst_var_rec;

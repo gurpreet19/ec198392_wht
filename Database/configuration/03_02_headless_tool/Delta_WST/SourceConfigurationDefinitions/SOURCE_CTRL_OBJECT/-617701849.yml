@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-617701849'
+keys:
+  OBJECT_NAME: ENUMERATION
+  T: CTRL_OBJECT
+parentKeys: {}
+properties:
+  EC_PACKAGE: Y
+  MATH: null
+  OBJECT_NAME: ENUMERATION
+  PINC_TRIGGER_IND: Y
+  VIEW_PK_TABLE_NAME: null
+related: {}

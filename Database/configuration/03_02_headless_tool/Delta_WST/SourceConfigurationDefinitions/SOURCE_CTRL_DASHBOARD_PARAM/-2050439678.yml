@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2050439678'
+keys:
+  NAME: STREAM
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: STRM_VALUES
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: Stream
+  MANDATORY_IND: Y
+  NAME: STREAM
+  PARAMETER_SUB_TYPE: STREAM
+  PARAMETER_TYPE: EC_OBJECT_TYPE
+  PARAMETER_VALUE: null
+  RESOLVE_TYPE: USER
+  SORT_ORDER: 10.0
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: STRM_VALUES
+related: {}

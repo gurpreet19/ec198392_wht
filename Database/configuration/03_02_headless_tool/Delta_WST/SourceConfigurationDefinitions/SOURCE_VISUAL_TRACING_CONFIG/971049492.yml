@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '971049492'
+keys:
+  DATA_ENTITY_CAT: DATA_MAPPING
+  T: VISUAL_TRACING_CONFIG
+  TR_AREA: OIL_SANDS
+parentKeys: {}
+properties:
+  DATA_ENTITY_CAT: DATA_MAPPING
+  TR_AREA: OIL_SANDS
+  TR_HEADING: Data Mapping Documents
+  TR_SORT_ORDER: 200.0
+related: {}

@@ -1,0 +1,132 @@
+TYPE=property_attribute KEY=1 NAME=label: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-542875174'
+  keys:
+    KEY: '1'
+    NAME: label
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=1 NAME=name: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-155999515'
+  keys:
+    KEY: '1'
+    NAME: name
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=1 NAME=order: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-539596236'
+  keys:
+    KEY: '1'
+    NAME: order
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=2 NAME=label: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-413792455'
+  keys:
+    KEY: '2'
+    NAME: label
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=2 NAME=name: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1952950874'
+  keys:
+    KEY: '2'
+    NAME: name
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=2 NAME=order: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-410513517'
+  keys:
+    KEY: '2'
+    NAME: order
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=3 NAME=label: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-284709736'
+  keys:
+    KEY: '3'
+    NAME: label
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=3 NAME=name: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '545065063'
+  keys:
+    KEY: '3'
+    NAME: name
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=3 NAME=order: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-281430798'
+  keys:
+    KEY: '3'
+    NAME: order
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=4 NAME=label: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-155627017'
+  keys:
+    KEY: '4'
+    NAME: label
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=4 NAME=name: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1251886296'
+  keys:
+    KEY: '4'
+    NAME: name
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TYPE=property_attribute KEY=4 NAME=order: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-152348079'
+  keys:
+    KEY: '4'
+    NAME: order
+    T: BPM_PROC_OV_CONFIG_ATT
+    TYPE: property_attribute
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1944216775'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: null
+  COMP_CODE: btnLIShow
+  T: BF_COMPONENT
+  URL: /btnLIShow
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: null
+  COMP_CODE: btnLIShow
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Line Items (tab) > Overview (table) > Show Line Item Details (button)
+  SIGNING_REQ_IND: null
+  URL: /btnLIShow
+related: {}

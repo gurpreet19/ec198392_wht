@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1918043633'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_water_overboard_status_by_stream
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_water_overboard_status_by_stream
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

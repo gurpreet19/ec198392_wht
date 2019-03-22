@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1150859201'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/monthly_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_MTH_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: PP.0031
+  NAME: Monthly Production Well Forecast
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: ISPRODUCEROROTHER in ('Y')
+  URL: /com.ec.prod.pp.screens/monthly_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_MTH_STATUS
+related: {}

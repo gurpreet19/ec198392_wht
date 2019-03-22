@@ -1,0 +1,26 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1023970879'
+keys:
+  COMMAND_NAME: CalculationAction
+  T: BPM_EC_GCOMMAND
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: 7.0
+  COMMAND_NAME: CalculationAction
+  DESCRIPTION: Runs EC Calculation business action. This is a ECBPM default process action.
+related:
+  BPM_EC_GCOMMAND_OP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      OP_NAME: Calculation Log
+      T: BPM_EC_GCOMMAND_OP
+    parentKeys:
+      BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='CalculationAction')
+    properties:
+      BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='CalculationAction')
+      BPM_EC_GCOMMAND_OP_ID: 1.0
+      OP_DESCRIPTION: Opens calculation log in a new window
+      OP_KEY: '#{process_action_result.calc_dataset_ref.source}'
+      OP_NAME: Calculation Log
+      OP_ORDER: 1.0
+      OP_TYPE: ec_url_window

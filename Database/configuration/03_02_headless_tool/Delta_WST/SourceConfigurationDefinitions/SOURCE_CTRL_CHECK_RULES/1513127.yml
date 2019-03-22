@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1513127'
+keys:
+  CHECK_ID: 16.0
+  T: CTRL_CHECK_RULES
+parentKeys: {}
+properties:
+  CHECK_ID: 16.0
+  CHECK_MESSAGE: Stream :STREAM_NAME has negative or missing bsw fraction.
+  CHECK_NAME: Fcty oil streams bsw
+  DESCRIPTION: null
+  SELECT_CLAUSE: Count(*)
+  SEVERITY_LEVEL: WARNING
+  TABLE_ID: RV_STRM_DAY_STREAM_MEAS_OIL
+  WHERE_CLAUSE: ((bs_w_pct IS NULL or bs_w_pct < 0) AND BSW_VOL_METHOD IS NOT NULL)
+related: {}

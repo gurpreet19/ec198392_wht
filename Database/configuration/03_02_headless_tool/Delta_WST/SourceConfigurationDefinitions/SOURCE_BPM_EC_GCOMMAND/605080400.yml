@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '605080400'
+keys:
+  COMMAND_NAME: '{SendReportAction}'
+  T: BPM_EC_GCOMMAND
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: 6.0
+  COMMAND_NAME: '{SendReportAction}'
+  DESCRIPTION: null
+related: {}

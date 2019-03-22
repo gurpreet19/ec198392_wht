@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2067563568'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__process_action_error
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag when a business action activity node instance is completed with error
+  TAG: ecbpm__process_action_error
+related: {}

@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1637454813'
+keys:
+  COMPONENT_ID: WATER_WELL_STATUS_BY_FLOWLINE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER?screentemplate=/com.ec.prod.wr.screens/daily_flowline_status_by_flowline
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: WATER_WELL_STATUS_BY_FLOWLINE
+  COMPONENT_LABEL: Daily Water Injection Flowline, by Flowline
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_GRP_BY_FLOWLINE
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 30.0
+  WINDOW_ID: ENERGYX
+related: {}

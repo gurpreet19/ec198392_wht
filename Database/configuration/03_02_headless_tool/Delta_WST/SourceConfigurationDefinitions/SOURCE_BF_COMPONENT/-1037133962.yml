@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1037133962'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: REPORT_SEND_LOG
+  COMP_CODE: sendlog
+  T: BF_COMPONENT
+  URL: /sendlog
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: REPORT_SEND_LOG
+  COMP_CODE: sendlog
+  NAME: Navigator (form) > Reports (tab) > Reports (table) > Generated Reports (table) > Send Log (tab) > Send Log (table)
+  SIGNING_REQ_IND: null
+  URL: /sendlog
+related: {}

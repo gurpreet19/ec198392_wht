@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2048609493'
+keys:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{ExecuteEcisSourceAction}')
+  SORT_ORDER: 1.0
+  T: BPM_EC_GCOMMAND_HANDLER
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{ExecuteEcisSourceAction}')
+  CLASS_NAME: com.ec.frmw.is.engine.source.action.SourceAction
+  COMMENTS: null
+  IS_ENABLED: Y
+  NAME: ECIS Source business action
+  SORT_ORDER: 1.0
+related: {}

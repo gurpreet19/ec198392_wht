@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-763517737'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: null
+  COMP_CODE: transaction_dist_header
+  T: BF_COMPONENT
+  URL: /transaction_dist_header
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: null
+  COMP_CODE: transaction_dist_header
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Transaction Share Distribution (tab) > Profit Centre (collapsible)
+  SIGNING_REQ_IND: null
+  URL: /transaction_dist_header
+related: {}

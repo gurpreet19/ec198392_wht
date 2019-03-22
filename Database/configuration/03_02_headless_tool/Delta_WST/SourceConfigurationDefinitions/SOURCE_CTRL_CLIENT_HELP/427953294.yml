@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '427953294'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.pt.screens/inj_test_events
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.pt.screens/inj_test_events
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

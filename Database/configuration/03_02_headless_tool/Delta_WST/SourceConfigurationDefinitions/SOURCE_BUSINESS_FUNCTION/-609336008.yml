@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-609336008'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2
+parentKeys: {}
+properties:
+  BF_CODE: WR.0065
+  NAME: Sub Daily Production Well Status 2 - by Period
+  PROFILE_CLASS_NAME: WELL
+  TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('2')
+  URL: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2
+related: {}

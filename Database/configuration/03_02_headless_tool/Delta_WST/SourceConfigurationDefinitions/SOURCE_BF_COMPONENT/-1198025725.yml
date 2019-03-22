@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1198025725'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: FIN_DOC_EX_RATE_MAINTAIN
+  COMP_CODE: exchangerateschild
+  T: BF_COMPONENT
+  URL: /exchangerateschild
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: FIN_DOC_EX_RATE_MAINTAIN
+  COMP_CODE: exchangerateschild
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Exchange Rates (tab) > Exchange Rates Parent (table) > Exchange Rates child (table)
+  SIGNING_REQ_IND: null
+  URL: /exchangerateschild
+related: {}

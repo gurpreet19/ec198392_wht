@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-11037782'
+keys:
+  COMMAND_NAME: '{ExecuteEcisSourceAction}'
+  T: BPM_EC_GCOMMAND
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: 3.0
+  COMMAND_NAME: '{ExecuteEcisSourceAction}'
+  DESCRIPTION: null
+related: {}

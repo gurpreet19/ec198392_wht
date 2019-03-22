@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-703813855'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: FIN_PERIOD_TRANS_DETAIL
+  COMP_CODE: transactionform
+  T: BF_COMPONENT
+  URL: /transactionform
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: FIN_PERIOD_TRANS_DETAIL
+  COMP_CODE: transactionform
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Transaction Information (tab) > Transaction Form (form)
+  SIGNING_REQ_IND: null
+  URL: /transactionform
+related: {}

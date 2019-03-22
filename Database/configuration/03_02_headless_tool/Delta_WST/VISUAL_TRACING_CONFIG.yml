@@ -1,0 +1,60 @@
+TR_AREA=OIL_SANDS DATA_ENTITY_CAT=CALCULATION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1876375986'
+  keys:
+    DATA_ENTITY_CAT: CALCULATION
+    T: VISUAL_TRACING_CONFIG
+    TR_AREA: OIL_SANDS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TR_AREA=OIL_SANDS DATA_ENTITY_CAT=DATA_EXTRACT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1171796537'
+  keys:
+    DATA_ENTITY_CAT: DATA_EXTRACT
+    T: VISUAL_TRACING_CONFIG
+    TR_AREA: OIL_SANDS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TR_AREA=OIL_SANDS DATA_ENTITY_CAT=DATA_MAPPING: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '971049492'
+  keys:
+    DATA_ENTITY_CAT: DATA_MAPPING
+    T: VISUAL_TRACING_CONFIG
+    TR_AREA: OIL_SANDS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TR_AREA=OIL_SANDS DATA_ENTITY_CAT=DATA_UPLOADS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-93150248'
+  keys:
+    DATA_ENTITY_CAT: DATA_UPLOADS
+    T: VISUAL_TRACING_CONFIG
+    TR_AREA: OIL_SANDS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TR_AREA=OIL_SANDS DATA_ENTITY_CAT=FINANCIAL_DOC: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1166722727'
+  keys:
+    DATA_ENTITY_CAT: FINANCIAL_DOC
+    T: VISUAL_TRACING_CONFIG
+    TR_AREA: OIL_SANDS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TR_AREA=OIL_SANDS DATA_ENTITY_CAT=REPORT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-738360721'
+  keys:
+    DATA_ENTITY_CAT: REPORT
+    T: VISUAL_TRACING_CONFIG
+    TR_AREA: OIL_SANDS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

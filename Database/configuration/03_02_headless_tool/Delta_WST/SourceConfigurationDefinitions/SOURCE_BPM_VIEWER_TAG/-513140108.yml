@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-513140108'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__process_action_ba_warning
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag when a business action activity node instance is completed with warning
+  TAG: ecbpm__process_action_ba_warning
+related: {}

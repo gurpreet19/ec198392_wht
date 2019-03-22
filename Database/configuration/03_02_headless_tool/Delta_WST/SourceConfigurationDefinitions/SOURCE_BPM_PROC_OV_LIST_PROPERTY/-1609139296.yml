@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1609139296'
+keys:
+  NAME: state
+  PROCESS_TEMPLATE_NO: '-1'
+  PROPERTY_CLAZZ: onAz6jvL-process_ins_state
+  T: BPM_PROC_OV_LIST_PROPERTY
+parentKeys: {}
+properties:
+  NAME: state
+  PROCESS_TEMPLATE_NO: '-1'
+  PROPERTY_CLAZZ: onAz6jvL-process_ins_state
+related: {}

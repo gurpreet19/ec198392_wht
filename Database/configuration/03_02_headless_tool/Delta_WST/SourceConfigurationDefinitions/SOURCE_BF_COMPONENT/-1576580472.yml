@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1576580472'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: FIN_DOC_PROFIT_CENTER
+  COMP_CODE: qty_pc
+  T: BF_COMPONENT
+  URL: /qty_pc
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: FIN_DOC_PROFIT_CENTER
+  COMP_CODE: qty_pc
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Transaction Quantity Distribution (tab) > Profit Centre Distributions (table)
+  SIGNING_REQ_IND: null
+  URL: /qty_pc
+related: {}

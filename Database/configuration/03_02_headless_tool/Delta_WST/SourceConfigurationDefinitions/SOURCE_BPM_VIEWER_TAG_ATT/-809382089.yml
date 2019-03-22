@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-809382089'
+keys:
+  NAME: text
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__node_pending
+parentKeys: {}
+properties:
+  NAME: text
+  TAG: ecbpm__node_pending
+  VALUE: Pending
+related: {}

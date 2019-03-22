@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-527661150'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE
+parentKeys: {}
+properties:
+  BF_CODE: CO.3001
+  NAME: Sale Contract Attributes
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE
+related: {}

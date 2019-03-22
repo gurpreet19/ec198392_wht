@@ -1,0 +1,170 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '220920718'
+keys:
+  BF_DESCRIPTION_NO: PT.0020
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PT.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_events' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: '<p style="margin:0in;margin-bottom:.0001pt;background:white"><span
+    style="font-size: 10pt; font-family: Helvetica, sans-serif;">The business function
+    for “Injection Test Events” displays all event records in the selected <em style="box-sizing:
+    border-box">injection test measurement data set </em>registered on <em style="box-sizing:
+    border-box">Test Device</em>, <em style="box-sizing: border-box">Flowline </em>and <em
+    style="box-sizing: border-box">Well </em>objects. All event data for all the specific
+    objects participating in the test will be displayed. The data in the sections
+    1, 2, 4, 6 is based on information entered in business function Injection test
+    define (PT.0019).<o:p></o:p></span></p><p style="margin: 0in 0in 0.0001pt; background:
+    white; box-sizing: border-box; counter-reset: list-1 0 list-2 0 list-3 0 list-4
+    0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; white-space: pre-wrap; cursor:
+    text;"><span style="font-size: 10pt; font-family: Helvetica, sans-serif;">The
+    data in data sections 3, 5, 7 typically originate from manual input made by operators
+    or laboratory technicians on the test station. </span><span style="font-family:
+    Helvetica, sans-serif; font-size: 10pt;">The business function contains a </span><em
+    style="font-family: Helvetica, sans-serif; font-size: 10pt; box-sizing: border-box;">navigator
+    section </em><span style="font-family: Helvetica, sans-serif; font-size: 10pt;">and
+    seven </span><em style="font-family: Helvetica, sans-serif; font-size: 10pt; box-sizing:
+    border-box;">data sections</em><span style="font-family: Helvetica, sans-serif;
+    font-size: 10pt;">. The display of data sections is controlled by the use of </span><span
+    style="font-family: Helvetica, sans-serif; font-size: 10pt;">screen tabs. The
+    overall layout of the screen will be according to the </span><span style="font-family:
+    Helvetica, sans-serif; font-size: 10pt;">following possible combinations: </span><span
+    style="font-family: Helvetica, sans-serif; font-size: 10pt;">The </span><strong
+    style="font-family: Helvetica, sans-serif; font-size: 10pt; box-sizing: border-box;">navigator </strong><span
+    style="font-family: Helvetica, sans-serif; font-size: 10pt;">section </span><span
+    style="font-family: Helvetica, sans-serif; font-size: 10pt;">enables the selection
+    of a time window (from date – to date). There must be an </span><span style="font-family:
+    Helvetica, sans-serif; font-size: 10pt;">overlap between the navigator From-To
+    and the Start-End time interval of the </span><em style="font-family: Helvetica,
+    sans-serif; font-size: 10pt; box-sizing: border-box;">production </em><em style="font-family:
+    Helvetica, sans-serif; font-size: 10pt; box-sizing: border-box;">test measurement
+    data set </em><span style="font-family: Helvetica, sans-serif; font-size: 10pt;">for
+    the test to be listed. From Date </span><span style="font-family: Helvetica, sans-serif;
+    font-size: 10pt;">< End Date AND To Date > Start Date. The navigator is based
+    on the </span><span style="font-family: Helvetica, sans-serif; font-size: 10pt;">operational
+    group model down to the well level. The well element is optional. </span><span
+    style="font-family: Helvetica, sans-serif; font-size: 10pt;">The </span><em style="font-family:
+    Helvetica, sans-serif; font-size: 10pt; box-sizing: border-box;">injection </em><em
+    style="font-family: Helvetica, sans-serif; font-size: 10pt; box-sizing: border-box;">test
+    measurement data set </em><span style="font-family: Helvetica, sans-serif; font-size:
+    10pt;">must contain the selected injection </span><span style="font-family: Helvetica,
+    sans-serif; font-size: 10pt;">well as an active well in order to be listed. </span><span
+    style="font-family: Helvetica, sans-serif; font-size: 10pt;">Navigator </span><span
+    style="font-family: Helvetica, sans-serif; font-size: 10pt;">selections are applied
+    when pressing the [GO] –button.</span></p><p style="margin: 0in 0in 0.0001pt;
+    background: white; box-sizing: border-box; counter-reset: list-1 0 list-2 0 list-3
+    0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; white-space: pre-wrap;
+    cursor: text;"><strong style="box-sizing: border-box"><span style="font-size:
+    10pt; font-family: Helvetica, sans-serif;">Data section 1 </span></strong><span
+    style="font-size: 10pt; font-family: Helvetica, sans-serif;">lists all <em style="box-sizing:
+    border-box">injection test measurement data sets </em>that satisfy the navigation
+    criteria sorted descending on Start Date (most recent on top). The list is scrollable
+    and supports single record selection. Collapse/expand functionality should be
+    activated. There are no editable data elements in data section 1. The selected
+    record in this data section controls the content of the data sections 2, 4 and
+    6. Initial focus is the top row in the data section.<o:p></o:p></span></p><p style="margin:
+    0in 0in 0.0001pt; background: white; box-sizing: border-box; counter-reset: list-1
+    0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; white-space:
+    pre-wrap; cursor: text;"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;"> </span></p><p style="margin: 0in 0in 0.0001pt; background: white;
+    box-sizing: border-box; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5
+    0 list-6 0 list-7 0 list-8 0 list-9 0; white-space: pre-wrap; cursor: text;"><strong
+    style="box-sizing: border-box"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;">Data section 2 </span></strong><span style="font-size: 10pt; font-family:
+    Helvetica, sans-serif;">shows the <em style="box-sizing: border-box">Test Device </em>configured
+    in the <em style="box-sizing: border-box">injection test measurement data set </em>selected
+    in data section 1. There can only be one test device associated with a test. The
+    test device is initially selected and all test event data for that specific test
+    device will be listed in data section 3.<o:p></o:p></span></p><p style="margin:
+    0in 0in 0.0001pt; background: white; box-sizing: border-box; counter-reset: list-1
+    0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; white-space:
+    pre-wrap; cursor: text;"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;"> </span></p><p style="margin: 0in 0in 0.0001pt; background: white;
+    box-sizing: border-box; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5
+    0 list-6 0 list-7 0 list-8 0 list-9 0; white-space: pre-wrap; cursor: text;"><strong
+    style="box-sizing: border-box"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;">Data section 3 </span></strong><span style="font-size: 10pt; font-family:
+    Helvetica, sans-serif;">lists all available test event data for the <em style="box-sizing:
+    border-box">Test Device </em>focused in Data section 2. Records are sorted on <em
+    style="box-sizing: border-box">Event time </em>in a descending order (most recent
+    data on top). Initial selection is the top row in the data section. The time window
+    (To/from date) for the record listing is defined by the Start date and End date
+    from the selected record in data section 1. There is a scrollbar to the right
+    that enables fast access to the entire data set. New records can be created in
+    the test event record list using the Insert button in the toolbar. All elements
+    in the test event record list are editable except the test event time, which is
+    locked upon initial save. The event type is selected from a dropdown populated
+    with valid test event codes from EC codes. <o:p></o:p></span></p><p style="margin:
+    0in 0in 0.0001pt; background: white; box-sizing: border-box; counter-reset: list-1
+    0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; white-space:
+    pre-wrap; cursor: text;"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;"> </span></p><p style="margin: 0in 0in 0.0001pt; background: white;
+    box-sizing: border-box; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5
+    0 list-6 0 list-7 0 list-8 0 list-9 0; white-space: pre-wrap; cursor: text;"><strong
+    style="box-sizing: border-box"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;">Data section 4</span></strong><span style="font-size: 10pt; font-family:
+    Helvetica, sans-serif;"> lists all Flowlines participating in the selected <em
+    style="box-sizing: border-box">injection test measurement data </em>set selected
+    in data section 1. Setting focus to one of these flowlines will list all test
+    event data for that specific flowline in data section 5. Initial selection is
+    the top row in the data section.<o:p></o:p></span></p><p style="margin: 0in 0in
+    0.0001pt; background: white; box-sizing: border-box; counter-reset: list-1 0 list-2
+    0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; white-space:
+    pre-wrap; cursor: text;"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;"> </span></p><p style="margin: 0in 0in 0.0001pt; background: white;
+    box-sizing: border-box; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5
+    0 list-6 0 list-7 0 list-8 0 list-9 0; white-space: pre-wrap; cursor: text;"><strong
+    style="box-sizing: border-box"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;">Data section 5</span></strong><span style="font-size: 10pt; font-family:
+    Helvetica, sans-serif;"> lists all available test event data for the Flowline
+    focused in Data section 4. Records are sorted on Event time in a descending order
+    (most recent data on top). Initial selection is the top row  in the data section.
+    The time window (To/from date) for the record listing is defined by the Start
+    date and End date from the selected record in data section 1. There is a scrollbar
+    to the right that enables fast access to the entire data set. New records can
+    be created in the test event record list using the Insert button in the toolbar.
+    All elements in the test event record list are editable except the test event
+    time, which is locked upon initial save. The event type is selected from a drop
+    down populated with valid test event codes from EC codes. <o:p></o:p></span></p><p
+    style="margin: 0in 0in 0.0001pt; background: white; box-sizing: border-box; counter-reset:
+    list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9
+    0; white-space: pre-wrap; cursor: text;"><span style="font-size: 10pt; font-family:
+    Helvetica, sans-serif;"> </span></p><p style="margin: 0in 0in 0.0001pt; background:
+    white; box-sizing: border-box; counter-reset: list-1 0 list-2 0 list-3 0 list-4
+    0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; white-space: pre-wrap; cursor:
+    text;"><strong style="box-sizing: border-box"><span style="font-size: 10pt; font-family:
+    Helvetica, sans-serif;">Data section 6</span></strong><span style="font-size:
+    10pt; font-family: Helvetica, sans-serif;"> lists all the injection wells participating
+    in the selected <em style="box-sizing: border-box">injection test measurement
+    data </em>set selected in data section 1. Setting focus to one of these wells
+    will list all test event data for that specific well in Data section 7. Initial
+    selection is the top row in the data section.<o:p></o:p></span></p><p style="margin:
+    0in 0in 0.0001pt; background: white; box-sizing: border-box; counter-reset: list-1
+    0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; white-space:
+    pre-wrap; cursor: text;"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;"> </span></p><p style="margin: 0in 0in 0.0001pt; background: white;
+    box-sizing: border-box; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5
+    0 list-6 0 list-7 0 list-8 0 list-9 0; white-space: pre-wrap; cursor: text;"><strong
+    style="box-sizing: border-box"><span style="font-size: 10pt; font-family: Helvetica,
+    sans-serif;">Data section 7</span></strong><span style="font-size: 10pt; font-family:
+    Helvetica, sans-serif;"> lists all available test event data for the well focused
+    in Data section 6. Records are sorted on Event time in a descending order (most
+    recent data on top). Initial selection is the top row in the data section. The
+    time window (To/from date) for the record listing </span><span style="font-family:
+    Helvetica, sans-serif; font-size: 10pt;">is </span><span style="font-family: Helvetica,
+    sans-serif; font-size: 10pt;">defined by the Start date and End date from the
+    selected record in data section </span><span style="font-family: Helvetica, sans-serif;
+    font-size: 10pt;">1. There is a scrollbar to the right that enables fast access
+    to the entire </span><span style="font-family: Helvetica, sans-serif; font-size:
+    10pt;">data set. New records can be created in the test event record list using
+    the </span><span style="font-family: Helvetica, sans-serif; font-size: 10pt;">Insert
+    button in the toolbar. All elements in the test event record list are </span><span
+    style="font-family: Helvetica, sans-serif; font-size: 10pt;">editable except the
+    test event time, which is locked upon initial save. The </span><span style="font-family:
+    Helvetica, sans-serif; font-size: 10pt;">event type is selected from a dropdown
+    populated with valid test event codes </span><span style="font-family: Helvetica,
+    sans-serif; font-size: 10pt;">from EC codes. </span></p><p> </p><p class="MsoNormal"><o:p> </o:p></p>'
+related: {}

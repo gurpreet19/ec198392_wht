@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1567093744'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/daily_perforation_interval_data
+parentKeys: {}
+properties:
+  BF_CODE: WR.0084
+  NAME: Daily Perforation Interval Data
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.wr.screens/daily_perforation_interval_data
+related: {}

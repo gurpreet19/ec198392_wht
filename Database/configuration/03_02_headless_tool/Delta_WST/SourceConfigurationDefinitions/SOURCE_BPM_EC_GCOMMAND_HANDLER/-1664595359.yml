@@ -1,0 +1,46 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1664595359'
+keys:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='CalculationAction')
+  SORT_ORDER: 2.0
+  T: BPM_EC_GCOMMAND_HANDLER
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='CalculationAction')
+  CLASS_NAME: com.ec.bpm.ext.ec.handlers.AppendParam
+  COMMENTS: Appends calculation result data set description
+  IS_ENABLED: Y
+  NAME: Append input/output parameter
+  SORT_ORDER: 2.0
+related:
+  BPM_EC_GCOMMAND_HANDLER_P:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'CalculationAction')
+      PARAM_NAME: append_param.name
+      T: BPM_EC_GCOMMAND_HANDLER_P
+    parentKeys:
+      BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'CalculationAction')
+    properties:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'CalculationAction')
+      COMMENTS: The variable name of the data set reference
+      MAPPING_TYPE: VALUE
+      MAPPING_VALUE: calc_dataset_ref
+      PARAM_ID: 3.0
+      PARAM_NAME: append_param.name
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'CalculationAction')
+      PARAM_NAME: append_param.value
+      T: BPM_EC_GCOMMAND_HANDLER_P
+    parentKeys:
+      BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'CalculationAction')
+    properties:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'CalculationAction')
+      COMMENTS: Value of the calculation dataset description
+      MAPPING_TYPE: VALUE
+      MAPPING_VALUE: '#{data_set_desc(calc_ref(process_action_handler_input["RUN_NO_STR"]),
+        process_action_handler_input["EC.logUrl"], "html", process_action_input["jobname"]
+        + " (" + process_action_handler_input["RUN_NO_STR"] + ")")}'
+      PARAM_ID: 4.0
+      PARAM_NAME: append_param.value

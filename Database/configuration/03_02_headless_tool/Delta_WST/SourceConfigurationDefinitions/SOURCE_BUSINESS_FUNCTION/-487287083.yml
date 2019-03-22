@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-487287083'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: WR.0032
+  NAME: Daily Prod Well Status 1, by Well
+  PROFILE_CLASS_NAME: WELL
+  TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('1')
+  URL: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS
+related: {}

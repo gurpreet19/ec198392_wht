@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1756744997'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pt.screens/inj_test_stable_periods_summarise
+parentKeys: {}
+properties:
+  BF_CODE: PT.0022
+  NAME: Stable Period and Summarise - Injection Wells
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.pt.screens/inj_test_stable_periods_summarise
+related: {}

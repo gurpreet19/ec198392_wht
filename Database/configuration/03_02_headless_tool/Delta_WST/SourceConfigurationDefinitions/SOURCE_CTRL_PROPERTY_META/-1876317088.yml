@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1876317088'
+keys:
+  KEY: WELLS_ON_TEST_DELIMITER
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: ','
+  DESCRIPTION: Defines the delimiter that is used to list the wells on PT.0021
+  KEY: WELLS_ON_TEST_DELIMITER
+  LABEL: 'Automated Production Test: Delimiter for Wells on test'
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

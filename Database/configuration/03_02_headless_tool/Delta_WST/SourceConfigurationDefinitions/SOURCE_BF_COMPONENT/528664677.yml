@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '528664677'
+keys:
+  BF_CODE: SP.0004
+  CLASS_NAME: null
+  COMP_CODE: tab_distribution
+  T: BF_COMPONENT
+  URL: /tab_distribution
+parentKeys: {}
+properties:
+  BF_CODE: SP.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/TRANSFER' )
+  CLASS_NAME: null
+  COMP_CODE: tab_distribution
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generated Reports (table) > Distribution Configuration (tab)
+  SIGNING_REQ_IND: null
+  URL: /tab_distribution
+related: {}

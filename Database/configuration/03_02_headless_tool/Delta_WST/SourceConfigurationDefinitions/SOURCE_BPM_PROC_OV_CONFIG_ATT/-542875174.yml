@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-542875174'
+keys:
+  KEY: '1'
+  NAME: label
+  T: BPM_PROC_OV_CONFIG_ATT
+  TYPE: property_attribute
+parentKeys: {}
+properties:
+  KEY: '1'
+  NAME: label
+  TYPE: property_attribute
+  VALUE: State
+related: {}

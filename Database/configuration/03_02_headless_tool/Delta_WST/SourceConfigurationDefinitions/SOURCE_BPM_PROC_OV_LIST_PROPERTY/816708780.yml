@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '816708780'
+keys:
+  NAME: end_time
+  PROCESS_TEMPLATE_NO: '-1'
+  PROPERTY_CLAZZ: iwLjbVpd-process_ins_end_time
+  T: BPM_PROC_OV_LIST_PROPERTY
+parentKeys: {}
+properties:
+  NAME: end_time
+  PROCESS_TEMPLATE_NO: '-1'
+  PROPERTY_CLAZZ: iwLjbVpd-process_ins_end_time
+related: {}

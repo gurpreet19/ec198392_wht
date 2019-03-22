@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1541540468'
+keys:
+  ATTRIBUTE_TYPE: PD.0001/2_HIDE_REPORT
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: PD.0001/2_HIDE_REPORT
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Indicates whether to run Wells in other event
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

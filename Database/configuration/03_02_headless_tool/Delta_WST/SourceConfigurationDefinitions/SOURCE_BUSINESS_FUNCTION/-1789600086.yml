@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1789600086'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/DAY
+parentKeys: {}
+properties:
+  BF_CODE: FI.0008
+  NAME: Daily Financial Item Calculation
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/DAY
+related: {}

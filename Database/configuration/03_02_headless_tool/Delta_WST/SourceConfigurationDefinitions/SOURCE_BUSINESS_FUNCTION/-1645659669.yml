@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1645659669'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/ec_codes
+parentKeys: {}
+properties:
+  BF_CODE: CO.1011
+  NAME: EC Codes - All
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.frmw.co.screens/ec_codes
+related: {}

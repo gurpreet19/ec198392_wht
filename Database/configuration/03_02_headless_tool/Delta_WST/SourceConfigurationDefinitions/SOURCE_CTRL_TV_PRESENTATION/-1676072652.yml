@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1676072652'
+keys:
+  COMPONENT_ID: DAY_TANK_STATUS_2
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL?screentemplate=/com.ec.prod.po.screens/daily_tank_status
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: DAY_TANK_STATUS_2
+  COMPONENT_LABEL: Daily Tank Status 2
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_PO_GRP_BY_DAY
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 105.0
+  WINDOW_ID: ENERGYX
+related: {}

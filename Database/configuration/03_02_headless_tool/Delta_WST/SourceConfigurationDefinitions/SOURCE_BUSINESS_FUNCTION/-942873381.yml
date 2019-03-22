@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-942873381'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY
+parentKeys: {}
+properties:
+  BF_CODE: PP.0059
+  NAME: Forecast Well Shortfalls and Compensations
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY
+related: {}

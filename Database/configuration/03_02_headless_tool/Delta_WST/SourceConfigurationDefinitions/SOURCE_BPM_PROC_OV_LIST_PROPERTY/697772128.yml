@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '697772128'
+keys:
+  NAME: start_time
+  PROCESS_TEMPLATE_NO: '-1'
+  PROPERTY_CLAZZ: Ezp1143t-process_ins_start_time
+  T: BPM_PROC_OV_LIST_PROPERTY
+parentKeys: {}
+properties:
+  NAME: start_time
+  PROCESS_TEMPLATE_NO: '-1'
+  PROPERTY_CLAZZ: Ezp1143t-process_ins_start_time
+related: {}

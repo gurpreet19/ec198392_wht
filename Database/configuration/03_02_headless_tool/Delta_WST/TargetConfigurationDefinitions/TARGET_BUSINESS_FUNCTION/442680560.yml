@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '442680560'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/class_attr_pres_config
+parentKeys: {}
+properties:
+  BF_CODE: CO.1055
+  NAME: Class Attributes Presentation Config
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.frmw.co.screens/class_attr_pres_config
+related: {}

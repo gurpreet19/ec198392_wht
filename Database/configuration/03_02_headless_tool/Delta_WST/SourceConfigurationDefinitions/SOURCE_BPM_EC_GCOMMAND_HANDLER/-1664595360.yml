@@ -1,0 +1,44 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1664595360'
+keys:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='CalculationAction')
+  SORT_ORDER: 1.0
+  T: BPM_EC_GCOMMAND_HANDLER
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='CalculationAction')
+  CLASS_NAME: com.ec.frmw.bs.calc.engine.CalcAction
+  COMMENTS: Runs calculation business action
+  IS_ENABLED: Y
+  NAME: Calculation Business Action
+  SORT_ORDER: 1.0
+related:
+  BPM_EC_GCOMMAND_HANDLER_P:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '1' and COMMAND_NAME = 'CalculationAction')
+      PARAM_NAME: calc_collection_id
+      T: BPM_EC_GCOMMAND_HANDLER_P
+    parentKeys:
+      BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '1' and COMMAND_NAME = 'CalculationAction')
+    properties:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '1' and COMMAND_NAME = 'CalculationAction')
+      COMMENTS: Object Id of the calculation collection
+      MAPPING_TYPE: VALUE
+      MAPPING_VALUE: '#{ec_obj_id("CONTRACT_GROUP", process_action_input.calc_collection_code)}'
+      PARAM_ID: 1.0
+      PARAM_NAME: calc_collection_id
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '1' and COMMAND_NAME = 'CalculationAction')
+      PARAM_NAME: jobid
+      T: BPM_EC_GCOMMAND_HANDLER_P
+    parentKeys:
+      BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '1' and COMMAND_NAME = 'CalculationAction')
+    properties:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '1' and COMMAND_NAME = 'CalculationAction')
+      COMMENTS: Object Id of the calculation job
+      MAPPING_TYPE: VALUE
+      MAPPING_VALUE: '#{ec_obj_id("CALCULATION", process_action_input.jobcode)}'
+      PARAM_ID: 2.0
+      PARAM_NAME: jobid

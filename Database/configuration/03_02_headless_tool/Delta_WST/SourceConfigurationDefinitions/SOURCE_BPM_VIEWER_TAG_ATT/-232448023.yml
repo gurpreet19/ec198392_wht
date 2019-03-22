@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-232448023'
+keys:
+  NAME: text
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__task_assigned
+parentKeys: {}
+properties:
+  NAME: text
+  TAG: ecbpm__task_assigned
+  VALUE: Task Assigned
+related: {}

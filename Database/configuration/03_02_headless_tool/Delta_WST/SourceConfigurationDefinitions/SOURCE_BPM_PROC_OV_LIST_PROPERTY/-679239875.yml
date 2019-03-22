@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-679239875'
+keys:
+  NAME: creator
+  PROCESS_TEMPLATE_NO: '-1'
+  PROPERTY_CLAZZ: 4T9Wl6QH-process_ins_creator
+  T: BPM_PROC_OV_LIST_PROPERTY
+parentKeys: {}
+properties:
+  NAME: creator
+  PROCESS_TEMPLATE_NO: '-1'
+  PROPERTY_CLAZZ: 4T9Wl6QH-process_ins_creator
+related: {}

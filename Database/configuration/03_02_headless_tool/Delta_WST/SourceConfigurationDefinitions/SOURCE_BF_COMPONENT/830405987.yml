@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '830405987'
+keys:
+  BF_CODE: PD.0024
+  CLASS_NAME: DT_DEF_STATUS_LOG_WELL
+  COMP_CODE: DT_DEF_STATUS_LOG_WELL
+  T: BF_COMPONENT
+  URL: null
+parentKeys: {}
+properties:
+  BF_CODE: PD.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/automatic_deferment_raw_data' )
+  CLASS_NAME: DT_DEF_STATUS_LOG_WELL
+  COMP_CODE: DT_DEF_STATUS_LOG_WELL
+  NAME: Data Transfer Class
+  SIGNING_REQ_IND: null
+  URL: null
+related: {}

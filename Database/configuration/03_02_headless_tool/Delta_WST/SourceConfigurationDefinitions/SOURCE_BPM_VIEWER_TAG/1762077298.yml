@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1762077298'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__task_completed
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag on task node instances with status 'Completed'
+  TAG: ecbpm__task_completed
+related: {}

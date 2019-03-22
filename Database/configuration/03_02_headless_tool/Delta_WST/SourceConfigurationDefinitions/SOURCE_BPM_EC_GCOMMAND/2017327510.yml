@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2017327510'
+keys:
+  COMMAND_NAME: '{AddNotificationAction}'
+  T: BPM_EC_GCOMMAND
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: 5.0
+  COMMAND_NAME: '{AddNotificationAction}'
+  DESCRIPTION: null
+related: {}

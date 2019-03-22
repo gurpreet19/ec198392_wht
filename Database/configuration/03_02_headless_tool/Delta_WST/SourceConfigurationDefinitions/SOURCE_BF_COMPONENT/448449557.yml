@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '448449557'
+keys:
+  BF_CODE: PT.0022
+  CLASS_NAME: WBI_INJ_SAMPLE
+  COMP_CODE: wbi_sample
+  T: BF_COMPONENT
+  URL: /wbi_sample
+parentKeys: {}
+properties:
+  BF_CODE: PT.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_stable_periods_summarise' )
+  CLASS_NAME: WBI_INJ_SAMPLE
+  COMP_CODE: wbi_sample
+  NAME: Well Bore Interval Sample
+  SIGNING_REQ_IND: null
+  URL: /wbi_sample
+related: {}

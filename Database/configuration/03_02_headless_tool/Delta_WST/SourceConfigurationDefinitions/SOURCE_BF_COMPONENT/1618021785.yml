@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1618021785'
+keys:
+  BF_CODE: CD.0105
+  CLASS_NAME: null
+  COMP_CODE: calendar_coll_member
+  T: BF_COMPONENT
+  URL: /calendar_collection_member
+parentKeys: {}
+properties:
+  BF_CODE: CD.0105
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar_collection' )
+  CLASS_NAME: null
+  COMP_CODE: calendar_coll_member
+  NAME: Calendar Collection Member
+  SIGNING_REQ_IND: null
+  URL: /calendar_collection_member
+related: {}

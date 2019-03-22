@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2011795657'
+keys:
+  BF_CODE: SP.0006
+  CLASS_NAME: null
+  COMP_CODE: toggleSetToOpen
+  T: BF_COMPONENT
+  URL: /toggleSetToOpen
+parentKeys: {}
+properties:
+  BF_CODE: SP.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/BOOKED' )
+  CLASS_NAME: null
+  COMP_CODE: toggleSetToOpen
+  NAME: Navigator (form) > Document VALID2 Table (table) > Toggle Tick Boxes (button)
+  SIGNING_REQ_IND: null
+  URL: /toggleSetToOpen
+related: {}

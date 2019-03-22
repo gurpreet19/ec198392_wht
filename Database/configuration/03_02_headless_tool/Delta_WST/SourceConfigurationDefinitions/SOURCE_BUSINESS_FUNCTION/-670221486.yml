@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-670221486'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL
+parentKeys: {}
+properties:
+  BF_CODE: PO.0129
+  NAME: Monthly NGL Stream Status
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL
+related: {}

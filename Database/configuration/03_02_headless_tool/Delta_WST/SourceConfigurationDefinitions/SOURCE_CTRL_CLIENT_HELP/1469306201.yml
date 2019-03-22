@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1469306201'
+keys:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

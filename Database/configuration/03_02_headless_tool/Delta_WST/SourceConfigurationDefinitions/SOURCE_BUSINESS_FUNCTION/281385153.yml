@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '281385153'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pt.screens/inj_test_result
+parentKeys: {}
+properties:
+  BF_CODE: PT.0023
+  NAME: Injection Test Result
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.pt.screens/inj_test_result
+related: {}

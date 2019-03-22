@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1178701193'
+keys:
+  CODE: EC_FRMW
+  T: APP_SPACE_CNTX
+parentKeys: {}
+properties:
+  CODE: EC_FRMW
+  NAME: EC Framework
+  OWNER_CNTX: 0.0
+  SORT_ORDER: 10.0
+related: {}

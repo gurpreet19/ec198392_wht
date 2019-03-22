@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2095269627'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__node_pending
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag for un-executed nodes
+  TAG: ecbpm__node_pending
+related: {}

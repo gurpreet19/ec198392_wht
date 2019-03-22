@@ -1,0 +1,48 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '901858790'
+keys:
+  NAME: QUERY
+  T: CTRL_DASHBOARD_PARAM
+  WIDGET_CODE: STRM_VALUES
+parentKeys: {}
+properties:
+  DATA_TYPE: null
+  LABEL: query
+  MANDATORY_IND: null
+  NAME: QUERY
+  PARAMETER_SUB_TYPE: null
+  PARAMETER_TYPE: null
+  PARAMETER_VALUE: |-
+    <?xml version="1.0" encoding="utf-8"?>
+    <renderer>
+      <model class="com.ec.eccommon.genericmodel.model.web.GenericDaoModel">
+        <arg name="daoQueryXml" value="data" valuetype="subXml">
+          <data>
+            <query>
+              <recordstatus>false</recordstatus>
+              <readonly>true</readonly>
+              <fromdate>0001-01-01T00:00:00</fromdate>
+              <todate>9999-12-31T00:00:00</todate>
+            </query>
+            <class name="DASHBRD_STRM_VALUES">
+            </class>
+            <object name="DASHBRD_STRM_VALUES">
+              <property name="OBJECT_ID" datavalue="$STREAM$" operator="="/>
+              <sql>
+                <where>
+                  daytime BETWEEN to_date('$FROMDATE$', 'YYYY-MM-DD"T"HH24:MI:SS') AND to_date('$TODATE$', 'YYYY-MM-DD"T"HH24:MI:SS')
+                </where>
+              </sql>
+            </object>
+            <sort name="DASHBRD_STRM_VALUES">
+              <property name="DAYTIME" order="DESC"/>
+            </sort>
+          </data>
+        </arg>
+      </model>
+    </renderer>
+  RESOLVE_TYPE: null
+  SORT_ORDER: null
+  USER_EDITABLE_IND: null
+  WIDGET_CODE: STRM_VALUES
+related: {}

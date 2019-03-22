@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-776872817'
+keys:
+  BF_CODE: GD.0154
+  CLASS_NAME: null
+  COMP_CODE: nav
+  T: BF_COMPONENT
+  URL: /nav
+parentKeys: {}
+properties:
+  BF_CODE: GD.0154
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N' )
+  CLASS_NAME: null
+  COMP_CODE: nav
+  NAME: Navigator
+  SIGNING_REQ_IND: null
+  URL: /nav
+related: {}

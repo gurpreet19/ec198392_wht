@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1129008211'
+keys:
+  BF_DESCRIPTION_NO: CO.0247
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.0247
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/manage_planned_well' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This Business Function is used to create and configure planned wells. A Planned well is a virtual well, which might or might not get drilled in the future. A planned well will get 'Active Well Status' as PLANNED upon creation.</p><p>When a well is commercially producing, it can be converted into an active well by changing the status from PLANNED to OPEN. Once a planned well is converted to a regular well, its status cannot be changed back to PLANNED. Rest of the well' s configuration can be done in the Well(CO.0049) or the Maintain Wells(CO.0050) screen. Depending on the well type, it will be available in the Maintain Production Well Status(WR.0004) or Maintain Injection Well Status(WR.0005) screen.</p><p> If the well type is changed from Producer to Injector, the respective record will be visible in Maintain Injection Well Status(WR.0005) and vice - versa.</p><p> Planned Wells will be excluded from Initiate Day process and will only be available in the Production Forecast screens.</p>
+related: {}

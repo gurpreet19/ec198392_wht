@@ -1,0 +1,81 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1728472528'
+keys:
+  BF_DESCRIPTION_NO: PT.0021
+  DATA_LEVEL: 1.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PT.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/automatic_test_define' )
+  DATA_LEVEL: 1.0
+  DESCRIPTION: '<div><p>Automated Production Test screen is used to automatically
+    register new well test or close an existing well test. This screen is a read only
+    screen and gives option to automatically or manually create well tests or close
+    an existing well tests.</p><p>Test Device and the related wells on test, coming
+    from a SCADA system are fed into ''Raw data'' section in this screen. EC assumes
+    that the Test Device and wells on test data are genuinely on test and no further
+    check is being done. Tests are created in PT.0005-Production Test define if there
+    are no open test for the same test device and well on test. Tests are ended when
+    there is no common well in wells on test after comparing with earlier record.
+    Curtailment of routines are handled by deleting repetitive status.</p></div><p
+    style="">The example below explains how EC creates/updates or ends a well test:</p><p></p><div
+    class="ui-widget"><div class="ui-datatable-tablewrapper"><table role="grid" cellpadding="10"><thead><tr
+    role="row"><th class="ui-state-default" role="columnheader" aria-label="Object"
+    scope="col" colspan="3"><center>RAW Data on PT.0021</center></th><th class="ui-state-default"
+    role="columnheader" aria-label="Code" scope="col" colspan="1"><center>Proposed
+    Test Event</center></th></tr><tr role="row"><th class="ui-state-default" role="columnheader"
+    aria-label="Object" scope="col"><center>Test Device</center></th><th class="ui-state-default"
+    role="columnheader" aria-label="Code" scope="col"><center>Time</center></th><th
+    class="ui-state-default" role="columnheader" aria-label="Code" scope="col"><center>Wells
+    on Test</center></th><th class="ui-state-default" role="columnheader" aria-label="Code"
+    scope="col"><center>Expected Behavior</center></th></tr>  </thead><tbody class="ui-datatable-data
+    ui-widget-content"><tr><td>P1 TD002</td><td>2018-10-01T10:26:00</td><td>P1 W008,
+    P1 W010</td><td>New test (E.g. Test no. 3001) created</td></tr><tr><td>P1 TD002</td><td>2018-10-01T10:27:00</td><td>P1
+    W009, P1 W010</td><td>P1 W009 is added to Test No.3001 as P1 W0010 was also participating
+    in the same test.</td></tr><tr><td>P1 TD002</td><td>2018-10-01T10:27:10</td><td>P1
+    W009</td><td>Ignore as no new well is encountered.</td></tr><tr><td>P1 TD002</td><td>2018-10-01T10:28:00</td><td>P1
+    W001, P1 W002</td><td>End the previous test (Test no. 3001) and create new test
+    (e.g. Test No. 3002) for Wells P1 W001 and P1 W002.</td></tr><tr><td>P1 TD001</td><td>2018-10-01T10:28:00</td><td>P1
+    W003</td><td>New test (E.g. Test no. 3003) added for new test device.</td></tr><tr><td>P1
+    TD001</td><td>2018-10-01T10:30:00</td><td>BLANK</td><td>End the test with Test
+    No.3003 as no wells are found.</td></tr><tr><td>P1 TD003</td><td>2018-10-01T10:32:00</td><td>BLANK</td><td>No
+    action will be performed, as no wells are available for P1 TD003.</td></tr><tr><td>P1
+    TD003</td><td>2018-10-01T10:32:30</td><td>P1 W004</td><td>Create new test (e.g.
+    Test No. 3004) for Wells P1 W004 and test remains open as this is the last record
+    received.</td></tr></tbody></table></div></div><p>Automatic Production Test has
+    three data sections:</p><ul style="list-style-type: disc; margin-left: 40px;"><li>Raw
+    Data - This section which captures device name, time and wells on test.</li><li>Proposed
+    Production Tests - Captures proposed tests based on raw data inputs.</li><li>System
+    Settings - This section shows properties configured in Maintain System Settings
+    (CO.1006).</li></ul><div class="ui-widget-header ui-corner-top"><span class="ecTextHeader">Configuration
+    in Maintain System Settings (CO.1006)</span><p></p><div class="ui-widget"><div
+    class="ui-datatable-tablewrapper"><table role="grid" cellpadding="10"><thead><tr
+    role="row"><th width="350" class="ui-state-default" role="columnheader" aria-label="Object"
+    scope="col"><span><center>Property</center></span></th><th width="350" class="ui-state-default"
+    role="columnheader" aria-label="Object" scope="col"><span><center>Description</center></span></th><th
+    class="ui-state-default" role="columnheader" aria-label="Code" scope="col"><span><center>Value</center></span></th></tr></thead><tbody
+    class="ui-datatable-data ui-widget-content"><tr><td>Automated Production Test:
+    Auto-Generate Well Test Events </td><td>Choose whether well test events will auto-generate
+    from PT.0021.</td><td>On/Off<br><br>On =&gt; New tests will be created automatically
+    in PT.0005-Production Test Define based on the proposed production tests.<br>Off
+    =&gt; Business user will need to click on the "Create Test" button to create tests
+    based on the proposed production tests.</td></tr><tr><td>Automated Production
+    Test: Flush setting in days</td><td>Choose number of days beyond which the data
+    will be flushed from PT.0021.</td><td>Any value in days (This can be configured
+    in EC Code for Code Type = WELL_TEST_LOG_FLUSH). Default value is 30.</td></tr><tr><td>Automated
+    Production Test: Delimiter for Wells on test</td><td>Defines the delimiter that
+    is used to list the wells on PT.0021.</td><td>Any String value (This can be configured
+    in EC Code for Code Type = WELLS_ON_TEST_SEPARTOR). Default value is ",".</td></tr></tbody></table></div></div></div><div
+    class="ui-widget-header ui-corner-top"><span class="ecTextHeader">Automated Production
+    Test</span><p></p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
+    role="grid" cellpadding="10"><thead><tr role="row"><th width="350" class="ui-state-default"
+    role="columnheader" aria-label="Object" scope="col"><span><center>Button</center></span></th><th
+    class="ui-state-default" role="columnheader" aria-label="Code" scope="col" colspan="2"><span><center>Description</center></span></th></tr></thead><tbody
+    class="ui-datatable-data ui-widget-content"><tr><td>Create Test</td><td>This button
+    is used to create tests based on the configuration in Maintain System Settings
+    (CO.1006). Use this button only when manual creation of test is required.</td></tr><tr><td>Flush
+    Data</td><td>The button is used to flush all the data except for the last two
+    tests from staging table based on the configuration of flush setting in Maintain
+    System Settings (CO.1006).</td></tr></tbody></table></div></div></div>'
+related: {}

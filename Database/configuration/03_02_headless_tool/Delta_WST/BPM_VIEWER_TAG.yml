@@ -1,0 +1,90 @@
+ecbpm__node_active: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '190678306'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__node_active
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__node_completed: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '943319727'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__node_completed
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__node_pending: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2095269627'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__node_pending
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__process_action_ba_warning: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-513140108'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__process_action_ba_warning
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__process_action_error: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2067563568'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__process_action_error
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__task_assigned: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1791805241'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__task_assigned
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__task_completed: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1762077298'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__task_completed
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__task_exceptional: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1350120671'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__task_exceptional
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__task_ready: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1026701642'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__task_ready
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ecbpm__task_wip: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1909451077'
+  keys:
+    T: BPM_VIEWER_TAG
+    TAG: ecbpm__task_wip
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

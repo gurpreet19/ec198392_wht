@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1394319298'
+keys:
+  BF_CODE: PT.0022
+  CLASS_NAME: IFLW_SAMPLE_
+  COMP_CODE: pflw_sample
+  T: BF_COMPONENT
+  URL: /pflw_sample
+parentKeys: {}
+properties:
+  BF_CODE: PT.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_stable_periods_summarise' )
+  CLASS_NAME: IFLW_SAMPLE_
+  COMP_CODE: pflw_sample
+  NAME: Flowline Sample
+  SIGNING_REQ_IND: null
+  URL: /pflw_sample
+related: {}

@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2137858001'
+keys:
+  CODE: EC_REVN_RRCA
+  T: APP_SPACE_CNTX
+parentKeys: {}
+properties:
+  CODE: EC_REVN_RRCA
+  NAME: EC Regulatory Report Canada
+  OWNER_CNTX: 0.0
+  SORT_ORDER: 70.0
+related: {}

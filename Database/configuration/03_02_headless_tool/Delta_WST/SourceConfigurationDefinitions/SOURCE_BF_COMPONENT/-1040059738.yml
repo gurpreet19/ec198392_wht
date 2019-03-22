@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1040059738'
+keys:
+  BF_CODE: SP.0003
+  CLASS_NAME: null
+  COMP_CODE: tab_send_log
+  T: BF_COMPONENT
+  URL: /tab_send_log
+parentKeys: {}
+properties:
+  BF_CODE: SP.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/VALID2' )
+  CLASS_NAME: null
+  COMP_CODE: tab_send_log
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generated Reports (table) > Send Log (tab)
+  SIGNING_REQ_IND: null
+  URL: /tab_send_log
+related: {}

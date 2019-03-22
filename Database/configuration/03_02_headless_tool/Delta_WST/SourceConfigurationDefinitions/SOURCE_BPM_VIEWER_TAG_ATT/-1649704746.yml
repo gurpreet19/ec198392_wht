@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1649704746'
+keys:
+  NAME: text
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__process_action_ba_warning
+parentKeys: {}
+properties:
+  NAME: text
+  TAG: ecbpm__process_action_ba_warning
+  VALUE: Warning
+related: {}

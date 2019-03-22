@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1310888471'
+keys:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{AddNotificationAction}')
+  SORT_ORDER: 1.0
+  T: BPM_EC_GCOMMAND_HANDLER
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{AddNotificationAction}')
+  CLASS_NAME: com.ec.bpm.ext.ec.handlers.AddNotificationHandler
+  COMMENTS: null
+  IS_ENABLED: Y
+  NAME: Add Notification Genreic Command Handler
+  SORT_ORDER: 1.0
+related: {}

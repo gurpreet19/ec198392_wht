@@ -1,0 +1,47 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1414519289'
+keys:
+  BF_DESCRIPTION_NO: PT.0019
+  DATA_LEVEL: 1.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PT.0019
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_define' )
+  DATA_LEVEL: 1.0
+  DESCRIPTION: '<p>PT.0019 - Injection Test Define is the starting point for the performance
+    test work process in EC. Data defined in this business function will propagate
+    and influence the data presented in all other downstream PT business functions.
+    The business function contains a navigator section and three data sections. All
+    data sections are visible at the same time.</p><p>The navigator section enables
+    the selection of a time window (from date - to date). There must be an overlap
+    between the navigator From-To and the Start-End time interval of the injection
+    test measurement data set for the test to be listed. The navigator is based on
+    the configured group model down to the well level. The well popup is optional
+    and displays list of injection wells. only. If provided, the injection test data
+    set must contain the selected well as an active well. The Test No element is optional.
+    If provided, the test data in first data section will be filtered for mentioned
+    Test No.</p><p>Data section 1 lists all injection test measurement data sets that
+    satisfy the navigation criteria. Records are sorted descending on Start Date (most
+    recent on top). The list is scrollable and supports single record selection. The
+    selected record in this data section controls the content of the data sections
+    2, 3, 4 and 5.During insert operation / event, Start Date will always be the current
+    date and time by default. Start Date and Test Type are also opened for edit so
+    that all initial information necessary for creating a performance test can be
+    supplied. Start Date and Test Type are mandatory entries, whereas End Date is
+    optional. This supports a situation where test operators insert live tests (End
+    Date not known). Once a test has been saved in system, this data section will
+    only allow updating of attributes "End Date" and "Comments".</p><p style="">While
+    inserting a record for an Injection Test, the default value for Test Device will
+    be selected as mentioned in the following order:</p><ul style="list-style-type:
+    disc; margin-left: 20px;"><li>If a well has a defined test device, then that test
+    device will be selected automatically.</li><li>If facility has a default test
+    device, then that device will be selected automatically.</li><li>If facility has
+    only one test device, then that device will be selected automatically.</li><li>If
+    all above conditions do not meet, no default test device will be selected.</li></ul><p
+    style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant-ligatures:
+    normal; font-variant-caps: normal; font-weight: normal;"></p><p>Data section 3
+    and 4 will only display wells of injection type.</p><p>Data section 5 will implicitly
+    display the associated Well Bore Interval. User will not be able to edit this
+    data section from screen.</p>'
+related: {}

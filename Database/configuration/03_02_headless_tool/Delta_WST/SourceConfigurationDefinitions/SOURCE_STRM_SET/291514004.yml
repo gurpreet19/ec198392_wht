@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '291514004'
+keys:
+  STREAM_SET: PO.0126
+  T: STRM_SET
+parentKeys: {}
+properties:
+  DESCRIPTION: Daily Water Overboard Stream Status, by Stream
+  STREAM_SET: PO.0126
+related: {}

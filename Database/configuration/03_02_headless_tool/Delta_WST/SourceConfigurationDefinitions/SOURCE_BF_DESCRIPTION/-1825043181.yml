@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1825043181'
+keys:
+  BF_DESCRIPTION_NO: WR.0082
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0082
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_GAS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to display daily gas injection flowline data per flowline for the selected period. Energy Components automatically creates new records for active gas injection flowlines connected to the facility.</p>
+        <p>This BF is actually a variant of the Daily Gas Injection Flowline and Well Status (WR.0007), with a mandatory navigator for flowline.</p>
+related: {}

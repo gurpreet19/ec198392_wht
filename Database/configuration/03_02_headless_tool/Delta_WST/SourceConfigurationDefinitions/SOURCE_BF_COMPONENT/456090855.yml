@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '456090855'
+keys:
+  BF_CODE: SP.0006
+  CLASS_NAME: EC_CODES_POPUP
+  COMP_CODE: accept_status
+  T: BF_COMPONENT
+  URL: /accept_status
+parentKeys: {}
+properties:
+  BF_CODE: SP.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/BOOKED' )
+  CLASS_NAME: EC_CODES_POPUP
+  COMP_CODE: accept_status
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generated Reports (table) > Distribution Configuration (tab) > Report Status (table)
+  SIGNING_REQ_IND: null
+  URL: /accept_status
+related: {}

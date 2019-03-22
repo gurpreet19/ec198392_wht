@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-273148875'
+keys:
+  BF_CODE: PT.0023
+  CLASS_NAME: null
+  COMP_CODE: flwl_test_result_data
+  T: BF_COMPONENT
+  URL: /flwl_test_result_data
+parentKeys: {}
+properties:
+  BF_CODE: PT.0023
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_result' )
+  CLASS_NAME: null
+  COMP_CODE: flwl_test_result_data
+  NAME: Flowline Test Result Data
+  SIGNING_REQ_IND: null
+  URL: /flwl_test_result_data
+related: {}

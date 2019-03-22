@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1178403240'
+keys:
+  CODE: EC_PROD
+  T: APP_SPACE_CNTX
+parentKeys: {}
+properties:
+  CODE: EC_PROD
+  NAME: EC Production
+  OWNER_CNTX: 0.0
+  SORT_ORDER: 30.0
+related: {}

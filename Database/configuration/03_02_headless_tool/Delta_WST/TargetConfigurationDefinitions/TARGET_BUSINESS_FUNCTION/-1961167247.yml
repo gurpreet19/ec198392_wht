@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1961167247'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE
+parentKeys: {}
+properties:
+  BF_CODE: WR.0050
+  NAME: Flowline Water Ion Analysis
+  PROFILE_CLASS_NAME: WELL
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE
+related: {}

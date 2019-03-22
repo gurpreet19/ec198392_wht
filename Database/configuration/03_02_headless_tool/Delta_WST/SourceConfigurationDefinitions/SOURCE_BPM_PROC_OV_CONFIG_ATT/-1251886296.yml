@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1251886296'
+keys:
+  KEY: '4'
+  NAME: name
+  T: BPM_PROC_OV_CONFIG_ATT
+  TYPE: property_attribute
+parentKeys: {}
+properties:
+  KEY: '4'
+  NAME: name
+  TYPE: property_attribute
+  VALUE: creator
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1645836352'
+keys:
+  BF_CODE: SP.0001
+  CLASS_NAME: null
+  COMP_CODE: regen_all_btn
+  T: BF_COMPONENT
+  URL: /regen_all_btn
+parentKeys: {}
+properties:
+  BF_CODE: SP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_finder' )
+  CLASS_NAME: null
+  COMP_CODE: regen_all_btn
+  NAME: Navigator (form) > Documents (table) > Reports (tab) > Generated Reports (table) > Regenerate All Reports (button)
+  SIGNING_REQ_IND: null
+  URL: /regen_all_btn
+related: {}

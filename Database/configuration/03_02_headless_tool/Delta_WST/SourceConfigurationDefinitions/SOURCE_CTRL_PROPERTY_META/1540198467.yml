@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1540198467'
+keys:
+  KEY: /com/ec/tran/cargo/delete_liftings/clean_lonesome_cargo
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: Y
+  DESCRIPTION: Set to Y to clean lonesome cargoes when delete liftings nominations
+  KEY: /com/ec/tran/cargo/delete_liftings/clean_lonesome_cargo
+  LABEL: Clean lonesome cargoes when delete liftings nominations
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

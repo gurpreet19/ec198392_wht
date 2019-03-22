@@ -1,0 +1,25 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1018993432'
+keys:
+  CHECK_GROUP: D_PWEL_STATUS
+  T: CTRL_CHECK_GROUP
+parentKeys: {}
+properties:
+  CHECK_GROUP: D_PWEL_STATUS
+  CHECK_RULE_TARGET: null
+  DESCRIPTION: Daily Prod Well Status
+  EC_USER_OBJECT: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status
+  PARENT_GROUP: D_ASSET_STATUS
+related:
+  CTRL_CHECK_COMBINATION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CHECK_GROUP: D_PWEL_STATUS
+      CHECK_ID: 1.0
+      T: CTRL_CHECK_COMBINATION
+    parentKeys:
+      CTRL_CHECK_GROUP.CHECK_GROUP: D_PWEL_STATUS
+    properties:
+      CHECK_GROUP: D_PWEL_STATUS
+      CHECK_ID: 1.0
+      DESCRIPTION: null

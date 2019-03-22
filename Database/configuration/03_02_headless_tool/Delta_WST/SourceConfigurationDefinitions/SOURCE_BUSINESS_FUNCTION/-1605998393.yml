@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1605998393'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.co.screens/fcty_reference_value
+parentKeys: {}
+properties:
+  BF_CODE: CO.0248
+  NAME: Facility Reference Values
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.co.screens/fcty_reference_value
+related: {}

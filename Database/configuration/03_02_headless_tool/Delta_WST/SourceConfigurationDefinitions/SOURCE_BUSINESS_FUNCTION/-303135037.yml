@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-303135037'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PROD_STREAM_GROUP
+parentKeys: {}
+properties:
+  BF_CODE: SP.0065
+  NAME: Product Stream Group
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PROD_STREAM_GROUP
+related: {}

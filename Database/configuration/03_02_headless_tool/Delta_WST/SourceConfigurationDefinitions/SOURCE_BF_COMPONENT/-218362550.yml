@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-218362550'
+keys:
+  BF_CODE: CO.0248
+  CLASS_NAME: FCTY_REFERENCE_VALUE
+  COMP_CODE: updateRefValues
+  T: BF_COMPONENT
+  URL: /updateRefValues
+parentKeys: {}
+properties:
+  BF_CODE: CO.0248
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/fcty_reference_value' )
+  CLASS_NAME: FCTY_REFERENCE_VALUE
+  COMP_CODE: updateRefValues
+  NAME: Update Attributes
+  SIGNING_REQ_IND: null
+  URL: /updateRefValues
+related: {}

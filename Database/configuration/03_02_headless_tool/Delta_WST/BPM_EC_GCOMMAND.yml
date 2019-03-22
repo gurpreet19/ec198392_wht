@@ -1,0 +1,54 @@
+CalculationAction: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1023970879'
+  keys:
+    COMMAND_NAME: CalculationAction
+    T: BPM_EC_GCOMMAND
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+GenerateReportAction: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1422647617'
+  keys:
+    COMMAND_NAME: GenerateReportAction
+    T: BPM_EC_GCOMMAND
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'{AddNotificationAction}': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2017327510'
+  keys:
+    COMMAND_NAME: '{AddNotificationAction}'
+    T: BPM_EC_GCOMMAND
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'{ExecuteEcisSourceAction}': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-11037782'
+  keys:
+    COMMAND_NAME: '{ExecuteEcisSourceAction}'
+    T: BPM_EC_GCOMMAND
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'{ExecuteSqlAction}': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1943123597'
+  keys:
+    COMMAND_NAME: '{ExecuteSqlAction}'
+    T: BPM_EC_GCOMMAND
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'{SendReportAction}': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '605080400'
+  keys:
+    COMMAND_NAME: '{SendReportAction}'
+    T: BPM_EC_GCOMMAND
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

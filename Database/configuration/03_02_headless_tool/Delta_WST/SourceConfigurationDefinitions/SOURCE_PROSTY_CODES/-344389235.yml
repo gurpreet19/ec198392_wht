@@ -1,0 +1,28 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-344389235'
+keys:
+  CODE: UK_SPRING_BANK_HOLIDAY
+  CODE_TYPE: CAL_RECUR_HOLIDAY_FUNC
+  T: PROSTY_CODES
+parentKeys: {}
+properties:
+  ALT_CODE: null
+  CODE: UK_SPRING_BANK_HOLIDAY
+  CODE_TEXT: Spring Bank Holiday (UK)
+  CODE_TYPE: CAL_RECUR_HOLIDAY_FUNC
+  DESCRIPTION: null
+  IS_ACTIVE: N
+  IS_DEFAULT: N
+  IS_SYSTEM_CODE: N
+  SORT_ORDER: 80.0
+  TEXT_1: null
+  TEXT_10: null
+  TEXT_2: null
+  TEXT_3: null
+  TEXT_4: null
+  TEXT_5: null
+  TEXT_6: null
+  TEXT_7: null
+  TEXT_8: null
+  TEXT_9: null
+related: {}

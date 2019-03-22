@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1511672912'
+keys:
+  BF_CODE: PO.0132
+  CLASS_NAME: TANK_DAY_INV_VOL
+  COMP_CODE: inventory
+  T: BF_COMPONENT
+  URL: /inventory
+parentKeys: {}
+properties:
+  BF_CODE: PO.0132
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL' )
+  CLASS_NAME: TANK_DAY_INV_VOL
+  COMP_CODE: inventory
+  NAME: Daily Tank Inventory
+  SIGNING_REQ_IND: null
+  URL: /inventory
+related: {}

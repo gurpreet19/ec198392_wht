@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-610864047'
+keys:
+  BF_CODE: SP.0001
+  CLASS_NAME: DATASET_FLOW_REPORT_DIST
+  COMP_CODE: msg
+  T: BF_COMPONENT
+  URL: /msg
+parentKeys: {}
+properties:
+  BF_CODE: SP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_finder' )
+  CLASS_NAME: DATASET_FLOW_REPORT_DIST
+  COMP_CODE: msg
+  NAME: Navigator (form) > Documents (table) > Reports (tab) > Generated Reports (table) > Distribution Configuration (tab) > Report Status (table) > Distribution Of Report (table)
+  SIGNING_REQ_IND: null
+  URL: /msg
+related: {}

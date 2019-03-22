@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-810698735'
+keys:
+  BF_CODE: GD.0156
+  CLASS_NAME: CNTR_DAY_CAP_TRADE
+  COMP_CODE: day_cap_trd
+  T: BF_COMPONENT
+  URL: /day_cap_trd
+parentKeys: {}
+properties:
+  BF_CODE: GD.0156
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_capacity_trades' )
+  CLASS_NAME: CNTR_DAY_CAP_TRADE
+  COMP_CODE: day_cap_trd
+  NAME: Daily Capacity Trades
+  SIGNING_REQ_IND: null
+  URL: /day_cap_trd
+related: {}

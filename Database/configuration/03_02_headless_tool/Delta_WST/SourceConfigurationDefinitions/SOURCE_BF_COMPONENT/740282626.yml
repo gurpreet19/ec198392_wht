@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '740282626'
+keys:
+  BF_CODE: PT.0020
+  CLASS_NAME: ACTIVE_INJ_TEST_DEVICE
+  COMP_CODE: active_inj_test_device
+  T: BF_COMPONENT
+  URL: /active_inj_test_device
+parentKeys: {}
+properties:
+  BF_CODE: PT.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_events' )
+  CLASS_NAME: ACTIVE_INJ_TEST_DEVICE
+  COMP_CODE: active_inj_test_device
+  NAME: Injection Test Device
+  SIGNING_REQ_IND: null
+  URL: /active_inj_test_device
+related: {}

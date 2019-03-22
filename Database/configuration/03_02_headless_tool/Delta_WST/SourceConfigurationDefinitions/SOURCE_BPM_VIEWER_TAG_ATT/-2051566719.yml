@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2051566719'
+keys:
+  NAME: text
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__task_wip
+parentKeys: {}
+properties:
+  NAME: text
+  TAG: ecbpm__task_wip
+  VALUE: Task Work in Progress
+related: {}

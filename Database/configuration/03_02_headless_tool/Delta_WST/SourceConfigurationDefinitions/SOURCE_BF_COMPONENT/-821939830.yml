@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-821939830'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: null
+  COMP_CODE: transDistTab
+  T: BF_COMPONENT
+  URL: /transDistTab
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: null
+  COMP_CODE: transDistTab
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Transaction Share Distribution (tab)
+  SIGNING_REQ_IND: null
+  URL: /transDistTab
+related: {}

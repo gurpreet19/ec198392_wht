@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-858689569'
+keys:
+  BF_CODE: GD.0153
+  CLASS_NAME: TRNP_NP_DAY_DELIVERY
+  COMP_CODE: day_path_del
+  T: BF_COMPONENT
+  URL: /day_path_del
+parentKeys: {}
+properties:
+  BF_CODE: GD.0153
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_path_delivery' )
+  CLASS_NAME: TRNP_NP_DAY_DELIVERY
+  COMP_CODE: day_path_del
+  NAME: Daily Path Delivery
+  SIGNING_REQ_IND: null
+  URL: /day_path_del
+related: {}

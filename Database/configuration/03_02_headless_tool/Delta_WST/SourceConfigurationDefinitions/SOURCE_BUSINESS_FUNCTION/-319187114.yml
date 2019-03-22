@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-319187114'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/UNIT_AGR
+parentKeys: {}
+properties:
+  BF_CODE: RC.0055
+  NAME: Unit Agreement
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/UNIT_AGR
+related: {}

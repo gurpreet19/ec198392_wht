@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2021705856'
+keys:
+  BF_CODE: SP.0001
+  CLASS_NAME: null
+  COMP_CODE: btnViewDocument
+  T: BF_COMPONENT
+  URL: /btnViewDocument
+parentKeys: {}
+properties:
+  BF_CODE: SP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_finder' )
+  CLASS_NAME: null
+  COMP_CODE: btnViewDocument
+  NAME: Navigator (form) > Documents (table) > View Document (button)
+  SIGNING_REQ_IND: null
+  URL: /btnViewDocument
+related: {}

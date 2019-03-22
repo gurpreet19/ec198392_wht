@@ -1,0 +1,83 @@
+'1.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '48563'
+  keys:
+    LANGUAGE_ID: 1.0
+    T: T_BASIS_LANGUAGE
+  parentKeys: {}
+  properties:
+    LANGUAGE: EN
+    NAME: English
+  related: {}
+  status: MODIFIED
+'2.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '49524'
+  keys:
+    LANGUAGE_ID: 2.0
+    T: T_BASIS_LANGUAGE
+  parentKeys: {}
+  properties:
+    NAME: Norwegian
+  related: {}
+  status: MODIFIED
+'3.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '50485'
+  keys:
+    LANGUAGE_ID: 3.0
+    T: T_BASIS_LANGUAGE
+  parentKeys: {}
+  properties:
+    NAME: Dutch
+  related: {}
+  status: MODIFIED
+'4.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '51446'
+  keys:
+    LANGUAGE_ID: 4.0
+    T: T_BASIS_LANGUAGE
+  parentKeys: {}
+  properties:
+    NAME: Italian
+  related: {}
+  status: MODIFIED
+'5.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '52407'
+  keys:
+    LANGUAGE_ID: 5.0
+    T: T_BASIS_LANGUAGE
+  parentKeys: {}
+  properties:
+    NAME: Spanish
+  related: {}
+  status: MODIFIED
+'6.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '53368'
+  keys:
+    LANGUAGE_ID: 6.0
+    T: T_BASIS_LANGUAGE
+  parentKeys: {}
+  properties:
+    NAME: German
+  related: {}
+  status: MODIFIED
+'7.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '54329'
+  keys:
+    LANGUAGE_ID: 7.0
+    T: T_BASIS_LANGUAGE
+  parentKeys: {}
+  properties:
+    LANGUAGE: DA
+    NAME: Danish
+  related: {}
+  status: MODIFIED
+'8.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '55290'
+  keys:
+    LANGUAGE_ID: 8.0
+    T: T_BASIS_LANGUAGE
+  parentKeys: {}
+  properties:
+    LANGUAGE: SV
+    NAME: Swedish
+  related: {}
+  status: MODIFIED

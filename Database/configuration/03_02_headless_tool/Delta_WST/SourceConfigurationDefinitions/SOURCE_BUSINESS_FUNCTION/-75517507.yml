@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-75517507'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pt.screens/inj_test_events
+parentKeys: {}
+properties:
+  BF_CODE: PT.0020
+  NAME: Injection Test Events
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.pt.screens/inj_test_events
+related: {}

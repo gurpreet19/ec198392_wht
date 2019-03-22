@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '516696584'
+keys:
+  BF_CODE: SP.0001
+  CLASS_NAME: null
+  COMP_CODE: goButton
+  T: BF_COMPONENT
+  URL: /goButton
+parentKeys: {}
+properties:
+  BF_CODE: SP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_finder' )
+  CLASS_NAME: null
+  COMP_CODE: goButton
+  NAME: Navigator (form) > Go... (button)
+  SIGNING_REQ_IND: null
+  URL: /goButton
+related: {}

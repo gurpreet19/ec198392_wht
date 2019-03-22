@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1939779620'
+keys:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='GenerateReportAction')
+  SORT_ORDER: 1.0
+  T: BPM_EC_GCOMMAND_HANDLER
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='GenerateReportAction')
+  CLASS_NAME: com.ec.bpm.ext.ec.handlers.GenerateReportHandler
+  COMMENTS: Generate a report
+  IS_ENABLED: Y
+  NAME: Generate report
+  SORT_ORDER: 1.0
+related: {}

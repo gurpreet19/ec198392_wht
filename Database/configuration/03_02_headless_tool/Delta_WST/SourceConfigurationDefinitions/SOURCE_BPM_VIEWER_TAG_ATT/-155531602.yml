@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-155531602'
+keys:
+  NAME: text
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__task_completed
+parentKeys: {}
+properties:
+  NAME: text
+  TAG: ecbpm__task_completed
+  VALUE: Task Completed
+related: {}

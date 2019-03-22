@@ -1,0 +1,324 @@
+'-1.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1389158'
+  keys:
+    OFFSET: -1.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-10.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '43065806'
+  keys:
+    OFFSET: -10.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-2.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1390119'
+  keys:
+    OFFSET: -2.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-3.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1391080'
+  keys:
+    OFFSET: -3.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-4.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1392041'
+  keys:
+    OFFSET: -4.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-5.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1393002'
+  keys:
+    OFFSET: -5.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-6.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1393963'
+  keys:
+    OFFSET: -6.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-7.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1394924'
+  keys:
+    OFFSET: -7.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-8.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1395885'
+  keys:
+    OFFSET: -8.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'-9.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1396846'
+  keys:
+    OFFSET: -9.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'0.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '47602'
+  keys:
+    OFFSET: 0.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'1.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '48563'
+  keys:
+    OFFSET: 1.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'10.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1507361'
+  keys:
+    OFFSET: 10.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'11.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1508322'
+  keys:
+    OFFSET: 11.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'12.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1509283'
+  keys:
+    OFFSET: 12.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'13.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1510244'
+  keys:
+    OFFSET: 13.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'14.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1511205'
+  keys:
+    OFFSET: 14.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'15.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1512166'
+  keys:
+    OFFSET: 15.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'16.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1513127'
+  keys:
+    OFFSET: 16.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'17.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1514088'
+  keys:
+    OFFSET: 17.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'18.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1515049'
+  keys:
+    OFFSET: 18.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'19.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1516010'
+  keys:
+    OFFSET: 19.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'2.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '49524'
+  keys:
+    OFFSET: 2.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'20.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1537152'
+  keys:
+    OFFSET: 20.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'21.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1538113'
+  keys:
+    OFFSET: 21.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'22.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1539074'
+  keys:
+    OFFSET: 22.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'23.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1540035'
+  keys:
+    OFFSET: 23.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'24.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1540996'
+  keys:
+    OFFSET: 24.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'25.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1541957'
+  keys:
+    OFFSET: 25.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'3.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '50485'
+  keys:
+    OFFSET: 3.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'4.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '51446'
+  keys:
+    OFFSET: 4.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'5.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '52407'
+  keys:
+    OFFSET: 5.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'6.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '53368'
+  keys:
+    OFFSET: 6.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'7.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '54329'
+  keys:
+    OFFSET: 7.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'8.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '55290'
+  keys:
+    OFFSET: 8.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'9.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '56251'
+  keys:
+    OFFSET: 9.0
+    T: CALENDAR_OFFSET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

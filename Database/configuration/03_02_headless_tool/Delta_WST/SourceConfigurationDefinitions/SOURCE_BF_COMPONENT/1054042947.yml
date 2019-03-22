@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1054042947'
+keys:
+  BF_CODE: PT.0020
+  CLASS_NAME: FLWL_INJ_TEST_EVENT
+  COMP_CODE: flwl_inj_test_event
+  T: BF_COMPONENT
+  URL: /flwl_inj_test_event
+parentKeys: {}
+properties:
+  BF_CODE: PT.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_events' )
+  CLASS_NAME: FLWL_INJ_TEST_EVENT
+  COMP_CODE: flwl_inj_test_event
+  NAME: Flowline Injection Test Event
+  SIGNING_REQ_IND: null
+  URL: /flwl_inj_test_event
+related: {}

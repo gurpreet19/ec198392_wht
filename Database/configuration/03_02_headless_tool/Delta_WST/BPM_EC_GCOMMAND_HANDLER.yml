@@ -1,0 +1,80 @@
+COMMAND_NAME=CalculationAction SORT_ORDER=1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1664595360'
+  keys:
+    BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='CalculationAction')
+    SORT_ORDER: 1.0
+    T: BPM_EC_GCOMMAND_HANDLER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+COMMAND_NAME=CalculationAction SORT_ORDER=2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1664595359'
+  keys:
+    BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='CalculationAction')
+    SORT_ORDER: 2.0
+    T: BPM_EC_GCOMMAND_HANDLER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+COMMAND_NAME=GenerateReportAction SORT_ORDER=1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1939779620'
+  keys:
+    BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='GenerateReportAction')
+    SORT_ORDER: 1.0
+    T: BPM_EC_GCOMMAND_HANDLER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+COMMAND_NAME=GenerateReportAction SORT_ORDER=2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1939779621'
+  keys:
+    BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='GenerateReportAction')
+    SORT_ORDER: 2.0
+    T: BPM_EC_GCOMMAND_HANDLER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+COMMAND_NAME={AddNotificationAction} SORT_ORDER=1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1310888471'
+  keys:
+    BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{AddNotificationAction}')
+    SORT_ORDER: 1.0
+    T: BPM_EC_GCOMMAND_HANDLER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+COMMAND_NAME={ExecuteEcisSourceAction} SORT_ORDER=1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2048609493'
+  keys:
+    BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{ExecuteEcisSourceAction}')
+    SORT_ORDER: 1.0
+    T: BPM_EC_GCOMMAND_HANDLER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+COMMAND_NAME={ExecuteSqlAction} SORT_ORDER=1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1897049488'
+  keys:
+    BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{ExecuteSqlAction}')
+    SORT_ORDER: 1.0
+    T: BPM_EC_GCOMMAND_HANDLER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+COMMAND_NAME={SendReportAction} SORT_ORDER=1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '358318003'
+  keys:
+    BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{SendReportAction}')
+    SORT_ORDER: 1.0
+    T: BPM_EC_GCOMMAND_HANDLER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1943123597'
+keys:
+  COMMAND_NAME: '{ExecuteSqlAction}'
+  T: BPM_EC_GCOMMAND
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: 1.0
+  COMMAND_NAME: '{ExecuteSqlAction}'
+  DESCRIPTION: null
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1229527960'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_CATEGORY
+parentKeys: {}
+properties:
+  BF_CODE: CD.0015
+  NAME: Revenue Stream Category
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_CATEGORY
+related: {}

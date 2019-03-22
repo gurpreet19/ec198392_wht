@@ -1,0 +1,22 @@
+CREATE OR REPLACE TYPE T_MAPPING_VARIANCE IS OBJECT
+(
+    target_contract_name            VARCHAR2(240),
+    target_contract_code            VARCHAR2(240),
+    source_group_value              VARCHAR2(240),
+    total_interfaced_amount         NUMBER,
+    total_mapped_amount             NUMBER,
+    total_excluded_amount           NUMBER,
+    variance_amount                 NUMBER,
+    total_interfaced_qty            NUMBER,
+    total_mapped_qty                NUMBER,
+    total_excluded_qty              NUMBER,
+    variance_qty                    NUMBER,
+    VARIANCE_AMOUNT_PERCENTAGE      NUMBER,
+    VARIANCE_QTY_PERCENTAGE         NUMBER,
+    document_type                   VARCHAR2(240),
+    fin_account_code                VARCHAR2(240),
+    fin_wbs_code                    VARCHAR2(240),
+    fin_cost_center_code            VARCHAR2(240),
+    fin_revenue_order_code          VARCHAR2(240),
+    total_other_amount              NUMBER,
+    total_other_qty                 NUMBER);

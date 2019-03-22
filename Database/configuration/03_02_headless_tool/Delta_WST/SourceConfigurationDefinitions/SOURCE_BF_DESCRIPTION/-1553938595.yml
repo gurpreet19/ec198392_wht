@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1553938595'
+keys:
+  BF_DESCRIPTION_NO: HA.0013
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: HA.0013
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ha.screens/daily_data_status_process_facility' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This BF is similar to Daily Data Status Processes (HA.001) and enables you to view processes based on selected facility and date range on the navigator. The first data section display all available processes for the selected facility and processes that are not linked to any facility. Process is linked to a facility in Status Processes (CO.0076). This section will also filter the processes based on the Role defined in Status Processes (CO.0076).</p><p>This BF is also used to start jobs that verify or approve daily data sets or reversely. The jobs (process IDs) are configured in a hierarchical structure. Running a parent job runs all tasks defined for that job plus child jobs and their tasks. Parameters from the parent job are passed to the child jobs, replacing their default parameter list.</p><p>The second data section lists all the jobs executed for processes that are available in first data section. The list shows current status of daily data set, when it was last executed, how many rows were updated and who ran the process. If a parent job is run, the report will also list child jobs. Jobs should be configured so that they cover all data a role within the system is responsible for.</p><p>This BF will only list processes having the interval set to DAY.<p>A setting has been introduced in &quot;Maintain System Settings&quot; (CO.1006) to either allow or prevent users from running current or future dates. The custom setting property is &quot;Allow status process on current and future production day in Data Status Processes - Daily (HA.0001), Monthly (HA.0004) and Facility (HA.0013)&quot; and the behaviour is as below:</p><p> - If the property is set to &quot;N&quot;, an error message will be prompted and prevent the process from being executed.</p><p> - If the property is set to &quot;Y&quot;, a confirmation message will be prompted to get user&rsquo;s approval to run the current and future dates.
+related: {}

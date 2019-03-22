@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1327557661'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: null
+  COMP_CODE: send_report_btn
+  T: BF_COMPONENT
+  URL: /send_report_btn
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: null
+  COMP_CODE: send_report_btn
+  NAME: Navigator (form) > Reports (tab) > Reports (table) > Generated Reports (table) > Send (button)
+  SIGNING_REQ_IND: null
+  URL: /send_report_btn
+related: {}

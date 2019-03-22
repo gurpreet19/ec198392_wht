@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '754765569'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: CONT_DOCUMENT_TEXT_ITEM
+  COMP_CODE: table4
+  T: BF_COMPONENT
+  URL: /table4
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: CONT_DOCUMENT_TEXT_ITEM
+  COMP_CODE: table4
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Document Information (tab) > Document Footer, single column (table)
+  SIGNING_REQ_IND: null
+  URL: /table4
+related: {}

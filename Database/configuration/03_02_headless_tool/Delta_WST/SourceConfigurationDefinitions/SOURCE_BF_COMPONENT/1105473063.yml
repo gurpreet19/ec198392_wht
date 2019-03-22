@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1105473063'
+keys:
+  BF_CODE: WR.0082
+  CLASS_NAME: IFLW_DAY_STATUS_GAS
+  COMP_CODE: daily_flowline_status
+  T: BF_COMPONENT
+  URL: /daily_flowline_status
+parentKeys: {}
+properties:
+  BF_CODE: WR.0082
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_GAS' )
+  CLASS_NAME: IFLW_DAY_STATUS_GAS
+  COMP_CODE: daily_flowline_status
+  NAME: Daily Gas Injection Flowline Status
+  SIGNING_REQ_IND: null
+  URL: /daily_flowline_status
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-357734576'
+keys:
+  BF_CODE: SP.0005
+  CLASS_NAME: CONT_DOCUMENT
+  COMP_CODE: DocumentValidationForm2
+  T: BF_COMPONENT
+  URL: /DocumentValidationForm2
+parentKeys: {}
+properties:
+  BF_CODE: SP.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/UNTRANSFER' )
+  CLASS_NAME: CONT_DOCUMENT
+  COMP_CODE: DocumentValidationForm2
+  NAME: Navigator (form) > Document VALID2 Table (table) > Information (tab) > Document VALID2 Form2 (form)
+  SIGNING_REQ_IND: null
+  URL: /DocumentValidationForm2
+related: {}

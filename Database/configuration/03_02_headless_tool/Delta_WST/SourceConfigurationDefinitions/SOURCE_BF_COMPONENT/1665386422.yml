@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1665386422'
+keys:
+  BF_CODE: PT.0022
+  CLASS_NAME: PROD_TEST
+  COMP_CODE: prod_test
+  T: BF_COMPONENT
+  URL: /prod_test
+parentKeys: {}
+properties:
+  BF_CODE: PT.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_stable_periods_summarise' )
+  CLASS_NAME: PROD_TEST
+  COMP_CODE: prod_test
+  NAME: Production Test Measurement Data Sets
+  SIGNING_REQ_IND: null
+  URL: /prod_test
+related: {}

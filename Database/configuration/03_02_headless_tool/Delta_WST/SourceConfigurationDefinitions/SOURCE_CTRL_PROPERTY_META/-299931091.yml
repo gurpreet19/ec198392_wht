@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-299931091'
+keys:
+  KEY: WELL_TEST_LOG_FLUSH
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: NUMBER
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: 30.0
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Choose number of days beyond which the data will be flushed from PT.0021
+  KEY: WELL_TEST_LOG_FLUSH
+  LABEL: 'Automated Production Test: Flush setting in days'
+  LIST_OF_VALUES: PopupQueryURL=/com.ec.frmw.co.screens/query/ec_code_popup.xml;PopupLayout=/com.ec.frmw.co.screens/layout/ec_code_popup.xml;PopupWhereColumn=CODE_TYPE;PopupWhereValue=WELL_TEST_LOG_FLUSH;PopupWhereOperator=;PopupReturnColumn=1;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.CODE
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

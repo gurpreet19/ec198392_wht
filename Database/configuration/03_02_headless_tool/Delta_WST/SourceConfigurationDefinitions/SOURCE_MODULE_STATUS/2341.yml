@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2341'
+keys:
+  MODULE_CODE: IN
+  T: MODULE_STATUS
+parentKeys: {}
+properties:
+  LOCKED_DATE: null
+  MODULE_CODE: IN
+  MODULE_NAME: Inventory
+  SORT_ORDER: 2.0
+  STATUS: OPEN
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '614378102'
+keys:
+  BF_DESCRIPTION_NO: GD.0153
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0153
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_path_delivery' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>Path deliveries allocation can be written to track the route of the gas flow deliveries, after allocation is run it is expected to allocate the allocated deliveries to the path nominations, and the result of this will be displayed in Daily Path Delivery screen.</p><p>Additional Path deliveries can be added to this screen. Deletion of path delivery is also possible.</p><p>Navigator consist of CONTRACT as a TARGET whereas ENTRY and EXIT NOMINATION POINT are the static navigator. The TARGET argument is used in the navigator, while the CLASS argument is used for the table data sections. Project can change the value for these arguments through URL.</p>
+related: {}

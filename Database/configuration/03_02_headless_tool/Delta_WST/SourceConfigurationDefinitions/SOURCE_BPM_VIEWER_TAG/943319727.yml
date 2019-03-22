@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '943319727'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__node_completed
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag when a node instance is executed
+  TAG: ecbpm__node_completed
+related: {}

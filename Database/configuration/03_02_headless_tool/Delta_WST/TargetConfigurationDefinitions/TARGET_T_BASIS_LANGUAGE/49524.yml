@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '49524'
+keys:
+  LANGUAGE_ID: 2.0
+  T: T_BASIS_LANGUAGE
+parentKeys: {}
+properties:
+  LANGUAGE: 'NO'
+  LANGUAGE_ID: 2.0
+  NAME: null
+related: {}

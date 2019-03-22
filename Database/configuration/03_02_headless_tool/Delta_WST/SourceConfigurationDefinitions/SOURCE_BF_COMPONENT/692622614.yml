@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '692622614'
+keys:
+  BF_CODE: SP.0005
+  CLASS_NAME: REPORT
+  COMP_CODE: generated_reports
+  T: BF_COMPONENT
+  URL: /generated_reports
+parentKeys: {}
+properties:
+  BF_CODE: SP.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/UNTRANSFER' )
+  CLASS_NAME: REPORT
+  COMP_CODE: generated_reports
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generated Reports (table)
+  SIGNING_REQ_IND: null
+  URL: /generated_reports
+related: {}

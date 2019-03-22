@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1444498946'
+keys:
+  BF_CODE: GD.0154
+  CLASS_NAME: TRNP_NP_DAY_NOM_PATH
+  COMP_CODE: period_path_nom
+  T: BF_COMPONENT
+  URL: /period_path_nom
+parentKeys: {}
+properties:
+  BF_CODE: GD.0154
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N' )
+  CLASS_NAME: TRNP_NP_DAY_NOM_PATH
+  COMP_CODE: period_path_nom
+  NAME: Period Path Nominations
+  SIGNING_REQ_IND: null
+  URL: /period_path_nom
+related: {}

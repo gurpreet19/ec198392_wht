@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-356926448'
+keys:
+  BF_CODE: PT.0021
+  CLASS_NAME: PROPOSED_WELL_TESTS
+  COMP_CODE: proposed_production_tests
+  T: BF_COMPONENT
+  URL: /proposed_production_tests
+parentKeys: {}
+properties:
+  BF_CODE: PT.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/automatic_test_define' )
+  CLASS_NAME: PROPOSED_WELL_TESTS
+  COMP_CODE: proposed_production_tests
+  NAME: Proposed Production Tests
+  SIGNING_REQ_IND: null
+  URL: /proposed_production_tests
+related: {}

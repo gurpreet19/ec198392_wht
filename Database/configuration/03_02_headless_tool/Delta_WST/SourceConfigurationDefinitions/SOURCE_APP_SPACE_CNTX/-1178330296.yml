@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1178330296'
+keys:
+  CODE: EC_SALE
+  T: APP_SPACE_CNTX
+parentKeys: {}
+properties:
+  CODE: EC_SALE
+  NAME: EC Sale
+  OWNER_CNTX: 0.0
+  SORT_ORDER: 50.0
+related: {}

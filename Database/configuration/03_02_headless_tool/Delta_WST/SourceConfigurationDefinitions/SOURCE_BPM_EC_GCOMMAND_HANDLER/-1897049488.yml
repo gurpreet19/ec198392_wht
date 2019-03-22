@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1897049488'
+keys:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{ExecuteSqlAction}')
+  SORT_ORDER: 1.0
+  T: BPM_EC_GCOMMAND_HANDLER
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='{ExecuteSqlAction}')
+  CLASS_NAME: com.ec.bpm.ext.ec.handlers.ExecSqlHandler
+  COMMENTS: null
+  IS_ENABLED: Y
+  NAME: Execute SQL Genreic Command Handler
+  SORT_ORDER: 1.0
+related: {}

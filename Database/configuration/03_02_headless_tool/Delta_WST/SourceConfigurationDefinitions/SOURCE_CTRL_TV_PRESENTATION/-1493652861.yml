@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1493652861'
+keys:
+  COMPONENT_ID: PROD_WELL_STATUS_BY_FLOWLINE
+  T: CTRL_TV_PRESENTATION
+  WINDOW_ID: ENERGYX
+parentKeys: {}
+properties:
+  COMPONENT_ATTR: null
+  COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/PFLW_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/daily_flowline_status_by_flowline
+  COMPONENT_EXT_NAV_NAME: null
+  COMPONENT_ID: PROD_WELL_STATUS_BY_FLOWLINE
+  COMPONENT_LABEL: Daily Production Flowline, by Flowline
+  COMPONENT_TYPE: URL
+  PARENT_COMPONENT_ID: FLD_GRP_BY_FLOWLINE
+  PARENT_WINDOW_ID: ENERGYX
+  SORT_NO: 10.0
+  WINDOW_ID: ENERGYX
+related: {}

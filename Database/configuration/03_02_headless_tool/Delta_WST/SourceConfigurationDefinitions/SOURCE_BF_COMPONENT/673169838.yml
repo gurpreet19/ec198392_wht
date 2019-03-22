@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '673169838'
+keys:
+  BF_CODE: PT.0021
+  CLASS_NAME: WELL_TEST_RAW_DATA
+  COMP_CODE: raw_data
+  T: BF_COMPONENT
+  URL: /raw_data
+parentKeys: {}
+properties:
+  BF_CODE: PT.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/automatic_test_define' )
+  CLASS_NAME: WELL_TEST_RAW_DATA
+  COMP_CODE: raw_data
+  NAME: Raw Data
+  SIGNING_REQ_IND: null
+  URL: /raw_data
+related: {}

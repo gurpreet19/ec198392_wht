@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1170674330'
+keys:
+  BF_CODE: SP.0001
+  CLASS_NAME: REPORT
+  COMP_CODE: generated_reports
+  T: BF_COMPONENT
+  URL: /generated_reports
+parentKeys: {}
+properties:
+  BF_CODE: SP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_finder' )
+  CLASS_NAME: REPORT
+  COMP_CODE: generated_reports
+  NAME: Navigator (form) > Documents (table) > Reports (tab) > Generated Reports (table)
+  SIGNING_REQ_IND: null
+  URL: /generated_reports
+related: {}

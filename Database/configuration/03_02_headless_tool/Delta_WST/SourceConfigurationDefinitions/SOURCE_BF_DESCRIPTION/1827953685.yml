@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1827953685'
+keys:
+  BF_DESCRIPTION_NO: PO.0132
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0132
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is an exact copy of PO.0005 - Daily Tank Status and is meant for the cases where you have different types of tanks that do not easily fit within one screen.  A new class (by default a copy of DV_TANK_DAY_INV_OIL) has been introduced so that it can be configured to fit the purpose.</p><p>This BF is used when either daily tank volume data or only strapping height (for one single product) is available. Energy Components will automatically create a new record for a new production day for all tanks having tank meter frequency = &quot;DAY&quot;. For tanks having tank meter frequency = &quot;EVENT&quot;, there will be no automatic instantiation, the user will have to manually press the insert new record button and select the right tank from the tank drop down. All data is treated as closing tank reading at the end of the production day. Therefore there is no time associated w<p>Tanks configured with ‘Use in BF’ as ‘PO.0132 - Daily Tank Status 2’ will be available in this screen.<p><p>Opening volume for a day is calculated as last available closing volume, for daily tanks it will always be yesterday closing. If today is the tank's start day there will be no value for yesterday's closing, and opening volume is set to 0.</p><p>If Strapping tables is used, it can return either mass or either mass or volume, depending on the method configured for the tank. EC will calculate the opposite unit if density is available, either entered manually or as a reference value.</p>
+related: {}

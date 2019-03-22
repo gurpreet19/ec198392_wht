@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '962372306'
+keys:
+  BF_DESCRIPTION_NO: WR.0081
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0081
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/PFLW_DAY_STATUS' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This BF is used to display daily production flowline data per flowline for the selected period. Energy Components automatically creates new records for active production flowlines connected to the facility.</p>
+        <p>This BF is actually a variant of the Daily Production Flowline and Well Status 1 (WR.0006), with a mandatory navigator for flowline.</p>
+related: {}

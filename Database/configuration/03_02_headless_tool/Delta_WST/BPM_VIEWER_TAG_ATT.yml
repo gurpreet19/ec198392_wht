@@ -1,0 +1,190 @@
+TAG=ecbpm__node_active NAME=primary_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-326862161'
+  keys:
+    NAME: primary_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_active
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_active NAME=secondary_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1574056545'
+  keys:
+    NAME: secondary_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_active
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_active NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1375488836'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_active
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_active NAME=text_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '222517928'
+  keys:
+    NAME: text_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_active
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_completed NAME=primary_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1865321256'
+  keys:
+    NAME: primary_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_completed
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_completed NAME=secondary_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-566622054'
+  keys:
+    NAME: secondary_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_completed
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_completed NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-268689749'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_completed
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_completed NAME=text_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-75840305'
+  keys:
+    NAME: text_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_completed
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_pending NAME=primary_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1829193700'
+  keys:
+    NAME: primary_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_pending
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__node_pending NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-809382089'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__node_pending
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__process_action_ba_warning NAME=primary_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-603756195'
+  keys:
+    NAME: primary_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__process_action_ba_warning
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__process_action_ba_warning NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1649704746'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__process_action_ba_warning
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__process_action_error NAME=primary_color: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-485144121'
+  keys:
+    NAME: primary_color
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__process_action_error
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__process_action_error NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '589930796'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__process_action_error
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__task_assigned NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-232448023'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__task_assigned
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__task_completed NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-155531602'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__task_completed
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__task_exceptional NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1848498851'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__task_exceptional
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__task_ready NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '881819142'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__task_ready
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TAG=ecbpm__task_wip NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2051566719'
+  keys:
+    NAME: text
+    T: BPM_VIEWER_TAG_ATT
+    TAG: ecbpm__task_wip
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '905965097'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/PFLW_DAY_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: WR.0081
+  NAME: Daily Production Flowline, by Flowline
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: FLOWLINE_TYPE='OP'
+  URL: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/PFLW_DAY_STATUS
+related: {}

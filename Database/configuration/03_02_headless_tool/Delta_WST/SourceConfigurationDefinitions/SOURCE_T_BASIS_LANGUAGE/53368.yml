@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '53368'
+keys:
+  LANGUAGE_ID: 6.0
+  T: T_BASIS_LANGUAGE
+parentKeys: {}
+properties:
+  LANGUAGE: DE
+  LANGUAGE_ID: 6.0
+  NAME: German
+related: {}

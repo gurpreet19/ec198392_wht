@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1802982061'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: null
+  COMP_CODE: regen_select_btn
+  T: BF_COMPONENT
+  URL: /regen_select_btn
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: null
+  COMP_CODE: regen_select_btn
+  NAME: Navigator (form) > Reports (tab) > Reports (table) > Generated Reports (table) > Regenerate Selected Report (button)
+  SIGNING_REQ_IND: null
+  URL: /regen_select_btn
+related: {}

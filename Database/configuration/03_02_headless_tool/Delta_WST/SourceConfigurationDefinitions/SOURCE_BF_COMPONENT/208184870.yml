@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '208184870'
+keys:
+  BF_CODE: SP.0005
+  CLASS_NAME: null
+  COMP_CODE: RunReportButton
+  T: BF_COMPONENT
+  URL: /RunReportButton
+parentKeys: {}
+properties:
+  BF_CODE: SP.0005
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/UNTRANSFER' )
+  CLASS_NAME: null
+  COMP_CODE: RunReportButton
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generate Report (button)
+  SIGNING_REQ_IND: null
+  URL: /RunReportButton
+related: {}

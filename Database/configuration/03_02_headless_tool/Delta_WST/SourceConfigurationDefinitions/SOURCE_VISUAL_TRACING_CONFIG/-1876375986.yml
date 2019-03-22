@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1876375986'
+keys:
+  DATA_ENTITY_CAT: CALCULATION
+  T: VISUAL_TRACING_CONFIG
+  TR_AREA: OIL_SANDS
+parentKeys: {}
+properties:
+  DATA_ENTITY_CAT: CALCULATION
+  TR_AREA: OIL_SANDS
+  TR_HEADING: Calculations
+  TR_SORT_ORDER: 400.0
+related: {}

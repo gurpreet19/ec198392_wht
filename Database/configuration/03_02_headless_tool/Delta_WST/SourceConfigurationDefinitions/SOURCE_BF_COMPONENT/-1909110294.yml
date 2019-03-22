@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1909110294'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: null
+  COMP_CODE: documents_header
+  T: BF_COMPONENT
+  URL: /documents_header
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: null
+  COMP_CODE: documents_header
+  NAME: Navigator (form) > Documents (tab) > Documents (collapsible)
+  SIGNING_REQ_IND: null
+  URL: /documents_header
+related: {}

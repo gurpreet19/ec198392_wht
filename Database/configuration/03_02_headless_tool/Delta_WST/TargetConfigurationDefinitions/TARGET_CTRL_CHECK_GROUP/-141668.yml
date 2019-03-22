@@ -1,0 +1,25 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-141668'
+keys:
+  CHECK_GROUP: D_PWEL_STATUS_3
+  T: CTRL_CHECK_GROUP
+parentKeys: {}
+properties:
+  CHECK_GROUP: D_PWEL_STATUS_3
+  CHECK_RULE_TARGET: null
+  DESCRIPTION: Daily Prod Well Status 3
+  EC_USER_OBJECT: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status&TARGETCONDITION=INSTRUMENTATION_TYPE in ('3')
+  PARENT_GROUP: D_ASSET_STATUS
+related:
+  CTRL_CHECK_COMBINATION:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CHECK_GROUP: D_PWEL_STATUS_3
+      CHECK_ID: 19.0
+      T: CTRL_CHECK_COMBINATION
+    parentKeys:
+      CTRL_CHECK_GROUP.CHECK_GROUP: D_PWEL_STATUS_3
+    properties:
+      CHECK_GROUP: D_PWEL_STATUS_3
+      CHECK_ID: 19.0
+      DESCRIPTION: null

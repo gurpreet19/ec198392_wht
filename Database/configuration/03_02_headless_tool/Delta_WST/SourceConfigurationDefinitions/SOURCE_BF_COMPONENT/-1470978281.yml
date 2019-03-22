@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1470978281'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: null
+  COMP_CODE: booking_period_header
+  T: BF_COMPONENT
+  URL: /booking_period_header
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: null
+  COMP_CODE: booking_period_header
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Booking Period (collapsible)
+  SIGNING_REQ_IND: null
+  URL: /booking_period_header
+related: {}

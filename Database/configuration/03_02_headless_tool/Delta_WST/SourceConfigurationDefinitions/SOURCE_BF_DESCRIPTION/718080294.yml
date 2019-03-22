@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '718080294'
+keys:
+  BF_DESCRIPTION_NO: CO.1076
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: CO.1076
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.developer/formdesigner' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The form designer can be used for testing different datamodels and render them as a form. This is to help rapid development of forms in screens</p>
+related: {}

@@ -1,0 +1,48 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1939779621'
+keys:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='GenerateReportAction')
+  SORT_ORDER: 2.0
+  T: BPM_EC_GCOMMAND_HANDLER
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='GenerateReportAction')
+  CLASS_NAME: com.ec.bpm.ext.ec.handlers.AppendParam
+  COMMENTS: Appends report data set description
+  IS_ENABLED: Y
+  NAME: Append input/output parameter
+  SORT_ORDER: 2.0
+related:
+  BPM_EC_GCOMMAND_HANDLER_P:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'GenerateReportAction')
+      PARAM_NAME: append_param.name
+      T: BPM_EC_GCOMMAND_HANDLER_P
+    parentKeys:
+      BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'GenerateReportAction')
+    properties:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'GenerateReportAction')
+      COMMENTS: The variable name of the data set reference
+      MAPPING_TYPE: VALUE
+      MAPPING_VALUE: report_dataset
+      PARAM_ID: 5.0
+      PARAM_NAME: append_param.name
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'GenerateReportAction')
+      PARAM_NAME: append_param.value
+      T: BPM_EC_GCOMMAND_HANDLER_P
+    parentKeys:
+      BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'GenerateReportAction')
+    properties:
+      BPM_EC_GCOMMAND_HANDLER_ID: (select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = '2' and COMMAND_NAME = 'GenerateReportAction')
+      COMMENTS: Value of the report dataset description
+      MAPPING_TYPE: VALUE
+      MAPPING_VALUE: '#{data_set_desc(report_ref(process_action_handler_input["report_no"]),
+        "/DownloadService/com.ec.frmw.report.screens.model.web.DownloadGeneratedReport?REPORT_NO="
+        + process_action_handler_input["report_no"] + "&FORMAT=" + process_action_handler_input["report_format"],
+        "binary", process_action_handler_input["report_name"] + " (" + process_action_handler_input["report_no"]
+        + ")")}'
+      PARAM_ID: 6.0
+      PARAM_NAME: append_param.value

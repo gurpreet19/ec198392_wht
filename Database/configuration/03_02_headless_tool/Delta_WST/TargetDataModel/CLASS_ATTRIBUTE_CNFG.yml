@@ -1,0 +1,237 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: CLASS_ATTRIBUTE_CNFG
+cnstPrimaryKey:
+  columns:
+  - CLASS_NAME
+  - ATTRIBUTE_NAME
+  name: PK_CLASS_ATTRIBUTE_CNFG
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  APPROVAL_BY:
+    columnName: APPROVAL_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '21'
+  APPROVAL_DATE:
+    columnName: APPROVAL_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '22'
+  APPROVAL_STATE:
+    columnName: APPROVAL_STATE
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '20'
+  APP_SPACE_CNTX:
+    columnName: APP_SPACE_CNTX
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  ATTRIBUTE_NAME:
+    columnName: ATTRIBUTE_NAME
+    typeName: VARCHAR2(24)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  CLASS_NAME:
+    columnName: CLASS_NAME
+    typeName: VARCHAR2(24)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  CREATED_BY:
+    columnName: CREATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '14'
+  CREATED_DATE:
+    columnName: CREATED_DATE
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
+  DATA_TYPE:
+    columnName: DATA_TYPE
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  DB_JOIN_TABLE:
+    columnName: DB_JOIN_TABLE
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
+  DB_JOIN_WHERE:
+    columnName: DB_JOIN_WHERE
+    typeName: VARCHAR2(4000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  DB_MAPPING_TYPE:
+    columnName: DB_MAPPING_TYPE
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+  DB_SQL_SYNTAX:
+    columnName: DB_SQL_SYNTAX
+    typeName: VARCHAR2(4000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
+  IS_KEY:
+    columnName: IS_KEY
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  LAST_UPDATED_BY:
+    columnName: LAST_UPDATED_BY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  LAST_UPDATED_DATE:
+    columnName: LAST_UPDATED_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '17'
+  RECORD_STATUS:
+    columnName: RECORD_STATUS
+    typeName: VARCHAR2(1)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '13'
+  REC_ID:
+    columnName: REC_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '23'
+  REFERENCE_KEY:
+    columnName: REFERENCE_KEY
+    typeName: VARCHAR2(30)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  REFERENCE_TYPE:
+    columnName: REFERENCE_TYPE
+    typeName: VARCHAR2(24)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  REFERENCE_VALUE:
+    columnName: REFERENCE_VALUE
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '8'
+  REV_NO:
+    columnName: REV_NO
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '18'
+  REV_TEXT:
+    columnName: REV_TEXT
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '19'
+cnstForeignKeys:
+  FK_CLASS_ATTRIBUTE_CNFG:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: CLASS_CNFG
+    columns:
+      CLASS_NAME: CLASS_NAME
+    name: FK_CLASS_ATTRIBUTE_CNFG
+    type: FOREIGNKEY
+    status: UNDEFINED
+cnstChecks:
+  CHK_CLASS_ATTRIBUTE_CNFG_1:
+    searchCondition: is_key IN ('Y','N')
+    columns:
+    - IS_KEY
+    name: CHK_CLASS_ATTRIBUTE_CNFG_1
+    type: CHECK
+    status: UNDEFINED
+  CHK_CLASS_ATTRIBUTE_CNFG_3:
+    searchCondition: data_type IN ('STRING','NUMBER','INTEGER','DATE','BOOLEAN','FLOAT')
+    columns:
+    - DATA_TYPE
+    name: CHK_CLASS_ATTRIBUTE_CNFG_3
+    type: CHECK
+    status: UNDEFINED
+  CHK_CLASS_ATTRIBUTE_CNFG_4:
+    searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')
+    columns:
+    - APPROVAL_STATE
+    name: CHK_CLASS_ATTRIBUTE_CNFG_4
+    type: CHECK
+    status: UNDEFINED
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 40
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED

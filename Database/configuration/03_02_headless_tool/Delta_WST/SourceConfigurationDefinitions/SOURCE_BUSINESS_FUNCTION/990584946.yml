@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '990584946'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.developer/formdesigner
+parentKeys: {}
+properties:
+  BF_CODE: CO.1076
+  NAME: Form Designer
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.frmw.co.developer/formdesigner
+related: {}

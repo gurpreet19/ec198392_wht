@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-485484029'
+keys:
+  KEY: /com/ec/frmw/report/jasper/font_name
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: DejaVu Serif
+  DESCRIPTION: Java Font Name
+  KEY: /com/ec/frmw/report/jasper/font_name
+  LABEL: Default Java Font Name
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: USER
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1000360808'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL
+parentKeys: {}
+properties:
+  BF_CODE: PO.0132
+  NAME: Daily Tank Status 2
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL
+related: {}

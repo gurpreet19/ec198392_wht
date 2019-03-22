@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-700004846'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/calendar_collection_member' AND COMP_CODE ='calendar_coll_member' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/calendar_collection_member' AND COMP_CODE ='calendar_coll_member' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  COMMENTS: null
+  NAME: Calendar Collection Member
+  URL: /save
+related: {}

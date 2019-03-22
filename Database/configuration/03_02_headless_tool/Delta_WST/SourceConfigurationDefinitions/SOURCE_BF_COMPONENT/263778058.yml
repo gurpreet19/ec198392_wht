@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '263778058'
+keys:
+  BF_CODE: SP.0054
+  CLASS_NAME: null
+  COMP_CODE: processinput
+  T: BF_COMPONENT
+  URL: /processinput
+parentKeys: {}
+properties:
+  BF_CODE: SP.0054
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
+  CLASS_NAME: null
+  COMP_CODE: processinput
+  NAME: Navigator (form) > Documents (tab) > Process Input (form)
+  SIGNING_REQ_IND: null
+  URL: /processinput
+related: {}

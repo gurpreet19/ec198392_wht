@@ -1,0 +1,26 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1422647617'
+keys:
+  COMMAND_NAME: GenerateReportAction
+  T: BPM_EC_GCOMMAND
+parentKeys: {}
+properties:
+  BPM_EC_GCOMMAND_ID: 8.0
+  COMMAND_NAME: GenerateReportAction
+  DESCRIPTION: ECBPM default process action, for EC reports generation.
+related:
+  BPM_EC_GCOMMAND_OP:
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      OP_NAME: View Report
+      T: BPM_EC_GCOMMAND_OP
+    parentKeys:
+      BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='GenerateReportAction')
+    properties:
+      BPM_EC_GCOMMAND_ID: (SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME='GenerateReportAction')
+      BPM_EC_GCOMMAND_OP_ID: 2.0
+      OP_DESCRIPTION: Downloads and view the generated report
+      OP_KEY: '#{process_action_result.report_dataset.source}'
+      OP_NAME: View Report
+      OP_ORDER: 1.0
+      OP_TYPE: ec_url_this

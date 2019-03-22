@@ -1,0 +1,9 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1540996'
+keys:
+  OFFSET: 24.0
+  T: CALENDAR_OFFSET
+parentKeys: {}
+properties:
+  OFFSET: 24.0
+related: {}

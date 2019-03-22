@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-485144121'
+keys:
+  NAME: primary_color
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__process_action_error
+parentKeys: {}
+properties:
+  NAME: primary_color
+  TAG: ecbpm__process_action_error
+  VALUE: '#ff4500'
+related: {}

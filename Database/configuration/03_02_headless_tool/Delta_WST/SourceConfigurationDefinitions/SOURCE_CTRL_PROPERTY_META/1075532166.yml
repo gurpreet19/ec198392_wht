@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1075532166'
+keys:
+  KEY: /com/ec/tran/cargo/storage_level/include_day_end_not_lifted
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: N
+  DESCRIPTION: Should Storage Level calculation consider day end not lifted as partial actual quantities in queries
+  KEY: /com/ec/tran/cargo/storage_level/include_day_end_not_lifted
+  LABEL: Read day end not lifted as partial actual in Storage Level calculation
+  LIST_OF_VALUES: null
+  REQUIRED: N
+  VERSION_TYPE: SYSTEM
+related: {}

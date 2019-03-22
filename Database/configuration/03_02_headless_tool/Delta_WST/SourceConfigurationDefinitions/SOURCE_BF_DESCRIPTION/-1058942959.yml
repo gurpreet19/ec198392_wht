@@ -1,0 +1,2188 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1058942959'
+keys:
+  BF_DESCRIPTION_NO: PT.0022
+  DATA_LEVEL: 1.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PT.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_stable_periods_summarise' )
+  DATA_LEVEL: 1.0
+  DESCRIPTION: '<div class="OutlineElement Ltr SCXW210537010" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1882020521" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{180}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">The business function
+    “Stable Period and Summarise - Injection wells” is a tool for visualising and
+    evaluating the performance test of injection wells in an environment where all
+    relevant information can be compared on a common time-scale.</span><span class="EOP
+    SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="775988434" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{186}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1959480960" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{190}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">In order to produce
+    meaningful graphics, the plot setup first needs to be defined and adjusted (Data
+    section 4). Based on the visual evaluation of signal traces, subsets of the available
+    measurement points can be selected and stored as </span><span class="TextRun SCXW210537010"
+    xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-variant-ligatures:
+    none !important; font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Stable periods</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">, each with an automated </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-style: italic; font-size:
+    10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Stable
+    Period Start</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">- and </span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Stable Period End</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">- time based on the
+    graph. Also, the primary target for result generation can be selected from a list
+    of injection wells that were defined to be active in the Injection Test Define
+    (PT.0019). Stable periods can be saved and will then appear</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> in the graph </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">and as entries
+    in the </span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Stable periods</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> record list in Data
+    section 3. The line colour for parameters with phase Gas, Water and Steam can
+    be configured from the maintain system settings same as how it works for stream
+    node diagram.</span><span class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="616118251" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{220}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1665224584" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{224}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">This business function
+    also displays all the records in the selected </span><span class="TextRun SCXW210537010"
+    xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-variant-ligatures:
+    none !important; font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">injection test measurement data set</span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;"> from </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-style: italic; font-size:
+    10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">test
+    device, flowline, well and well bore interval</span><span class="TextRun SCXW210537010"
+    xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-variant-ligatures:
+    none !important; font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif;
+    line-height: 18.3458px;"> signal sources. All data elements belonging to the respective
+    data classes for the specific objects participating in the test will be displayed. </span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1221380903" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{238}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="864876815" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{242}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">The data in the sections
+    1, 5, 7, 9, 11 is based on information entered in business function Injection
+    Test Define (PT.0019).</span><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="533819992" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{248}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1543224412" paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{252}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">The combined business function contains a </span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-style: italic; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">navigator
+    section</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> and </span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">twelve data sections</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">. The display of data
+    sections is controlled </span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">using</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> screen tabs. The overall layout of the screen will be according to
+    the following possible combinations:</span><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> <br></span></p><p class="Paragraph SCXW210537010" paraid="1543224412"
+    paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{252}" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"><br></span></p><p class="Paragraph SCXW210537010" paraid="1543224412"
+    paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{252}" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"><br></span></p><p class="Paragraph SCXW210537010" paraid="1543224412"
+    paraeid="{2d50c0f3-c9e5-468e-9c16-bab952a99335}{252}" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"></span></p><table class="MsoNormalTable" border="1" cellspacing="0"
+    cellpadding="0" width="98%" style="box-sizing: border-box; border: none; border-collapse:
+    collapse; font-family: Arial, sans-serif; font-size: 14px; margin-left: 5.4pt;
+    vertical-align: top !important;"><tbody style="box-sizing: border-box;"><tr style="box-sizing:
+    border-box;"><td width="9%" valign="top" style="box-sizing: border-box; border:
+    1pt solid black; width: 147.273px; background: black; padding: 0in 5.4pt; vertical-align:
+    top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><b style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box; color: rgb(255,
+    255, 255);">Sections<o:p style="box-sizing: border-box;"></o:p></span></b></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: 1pt solid black;
+    border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: none;
+    border-image: initial; width: 150px; background: black; padding: 0in 5.4pt; vertical-align:
+    top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><b style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box; color: rgb(255,
+    255, 255);">Access stable periods tab<o:p style="box-sizing: border-box;"></o:p></span></b></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: 1pt solid black;
+    border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: none;
+    border-image: initial; width: 147.273px; background: black; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><b
+    style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing: border-box;
+    color: rgb(255, 255, 255);">Access plot parameters tab<o:p style="box-sizing:
+    border-box;"></o:p></span></b></p></td><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: 1pt solid black; border-right: 1pt solid black; border-bottom:
+    1pt solid black; border-left: none; border-image: initial; width: 146.364px; background:
+    black; padding: 0in 5.4pt; vertical-align: top !important;"><p class="MsoNormal"
+    align="center" style="box-sizing: border-box; text-align: center;"><span style="box-sizing:
+    border-box; color: rgb(255, 255, 255);"><b style="box-sizing: border-box;"><span
+    lang="EN-GB" style="box-sizing: border-box;">Test Device tab active</span></b><span
+    lang="EN-GB" style="box-sizing: border-box;"><o:p style="box-sizing: border-box;"></o:p></span></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: 1pt solid black;
+    border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: none;
+    border-image: initial; width: 146.364px; background: black; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" align="center" style="box-sizing:
+    border-box; text-align: center;"><span style="box-sizing: border-box; color: rgb(255,
+    255, 255);"><b style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Flowline tab active</span></b><span lang="EN-GB" style="box-sizing:
+    border-box;"><o:p style="box-sizing: border-box;"></o:p></span></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: 1pt solid black;
+    border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: none;
+    border-image: initial; width: 146.364px; background: black; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" align="center" style="box-sizing:
+    border-box; text-align: center;"><span style="box-sizing: border-box; color: rgb(255,
+    255, 255);"><b style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Well tab active</span></b><span lang="EN-GB" style="box-sizing: border-box;"><o:p
+    style="box-sizing: border-box;"></o:p></span></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: 1pt solid black; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; border-image:
+    initial; width: 152.727px; background: black; padding: 0in 5.4pt; vertical-align:
+    top !important;"><p class="MsoNormal" align="center" style="box-sizing: border-box;
+    text-align: center;"><span style="box-sizing: border-box; color: rgb(255, 255,
+    255);"><b style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Well Bore Interval tab active</span></b><span lang="EN-GB" style="box-sizing:
+    border-box;"><o:p style="box-sizing: border-box;"></o:p></span></span></p></td><td
+    width="36%" valign="top" style="box-sizing: border-box; border-top: 1pt solid
+    black; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left:
+    none; border-image: initial; width: 591.818px; background: black; padding: 0in
+    5.4pt; vertical-align: top !important;"><p class="MsoNormal" style="box-sizing:
+    border-box;"><b style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box; color: rgb(255, 255, 255);">Comments<o:p style="box-sizing: border-box;"></o:p></span></b></p><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box; color: rgb(255, 255, 255);"> </span></p></td></tr><tr style="box-sizing:
+    border-box; height: 12.45pt;"><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: 1pt solid black; border-image: initial; width: 147.273px; padding:
+    0in 5.4pt; height: 12.45pt; vertical-align: top !important;"><p class="MsoNormal"
+    style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing: border-box;">Navigator<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 150px; padding: 0in
+    5.4pt; height: 12.45pt; border-image: initial !important; vertical-align: top
+    !important;"><p class="MsoNormal" align="center" style="box-sizing: border-box;
+    text-align: center;"><span lang="EN-GB" style="box-sizing: border-box;">X<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 147.273px; padding:
+    0in 5.4pt; height: 12.45pt; border-image: initial !important; vertical-align:
+    top !important;"><p class="MsoNormal" align="center" style="box-sizing: border-box;
+    text-align: center;"><span lang="EN-GB" style="box-sizing: border-box;">X<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; height: 12.45pt; border-image: initial !important; vertical-align:
+    top !important;"><p class="MsoNormal" align="center" style="box-sizing: border-box;
+    text-align: center;"><span lang="EN-GB" style="box-sizing: border-box;">X<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; height: 12.45pt; border-image: initial !important; vertical-align:
+    top !important;"><p class="MsoNormal" align="center" style="box-sizing: border-box;
+    text-align: center;"><span lang="EN-GB" style="box-sizing: border-box;">X<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; height: 12.45pt; border-image: initial !important; vertical-align:
+    top !important;"><p class="MsoNormal" align="center" style="box-sizing: border-box;
+    text-align: center;"><span lang="EN-GB" style="box-sizing: border-box;">X<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 152.727px; padding:
+    0in 5.4pt; height: 12.45pt; border-image: initial !important; vertical-align:
+    top !important;"><p class="MsoNormal" align="center" style="box-sizing: border-box;
+    text-align: center;"><span lang="EN-GB" style="box-sizing: border-box;">X<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="36%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 591.818px; padding:
+    0in 5.4pt; height: 12.45pt; border-image: initial !important; vertical-align:
+    top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB"
+    style="box-sizing: border-box;">Always visible<o:p style="box-sizing: border-box;"></o:p></span></p></td></tr><tr
+    style="box-sizing: border-box;"><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: 1pt solid black; border-image: initial; width: 147.273px;
+    padding: 0in 5.4pt; vertical-align: top !important;"><p class="MsoNormal" style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box;">Data Section 1<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 150px; padding: 0in
+    5.4pt; border-image: initial !important; vertical-align: top !important;"><p class="MsoNormal"
+    align="center" style="box-sizing: border-box; text-align: center;"><span lang="EN-GB"
+    style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 147.273px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 146.364px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 146.364px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 146.364px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 152.727px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="36%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Always visible<o:p style="box-sizing: border-box;"></o:p></span></p></td></tr><tr
+    style="box-sizing: border-box;"><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: 1pt solid black; border-image: initial; width: 147.273px;
+    padding: 0in 5.4pt; vertical-align: top !important;"><p class="MsoNormal" style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box;">Data Section 2</span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 150px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 147.273px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 152.727px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="36%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: none; width: 591.818px; padding: 0in 5.4pt; border-image:
+    initial !important; vertical-align: top !important;"><p class="MsoNormal" style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box;">Graph panel<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td></tr><tr style="box-sizing:
+    border-box;"><td width="9%" valign="top" style="box-sizing: border-box; border-top:
+    none; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left:
+    1pt solid black; border-image: initial; width: 147.273px; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span
+    lang="EN-GB" style="box-sizing: border-box;">Data Section 3</span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 150px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 147.273px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 152.727px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Stable period entry panel<o:p style="box-sizing: border-box;"></o:p></span></p></td></tr><tr
+    style="box-sizing: border-box;"><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: 1pt solid black; border-image: initial; width: 147.273px;
+    padding: 0in 5.4pt; vertical-align: top !important;"><p class="MsoNormal" style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box;">Data Section 4</span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 150px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 147.273px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 146.364px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 152.727px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">All configured plot parameters for all test objects in the test selected
+    in Data section 1<o:p style="box-sizing: border-box;"></o:p></span></p></td></tr><tr
+    style="box-sizing: border-box;"><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: 1pt solid black; border-image: initial; width: 147.273px;
+    padding: 0in 5.4pt; vertical-align: top !important;"><p class="MsoNormal" style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box;">Data Section 5<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 150px; padding: 0in
+    5.4pt; border-image: initial !important; vertical-align: top !important;"><p class="MsoNormal"
+    align="center" style="box-sizing: border-box; text-align: center;"><span lang="EN-GB"
+    style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: none; width: 147.273px; padding: 0in 5.4pt; border-image:
+    initial !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td width="9%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 146.364px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 152.727px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Showing the active test device in the test selected in Data section
+    1<o:p style="box-sizing: border-box;"></o:p></span></p></td></tr><tr style="box-sizing:
+    border-box;"><td width="9%" valign="top" style="box-sizing: border-box; border-top:
+    none; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left:
+    1pt solid black; border-image: initial; width: 147.273px; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span
+    lang="EN-GB" style="box-sizing: border-box;">Data Section 6<o:p style="box-sizing:
+    border-box;"></o:p></span></p></td><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: none; width: 150px; padding: 0in 5.4pt; border-image:
+    initial !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 147.273px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td width="9%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 146.364px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 152.727px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Showing all samples for the test device selected in Data section
+    5<o:p style="box-sizing: border-box;"></o:p></span></p></td></tr><tr style="box-sizing:
+    border-box;"><td width="9%" valign="top" style="box-sizing: border-box; border-top:
+    none; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left:
+    1pt solid black; border-image: initial; width: 147.273px; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span
+    lang="EN-GB" style="box-sizing: border-box;">Data Section 7<o:p style="box-sizing:
+    border-box;"></o:p></span></p></td><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: none; width: 150px; padding: 0in 5.4pt; border-image:
+    initial !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 147.273px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td width="9%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 146.364px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 152.727px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Showing all active flowlines in the test selected in Data section
+    1<o:p style="box-sizing: border-box;"></o:p></span></p></td></tr><tr style="box-sizing:
+    border-box;"><td width="9%" valign="top" style="box-sizing: border-box; border-top:
+    none; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left:
+    1pt solid black; border-image: initial; width: 147.273px; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span
+    lang="EN-GB" style="box-sizing: border-box;">Data Section 8<o:p style="box-sizing:
+    border-box;"></o:p></span></p></td><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: none; width: 150px; padding: 0in 5.4pt; border-image:
+    initial !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 147.273px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td width="9%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 146.364px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 152.727px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Showing all samples for the flowline selected in Data section 7<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td></tr><tr style="box-sizing:
+    border-box;"><td width="9%" valign="top" style="box-sizing: border-box; border-top:
+    none; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left:
+    1pt solid black; border-image: initial; width: 147.273px; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span
+    lang="EN-GB" style="box-sizing: border-box;">Data Section 9<o:p style="box-sizing:
+    border-box;"></o:p></span></p></td><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: none; width: 150px; padding: 0in 5.4pt; border-image:
+    initial !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 147.273px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td width="9%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 152.727px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Showing all active wells in the test selected in Data section 1<o:p
+    style="box-sizing: border-box;"></o:p></span></p></td></tr><tr style="box-sizing:
+    border-box;"><td width="9%" valign="top" style="box-sizing: border-box; border-top:
+    none; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left:
+    1pt solid black; border-image: initial; width: 147.273px; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span
+    lang="EN-GB" style="box-sizing: border-box;">Data Section 10<o:p style="box-sizing:
+    border-box;"></o:p></span></p></td><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: none; width: 150px; padding: 0in 5.4pt; border-image:
+    initial !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 147.273px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td width="9%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 152.727px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Showing all samples for the well selected in Data section 9<o:p style="box-sizing:
+    border-box;"></o:p></span></p></td></tr><tr style="box-sizing: border-box;"><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black;
+    border-image: initial; width: 147.273px; padding: 0in 5.4pt; vertical-align: top
+    !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB"
+    style="box-sizing: border-box;">Data Section 11<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="9%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 150px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 147.273px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 146.364px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;"> </span></p></td><td width="9%" valign="top"
+    style="box-sizing: border-box; border-top: none; border-right: 1pt solid black;
+    border-bottom: 1pt solid black; border-left: none; width: 152.727px; padding:
+    0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" align="center" style="box-sizing: border-box; text-align: center;"><span
+    lang="EN-GB" style="box-sizing: border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td
+    width="36%" valign="top" style="box-sizing: border-box; border-top: none; border-right:
+    1pt solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Showing all active well bore interval in the test selected in Data
+    section 1<o:p style="box-sizing: border-box;"></o:p></span></p></td></tr><tr style="box-sizing:
+    border-box;"><td width="9%" valign="top" style="box-sizing: border-box; border-top:
+    none; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left:
+    1pt solid black; border-image: initial; width: 147.273px; padding: 0in 5.4pt;
+    vertical-align: top !important;"><p class="MsoNormal" style="box-sizing: border-box;"><span
+    lang="EN-GB" style="box-sizing: border-box;">Data Section 12<o:p style="box-sizing:
+    border-box;"></o:p></span></p></td><td width="9%" valign="top" style="box-sizing:
+    border-box; border-top: none; border-right: 1pt solid black; border-bottom: 1pt
+    solid black; border-left: none; width: 150px; padding: 0in 5.4pt; border-image:
+    initial !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 147.273px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 146.364px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;"> </span></p></td><td width="9%" valign="top" style="box-sizing: border-box;
+    border-top: none; border-right: 1pt solid black; border-bottom: 1pt solid black;
+    border-left: none; width: 152.727px; padding: 0in 5.4pt; border-image: initial
+    !important; vertical-align: top !important;"><p class="MsoNormal" align="center"
+    style="box-sizing: border-box; text-align: center;"><span lang="EN-GB" style="box-sizing:
+    border-box;">X<o:p style="box-sizing: border-box;"></o:p></span></p></td><td width="36%"
+    valign="top" style="box-sizing: border-box; border-top: none; border-right: 1pt
+    solid black; border-bottom: 1pt solid black; border-left: none; width: 591.818px;
+    padding: 0in 5.4pt; border-image: initial !important; vertical-align: top !important;"><p
+    class="MsoNormal" style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
+    border-box;">Showing all samples for the well bore interval selected in Data section
+    11<o:p style="box-sizing: border-box;"></o:p></span></p><div style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box;"><br style="box-sizing:
+    border-box;"></span></div></td></tr></tbody></table></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1741997247" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{95}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    17.2667px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10pt; line-height: 17.2667px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="892427010" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{99}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 17.2667px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10pt; line-height: 17.2667px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="76746712" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{103}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    17.2667px;">The </span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10pt; font-family: Arial, Arial_MSFontService, sans-serif;
+    line-height: 17.2667px;">navigator</span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    17.2667px;"> section enables the selection of a time window (from date - to date).
+    There must be an overlap between the navigator From-To and the Start-End time
+    interval of the </span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-style: italic; font-size: 10pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 17.2667px;">injection </span><span class="TextRun SCXW210537010"
+    xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-variant-ligatures:
+    none !important; font-style: italic; font-size: 10pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 17.2667px;">test measurement data set</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 17.2667px;"> for the test to be
+    listed. From Date < End Date AND </span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    17.2667px;"><span class="ContextualSpellingAndGrammarError SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-repeat: repeat-x; background-position: left bottom; background-image:
+    url(" data:image="" gif;base64,r0lgodlhbqaeapedaabvzdnvzdnv="" waaach5bauaaamalaaaaaafaaqaaaiinc2qchykqgeaow="=");"
+    border-bottom:="" 1px="" solid="" transparent;="" background-color:="" inherit;"="">To</span></span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 17.2667px;"> Date > Start
+    Date.</span><span class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10pt; line-height: 17.2667px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1607266012" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{121}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    17.2667px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10pt; line-height: 17.2667px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="422155063" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{125}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">The navigator is based
+    on the configured group model down to the well level.</span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="91160632" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{129}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1916533674" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{133}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">The well element is optional. If provided, the </span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">injection </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">test data set
+    must contain the selected well as an active well </span><span class="TextRun SCXW210537010"
+    xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-variant-ligatures:
+    none !important; font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif;
+    line-height: 18.3458px;">and well type be injector</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">.</span><span class="EOP
+    SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1774682401" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{145}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="385516786" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{149}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">The </span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-style: italic; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Test
+    No</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;"> element is optional.
+    If provided, navigation will select one specific performance test.</span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="478367771" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{157}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1373451604" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{161}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">Navigator selections
+    are applied when pressing the [GO] -button.</span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="2008622380" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{165}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1895320251" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{169}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 1</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> lists all </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-style: italic; font-size:
+    10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">performance
+    test measurement data sets</span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> that satisfy the navigation criteria sorted descending on Start Date
+    (most recent on top). </span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">There are no editable data elements in data section 1. The selected
+    record in this data section controls the content of the data sections 2,3,4,5,7,9
+    and 11. Initial focus is the top row in the data section.</span><span class="EOP
+    SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1311074184" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{181}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1442633993" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{185}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-weight: bold; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Data
+    section 2</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> The </span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Graph Panel</span><span class="TextRun SCXW210537010"
+    xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-variant-ligatures:
+    none !important; font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif;
+    line-height: 18.3458px;"> is the visualisation tool for the entire performance
+    test sample data set. It will plot all the available measurement parameters on
+    a common time scale according to the setup made in data section 4. The panel includes
+    a time axis minimum/maximum setting that enables the zoom-in and close inspection
+    of details from lengthy tests. Each individual trace refers to separate y-axes
+    with individual scaling, colour and axis label. The time axis uses value annotation
+    of year, month, day and hour, minute in vertical orientation in order to conserve
+    space. The plot area provides automatic gridding based on time-axis and the nearest
+    y-axis. The plot area also provides a shading feature and borderline markers for
+    visualising the stable periods. Stable periods may overlap, creating a double
+    shaded visual effect.</span><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="550660936" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{195}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1239991255" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{199}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">Based on a set of site-specific criteria, such as the stability of
+    rates, pressures, temperatures, levels, the operator responsible for test analysis
+    will select the most suitable time windows, Stable Periods, within the performance
+    test, that will serve the purpose of generating representative averaged test result
+    data. </span><span class="LineBreakBlob BlobObject DragDrop SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"><span class="SCXW210537010" style="margin: 0px; padding: 0px; user-select:
+    text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; white-space:
+    pre !important;"> </span><br class="SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; white-space: pre !important;"></span><span class="TextRun EmptyTextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 11pt; font-family: Calibri,
+    Calibri_MSFontService, sans-serif; line-height: 19.425px;"></span><span class="LineBreakBlob
+    BlobObject DragDrop SCXW210537010" style="margin: 0px; padding: 0px; user-select:
+    text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-size:
+    10.5pt; line-height: 18.3458px; font-family: Calibri, Calibri_MSFontService, sans-serif;"><span
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"> </span><br
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"></span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Colours for phase-related
+    attributes</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> (Gas, Water and Steam) will now follow configuration in Maintain
+    System Settings (CO.1006) </span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">under Custom Settings dropdown (Property Name: Phase-name stream colour)
+    e.g. for Gas, Property Name is ''Gas Stream Colour'', the colour values are case
+    insensitive and are rendered based on HTML colours.</span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1164214034" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{215}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1159738928" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{219}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 3</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> The </span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-style: italic; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Stable
+    periods</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> - data section present an overview of the stable periods that have
+    been defined for the performance test selected in </span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-style: italic; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Data
+    Section 1</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">. Each record also includes information about the primary well in
+    the specific period (the one that flow rate result should be created for). New
+    stable periods can be inserted through this data section, and existing ones can
+    be adjusted and reprocessed as needed. Multiple select is supported. Initial focus
+    is the top row in the data section.</span><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="829840524" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{233}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="741061152" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{237}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 4</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-style: italic; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;"> Select
+    parameters to plot</span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">, is basically a control panel for setting up the graphical display
+    of parameters in the “</span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Plot selected parameters</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">” - data section. It
+    lists all available graphable measurement parameters for all objects that participate
+    in the selected test and enables the following adjustments:</span><span class="EOP
+    SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1187993767" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{249}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1182396488" paraeid="{26434dee-dbda-4ba4-978d-87a166f4b931}{253}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">1. Select parameters
+    to plot from the set of available parameters for test device, flowline and well.</span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1676497614" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{2}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1790153337" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{6}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">2. Set the axis minimum
+    and maximum for manual range adjustment (the “Minimum” and “Maximum” screen elements)</span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="935886723" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{10}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1906764049" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{14}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">3. Determine whether
+    the parameter should use auto range in the graph (the “Auto range” check box): </span><span
+    class="LineBreakBlob BlobObject DragDrop SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"><span class="SCXW210537010" style="margin: 0px; padding: 0px; user-select:
+    text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; white-space:
+    pre !important;"> </span><br class="SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; white-space: pre !important;"></span><span class="TextRun EmptyTextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 11pt; font-family: Calibri,
+    Calibri_MSFontService, sans-serif; line-height: 19.425px;"></span><span class="LineBreakBlob
+    BlobObject DragDrop SCXW210537010" style="margin: 0px; padding: 0px; user-select:
+    text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-size:
+    10.5pt; line-height: 18.3458px; font-family: Calibri, Calibri_MSFontService, sans-serif;"><span
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"> </span><br
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"></span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Auto range attribute
+    will have following effect on appearance of graph: </span><span class="LineBreakBlob
+    BlobObject DragDrop SCXW210537010" style="margin: 0px; padding: 0px; user-select:
+    text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-size:
+    10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService, sans-serif;"><span
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"> </span><br
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"></span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Scenario 1: If
+    there is a value for Maximum and Minimum point, these values will be the maximum
+    and minimum value on the Y-Axis. </span><span class="LineBreakBlob BlobObject
+    DragDrop SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height:
+    18.3458px; font-family: Arial, Arial_MSFontService, sans-serif;"><span class="SCXW210537010"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; white-space: pre !important;"> </span><br
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"></span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Scenario 2: If
+    there is a value for Maximum and Minimum point and the Auto range is also checked,
+    the Auto range will be used to render the Y-Axis.</span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="711413120" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{24}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="161743500" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{28}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">4. Determine whether the parameter should be included in the graph
+    (the “Include in plot” and “Force Separate Axis; check box): </span><span class="LineBreakBlob
+    BlobObject DragDrop SCXW210537010" style="margin: 0px; padding: 0px; user-select:
+    text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-size:
+    10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService, sans-serif;"><span
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"> </span><br
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"></span><span
+    class="TextRun EmptyTextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 11pt; font-family:
+    Calibri, Calibri_MSFontService, sans-serif; line-height: 19.425px;"></span><span
+    class="LineBreakBlob BlobObject DragDrop SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Calibri,
+    Calibri_MSFontService, sans-serif;"><span class="SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; white-space: pre !important;"> </span><br class="SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; white-space: pre !important;"></span><span class="TextRun SCXW210537010"
+    xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-variant-ligatures:
+    none !important; font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif;
+    line-height: 18.3458px;">- If ''Force Separate Axis'' and ''Include in Plot''
+    checkboxes are checked, a separate Y Axis will be created for each of the plot
+    parameters.</span><span class="LineBreakBlob BlobObject DragDrop SCXW210537010"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"><span class="SCXW210537010"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; white-space: pre !important;"> </span><br
+    class="SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; white-space: pre !important;"></span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">- If only ''Include
+    in Plot'' checkbox is checked, the plots will be rendered using only one Y axis
+    for all the plot parameters.</span><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1611508098" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{36}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="555620320" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{40}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">The selectable measurement parameters shown are related to the data
+    class definition of the selected object. For a specific object, each selectable
+    data class attribute will appear in the dropdown list in the </span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-style: italic; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Plot
+    trace</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> -column. The choices made are saved as a part of the performance
+    test data set. This ensures that the decision basis for a specific set of test
+    results can easily be recreated at any point in time.</span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1928778192" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{48}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1018629523" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{52}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 5</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> shows the </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-style: italic; font-size:
+    10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">test
+    device</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> configured in the </span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">injection </span><span class="TextRun SCXW210537010"
+    xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text;
+    -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-variant-ligatures:
+    none !important; font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">test measurement data set</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> selected in (data section
+    1). There can only be one test device associated with a test. The test device
+    is initially selected and all measurement data for that specific test device will
+    be listed in data section 6.</span><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="579618539" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{68}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1973148120" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{72}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 6</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> lists all available
+    measurement data for the test device focused in Data section 5. The data class
+    associated with that specific test device type defines the set of data elements
+    shown. Records are sorted on sample time in a descending order (most recent data
+    on top). The time window (To/from date) for the record listing is defined by the
+    Start date and End date from the selected record in data section 1.</span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;"> Individual data
+    elements can be edited in order to correct possible sporadic spikes on critical
+    signals. Modified records can be saved, but there is no functionality for inserting
+    records. Trending is activated for the data elements in this data section. Initial
+    selection is the top row in the data section.</span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="123890439" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{80}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1091834912" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{84}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 7 </span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;">lists all </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-style: italic; font-size:
+    10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">flowlines</span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;"> participating
+    in the selected </span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;">injection</span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> test measurement data set. Setting focus to one of these flowlines
+    will list all measurement data for that specific flowline in data section 8. Initial
+    selection is the top row in the data section.</span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1161801334" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{98}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1413250680" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{102}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 8</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> lists all available
+    measurement data for the flowline focused in data section 7. The data class associated
+    with the flowline type defines the set of data elements shown. Records are sorted
+    on sample time in a descending order (most recent data on top). The time window
+    (To/from date) for the record listing is defined by the Start date and End date
+    from the selected record in data section 1. Individual data elements can be edited
+    in order to correct possible sporadic spikes on critical signals. Modified records
+    can be saved, but there is no functionality for inserting records. Initial selection
+    is the top row in the data section.</span><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1572641652" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{110}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="71048427" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{114}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 9</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> lists all injection </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">wells </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">participating
+    in the selected injection test measurement data set. Setting focus to one of these </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">wells </span><span
+    class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px;
+    padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-variant-ligatures: none !important; font-size: 10.5pt; font-family:
+    Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">will list all
+    measurement data for that specific well in data section 10. Initial selection
+    is the top row in the data section.</span><span class="EOP SCXW210537010" data-ccp-props="{"
+    201341983":0,"335559739":160,"335559740":259}"="" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="1266136168" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{128}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"><span class="NormalTextRun
+    SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; background-color: inherit;"></span></span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="84662649" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{132}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-weight: bold; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">Data section 10</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> lists all available
+    measurement data for the injection wells focused in data section 9. The set of
+    data elements is defined by the data class associated with the well type/injection
+    method for the selected well. Records are sorted on sample time in a descending
+    order (most recent data on top). The time window (To/from date) for the record
+    listing is defined by the Start date and End date from the selected record in
+    data section 1. Individual data elements can be edited in order to correct possible
+    sporadic spikes on critical signals. Modified records can be saved, but there
+    is no functionality for inserting records. Initial selection is the top row in
+    the data section.</span><span class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="1628717689" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{138}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="805870357" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{142}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-weight: bold; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Data
+    section 11</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> lists all </span><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-style: italic; font-size: 10.5pt; font-family: Arial, Arial_MSFontService,
+    sans-serif; line-height: 18.3458px;">well bore intervals</span><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-size: 10.5pt; font-family: Arial,
+    Arial_MSFontService, sans-serif; line-height: 18.3458px;"> participating in the
+    selected injection test measurement data set. Setting focus to one of these well
+    bore intervals s will list all measurement data for that specific well in data
+    section 12. Initial selection is the top row in the data section.</span><span
+    class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="735218442" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{156}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 10.5pt; line-height: 18.3458px; font-family: Arial, Arial_MSFontService,
+    sans-serif;"> </span></p></div><div class="OutlineElement Ltr SCXW210537010" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow: visible; cursor: text; clear: both; position: relative;
+    direction: ltr; font-family: " segoe="" ui",="" "segoe="" ui="" web",="" arial,=""
+    verdana,="" sans-serif;="" font-size:="" 12px;="" background-color:="" rgb(255,=""
+    255,="" 255);"=""><p class="Paragraph SCXW210537010" paraid="838871803" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{160}"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; vertical-align:
+    baseline; background-color: transparent; color: windowtext;"><span class="TextRun
+    SCXW210537010" xml:lang="EN-GB" lang="EN-GB" style="margin: 0px; padding: 0px;
+    user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: none !important; font-weight: bold; font-size: 10.5pt;
+    font-family: Arial, Arial_MSFontService, sans-serif; line-height: 18.3458px;">Data
+    section 12</span><span class="TextRun SCXW210537010" xml:lang="EN-GB" lang="EN-GB"
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 10.5pt; font-family: Arial, Arial_MSFontService, sans-serif; line-height:
+    18.3458px;"> lists all available measurement data for the well bore interval focused
+    in data section 11. The set of data elements is defined by the data class associated
+    with the well bore interval type for the selected well bore interval. The interval
+    type should be set to ‘DIACS’. Records are sorted on sample time in a descending
+    order (most recent data on top). The time window (To/from date) for the record
+    listing is defined by the Start date and End date from the selected record in
+    data section 1. Individual data elements can be edited in order to correct possible
+    sporadic spikes on critical signals. Modified records can be saved, but there
+    is no functionality for inserting records. Initial selection is the top row in
+    the data section.</span><span class="EOP SCXW210537010" data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"=""
+    style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent; font-size: 10.5pt; line-height: 18.3458px;
+    font-family: Arial, Arial_MSFontService, sans-serif;"> </span></p></div><div class="OutlineElement
+    Ltr SCXW210537010" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; overflow: visible; cursor: text;
+    clear: both; position: relative; direction: ltr; font-family: " segoe="" ui",=""
+    "segoe="" ui="" web",="" arial,="" verdana,="" sans-serif;="" font-size:="" 12px;=""
+    background-color:="" rgb(255,="" 255,="" 255);"=""><p class="Paragraph SCXW210537010"
+    paraid="174413046" paraeid="{873a9378-f80d-4760-98b4-a9068fd90173}{166}" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; overflow-wrap: break-word; vertical-align: baseline; background-color:
+    transparent; color: windowtext;"><span class="TextRun SCXW210537010" xml:lang="EN-GB"
+    lang="EN-GB" style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag:
+    none; -webkit-tap-highlight-color: transparent; font-variant-ligatures: none !important;
+    font-size: 11pt; font-family: Calibri, Calibri_MSFontService, sans-serif; line-height:
+    19.425px;"><span class="NormalTextRun SCXW210537010" style="margin: 0px; padding:
+    0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; background-color: inherit;"></span></span><span class="EOP SCXW210537010"
+    data-ccp-props="{" 201341983":0,"335559739":160,"335559740":259}"="" style="margin:
+    0px; padding: 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+    transparent; font-size: 11pt; line-height: 19.425px; font-family: Calibri, Calibri_MSFontService,
+    sans-serif;"> </span></p></div>'
+related: {}

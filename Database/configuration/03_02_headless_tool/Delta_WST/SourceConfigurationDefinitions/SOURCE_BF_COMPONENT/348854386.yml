@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '348854386'
+keys:
+  BF_CODE: CO.0248
+  CLASS_NAME: FCTY_REFERENCE_VALUE
+  COMP_CODE: daytimes
+  T: BF_COMPONENT
+  URL: /daytimes
+parentKeys: {}
+properties:
+  BF_CODE: CO.0248
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/fcty_reference_value' )
+  CLASS_NAME: FCTY_REFERENCE_VALUE
+  COMP_CODE: daytimes
+  NAME: EFF Date
+  SIGNING_REQ_IND: null
+  URL: /daytimes
+related: {}

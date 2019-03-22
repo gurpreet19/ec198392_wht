@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1166722727'
+keys:
+  DATA_ENTITY_CAT: FINANCIAL_DOC
+  T: VISUAL_TRACING_CONFIG
+  TR_AREA: OIL_SANDS
+parentKeys: {}
+properties:
+  DATA_ENTITY_CAT: FINANCIAL_DOC
+  TR_AREA: OIL_SANDS
+  TR_HEADING: Financial Documents
+  TR_SORT_ORDER: 500.0
+related: {}

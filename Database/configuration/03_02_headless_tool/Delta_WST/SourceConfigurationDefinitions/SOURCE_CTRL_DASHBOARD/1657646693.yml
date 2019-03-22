@@ -1,0 +1,15 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1657646693'
+keys:
+  T: CTRL_DASHBOARD
+  WIDGET_CODE: STRM_VALUES
+parentKeys: {}
+properties:
+  CACHE_POLICY: null
+  CATEGORY: PROD
+  DESCRIPTION: Daily Stream Data
+  LABEL: Daily Stream Data
+  NAME: DailyStreamData
+  WIDGET_CLASS: com.ec.frmw.jsf.dashboard.wg.TableWidget
+  WIDGET_CODE: STRM_VALUES
+related: {}

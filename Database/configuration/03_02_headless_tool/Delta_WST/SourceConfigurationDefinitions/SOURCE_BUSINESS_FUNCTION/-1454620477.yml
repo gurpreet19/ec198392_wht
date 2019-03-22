@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1454620477'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM
+parentKeys: {}
+properties:
+  BF_CODE: GD.0155
+  NAME: Daily Pipeline Segment Contracted Nominations
+  PROFILE_CLASS_NAME: PIPELINE_SEGMENT
+  TARGET_CONDITION: null
+  URL: /com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1912915227'
+keys:
+  BF_CODE: SP.0004
+  CLASS_NAME: REPORT_PARAM
+  COMP_CODE: paramValues
+  T: BF_COMPONENT
+  URL: /paramValues
+parentKeys: {}
+properties:
+  BF_CODE: SP.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/TRANSFER' )
+  CLASS_NAME: REPORT_PARAM
+  COMP_CODE: paramValues
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generated Reports (table) > Parameter Values (tab) > Parameter Values (table)
+  SIGNING_REQ_IND: null
+  URL: /paramValues
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1711992189'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_POTENTIAL
+parentKeys: {}
+properties:
+  BF_CODE: PP.0055
+  NAME: Forecast Production Well Potential
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: ISPRODUCEROROTHER in ('Y')
+  URL: /com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_POTENTIAL
+related: {}

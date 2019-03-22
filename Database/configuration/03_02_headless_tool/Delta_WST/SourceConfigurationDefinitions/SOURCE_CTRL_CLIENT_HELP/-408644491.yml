@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-408644491'
+keys:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/manage_calendar_collection
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.revn.cd/manage_calendar_collection
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1966148891'
+keys:
+  BF_CODE: SP.0004
+  CLASS_NAME: null
+  COMP_CODE: tab_publish_report
+  T: BF_COMPONENT
+  URL: /tab_publish_report
+parentKeys: {}
+properties:
+  BF_CODE: SP.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/TRANSFER' )
+  CLASS_NAME: null
+  COMP_CODE: tab_publish_report
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generated Reports (table) > Publish Report (tab)
+  SIGNING_REQ_IND: null
+  URL: /tab_publish_report
+related: {}

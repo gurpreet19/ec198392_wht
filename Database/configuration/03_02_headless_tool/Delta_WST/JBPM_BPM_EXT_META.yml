@@ -1,0 +1,10 @@
+NAME=db_version VERSION=0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1514526316'
+  keys:
+    NAME: db_version
+    T: JBPM_BPM_EXT_META
+    VERSION: 0.0
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

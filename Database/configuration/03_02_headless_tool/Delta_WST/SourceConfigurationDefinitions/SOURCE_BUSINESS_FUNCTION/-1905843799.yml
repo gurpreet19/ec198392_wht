@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1905843799'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N
+parentKeys: {}
+properties:
+  BF_CODE: GD.0154
+  NAME: Period Path Nomination
+  PROFILE_CLASS_NAME: NOMINATION_POINT
+  TARGET_CONDITION: null
+  URL: /com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N
+related: {}

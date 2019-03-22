@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1004858524'
+keys:
+  BF_CODE: CO.0247
+  CLASS_NAME: PLANNED_WELL
+  COMP_CODE: manageObject
+  T: BF_COMPONENT
+  URL: /manageObject
+parentKeys: {}
+properties:
+  BF_CODE: CO.0247
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.co.screens/manage_planned_well' )
+  CLASS_NAME: PLANNED_WELL
+  COMP_CODE: manageObject
+  NAME: Manage Object
+  SIGNING_REQ_IND: null
+  URL: /manageObject
+related: {}

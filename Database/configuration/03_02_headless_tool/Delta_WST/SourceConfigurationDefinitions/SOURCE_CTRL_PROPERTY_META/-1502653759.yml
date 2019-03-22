@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1502653759'
+keys:
+  KEY: DEFERMENT_STATUS_RUNNING
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: NUMBER
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: 1.0
+  DEFAULT_VALUE_STRING: null
+  DESCRIPTION: Customise the default running status of deferment event
+  KEY: DEFERMENT_STATUS_RUNNING
+  LABEL: 'Automatic Deferment Raw Data: Custom Status for Running'
+  LIST_OF_VALUES: null
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-7453681'
+keys:
+  BF_CODE: CD.0024
+  CLASS_NAME: null
+  COMP_CODE: tab2
+  T: BF_COMPONENT
+  URL: /insert
+parentKeys: {}
+properties:
+  BF_CODE: CD.0024
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar' )
+  CLASS_NAME: null
+  COMP_CODE: tab2
+  NAME: New Object
+  SIGNING_REQ_IND: null
+  URL: /insert
+related: {}

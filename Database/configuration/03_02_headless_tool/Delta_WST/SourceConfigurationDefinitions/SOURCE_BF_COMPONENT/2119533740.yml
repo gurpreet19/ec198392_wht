@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2119533740'
+keys:
+  BF_CODE: WR.0084
+  CLASS_NAME: WELL_DAY_ALLOC
+  COMP_CODE: wellAllocatedDataTable
+  T: BF_COMPONENT
+  URL: /wellAllocatedDataTable
+parentKeys: {}
+properties:
+  BF_CODE: WR.0084
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_perforation_interval_data' )
+  CLASS_NAME: WELL_DAY_ALLOC
+  COMP_CODE: wellAllocatedDataTable
+  NAME: WELL ALLOCATED DATA
+  SIGNING_REQ_IND: null
+  URL: /wellAllocatedDataTable
+related: {}

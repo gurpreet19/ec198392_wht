@@ -1,0 +1,72 @@
+EC_BPM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2040183454'
+  keys:
+    CODE: EC_BPM
+    T: APP_SPACE_CNTX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_ECDM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1178745688'
+  keys:
+    CODE: EC_ECDM
+    T: APP_SPACE_CNTX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_FRMW: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1178701193'
+  keys:
+    CODE: EC_FRMW
+    T: APP_SPACE_CNTX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_PROD: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1178403240'
+  keys:
+    CODE: EC_PROD
+    T: APP_SPACE_CNTX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_REVN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1178355924'
+  keys:
+    CODE: EC_REVN
+    T: APP_SPACE_CNTX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_REVN_RRCA: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2137858001'
+  keys:
+    CODE: EC_REVN_RRCA
+    T: APP_SPACE_CNTX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_SALE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1178330296'
+  keys:
+    CODE: EC_SALE
+    T: APP_SPACE_CNTX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_TRAN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1178284500'
+  keys:
+    CODE: EC_TRAN
+    T: APP_SPACE_CNTX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1969779294'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: REPORT_PUBLISHED_PARAM
+  COMP_CODE: access_check_param
+  T: BF_COMPONENT
+  URL: /access_check_param
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: REPORT_PUBLISHED_PARAM
+  COMP_CODE: access_check_param
+  NAME: Navigator (form) > Reports (tab) > Reports (table) > Generated Reports (table) > Publish Report (tab) > Publish Report (table) > Access Check Parameters (table)
+  SIGNING_REQ_IND: null
+  URL: /access_check_param
+related: {}

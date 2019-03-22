@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1857507665'
+keys:
+  BF_CODE: PT.0022
+  CLASS_NAME: ACTIVE_INJ_FLOWLINE
+  COMP_CODE: active_flowline
+  T: BF_COMPONENT
+  URL: /active_flowline
+parentKeys: {}
+properties:
+  BF_CODE: PT.0022
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_stable_periods_summarise' )
+  CLASS_NAME: ACTIVE_INJ_FLOWLINE
+  COMP_CODE: active_flowline
+  NAME: Data Flowline
+  SIGNING_REQ_IND: null
+  URL: /active_flowline
+related: {}

@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '945007095'
+keys:
+  BF_CODE: PT.0021
+  CLASS_NAME: SYSTEM_SETTING
+  COMP_CODE: system_settings
+  T: BF_COMPONENT
+  URL: /system_settings
+parentKeys: {}
+properties:
+  BF_CODE: PT.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/automatic_test_define' )
+  CLASS_NAME: SYSTEM_SETTING
+  COMP_CODE: system_settings
+  NAME: System Settings
+  SIGNING_REQ_IND: null
+  URL: /system_settings
+related: {}

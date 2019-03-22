@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-591343645'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.bpm.ext.legacy.web/jbpm_process_overview
+parentKeys: {}
+properties:
+  BF_CODE: PA.0001
+  NAME: Process Overview Legacy
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.bpm.ext.legacy.web/jbpm_process_overview
+related: {}

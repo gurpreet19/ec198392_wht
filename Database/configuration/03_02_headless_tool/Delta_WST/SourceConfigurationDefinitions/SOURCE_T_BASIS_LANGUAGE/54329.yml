@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '54329'
+keys:
+  LANGUAGE_ID: 7.0
+  T: T_BASIS_LANGUAGE
+parentKeys: {}
+properties:
+  LANGUAGE: DA
+  LANGUAGE_ID: 7.0
+  NAME: Danish
+related: {}

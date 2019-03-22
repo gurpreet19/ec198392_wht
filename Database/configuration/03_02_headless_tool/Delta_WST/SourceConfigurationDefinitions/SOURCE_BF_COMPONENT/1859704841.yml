@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1859704841'
+keys:
+  BF_CODE: PT.0020
+  CLASS_NAME: TDEV_INJ_TEST_EVENT
+  COMP_CODE: tdev_inj_test_event
+  T: BF_COMPONENT
+  URL: /tdev_inj_test_event
+parentKeys: {}
+properties:
+  BF_CODE: PT.0020
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/inj_test_events' )
+  CLASS_NAME: TDEV_INJ_TEST_EVENT
+  COMP_CODE: tdev_inj_test_event
+  NAME: Test Device Injection Test Event
+  SIGNING_REQ_IND: null
+  URL: /tdev_inj_test_event
+related: {}

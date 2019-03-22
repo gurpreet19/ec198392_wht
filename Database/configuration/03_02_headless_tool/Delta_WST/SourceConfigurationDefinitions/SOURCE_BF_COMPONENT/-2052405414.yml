@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2052405414'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: TRANS_DETAIL_FREEUNIT
+  COMP_CODE: lineitemfreeunit
+  T: BF_COMPONENT
+  URL: /lineitemfreeunit
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: TRANS_DETAIL_FREEUNIT
+  COMP_CODE: lineitemfreeunit
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Line Items (tab) > Overview (table) > Free Unit Line Items (tab) > Free Unit Line Items (table)
+  SIGNING_REQ_IND: null
+  URL: /lineitemfreeunit
+related: {}

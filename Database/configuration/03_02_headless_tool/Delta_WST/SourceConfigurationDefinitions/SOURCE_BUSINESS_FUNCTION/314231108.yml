@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '314231108'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.tran.gd.screens/daily_capacity_trades
+parentKeys: {}
+properties:
+  BF_CODE: GD.0156
+  NAME: Daily Capacity Trades
+  PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
+  URL: /com.ec.tran.gd.screens/daily_capacity_trades
+related: {}

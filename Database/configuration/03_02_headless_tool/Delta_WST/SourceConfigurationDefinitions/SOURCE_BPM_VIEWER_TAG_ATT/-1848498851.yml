@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1848498851'
+keys:
+  NAME: text
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__task_exceptional
+parentKeys: {}
+properties:
+  NAME: text
+  TAG: ecbpm__task_exceptional
+  VALUE: Task Error
+related: {}

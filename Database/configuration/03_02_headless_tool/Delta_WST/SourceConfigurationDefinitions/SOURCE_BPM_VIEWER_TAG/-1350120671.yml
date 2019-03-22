@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1350120671'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__task_exceptional
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag on task node instances with status 'Exceptional'
+  TAG: ecbpm__task_exceptional
+related: {}

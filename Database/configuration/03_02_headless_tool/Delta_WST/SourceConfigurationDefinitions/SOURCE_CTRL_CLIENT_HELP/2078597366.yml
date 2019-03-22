@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2078597366'
+keys:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PROD_STREAM_GROUP
+  HELP_TYPE: TEXT
+  T: CTRL_CLIENT_HELP
+parentKeys: {}
+properties:
+  EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PROD_STREAM_GROUP
+  HELP_STR: null
+  HELP_TYPE: TEXT
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1290107528'
+keys:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/insert' AND COMP_CODE ='tab2' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  T: BF_COMPONENT_ACTION
+  URL: /save
+parentKeys: {}
+properties:
+  BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/insert' AND COMP_CODE ='tab2' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+  COMMENTS: null
+  NAME: New Object
+  URL: /save
+related: {}

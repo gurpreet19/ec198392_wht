@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '939926489'
+keys:
+  BF_CODE: PT.0021
+  CLASS_NAME: DT_WELL_TEST_RAW_DATA
+  COMP_CODE: DT_WELL_TEST_RAW_DATA
+  T: BF_COMPONENT
+  URL: 'NULL'
+parentKeys: {}
+properties:
+  BF_CODE: PT.0021
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pt.screens/automatic_test_define' )
+  CLASS_NAME: DT_WELL_TEST_RAW_DATA
+  COMP_CODE: DT_WELL_TEST_RAW_DATA
+  NAME: Data Transfer Class for Automated Production Test
+  SIGNING_REQ_IND: null
+  URL: 'NULL'
+related: {}

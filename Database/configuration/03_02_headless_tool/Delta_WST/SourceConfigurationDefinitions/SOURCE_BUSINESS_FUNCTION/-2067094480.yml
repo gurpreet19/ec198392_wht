@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-2067094480'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_DAY_STATUS
+parentKeys: {}
+properties:
+  BF_CODE: PP.0029
+  NAME: Daily Production Well Forecast
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: ISPRODUCEROROTHER in ('Y')
+  URL: /com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_DAY_STATUS
+related: {}

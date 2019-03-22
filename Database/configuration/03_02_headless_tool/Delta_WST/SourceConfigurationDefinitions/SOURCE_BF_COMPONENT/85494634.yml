@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '85494634'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: CONT_DOCUMENT_CUSTOMER
+  COMP_CODE: BankingDetailsCustomerTable
+  T: BF_COMPONENT
+  URL: /BankingDetailsCustomerTable
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: CONT_DOCUMENT_CUSTOMER
+  COMP_CODE: BankingDetailsCustomerTable
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Banking Details (tab) > Banking Details Customer Table (table)
+  SIGNING_REQ_IND: null
+  URL: /BankingDetailsCustomerTable
+related: {}

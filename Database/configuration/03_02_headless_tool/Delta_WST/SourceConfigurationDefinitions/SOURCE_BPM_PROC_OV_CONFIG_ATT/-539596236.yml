@@ -1,0 +1,14 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-539596236'
+keys:
+  KEY: '1'
+  NAME: order
+  T: BPM_PROC_OV_CONFIG_ATT
+  TYPE: property_attribute
+parentKeys: {}
+properties:
+  KEY: '1'
+  NAME: order
+  TYPE: property_attribute
+  VALUE: '10'
+related: {}

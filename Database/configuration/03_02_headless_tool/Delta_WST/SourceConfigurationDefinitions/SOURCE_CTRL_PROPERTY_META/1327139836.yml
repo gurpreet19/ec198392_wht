@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1327139836'
+keys:
+  KEY: WELL_TEST_AUTO_GEN
+  T: CTRL_PROPERTY_META
+parentKeys: {}
+properties:
+  CATEGORY: CUST_SETTING
+  DATATYPE: STRING
+  DEFAULT_VALUE_DATE: null
+  DEFAULT_VALUE_NUMBER: null
+  DEFAULT_VALUE_STRING: 'OFF'
+  DESCRIPTION: Choose whether well test events will auto-generate from PT.0021
+  KEY: WELL_TEST_AUTO_GEN
+  LABEL: 'Automated Production Test: Auto-Generate Production Tests'
+  LIST_OF_VALUES: PopupQueryURL=/com.ec.frmw.co.screens/query/ec_code_popup.xml;PopupLayout=/com.ec.frmw.co.screens/layout/ec_code_popup.xml;PopupWhereColumn=CODE_TYPE;PopupWhereValue=WELL_TEST_AUTO_GEN;PopupWhereOperator=;PopupReturnColumn=1;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.CODE
+  REQUIRED: Y
+  VERSION_TYPE: SYSTEM
+related: {}

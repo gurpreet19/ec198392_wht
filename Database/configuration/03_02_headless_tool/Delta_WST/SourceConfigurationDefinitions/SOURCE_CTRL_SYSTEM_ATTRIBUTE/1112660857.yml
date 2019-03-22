@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1112660857'
+keys:
+  ATTRIBUTE_TYPE: ALLOW_SALE_CALC_LOCK_MTH
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: N
+  ATTRIBUTE_TYPE: ALLOW_SALE_CALC_LOCK_MTH
+  ATTRIBUTE_VALUE: null
+  COMMENTS: Indicates whether price calculation is allowed on locked months.
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

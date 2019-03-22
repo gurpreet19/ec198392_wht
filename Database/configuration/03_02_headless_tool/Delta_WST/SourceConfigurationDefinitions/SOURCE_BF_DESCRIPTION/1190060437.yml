@@ -1,0 +1,22 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1190060437'
+keys:
+  BF_DESCRIPTION_NO: WR.0084
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: WR.0084
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/daily_perforation_interval_data' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: "<p>This BF is used to display the allocated numbers for well and its\
+    \ connected perforation interval(s) based on the selected facility after a successful\
+    \ allocation run.</p><p>A successful well allocation run will provide the allocated\
+    \ quantities and the reconciliation factor for the well. The reservoir allocation\
+    \ will then use the well's allocated quantities to calculate the allocated quantities\
+    \ of the connected perforation interval(s).</p>\n\t<p><b>Data section 1:</b> \"\
+    Well Allocated Data\" will display the allocated quantities for the well.</p>\n\
+    \    <p><b>Data section 2:</b> \"Perforation Interval Allocated Data\" will display\
+    \ the allocated quantities for the perforation interval(s) connected to the selected\
+    \ well in data section 1.</p>"
+related: {}

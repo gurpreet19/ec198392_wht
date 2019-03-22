@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1733351368'
+keys:
+  BF_CODE: SP.0051
+  CLASS_NAME: TRANS_DETAIL_CALCULATED
+  COMP_CODE: lineitemcalc
+  T: BF_COMPONENT
+  URL: /lineitemcalc
+parentKeys: {}
+properties:
+  BF_CODE: SP.0051
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
+  CLASS_NAME: TRANS_DETAIL_CALCULATED
+  COMP_CODE: lineitemcalc
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table) > Line Items (tab) > Overview (table) > Calculated Line Items (tab) > Calculated Line Items (table)
+  SIGNING_REQ_IND: null
+  URL: /lineitemcalc
+related: {}

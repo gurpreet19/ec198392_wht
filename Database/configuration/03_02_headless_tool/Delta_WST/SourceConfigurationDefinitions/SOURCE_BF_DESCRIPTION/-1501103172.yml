@@ -1,0 +1,19 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1501103172'
+keys:
+  BF_DESCRIPTION_NO: PO.0128
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0128
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_NGL/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_NGL' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function (BF) is used when daily Natural Gas Liquids (NGL) stream data is available. The BF lists one entry per stream per day, and Energy Components automatically creates new records for each new production day for all NGL streams that are part of the stream set for this screen. This BF creates blank rows for all the measured NGL streams upon instantiation for the selected day.</p>
+    <p>The second data-section lists derived NGL streams. Derived streams are dynamically calculated and are non-editable. The configuration of derived streams is done in the Stream Formula Editor (CO.0081) or by selecting derived volume, mass or energy calculation methods on the Stream. All streams that have GRS_VOL_METHOD=&ldquo;FORMULA&rdquo; or NET_VOL_METHOD=&ldquo;FORMULA&rdquo; will be calculated using the formula configured in the Stream Formula Editor.</p>
+    <p>Mandatory navigator level for Well and Stream screens can be configured in CO.1008 Maintain User Settings.</p>
+    <p> - From category &ldquo;Customer Setting&rdquo;, select setting &ldquo;Custom Mandatory Navigation&rdquo;.</p>
+    <p> - Add respective user role which required custom navigation.</p>
+    <p> - Available custom navigation level to configure are &ldquo;AREA&rdquo;, &ldquo;FCTY_CLASS_1&rdquo;, &ldquo;PRODUCTIONUNIT&rdquo;.</p>
+related: {}

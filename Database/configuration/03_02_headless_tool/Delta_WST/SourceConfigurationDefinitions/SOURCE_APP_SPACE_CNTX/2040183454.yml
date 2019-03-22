@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2040183454'
+keys:
+  CODE: EC_BPM
+  T: APP_SPACE_CNTX
+parentKeys: {}
+properties:
+  CODE: EC_BPM
+  NAME: EC Business Process Management
+  OWNER_CNTX: 0.0
+  SORT_ORDER: 20.0
+related: {}

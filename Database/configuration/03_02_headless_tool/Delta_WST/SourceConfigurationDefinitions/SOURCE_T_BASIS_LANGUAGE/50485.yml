@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '50485'
+keys:
+  LANGUAGE_ID: 3.0
+  T: T_BASIS_LANGUAGE
+parentKeys: {}
+properties:
+  LANGUAGE: NL
+  LANGUAGE_ID: 3.0
+  NAME: Dutch
+related: {}

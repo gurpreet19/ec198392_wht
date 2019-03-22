@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '818653113'
+keys:
+  ATTRIBUTE_TYPE: MAX_SHORT_DAYS
+  DAYTIME: 1900-01-01T00:00:00Z
+  T: CTRL_SYSTEM_ATTRIBUTE
+parentKeys: {}
+properties:
+  ATTRIBUTE_TEXT: null
+  ATTRIBUTE_TYPE: MAX_SHORT_DAYS
+  ATTRIBUTE_VALUE: 1000.0
+  COMMENTS: Number of days before a SHORT deferment event is moved to LONG.
+  DAYTIME: 1900-01-01T00:00:00Z
+  END_DATE: null
+  USER_VISIBLE_IND: null
+related: {}

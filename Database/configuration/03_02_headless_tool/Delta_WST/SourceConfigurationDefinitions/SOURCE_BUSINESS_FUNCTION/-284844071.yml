@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-284844071'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/OBJECT_LIST
+parentKeys: {}
+properties:
+  BF_CODE: CD.0131
+  NAME: Object List
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
+  URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/OBJECT_LIST
+related: {}

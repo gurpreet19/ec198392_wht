@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-665485576'
+keys:
+  BF_DESCRIPTION_NO: GD.0155
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: GD.0155
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>This business function is for the shippers to view the pipeline segment contracted nominations. </p><p>The screen will display the nominated flow of pipeline segments in the first section, and the calculated contracted flow of the pipeline segments based on the contract in the second data section. Data in this screen is used to report unused quantities on pipeline segments.</p><p>Project can create a calculation to populate the calculated flow per pipeline segment in this screen. The screen is read only.</p>
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1171796537'
+keys:
+  DATA_ENTITY_CAT: DATA_EXTRACT
+  T: VISUAL_TRACING_CONFIG
+  TR_AREA: OIL_SANDS
+parentKeys: {}
+properties:
+  DATA_ENTITY_CAT: DATA_EXTRACT
+  TR_AREA: OIL_SANDS
+  TR_HEADING: Data Extract Documents
+  TR_SORT_ORDER: 300.0
+related: {}

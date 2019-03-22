@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-183857318'
+keys:
+  BF_CODE: SP.0006
+  CLASS_NAME: RECIPIENT
+  COMP_CODE: reclist
+  T: BF_COMPONENT
+  URL: /reclist
+parentKeys: {}
+properties:
+  BF_CODE: SP.0006
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/BOOKED' )
+  CLASS_NAME: RECIPIENT
+  COMP_CODE: reclist
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generated Reports (table) > Send Log (tab) > Send Log (table) > Recipients (table)
+  SIGNING_REQ_IND: null
+  URL: /reclist
+related: {}

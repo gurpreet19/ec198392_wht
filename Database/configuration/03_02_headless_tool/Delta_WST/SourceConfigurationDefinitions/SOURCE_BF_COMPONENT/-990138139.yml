@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-990138139'
+keys:
+  BF_CODE: SP.0001
+  CLASS_NAME: REPORT_ADM_PUB
+  COMP_CODE: publish_report
+  T: BF_COMPONENT
+  URL: /publish_report
+parentKeys: {}
+properties:
+  BF_CODE: SP.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_finder' )
+  CLASS_NAME: REPORT_ADM_PUB
+  COMP_CODE: publish_report
+  NAME: Navigator (form) > Documents (table) > Reports (tab) > Generated Reports (table) > Publish Report (tab) > Publish Report (table)
+  SIGNING_REQ_IND: null
+  URL: /publish_report
+related: {}

@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '2653'
+keys:
+  MODULE_CODE: SP
+  T: MODULE_STATUS
+parentKeys: {}
+properties:
+  LOCKED_DATE: null
+  MODULE_CODE: SP
+  MODULE_NAME: Sales and Purchases
+  SORT_ORDER: 3.0
+  STATUS: OPEN
+related: {}

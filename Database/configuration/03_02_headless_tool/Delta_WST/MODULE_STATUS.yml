@@ -1,0 +1,27 @@
+IN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2341'
+  keys:
+    MODULE_CODE: IN
+    T: MODULE_STATUS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+SP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2653'
+  keys:
+    MODULE_CODE: SP
+    T: MODULE_STATUS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+VO: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2745'
+  keys:
+    MODULE_CODE: VO
+    T: MODULE_STATUS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED

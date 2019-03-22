@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1927266564'
+keys:
+  BF_DESCRIPTION_NO: PA.0001
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PA.0001
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.legacy.web/jbpm_process_overview' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: <p>The main purpose of this screen is to provide an overview of all process instances from legacy EC system</p>
+related: {}

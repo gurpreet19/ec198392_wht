@@ -1,0 +1,16 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1514526316'
+keys:
+  NAME: db_version
+  T: JBPM_BPM_EXT_META
+  VERSION: 0.0
+parentKeys: {}
+properties:
+  CREATED_ON: !!oracle.sql.TIMESTAMP
+    bytes: !!binary |-
+      eHcCBAgdEg==
+  NAME: db_version
+  UPDATED_ON: null
+  VALUE: 11.1.0
+  VERSION: 0.0
+related: {}

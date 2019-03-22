@@ -1,0 +1,13 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '1300980954'
+keys:
+  T: BUSINESS_FUNCTION
+  URL: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER
+parentKeys: {}
+properties:
+  BF_CODE: WR.0083
+  NAME: Daily Water Injection Flowline, by Flowline
+  PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: FLOWLINE_TYPE='WI'
+  URL: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER
+related: {}

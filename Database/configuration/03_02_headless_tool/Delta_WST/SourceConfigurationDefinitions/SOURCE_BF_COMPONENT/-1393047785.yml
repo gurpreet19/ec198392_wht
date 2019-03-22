@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1393047785'
+keys:
+  BF_CODE: SP.0003
+  CLASS_NAME: REPORT_PUBLISHED_PARAM
+  COMP_CODE: access_check_param
+  T: BF_COMPONENT
+  URL: /access_check_param
+parentKeys: {}
+properties:
+  BF_CODE: SP.0003
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/VALID2' )
+  CLASS_NAME: REPORT_PUBLISHED_PARAM
+  COMP_CODE: access_check_param
+  NAME: Navigator (form) > Document VALID2 Table (table) > Reports (tab) > Generated Reports (table) > Publish Report (tab) > Publish Report (table) > Access Check Parameters (table)
+  SIGNING_REQ_IND: null
+  URL: /access_check_param
+related: {}

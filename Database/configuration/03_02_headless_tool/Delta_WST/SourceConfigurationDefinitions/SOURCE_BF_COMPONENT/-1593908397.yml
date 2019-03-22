@@ -1,0 +1,18 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1593908397'
+keys:
+  BF_CODE: SP.0004
+  CLASS_NAME: CONT_DOCUMENT
+  COMP_CODE: documents
+  T: BF_COMPONENT
+  URL: /documents
+parentKeys: {}
+properties:
+  BF_CODE: SP.0004
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/document_validation/MODE/TRANSFER' )
+  CLASS_NAME: CONT_DOCUMENT
+  COMP_CODE: documents
+  NAME: Navigator (form) > Document VALID2 Table (table)
+  SIGNING_REQ_IND: null
+  URL: /documents
+related: {}

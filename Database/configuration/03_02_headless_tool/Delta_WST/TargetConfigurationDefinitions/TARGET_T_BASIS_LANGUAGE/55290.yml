@@ -1,0 +1,11 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '55290'
+keys:
+  LANGUAGE_ID: 8.0
+  T: T_BASIS_LANGUAGE
+parentKeys: {}
+properties:
+  LANGUAGE: SE
+  LANGUAGE_ID: 8.0
+  NAME: null
+related: {}

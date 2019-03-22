@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-268689749'
+keys:
+  NAME: text
+  T: BPM_VIEWER_TAG_ATT
+  TAG: ecbpm__node_completed
+parentKeys: {}
+properties:
+  NAME: text
+  TAG: ecbpm__node_completed
+  VALUE: Completed
+related: {}

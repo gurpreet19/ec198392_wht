@@ -1,0 +1,10 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1791805241'
+keys:
+  T: BPM_VIEWER_TAG
+  TAG: ecbpm__task_assigned
+parentKeys: {}
+properties:
+  DESCRIPTION: Default tag on task node instances with status 'Assigned'
+  TAG: ecbpm__task_assigned
+related: {}

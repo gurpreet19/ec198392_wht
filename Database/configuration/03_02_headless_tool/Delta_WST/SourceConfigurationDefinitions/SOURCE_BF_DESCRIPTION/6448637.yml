@@ -1,0 +1,20 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '6448637'
+keys:
+  BF_DESCRIPTION_NO: PO.0129
+  DATA_LEVEL: 0.0
+  T: BF_DESCRIPTION
+parentKeys: {}
+properties:
+  BF_DESCRIPTION_NO: PO.0129
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL' )
+  DATA_LEVEL: 0.0
+  DESCRIPTION: |
+    <p>This Business Function is part of the Business Process to gather and QA monthly NGL stream data. Monthly streams will instantiated the last day of the month.</p>
+
+    <p> The second section lists derived monthly NGL streams. Derived streams are dynamically calculated and are not editable.</p>
+
+    <p>This BF is used when a NGL stream has one monthly reading only. The same stream may also have daily readings, but the daily will then be handled as a separate &lsquo;daily&rsquo; stream.</p>
+
+    <p>Monthly streams can only be included in monthly allocations.</p>
+related: {}

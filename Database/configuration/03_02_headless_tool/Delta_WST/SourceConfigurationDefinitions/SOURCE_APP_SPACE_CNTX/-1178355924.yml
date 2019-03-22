@@ -1,0 +1,12 @@
+!!com.ec.upgrade.ecconfig.model.ConfigurationItemGroup
+fileName: '-1178355924'
+keys:
+  CODE: EC_REVN
+  T: APP_SPACE_CNTX
+parentKeys: {}
+properties:
+  CODE: EC_REVN
+  NAME: EC Revenue
+  OWNER_CNTX: 0.0
+  SORT_ORDER: 60.0
+related: {}

@@ -1,0 +1,76 @@
+!!com.ec.upgrade.schema.dto.TableDTO
+name: JBPM_BPM_PI_EVENT_QUEUE
+cnstPrimaryKey:
+  columns:
+  - ID
+  name: PK_JBPM_BPM_PI_EVENT_QUEUE
+  type: PRIMARYKEY
+  status: UNDEFINED
+columns:
+  CREATED_TIME:
+    columnName: CREATED_TIME
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
+  DATA_JSON:
+    columnName: DATA_JSON
+    typeName: CLOB
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
+  HANDLED_TIME:
+    columnName: HANDLED_TIME
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  ID:
+    columnName: ID
+    typeName: NUMBER(19,0)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
+  NAME:
+    columnName: NAME
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
+  PI_REF_GLOBAL_ID:
+    columnName: PI_REF_GLOBAL_ID
+    typeName: VARCHAR2(255 CHAR)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
+  STATE:
+    columnName: STATE
+    typeName: NUMBER
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+attributes:
+  initialExtent: 65536
+  iniTrans: 1
+  minExtent: 1
+  maxExtent: 2147483645
+  maxTrans: 255
+  nextExtent: 1048576
+  pctFree: 10
+  pctUsed: 0
+  pctIncrease: 0
+status: UNDEFINED
