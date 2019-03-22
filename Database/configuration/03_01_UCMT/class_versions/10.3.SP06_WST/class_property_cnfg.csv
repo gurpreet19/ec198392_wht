@@ -2183,9 +2183,9 @@
 "EQPM_OFF";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";":old.RECORD_STATUS IN ('V','A')";
 "EQPM_OFF";"LABEL";"-100";"/EC";"APPLICATION";"Equipment Downtime";
 "EQPM_OFF";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
-"EQPM_OFF_CHILD";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Equipment Downtime – Equipment In Groups";
+"EQPM_OFF_CHILD";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Equipment Downtime â€“ Equipment In Groups";
 "EQPM_OFF_CHILD";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";":old.RECORD_STATUS IN ('V','A')";
-"EQPM_OFF_CHILD";"LABEL";"-100";"/EC";"APPLICATION";"Equipment Downtime – Equipment In Groups";
+"EQPM_OFF_CHILD";"LABEL";"-100";"/EC";"APPLICATION";"Equipment Downtime â€“ Equipment In Groups";
 "EQPM_OFF_CHILD";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
 "EQPM_POWER_DIST_EQPM";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Power Distribution Equipment";
 "EQPM_POWER_DIST_EQPM";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";":old.RECORD_STATUS IN ('V','A')";
@@ -3063,9 +3063,9 @@
 "IWEL_TOTALIZER_GAS";"LOCK_IND";"-100";"/";"VIEWLAYER";"Y";
 "IWEL_TOTALIZER_GAS";"LOCK_RULE";"-100";"/";"VIEWLAYER";"EcDp_Production_lock.CheckDirectLock";
 "IWEL_TOTALIZER_GAS";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
-"IWEL_TOTALIZER_WAT";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Period Water Injection Well – Totalizer";
+"IWEL_TOTALIZER_WAT";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Period Water Injection Well â€“ Totalizer";
 "IWEL_TOTALIZER_WAT";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";":old.RECORD_STATUS IN ('V','A')";
-"IWEL_TOTALIZER_WAT";"LABEL";"-100";"/EC";"APPLICATION";"Period Water Injection Well – Totalizer";
+"IWEL_TOTALIZER_WAT";"LABEL";"-100";"/EC";"APPLICATION";"Period Water Injection Well â€“ Totalizer";
 "IWEL_TOTALIZER_WAT";"LOCK_IND";"-100";"/";"VIEWLAYER";"Y";
 "IWEL_TOTALIZER_WAT";"LOCK_RULE";"-100";"/";"VIEWLAYER";"EcDp_Production_lock.CheckDirectLock";
 "IWEL_TOTALIZER_WAT";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
@@ -4391,10 +4391,10 @@
 "PWEL_SUB_DAY_STATUS_2";"LOCK_IND";"-100";"/";"VIEWLAYER";"Y";
 "PWEL_SUB_DAY_STATUS_2";"LOCK_RULE";"-100";"/";"VIEWLAYER";"EcDp_Production_lock.CheckDirectLock";
 "PWEL_SUB_DAY_STATUS_2";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
-"PWEL_TOTALIZER_GAS";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Period Gas Production Well – Totalizer";
+"PWEL_TOTALIZER_GAS";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Period Gas Production Well â€“ Totalizer";
 "PWEL_TOTALIZER_GAS";"INCLUDE_IN_VALIDATION";"-100";"/EC";"APPLICATION";"Y";
 "PWEL_TOTALIZER_GAS";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";":old.RECORD_STATUS IN ('V','A')";
-"PWEL_TOTALIZER_GAS";"LABEL";"-100";"/EC";"APPLICATION";"Period Gas Production Well – Totalizer";
+"PWEL_TOTALIZER_GAS";"LABEL";"-100";"/EC";"APPLICATION";"Period Gas Production Well â€“ Totalizer";
 "PWEL_TOTALIZER_GAS";"LOCK_IND";"-100";"/";"VIEWLAYER";"Y";
 "PWEL_TOTALIZER_GAS";"LOCK_RULE";"-100";"/";"VIEWLAYER";"EcDp_Production_lock.CheckDirectLock";
 "PWEL_TOTALIZER_GAS";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
@@ -5391,9 +5391,9 @@
 "STOR_DAY_PC_LIFT_ALLOC";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";"TRUE";
 "STOR_DAY_PC_LIFT_ALLOC";"LABEL";"-100";"/EC";"APPLICATION";"Write allocated data per parcel and profit centre for each day";
 "STOR_DAY_PC_LIFT_ALLOC";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
-"STOR_DAY_PLAN_PRTR";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Daily Rundown – Process Train";
+"STOR_DAY_PLAN_PRTR";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Daily Rundown â€“ Process Train";
 "STOR_DAY_PLAN_PRTR";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";"TRUE";
-"STOR_DAY_PLAN_PRTR";"LABEL";"-100";"/EC";"APPLICATION";"Daily Rundown – Process Train";
+"STOR_DAY_PLAN_PRTR";"LABEL";"-100";"/EC";"APPLICATION";"Daily Rundown â€“ Process Train";
 "STOR_DAY_PLAN_PRTR";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
 "STOR_DAY_PLAN_RECEIPT";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Daily Storage Profit Centre Forecast ";
 "STOR_DAY_PLAN_RECEIPT";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";"TRUE";
@@ -5474,9 +5474,9 @@
 "STOR_SUB_DAY_OFFICIAL";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";"TRUE";
 "STOR_SUB_DAY_OFFICIAL";"LABEL";"-100";"/EC";"APPLICATION";"Official sub day storage increase/decrease";
 "STOR_SUB_DAY_OFFICIAL";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
-"STOR_SUB_DAY_PLAN_PRTR";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Sub Daily Rundown – Process Train";
+"STOR_SUB_DAY_PLAN_PRTR";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Sub Daily Rundown â€“ Process Train";
 "STOR_SUB_DAY_PLAN_PRTR";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";"TRUE";
-"STOR_SUB_DAY_PLAN_PRTR";"LABEL";"-100";"/EC";"APPLICATION";"Sub Daily Rundown – Process Train";
+"STOR_SUB_DAY_PLAN_PRTR";"LABEL";"-100";"/EC";"APPLICATION";"Sub Daily Rundown â€“ Process Train";
 "STOR_SUB_DAY_PLAN_PRTR";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
 "STREAM";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Stream";
 "STREAM";"INCLUDE_IN_VALIDATION";"-100";"/EC";"APPLICATION";"Y";
@@ -7414,9 +7414,9 @@
 "WELL_EQPM_LOW_BY_WELL";"LOCK_IND";"-100";"/";"VIEWLAYER";"Y";
 "WELL_EQPM_LOW_BY_WELL";"LOCK_RULE";"-100";"/";"VIEWLAYER";"EcBp_Well_Eqpm_Deferment.chkDowntimeConstraintLock";
 "WELL_EQPM_LOW_BY_WELL";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
-"WELL_EQPM_LOW_CHILD";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Class to store data on Well Equipment Downtime – Well In Groups";
+"WELL_EQPM_LOW_CHILD";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Class to store data on Well Equipment Downtime â€“ Well In Groups";
 "WELL_EQPM_LOW_CHILD";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";":old.RECORD_STATUS IN ('V','A')";
-"WELL_EQPM_LOW_CHILD";"LABEL";"-100";"/EC";"APPLICATION";"Well Equipment Downtime – Well In Groups";
+"WELL_EQPM_LOW_CHILD";"LABEL";"-100";"/EC";"APPLICATION";"Well Equipment Downtime â€“ Well In Groups";
 "WELL_EQPM_LOW_CHILD";"LOCK_IND";"-100";"/";"VIEWLAYER";"Y";
 "WELL_EQPM_LOW_CHILD";"LOCK_RULE";"-100";"/";"VIEWLAYER";"EcBp_Well_Eqpm_Deferment.chkDowntimeConstraintLock";
 "WELL_EQPM_LOW_CHILD";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
@@ -7439,9 +7439,9 @@
 "WELL_EQPM_OFF_BY_WELL";"LOCK_IND";"-100";"/";"VIEWLAYER";"Y";
 "WELL_EQPM_OFF_BY_WELL";"LOCK_RULE";"-100";"/";"VIEWLAYER";"EcBp_Well_Eqpm_Deferment.chkDowntimeConstraintLock";
 "WELL_EQPM_OFF_BY_WELL";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
-"WELL_EQPM_OFF_CHILD";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Well Equipment Constraints – Well In Groups";
+"WELL_EQPM_OFF_CHILD";"DESCRIPTION";"-100";"/EC";"APPLICATION";"Well Equipment Constraints â€“ Well In Groups";
 "WELL_EQPM_OFF_CHILD";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";":old.RECORD_STATUS IN ('V','A')";
-"WELL_EQPM_OFF_CHILD";"LABEL";"-100";"/EC";"APPLICATION";"Well Equipment Constraints – Well In Groups";
+"WELL_EQPM_OFF_CHILD";"LABEL";"-100";"/EC";"APPLICATION";"Well Equipment Constraints â€“ Well In Groups";
 "WELL_EQPM_OFF_CHILD";"LOCK_IND";"-100";"/";"VIEWLAYER";"Y";
 "WELL_EQPM_OFF_CHILD";"LOCK_RULE";"-100";"/";"VIEWLAYER";"EcBp_Well_Eqpm_Deferment.chkDowntimeConstraintLock";
 "WELL_EQPM_OFF_CHILD";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
@@ -7636,4 +7636,4 @@
 "WET_GAS_HOURLY_PROFILE";"JOURNAL_RULE_DB_SYNTAX";"-100";"/";"VIEWLAYER";"TRUE";
 "WET_GAS_HOURLY_PROFILE";"LABEL";"-100";"/EC";"APPLICATION";"Wet Gas Hourly Profile";
 "WET_GAS_HOURLY_PROFILE";"SKIP_TRG_CHECK_IND";"-100";"/";"VIEWLAYER";"N";
-Elapsed: 00:00:06.98
+Elapsed: 00:00:03.41

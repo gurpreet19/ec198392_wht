@@ -6570,4 +6570,4 @@
 "WELL_HOOKUP";"WELL";"OP_WELL_HOOKUP";"PopupURL";"-100";"/EC";"STATIC_PRESENTATION";"/FrontController/com.ec.frmw.co.screens/object_popup?CLASS_NAME=WELL_HOOKUP";
 "WELL_HOOKUP";"WELL";"OP_WELL_HOOKUP";"PopupWidth";"-100";"/EC";"STATIC_PRESENTATION";"250";
 "WELL_HOOKUP";"WELL";"OP_WELL_HOOKUP";"viewwidth";"-100";"/EC";"STATIC_PRESENTATION";"120";
-Elapsed: 00:00:08.11
+Elapsed: 00:00:03.46
