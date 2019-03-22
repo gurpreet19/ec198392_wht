@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.3024
   NAME: Price Rate
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_navmodel_nav/CLASS_NAME/PRICE_RATE/NAVMODEL/SALE_PR/TARGET/PRICE_RATE
 related: {}

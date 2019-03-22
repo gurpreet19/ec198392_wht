@@ -16,7 +16,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '117'
+    sequence: !!float '123'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -24,7 +24,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '118'
+    sequence: !!float '124'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -32,7 +32,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '119'
+    sequence: !!float '125'
   AVG_CONF_FAC:
     columnName: AVG_CONF_FAC
     typeName: NUMBER
@@ -136,7 +136,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '111'
+    sequence: !!float '117'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -144,7 +144,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '112'
+    sequence: !!float '118'
   DAYTIME:
     columnName: DAYTIME
     typeName: DATE
@@ -176,7 +176,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '121'
+    sequence: !!float '127'
   EGM_IND:
     columnName: EGM_IND
     typeName: VARCHAR2(1)
@@ -344,7 +344,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '113'
+    sequence: !!float '119'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -352,7 +352,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '114'
+    sequence: !!float '120'
   METER_FACTOR_OVERRIDE:
     columnName: METER_FACTOR_OVERRIDE
     typeName: NUMBER
@@ -472,7 +472,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '110'
+    sequence: !!float '116'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -480,7 +480,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '120'
+    sequence: !!float '126'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -488,7 +488,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '115'
+    sequence: !!float '121'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -496,7 +496,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '116'
+    sequence: !!float '122'
   RUN_SIZE:
     columnName: RUN_SIZE
     typeName: NUMBER
@@ -593,6 +593,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '106'
+  TEXT_10:
+    columnName: TEXT_10
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '115'
   TEXT_2:
     columnName: TEXT_2
     typeName: VARCHAR2(32)
@@ -617,6 +625,46 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '109'
+  TEXT_5:
+    columnName: TEXT_5
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '110'
+  TEXT_6:
+    columnName: TEXT_6
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '111'
+  TEXT_7:
+    columnName: TEXT_7
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '112'
+  TEXT_8:
+    columnName: TEXT_8
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '113'
+  TEXT_9:
+    columnName: TEXT_9
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '114'
   THEOR_GRS_MASS:
     columnName: THEOR_GRS_MASS
     typeName: NUMBER

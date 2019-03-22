@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0102
   NAME: Stream Item Network Editor
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/stream_node_diagram
 related: {}

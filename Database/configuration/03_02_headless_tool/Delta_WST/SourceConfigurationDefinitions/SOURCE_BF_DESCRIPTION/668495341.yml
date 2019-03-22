@@ -9,18 +9,19 @@ properties:
   BF_DESCRIPTION_NO: CD.0093
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/FIELD_GROUP/FROM_CLASS_NAME/FIELD_GROUP/TO_CLASS_NAME/FIELD_GROUP' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p>    <strong>Field Group Usage screen</strong>    is used to give
-    an overview of the various relations from the Field Group    class to other classes.</p><p>   <u>  This
-    BF is used for adding/deleting Fields to/from Field Groups. </u><br>    FIELD_GROUP:
-    FIELD_GROUP=&gt;FIELD<br>    FIELD_GROUP: FIELD_GROUP=&gt;NODE</p><p>    The screen
-    is divided into these sections:</p><p>    <strong><em>Filter Navigator</em></strong><br>    It
-    lists all the Field Groups valid for the given date.</p><p>    <strong><em>Relations
-    List section:</em></strong><br>    The section lists the various relations for
-    the Field Group class.<br>    It will list 1:N type of relations where the Field
-    Group class is at the    single side. It will also list all the N:M type of relations
-    where the    selected class is either at the N-side or the M-side of the relation.
-    <br> For    each relation in the Relation List the user can see which objects
-    the    selected Field Group has relations to.</p><p>    <strong><em>Relation Details:</em></strong><br>    The
-    section lists the objects that the Field Group class has relation to for the    relation
-    selected in the Relations List section.</p>'
+  DESCRIPTION: '<p><strong>Field Group Usage screen</strong> is used to give an overview
+    of the various relations from the Field Group class to other classes.</p><p><u>
+    This BF is used for adding/deleting Fields to/from Field Groups. </u></p><p>FIELD_GROUP:
+    FIELD_GROUP=&gt;FIELD<br> FIELD_GROUP: FIELD_GROUP=&gt;NODE</br></p><p>The screen
+    is divided into these sections:</p>  <p> <strong style="color: rgb(0, 102, 204);">Navigator</strong></p><p>
+    It lists all the Field Groups valid for the given date.</p>  <p><strong style="color:
+    rgb(0, 102, 204);">Relations List Section</strong>  </p>  <p> The section lists
+    the various relations for the Field Group class.<br> It will list 1:N type of
+    relations where the Field Group class is at the single side. It will also list
+    all the N:M type of relations where the selected class is either at the N-side
+    or the M-side of the relation. <br> For each relation in the Relation List the
+    user can see which objects the selected Field Group has relations to.</p><p><strong
+    style="color: rgb(0, 102, 204);">Relation Details Section</strong></p><p> The
+    section lists the objects that the Field Group class has relation to for the relation
+    selected in the Relations List section.'
 related: {}

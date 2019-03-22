@@ -29,8 +29,11 @@ CREATE OR REPLACE PACKAGE EcDp_Forecast_Prod IS
 ** 14-10-16   kashisag  ECPD-34301: Added procedure deleteComparison to delete Forecast defined Scenario Comparison records
 ** 26-10-16   kashisag  ECPD-34301: Added procedure to update end_date for comparison code
 ** 26-10-16   kashisag  ECPD-34301: Added procedure to update daytime for comparison code
+** 26-07-18   kashisag  ECPD-56795: t_forecast_id strong type casting
+** 17.10.18   abdulmaw  ECPD-58328: removed t_forecast_id and place it in config create_types file
+** 17.12.18   abdulmaw  ECPD-62507: fix naming convention
 ********************************************************************/
-TYPE t_forecast_id IS TABLE OF VARCHAR2(32);
+
 
 PROCEDURE createForecast(p_from_forecast_id VARCHAR2,
 						 p_period_type VARCHAR2,
@@ -155,15 +158,16 @@ PROCEDURE copyScenarioToScenario(
    p_opt_start_date     DATE,
    p_opt_end_date       DATE);
 
+-- t_prodfcst_id created in config/create_types.sql to avoid implicit type due to PIPELINED oracle bug
 FUNCTION navForecastGroupFilter(
                 p_group_type VARCHAR2,
                 object_id_1 VARCHAR2,
-				object_id_2 VARCHAR2 DEFAULT NULL,
-				object_id_3 VARCHAR2 DEFAULT NULL,
-				object_id_4 VARCHAR2 DEFAULT NULL,
-				object_id_5 VARCHAR2 DEFAULT NULL,
-				object_id_6 VARCHAR2 DEFAULT NULL)
-RETURN t_forecast_id PIPELINED;
+                object_id_2 VARCHAR2 DEFAULT NULL,
+                object_id_3 VARCHAR2 DEFAULT NULL,
+                object_id_4 VARCHAR2 DEFAULT NULL,
+                object_id_5 VARCHAR2 DEFAULT NULL,
+                object_id_6 VARCHAR2 DEFAULT NULL)
+RETURN t_prodfcst_id PIPELINED;
 
 PROCEDURE  deleteForecast(p_forecast_id VARCHAR2
                           );

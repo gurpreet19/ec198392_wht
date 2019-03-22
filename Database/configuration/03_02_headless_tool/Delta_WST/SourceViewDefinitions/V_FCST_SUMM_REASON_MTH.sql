@@ -1,4 +1,4 @@
-CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_FCST_SUMM_REASON_MTH" ("REASON_CODE_1", "MONTH", "FORECAST_ID", "OBJECT_ID", "OIL_LOSS_VOLUME", "GAS_LOSS_VOLUME", "COND_LOSS_VOLUME", "WATER_LOSS_VOLUME", "WATER_INJ_LOSS_VOLUME", "STEAM_INJ_LOSS_VOLUME", "GAS_INJ_LOSS_VOLUME", "DILUENT_LOSS_VOLUME", "GAS_LIFT_LOSS_VOLUME", "CO2_INJ_LOSS_VOLUME", "RECORD_STATUS", "CREATED_BY", "CREATED_DATE", "LAST_UPDATED_BY", "LAST_UPDATED_DATE", "REV_NO", "REV_TEXT") AS 
+CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_FCST_SUMM_REASON_MTH" ("REASON_CODE_1", "MONTH", "FORECAST_ID", "SCENARIO_ID", "OIL_LOSS_VOLUME", "GAS_LOSS_VOLUME", "COND_LOSS_VOLUME", "WATER_LOSS_VOLUME", "WATER_INJ_LOSS_VOLUME", "STEAM_INJ_LOSS_VOLUME", "GAS_INJ_LOSS_VOLUME", "DILUENT_LOSS_VOLUME", "GAS_LIFT_LOSS_VOLUME", "CO2_INJ_LOSS_VOLUME", "RECORD_STATUS", "CREATED_BY", "CREATED_DATE", "LAST_UPDATED_BY", "LAST_UPDATED_DATE", "REV_NO", "REV_TEXT") AS 
   (
 ----------------------------------------------------------------------------------------------------
 -- File name: v_fcst_summ_reason_mth.sql
@@ -17,11 +17,12 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_FCST_SUMM_REASON_MTH" ("REASON_CODE_
 -- 13.09.2016 jainnraj   ECPD-37327:Removed grouping from transformer and Added groups in view
 -- 22.09.2016 jainnraj   ECPD-37327:Removed ec_prosty_codes WELL_DT_REASON_CODE
 -- 23.09.2016 jainnraj   ECPD-39068:Added support for C02
+-- 25.07.2018 kashisag   ECPD-56795:Updated OBJECT_ID with SCENARIO_ID
 ----------------------------------------------------------------------------------------------------
 SELECT we.reason_code_1  AS REASON_CODE_1,
        TRUNC(wec.daytime, 'month') AS MONTH,
        we.forecast_id,
-       we.object_id,
+       we.SCENARIO_ID,
        SUM(wec.deferred_net_oil_vol) AS OIL_LOSS_VOLUME,
        SUM(wec.deferred_gas_vol) AS GAS_LOSS_VOLUME,
        SUM(wec.deferred_cond_vol) AS COND_LOSS_VOLUME,
@@ -48,5 +49,5 @@ AND    we.event_no=wec.event_no
 GROUP BY we.reason_code_1,
 		TRUNC(wec.daytime, 'MONTH'),
 		we.forecast_id,
-		we.object_id
+		we.SCENARIO_ID
 )

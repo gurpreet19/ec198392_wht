@@ -595,17 +595,13 @@ BEGIN
    FOR curClass IN c_class LOOP
       lv2_table_name := LOWER(curClass.db_object_name);
    END LOOP;
-   -- 1) use daytime (sub day resolution may be available on object version) if available
+   -- 1) use "owner join date column" if available
 
-   lv2_join_daytime := EcDp_ClassMeta.GetClassAttrDbSqlSyntax(p_class_name,'DAYTIME');
+   lv2_join_daytime := EcDp_Objects_Check.getOwnerJoinStartDateColumn(p_class_name);
 
    IF  lv2_join_daytime IS NOT NULL THEN
 
-     IF NOT Ecdp_ClassMeta.isfunction(p_class_name, 'DAYTIME' ) THEN   -- Add table prefix
-
-        lv2_join_daytime := lv2_table_name ||'.'||lv2_join_daytime;
-
-     END IF;
+     lv2_join_daytime := lv2_table_name ||'.'||lv2_join_daytime;
 
    ELSE  --step 2-5
 
@@ -2202,6 +2198,7 @@ lb_use_object_id        BOOLEAN;
 lv2_ue_user_function    VARCHAR2(1);
 lv2_time_scope_code     class_cnfg.TIME_SCOPE_CODE%TYPE;
 lv2_time_scope_cond     VARCHAR2(1000);
+lv2_daytime_join_column VARCHAR2(30);
 lv2_trunc_format        VARCHAR2(32);
 lv2_access_control_predicate VARCHAR2(2000);
 BEGIN
@@ -2266,7 +2263,6 @@ BEGIN
          END IF;
 
       END IF;
-
    END LOOP; -- Attributes
 
    FOR ClassesRel IN EcDp_ClassMeta.c_classes_rel(p_class_name) LOOP
@@ -2343,8 +2339,10 @@ BEGIN
       END IF;
 
       IF lv2_trunc_format IS NULL THEN
-         lv2_time_scope_cond := lv2_time_scope_cond||lv2_table_name||'.daytime >= oa.daytime';
-         lv2_time_scope_cond := lv2_time_scope_cond||' AND (oa.end_date is NULL OR '||lv2_table_name||'.daytime < oa.end_date)';
+         lv2_daytime_join_column := EcDp_Objects_Check.getOwnerJoinStartDateColumn(p_class_name);
+
+         lv2_time_scope_cond := lv2_time_scope_cond||lv2_table_name||'.'||lv2_daytime_join_column||' >= oa.daytime';
+         lv2_time_scope_cond := lv2_time_scope_cond||' AND (oa.end_date is NULL OR '||lv2_table_name||'.'||lv2_daytime_join_column||' < oa.end_date)';
       ELSE
          lv2_time_scope_cond := lv2_time_scope_cond||lv2_table_name||'.daytime >= TRUNC(oa.daytime,'||lv2_trunc_format||')';
          lv2_time_scope_cond := lv2_time_scope_cond||' AND oa.daytime = (';
@@ -2426,6 +2424,7 @@ lv2_ue_user_function      VARCHAR2(1);
 lv2_time_scope_code     class_cnfg.TIME_SCOPE_CODE%TYPE;
 lv2_time_scope_cond     VARCHAR2(1000);
 lv2_trunc_format        VARCHAR2(32);
+lv2_ownerjoin_startdate_column VARCHAR2(30);
 BEGIN
    lv2_owner_class := EcDP_ClassMeta.OwnerClassName(p_class_name);
    lv2_time_scope_code := ec_class_cnfg.time_scope_code(p_class_name);
@@ -2583,8 +2582,10 @@ BEGIN
       END IF;
 
       IF lv2_trunc_format IS NULL THEN
-         lv2_time_scope_cond := lv2_time_scope_cond||lv2_table_name||'_JN.daytime >= oa.daytime';
-         lv2_time_scope_cond := lv2_time_scope_cond||' AND (oa.end_date is NULL OR '||lv2_table_name||'_JN.daytime < oa.end_date)';
+         lv2_ownerjoin_startdate_column := EcDp_Objects_Check.getOwnerJoinStartDateColumn(p_class_name);
+
+         lv2_time_scope_cond := lv2_time_scope_cond||lv2_table_name||'_JN.'||lv2_ownerjoin_startdate_column||' >= oa.daytime';
+         lv2_time_scope_cond := lv2_time_scope_cond||' AND (oa.end_date is NULL OR '||lv2_table_name||'_JN.'||lv2_ownerjoin_startdate_column||' < oa.end_date)';
       ELSE
          lv2_time_scope_cond := lv2_time_scope_cond||lv2_table_name||'_JN.daytime >= TRUNC(oa.daytime,'||lv2_trunc_format||')';
          lv2_time_scope_cond := lv2_time_scope_cond||' AND oa.daytime = (';
@@ -4266,6 +4267,16 @@ BEGIN
 
    Ecdp_Dynsql.AddSqlLineNoWrap(body_lines,'   END IF; -- INSERTING OR lb_new_version'||CHR(10)||CHR(10));
 
+
+   Ecdp_Dynsql.AddSqlLineNoWrap(body_lines, q'[
+   IF INSERTING OR UPDATING THEN
+     FOR ci IN 1..vt.COUNT LOOP
+       ecdp_objects.runCascade(']'||p_class_name||q'[', n_object_id, vt(ci).daytime);
+     END LOOP;
+   END IF;
+
+   ]');
+
   IF lb_approval_enabled THEN
      Ecdp_Dynsql.AddSqlLineNoWrap(body_lines,'   IF (lb_datechange or lb_update_main_table) and not lb_update_version_table and n_object_start_date <> n_object_end_date THEN'||CHR(10)||CHR(10));
      Ecdp_Dynsql.AddSqlLineNoWrap(body_lines,'     EcDp_Approval.registerTaskDetail(n_rec_id,'''||p_class_name||''', Nvl(n_last_updated_by, n_created_by));'||CHR(10)||CHR(10));
@@ -4846,7 +4857,7 @@ BEGIN
    END LOOP;
 
    FOR rel IN EcDp_ClassMeta.c_classes_rel(p_class_name) LOOP
-     lv2_code_to_id_fn := 'EC_'||ec_class_cnfg.db_object_name(rel.from_class_name)||'.OBJECT_ID_BY_UK(n_' || rel.role_name || '_CO)';
+     lv2_code_to_id_fn := 'ecdp_objects.GetObjIDFromCode('''||rel.from_class_name||''', n_' || rel.role_name || '_CO)';
 
      Ecdp_Dynsql.AddSqlLineNoWrap(body_lines,'  IF n_' || rel.role_name || '_ID' || ' IS NULL AND n_' || rel.role_name || '_CO' || ' IS NOT NULL THEN' || chr(10));
      Ecdp_Dynsql.AddSqlLineNoWrap(body_lines,'     n_' || rel.role_name || '_ID := ' || lv2_code_to_id_fn || ';' || chr(10));
@@ -6968,6 +6979,13 @@ BEGIN
     CreateGroupings;
 
     Ecdp_Dynsql.WriteTempText('GENCODEINFO', elapsedSince(ts)||' - CreateGroupings...');
+
+    ts := sysdate;
+
+    EcDp_viewlayer_utils.buildObjectRelCascadeView;
+
+    Ecdp_Dynsql.WriteTempText('GENCODEINFO', elapsedSince(ts)||' - EcDp_viewlayer_utils.buildObjectRelCascadeView...');
+
   END IF;
 
   FOR curObj IN c_obj_class LOOP  -- Need to build all headers before bodies

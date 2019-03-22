@@ -20,6 +20,7 @@ CREATE OR REPLACE PACKAGE BODY EcBP_Storage_Lifting IS
 ** 02.11.2005 DN        Function getLiftedValue: Better cursor-select.
 ** 14.01.2012 meisihil  Added function getHourlyLiftedValue
 ** 03.07.2017 asareswi  ECPD-45818: Replaced sysdate with Ecdp_Timestamp.getCurrentSysdate
+** 23.10.2018 asareswi  ECPD-59464: Fixed issue in getHourlyLiftedValue
 ********************************************************************/
 
 
@@ -240,7 +241,7 @@ IS
 	     WHERE parcel_no = cp_parcel_no;
 BEGIN
 	FOR c_cur IN c_noms(p_parcel_no, p_daytime, p_product_meas_no) LOOP
-		IF c_cur.lifting_start_date IS NOT NULL AND c_cur.lifting_end_date IS NOT NULL AND c_cur.meas_qty IS NOT NULL THEN
+		IF c_cur.lifting_start_date IS NOT NULL AND c_cur.lifting_end_date IS NOT NULL AND c_cur.lifting_end_date > c_cur.lifting_start_date AND c_cur.meas_qty IS NOT NULL THEN
 			IF trunc(c_cur.lifting_start_date,'HH') > p_daytime OR c_cur.lifting_end_date <= p_daytime THEN
 				ln_unload := 0;
 			ELSE

@@ -16,8 +16,8 @@ BEGIN
       END IF;
       :new.rev_no := 0;
 
-      EcDp_Timestamp_Utils.syncUtcDate('WELL', :NEW.object_id, :NEW.utc_daytime, :NEW.time_zone, :NEW.daytime, :NEW.summer_time);
-      EcDp_Timestamp_Utils.setProductionDay('WELL', :NEW.object_id, :NEW.utc_daytime, :NEW.day);
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, :NEW.daytime, :NEW.summer_time);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_daytime, :NEW.day);
 
       IF :NEW.active_well_status IS NULL THEN
          :NEW.active_well_status := EcDp_System.getDependentCode('ACTIVE_WELL_STATUS', 'WELL_STATUS', :NEW.well_status);
@@ -39,6 +39,9 @@ BEGIN
       END IF;
 
     ELSE
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime, :OLD.summer_time, :NEW.summer_time);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.day, :NEW.day);
+
       IF Nvl(:new.record_status,'P') = Nvl(:old.record_status,'P') THEN
          IF NOT UPDATING('LAST_UPDATED_BY') THEN
             :new.last_updated_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);

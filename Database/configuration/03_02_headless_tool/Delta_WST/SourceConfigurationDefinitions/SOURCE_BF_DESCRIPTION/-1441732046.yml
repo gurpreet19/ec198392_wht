@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: PP.0031
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/monthly_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_MTH_STATUS' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/monthly_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_MTH_STATUS' )
   DATA_LEVEL: 0.0
   DESCRIPTION: |-
     <p> This business function is used to define available Production Wells Forecast data based on Month and scenario object. A scenario data can be created for a well using insert functionality, as well as existing scenario data can be modified as per requirement. Scenario records that are no longer required can be removed using this screen.</p>

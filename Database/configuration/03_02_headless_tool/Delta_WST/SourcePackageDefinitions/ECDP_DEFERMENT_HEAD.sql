@@ -13,9 +13,9 @@ CREATE OR REPLACE PACKAGE EcDp_Deferment IS
 **
 ** Modification history:
 **
-** Version  Date     	Whom  	 Change description:
+** Version  Date        Whom     Change description:
 ** -------  ----------  -------- --------------------------------------
-**	        24-06-2014	wonggkai ECPD-28018: Create trigger to populate wells
+**	        24-06-2014  wonggkai ECPD-28018: Create trigger to populate wells
 **          24-07-2014  deshpadi ECDP-26044: Create approveWellDeferment function.
 **          24-07-2014  deshpadi ECDP-26044: Create verifyWellDeferment
 **          24-07-2014  deshpadi ECDP-26044: Create setLossRate
@@ -40,10 +40,15 @@ CREATE OR REPLACE PACKAGE EcDp_Deferment IS
 **          18-05-2017  leongwen ECPD-43801: Modified procedures calcDeferments and reCalcDeferments to perform the calculations that the navigation can stop at any level in the navigator.
 **          01.09.2017  dhavaalo ECPD-48425: Modified fun_Constraint_hrs to findConstraintHrs.
 **          12.10.2017  leongwen ECPD-49613: Added procedure verifyDefermentDayEvent and approveDefermentDayEvent
-**          27-10-2017 kashisag ECPD-50026: Modified procedures and functions that are using the condition check with deferment_event table with extra condition to check with class_name is equal to WELL_DEFERMENT , WELL_DEFERMENT_CHILD.
+**          27-10-2017  kashisag ECPD-50026: Modified procedures and functions that are using the condition check with deferment_event table with extra condition to check with class_name is equal to WELL_DEFERMENT , WELL_DEFERMENT_CHILD.
 **          16-01-2018  singishi ECPD-47302: Renamed all instances of table Well_deferment to deferment_event
 **          09-02-2018  leongwen ECPD-52636: Moved procedures changeDefermentDay, deleteDefermentDay and AddRowsAtDefDayTable and function getSumLossMassDefDay from old EcDp_Deferment_Event package to this package.
 **          29-04-2018  leongwen ECPD-55161: Modified updateEndDateForChildEvent and updateStartDateForChildEvent with additional parameters to support deferment recalculation.
+**          19-06-2018  leongwen ECPD-56917: Added procedure reuseOverlappedRecords to insert the overlapped record again to the table temp_well_deferment_alloc for recalculation after deletion or modification on the existing event overlapped with others.
+**          04-09-2018  mehtajig ECPD-36644: Added parameter to reCalcDeferments procedure
+**          05-10-2018  mehtajig ECPD-36644: Removed parameter from reCalcDeferments procedure
+**          21-12-2018  leongwen ECPD-56158: Implement the similar Deferment Calculation Logic from PD.0020 to Forecast Event PP.0047
+**                                           Adjusted the indentation for readability
 *****************************************************************/
 
 TYPE t_object_id                    IS TABLE OF deferment_event.OBJECT_ID%TYPE;
@@ -56,6 +61,16 @@ TYPE t_end_date                     IS TABLE OF deferment_event.END_DATE%TYPE;
 TYPE t_event_type                   IS TABLE OF deferment_event.EVENT_TYPE%TYPE;
 TYPE t_deferment_type               IS TABLE OF deferment_event.DEFERMENT_TYPE%TYPE;
 TYPE t_created_by                   IS TABLE OF deferment_event.CREATED_BY%TYPE;
+
+TYPE t_sourceEventNoforReCalc       IS TABLE OF deferment_event.EVENT_NO%TYPE;
+TYPE t_sourceEventObjectID          IS TABLE OF deferment_event.OBJECT_ID%TYPE;
+TYPE t_sourceEventDaytime           IS TABLE OF deferment_event.DAYTIME%TYPE;
+TYPE t_sourceEventEnd_date          IS TABLE OF deferment_event.END_DATE%TYPE;
+TYPE t_targetEventNoforReCalc       IS TABLE OF deferment_event.EVENT_NO%TYPE;
+TYPE t_targetParentENoforReCalc     IS TABLE OF deferment_event.EVENT_NO%TYPE;
+TYPE t_targetDaytimeforReCalc       IS TABLE OF deferment_event.DAYTIME%TYPE;
+TYPE t_targetEnd_dateforReCalc      IS TABLE OF deferment_event.END_DATE%TYPE;
+
 
 PROCEDURE insertWells(p_group_event_no NUMBER, p_event_type VARCHAR2, p_object_typ VARCHAR2, p_object_id VARCHAR2, p_daytime DATE, p_end_date DATE DEFAULT NULL, p_username VARCHAR2 );
 
@@ -126,5 +141,7 @@ PROCEDURE deleteDefermentDay(p_event_no NUMBER);
 FUNCTION getSumLossMassDefDay(p_attribute VARCHAR2, p_event_no NUMBER) RETURN NUMBER;
 
 PROCEDURE AddRowsAtDefDayTable(p_event_no NUMBER, p_object_id VARCHAR2, p_stDate DATE, p_endDate DATE, p_user VARCHAR2);
+
+PROCEDURE reUseOverlappedRecords(p_event_no NUMBER, p_object_id VARCHAR2, p_daytime DATE, p_end_date DATE DEFAULT NULL, p_object_type VARCHAR2, p_deferment_type VARCHAR2, p_user VARCHAR2, p_last_updated_date DATE);
 
 END  EcDp_Deferment;

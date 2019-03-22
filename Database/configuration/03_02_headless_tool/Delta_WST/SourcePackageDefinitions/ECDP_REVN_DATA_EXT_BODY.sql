@@ -1586,21 +1586,21 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Revn_Data_Ext IS
             dbms_lob.append(p_sql, ' WHERE (' || p_data_filter.version_attribute);
             ConstructColumnList_P(p_sql, lo_key_columns, FALSE, p_data_filter.version_attribute);
 
-            IF p_data_filter.version_rule = lv2_version_rule_earliest THEN
-                dbms_lob.append(p_sql, ') IN (SELECT MIN(' || p_data_filter.version_attribute || ')');
-                ConstructColumnList_P(p_sql, lo_key_columns, FALSE, p_data_filter.version_attribute);
-                dbms_lob.append(p_sql, ' FROM ' || lv2_raw_data_table_name || ' GROUP BY ' || p_data_filter.version_attribute);
-                ConstructColumnList_P(p_sql, lo_key_columns, FALSE, p_data_filter.version_attribute);
 
-                dbms_lob.append(p_sql, ')');
+             IF p_data_filter.version_rule = lv2_version_rule_earliest THEN
+               dbms_lob.append(p_sql, ') IN (SELECT MIN(' || p_data_filter.version_attribute || ')');
+               ConstructColumnList_P(p_sql, lo_key_columns, FALSE, p_data_filter.version_attribute);
+               dbms_lob.append(p_sql, ' FROM ' || lv2_raw_data_table_name || ' GROUP BY ' );
+               ConstructColumnList_P(p_sql, lo_key_columns, TRUE, p_data_filter.version_attribute);
+               dbms_lob.append(p_sql, ')');
 
-            ELSIF p_data_filter.version_rule = lv2_version_rule_latest THEN
-                dbms_lob.append(p_sql, ') IN (SELECT MAX(' || p_data_filter.version_attribute || ')');
-                ConstructColumnList_P(p_sql, lo_key_columns, FALSE, p_data_filter.version_attribute);
-                dbms_lob.append(p_sql, ' FROM ' || lv2_raw_data_table_name || ' GROUP BY ' || p_data_filter.version_attribute);
-                ConstructColumnList_P(p_sql, lo_key_columns, FALSE, p_data_filter.version_attribute);
+             ELSIF p_data_filter.version_rule = lv2_version_rule_latest THEN
+               dbms_lob.append(p_sql, ') IN (SELECT MAX(' || p_data_filter.version_attribute || ')');
+               ConstructColumnList_P(p_sql, lo_key_columns, FALSE, p_data_filter.version_attribute);
+               dbms_lob.append(p_sql, ' FROM ' || lv2_raw_data_table_name || ' GROUP BY ');
+               ConstructColumnList_P(p_sql, lo_key_columns, TRUE, p_data_filter.version_attribute);
+               dbms_lob.append(p_sql, ')');
 
-                dbms_lob.append(p_sql, ')');
 
             ELSIF p_data_filter.version_rule = lv2_version_rule_exists_when THEN
                 BEGIN

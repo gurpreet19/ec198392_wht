@@ -8,5 +8,6 @@ properties:
   BF_CODE: SA.0019.CPY
   NAME: Daily Contract Account Result - Company
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sa.screens/daily_contract_calc_result/BF_PROFILE/SA.0019.CPY/CLASS/SCTR_ACC_DAY_CPY_STATUS
 related: {}

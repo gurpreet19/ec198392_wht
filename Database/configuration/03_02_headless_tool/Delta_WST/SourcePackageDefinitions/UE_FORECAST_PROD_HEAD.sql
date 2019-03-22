@@ -17,6 +17,7 @@ CREATE OR REPLACE PACKAGE Ue_Forecast_Prod IS
 ** 15-07-2016  kashisag    ECPD-36200: Forecast PL-SQL Calculation Changes, Added runPlsqlCalculation
 ** 12-10-16    kashisag    ECPD-34301: Added placeholder procedure for calculating analysis i.e. calculateanalysis
 ** 14-10-16    kashisag    ECPD-34301: Added procedure deleteComparison to delete Forecast defined Scenario Comparison records
+** 26-07-18    kashisag    ECPD-56795: Added user exit for navForecastGroupFilter.
 *****************************************************************/
 
 
@@ -69,5 +70,17 @@ PROCEDURE  calculateAnalysis( p_comparison_id     VARCHAR2,
 
 PROCEDURE  deleteComparison( p_object_id VARCHAR2,
                              p_code_exist OUT VARCHAR2 );
+
+TYPE t_forecast_id IS TABLE OF FORECAST_GROUP.OBJECT_ID%TYPE;
+
+FUNCTION navForecastGroupFilter(p_group_type VARCHAR2,
+                                object_id_1 VARCHAR2,
+                                object_id_2 VARCHAR2 DEFAULT NULL,
+                                object_id_3 VARCHAR2 DEFAULT NULL,
+                                object_id_4 VARCHAR2 DEFAULT NULL,
+                                object_id_5 VARCHAR2 DEFAULT NULL,
+                                object_id_6 VARCHAR2 DEFAULT NULL)
+RETURN t_forecast_id PIPELINED;
+
 
 END Ue_Forecast_Prod;

@@ -470,8 +470,8 @@ cnstForeignKeys:
     deleteAction: NOACTION
     primaryTable: CONT_PAY_TRACKING
     columns:
-      CUSTOMER_ID: CUSTOMER_ID
       DOCUMENT_KEY: DOCUMENT_KEY
+      CUSTOMER_ID: CUSTOMER_ID
     name: FK_CONT_PAY_TRACKING_ITEM_2
     type: FOREIGNKEY
     status: UNDEFINED

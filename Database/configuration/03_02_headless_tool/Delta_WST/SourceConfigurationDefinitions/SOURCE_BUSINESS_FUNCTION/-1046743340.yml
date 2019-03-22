@@ -8,5 +8,6 @@ properties:
   BF_CODE: CP.0063
   NAME: Tab Cargo Menu
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.cp.screens/tab_cargo_menu/CARGO_NAV_CLASS/CARGO_PLANNING_NAVIGATOR/CLASS_CPY_SPLIT/STOR_LIFT_NOM_CPY_SPLIT
 related: {}

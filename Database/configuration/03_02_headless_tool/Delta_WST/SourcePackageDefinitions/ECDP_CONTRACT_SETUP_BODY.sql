@@ -6965,6 +6965,8 @@ IS
    lv2_fin_code              VARCHAR2(32) := ec_contract_version.financial_code(p_object_id, p_daytime, '<=');
 	 ln_level                  NUMBER;
    lb_contract_valid         BOOLEAN := FALSE;
+   lv_message                VARCHAR2(1024);
+   lv_curr_from_to           VARCHAR2(1024);
 
 CURSOR c_trans_pm(cp_document_key VARCHAR2) IS
 SELECT transaction_key, pricing_currency_code, ex_pricing_memo_id, ex_pricing_memo_ts
@@ -7128,7 +7130,19 @@ BEGIN
           SET ex_pricing_memo_date = ld_doc_forex_base_date
           WHERE transaction_key = curr.transaction_key;
 
-         Ecdp_Transaction.UpdSelectedTransExRate(curr.transaction_key, p_user, 'N', 'Y', 'N', 'N', 'N', 'N');
+         BEGIN
+
+         SELECT curr_from_to_pr_to_me
+           INTO lv_curr_from_to
+           FROM DV_FIN_DOC_EX_RATE_MAINTAIN
+          WHERE transaction_key = curr.transaction_key;
+
+        EXCEPTION WHEN OTHERS THEN
+          lv_curr_from_to := NULL;
+
+        END;
+
+        lv_message:= Ecdp_Transaction.UpdSelectedTransExRate(curr.transaction_key, lv_curr_from_to, p_user);
         END LOOP;
 
          --when pricing booking forex date base code = 'DOCUMENT_DATE';
@@ -7147,7 +7161,20 @@ BEGIN
           SET ex_pricing_booking_date = ld_doc_forex_base_date
           WHERE transaction_key = curr.transaction_key;
 
-         Ecdp_Transaction.UpdSelectedTransExRate(curr.transaction_key, p_user, 'Y', 'N', 'N', 'N', 'N', 'N');
+         BEGIN
+
+         SELECT curr_from_to_pr_to_bk
+           INTO lv_curr_from_to
+           FROM DV_FIN_DOC_EX_RATE_MAINTAIN
+          WHERE transaction_key = curr.transaction_key;
+
+        EXCEPTION WHEN OTHERS THEN
+          lv_curr_from_to := NULL;
+
+        END;
+
+         lv_message:= Ecdp_Transaction.UpdSelectedTransExRate(curr.transaction_key, lv_curr_from_to, p_user);
+
         END LOOP;
 
         --when booking local forex date base code = 'DOCUMENT_DATE';
@@ -7166,7 +7193,20 @@ BEGIN
           SET ex_booking_local_date = ld_doc_forex_base_date
           WHERE transaction_key = curr.transaction_key;
 
-         Ecdp_Transaction.UpdSelectedTransExRate(curr.transaction_key, p_user, 'N', 'N', 'Y', 'N', 'N', 'N');
+         BEGIN
+
+         SELECT curr_from_to_bk_to_lc
+           INTO lv_curr_from_to
+           FROM DV_FIN_DOC_EX_RATE_MAINTAIN
+          WHERE transaction_key = curr.transaction_key;
+
+        EXCEPTION WHEN OTHERS THEN
+          lv_curr_from_to := NULL;
+
+        END;
+
+         lv_message:= Ecdp_Transaction.UpdSelectedTransExRate(curr.transaction_key, lv_curr_from_to, p_user);
+
         END LOOP;
 
         --when booking group forex date base code = 'DOCUMENT_DATE';
@@ -7186,7 +7226,20 @@ BEGIN
           WHERE transaction_key = curr.transaction_key;
 
          --update the transaction ex rates
-         Ecdp_Transaction.UpdSelectedTransExRate(curr.transaction_key, p_user, 'N', 'N', 'N', 'Y', 'N', 'N');
+         BEGIN
+
+         SELECT curr_from_to_bk_to_gp
+           INTO lv_curr_from_to
+           FROM DV_FIN_DOC_EX_RATE_MAINTAIN
+          WHERE transaction_key = curr.transaction_key;
+
+        EXCEPTION WHEN OTHERS THEN
+          lv_curr_from_to := NULL;
+
+        END;
+
+         lv_message:= Ecdp_Transaction.UpdSelectedTransExRate(curr.transaction_key, lv_curr_from_to, p_user);
+
         END LOOP;
 
         --when forex date base code = 'DOCUMENT_FOREX_DATE';
@@ -9534,6 +9587,7 @@ END ValidateNewDocSetup;
     END IF;
     END LOOP;
     END IsdateOverlappingOnUpd;
+
 
 ----------------------------------------------------------------------------------------------------------------------------
 

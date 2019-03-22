@@ -23,5 +23,5 @@ properties:
     </p>- Deferred volume is the difference of Planned and Actual volumes.<br/>
              - Assigned Deferment is the calculated value of the deferment event added in Deferment (PD.0020) screen. <br/>
             - Unassigned Deferment is the difference of Deferred and Assigned Deferment values.
-    </p>
+    </p><p>The &ldquo;Deferment Summary&rdquo; section will display the aggregated Planned, Actual, Deferred, Assigned Deferment and Unassigned Deferment volumes for the selected date and asset (Production Unit or Facility, etc) on the navigator.</p><p>For the &ldquo;Unassigned Deferment Comments&rdquo;, navigator selection will have to be done until Facility for adding or updating of records. Data filtering will not be affected by the navigator selection.</p><p>The &ldquo;Deferment Events&rdquo; section is a collapsible section that will display the deferment events (PD.0020-Deferment) along with the entire event loss for the selected date and asset (Production Unit or Facility, etc). This section will only be visible once the deferment losses has been calculated.</p>
 related: {}

@@ -3,7 +3,7 @@ name: JBPM_ATTACHMENT
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008619
+  name: PK_JBPM_ATTACHMENT
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

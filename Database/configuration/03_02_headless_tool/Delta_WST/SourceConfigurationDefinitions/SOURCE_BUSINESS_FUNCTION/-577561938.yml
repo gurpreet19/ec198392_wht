@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.1075
   NAME: Analytics
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /xhtml/pages/app-server-analytics
 related: {}

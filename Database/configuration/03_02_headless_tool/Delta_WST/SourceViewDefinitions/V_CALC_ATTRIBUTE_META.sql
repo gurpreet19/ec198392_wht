@@ -65,15 +65,6 @@ select
    cdm.LAST_UPDATED_DATE,
    cdm.REV_NO,
    cdm.REV_TEXT
-/*
-from calc_object_filter cof, calc_obj_attr_db_mapping cdm, class_attribute ca
-where cof.object_id = cdm.object_id (+)
-and cof.object_type_code = cdm.object_type_code (+)
-and cof.sql_syntax = cdm.sql_syntax (+)
-and cdm.object_type_code is null
-and cof.object_type_code = ca.class_name (+)
-and cof.sql_syntax = ca.attribute_name (+)
-*/
 from ( calc_object_filter cof left join calc_obj_attr_db_mapping cdm
 on (cof.object_id = cdm.object_id
 and cof.object_type_code = cdm.object_type_code

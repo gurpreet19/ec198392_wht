@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/monthly_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_MTH_STATUS?screentemplate=/com.ec.prod.pp.screens/monthly_injection_forecast&TARGETCONDITION=ISINJECTOR in ('Y')
+  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/monthly_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_MTH_STATUS?screentemplate=/com.ec.prod.pp.screens/monthly_injection_forecast
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: PROD_FCST_IWEL_MTH
   COMPONENT_LABEL: Monthly Injection Well Forecast

@@ -5,6 +5,7 @@ keys:
   T: CTRL_MEASUREMENT_TYPE
 parentKeys: {}
 properties:
+  DB_UNIT: null
   DESCRIPTION: Water rate per month
   FORMAT_MASK: '###,###,##0.0'
   MEASUREMENT_TYPE: WATER_RATE_MTH

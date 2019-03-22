@@ -9,5 +9,19 @@ properties:
   BF_DESCRIPTION_NO: IN.0011
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/rate_calculation' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>    <strong>Inventory Rates screen</strong>    is used to show the source rates and quantities by Field and the resultant average Underlift rates/ prices values. The average Underlift rate showed in the    screen is calculated by the calculation routine performed when processing the inventory (Process Inventory). The calculated average rate/price can beoverwritten. Alternatively, the source data can be changed in the inventory set-up. The calculation can then be re-run manually using the    <strong>Process Inventory button</strong> in the Verify Quantities screen.</p><p>    The Overlift average price needs to be entered by the user in case of the Inventory being in Overlift position.</p><p>    <u>The screen is divided into these sections:</u><br>    <strong><em>- Average Underlift / Overlift Rate</em></strong><br>    Shows the average rate for the current position.<br>    <strong><em>- Underlift / Overlift Rates by Field</em></strong><br>    Shows the rate pr. Field for the current position.<br>    <strong><em>- Average Physical Stock Rate</em></strong><br>    Shows the average rate for the Physical Stock.<br>    <strong><em>- Physical Stock Rates by Field</em></strong><br>    Shows the rate pr. Field for the Physical Stock.</p>
+  DESCRIPTION: '<p>    <strong>Inventory Rates screen</strong>    is used to show
+    the source rates and quantities by Field and the resultant average Underlift rates/
+    prices values. The average Underlift rate showed in the screen is calculated by
+    the calculation routine performed when processing the inventory (Process Inventory).
+    The calculated average rate/price can be overwritten. Alternatively, the source
+    data can be changed in the inventory set-up. The calculation can then be re-run
+    manually using the <strong><span style="color: rgb(0, 153, 0);">Process Inventory</span>
+    button</strong> in the Verify Quantities screen.</p><p>    The Overlift average
+    price needs to be entered by the user in case of the Inventory being in Overlift
+    position.</p><p>    <strong><em>Average Underlift / Overlift Rate</em></strong>
+    shows the average rate for the current position.</p><p>    <strong><em>Underlift
+    / Overlift Rates by Field</em></strong> shows the rate per Field for the current
+    position.</p><p>    <strong><em>Average Physical Stock Rate</em></strong> shows
+    the average rate for the Physical Stock.</p><p>    <strong><em>Physical Stock
+    Rates by Field</em></strong> shows the rate per Field for the Physical Stock.</p>'
 related: {}

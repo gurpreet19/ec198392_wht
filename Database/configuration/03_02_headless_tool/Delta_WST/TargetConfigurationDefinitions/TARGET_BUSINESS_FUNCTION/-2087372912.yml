@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0065
   NAME: Other Equipment
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/EQUIPMENT_OTHER/TARGET/EQUIPMENT_OTHER/CLASS_NAME/EQUIPMENT_OTHER
 related: {}

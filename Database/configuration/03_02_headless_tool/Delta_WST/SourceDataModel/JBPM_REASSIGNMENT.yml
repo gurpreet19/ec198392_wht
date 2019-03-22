@@ -3,7 +3,7 @@ name: JBPM_REASSIGNMENT
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008695
+  name: PK_JBPM_REASSIGNMENT
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

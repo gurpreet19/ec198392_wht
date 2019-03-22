@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0096.01
   NAME: Pipeline
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/PIPELINE/CLASS_NAME/PIPELINE
 related: {}

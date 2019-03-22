@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0236
   NAME: Message Group
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_func_area/CLASS_NAME/MESSAGE_GROUP/FUNC_AREA_FK/FUNCTIONAL_AREA_ID
 related: {}

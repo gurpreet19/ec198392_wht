@@ -33,8 +33,9 @@ properties:
     same as the storage of the existing forecast.<p><b><u>Apply button:</u></b><br>To
     copy the forecast data back to the original dataset, click the &quot;Apply&quot;
     button. Existing original dataset will be overridden and potentially deleted.
-    A confirmation message before copying forecast to original can be configure in
-    Maintain System Settings.<p><b><u>Delete button:</u></b><br>Click this button
+    A confirmation message before copying forecast to original can be configured by
+    using the system property &quot;CP Forecast - Copy To Original Conf Message&quot;
+    in Maintain System Settings.<p><b><u>Delete button:</u></b><br>Click this button
     will delete the selected forecast in the forecast list, together with its child
     records.<p><b><u>Overview Tab:</u></b><br>The first data section is the Forecast
     Storage KPI Monitoring. It shows the key performance indicator of the storage
@@ -81,16 +82,20 @@ properties:
     nominations.<p>There is a &quot;Open Entitlement Details&quot; button under the
     schedule lifting chart section. Clicking this button will display the daily entitlements
     of the selected forecast in the forecast list.<p>The second data section will
-    display a Berth Utilisation Gantt Chart. The berth utilisation gantt chart shows
+    display a Berth Utilisation gantt chart. The berth utilisation gantt chart shows
     the loading of the berth on a particular date range. If lifting account is selected
     in the navigator, the berth will be filtered by the selected lifting account.
-    The berth slot gantt chart will show the status (tooltip) on mouseover when the
-    berth slot is available, occupied (Green), or conflict (Red) for a cargo nomination.
-    The chart column can be dragged to adjust the nominated date of a cargo nomination.
-    If save the adjustment will be reflected in the nomination table.<p>If the Sub
-    Daily Data checkbox is selected, the schedule lifting chart and the berth utilisation
-    gantt chart will display a sub daily chart respectively.<p>The third data section
-    is a nomination table displaying nominations based on the date, storage, lifting
+    The tooltip will display the status of the berth slots when mouseover on the chart
+    horizontal bars. The colour of the chart horizontal bars represent these berth
+    slot status in the product:<ul style="list-style-type:disc"><li>Green: Occupied</li>
+    <li>Red: Conflict</li><li>Orange: Restrictions</li><p>The colour of the chart
+    is configurable on the EC Code and additional statuses, or updates to tooltip
+    of the chart horizontal bars, are configurable in an user exit package. The bars
+    can be dragged to adjust the nominated date of a cargo nomination. When saved,
+    the adjustment will be reflected in the nomination table.<p>If the Sub Daily Data
+    checkbox is selected, the schedule lifting chart and the berth utilisation gantt
+    chart will display a sub daily chart respectively.<p>The third data section is
+    a nomination table displaying nominations based on the date, storage, lifting
     account selected in the navigator. When the nominated quantity/date is updated
     the associated account transaction is updated, any changes done to nominated date
     and/or nominated quantity will be reflected in the Schedule Lifting Chart and
@@ -122,7 +127,7 @@ properties:
     to lookup the detail code of an unavailable berth slots, the color which will
     be used for highlighting unavailable berth slots.<p>The function getCalendarDetail
     in the product will only check for existing cargoes. The project will need to
-    implement any planned maintenance in the function (if applicable). <p><b><u>Documents
+    implement any planned maintenance in the function (if applicable).<p><b><u>Documents
     Tab:</u></b><br>The tab will be used to upload documents for the selected forecast.
     The supported file upload formats can be configured by using the system property
     &quot;Forecast Manager Allowed File Extensions&quot; in Maintain System Settings

@@ -12,5 +12,5 @@ properties:
   DESCRIPTION: |-
     <p>This is a Business Function for capturing Quotas and Nominations for a Scenario. This screen is used to enter quotas and nominations for Oil, Condensate and Gas.</p>
     <p>The data in this screen is displayed based on &quot;Valid From&quot; which means that each value is valid until there is a new value entered.</p>
-    <p>The data in this screen can be used for forecast calculations.</p>
+    <p>The data in this screen can be used for forecast calculations.</p><p>The data will be displayed as follows :</p><ol><li>When &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are empty, all records will be displayed.</li><li>When only &ldquo;Filter From&rdquo; value is entered, records that are valid after the selected "Filter From" will be displayed.</li><li>When only &ldquo;Filter To&rdquo; value is entered, records that are valid before the selected "Filter To" will be displayed.</li><li>When both &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are entered, records that are valid after the selected "Filter From" and before the selected "Filter To" will be displayed.</li></ol>
 related: {}

@@ -1,7 +1,8 @@
-CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_CONT_LINE_ITEM_DIST_SUM" ("OBJECT_ID", "DAYTIME", "DIST_ID", "STREAM_ITEM_NAME", "TRANSACTION_KEY", "DOCUMENT_KEY", "SPLIT_SHARE", "SPLIT_SHARE_QTY2", "SPLIT_SHARE_QTY3", "SPLIT_SHARE_QTY4", "ALLOC_STREAM_ITEM_NAME", "SPLIT_VALUE", "REPORT_CATEGORY_CODE", "LINE_ITEM_VALUE", "VALUE_ADJUSTMENT", "CONTRIBUTION_FACTOR", "QTY1", "UOM1_CODE", "QTY2", "UOM2_CODE", "QTY3", "UOM3_CODE", "QTY4", "UOM4_CODE", "NON_ADJUSTED_VALUE", "PRICING_VALUE", "PRICING_VAT_VALUE", "PRICING_CURRENCY_CODE", "BOOKING_VALUE", "BOOKING_VAT_VALUE", "BOOKING_CURRENCY_CODE", "MEMO_VALUE", "MEMO_VAT_VALUE", "MEMO_CURRENCY_CODE", "PRICE_CONCEPT_CODE", "PRICE_ELEMENT_CODE", "STIM_VALUE_CATEGORY_CODE", "JV_BILLABLE", "COMMENTS", "STREAM_ITEM_ID", "STREAM_ITEM_CODE", "NODE_ID", "NODE_CODE", "ALLOC_STREAM_ITEM_ID", "ALLOC_STREAM_ITEM_CODE", "FIELD_ID", "FIELD_CODE", "RECORD_STATUS", "CREATED_BY", "CREATED_DATE", "LAST_UPDATED_BY", "LAST_UPDATED_DATE", "REV_NO", "REV_TEXT", "APPROVAL_STATE", "APPROVAL_BY", "APPROVAL_DATE", "REC_ID", "PROFIT_CENTRE_ID") AS 
+CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_CONT_LINE_ITEM_DIST_SUM" ("OBJECT_ID", "DAYTIME", "DIST_ID", "DIST_NAME", "STREAM_ITEM_NAME", "TRANSACTION_KEY", "DOCUMENT_KEY", "SPLIT_SHARE", "SPLIT_SHARE_QTY2", "SPLIT_SHARE_QTY3", "SPLIT_SHARE_QTY4", "ALLOC_STREAM_ITEM_NAME", "SPLIT_VALUE", "REPORT_CATEGORY_CODE", "LINE_ITEM_VALUE", "VALUE_ADJUSTMENT", "CONTRIBUTION_FACTOR", "QTY1", "UOM1_CODE", "QTY2", "UOM2_CODE", "QTY3", "UOM3_CODE", "QTY4", "UOM4_CODE", "NON_ADJUSTED_VALUE", "PRICING_VALUE", "PRICING_VAT_VALUE", "PRICING_CURRENCY_CODE", "BOOKING_VALUE", "BOOKING_VAT_VALUE", "BOOKING_CURRENCY_CODE", "MEMO_VALUE", "MEMO_VAT_VALUE", "MEMO_CURRENCY_CODE", "PRICE_CONCEPT_CODE", "PRICE_ELEMENT_CODE", "STIM_VALUE_CATEGORY_CODE", "JV_BILLABLE", "COMMENTS", "STREAM_ITEM_ID", "STREAM_ITEM_CODE", "NODE_ID", "NODE_CODE", "ALLOC_STREAM_ITEM_ID", "ALLOC_STREAM_ITEM_CODE", "PROFIT_CENTRE_ID", "LINE_ITEM_KEY", "RECORD_STATUS", "CREATED_BY", "CREATED_DATE", "LAST_UPDATED_BY", "LAST_UPDATED_DATE", "REV_NO", "REV_TEXT", "APPROVAL_STATE", "APPROVAL_BY", "APPROVAL_DATE", "REC_ID") AS 
   SELECT ctlid.object_id AS object_id,
        ctlid.daytime AS daytime,
        ctlid.dist_id AS dist_id,
+       ecdp_objects.getobjname(ctlid.dist_id, daytime) dist_name,
        ecdp_objects.getobjname(ctlid.stream_item_id, ctlid.daytime) AS stream_item_name,
        ctlid.transaction_key AS transaction_key,
        ctlid.document_key AS document_key,
@@ -65,8 +66,8 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_CONT_LINE_ITEM_DIST_SUM" ("OBJECT_ID
        ec_node.object_code(ctlid.node_id) AS node_code,
        ctlid.alloc_stream_item_id AS alloc_stream_item_id,
        ec_stream_item.object_code(ctlid.alloc_stream_item_id) AS alloc_stream_item_code,
-       ctlid.dist_id AS field_id,
-       ec_field.object_code(ctlid.dist_id) AS field_code,
+       ctlid.profit_centre_id AS profit_centre_id,
+       ctlid.line_item_key AS line_item_key,
        ctlid.record_status AS record_status,
        ctlid.created_by AS created_by,
        ctlid.created_date AS created_date,
@@ -77,13 +78,17 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_CONT_LINE_ITEM_DIST_SUM" ("OBJECT_ID
        ctlid.approval_state AS approval_state,
        ctlid.approval_by AS approval_by,
        ctlid.approval_date AS approval_date,
-       ctlid.rec_id AS rec_id,
-       ctlid.profit_centre_id as profit_centre_id
+       ctlid.rec_id AS rec_id
   FROM (SELECT *
           FROM cont_line_item_dist c0
          WHERE c0.line_item_key =
-               (SELECT c1.line_item_key
-                  FROM cont_line_item c1
-                 WHERE c1.transaction_key = c0.transaction_key
-                 AND c1.line_item_based_type = DECODE(EcDp_Transaction.GetQtyLICount(c1.transaction_key), 0, c1.line_item_based_type, 'QTY')
-                 AND ROWNUM = 1)) ctlid
+               (SELECT line_item_key FROM
+                   (SELECT c1.line_item_key
+                      FROM cont_line_item c1
+                     WHERE c1.transaction_key = c0.transaction_key
+                       AND c1.line_item_based_type = DECODE(EcDp_Transaction.GetQtyLICount(c1.transaction_key), 0, c1.line_item_based_type, 'QTY')
+                     ORDER BY c1.sort_order
+                   )
+                 WHERE ROWNUM = 1
+               )
+       ) ctlid

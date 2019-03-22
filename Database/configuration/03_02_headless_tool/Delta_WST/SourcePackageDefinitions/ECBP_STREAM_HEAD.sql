@@ -27,6 +27,7 @@ CREATE OR REPLACE PACKAGE EcBp_Stream IS
 ** 27.04.2005  DN        Removed function getRefValue.
 ** 20.09.2007  idrussab   ECPD-6591: removed function getRefQualityStream
 ** 27.01.2012  kumarsur   ECPD-19809: added getRateUom.
+** 23.08.2018  abdulmaw   ECPD-49811: added getUom.
 *****************************************************************/
 
 FUNCTION findRefAnalysisStream (
@@ -69,6 +70,12 @@ FUNCTION getRateUom(p_object_id VARCHAR2,
                           p_rate_type VARCHAR2)
 RETURN VARCHAR2;
 
+
+FUNCTION getUom(
+    p_object_id VARCHAR2,
+    p_daytime  DATE,
+    p_type VARCHAR2 DEFAULT NULL)
+RETURN VARCHAR2;
 --
 
 END;

@@ -8,5 +8,6 @@ properties:
   BF_CODE: TO.0032
   NAME: Tab Harbour Menu
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.to.screens/tab_harbour_menu
 related: {}

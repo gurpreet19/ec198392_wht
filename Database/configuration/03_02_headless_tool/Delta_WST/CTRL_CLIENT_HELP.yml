@@ -560,16 +560,6 @@ EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CUSTOMER HELP_TYP
   properties: {}
   related: {}
   status: ADDED
-EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1082508964'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_RECEIVED_TERM HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '443810263'
   keys:
@@ -854,16 +844,6 @@ EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_DIM_SET HEL
   fileName: '-841386586'
   keys:
     EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_DIM_SET
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INVENTORY HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1294944373'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INVENTORY
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -1417,6 +1397,16 @@ EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DISPOSITION_T
   properties: {}
   related: {}
   status: ADDED
+EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_DATE_TERM HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-886776312'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_DATE_TERM
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FUNCTIONAL_AREA HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-310702763'
   keys:
@@ -1507,6 +1497,16 @@ EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCTIONUNI
   properties: {}
   related: {}
   status: ADDED
+EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PROD_STREAM_GROUP HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2078597366'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PROD_STREAM_GROUP
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/REGION HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-791224206'
   keys:
@@ -1571,6 +1571,36 @@ EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STATE_LEASE H
   fileName: '2115645778'
   keys:
     EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STATE_LEASE
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INVENTORY HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1402595623'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INVENTORY
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INV_TMPL_SET HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '396590601'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INV_TMPL_SET
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/UNIT_AGR HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-407099115'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/UNIT_AGR
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -2084,6 +2114,16 @@ EC_CLIENT_OBJ=/com.ec.prod.co.screens/facility_analysis_items HELP_TYPE=TEXT: !!
   properties: {}
   related: {}
   status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.co.screens/fcty_reference_value HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-787705550'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.co.screens/fcty_reference_value
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 EC_CLIENT_OBJ=/com.ec.prod.co.screens/manage_equipment HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1489676098'
   keys:
@@ -2108,6 +2148,16 @@ EC_CLIENT_OBJ=/com.ec.prod.co.screens/well_seasonal_value HELP_TYPE=TEXT: !!com.
   fileName: '445729473'
   keys:
     EC_CLIENT_OBJ: /com.ec.prod.co.screens/well_seasonal_value
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.ha.screens/daily_data_status_process_facility HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1771908782'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.ha.screens/daily_data_status_process_facility
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -2369,11 +2419,32 @@ EC_CLIENT_OBJ=/com.ec.prod.po.screens/daily_stream_data_mth_nav/CLASS_NAME/STRM_
   properties: {}
   related: {}
   status: ADDED
+? EC_CLIENT_OBJ=/com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_NGL/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_NGL HELP_TYPE=TEXT
+: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-836694525'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_NGL/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_NGL
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ? EC_CLIENT_OBJ=/com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_STM/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_STM HELP_TYPE=TEXT
 : !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '594022993'
   keys:
     EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_STM/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_STM
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1317476925'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -2394,6 +2465,16 @@ EC_CLIENT_OBJ=/com.ec.prod.po.screens/daily_test_device_status HELP_TYPE=TEXT: !
   fileName: '1072310929'
   keys:
     EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_test_device_status
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.po.screens/daily_water_overboard_status_by_stream HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1918043633'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.po.screens/daily_water_overboard_status_by_stream
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -2454,6 +2535,17 @@ EC_CLIENT_OBJ=/com.ec.prod.po.screens/monthly_fcty_balancing_adj HELP_TYPE=TEXT:
   fileName: '-101341553'
   keys:
     EC_CLIENT_OBJ: /com.ec.prod.po.screens/monthly_fcty_balancing_adj
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+? EC_CLIENT_OBJ=/com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL HELP_TYPE=TEXT
+: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1469306201'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -3206,10 +3298,60 @@ EC_CLIENT_OBJ=/com.ec.prod.pp.screens/prod_unit_forecast/DATA_CLASS/PROD_PRODUNI
   properties: {}
   related: {}
   status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.pt.screens/automatic_test_define HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '437673894'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.pt.screens/automatic_test_define
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 EC_CLIENT_OBJ=/com.ec.prod.pt.screens/flowline_performance_curve HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1078710375'
   keys:
     EC_CLIENT_OBJ: /com.ec.prod.pt.screens/flowline_performance_curve
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.pt.screens/inj_test_define HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1745189804'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.pt.screens/inj_test_define
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.pt.screens/inj_test_events HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '427953294'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.pt.screens/inj_test_events
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.pt.screens/inj_test_result HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1461239050'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.pt.screens/inj_test_result
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.pt.screens/inj_test_stable_periods_summarise HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '143632240'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.pt.screens/inj_test_stable_periods_summarise
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -3230,6 +3372,46 @@ EC_CLIENT_OBJ=/com.ec.prod.pt.screens/well_performance_curve HELP_TYPE=TEXT: !!c
   fileName: '-646014149'
   keys:
     EC_CLIENT_OBJ: /com.ec.prod.pt.screens/well_performance_curve
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_GAS HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-169801859'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_GAS
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '176695423'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/PFLW_DAY_STATUS HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1147881616'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/PFLW_DAY_STATUS
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.prod.wr.screens/daily_perforation_interval_data HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-607327237'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.prod.wr.screens/daily_perforation_interval_data
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -3766,10 +3948,10 @@ EC_CLIENT_OBJ=/com.ec.revn.cd/manage_calendar HELP_TYPE=TEXT: !!com.ec.upgrade.e
   properties: {}
   related: {}
   status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1585859970'
+EC_CLIENT_OBJ=/com.ec.revn.cd/manage_calendar_collection HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-408644491'
   keys:
-    EC_CLIENT_OBJ: /com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION
+    EC_CLIENT_OBJ: /com.ec.revn.cd/manage_calendar_collection
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -4296,50 +4478,30 @@ EC_CLIENT_OBJ=/com.ec.revn.fc/fcst_value_by_field/FUNCTIONAL_AREA_CODE/QUANTITY_
   properties: {}
   related: {}
   status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.fi/calculation_group HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '3844063'
+EC_CLIENT_OBJ=/com.ec.revn.fi/fin_item_calc/TIME_SPAN/DAY HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-851938431'
   keys:
-    EC_CLIENT_OBJ: /com.ec.revn.fi/calculation_group
+    EC_CLIENT_OBJ: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/DAY
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.fi/calculation_group_context HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '404734063'
+EC_CLIENT_OBJ=/com.ec.revn.fi/fin_item_calc/TIME_SPAN/MTH HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1203428132'
   keys:
-    EC_CLIENT_OBJ: /com.ec.revn.fi/calculation_group_context
+    EC_CLIENT_OBJ: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/MTH
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.fi/fin_item_calc_daily HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1773231105'
+EC_CLIENT_OBJ=/com.ec.revn.fi/fin_item_calc/TIME_SPAN/YR HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1280693518'
   keys:
-    EC_CLIENT_OBJ: /com.ec.revn.fi/fin_item_calc_daily
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.fi/fin_item_calc_mth HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '990436217'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.fi/fin_item_calc_mth
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.fi/fin_item_calc_yearly HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-984332512'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.fi/fin_item_calc_yearly
+    EC_CLIENT_OBJ: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/YR
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -4732,16 +4894,6 @@ EC_CLIENT_OBJ=/com.ec.revn.rty/rty_recon HELP_TYPE=TEXT: !!com.ec.upgrade.ecconf
   properties: {}
   related: {}
   status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.sp/banking_details HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '2137036517'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.sp/banking_details
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 EC_CLIENT_OBJ=/com.ec.revn.sp/company_splits HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '819488891'
   keys:
@@ -4876,26 +5028,6 @@ EC_CLIENT_OBJ=/com.ec.revn.sp/document_finder HELP_TYPE=TEXT: !!com.ec.upgrade.e
   fileName: '-4879324'
   keys:
     EC_CLIENT_OBJ: /com.ec.revn.sp/document_finder
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.sp/document_general HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-2133891790'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.sp/document_general
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.sp/document_information HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '895673454'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.sp/document_information
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -5123,16 +5255,6 @@ EC_CLIENT_OBJ=/com.ec.revn.sp/property_properties/CLASS_NAME/CONTRACT_AREA/DATA_
   properties: {}
   related: {}
   status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.sp/reallocation HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1358134845'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.sp/reallocation
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 EC_CLIENT_OBJ=/com.ec.revn.sp/revn_calc_log HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1854798208'
   keys:
@@ -5183,40 +5305,10 @@ EC_CLIENT_OBJ=/com.ec.revn.sp/trans_detail_popup HELP_TYPE=TEXT: !!com.ec.upgrad
   properties: {}
   related: {}
   status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.sp/transaction_general HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1111467975'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.sp/transaction_general
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 EC_CLIENT_OBJ=/com.ec.revn.sp/transaction_mapping HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1539698911'
   keys:
     EC_CLIENT_OBJ: /com.ec.revn.sp/transaction_mapping
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.sp/transaction_quantities HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '516117708'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.sp/transaction_quantities
-    HELP_TYPE: TEXT
-    T: CTRL_CLIENT_HELP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-EC_CLIENT_OBJ=/com.ec.revn.sp/transaction_values HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '2063984243'
-  keys:
-    EC_CLIENT_OBJ: /com.ec.revn.sp/transaction_values
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -6378,6 +6470,16 @@ EC_CLIENT_OBJ=/com.ec.tran.gd.screens/capacity_release_result/CLASS/CAP_REL_RESU
   properties: {}
   related: {}
   status: ADDED
+EC_CLIENT_OBJ=/com.ec.tran.gd.screens/daily_capacity_trades HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '945385319'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_capacity_trades
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ? EC_CLIENT_OBJ=/com.ec.tran.gd.screens/daily_contract_capacity_request/CLASS_1/CNTR_DAY_CAPACITY_REQ/CLASS_2/CNTR_CAPACITY_DAY_TRANS HELP_TYPE=TEXT
 : !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1676890077'
@@ -6422,6 +6524,16 @@ EC_CLIENT_OBJ=/com.ec.tran.gd.screens/capacity_release_result/CLASS/CAP_REL_RESU
   properties: {}
   related: {}
   status: DELETED
+EC_CLIENT_OBJ=/com.ec.tran.gd.screens/daily_path_delivery HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1317823053'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_path_delivery
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 EC_CLIENT_OBJ=/com.ec.tran.gd.screens/daily_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1659643934'
   keys:
@@ -6446,6 +6558,17 @@ EC_CLIENT_OBJ=/com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DA
   fileName: '1843096305'
   keys:
     EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DAY_NOM_PATH_MATRIX
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+? EC_CLIENT_OBJ=/com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM HELP_TYPE=TEXT
+: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '760219080'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}
@@ -6567,6 +6690,16 @@ EC_CLIENT_OBJ=/com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DA
   fileName: '2143984878'
   keys:
     EC_CLIENT_OBJ: /com.ec.tran.gd.screens/period_day_np_data_enddate/CLASS/SLNP_PERIOD_DEL_EVENT/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0047
+    HELP_TYPE: TEXT
+    T: CTRL_CLIENT_HELP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+EC_CLIENT_OBJ=/com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N HELP_TYPE=TEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2014024176'
+  keys:
+    EC_CLIENT_OBJ: /com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N
     HELP_TYPE: TEXT
     T: CTRL_CLIENT_HELP
   parentKeys: {}

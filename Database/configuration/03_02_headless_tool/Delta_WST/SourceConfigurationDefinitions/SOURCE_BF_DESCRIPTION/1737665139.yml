@@ -9,5 +9,12 @@ properties:
   BF_DESCRIPTION_NO: CD.0011
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/general_price_object/CLASS_NAME/PRICE_OBJECT' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>    <strong>General Price Object screen</strong>    defines Price Objects that are available to any number of Contracts.</p><p>    General Price Object can be connected to a Calculation Rule in order to have the EC Sales Price Calculation engine calculating the price.</p><p>    <strong>The screen is divided into 2 sections:</strong></p><p>    <strong><em>- Price Object Table:</em></strong><br>    This section lists all the General Price Objects.</p><p>    <strong><em>- General Price Object Details Table:</em></strong><br>    This section shows details for the selected General Price Object.<br>    Contract Name field is deemed and not editable.</p>
+  DESCRIPTION: '<p><strong>Product Price Object screen</strong> defines Price Objects
+    that are available to any number of Contracts.</p><p>Price Object can be connected
+    to a Calculation Rule in order to have the EC Sales Price Calculation engine calculating
+    the price.</p><h3><strong style="color: rgb(0, 0, 153);">Price Object Section</strong></h3><p>This
+    section lists all the general Price Objects.</p><h3><strong style="color: rgb(0,
+    0, 153);">Price Object Details Section</strong></h3><p>This section shows details
+    for the selected general Price Object.</p><p>Contract Name field is deemed and
+    not editable.</'
 related: {}

@@ -37,51 +37,55 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Contract_Parties IS
 --
 ---------------------------------------------------------------------------------------------------
 PROCEDURE validateShare(
-       p_contract_id     VARCHAR2,
+       p_contract_id  VARCHAR2,
        p_daytime      DATE,
-       p_party_role   VARCHAR2
+       p_party_role   VARCHAR2,
+       p_class_name   VARCHAR2
        )
 --</EC-DOC>
 IS
     ln_count NUMBER;
-	ln_equity_pct  NUMBER;
+    ln_equity_pct  NUMBER;
     lv_equity_uom  VARCHAR2(10);
 
-	cp_contract_id VARCHAR2(32);
-	cp_daytime DATE;
-	cp_party_role VARCHAR2(32);
+    cp_contract_id VARCHAR2(32);
+    cp_daytime DATE;
+    cp_party_role VARCHAR2(32);
+    cp_class_name VARCHAR2(32);
 
-	CURSOR c_equity_pct (cp_contract_id VARCHAR2, cp_daytime DATE, cp_party_role VARCHAR2) IS
-		SELECT  party_share
-		FROM contract_party_share
-		WHERE object_id = cp_contract_id
-		AND party_role =  cp_party_role
-		AND daytime = cp_daytime
-    AND party_share is not null;
+    CURSOR c_equity_pct (cp_contract_id VARCHAR2, cp_daytime DATE, cp_party_role VARCHAR2, cp_class_name VARCHAR2) IS
+        SELECT  party_share
+        FROM contract_party_share
+        WHERE object_id = cp_contract_id
+        AND party_role =  cp_party_role
+        AND daytime = cp_daytime
+        AND party_share is not null
+        AND class_name = cp_class_name;
 
 BEGIN
-	ln_equity_pct := 0;
-	ln_count :=0;
+    ln_equity_pct := 0;
+    ln_count :=0;
 
-	cp_contract_id := p_contract_id;
-	cp_daytime := p_daytime;
-	cp_party_role := p_party_role;
+    cp_contract_id := p_contract_id;
+    cp_daytime := p_daytime;
+    cp_party_role := p_party_role;
+    cp_class_name := p_class_name;
 
     --get the UOM code from EQUITY attribute in CONTRACT_PARTIES class
-    lv_equity_uom := ec_class_attr_presentation.uom_code('CONTRACT_PARTIES','EQUITY');
+    lv_equity_uom := ecdp_classmeta_cnfg.getUomCode('CONTRACT_PARTIES','EQUITY');
 
-	FOR sumValue IN c_equity_pct(cp_contract_id, cp_daytime, cp_party_role) LOOP
+    FOR sumValue IN c_equity_pct(cp_contract_id, cp_daytime, cp_party_role, cp_class_name) LOOP
         ln_count := ln_count + 1;
-		ln_equity_pct := ln_equity_pct + ROUND(Nvl(sumValue.party_share,0),9);
-	END LOOP;
+        ln_equity_pct := ln_equity_pct + ROUND(Nvl(sumValue.party_share,0),9);
+    END LOOP;
 
-	IF ln_count <> 0 THEN
-       IF ln_equity_pct <> 100 AND lv_equity_uom = 'PCT' THEN
-	      RAISE_APPLICATION_ERROR(-20404,'The sum of equity percentage has to be 100');
-       ELSIF ln_equity_pct <> 1 AND lv_equity_uom = 'FRAC' THEN
-	      RAISE_APPLICATION_ERROR(-20405,'The sum of equity fraction has to be 1');
-       END IF;
-	END IF;
+    IF ln_count <> 0 THEN
+        IF ln_equity_pct <> 100 AND lv_equity_uom = 'PCT' THEN
+            RAISE_APPLICATION_ERROR(-20404,'The sum of equity percentage has to be 100');
+        ELSIF ln_equity_pct <> 1 AND lv_equity_uom = 'FRAC' THEN
+            RAISE_APPLICATION_ERROR(-20405,'The sum of equity fraction has to be 1');
+        END IF;
+    END IF;
 
 END ValidateShare;
 

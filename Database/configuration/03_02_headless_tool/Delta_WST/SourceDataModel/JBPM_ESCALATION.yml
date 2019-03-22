@@ -3,7 +3,7 @@ name: JBPM_ESCALATION
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008653
+  name: PK_JBPM_ESCALATION
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

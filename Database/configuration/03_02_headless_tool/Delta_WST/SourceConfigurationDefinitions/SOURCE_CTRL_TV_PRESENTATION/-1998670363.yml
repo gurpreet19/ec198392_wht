@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_attribute_dim_matrix/ACCESS_COLUMN/TRAN_CODE?screentemplate=/com.ec.tran.co.screens/contract_attribute_dim_matrix&TARGET_CONDITION=TRAN_IND='Y'
+  COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_attribute_dim_matrix/ACCESS_COLUMN/TRAN_CODE?screentemplate=/com.ec.tran.co.screens/contract_attribute_dim_matrix
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: CONTRACT_TRAN_ATTR_MATRIX
   COMPONENT_LABEL: Transport Contract Attributes Dimension Matrix

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0246
   NAME: Calculation Group Setup
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/calculation_group
 related: {}

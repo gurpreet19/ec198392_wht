@@ -1824,7 +1824,6 @@ IS
       WHERE cd.object_id = p_contract_id
         AND ct.document_key = cd.document_key
         AND ct.cargo_name = p_cargo_no
-        AND nvl(cd.customer_id,'$NULL$') = decode(cp_allow_alt_cust_ind,'N',nvl(cd.customer_id,'$NULL$'),cp_customer_id)
         AND ecdp_document.IsPPADocument(cd.document_key)='N'
         AND (NVL(cd.single_parcel_doc_ind, 'N') = 'N' OR ct.parcel_name = p_parcel_no)
         AND (NOT EXISTS

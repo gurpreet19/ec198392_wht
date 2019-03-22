@@ -9,8 +9,5 @@ properties:
   BF_DESCRIPTION_NO: CO.0236
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_func_area/CLASS_NAME/MESSAGE_GROUP/FUNC_AREA_FK/FUNCTIONAL_AREA_ID' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |
-    <p>This is a generic maintain screen; see description of generic maintain screens in the beginning of the configuration manual.</p>
-
-    <p>The &quot;Maintain Message Group&quot; screen is used to create and maintain Message Group. A message group is owned by the associated functional area.</p>
+  DESCRIPTION: <p>The <strong>Message Group</strong> screen is used to create and maintain Message Group. The object created here can be used to put messages into a group in Message Group List screen (MHM.0014). A message group is owned by the associated functional area.</p>
 related: {}

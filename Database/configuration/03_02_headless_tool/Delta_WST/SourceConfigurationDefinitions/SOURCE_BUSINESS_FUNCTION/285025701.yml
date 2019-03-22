@@ -8,5 +8,6 @@ properties:
   BF_CODE: IN.0011
   NAME: Inventory Rates
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.in/rate_calculation
 related: {}

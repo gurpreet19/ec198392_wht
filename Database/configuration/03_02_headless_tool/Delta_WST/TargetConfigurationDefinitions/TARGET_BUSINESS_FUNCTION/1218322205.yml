@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0199
   NAME: XLS Workbook Template - Run
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.bs.xls/run_xls_workbook_tmpl
 related: {}

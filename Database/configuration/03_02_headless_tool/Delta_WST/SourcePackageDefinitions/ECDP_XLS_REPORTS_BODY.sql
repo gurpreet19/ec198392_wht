@@ -28,7 +28,7 @@ CREATE OR REPLACE PACKAGE BODY EcDp_XLS_Reports IS
 --
 -- Using tables   :
 --
--- Using functions: ec_rept_object_type.row_by_pk, ec_class.label
+-- Using functions: ec_rept_object_type.row_by_pk, ecdp_classmeta_cnfg.getLabel
 --
 -- Configuration
 -- required       :

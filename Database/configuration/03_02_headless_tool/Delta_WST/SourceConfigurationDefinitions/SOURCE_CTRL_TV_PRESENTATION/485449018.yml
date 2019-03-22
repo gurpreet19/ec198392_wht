@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION?screentemplate=/com.ec.revn.cd/manage_calendar_collection
+  COMPONENT_EXT_NAME: /com.ec.revn.cd/manage_calendar_collection
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: CAL_COLL
   COMPONENT_LABEL: Calendar Collection

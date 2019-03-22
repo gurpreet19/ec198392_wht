@@ -9,5 +9,31 @@ properties:
   BF_DESCRIPTION_NO: VO.0037
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.vo/monthly_cascade_popup' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>See the main screen</p>
+  DESCRIPTION: '<p><strong>Monthly Cascade screen</strong> is used to view and verify
+    how the selected Stream Item impacts recalculation of other Stream Items through
+    the Cascade logic.</p><p>The screen has data as follows:</p><p><strong>Type column</strong>
+    shows the type of the cascade logic to be used for cascading the Stream Item:</p><p>-
+    SELF defines the selected Stream Item.</p><p>- WRITE points at the&nbsp;Stream
+    Items that have been recalculated due to an update of the selected Stream Item.&nbsp;</p><p>-
+    READ points at the Stream Items that have been read in order to calculate the
+    Stream Items where the Type column is WRITE.&nbsp;</p><p><strong>Exec order column</strong>
+    shows the order of the streams being read and calculated in the cascade. Note,
+    that the table should be read from the bottom to the top – the last record listed
+    is the one executed first.</p><p><strong>Code column</strong> presents the Stream
+    Item code being used in the cascade.</p><p><strong>Equation column</strong> holds
+    the equation formula for the Stream Items involved.</p><p><strong>Calc Method
+    column</strong> shows the calculation method defined for each Stream Item. It
+    can be:</p><p>- IP: Manual input or by interface.</p><p>- SK: Calculated using
+    a split key.</p><p>- FO: Calculated using a formula. The formula is defined on
+    the stream item in the CD module.</p><p>- EK: Calculated using an exceptional
+    split key, i.e. the number has been calculated based on a new split key share
+    entered by the user.</p><p>- OW: The user has overwritten the master quantity
+    on a FO or a SK stream item. This means the cascade will not include the stream
+    item again in any new cascade operation.</p><p>- CO: The number is a constant.</p><p>-
+    SP: The number is coming from Financial Transactions module (former known as Sales
+    and Purchases module – thus ‘SP’ ) and is a sum of quantities from one or more
+    Financial documents.</p><p><strong>Measure column</strong> defines the Master
+    UOM for the Stream Item mentioned in the code column - V for Volume, M for Mass
+    and E for Energy.</p><p><strong>Split Share column</strong> shows the share percentage
+    when the calculation method is split key.</p>'
 related: {}

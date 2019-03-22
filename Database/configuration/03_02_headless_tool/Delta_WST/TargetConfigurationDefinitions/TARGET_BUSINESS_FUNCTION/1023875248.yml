@@ -8,5 +8,6 @@ properties:
   BF_CODE: FC.0001
   NAME: Forecast Input
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.fc.screens/forecast_input
 related: {}

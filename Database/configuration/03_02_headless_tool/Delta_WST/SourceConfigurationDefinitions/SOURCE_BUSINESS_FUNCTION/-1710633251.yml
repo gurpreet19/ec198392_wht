@@ -8,5 +8,6 @@ properties:
   BF_CODE: SD.0047
   NAME: Sales Gas Delivery Events
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/period_day_np_data_enddate/CLASS/SLNP_PERIOD_DEL_EVENT/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0047
 related: {}

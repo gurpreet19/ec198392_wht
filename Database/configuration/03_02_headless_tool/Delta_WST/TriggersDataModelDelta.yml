@@ -34,6 +34,14 @@ AI_CARGO: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: AI_CARGO
   status: MODIFIED
   type: TRIGGER
+AI_TASK_BPM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AI_TASK_BPM
+  status: ADDED
+  type: TRIGGER
+AS_CLASS_RELATION_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AS_CLASS_RELATION_CNFG
+  status: ADDED
+  type: TRIGGER
 AS_CLASS_REL_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: AS_CLASS_REL_PROPERTY_CNFG
   status: ADDED
@@ -73,6 +81,10 @@ AU_STIM_DAY_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
 AU_STIM_MTH_VALUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: AU_STIM_MTH_VALUE
   status: ADDED
+  type: TRIGGER
+AU_TRANS_TARGET_TIME: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: AU_TRANS_TARGET_TIME
+  status: MODIFIED
   type: TRIGGER
 BIUD_CLASS_ATTRIBUTE_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: BIUD_CLASS_ATTRIBUTE_CNFG
@@ -134,20 +146,12 @@ BI_T_BASIS_OBJECT_PARTITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: BI_T_BASIS_OBJECT_PARTITION
   status: ADDED
   type: TRIGGER
-BS_CLASS_RELATION_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: BS_CLASS_RELATION_CNFG
-  status: ADDED
-  type: TRIGGER
 BS_CLASS_REL_PROPERTY_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: BS_CLASS_REL_PROPERTY_CNFG
   status: ADDED
   type: TRIGGER
 BS_NAV_MODEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: BS_NAV_MODEL
-  status: ADDED
-  type: TRIGGER
-CLASS_RELATION_CNFG: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: CLASS_RELATION_CNFG
   status: ADDED
   type: TRIGGER
 DDL_ECKERNEL: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -192,6 +196,10 @@ D_FIN_REVENUE_ORDER: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: TRIGGER
 D_FIN_WBS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: D_FIN_WBS
+  status: ADDED
+  type: TRIGGER
+D_FORECAST_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: D_FORECAST_EVENT
   status: ADDED
   type: TRIGGER
 IUD_CALC_OBJECT_FILTER: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -370,6 +378,10 @@ IUD_V_PTST_PWEL_SINGLE_RES: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IUD_V_PTST_PWEL_SINGLE_RES
   status: MODIFIED
   type: TRIGGER
+IUD_V_QRTZ_TRIGGERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUD_V_QRTZ_TRIGGERS
+  status: MODIFIED
+  type: TRIGGER
 IUD_V_SCHEDULE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IUD_V_SCHEDULE
   status: MODIFIED
@@ -394,8 +406,16 @@ IUR_SPLIT_KEY_VERSION: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IUR_SPLIT_KEY_VERSION
   status: ADDED
   type: TRIGGER
+IUV_CARGO_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUV_CARGO_DOCUMENT
+  status: MODIFIED
+  type: TRIGGER
 IUV_DT_CHEM_TANK_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IUV_DT_CHEM_TANK_STATUS
+  status: MODIFIED
+  type: TRIGGER
+IUV_DT_DEF_STATUS_LOG_WELL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUV_DT_DEF_STATUS_LOG_WELL
   status: MODIFIED
   type: TRIGGER
 IUV_DT_EQPM_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -718,6 +738,10 @@ IUV_DT_WELL_HOLE_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IUV_DT_WELL_HOLE_EVENT
   status: MODIFIED
   type: TRIGGER
+IUV_DT_WELL_TEST_RAW_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IUV_DT_WELL_TEST_RAW_DATA
+  status: MODIFIED
+  type: TRIGGER
 IUV_DT_WELL_WASTE_INJ: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IUV_DT_WELL_WASTE_INJ
   status: MODIFIED
@@ -816,6 +840,10 @@ IU_BPM_EC_GCOMMAND_OP_P: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: TRIGGER
 IU_BPM_PA_COMMAND_QUEUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_BPM_PA_COMMAND_QUEUE
+  status: ADDED
+  type: TRIGGER
+IU_BPM_PI_EVENT_QUEUE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_BPM_PI_EVENT_QUEUE
   status: ADDED
   type: TRIGGER
 IU_BPM_PROC_MONITOR_NODE_CONF: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -957,6 +985,10 @@ IU_CNTR_CAPACITY_DAY_TRANS: !!com.ec.upgrade.schema.dto.DbObjectDTO
 IU_CNTR_DAY_CAP_REQUEST: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_CNTR_DAY_CAP_REQUEST
   status: MODIFIED
+  type: TRIGGER
+IU_CNTR_DAY_CAP_TRADE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_CNTR_DAY_CAP_TRADE
+  status: ADDED
   type: TRIGGER
 IU_CNTR_DAY_INV_SWAP: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_CNTR_DAY_INV_SWAP
@@ -1104,6 +1136,10 @@ IU_CURVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: TRIGGER
 IU_CURVE_POINT: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_CURVE_POINT
+  status: MODIFIED
+  type: TRIGGER
+IU_DEFERMENT_CORR_ACTION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_DEFERMENT_CORR_ACTION
   status: MODIFIED
   type: TRIGGER
 IU_DEFERMENT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -1294,6 +1330,14 @@ IU_INV_VALUATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_INV_VALUATION
   status: ADDED
   type: TRIGGER
+IU_ITST_DEFINITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_ITST_DEFINITION
+  status: ADDED
+  type: TRIGGER
+IU_ITST_RESULT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_ITST_RESULT
+  status: ADDED
+  type: TRIGGER
 IU_IWEL_MTH_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_IWEL_MTH_STATUS
   status: MODIFIED
@@ -1301,6 +1345,10 @@ IU_IWEL_MTH_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
 IU_IWEL_PERIOD_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_IWEL_PERIOD_STATUS
   status: MODIFIED
+  type: TRIGGER
+IU_IWEL_RESULT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_IWEL_RESULT
+  status: ADDED
   type: TRIGGER
 IU_IWEL_SUB_DAY_STATUS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_IWEL_SUB_DAY_STATUS
@@ -1394,6 +1442,10 @@ IU_NOMPNT_MTH_TRANSFER: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_NOMPNT_MTH_TRANSFER
   status: MODIFIED
   type: TRIGGER
+IU_NOMPNT_NP_DAY_DELIVERY: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_NOMPNT_NP_DAY_DELIVERY
+  status: ADDED
+  type: TRIGGER
 IU_NOMPNT_NP_DAY_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_NOMPNT_NP_DAY_NOMINATION
   status: ADDED
@@ -1453,6 +1505,10 @@ IU_OBJECT_SUB_DAY_DIM2_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
 IU_OBJECT_TRANSPORT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_OBJECT_TRANSPORT_EVENT
   status: MODIFIED
+  type: TRIGGER
+IU_OBJLOC_DAY_CNTR_NOM: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_OBJLOC_DAY_CNTR_NOM
+  status: ADDED
   type: TRIGGER
 IU_OBJLOC_DAY_NOMINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_OBJLOC_DAY_NOMINATION
@@ -1970,6 +2026,10 @@ IU_V_PERFORMANCE_CURVE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_V_PERFORMANCE_CURVE
   status: MODIFIED
   type: TRIGGER
+IU_WBI_INJ_SAMPLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: IU_WBI_INJ_SAMPLE
+  status: ADDED
+  type: TRIGGER
 IU_WBI_SAMPLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: IU_WBI_SAMPLE
   status: MODIFIED
@@ -2085,6 +2145,10 @@ I_TRANS_INV_LINE_OVERRIDE: !!com.ec.upgrade.schema.dto.DbObjectDTO
 I_TRANS_INV_LI_PR_VAR_OVER: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: I_TRANS_INV_LI_PR_VAR_OVER
   status: ADDED
+  type: TRIGGER
+UD_V_CARGO_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: UD_V_CARGO_DOCUMENT
+  status: MODIFIED
   type: TRIGGER
 U_CONT_JOURNAL_SUMMARY: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: U_CONT_JOURNAL_SUMMARY

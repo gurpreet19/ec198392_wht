@@ -12,5 +12,5 @@ properties:
   DESCRIPTION: |-
     <p>This is a new screen for capturing Product Quality Factors for a Scenario. This screen is used to enter  quality factors such as Oil density, API, GCV and BOE.<p>
 
-    <p>The data in this screen is displayed based on "valid from", which means that each value is valid until there is a new value entered. <p>
+    <p>The data in this screen is displayed based on "valid from", which means that each value is valid until there is a new value entered. <p><p>The data will be displayed as follows :</p><ol><li>When &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are empty, all records will be displayed.</li><li>When only &ldquo;Filter From&rdquo; value is entered, records that are valid after the selected "Filter From" will be displayed.</li><li>When only &ldquo;Filter To&rdquo; value is entered, records that are valid before the selected "Filter To" will be displayed.</li><li>When both &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are entered, records that are valid after the selected "Filter From" and before the selected "Filter To" will be displayed.</li></ol>
 related: {}

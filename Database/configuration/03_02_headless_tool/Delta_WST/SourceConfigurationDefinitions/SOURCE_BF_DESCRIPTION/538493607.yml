@@ -9,5 +9,5 @@ properties:
   BF_DESCRIPTION_NO: CO.1011
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/ec_codes' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>This is the general EC codes screen. Use this screen to insert new rows in EC Codes data section.</p>
+  DESCRIPTION: <p>EC codes are basically categorized string constants.</p><p>There are three EC code screens:</p><ul><li>EC Codes-All (BF CO.1011)</li><li>EC Codes - Non-System Codes (BF CD.0034)</li><li>EC Codes - System Codes (BF CD.0084)</li></ul><p>Generally all EC codes are shown in the EC Codes-All screen, whereas the other two screens show only system or non-system EC codes based on the value of the "System Code" attribute. This is split into multiple screens to allow easy access control for end users.</p><p>The <strong>EC Codes-All</strong> screen provides an overview of all EC codes. It is also possible to edit non-system codes in this screen.</p>
 related: {}

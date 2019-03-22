@@ -33,16 +33,11 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Forecast_Prod IS
 ** 27-02-2017 jainnraj  ECPD-40350: Added new functions setFcstAnalysisVariables for BF Forecast Scenarios Analysis (PP.0061).
 ** 12-05-2017 jainnraj  ECPD-42563: Renamed getProdForecastId and dynCursorGetForecastId to getProdScenarioId and dynCursorGetScenarioId respectively.
 ** 08-12-2017 kashisag  ECPD-40487: Corrected local variables naming convention.
+** 26.07.2018 kashisag  ECPD-56795: Changed objectid to scenario id
+** 17.10.2018 abdulmaw  ECPD-58328: updated getGrpFcstVarDataGroup,getGrpFcstVarDataMonth,getGrpFcstVarDataDay,getGrpFcstPhaseDataGroup,getGrpFcstPhaseDataMonth,getGrpFcstPhaseDataDay,
+                                    getGrpFcstEventDataGroup,getGrpFcstEventDataMonth,getGrpFcstEventDataDay to solve pipelined implicit type problem
+** 17.12.2018 abdulmaw  ECPD-62507: fix naming convention
 **************************************************************************************************/
-gd_forecast_id_1 VARCHAR2(32) := NULL;
-gd_forecast_id_2 VARCHAR2(32) := NULL;
-gd_scenario_id_1 VARCHAR2(32) := NULL;
-gd_scenario_id_2 VARCHAR2(32) := NULL;
-gd_start_date_1  DATE         := NULL;
-gd_start_date_2  DATE         := NULL;
-gd_end_date_1    DATE         := NULL;
-gd_end_date_2    DATE         := NULL;
-gd_offset_2      NUMBER       := NULL;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
@@ -205,11 +200,11 @@ BEGIN
 
   lv2_tmpSQL := 'SELECT a.' || p_factor || '_FACTOR ' ||
                 'FROM FCST_SHORTFALL_OVERRIDES a ' ||
-                'WHERE a.WELL_ID = :p_object_id ' ||
+                'WHERE a.OBJECT_ID = :p_object_id ' ||
                 'AND a.DAYTIME = (SELECT MAX(b.DAYTIME) FROM FCST_SHORTFALL_OVERRIDES b ' ||
-                                 'WHERE b.WELL_ID = :p_object_id ' ||
+                                 'WHERE b.OBJECT_ID = :p_object_id ' ||
                                  'AND :p_daytime BETWEEN b.DAYTIME and b.VALID_TO) ' ||
-                'AND a.OBJECT_ID = :p_scenario_id';
+                'AND a.SCENARIO_ID = :p_scenario_id';
 
   IF lv2_tmpSQL IS NOT NULL THEN
     EXECUTE IMMEDIATE lv2_tmpSQL INTO ln_returnval USING p_object_id, p_object_id, p_daytime, p_scenario_id;
@@ -286,7 +281,7 @@ BEGIN
                    'FROM FCST_SHORTFALL_FACTORS a ' ||
                    'WHERE a.DAYTIME = (SELECT MAX(b.daytime) FROM FCST_SHORTFALL_FACTORS b ' ||
                                       'WHERE b.daytime <= to_date(''' || to_char(p_daytime, 'YYYY-MM-DD"T"HH24:MI:SS')||''' , ''YYYY-MM-DD"T"HH24:MI:SS'')) ' ||
-                   'AND a.object_id = ''' || p_scenario_id || '''';
+                   'AND a.scenario_id = ''' || p_scenario_id || '''';
     OPEN lrc_factor FOR lv2_sql;
     LOOP
       FETCH lrc_factor INTO lv2_object_id, ln_factor;
@@ -364,7 +359,7 @@ BEGIN
 								 ,'||p_phase||'_EXPORT_CONS
 								 ,'||p_phase||'_COMMERCIAL_CONS)	as check_value
 				  FROM FCST_CONSTRAINTS
-				  WHERE OBJECT_ID = '''||p_object_id||'''
+				  WHERE SCENARIO_ID = '''||p_object_id||'''
 				  AND   DAYTIME = '''||p_daytime||'''  ';
 
 	EXECUTE IMMEDIATE lv2_sql into ln_max_value, ln_check_value;
@@ -677,7 +672,7 @@ BEGIN
              'FROM FCST_QUOTA_NOM a ' ||
              'WHERE a.DAYTIME = (SELECT MAX(b.daytime) FROM FCST_QUOTA_NOM b ' ||
              'WHERE b.daytime <= to_date(''' || to_char(p_daytime, 'YYYY-MM-DD"T"HH24:MI:SS')||''' , ''YYYY-MM-DD"T"HH24:MI:SS'')) ' ||
-             'AND a.object_id = ''' || p_scenario_id || '''';
+             'AND a.scenario_id = ''' || p_scenario_id || '''';
 
   IF lv2_sql IS NOT NULL THEN
     EXECUTE IMMEDIATE lv2_sql INTO ln_quota;
@@ -778,26 +773,26 @@ END setFcstCompVariables;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstVarDataGroup(p_scenario VARCHAR2)
-RETURN t_var_data_tab PIPELINED
+RETURN t_prodfcst_var_tab PIPELINED
 IS
 
 CURSOR c_GrpFcstVarData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_date_1 DATE, cp_end_date_1 DATE) IS
-  SELECT FORECAST_ID, OBJECT_ID, FROM_MONTH, TO_MONTH, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
+  SELECT FORECAST_ID, SCENARIO_ID, FROM_MONTH, TO_MONTH, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
   FROM V_FCST_SUMM_VAR
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND FROM_MONTH = cp_start_date_1
   AND TO_MONTH = cp_end_date_1;
 
 CURSOR c_GrpFcstVarData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_date_2 DATE, cp_end_date_2 DATE, cp_offset_2 NUMBER) IS
-  SELECT FORECAST_ID, OBJECT_ID, FROM_MONTH, TO_MONTH, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
+  SELECT FORECAST_ID, SCENARIO_ID, FROM_MONTH, TO_MONTH, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
   FROM V_FCST_SUMM_VAR
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND FROM_MONTH = ADD_MONTHS(cp_start_date_2, NVL(cp_offset_2,0))
   AND TO_MONTH = ADD_MONTHS(cp_end_date_2, NVL(cp_offset_2,0));
 
-  out_rec            t_var_data_rec;
+  out_rec            t_prodfcst_var_rec;
   in_rec             c_GrpFcstVarData_1%ROWTYPE;
   lv2_forecast_id_1  VARCHAR2(32) := NULL;
   lv2_scenario_id_1  VARCHAR2(32) := NULL;
@@ -819,30 +814,16 @@ BEGIN
   lv2_scenario_id_2 :=  gd_scenario_id_2;
   ld_start_date_2   :=  gd_start_date_2;
   ld_end_date_2     :=  gd_end_date_2;
-  ln_offset_2       := gd_offset_2;
+  ln_offset_2       :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
   OPEN c_GrpFcstVarData_1(lv2_forecast_id_1, lv2_scenario_id_1, ld_start_date_1, ld_end_date_1);
   LOOP
     FETCH c_GrpFcstVarData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstVarData_1%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.from_month      := in_rec.from_month ;
-    out_rec.to_month        := in_rec.to_month ;
-    out_rec.variable_code   := in_rec.variable_code ;
-    out_rec.variable_name   := in_rec.variable_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.oil             := in_rec.oil ;
-    out_rec.gas             := in_rec.gas ;
-    out_rec.wat             := in_rec.wat ;
-    out_rec.cond            := in_rec.cond;
-    out_rec.gl              := in_rec.gl  ;
-    out_rec.dl              := in_rec.dl  ;
-    out_rec.wi              := in_rec.wi  ;
-    out_rec.gi              := in_rec.gi  ;
-    out_rec.si              := in_rec.si  ;
-    out_rec.ci              := in_rec.ci  ;
+    out_rec := t_prodfcst_var_rec(in_rec.forecast_id, in_rec.scenario_id, in_rec.from_month, in_rec.to_month, in_rec.variable_code, in_rec.variable_name,
+                                  in_rec.sort_order, in_rec.oil, in_rec.gas, in_rec.wat, in_rec.cond, in_rec.gl, in_rec.dl, in_rec.wi, in_rec.gi,
+                                  in_rec.si, in_rec.ci);
     PIPE ROW(out_rec);
   END LOOP;
   CLOSE c_GrpFcstVarData_1;
@@ -851,23 +832,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstVarData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstVarData_2%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.from_month      := in_rec.from_month ;
-    out_rec.to_month        := in_rec.to_month ;
-    out_rec.variable_code   := in_rec.variable_code ;
-    out_rec.variable_name   := in_rec.variable_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.oil             := in_rec.oil ;
-    out_rec.gas             := in_rec.gas ;
-    out_rec.wat             := in_rec.wat ;
-    out_rec.cond            := in_rec.cond;
-    out_rec.gl              := in_rec.gl  ;
-    out_rec.dl              := in_rec.dl  ;
-    out_rec.wi              := in_rec.wi  ;
-    out_rec.gi              := in_rec.gi  ;
-    out_rec.si              := in_rec.si  ;
-    out_rec.ci              := in_rec.ci  ;
+    out_rec := t_prodfcst_var_rec(in_rec.forecast_id, in_rec.scenario_id, in_rec.from_month, in_rec.to_month, in_rec.variable_code, in_rec.variable_name,
+                                  in_rec.sort_order, in_rec.oil, in_rec.gas, in_rec.wat, in_rec.cond, in_rec.gl, in_rec.dl , in_rec.wi, in_rec.gi,
+                                  in_rec.si, in_rec.ci);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -894,24 +861,24 @@ END getGrpFcstVarDataGroup;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstVarDataMonth(p_scenario VARCHAR2)
-RETURN t_var_data_tab_mth PIPELINED
+RETURN t_prodfcst_var_tab_mth PIPELINED
 IS
 
 CURSOR c_GrpFcstVarData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_month_1 DATE, cp_end_month_1 DATE) IS
-  SELECT FORECAST_ID, OBJECT_ID, MONTH, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
+  SELECT FORECAST_ID, SCENARIO_ID, MONTH, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
   FROM V_FCST_SUMM_VAR_MTH
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND MONTH BETWEEN TRUNC(cp_start_month_1, 'MONTH') AND TRUNC(cp_end_month_1, 'MONTH');
 
 CURSOR c_GrpFcstVarData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_month_2 DATE, cp_end_month_2 DATE, cp_offset_2 NUMBER) IS
-  SELECT FORECAST_ID, OBJECT_ID, ADD_MONTHS(MONTH, NVL(-cp_offset_2,0)) MONTH, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
+  SELECT FORECAST_ID, SCENARIO_ID, ADD_MONTHS(MONTH, NVL(-cp_offset_2,0)) MONTH, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
   FROM V_FCST_SUMM_VAR_MTH
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND MONTH BETWEEN (ADD_MONTHS(TRUNC(cp_start_month_2, 'MONTH'), NVL(cp_offset_2,0))) AND (ADD_MONTHS(TRUNC(cp_end_month_2, 'MONTH'), NVL(cp_offset_2,0)));
 
-  out_rec             t_var_data_rec_mth;
+  out_rec             t_prodfcst_var_rec_mth;
   in_rec              c_GrpFcstVarData_1%ROWTYPE;
   lv2_forecast_id_1   VARCHAR2(32) := NULL;
   lv2_scenario_id_1   VARCHAR2(32) := NULL;
@@ -933,29 +900,15 @@ BEGIN
   lv2_scenario_id_2 :=  gd_scenario_id_2;
   ld_start_month_2  :=  gd_start_date_2;
   ld_end_month_2    :=  gd_end_date_2;
-  ln_offset_2       := gd_offset_2;
+  ln_offset_2       :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
   OPEN c_GrpFcstVarData_1(lv2_forecast_id_1, lv2_scenario_id_1, ld_start_month_1, ld_end_month_1);
   LOOP
     FETCH c_GrpFcstVarData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstVarData_1%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.month           := in_rec.month ;
-    out_rec.variable_code   := in_rec.variable_code ;
-    out_rec.variable_name   := in_rec.variable_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.oil             := in_rec.oil ;
-    out_rec.gas             := in_rec.gas ;
-    out_rec.wat             := in_rec.wat ;
-    out_rec.cond            := in_rec.cond;
-    out_rec.gl              := in_rec.gl  ;
-    out_rec.dl              := in_rec.dl  ;
-    out_rec.wi              := in_rec.wi  ;
-    out_rec.gi              := in_rec.gi  ;
-    out_rec.si              := in_rec.si  ;
-    out_rec.ci              := in_rec.ci  ;
+    out_rec := t_prodfcst_var_rec_mth(in_rec.forecast_id, in_rec.scenario_id, in_rec.month, in_rec.variable_code, in_rec.variable_name, in_rec.sort_order,
+                                      in_rec.oil, in_rec.gas, in_rec.wat, in_rec.cond, in_rec.gl, in_rec.dl, in_rec.wi, in_rec.gi , in_rec.si, in_rec.ci);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -965,22 +918,8 @@ BEGIN
   LOOP
     FETCH c_GrpFcstVarData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstVarData_2%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.month           := in_rec.month ;
-    out_rec.variable_code   := in_rec.variable_code ;
-    out_rec.variable_name   := in_rec.variable_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.oil             := in_rec.oil ;
-    out_rec.gas             := in_rec.gas ;
-    out_rec.wat             := in_rec.wat ;
-    out_rec.cond            := in_rec.cond;
-    out_rec.gl              := in_rec.gl  ;
-    out_rec.dl              := in_rec.dl  ;
-    out_rec.wi              := in_rec.wi  ;
-    out_rec.gi              := in_rec.gi  ;
-    out_rec.si              := in_rec.si  ;
-    out_rec.ci              := in_rec.ci  ;
+    out_rec := t_prodfcst_var_rec_mth(in_rec.forecast_id, in_rec.scenario_id, in_rec.month, in_rec.variable_code, in_rec.variable_name, in_rec.sort_order,
+                                      in_rec.oil, in_rec.gas, in_rec.wat, in_rec.cond, in_rec.gl, in_rec.dl, in_rec.wi, in_rec.gi, in_rec.si, in_rec.ci);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1007,18 +946,18 @@ END getGrpFcstVarDataMonth;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstVarDataDay(p_scenario VARCHAR2)
-RETURN t_var_data_tab_mth PIPELINED
+RETURN t_prodfcst_var_tab_mth PIPELINED
 IS
 
 CURSOR c_GrpFcstVarData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_month_1 DATE, cp_end_month_1 DATE) IS
-  SELECT FORECAST_ID, OBJECT_ID, DAYTIME, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
+  SELECT FORECAST_ID, SCENARIO_ID, DAYTIME, VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
   FROM V_FCST_SUMM_VAR_DAY
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND DAYTIME BETWEEN cp_start_month_1 AND LAST_DAY(cp_end_month_1);
 
 CURSOR c_GrpFcstVarData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_month_2 DATE, cp_end_month_2 DATE, cp_offset_2 NUMBER) IS
-  SELECT FORECAST_ID, OBJECT_ID,
+  SELECT FORECAST_ID, SCENARIO_ID,
   CASE WHEN EXTRACT(DAY FROM daytime)>EXTRACT(DAY FROM ADD_MONTHS(DAYTIME,NVL(-cp_offset_2,0)))
        THEN ''
        WHEN EXTRACT(DAY FROM DAYTIME)<EXTRACT(DAY FROM ADD_MONTHS(DAYTIME,NVL(-cp_offset_2,0)))
@@ -1029,10 +968,10 @@ CURSOR c_GrpFcstVarData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2,
   VARIABLE_CODE, VARIABLE_NAME, SORT_ORDER, OIL, GAS, WAT, COND, GL, DL, WI, GI, SI, CI
   FROM V_FCST_SUMM_VAR_DAY
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND DAYTIME BETWEEN (ADD_MONTHS(cp_start_month_2, NVL(cp_offset_2,0))) AND (ADD_MONTHS(LAST_DAY(cp_end_month_2), NVL(cp_offset_2,0)));
 
-  out_rec           t_var_data_rec_mth;
+  out_rec           t_prodfcst_var_rec_mth;
   in_rec            c_GrpFcstVarData_1%ROWTYPE;
   lv2_forecast_id_1 VARCHAR2(32) := NULL;
   lv2_scenario_id_1 VARCHAR2(32) := NULL;
@@ -1046,37 +985,23 @@ CURSOR c_GrpFcstVarData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2,
 
 BEGIN
 
-  lv2_forecast_id_1 :=  gd_forecast_id_1;
-  lv2_scenario_id_1 :=  gd_scenario_id_1;
+  lv2_forecast_id_1  :=  gd_forecast_id_1;
+  lv2_scenario_id_1  :=  gd_scenario_id_1;
   ld_start_month_1   :=  gd_start_date_1;
-  ld_end_month_1   :=  gd_end_date_1;
-  lv2_forecast_id_2 :=  gd_forecast_id_2;
-  lv2_scenario_id_2 :=  gd_scenario_id_2;
+  ld_end_month_1     :=  gd_end_date_1;
+  lv2_forecast_id_2  :=  gd_forecast_id_2;
+  lv2_scenario_id_2  :=  gd_scenario_id_2;
   ld_start_month_2   :=  gd_start_date_2;
-  ld_end_month_2   :=  gd_end_date_2;
-  ln_offset_2     := gd_offset_2;
+  ld_end_month_2     :=  gd_end_date_2;
+  ln_offset_2        :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
   OPEN c_GrpFcstVarData_1(lv2_forecast_id_1, lv2_scenario_id_1, ld_start_month_1, ld_end_month_1);
   LOOP
     FETCH c_GrpFcstVarData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstVarData_1%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.month           := in_rec.daytime ;
-    out_rec.variable_code   := in_rec.variable_code ;
-    out_rec.variable_name   := in_rec.variable_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.oil             := in_rec.oil ;
-    out_rec.gas             := in_rec.gas ;
-    out_rec.wat             := in_rec.wat ;
-    out_rec.cond            := in_rec.cond;
-    out_rec.gl              := in_rec.gl  ;
-    out_rec.dl              := in_rec.dl  ;
-    out_rec.wi              := in_rec.wi  ;
-    out_rec.gi              := in_rec.gi  ;
-    out_rec.si              := in_rec.si  ;
-    out_rec.ci              := in_rec.ci  ;
+    out_rec := t_prodfcst_var_rec_mth(in_rec.forecast_id, in_rec.scenario_id, in_rec.daytime, in_rec.variable_code, in_rec.variable_name, in_rec.sort_order,
+                                      in_rec.oil, in_rec.gas, in_rec.wat, in_rec.cond, in_rec.gl, in_rec.dl, in_rec.wi, in_rec.gi, in_rec.si, in_rec.ci);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1086,22 +1011,8 @@ BEGIN
   LOOP
     FETCH c_GrpFcstVarData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstVarData_2%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.month           := in_rec.daytime ;
-    out_rec.variable_code   := in_rec.variable_code ;
-    out_rec.variable_name   := in_rec.variable_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.oil             := in_rec.oil ;
-    out_rec.gas             := in_rec.gas ;
-    out_rec.wat             := in_rec.wat ;
-    out_rec.cond            := in_rec.cond;
-    out_rec.gl              := in_rec.gl  ;
-    out_rec.dl              := in_rec.dl  ;
-    out_rec.wi              := in_rec.wi  ;
-    out_rec.gi              := in_rec.gi  ;
-    out_rec.si              := in_rec.si  ;
-    out_rec.ci              := in_rec.ci  ;
+    out_rec := t_prodfcst_var_rec_mth(in_rec.forecast_id, in_rec.scenario_id, in_rec.daytime, in_rec.variable_code, in_rec.variable_name, in_rec.sort_order,
+                                      in_rec.oil, in_rec.gas, in_rec.wat, in_rec.cond, in_rec.gl, in_rec.dl, in_rec.wi, in_rec.gi, in_rec.si, in_rec.ci);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1128,26 +1039,26 @@ END getGrpFcstVarDataDay;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstPhaseDataGroup(p_scenario VARCHAR2 )
-RETURN t_phase_data_tab PIPELINED
+RETURN t_prodfcst_phase_tab PIPELINED
 IS
 
 CURSOR c_GrpFcstPhaseData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_date_1 DATE, cp_end_date_1 DATE) IS
-  SELECT FORECAST_ID, OBJECT_ID, FROM_MONTH, TO_MONTH, PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
+  SELECT FORECAST_ID, SCENARIO_ID, FROM_MONTH, TO_MONTH, PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
   FROM V_FCST_SUMM_PHASE
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND FROM_MONTH = cp_start_date_1
   AND TO_MONTH = cp_end_date_1;
 
 CURSOR c_GrpFcstPhaseData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_date_2 DATE, cp_end_date_2 DATE, cp_offset_2 NUMBER) IS
-  SELECT FORECAST_ID, OBJECT_ID, FROM_MONTH, TO_MONTH, PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
+  SELECT FORECAST_ID, SCENARIO_ID, FROM_MONTH, TO_MONTH, PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
   FROM V_FCST_SUMM_PHASE
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND FROM_MONTH = ADD_MONTHS(cp_start_date_2, NVL(cp_offset_2,0))
   AND TO_MONTH = ADD_MONTHS(cp_end_date_2, NVL(cp_offset_2,0));
 
-  out_rec           t_phase_data_rec;
+  out_rec           t_prodfcst_phase_rec;
   in_rec            c_GrpFcstPhaseData_1%ROWTYPE;
   lv2_forecast_id_1 VARCHAR2(32) := NULL;
   lv2_scenario_id_1 VARCHAR2(32) := NULL;
@@ -1169,7 +1080,7 @@ BEGIN
   lv2_scenario_id_2 :=  gd_scenario_id_2;
   ld_start_date_2   :=  gd_start_date_2;
   ld_end_date_2     :=  gd_end_date_2;
-  ln_offset_2       := gd_offset_2;
+  ln_offset_2       :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
 
@@ -1177,24 +1088,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstPhaseData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstPhaseData_1%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.from_month      := in_rec.from_month ;
-    out_rec.to_month        := in_rec.to_month ;
-    out_rec.phase_code      := in_rec.phase_code ;
-    out_rec.phase_name      := in_rec.phase_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.POT_UNCONSTR    := in_rec.POT_UNCONSTR  ;
-    out_rec.CONSTR          := in_rec.CONSTR     ;
-    out_rec.POT_CONSTR      := in_rec.POT_CONSTR;
-    out_rec.S1P_SHORTFALL   := in_rec.S1P_SHORTFALL   ;
-    out_rec.S1U_SHORTFALL   := in_rec.S1U_SHORTFALL    ;
-    out_rec.S2_SHORTFALL    := in_rec.S2_SHORTFALL     ;
-    out_rec.INT_CONSUMPT    := in_rec.INT_CONSUMPT      ;
-    out_rec.LOSSES          := in_rec.LOSSES;
-    out_rec.COMPENSATION    := in_rec.COMPENSATION      ;
-    out_rec.AVAIL_EXPORT    := in_rec.AVAIL_EXPORT      ;
-    out_rec.INJ             := in_rec.INJ ;
+    out_rec := t_prodfcst_phase_rec(in_rec.forecast_id, in_rec.scenario_id, in_rec.from_month, in_rec.to_month, in_rec.phase_code, in_rec.phase_name,
+                                    in_rec.sort_order, in_rec.POT_UNCONSTR, in_rec.CONSTR, in_rec.POT_CONSTR, in_rec.S1P_SHORTFALL, in_rec.S1U_SHORTFALL,
+                                    in_rec.S2_SHORTFALL, in_rec.INT_CONSUMPT, in_rec.LOSSES, in_rec.COMPENSATION, in_rec.AVAIL_EXPORT, in_rec.INJ);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1204,24 +1100,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstPhaseData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstPhaseData_2%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.from_month      := in_rec.from_month ;
-    out_rec.to_month        := in_rec.to_month ;
-    out_rec.phase_code      := in_rec.phase_code ;
-    out_rec.phase_name      := in_rec.phase_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.POT_UNCONSTR    := in_rec.POT_UNCONSTR  ;
-    out_rec.CONSTR          := in_rec.CONSTR     ;
-    out_rec.POT_CONSTR      := in_rec.POT_CONSTR;
-    out_rec.S1P_SHORTFALL   := in_rec.S1P_SHORTFALL   ;
-    out_rec.S1U_SHORTFALL   := in_rec.S1U_SHORTFALL    ;
-    out_rec.S2_SHORTFALL    := in_rec.S2_SHORTFALL     ;
-    out_rec.INT_CONSUMPT    := in_rec.INT_CONSUMPT      ;
-    out_rec.LOSSES          := in_rec.LOSSES;
-    out_rec.COMPENSATION    := in_rec.COMPENSATION      ;
-    out_rec.AVAIL_EXPORT    := in_rec.AVAIL_EXPORT      ;
-    out_rec.INJ             := in_rec.INJ ;
+    out_rec := t_prodfcst_phase_rec(in_rec.forecast_id, in_rec.scenario_id, in_rec.from_month,in_rec.to_month, in_rec.phase_code, in_rec.phase_name,
+                                    in_rec.sort_order, in_rec.POT_UNCONSTR, in_rec.CONSTR, in_rec.POT_CONSTR, in_rec.S1P_SHORTFALL, in_rec.S1U_SHORTFALL,
+                                    in_rec.S2_SHORTFALL, in_rec.INT_CONSUMPT, in_rec.LOSSES, in_rec.COMPENSATION, in_rec.AVAIL_EXPORT, in_rec.INJ);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1248,26 +1129,26 @@ END getGrpFcstPhaseDataGroup;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstPhaseDataMonth(p_scenario VARCHAR2 )
-RETURN t_phase_data_tab_mth PIPELINED
+RETURN t_prodfcst_phase_tab_mth PIPELINED
 IS
 
 CURSOR c_GrpFcstPhaseData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_month_1 DATE, cp_end_month_1 DATE) IS
-  SELECT FORECAST_ID, OBJECT_ID, MONTH,PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
+  SELECT FORECAST_ID, SCENARIO_ID, MONTH,PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
   FROM V_FCST_SUMM_PHASE_MTH
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND MONTH BETWEEN TRUNC(cp_start_month_1, 'MONTH') AND TRUNC(cp_end_month_1, 'MONTH');
 
 
 CURSOR c_GrpFcstPhaseData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_month_2 DATE, cp_end_month_2 DATE, cp_offset_2 NUMBER) IS
-  SELECT FORECAST_ID, OBJECT_ID, ADD_MONTHS(MONTH, NVL(-cp_offset_2,0)) MONTH, PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
+  SELECT FORECAST_ID, SCENARIO_ID, ADD_MONTHS(MONTH, NVL(-cp_offset_2,0)) MONTH, PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
   FROM V_FCST_SUMM_PHASE_MTH
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND MONTH BETWEEN (ADD_MONTHS(TRUNC(cp_start_month_2, 'MONTH'), NVL(cp_offset_2,0))) AND (ADD_MONTHS(TRUNC(cp_end_month_2, 'MONTH'), NVL(cp_offset_2,0)));
 
 
-  out_rec           t_phase_data_rec_mth;
+  out_rec           t_prodfcst_phase_rec_mth;
   in_rec            c_GrpFcstPhaseData_1%ROWTYPE;
   lv2_forecast_id_1 VARCHAR2(32) := NULL;
   lv2_scenario_id_1 VARCHAR2(32) := NULL;
@@ -1289,7 +1170,7 @@ BEGIN
   lv2_scenario_id_2 :=  gd_scenario_id_2;
   ld_start_month_2  :=  gd_start_date_2;
   ld_end_month_2    :=  gd_end_date_2;
-  ln_offset_2       := gd_offset_2;
+  ln_offset_2       :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
 
@@ -1297,23 +1178,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstPhaseData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstPhaseData_1%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.month           := in_rec.month ;
-    out_rec.phase_code      := in_rec.phase_code ;
-    out_rec.phase_name      := in_rec.phase_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.POT_UNCONSTR    := in_rec.POT_UNCONSTR  ;
-    out_rec.CONSTR          := in_rec.CONSTR     ;
-    out_rec.POT_CONSTR      := in_rec.POT_CONSTR;
-    out_rec.S1P_SHORTFALL   := in_rec.S1P_SHORTFALL   ;
-    out_rec.S1U_SHORTFALL   := in_rec.S1U_SHORTFALL    ;
-    out_rec.S2_SHORTFALL    := in_rec.S2_SHORTFALL     ;
-    out_rec.INT_CONSUMPT    := in_rec.INT_CONSUMPT      ;
-    out_rec.LOSSES          := in_rec.LOSSES;
-    out_rec.COMPENSATION    := in_rec.COMPENSATION      ;
-    out_rec.AVAIL_EXPORT    := in_rec.AVAIL_EXPORT      ;
-    out_rec.INJ             := in_rec.INJ ;
+    out_rec := t_prodfcst_phase_rec_mth(in_rec.forecast_id, in_rec.scenario_id, in_rec.month, in_rec.phase_code, in_rec.phase_name, in_rec.sort_order,
+                                        in_rec.POT_UNCONSTR, in_rec.CONSTR, in_rec.POT_CONSTR, in_rec.S1P_SHORTFALL, in_rec.S1U_SHORTFALL, in_rec.S2_SHORTFALL,
+                                        in_rec.INT_CONSUMPT, in_rec.LOSSES, in_rec.COMPENSATION, in_rec.AVAIL_EXPORT, in_rec.INJ);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1323,23 +1190,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstPhaseData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstPhaseData_2%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.month           := in_rec.month ;
-    out_rec.phase_code      := in_rec.phase_code ;
-    out_rec.phase_name      := in_rec.phase_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.POT_UNCONSTR    := in_rec.POT_UNCONSTR  ;
-    out_rec.CONSTR          := in_rec.CONSTR     ;
-    out_rec.POT_CONSTR      := in_rec.POT_CONSTR;
-    out_rec.S1P_SHORTFALL   := in_rec.S1P_SHORTFALL   ;
-    out_rec.S1U_SHORTFALL   := in_rec.S1U_SHORTFALL    ;
-    out_rec.S2_SHORTFALL    := in_rec.S2_SHORTFALL     ;
-    out_rec.INT_CONSUMPT    := in_rec.INT_CONSUMPT      ;
-    out_rec.LOSSES          := in_rec.LOSSES;
-    out_rec.COMPENSATION    := in_rec.COMPENSATION      ;
-    out_rec.AVAIL_EXPORT    := in_rec.AVAIL_EXPORT      ;
-    out_rec.INJ             := in_rec.INJ ;
+    out_rec := t_prodfcst_phase_rec_mth(in_rec.forecast_id, in_rec.scenario_id, in_rec.month, in_rec.phase_code, in_rec.phase_name, in_rec.sort_order,
+                                        in_rec.POT_UNCONSTR, in_rec.CONSTR, in_rec.POT_CONSTR, in_rec.S1P_SHORTFALL, in_rec.S1U_SHORTFALL, in_rec.S2_SHORTFALL,
+                                        in_rec.INT_CONSUMPT, in_rec.LOSSES, in_rec.COMPENSATION, in_rec.AVAIL_EXPORT, in_rec.INJ);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1366,19 +1219,19 @@ END getGrpFcstPhaseDataMonth;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstPhaseDataDay(p_scenario VARCHAR2 )
-RETURN t_phase_data_tab_mth PIPELINED
+RETURN t_prodfcst_phase_tab_mth PIPELINED
 IS
 
 CURSOR c_GrpFcstPhaseData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_month_1 DATE, cp_end_month_1 DATE) IS
-  SELECT FORECAST_ID, OBJECT_ID,DAYTIME,PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
+  SELECT FORECAST_ID, SCENARIO_ID,DAYTIME,PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES ,COMPENSATION ,AVAIL_EXPORT ,INJ
   FROM V_FCST_SUMM_PHASE_DAY
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND DAYTIME BETWEEN cp_start_month_1 AND LAST_DAY(cp_end_month_1);
 
 
 CURSOR c_GrpFcstPhaseData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_month_2 DATE, cp_end_month_2 DATE, cp_offset_2 NUMBER) IS
-  SELECT FORECAST_ID, OBJECT_ID,
+  SELECT FORECAST_ID, SCENARIO_ID,
   CASE WHEN EXTRACT(DAY FROM DAYTIME)>EXTRACT(DAY FROM ADD_MONTHS(DAYTIME,NVL(-cp_offset_2,0)))
        THEN ''
        WHEN EXTRACT(DAY FROM DAYTIME)<EXTRACT(DAY FROM ADD_MONTHS(DAYTIME,NVL(-cp_offset_2,0)))
@@ -1388,10 +1241,10 @@ CURSOR c_GrpFcstPhaseData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR
   END DAYTIME, PHASE_CODE, PHASE_NAME, SORT_ORDER, POT_UNCONSTR , CONSTR  ,POT_CONSTR , S1P_SHORTFALL, S1U_SHORTFALL, S2_SHORTFALL ,INT_CONSUMPT ,LOSSES , COMPENSATION ,AVAIL_EXPORT ,INJ
   FROM V_FCST_SUMM_PHASE_DAY
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND DAYTIME BETWEEN (ADD_MONTHS(cp_start_month_2, NVL(cp_offset_2,0))) AND (ADD_MONTHS(LAST_DAY(cp_end_month_2), NVL(cp_offset_2,0)));
 
-  out_rec           t_phase_data_rec_mth;
+  out_rec           t_prodfcst_phase_rec_mth;
   in_rec            c_GrpFcstPhaseData_1%ROWTYPE;
   lv2_forecast_id_1 VARCHAR2(32) := NULL;
   lv2_scenario_id_1 VARCHAR2(32) := NULL;
@@ -1413,7 +1266,7 @@ BEGIN
   lv2_scenario_id_2 :=  gd_scenario_id_2;
   ld_start_month_2  :=  gd_start_date_2;
   ld_end_month_2    :=  gd_end_date_2;
-  ln_offset_2       := gd_offset_2;
+  ln_offset_2       :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
 
@@ -1421,23 +1274,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstPhaseData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstPhaseData_1%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.month           := in_rec.daytime ;
-    out_rec.phase_code      := in_rec.phase_code ;
-    out_rec.phase_name      := in_rec.phase_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.POT_UNCONSTR    := in_rec.POT_UNCONSTR  ;
-    out_rec.CONSTR          := in_rec.CONSTR     ;
-    out_rec.POT_CONSTR      := in_rec.POT_CONSTR;
-    out_rec.S1P_SHORTFALL   := in_rec.S1P_SHORTFALL   ;
-    out_rec.S1U_SHORTFALL   := in_rec.S1U_SHORTFALL    ;
-    out_rec.S2_SHORTFALL    := in_rec.S2_SHORTFALL     ;
-    out_rec.INT_CONSUMPT    := in_rec.INT_CONSUMPT      ;
-    out_rec.LOSSES          := in_rec.LOSSES;
-    out_rec.COMPENSATION    := in_rec.COMPENSATION      ;
-    out_rec.AVAIL_EXPORT    := in_rec.AVAIL_EXPORT      ;
-    out_rec.INJ             := in_rec.INJ ;
+    out_rec := t_prodfcst_phase_rec_mth(in_rec.forecast_id, in_rec.scenario_id, in_rec.daytime, in_rec.phase_code, in_rec.phase_name, in_rec.sort_order,
+                                        in_rec.POT_UNCONSTR, in_rec.CONSTR , in_rec.POT_CONSTR, in_rec.S1P_SHORTFALL, in_rec.S1U_SHORTFALL, in_rec.S2_SHORTFALL,
+                                        in_rec.INT_CONSUMPT, in_rec.LOSSES, in_rec.COMPENSATION, in_rec.AVAIL_EXPORT, in_rec.INJ);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1447,23 +1286,9 @@ OPEN c_GrpFcstPhaseData_2(lv2_forecast_id_2, lv2_scenario_id_2, ld_start_month_2
   LOOP
     FETCH c_GrpFcstPhaseData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstPhaseData_2%NOTFOUND;
-    out_rec.forecast_id     := in_rec.forecast_id ;
-    out_rec.object_id       := in_rec.object_id ;
-    out_rec.month           := in_rec.daytime ;
-    out_rec.phase_code      := in_rec.phase_code ;
-    out_rec.phase_name      := in_rec.phase_name ;
-    out_rec.sort_order      := in_rec.sort_order ;
-    out_rec.POT_UNCONSTR    := in_rec.POT_UNCONSTR  ;
-    out_rec.CONSTR          := in_rec.CONSTR     ;
-    out_rec.POT_CONSTR      := in_rec.POT_CONSTR;
-    out_rec.S1P_SHORTFALL   := in_rec.S1P_SHORTFALL   ;
-    out_rec.S1U_SHORTFALL   := in_rec.S1U_SHORTFALL    ;
-    out_rec.S2_SHORTFALL    := in_rec.S2_SHORTFALL     ;
-    out_rec.INT_CONSUMPT    := in_rec.INT_CONSUMPT      ;
-    out_rec.LOSSES          := in_rec.LOSSES;
-    out_rec.COMPENSATION    := in_rec.COMPENSATION      ;
-    out_rec.AVAIL_EXPORT    := in_rec.AVAIL_EXPORT      ;
-    out_rec.INJ             := in_rec.INJ ;
+    out_rec := t_prodfcst_phase_rec_mth(in_rec.forecast_id, in_rec.scenario_id, in_rec.daytime, in_rec.phase_code, in_rec.phase_name, in_rec.sort_order,
+                                        in_rec.POT_UNCONSTR, in_rec.CONSTR, in_rec.POT_CONSTR, in_rec.S1P_SHORTFALL, in_rec.S1U_SHORTFALL, in_rec.S2_SHORTFALL,
+                                        in_rec.INT_CONSUMPT, in_rec.LOSSES, in_rec.COMPENSATION, in_rec.AVAIL_EXPORT, in_rec.INJ);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1490,26 +1315,26 @@ END getGrpFcstPhaseDataDay;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstEventDataGroup(p_scenario VARCHAR2)
-RETURN t_event_data_tab PIPELINED
+RETURN t_prodfcst_event_tab PIPELINED
 IS
 
 CURSOR c_GrpFcstEventData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_date_1 DATE, cp_end_date_1 DATE) IS
-  SELECT FORECAST_ID , OBJECT_ID , FROM_MONTH, TO_MONTH , REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
+  SELECT FORECAST_ID , SCENARIO_ID , FROM_MONTH, TO_MONTH , REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
   FROM V_FCST_SUMM_REASON
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND FROM_MONTH = cp_start_date_1
   AND TO_MONTH = cp_end_date_1;
 
   CURSOR c_GrpFcstEventData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_date_2 DATE, cp_end_date_2 DATE, cp_offset_2 NUMBER) IS
-  SELECT FORECAST_ID , OBJECT_ID , FROM_MONTH, TO_MONTH , REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
+  SELECT FORECAST_ID , SCENARIO_ID , FROM_MONTH, TO_MONTH , REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
   FROM V_FCST_SUMM_REASON
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND FROM_MONTH = ADD_MONTHS(cp_start_date_2, NVL(cp_offset_2,0))
   AND TO_MONTH = ADD_MONTHS(cp_end_date_2, NVL(cp_offset_2,0));
 
-  out_rec           t_event_data_rec;
+  out_rec           t_prodfcst_event_rec;
   in_rec            c_GrpFcstEventData_1%ROWTYPE;
   lv2_forecast_id_1 VARCHAR2(32) := NULL;
   lv2_scenario_id_1 VARCHAR2(32) := NULL;
@@ -1531,28 +1356,16 @@ BEGIN
   lv2_scenario_id_2   :=  gd_scenario_id_2;
   ld_start_date_2     :=  gd_start_date_2;
   ld_end_date_2       :=  gd_end_date_2;
-  ln_offset_2         := gd_offset_2;
+  ln_offset_2         :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
   OPEN c_GrpFcstEventData_1(lv2_forecast_id_1, lv2_scenario_id_1, ld_start_date_1, ld_end_date_1);
   LOOP
     FETCH c_GrpFcstEventData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstEventData_1%NOTFOUND;
-    out_rec.FORECAST_ID            := in_rec.FORECAST_ID ;
-    out_rec.OBJECT_ID              := in_rec.OBJECT_ID ;
-    out_rec.FROM_MONTH             := in_rec.FROM_MONTH ;
-    out_rec.TO_MONTH               := in_rec.TO_MONTH ;
-    out_rec.REASON_CODE_1          := in_rec.REASON_CODE_1 ;
-    out_rec.OIL_LOSS_VOLUME        := in_rec.OIL_LOSS_VOLUME  ;
-    out_rec.GAS_LOSS_VOLUME        := in_rec.GAS_LOSS_VOLUME  ;
-    out_rec.COND_LOSS_VOLUME       := in_rec.COND_LOSS_VOLUME  ;
-    out_rec.WATER_LOSS_VOLUME      := in_rec.WATER_LOSS_VOLUME  ;
-    out_rec.WATER_INJ_LOSS_VOLUME  := in_rec.WATER_INJ_LOSS_VOLUME ;
-    out_rec.STEAM_INJ_LOSS_VOLUME  := in_rec.STEAM_INJ_LOSS_VOLUME ;
-    out_rec.GAS_INJ_LOSS_VOLUME    := in_rec.GAS_INJ_LOSS_VOLUME  ;
-    out_rec.DILUENT_LOSS_VOLUME    := in_rec.DILUENT_LOSS_VOLUME  ;
-    out_rec.GAS_LIFT_LOSS_VOLUME   := in_rec.GAS_LIFT_LOSS_VOLUME  ;
-    out_rec.CO2_INJ_LOSS_VOLUME    := in_rec.CO2_INJ_LOSS_VOLUME  ;
+    out_rec := t_prodfcst_event_rec(in_rec.FORECAST_ID, in_rec.SCENARIO_ID, in_rec.FROM_MONTH, in_rec.TO_MONTH, in_rec.REASON_CODE_1, in_rec.OIL_LOSS_VOLUME,
+                                    in_rec.GAS_LOSS_VOLUME, in_rec.COND_LOSS_VOLUME, in_rec.WATER_LOSS_VOLUME, in_rec.WATER_INJ_LOSS_VOLUME, in_rec.STEAM_INJ_LOSS_VOLUME,
+                                    in_rec.GAS_INJ_LOSS_VOLUME, in_rec.DILUENT_LOSS_VOLUME, in_rec.GAS_LIFT_LOSS_VOLUME, in_rec.CO2_INJ_LOSS_VOLUME);
 
     PIPE ROW(out_rec);
 
@@ -1563,21 +1376,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstEventData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstEventData_2%NOTFOUND;
-    out_rec.FORECAST_ID            := in_rec.FORECAST_ID ;
-    out_rec.OBJECT_ID                := in_rec.OBJECT_ID ;
-    out_rec.FROM_MONTH               := in_rec.FROM_MONTH ;
-    out_rec.TO_MONTH                 := in_rec.TO_MONTH ;
-    out_rec.REASON_CODE_1            := in_rec.REASON_CODE_1 ;
-    out_rec.OIL_LOSS_VOLUME          := in_rec.OIL_LOSS_VOLUME  ;
-    out_rec.GAS_LOSS_VOLUME          := in_rec.GAS_LOSS_VOLUME  ;
-    out_rec.COND_LOSS_VOLUME         := in_rec.COND_LOSS_VOLUME  ;
-    out_rec.WATER_LOSS_VOLUME        := in_rec.WATER_LOSS_VOLUME  ;
-    out_rec.WATER_INJ_LOSS_VOLUME    := in_rec.WATER_INJ_LOSS_VOLUME ;
-    out_rec.STEAM_INJ_LOSS_VOLUME    := in_rec.STEAM_INJ_LOSS_VOLUME ;
-    out_rec.GAS_INJ_LOSS_VOLUME      := in_rec.GAS_INJ_LOSS_VOLUME  ;
-    out_rec.DILUENT_LOSS_VOLUME      := in_rec.DILUENT_LOSS_VOLUME  ;
-    out_rec.GAS_LIFT_LOSS_VOLUME     := in_rec.GAS_LIFT_LOSS_VOLUME  ;
-    out_rec.CO2_INJ_LOSS_VOLUME      := in_rec.CO2_INJ_LOSS_VOLUME  ;
+    out_rec := t_prodfcst_event_rec(in_rec.FORECAST_ID, in_rec.SCENARIO_ID, in_rec.FROM_MONTH, in_rec.TO_MONTH, in_rec.REASON_CODE_1, in_rec.OIL_LOSS_VOLUME,
+                                    in_rec.GAS_LOSS_VOLUME, in_rec.COND_LOSS_VOLUME, in_rec.WATER_LOSS_VOLUME, in_rec.WATER_INJ_LOSS_VOLUME, in_rec.STEAM_INJ_LOSS_VOLUME,
+                                    in_rec.GAS_INJ_LOSS_VOLUME, in_rec.DILUENT_LOSS_VOLUME, in_rec.GAS_LIFT_LOSS_VOLUME, in_rec.CO2_INJ_LOSS_VOLUME);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1604,25 +1405,25 @@ END getGrpFcstEventDataGroup;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstEventDataMonth(p_scenario VARCHAR2)
-RETURN t_event_data_tab_mth PIPELINED
+RETURN t_prodfcst_event_tab_mth PIPELINED
 IS
 
 CURSOR c_GrpFcstEventData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_month_1 DATE, cp_end_month_1 DATE) IS
-  SELECT FORECAST_ID , OBJECT_ID , MONTH , REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
+  SELECT FORECAST_ID , SCENARIO_ID , MONTH , REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
   FROM V_FCST_SUMM_REASON_MTH
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND MONTH BETWEEN TRUNC(cp_start_month_1, 'MONTH') AND TRUNC(cp_end_month_1, 'MONTH');
 
 CURSOR c_GrpFcstEventData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_month_2 DATE, cp_end_month_2 DATE, cp_offset_2 NUMBER) IS
-  SELECT FORECAST_ID , OBJECT_ID , ADD_MONTHS(MONTH, NVL(-cp_offset_2,0)) MONTH, REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
+  SELECT FORECAST_ID , SCENARIO_ID , ADD_MONTHS(MONTH, NVL(-cp_offset_2,0)) MONTH, REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
   FROM V_FCST_SUMM_REASON_MTH
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND MONTH BETWEEN (ADD_MONTHS(TRUNC(cp_start_month_2, 'MONTH'), NVL(cp_offset_2,0))) AND (ADD_MONTHS(TRUNC(cp_end_month_2, 'MONTH'), NVL(cp_offset_2,0)));
 
 
-  out_rec           t_event_data_rec_mth;
+  out_rec           t_prodfcst_event_rec_mth;
   in_rec            c_GrpFcstEventData_1%ROWTYPE;
   lv2_forecast_id_1 VARCHAR2(32) := NULL;
   lv2_scenario_id_1 VARCHAR2(32) := NULL;
@@ -1644,27 +1445,16 @@ BEGIN
   lv2_scenario_id_2  :=  gd_scenario_id_2;
   ld_start_month_2   :=  gd_start_date_2;
   ld_end_month_2     :=  gd_end_date_2;
-  ln_offset_2        := gd_offset_2;
+  ln_offset_2        :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
   OPEN c_GrpFcstEventData_1(lv2_forecast_id_1, lv2_scenario_id_1, ld_start_month_1, ld_end_month_1);
   LOOP
     FETCH c_GrpFcstEventData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstEventData_1%NOTFOUND;
-    out_rec.FORECAST_ID           := in_rec.FORECAST_ID ;
-    out_rec.OBJECT_ID               := in_rec.OBJECT_ID ;
-    out_rec.MONTH                   := in_rec.MONTH ;
-    out_rec.REASON_CODE_1           := in_rec.REASON_CODE_1 ;
-    out_rec.OIL_LOSS_VOLUME         := in_rec.OIL_LOSS_VOLUME  ;
-    out_rec.GAS_LOSS_VOLUME         := in_rec.GAS_LOSS_VOLUME  ;
-    out_rec.COND_LOSS_VOLUME        := in_rec.COND_LOSS_VOLUME  ;
-    out_rec.WATER_LOSS_VOLUME       := in_rec.WATER_LOSS_VOLUME  ;
-    out_rec.WATER_INJ_LOSS_VOLUME   := in_rec.WATER_INJ_LOSS_VOLUME ;
-    out_rec.STEAM_INJ_LOSS_VOLUME   := in_rec.STEAM_INJ_LOSS_VOLUME ;
-    out_rec.GAS_INJ_LOSS_VOLUME     := in_rec.GAS_INJ_LOSS_VOLUME  ;
-    out_rec.DILUENT_LOSS_VOLUME     := in_rec.DILUENT_LOSS_VOLUME  ;
-    out_rec.GAS_LIFT_LOSS_VOLUME    := in_rec.GAS_LIFT_LOSS_VOLUME  ;
-    out_rec.CO2_INJ_LOSS_VOLUME     := in_rec.CO2_INJ_LOSS_VOLUME  ;
+    out_rec := t_prodfcst_event_rec_mth(in_rec.FORECAST_ID, in_rec.SCENARIO_ID, in_rec.MONTH, in_rec.REASON_CODE_1, in_rec.OIL_LOSS_VOLUME, in_rec.GAS_LOSS_VOLUME,
+                                        in_rec.COND_LOSS_VOLUME, in_rec.WATER_LOSS_VOLUME, in_rec.WATER_INJ_LOSS_VOLUME,in_rec.STEAM_INJ_LOSS_VOLUME,
+                                        in_rec.GAS_INJ_LOSS_VOLUME, in_rec.DILUENT_LOSS_VOLUME, in_rec.GAS_LIFT_LOSS_VOLUME, in_rec.CO2_INJ_LOSS_VOLUME);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1674,20 +1464,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstEventData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstEventData_2%NOTFOUND;
-    out_rec.FORECAST_ID := in_rec.FORECAST_ID ;
-    out_rec.OBJECT_ID   := in_rec.OBJECT_ID ;
-    out_rec.MONTH   := in_rec.MONTH ;
-    out_rec.REASON_CODE_1         := in_rec.REASON_CODE_1 ;
-    out_rec.OIL_LOSS_VOLUME       := in_rec.OIL_LOSS_VOLUME  ;
-    out_rec.GAS_LOSS_VOLUME       := in_rec.GAS_LOSS_VOLUME  ;
-    out_rec.COND_LOSS_VOLUME      := in_rec.COND_LOSS_VOLUME  ;
-    out_rec.WATER_LOSS_VOLUME     := in_rec.WATER_LOSS_VOLUME  ;
-    out_rec.WATER_INJ_LOSS_VOLUME := in_rec.WATER_INJ_LOSS_VOLUME ;
-    out_rec.STEAM_INJ_LOSS_VOLUME := in_rec.STEAM_INJ_LOSS_VOLUME ;
-    out_rec.GAS_INJ_LOSS_VOLUME   := in_rec.GAS_INJ_LOSS_VOLUME  ;
-    out_rec.DILUENT_LOSS_VOLUME   := in_rec.DILUENT_LOSS_VOLUME  ;
-    out_rec.GAS_LIFT_LOSS_VOLUME  := in_rec.GAS_LIFT_LOSS_VOLUME  ;
-    out_rec.CO2_INJ_LOSS_VOLUME   := in_rec.CO2_INJ_LOSS_VOLUME  ;
+    out_rec := t_prodfcst_event_rec_mth(in_rec.FORECAST_ID, in_rec.SCENARIO_ID, in_rec.MONTH, in_rec.REASON_CODE_1, in_rec.OIL_LOSS_VOLUME, in_rec.GAS_LOSS_VOLUME,
+                                        in_rec.COND_LOSS_VOLUME, in_rec.WATER_LOSS_VOLUME, in_rec.WATER_INJ_LOSS_VOLUME, in_rec.STEAM_INJ_LOSS_VOLUME,
+                                        in_rec.GAS_INJ_LOSS_VOLUME, in_rec.DILUENT_LOSS_VOLUME, in_rec.GAS_LIFT_LOSS_VOLUME, in_rec.CO2_INJ_LOSS_VOLUME );
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1714,18 +1493,18 @@ END getGrpFcstEventDataMonth;
 --
 ---------------------------------------------------------------------------------------------------
 FUNCTION getGrpFcstEventDataDay(p_scenario VARCHAR2)
-RETURN t_event_data_tab_mth PIPELINED
+RETURN t_prodfcst_event_tab_mth PIPELINED
 IS
 
 CURSOR c_GrpFcstEventData_1 (cp_forecast_id_1 VARCHAR2, cp_scenario_id_1 VARCHAR2, cp_start_month_1 DATE, cp_end_month_1 DATE) IS
-  SELECT FORECAST_ID , OBJECT_ID , DAYTIME , REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
+  SELECT FORECAST_ID , SCENARIO_ID , DAYTIME , REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
   FROM V_FCST_SUMM_REASON_DAY
   WHERE FORECAST_ID = cp_forecast_id_1
-  AND OBJECT_ID = cp_scenario_id_1
+  AND SCENARIO_ID = cp_scenario_id_1
   AND DAYTIME BETWEEN cp_start_month_1 AND LAST_DAY(cp_end_month_1);
 
 CURSOR c_GrpFcstEventData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR2, cp_start_month_2 DATE, cp_end_month_2 DATE, cp_offset_2 NUMBER) IS
- SELECT FORECAST_ID , OBJECT_ID
+ SELECT FORECAST_ID , SCENARIO_ID
  ,CASE WHEN EXTRACT(DAY FROM daytime)>EXTRACT(DAY FROM ADD_MONTHS(DAYTIME,NVL(-cp_offset_2,0)))
        THEN ''
        WHEN EXTRACT(DAY FROM daytime)<EXTRACT(DAY FROM ADD_MONTHS(DAYTIME,NVL(-cp_offset_2,0)))
@@ -1736,10 +1515,10 @@ CURSOR c_GrpFcstEventData_2 (cp_forecast_id_2 VARCHAR2, cp_scenario_id_2 VARCHAR
  REASON_CODE_1 ,OIL_LOSS_VOLUME  ,GAS_LOSS_VOLUME  ,COND_LOSS_VOLUME  ,WATER_LOSS_VOLUME  ,WATER_INJ_LOSS_VOLUME  ,STEAM_INJ_LOSS_VOLUME  ,GAS_INJ_LOSS_VOLUME  ,DILUENT_LOSS_VOLUME  ,GAS_LIFT_LOSS_VOLUME  ,CO2_INJ_LOSS_VOLUME
   FROM V_FCST_SUMM_REASON_DAY
   WHERE FORECAST_ID = cp_forecast_id_2
-  AND OBJECT_ID = cp_scenario_id_2
+  AND SCENARIO_ID = cp_scenario_id_2
   AND DAYTIME BETWEEN (ADD_MONTHS(cp_start_month_2, NVL(cp_offset_2,0))) AND (ADD_MONTHS(LAST_DAY(cp_end_month_2), NVL(cp_offset_2,0)));
 
-  out_rec         t_event_data_rec_mth;
+  out_rec         t_prodfcst_event_rec_mth;
   in_rec          c_GrpFcstEventData_1%ROWTYPE;
   lv2_forecast_id_1 VARCHAR2(32) := NULL;
   lv2_scenario_id_1 VARCHAR2(32) := NULL;
@@ -1761,27 +1540,16 @@ BEGIN
   lv2_scenario_id_2 :=  gd_scenario_id_2;
   ld_start_month_2  :=  gd_start_date_2;
   ld_end_month_2    :=  gd_end_date_2;
-  ln_offset_2       := gd_offset_2;
+  ln_offset_2       :=  gd_offset_2;
 
   IF p_scenario='SCENARIO_1' THEN
    OPEN c_GrpFcstEventData_1(lv2_forecast_id_1, lv2_scenario_id_1, ld_start_month_1, ld_end_month_1);
   LOOP
     FETCH c_GrpFcstEventData_1 INTO in_rec;
     EXIT WHEN c_GrpFcstEventData_1%NOTFOUND;
-    out_rec.FORECAST_ID           := in_rec.FORECAST_ID ;
-    out_rec.OBJECT_ID             := in_rec.OBJECT_ID ;
-    out_rec.MONTH                 := in_rec.DAYTIME ;
-    out_rec.REASON_CODE_1         := in_rec.REASON_CODE_1 ;
-    out_rec.OIL_LOSS_VOLUME       := in_rec.OIL_LOSS_VOLUME  ;
-    out_rec.GAS_LOSS_VOLUME       := in_rec.GAS_LOSS_VOLUME  ;
-    out_rec.COND_LOSS_VOLUME      := in_rec.COND_LOSS_VOLUME  ;
-    out_rec.WATER_LOSS_VOLUME     := in_rec.WATER_LOSS_VOLUME  ;
-    out_rec.WATER_INJ_LOSS_VOLUME := in_rec.WATER_INJ_LOSS_VOLUME ;
-    out_rec.STEAM_INJ_LOSS_VOLUME := in_rec.STEAM_INJ_LOSS_VOLUME ;
-    out_rec.GAS_INJ_LOSS_VOLUME   := in_rec.GAS_INJ_LOSS_VOLUME  ;
-    out_rec.DILUENT_LOSS_VOLUME   := in_rec.DILUENT_LOSS_VOLUME  ;
-    out_rec.GAS_LIFT_LOSS_VOLUME  := in_rec.GAS_LIFT_LOSS_VOLUME  ;
-    out_rec.CO2_INJ_LOSS_VOLUME   := in_rec.CO2_INJ_LOSS_VOLUME  ;
+    out_rec := t_prodfcst_event_rec_mth(in_rec.FORECAST_ID, in_rec.SCENARIO_ID, in_rec.DAYTIME, in_rec.REASON_CODE_1, in_rec.OIL_LOSS_VOLUME, in_rec.GAS_LOSS_VOLUME,
+                                    in_rec.COND_LOSS_VOLUME, in_rec.WATER_LOSS_VOLUME, in_rec.WATER_INJ_LOSS_VOLUME, in_rec.STEAM_INJ_LOSS_VOLUME,
+                                    in_rec.GAS_INJ_LOSS_VOLUME, in_rec.DILUENT_LOSS_VOLUME, in_rec.GAS_LIFT_LOSS_VOLUME, in_rec.CO2_INJ_LOSS_VOLUME);
     PIPE ROW(out_rec);
 
   END LOOP;
@@ -1791,20 +1559,9 @@ BEGIN
   LOOP
     FETCH c_GrpFcstEventData_2 INTO in_rec;
     EXIT WHEN c_GrpFcstEventData_2%NOTFOUND;
-    out_rec.FORECAST_ID           := in_rec.FORECAST_ID ;
-    out_rec.OBJECT_ID             := in_rec.OBJECT_ID ;
-    out_rec.MONTH                 := in_rec.DAYTIME ;
-    out_rec.REASON_CODE_1         := in_rec.REASON_CODE_1 ;
-    out_rec.OIL_LOSS_VOLUME       := in_rec.OIL_LOSS_VOLUME  ;
-    out_rec.GAS_LOSS_VOLUME       := in_rec.GAS_LOSS_VOLUME  ;
-    out_rec.COND_LOSS_VOLUME      := in_rec.COND_LOSS_VOLUME  ;
-    out_rec.WATER_LOSS_VOLUME     := in_rec.WATER_LOSS_VOLUME  ;
-    out_rec.WATER_INJ_LOSS_VOLUME := in_rec.WATER_INJ_LOSS_VOLUME ;
-    out_rec.STEAM_INJ_LOSS_VOLUME := in_rec.STEAM_INJ_LOSS_VOLUME ;
-    out_rec.GAS_INJ_LOSS_VOLUME   := in_rec.GAS_INJ_LOSS_VOLUME  ;
-    out_rec.DILUENT_LOSS_VOLUME   := in_rec.DILUENT_LOSS_VOLUME  ;
-    out_rec.GAS_LIFT_LOSS_VOLUME  := in_rec.GAS_LIFT_LOSS_VOLUME  ;
-    out_rec.CO2_INJ_LOSS_VOLUME   := in_rec.CO2_INJ_LOSS_VOLUME  ;
+    out_rec := t_prodfcst_event_rec_mth(in_rec.FORECAST_ID, in_rec.SCENARIO_ID, in_rec.DAYTIME, in_rec.REASON_CODE_1, in_rec.OIL_LOSS_VOLUME, in_rec.GAS_LOSS_VOLUME,
+                                    in_rec.COND_LOSS_VOLUME, in_rec.WATER_LOSS_VOLUME, in_rec.WATER_INJ_LOSS_VOLUME, in_rec.STEAM_INJ_LOSS_VOLUME,
+                                    in_rec.GAS_INJ_LOSS_VOLUME, in_rec.DILUENT_LOSS_VOLUME, in_rec.GAS_LIFT_LOSS_VOLUME, in_rec.CO2_INJ_LOSS_VOLUME);
     PIPE ROW(out_rec);
 
   END LOOP;

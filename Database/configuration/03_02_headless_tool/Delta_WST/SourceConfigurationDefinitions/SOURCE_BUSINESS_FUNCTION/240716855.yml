@@ -8,5 +8,6 @@ properties:
   BF_CODE: SA.0002.01
   NAME: Monthly Contract Calculation - by Contract
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sa.screens/sale_calc_mth_contract
 related: {}

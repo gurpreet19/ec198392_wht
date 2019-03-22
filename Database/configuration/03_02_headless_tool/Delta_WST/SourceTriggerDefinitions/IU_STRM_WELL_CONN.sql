@@ -15,34 +15,19 @@ BEGIN
     END IF;
     :new.rev_no := 0;
 
-    EcDp_Timestamp_Utils.syncUtcDate('STREAM', :NEW.object_id, :NEW.utc_daytime, :NEW.time_zone, :NEW.daytime, :NEW.summertime_daytime);
-    EcDp_Timestamp_Utils.setProductionDay('STREAM', :NEW.object_id, :NEW.utc_daytime, :NEW.production_day);
+    EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, :NEW.daytime, :NEW.summertime_daytime);
+    EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_daytime, :NEW.production_day);
 
-    IF (:new.END_DATE IS NOT NULL AND :new.SUMMERTIME_END_DATE IS NULL) THEN
-      EcDp_Timestamp_Utils.syncUtcDate('STREAM', :NEW.object_id, :NEW.utc_end_date, :NEW.end_time_zone, :NEW.end_date, :NEW.summertime_end_date);
-      EcDp_Timestamp_Utils.setProductionDay('STREAM', :NEW.object_id, :NEW.utc_end_date, :NEW.production_day_end);
-
-    END IF;
+    EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_end_date, :NEW.end_date, :NEW.summertime_end_date);
+    EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_end_date, :NEW.production_day_end);
 
   ELSE
 
-    IF (:new.END_DATE <> :old.END_DATE OR
-       (:new.end_date IS NOT NULL and :old.END_DATE IS NULL) OR
-        :new.SUMMERTIME_END_DATE IS NULL OR
-        :new.SUMMERTIME_DAYTIME IS NULL) THEN
+    EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime, :OLD.summertime_daytime, :NEW.summertime_daytime);
+    EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.production_day, :NEW.production_day);
 
-      IF :new.SUMMERTIME_END_DATE IS NULL and :new.END_DATE IS NOT NULL THEN
-        EcDp_Timestamp_Utils.updateUtcDate('STREAM', :NEW.object_id, :NEW.end_date, :NEW.summertime_end_date, :NEW.utc_end_date);
-        EcDp_Timestamp_Utils.updateProductionDay('STREAM', :NEW.object_id, :NEW.utc_end_date, :NEW.production_day_end);
-      END IF;
-    END IF;
-
-    IF :new.END_DATE IS NULL THEN
-      :new.SUMMERTIME_END_DATE := NULL;
-      :new.PRODUCTION_DAY_END  := NULL;
-      :NEW.utc_end_date := NULL;
-      :NEW.end_time_zone := NULL;
-    END IF;
+    EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_end_date, :NEW.utc_end_date, :OLD.end_date, :NEW.end_date, :OLD.summertime_end_date, :NEW.summertime_end_date);
+    EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_end_date, :NEW.utc_end_date, :OLD.production_day_end, :NEW.production_day_end);
 
     IF Nvl(:new.record_status,'P') = Nvl(:old.record_status,'P') THEN
       IF NOT UPDATING('LAST_UPDATED_BY') THEN

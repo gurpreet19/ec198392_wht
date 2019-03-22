@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0160
   NAME: Compression and Summation factor
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/constant_standard/CLASS_NAME/CONST_STD_COMP_SUM_FAC
 related: {}

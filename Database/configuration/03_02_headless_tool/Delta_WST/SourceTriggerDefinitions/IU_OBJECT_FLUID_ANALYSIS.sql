@@ -15,10 +15,6 @@ BEGIN
 
       END IF;
 
-     IF :NEW.production_day IS NULL THEN
-        :new.production_day := EcDp_ProductionDay.getProductionDay(NULL,:NEW.object_id, :NEW.daytime);
-     END IF;
-
      IF :NEW.valid_from_date IS NULL THEN
         :NEW.valid_from_date := :NEW.production_day;
      END IF;
@@ -27,12 +23,18 @@ BEGIN
         :NEW.object_class_name := Ecdp_Objects.GetObjClassName(:NEW.object_id);
      END IF;
 
-     IF INSERTING AND :NEW.analysis_status = 'APPROVED' THEN
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, :NEW.daytime);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_daytime, :NEW.production_day);
+
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.valid_from_utc_date, :NEW.valid_from_date);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.valid_from_utc_date, :NEW.valid_from_day);
+
+      IF INSERTING AND :NEW.analysis_status = 'APPROVED' THEN
 
             IF :NEW.valid_from_date is not NULL  THEN
-              :NEW.check_unique := :NEW.analysis_type || :NEW.object_id || to_char(:NEW.valid_from_date,'dd.mm.yyyy hh24:mi:ss')|| :NEW.phase || SUBSTR(:NEW.sampling_method,1,11);
+              :NEW.check_unique := :NEW.analysis_type || :NEW.object_id || to_char(:NEW.valid_from_utc_date,'dd.mm.yyyy hh24:mi:ss')|| :NEW.phase || SUBSTR(:NEW.sampling_method,1,11);
             ELSIF :NEW.valid_from_date is NULL  THEN
-              :NEW.check_unique := :NEW.analysis_type || :NEW.object_id || to_char(:NEW.daytime,'dd.mm.yyyy hh24:mi:ss')|| :NEW.phase || SUBSTR(:NEW.sampling_method,1,11);
+              :NEW.check_unique := :NEW.analysis_type || :NEW.object_id || to_char(:NEW.utc_daytime,'dd.mm.yyyy hh24:mi:ss')|| :NEW.phase || SUBSTR(:NEW.sampling_method,1,11);
             END IF;
 
      END IF;
@@ -43,22 +45,23 @@ BEGIN
       END IF;
       :new.rev_no := 0;
     ELSE
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.production_day, :NEW.production_day);
+
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.valid_from_utc_date, :NEW.valid_from_utc_date, :OLD.valid_from_date, :NEW.valid_from_date);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.valid_from_utc_date, :NEW.valid_from_utc_date, :OLD.valid_from_day, :NEW.valid_from_day);
 
       IF :NEW.analysis_status = 'APPROVED' THEN
 
         IF :NEW.valid_from_date is not NULL THEN
-                :NEW.check_unique := :NEW.analysis_type || :NEW.object_id || to_char(:NEW.valid_from_date,'dd.mm.yyyy hh24:mi:ss')|| :NEW.phase || SUBSTR(:NEW.sampling_method,1,11);
+                :NEW.check_unique := :NEW.analysis_type || :NEW.object_id || to_char(:NEW.valid_from_utc_date,'dd.mm.yyyy hh24:mi:ss')|| :NEW.phase || SUBSTR(:NEW.sampling_method,1,11);
 
         ELSIF :NEW.valid_from_date is NULL THEN
-                :NEW.check_unique := :NEW.analysis_type || :NEW.object_id || to_char(:NEW.daytime,'dd.mm.yyyy hh24:mi:ss')|| :NEW.phase || SUBSTR(:NEW.sampling_method,1,11);
+                :NEW.check_unique := :NEW.analysis_type || :NEW.object_id || to_char(:NEW.utc_daytime,'dd.mm.yyyy hh24:mi:ss')|| :NEW.phase || SUBSTR(:NEW.sampling_method,1,11);
         END IF;
 
      ELSIF :OLD.analysis_status = 'APPROVED' THEN
            :NEW.check_unique := NULL;
-     END IF;
-
-     IF :NEW.daytime <> :OLD.daytime THEN
-         :new.production_day := Ecdp_Productionday.getProductionDay(NULL, :NEW.object_id, :NEW.daytime);
      END IF;
 
       IF Nvl(:new.record_status,'P') = Nvl(:old.record_status,'P') THEN

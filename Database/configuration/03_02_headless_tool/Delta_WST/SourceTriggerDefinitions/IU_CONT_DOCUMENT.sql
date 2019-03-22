@@ -911,6 +911,22 @@ BEGIN
 
      END IF;
 
+    IF UPDATING ('PRECEDING_DOCUMENT_KEY') THEN
+
+     IF (NVL(:NEW.PRECEDING_DOCUMENT_KEY,'X') != NVL(:OLD.PRECEDING_DOCUMENT_KEY,'X')) AND
+
+        (ec_contract_doc_version.doc_concept_code(:NEW.contract_doc_id, :NEW.daytime, '<=') NOT LIKE 'DEPENDENT%') THEN
+
+       RAISE_APPLICATION_ERROR(-20000, 'When changing or setting Preceding Document you will have to set User Action to "Delete (and recreate)" and use a Dependent type Document Setup.');
+
+     ELSIF  NVL(:new.STATUS_CODE,'X')!='FINAL' AND EcDp_Document.IsPPADocument(:new.document_key)='Y' THEN
+
+       RAISE_APPLICATION_ERROR(-20000, 'For PPA document, document status has to be FINAL only');
+
+     END IF;
+
+    END IF;
+
 
 EXCEPTION
 

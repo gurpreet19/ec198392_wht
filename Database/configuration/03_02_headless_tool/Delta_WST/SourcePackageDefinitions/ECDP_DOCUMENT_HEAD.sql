@@ -427,6 +427,13 @@ RETURN VARCHAR2;
 FUNCTION isDocumentEditable(p_document_key VARCHAR2)
 RETURN VARCHAR2;
 
+FUNCTION isReversed(p_document_key VARCHAR2)
+RETURN VARCHAR2;
+
+FUNCTION isInsertingTransactionAllowed(
+        p_document_key  VARCHAR2,
+        p_msg_ind       VARCHAR2 DEFAULT 'N')
+RETURN VARCHAR2;
 ------------------------+-----------------------------------+------------------------------------+---------------------------
 -- Fills quantities on transactions in the specified document.
 --
@@ -501,6 +508,16 @@ RETURN VARCHAR2;
 -----------------------------------------------------------------------------------------------------------------------------
 
 FUNCTION getMPDPrecDoc(p_document_key VARCHAR2)
+RETURN VARCHAR2;
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+FUNCTION GetDocumentScopeName(p_document_key VARCHAR2)
+RETURN VARCHAR2;
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+FUNCTION GetDocumentType(p_document_key VARCHAR2)
 RETURN VARCHAR2;
 
 -----------------------------------------------------------------------------------------------------------------------------
@@ -604,6 +621,11 @@ FUNCTION DeleteDocumentReport(p_report_no VARCHAR2) RETURN VARCHAR2;
 
 FUNCTION GetLastGeneratedDocumentKey(p_user_id VARCHAR2)
 RETURN VARCHAR2;
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+FUNCTION GetContractOwnerTotal(p_document_key VARCHAR2)
+RETURN NUMBER;
 
 -----------------------------------------------------------------------------------------------------------------------------
 

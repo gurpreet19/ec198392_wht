@@ -91,6 +91,26 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Deferment IS
 **          29-04-2018  leongwen ECPD-55161: Modified procedure updateEndDateForChildEvent and updateStartDateForChildEvent with additional parameters and calcDeferments to support deferment recalculation on modified dates.
 **          30.04.2018  kaushaak ECPD-54548: Journal does not capture for child events when parent is end dated even when journal rule syntax is true for the well_deferment_child class.
 **          04-05-2018  khatrnit ECPD-55592: Modified function reCalcDeferments to support calculation of event loss for deferment when equipment's end date and deferment end date are null.
+**          06.06.2018  kashisag ECPD-51971: Updated allocateGroupRateToWells to consider the loss rate at group level
+**          19-06-2018  leongwen ECPD-56917: Added procedure reuseOverlappedRecords to insert the overlapped record again to the table temp_well_deferment_alloc for recalculation after deletion or modification on the existing event overlapped with others.
+**          19-06-2018  leongwen ECPD-56917: Modified procedure insertTempWellDefermntAlloc to check and append the unique event no for recalculation only for better performance.
+**                                           Modified procedure reCalcDeferments and procedure allocWellDeferredVolume to use order by daytime asc to fix inconsistent event loss after reinserted the same event due to cursor order by event_no, the reinserted event will have larger event_no with smaller start daytime, and also
+**                                           to enhance exception handler not to suppress the exception by returning null to return the appropriate error message.
+**                                           Modified procedure updateEndDateForChildEvent and updateStartDateForChildEvent to remove the logic to execute the procedure EcDp_Deferment.insertTempWellDefermntAlloc since other ECPD-54548 has changed to update data class, and its data class trigger already performed this procedure call.
+**                                           Modified procedure allocWellDeferredVolume to fix negative event loss on the future open-ended event overlapped with the future ended event, and also
+**                                           to fix the problem of not able to calculate the modified child event with smaller start daytime or end daytime by using the trunc(p_from_date) and trunc(p_to_date) as the event days range for recalculation,
+**                                           to stop using the condition check with system_days and well_object end date, and refactor on all instances to use cur_event_day instead of cur_prod_day,
+**                                           to enhance using the specific ln_rowcount to check record exists at target allocation table instead of sharing the ln_count,
+**                                           to maintain the consistent event loss for open-ended event being alone or overlapped with other events, event loss will be calculated as at previous system date. (current system date minus one day).
+**          01-09-2018  leongwen ECPD-56917: Modified procedure allocWellDeferredVolume and added t_basis_language support to display the proper error message.
+**          04-09-2018  mehtajig ECPD-36644: Added parameter to reCalcDeferments procedure and added insert updaate statments for log table
+**          25-09-2018  leongwen ECPD-59576: Modified procedure reCalcDeferments to support the open events with deferment event loss calculation continuously for everyday when the event end date is null.
+**          01-10-2018  leongwen ECPD-59859: Modified procedure allocWellDeferredVolume to take potential rate if the loss rate is null.
+**          05-10-2018  mehtajig ECPD-36644: removing parameter from reCalcDeferments procedure and moved IUD statementes for logs into EcDp_Deferment_Log package
+**          16-10-2018  kaushaak ECPD-59504: Modified setLossRate.
+**          10-12-2018  bagdeswa ECPD-61991: Modified procedure allocateGroupRateToWells not to check against the parent_daytime
+**          21-12-2018  leongwen ECPD-56158: Implement the similar Deferment Calculation Logic from PD.0020 to Forecast Event PP.0047
+**                                           Revised the incorrect description and indentation for readability
 ****************************************************************************************/
 
 --<EC-DOC>
@@ -215,7 +235,7 @@ END findConstraintHrs ;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
--- Procedure      : approveWellEqpmDeferment
+-- Procedure      : insertWells
 -- Description    : The Procedure populate wells which are not long term closed upon creation of a new group deferment event.
 --
 -- Preconditions  :
@@ -1360,7 +1380,7 @@ IS
 BEGIN
 
   BEGIN
-    SELECT object_id,daytime,
+    SELECT object_id,day,
            oil_loss_rate,gas_loss_rate,gas_inj_loss_rate,cond_loss_rate,water_loss_rate,water_inj_loss_rate,steam_inj_loss_rate,diluent_loss_rate,gas_lift_loss_rate,
            oil_loss_mass_rate,gas_loss_mass_rate,cond_loss_mass_rate,water_loss_mass_rate,
            deferment_type,end_date
@@ -1727,15 +1747,8 @@ PROCEDURE updateEndDateForChildEvent(p_event_no NUMBER,
                                      p_iud_action VARCHAR2,
                                      p_user VARCHAR2,
                                      p_last_updated_date DATE)
-
-
 --</EC-DOC>
 IS
-  CURSOR c_defChildrecords (cp_parent_event_no NUMBER) IS
-  SELECT de.object_id, de.event_no, de.parent_event_no, de.daytime, de.end_date
-  FROM deferment_event de
-  WHERE de.parent_event_no = cp_parent_event_no
-  AND class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD');
   ld_parent_end_date DATE;
 BEGIN
 
@@ -1753,18 +1766,6 @@ BEGIN
   IF ld_parent_end_date IS NULL THEN
     RETURN;
   END IF;
-
-  FOR cur_recs IN c_defChildrecords (p_event_no) LOOP
-    EcDp_Deferment.insertTempWellDefermntAlloc(cur_recs.event_no,
-                                               cur_recs.parent_event_no,
-                                               cur_recs.daytime,
-                                               cur_recs.daytime,
-                                               p_n_end_date,
-                                               NVL(p_o_end_date,cur_recs.end_date),
-                                               'U',
-                                               p_user,
-                                               p_last_updated_date);
-  END LOOP;
 
   UPDATE dv_well_deferment_child
   SET end_date = CASE WHEN end_date < ld_parent_end_date THEN end_date ELSE ld_parent_end_date END, last_updated_by =  p_user, last_updated_date = p_last_updated_date
@@ -2048,8 +2049,6 @@ BEGIN
               w.last_updated_by      = p_user_name,
               w.last_updated_date    = to_date(lv2_last_update_date, 'YYYY-MM-DD"T"HH24:MI:SS')
           WHERE w.parent_event_no = p_event_no
-          AND w.parent_object_id =  lv2_object_id
-          AND w.parent_daytime = ld_daytime
           AND w.object_id = cur_potential.object_id
           AND w.daytime = cur_potential.daytime
           AND w.class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD');
@@ -2288,11 +2287,6 @@ PROCEDURE updateStartDateForChildEvent(p_event_no NUMBER,
                                        p_last_updated_date DATE)
 --</EC-DOC>
 IS
-  CURSOR c_defChildrecords (cp_parent_event_no NUMBER) IS
-  SELECT de.object_id, de.event_no, de.parent_event_no, de.daytime, de.end_date
-  FROM deferment_event de
-  WHERE de.parent_event_no = cp_parent_event_no
-  AND class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD');
   ld_parent_start_date DATE;
 BEGIN
   BEGIN
@@ -2305,18 +2299,6 @@ BEGIN
     WHEN OTHERS THEN
       NULL;
   END;
-
-  FOR cur_recs IN c_defChildrecords (p_event_no) LOOP
-    EcDp_Deferment.insertTempWellDefermntAlloc(cur_recs.event_no,
-                                               cur_recs.parent_event_no,
-                                               p_n_start_date,
-                                               NVL(p_o_start_date, cur_recs.daytime),
-                                               p_n_end_date,
-                                               p_o_end_date,
-                                               'U',
-                                               p_user,
-                                               p_last_updated_date);
-  END LOOP;
 
   UPDATE dv_well_deferment_child
   SET daytime = CASE WHEN daytime > ld_parent_start_date THEN daytime ELSE ld_parent_start_date END, last_updated_by =  p_user, last_updated_date = p_last_updated_date
@@ -2349,11 +2331,26 @@ END updateStartDateForChildEvent;
 PROCEDURE insertTempWellDefermntAlloc(p_event_no NUMBER, p_parent_event_no NUMBER DEFAULT NULL, p_n_daytime DATE, p_o_daytime DATE DEFAULT NULL, p_n_end_date DATE DEFAULT NULL, p_o_end_date DATE DEFAULT NULL, p_iud_action VARCHAR2, p_user_name VARCHAR2, p_last_updated_date date)
 --</EC-DOC>
 IS
+  CURSOR cur_sameRow IS
+  SELECT COUNT(*) AS sameRowCnt
+  FROM TEMP_WELL_DEFERMENT_ALLOC a
+  WHERE NVL(a.event_no,0)        = NVL(p_event_no,0)
+  AND NVL(a.parent_event_no,0)   = NVL(p_parent_event_no,0)
+  AND NVL(a.new_daytime, TO_DATE('1900-01-01', 'YYYY-MM-DD'))  = NVL(p_n_daytime, TO_DATE('1900-01-01', 'YYYY-MM-DD'))
+  AND NVL(a.old_daytime, TO_DATE('1900-01-01', 'YYYY-MM-DD'))  = NVL(p_o_daytime, TO_DATE('1900-01-01', 'YYYY-MM-DD'))
+  AND NVL(a.new_end_date, TO_DATE('2100-01-01', 'YYYY-MM-DD')) = NVL(p_n_end_date, TO_DATE('2100-01-01', 'YYYY-MM-DD'))
+  AND NVL(a.old_end_date, TO_DATE('2100-01-01', 'YYYY-MM-DD')) = NVL(p_o_end_date, TO_DATE('2100-01-01', 'YYYY-MM-DD'))
+  AND a.iud_action = p_iud_action;
+  ln_rowCount    NUMBER;
 BEGIN
-
-  INSERT INTO TEMP_WELL_DEFERMENT_ALLOC (event_no, parent_event_no, new_daytime, old_daytime, new_end_date, old_end_date, iud_action, last_updated_by, last_updated_date)
-  VALUES (p_event_no, p_parent_event_no, p_n_daytime, p_o_daytime, p_n_end_date, p_o_end_date, p_iud_action, p_user_name, p_last_updated_date);
-
+  -- This is to skip the duplicate same event to be placed in the temp_well_deferment_alloc for recalculation, and to improve the performance on calculations.
+  FOR rowCur IN cur_sameRow LOOP
+    ln_rowCount := rowCur.sameRowCnt;
+  END LOOP;
+  IF NVL(ln_rowCount,0) = 0 THEN
+    INSERT INTO TEMP_WELL_DEFERMENT_ALLOC (event_no, parent_event_no, new_daytime, old_daytime, new_end_date, old_end_date, iud_action, last_updated_by, last_updated_date)
+    VALUES (p_event_no, p_parent_event_no, p_n_daytime, p_o_daytime, p_n_end_date, p_o_end_date, p_iud_action, p_user_name, p_last_updated_date);
+  END IF;
 END insertTempWellDefermntAlloc;
 
 --<EC-DOC>
@@ -2371,14 +2368,14 @@ END insertTempWellDefermntAlloc;
 -- Behaviour      :
 ---------------------------------------------------------------------------------------------------
 --</EC-DOC>
-PROCEDURE reCalcDeferments(p_object_id VARCHAR2 DEFAULT NULL,p_nav_group_type VARCHAR2 DEFAULT NULL,p_nav_parent_class_name VARCHAR2 DEFAULT NULL,p_deferment_version VARCHAR2 DEFAULT NULL ) IS
+PROCEDURE reCalcDeferments(p_object_id VARCHAR2 DEFAULT NULL,p_nav_group_type VARCHAR2 DEFAULT NULL,p_nav_parent_class_name VARCHAR2 DEFAULT NULL,p_deferment_version VARCHAR2 DEFAULT NULL) IS
   -- Query the TEMP_WELL_DEFERMEMT_ALLOC table for all admendments on deferment_event table for all IUD actions
   CURSOR c_temp_alloc_recs IS
   SELECT a.event_no,
          LEAST(a.new_daytime, NVL(a.old_daytime, a.new_daytime)) daytime,
          GREATEST(a.new_end_date, NVL(a.old_end_date, a.new_end_date)) end_date
   FROM TEMP_WELL_DEFERMENT_ALLOC a
-  ORDER BY a.event_no ASC;
+  ORDER BY daytime ASC;
 
   -- exclude the deferments belonged to fcty_class_2 when fcty_class_1 being used to calculate deferments
   -- exclude the deferments belonged to operator_route when collection_point being used to calculate deferments
@@ -2419,7 +2416,7 @@ PROCEDURE reCalcDeferments(p_object_id VARCHAR2 DEFAULT NULL,p_nav_group_type VA
                                                    c.DAYTIME)
      AND c.class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD')
     )
-  ORDER BY a.event_no ASC;
+  ORDER BY daytime ASC;
 
   CURSOR c2_temp_alloc_recs_object_id (cp_nav_group_type VARCHAR2, cp_parent_classname VARCHAR2 ) IS
   SELECT a.event_no,
@@ -2446,11 +2443,16 @@ PROCEDURE reCalcDeferments(p_object_id VARCHAR2 DEFAULT NULL,p_nav_group_type VA
                                 )
         )
     )
-  ORDER BY a.event_no ASC;
+  ORDER BY daytime ASC;
 
   lv2_nav_classname    VARCHAR2(32);
   lv2_grandparent_classname VARCHAR2(32);
+  ln_run_no NUMBER:=ECDP_SYSTEM_KEY.assignNextNumber('CALC_DEFERMENT_LOG');
+  ld_start_date DATE;
+  ld_end_date DATE;
 BEGIN
+  EcDp_Deferment_Log.getStartEndDate(p_object_id, p_nav_group_type, p_nav_parent_class_name, p_deferment_version, ld_start_date, ld_end_date);
+  EcDp_Deferment_Log.insertStatusLog(ln_run_no, ld_start_date, ld_end_date);
   IF (p_object_id IS NOT NULL) THEN
     --p_object_id is the last navigator object_id selected at the well deferment screen.
     IF ecdp_objects.GetObjClassName(p_object_id) = 'WELL' THEN
@@ -2468,7 +2470,7 @@ BEGIN
         IF mycur.event_no IS NOT NULL THEN
           -- Leave all the validations to be done inside the calcDeferments procedure as a single control area.
           EcDp_Deferment.calcDeferments(mycur.event_no, NULL, mycur.daytime, mycur.end_date, p_object_id, p_deferment_version, NULL, NULL );
-          DELETE FROM TEMP_WELL_DEFERMENT_ALLOC where event_no=mycur.event_no;
+          DELETE FROM TEMP_WELL_DEFERMENT_ALLOC WHERE event_no=mycur.event_no and exists (select 1 from deferment_event e where e.event_no=mycur.event_no and e.end_date is not null);
         END IF;
       END LOOP;
     ELSE -- (when classname rank is higher than immediate parent object FCTY_CLASS_1)
@@ -2476,7 +2478,7 @@ BEGIN
         IF mycur.event_no IS NOT NULL THEN
           -- Leave all the validations to be done inside the calcDeferments procedure as a single control area.
           EcDp_Deferment.calcDeferments(mycur.event_no, NULL, mycur.daytime, mycur.end_date, p_object_id, p_deferment_version, p_nav_group_type, lv2_nav_classname );
-          DELETE FROM TEMP_WELL_DEFERMENT_ALLOC where event_no=mycur.event_no;
+          DELETE FROM TEMP_WELL_DEFERMENT_ALLOC WHERE event_no=mycur.event_no and exists (select 1 from deferment_event e where e.event_no=mycur.event_no and e.end_date is not null);
         END IF;
       END LOOP;
     END IF;
@@ -2485,12 +2487,14 @@ BEGIN
       IF mycur.event_no IS NOT NULL THEN
          -- Leave all the validations to be done inside the calcDeferments procedure as a single control area.
         EcDp_Deferment.calcDeferments(mycur.event_no, NULL, mycur.daytime, mycur.end_date, p_object_id, p_deferment_version, NULL, NULL );
-        DELETE FROM TEMP_WELL_DEFERMENT_ALLOC where event_no=mycur.event_no;
+        DELETE FROM TEMP_WELL_DEFERMENT_ALLOC WHERE event_no=mycur.event_no and exists (select 1 from deferment_event e where e.event_no=mycur.event_no and e.end_date is not null);
       END IF;
     END LOOP;
   END IF;
-EXCEPTION WHEN OTHERS THEN
-  NULL;
+  EcDp_Deferment_Log.updateStatusLog(ln_run_no,CASE ld_start_date WHEN '01-JAN-1900' THEN 'NO_CALC' ELSE 'SUCCESS' END);
+  EXCEPTION WHEN OTHERS THEN
+  EcDp_Deferment_Log.updateStatusLog(ln_run_no,'FAILURE');
+  RAISE_APPLICATION_ERROR(-20000,'An error was encountered calculating the deferment event loss - ' || SQLCODE || ' -ERROR- ' || SQLERRM);
 END reCalcDeferments;
 
 --<EC-DOC>
@@ -2724,25 +2728,15 @@ PROCEDURE allocWellDeferredVolume(p_object_id VARCHAR2, p_from_date DATE, p_to_d
   AND wd.event_type = 'DOWN'
   AND wd.class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD');
 
-  -- get production_days between p_from_date and p_to_date valid for the well in a sorted order
-  CURSOR c_production_days IS
-  WITH continuousDates AS
-    (SELECT p_from_date - 1 + LEVEL AS daytime FROM CTRL_DB_VERSION
-     CONNECT BY LEVEL <= (p_to_date - p_from_date)+1
-     ),
-    EC_system_days AS
-    (SELECT sd.daytime
-     FROM system_days sd, well w
-     WHERE w.object_id = p_object_id
-     AND sd.daytime >= w.start_date AND sd.daytime < NVL(w.end_date, sd.daytime + 1)
-     AND sd.daytime >= p_from_date AND sd.daytime <= p_to_date
-     ORDER BY sd.daytime ASC
-    )
-  SELECT continuousDates.daytime
-  FROM continuousDates LEFT JOIN EC_system_days
-  ON continuousDates.daytime = EC_system_days.daytime;
+  -- get production_days between trunc(p_from_date) and trunc(p_to_date) valid for the well in a sorted order
+  CURSOR c_event_days IS
+  SELECT trunc(p_from_date) - 1 + LEVEL AS daytime
+  FROM CTRL_DB_VERSION
+  WHERE DB_VERSION = 1
+  CONNECT BY LEVEL <= (trunc(p_to_date) - trunc(p_from_date))+1;
 
   ln_count NUMBER;
+  ln_rowcount NUMBER;
   i NUMBER;
   ln_duration NUMBER;
   ld_start_daytime DATE;
@@ -2858,8 +2852,8 @@ BEGIN
 
   lv2_open_end_event:=NVL(ecdp_ctrl_property.getSystemProperty('DEFERMENT_OPEN_EVENT_CALC',TRUNC(Ecdp_Timestamp.getCurrentSysdate())),'Y');
   -- loop all days
-  FOR cur_prod_day IN c_production_days LOOP -- this cursor loops all production days for the whole period.
-    ld_start_daytime := Ecdp_Productionday.getProductionDayStart('WELL',p_object_id,cur_prod_day.daytime);
+  FOR cur_event_day IN c_event_days LOOP -- this cursor loops all production days for the whole period.
+    ld_start_daytime := Ecdp_Productionday.getProductionDayStart('WELL',p_object_id,cur_event_day.daytime);
     ld_in_fmt_start_daytime:='to_date('''||TO_CHAR(ld_start_daytime,'YYYY-MM-DD"T"HH24:MI:SS')||''' , ''YYYY-MM-DD"T"HH24:MI:SS'')';
 	  ld_in_fmt_end_date:='to_date('''||TO_CHAR(Ecdp_Timestamp.getCurrentSysdate,'YYYY-MM-DD"T"HH24:MI')||''' , ''YYYY-MM-DD"T"HH24:MI'')';
 
@@ -2888,15 +2882,15 @@ BEGIN
         last_updated_by = Nvl(ecdp_context.getAppUser(),USER),
         rev_no = rev_no+1
     WHERE object_id = p_object_id
-    AND daytime = cur_prod_day.daytime;
+    AND daytime = cur_event_day.daytime;
 
     -- check if there are any deferment event for the production_day. If not, we dont need to access well potential etc.
     SELECT COUNT(*)
     INTO ln_count
     FROM deferment_event wd
     WHERE wd.object_id = p_object_id
-    AND (wd.day = cur_prod_day.daytime OR
-        (wd.day < cur_prod_day.daytime AND nvl(wd.end_day, cur_prod_day.daytime) >= cur_prod_day.daytime ) )
+    AND (wd.day = cur_event_day.daytime OR
+        (wd.day < cur_event_day.daytime AND nvl(wd.end_day, cur_event_day.daytime) >= cur_event_day.daytime ) )
     AND nvl(wd.end_date,ld_start_daytime+1) <> ld_start_daytime -- exclude events which ends exact at the beginning of the day we calculate. End_daytime is exclusive
     AND class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD');
 
@@ -2904,8 +2898,8 @@ BEGIN
     IF ln_count > 0 THEN
 
       --Handle daylight saving for deferment event
-      ln_getDayHoursTemp:=Ecdp_Timestamp.getNumHours('WELL',p_object_id,cur_prod_day.daytime);
-      IF (ec_ctrl_system_attribute.attribute_text(cur_prod_day.daytime, 'ADJUST_POTENTIAL_DST','<=')= 'Y') THEN
+      ln_getDayHoursTemp:=Ecdp_Timestamp.getNumHours('WELL',p_object_id,cur_event_day.daytime);
+      IF (ec_ctrl_system_attribute.attribute_text(cur_event_day.daytime, 'ADJUST_POTENTIAL_DST','<=')= 'Y') THEN
         lv_daylight:=1;
       END IF;
 
@@ -2917,7 +2911,7 @@ BEGIN
 
       ln_ctrl_duration := ln_getDayHours;
 
-      lr_well_version := ec_well_version.row_by_rel_operator(p_object_id, cur_prod_day.daytime, '<=');
+      lr_well_version := ec_well_version.row_by_rel_operator(p_object_id, cur_event_day.daytime, '<=');
       -- initialise lr_potential
       lr_potential.oil := NULL; lr_potential.gas := NULL; lr_potential.water := NULL; lr_potential.cond := NULL;
       lr_potential.diluent := NULL; lr_potential.gas_lift := NULL;
@@ -2928,77 +2922,77 @@ BEGIN
       -- depending on type of well and configuration of well, get well potentials
       -- dont access well potential for a phase that is not configured for performance reasons
       IF lr_well_version.isOilProducer = 'Y' AND lr_well_version.potential_method IS NOT NULL THEN
-        lr_potential.oil := (ecbp_well_potential.findOilProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
-        lr_potential.gas := (ecbp_well_potential.findGasProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
-        lr_potential.water := (ecbp_well_potential.findWatProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.oil := (ecbp_well_potential.findOilProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.gas := (ecbp_well_potential.findGasProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.water := (ecbp_well_potential.findWatProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.oil := lr_potential.oil;
         lr_remain_pot.gas := lr_potential.gas;
         lr_remain_pot.water := lr_potential.water;
       END IF;
 
       IF lr_well_version.isOilProducer = 'Y' AND lr_well_version.potential_mass_method IS NOT NULL THEN
-        lr_potential.oil_mass    := (ecbp_well_potential.findOilMassProdPotential(p_object_id, cur_prod_day.daytime)  *24)/ln_getDayHoursTemp;
-        lr_potential.gas_mass    := (ecbp_well_potential.findGasMassProdPotential(p_object_id, cur_prod_day.daytime)  *24)/ln_getDayHoursTemp;
-        lr_potential.water_mass  := (ecbp_well_potential.findWaterMassProdPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.oil_mass    := (ecbp_well_potential.findOilMassProdPotential(p_object_id, cur_event_day.daytime)  *24)/ln_getDayHoursTemp;
+        lr_potential.gas_mass    := (ecbp_well_potential.findGasMassProdPotential(p_object_id, cur_event_day.daytime)  *24)/ln_getDayHoursTemp;
+        lr_potential.water_mass  := (ecbp_well_potential.findWaterMassProdPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.oil_mass   := lr_potential.oil_mass;
         lr_remain_pot.gas_mass   := lr_potential.gas_mass;
         lr_remain_pot.water_mass := lr_potential.water_mass;
       END IF;
 
       IF lr_well_version.isGasProducer = 'Y' AND lr_well_version.potential_method IS NOT NULL THEN
-        lr_potential.cond := (ecbp_well_potential.findConProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
-        lr_potential.gas := (ecbp_well_potential.findGasProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
-        lr_potential.water := (ecbp_well_potential.findWatProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.cond := (ecbp_well_potential.findConProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.gas := (ecbp_well_potential.findGasProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.water := (ecbp_well_potential.findWatProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.cond := lr_potential.cond;
         lr_remain_pot.gas := lr_potential.gas;
         lr_remain_pot.water := lr_potential.water;
       END IF;
 
       IF lr_well_version.isGasProducer = 'Y' AND lr_well_version.potential_mass_method IS NOT NULL THEN
-        lr_potential.cond_mass   := (ecbp_well_potential.findCondMassProdPotential(p_object_id, cur_prod_day.daytime) *24)/ln_getDayHoursTemp;
-        lr_potential.gas_mass    := (ecbp_well_potential.findGasMassProdPotential(p_object_id, cur_prod_day.daytime)  *24)/ln_getDayHoursTemp;
-        lr_potential.water_mass  := (ecbp_well_potential.findWaterMassProdPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.cond_mass   := (ecbp_well_potential.findCondMassProdPotential(p_object_id, cur_event_day.daytime) *24)/ln_getDayHoursTemp;
+        lr_potential.gas_mass    := (ecbp_well_potential.findGasMassProdPotential(p_object_id, cur_event_day.daytime)  *24)/ln_getDayHoursTemp;
+        lr_potential.water_mass  := (ecbp_well_potential.findWaterMassProdPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.cond_mass  := lr_potential.cond_mass;
         lr_remain_pot.gas_mass   := lr_potential.gas_mass;
         lr_remain_pot.water_mass := lr_potential.water_mass;
       END IF;
 
       IF lr_well_version.isCondensateProducer = 'Y' AND lr_well_version.potential_method IS NOT NULL THEN
-        lr_potential.cond := (ecbp_well_potential.findConProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
-        lr_potential.gas := (ecbp_well_potential.findGasProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
-        lr_potential.water := (ecbp_well_potential.findWatProductionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.cond := (ecbp_well_potential.findConProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.gas := (ecbp_well_potential.findGasProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.water := (ecbp_well_potential.findWatProductionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.cond := lr_potential.cond;
         lr_remain_pot.gas := lr_potential.gas;
         lr_remain_pot.water := lr_potential.water;
       END IF;
 
       IF lr_well_version.isCondensateProducer = 'Y' AND lr_well_version.potential_mass_method IS NOT NULL THEN
-        lr_potential.cond_mass   := (ecbp_well_potential.findCondMassProdPotential(p_object_id, cur_prod_day.daytime) *24)/ln_getDayHoursTemp;
-        lr_potential.gas_mass    := (ecbp_well_potential.findGasMassProdPotential(p_object_id, cur_prod_day.daytime)  *24)/ln_getDayHoursTemp;
-        lr_potential.water_mass  := (ecbp_well_potential.findWaterMassProdPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.cond_mass   := (ecbp_well_potential.findCondMassProdPotential(p_object_id, cur_event_day.daytime) *24)/ln_getDayHoursTemp;
+        lr_potential.gas_mass    := (ecbp_well_potential.findGasMassProdPotential(p_object_id, cur_event_day.daytime)  *24)/ln_getDayHoursTemp;
+        lr_potential.water_mass  := (ecbp_well_potential.findWaterMassProdPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.cond_mass  := lr_potential.cond_mass;
         lr_remain_pot.gas_mass   := lr_potential.gas_mass;
         lr_remain_pot.water_mass := lr_potential.water_mass;
       END IF;
 
       IF lr_well_version.isGasInjector = 'Y' THEN
-        lr_potential.gas_inj := (ecbp_well_potential.findGasInjectionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.gas_inj := (ecbp_well_potential.findGasInjectionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.gas_inj := lr_potential.gas_inj;
       END IF;
       IF lr_well_version.isWaterInjector = 'Y' THEN
-        lr_potential.water_inj := (ecbp_well_potential.findWatInjectionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.water_inj := (ecbp_well_potential.findWatInjectionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.water_inj := lr_potential.water_inj;
       END IF;
       IF lr_well_version.isSteamInjector = 'Y' THEN
-        lr_potential.steam_inj := (ecbp_well_potential.findSteamInjectionPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.steam_inj := (ecbp_well_potential.findSteamInjectionPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.steam_inj := lr_potential.steam_inj;
       END IF;
       IF lr_well_version.gas_lift_method IS NOT NULL THEN
-        lr_potential.gas_lift := (ecbp_well_potential.findGasLiftPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.gas_lift := (ecbp_well_potential.findGasLiftPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.gas_lift := lr_potential.gas_lift;
       END IF;
       IF lr_well_version.diluent_method IS NOT NULL THEN
-        lr_potential.diluent := (ecbp_well_potential.findDiluentPotential(p_object_id, cur_prod_day.daytime)*24)/ln_getDayHoursTemp;
+        lr_potential.diluent := (ecbp_well_potential.findDiluentPotential(p_object_id, cur_event_day.daytime)*24)/ln_getDayHoursTemp;
         lr_remain_pot.diluent := lr_potential.diluent;
       END IF;
 
@@ -3046,11 +3040,11 @@ BEGIN
         FROM deferment_event wd
         WHERE wd.object_id = '''||p_object_id||'''
         AND wd.class_name IN (''WELL_DEFERMENT'',''WELL_DEFERMENT_CHILD'')
-        AND (wd.day = '''||cur_prod_day.daytime||''' OR
-            (wd.day < '''||cur_prod_day.daytime||''' AND (wd.end_day IS NULL OR wd.end_day >= '''|| cur_prod_day.daytime||''')))
-        ORDER BY sort_event_type ASC, start_date ASC, sort_scheduled ASC, sort_deferment_type ASC, event_no ASC';
+        AND (wd.day = '''||cur_event_day.daytime||''' OR
+            (wd.day < '''||cur_event_day.daytime||''' AND (wd.end_day IS NULL OR wd.end_day >= '''|| cur_event_day.daytime||''')))
+        ORDER BY sort_event_type ASC, wd.daytime ASC, sort_scheduled ASC, sort_deferment_type ASC';
 
-        FOR cur_off_def_cnt IN c_off_def_cnt_open(cur_prod_day.daytime) LOOP
+        FOR cur_off_def_cnt IN c_off_def_cnt_open(cur_event_day.daytime) LOOP
             ln_off_def_cnt := cur_off_def_cnt.off_def_cnt;
         END LOOP;
 
@@ -3083,10 +3077,10 @@ BEGIN
         FROM deferment_event wd
         WHERE wd.object_id = '''||p_object_id||'''
         AND wd.class_name IN (''WELL_DEFERMENT'',''WELL_DEFERMENT_CHILD'')
-        AND wd.day <= '''||cur_prod_day.daytime||''' AND  wd.end_day >= '''|| cur_prod_day.daytime||'''
-        ORDER BY sort_event_type ASC, start_date ASC, sort_scheduled ASC, sort_deferment_type ASC, event_no ASC';
+        AND wd.day <= '''||cur_event_day.daytime||''' AND  wd.end_day >= '''|| cur_event_day.daytime||'''
+        ORDER BY sort_event_type ASC, wd.daytime ASC, sort_scheduled ASC, sort_deferment_type ASC';
 
-        FOR cur_off_def_cnt IN c_off_def_cnt_closed(cur_prod_day.daytime) LOOP
+        FOR cur_off_def_cnt IN c_off_def_cnt_closed(cur_event_day.daytime) LOOP
             ln_off_def_cnt := cur_off_def_cnt.off_def_cnt;
         END LOOP;
       END IF;
@@ -3098,6 +3092,10 @@ BEGIN
       LOOP
         FETCH rc_deferment INTO rec_deferment_event;
         EXIT WHEN rc_deferment%NOTFOUND;
+        IF (rec_deferment_event.end_date <= rec_deferment_event.start_date) OR
+           (rec_deferment_event.end_day IS NULL and cur_event_day.daytime = TRUNC(Ecdp_Timestamp.getCurrentSysdate)) THEN
+          GOTO SKIP_CALC;
+        END IF;
         i:=i+1;
         lr_defer_event(i).event_no := rec_deferment_event.event_no;
         lr_defer_event(i).daytime := rec_deferment_event.start_date;
@@ -3160,19 +3158,19 @@ BEGIN
         END IF;
 
         --loss rate should be less than of equal to volume of potential as well can not produce more than potential.
-        lr_defer_event(i).oil_loss_rate := LEAST(NVL(lr_potential.oil,999999),rec_deferment_event.oil_loss_rate);
-        lr_defer_event(i).gas_loss_rate := LEAST(NVL(lr_potential.gas,999999),rec_deferment_event.gas_loss_rate);
-        lr_defer_event(i).water_loss_rate := LEAST(NVL(lr_potential.water,999999),rec_deferment_event.water_loss_rate);
-        lr_defer_event(i).cond_loss_rate := LEAST(NVL(lr_potential.cond,999999),rec_deferment_event.cond_loss_rate);
-        lr_defer_event(i).diluent_loss_rate := LEAST(NVL(lr_potential.diluent,999999),rec_deferment_event.diluent_loss_rate);
-        lr_defer_event(i).gas_lift_loss_rate := LEAST(NVL(lr_potential.gas_lift,999999),rec_deferment_event.gas_lift_loss_rate);
-        lr_defer_event(i).water_inj_loss_rate := LEAST(NVL(lr_potential.water_inj,999999),rec_deferment_event.water_inj_loss_rate);
-        lr_defer_event(i).gas_inj_loss_rate := LEAST(NVL(lr_potential.gas_inj,999999),rec_deferment_event.gas_inj_loss_rate);
-        lr_defer_event(i).steam_inj_loss_rate := LEAST(NVL(lr_potential.steam_inj,999999),rec_deferment_event.steam_inj_loss_rate);
-        lr_defer_event(i).oil_loss_mass_rate := LEAST(NVL(lr_potential.oil_mass,999999),rec_deferment_event.oil_loss_mass_rate);
-        lr_defer_event(i).gas_loss_mass_rate := LEAST(NVL(lr_potential.gas_mass,999999),rec_deferment_event.gas_loss_mass_rate);
-        lr_defer_event(i).cond_loss_mass_rate := LEAST(NVL(lr_potential.cond_mass,999999),rec_deferment_event.cond_loss_mass_rate);
-        lr_defer_event(i).water_loss_mass_rate := LEAST(NVL(lr_potential.water_mass,999999),rec_deferment_event.water_loss_mass_rate);
+        lr_defer_event(i).oil_loss_rate := LEAST(NVL(lr_potential.oil,999999),NVL(rec_deferment_event.oil_loss_rate,lr_potential.oil));
+        lr_defer_event(i).gas_loss_rate := LEAST(NVL(lr_potential.gas,999999),NVL(rec_deferment_event.gas_loss_rate,lr_potential.gas));
+        lr_defer_event(i).water_loss_rate := LEAST(NVL(lr_potential.water,999999),NVL(rec_deferment_event.water_loss_rate,lr_potential.water));
+        lr_defer_event(i).cond_loss_rate := LEAST(NVL(lr_potential.cond,999999),NVL(rec_deferment_event.cond_loss_rate,lr_potential.cond));
+        lr_defer_event(i).diluent_loss_rate := LEAST(NVL(lr_potential.diluent,999999),NVL(rec_deferment_event.diluent_loss_rate,lr_potential.diluent));
+        lr_defer_event(i).gas_lift_loss_rate := LEAST(NVL(lr_potential.gas_lift,999999),NVL(rec_deferment_event.gas_lift_loss_rate,lr_potential.gas_lift));
+        lr_defer_event(i).water_inj_loss_rate := LEAST(NVL(lr_potential.water_inj,999999),NVL(rec_deferment_event.water_inj_loss_rate,lr_potential.water_inj));
+        lr_defer_event(i).gas_inj_loss_rate := LEAST(NVL(lr_potential.gas_inj,999999),NVL(rec_deferment_event.gas_inj_loss_rate,lr_potential.gas_inj));
+        lr_defer_event(i).steam_inj_loss_rate := LEAST(NVL(lr_potential.steam_inj,999999),NVL(rec_deferment_event.steam_inj_loss_rate,lr_potential.steam_inj));
+        lr_defer_event(i).oil_loss_mass_rate := LEAST(NVL(lr_potential.oil_mass,999999),NVL(rec_deferment_event.oil_loss_mass_rate,lr_potential.oil_mass));
+        lr_defer_event(i).gas_loss_mass_rate := LEAST(NVL(lr_potential.gas_mass,999999),NVL(rec_deferment_event.gas_loss_mass_rate,lr_potential.gas_mass));
+        lr_defer_event(i).cond_loss_mass_rate := LEAST(NVL(lr_potential.cond_mass,999999),NVL(rec_deferment_event.cond_loss_mass_rate,lr_potential.cond_mass));
+        lr_defer_event(i).water_loss_mass_rate := LEAST(NVL(lr_potential.water_mass,999999),NVL(rec_deferment_event.water_loss_mass_rate,lr_potential.water_mass));
 
         -- calculate how much loss the event has for the current period
         -- also check that we dont overallocate loss to the event, max loss = potential
@@ -3192,7 +3190,7 @@ BEGIN
                 --example 1st event is from 00:00 to 18:00 (off event)
                 --and current event is from 16:00 to 23:00 (low event)
                 --then non-overlapping hours are 18:01 to 23:00 i.e total hours are 5 hours.
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.oil IS NOT NULL THEN--Block E--if potential is NULL then no need to check loss vol for maximum loss.
                   --Remaining potential of well >= loss volume of current event
                   IF lr_remain_pot.oil >= (lr_defer_event(i).oil_loss_rate * ln_constraint_hrs) THEN
@@ -3262,7 +3260,7 @@ BEGIN
               ln_gas_down_duration := ln_gas_down_duration + ln_duration;
             ELSE--Block A
               IF ln_gas_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event );
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event );
                 IF lr_potential.gas IS NOT NULL THEN--Block E
                   IF lr_remain_pot.gas >= (lr_defer_event(i).gas_loss_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_gas_vol + (lr_defer_event(i).gas_loss_rate * ln_constraint_hrs) > lr_potential.gas THEN
@@ -3315,7 +3313,7 @@ BEGIN
               ln_water_down_duration := ln_water_down_duration + ln_duration;
             ELSE--Block A
               IF ln_water_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.water IS NOT NULL THEN--Block E
                   IF lr_remain_pot.water >= (lr_defer_event(i).water_loss_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_water_vol + (lr_defer_event(i).water_loss_rate * ln_constraint_hrs) > lr_potential.water THEN
@@ -3368,7 +3366,7 @@ BEGIN
               ln_cond_down_duration := ln_cond_down_duration + ln_duration;
             ELSE--Block A
               IF ln_cond_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.cond IS NOT NULL THEN--Block E
                   IF lr_remain_pot.cond >= (lr_defer_event(i).cond_loss_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_cond_vol + (lr_defer_event(i).cond_loss_rate * ln_constraint_hrs) > lr_potential.cond THEN
@@ -3421,7 +3419,7 @@ BEGIN
               ln_diluent_down_duration := ln_diluent_down_duration + ln_duration;
             ELSE--Block A
               IF ln_diluent_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.diluent IS NOT NULL THEN--Block E
                   IF lr_remain_pot.diluent >= (lr_defer_event(i).diluent_loss_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_diluent_vol + (lr_defer_event(i).diluent_loss_rate * ln_constraint_hrs) > lr_potential.diluent THEN
@@ -3474,7 +3472,7 @@ BEGIN
               ln_gas_lift_down_duration := ln_gas_lift_down_duration + ln_duration;
             ELSE--Block A
               IF ln_gas_lift_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.gas_lift IS NOT NULL THEN--Block E
                   IF lr_remain_pot.gas_lift >= (lr_defer_event(i).gas_lift_loss_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_gas_lift_vol + (lr_defer_event(i).gas_lift_loss_rate * ln_constraint_hrs) > lr_potential.gas_lift THEN
@@ -3527,7 +3525,7 @@ BEGIN
               ln_water_inj_down_duration := ln_water_inj_down_duration + ln_duration;
             ELSE--Block A
               IF ln_water_inj_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.water_inj IS NOT NULL THEN--Block E
                   IF lr_remain_pot.water_inj >= (lr_defer_event(i).water_inj_loss_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_water_inj_vol + (lr_defer_event(i).water_inj_loss_rate * ln_constraint_hrs) > lr_potential.water_inj THEN
@@ -3580,7 +3578,7 @@ BEGIN
               ln_gas_inj_down_duration := ln_gas_inj_down_duration + ln_duration;
             ELSE--Block A
               IF ln_gas_inj_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.gas_inj IS NOT NULL THEN--Block E
                   IF lr_remain_pot.gas_inj >= (lr_defer_event(i).gas_inj_loss_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_gas_inj_vol + (lr_defer_event(i).gas_inj_loss_rate * ln_constraint_hrs) > lr_potential.gas_inj THEN
@@ -3633,7 +3631,7 @@ BEGIN
               ln_steam_inj_down_duration := ln_steam_inj_down_duration + ln_duration;
             ELSE--Block A
               IF ln_steam_inj_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.steam_inj IS NOT NULL THEN--Block E
                   IF lr_remain_pot.steam_inj >= (lr_defer_event(i).steam_inj_loss_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_steam_inj_vol + (lr_defer_event(i).steam_inj_loss_rate * ln_constraint_hrs) > lr_potential.steam_inj THEN
@@ -3691,7 +3689,7 @@ BEGIN
                 --example 1st event is from 00:00 to 18:00 (off event)
                 --and current event is from 16:00 to 23:00 (low event)
                 --then non-overlapping hours are 18:01 to 23:00 i.e total hours are 5 hours.
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.oil_mass IS NOT NULL THEN--Block E--if potential is NULL then no need to check loss vol for maximum loss.
                   --Remaining potential of well >= loss mass of current event
                   IF lr_remain_pot.oil_mass >= (lr_defer_event(i).oil_loss_mass_rate * ln_constraint_hrs) THEN
@@ -3761,7 +3759,7 @@ BEGIN
               ln_gas_mass_down_duration := ln_gas_mass_down_duration + ln_duration;
             ELSE--Block A
               IF ln_gas_mass_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event );
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event );
                 IF lr_potential.gas_mass IS NOT NULL THEN--Block E
                   IF lr_remain_pot.gas_mass >= (lr_defer_event(i).gas_loss_mass_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_gas_mass + (lr_defer_event(i).gas_loss_mass_rate * ln_constraint_hrs) > lr_potential.gas_mass THEN
@@ -3814,7 +3812,7 @@ BEGIN
               ln_cond_mass_down_duration := ln_cond_mass_down_duration + ln_duration;
             ELSE--Block A
               IF ln_cond_mass_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.cond_mass IS NOT NULL THEN--Block E
                   IF lr_remain_pot.cond_mass >= (lr_defer_event(i).cond_loss_mass_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_cond_mass + (lr_defer_event(i).cond_loss_mass_rate * ln_constraint_hrs) > lr_potential.cond_mass THEN
@@ -3867,7 +3865,7 @@ BEGIN
               ln_water_mass_down_duration := ln_water_mass_down_duration + ln_duration;
             ELSE--Block A
               IF ln_water_mass_down_duration < 1 THEN--Block B
-                ln_constraint_hrs:=findConstraintHrs(cur_prod_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
+                ln_constraint_hrs:=findConstraintHrs(cur_event_day.daytime, ld_start_daytime,p_object_id,rec_deferment_event.end_date,rec_deferment_event.start_date,lv2_open_end_event);
                 IF lr_potential.water_mass IS NOT NULL THEN--Block E
                   IF lr_remain_pot.water_mass >= (lr_defer_event(i).water_loss_mass_rate * ln_constraint_hrs) THEN
                     IF ln_alloc_loss_water_mass + (lr_defer_event(i).water_loss_mass_rate * ln_constraint_hrs) > lr_potential.water_mass THEN
@@ -3910,47 +3908,54 @@ BEGIN
           ln_alloc_loss_water_mass := ln_alloc_loss_water_mass + lr_defer_event(i).loss_water_mass;
         END IF;--Block C
 
-        -- Write to database
-        SELECT COUNT(*) INTO ln_count
-        FROM WELL_DAY_DEFER_ALLOC wda
-        WHERE wda.object_id=p_object_id
-        AND wda.daytime=cur_prod_day.daytime
-        AND wda.event_no=lr_defer_event(i).event_no;
-        -- Insert or update
-        IF ln_count=0 THEN
-          INSERT INTO WELL_DAY_DEFER_ALLOC
-            (object_id, daytime, event_no,
-             deferred_gas_vol, deferred_net_oil_vol, deferred_water_vol, deferred_cond_vol,
-             deferred_gl_vol, deferred_diluent_vol, deferred_steam_inj_vol, deferred_gas_inj_vol, deferred_water_inj_vol,
-             deferred_net_oil_mass, deferred_gas_mass, deferred_cond_mass, deferred_water_mass,
-             created_by)
-          VALUES
-            (p_object_id, cur_prod_day.daytime, lr_defer_event(i).event_no,
-             NVL(lr_defer_event(i).loss_gas,0),NVL(lr_defer_event(i).loss_oil,0),NVL(lr_defer_event(i).loss_water,0), NVL(lr_defer_event(i).loss_cond,0),
-             NVL(lr_defer_event(i).loss_gas_lift,0), NVL(lr_defer_event(i).loss_diluent,0), NVL(lr_defer_event(i).loss_steam_inj,0), NVL(lr_defer_event(i).loss_gas_inj,0), NVL(lr_defer_event(i).loss_water_inj,0),
-             NVL(lr_defer_event(i).loss_oil_mass,0), NVL(lr_defer_event(i).loss_gas_mass,0), NVL(lr_defer_event(i).loss_cond_mass,0), NVL(lr_defer_event(i).loss_water_mass,0),
-             NVL(ecdp_context.getAppUser(),USER));
-        ELSE
-          -- one event is part of several periods, then we have to update existing record for the wde_no and daytime
-          UPDATE WELL_DAY_DEFER_ALLOC
-          SET deferred_gas_vol = deferred_gas_vol + NVL(lr_defer_event(i).loss_gas,0),
-              deferred_net_oil_vol = deferred_net_oil_vol + NVL(lr_defer_event(i).loss_oil,0),
-              deferred_water_vol = deferred_water_vol + NVL(lr_defer_event(i).loss_water,0),
-              deferred_cond_vol = deferred_cond_vol + NVL(lr_defer_event(i).loss_cond,0),
-              deferred_gl_vol = deferred_gl_vol + NVL(lr_defer_event(i).loss_gas_lift,0),
-              deferred_diluent_vol = deferred_diluent_vol + NVL(lr_defer_event(i).loss_diluent,0),
-              deferred_steam_inj_vol = deferred_steam_inj_vol + NVL(lr_defer_event(i).loss_steam_inj,0),
-              deferred_gas_inj_vol = deferred_gas_inj_vol + NVL(lr_defer_event(i).loss_gas_inj,0),
-              deferred_water_inj_vol = deferred_water_inj_vol + NVL(lr_defer_event(i).loss_water_inj,0),
-              deferred_gas_mass = deferred_gas_mass + NVL(lr_defer_event(i).loss_gas_mass,0),
-              deferred_net_oil_mass = deferred_net_oil_mass + NVL(lr_defer_event(i).loss_oil_mass,0),
-              deferred_cond_mass = deferred_cond_mass + NVL(lr_defer_event(i).loss_cond_mass,0),
-              deferred_water_mass = deferred_water_mass + NVL(lr_defer_event(i).loss_water_mass,0),
-              last_updated_by = NVL(EcDp_Context.getAppUser,USER)
-          WHERE object_id = p_object_id
-          AND daytime = cur_prod_day.daytime
-          AND event_no = lr_defer_event(i).event_no;
-        END IF;
+        BEGIN
+          -- Write to database
+          ln_rowcount := 0;
+          SELECT COUNT(*) INTO ln_rowcount
+          FROM WELL_DAY_DEFER_ALLOC wda
+          WHERE wda.object_id=p_object_id
+          AND wda.daytime=cur_event_day.daytime
+          AND wda.event_no=lr_defer_event(i).event_no;
+          -- Insert or update
+          IF ln_rowcount=0 THEN
+            INSERT INTO WELL_DAY_DEFER_ALLOC
+              (object_id, daytime, event_no,
+              deferred_gas_vol, deferred_net_oil_vol, deferred_water_vol, deferred_cond_vol,
+              deferred_gl_vol, deferred_diluent_vol, deferred_steam_inj_vol, deferred_gas_inj_vol, deferred_water_inj_vol,
+              deferred_net_oil_mass, deferred_gas_mass, deferred_cond_mass, deferred_water_mass,
+              created_by)
+            VALUES
+              (p_object_id, cur_event_day.daytime, lr_defer_event(i).event_no,
+              NVL(lr_defer_event(i).loss_gas,0),NVL(lr_defer_event(i).loss_oil,0),NVL(lr_defer_event(i).loss_water,0), NVL(lr_defer_event(i).loss_cond,0),
+              NVL(lr_defer_event(i).loss_gas_lift,0), NVL(lr_defer_event(i).loss_diluent,0), NVL(lr_defer_event(i).loss_steam_inj,0), NVL(lr_defer_event(i).loss_gas_inj,0), NVL(lr_defer_event(i).loss_water_inj,0),
+              NVL(lr_defer_event(i).loss_oil_mass,0), NVL(lr_defer_event(i).loss_gas_mass,0), NVL(lr_defer_event(i).loss_cond_mass,0), NVL(lr_defer_event(i).loss_water_mass,0),
+              NVL(ecdp_context.getAppUser(),USER));
+          ELSE
+            -- one event is part of several periods, then we have to update existing record for the wde_no and daytime
+            UPDATE WELL_DAY_DEFER_ALLOC
+            SET deferred_gas_vol = deferred_gas_vol + NVL(lr_defer_event(i).loss_gas,0),
+                deferred_net_oil_vol = deferred_net_oil_vol + NVL(lr_defer_event(i).loss_oil,0),
+                deferred_water_vol = deferred_water_vol + NVL(lr_defer_event(i).loss_water,0),
+                deferred_cond_vol = deferred_cond_vol + NVL(lr_defer_event(i).loss_cond,0),
+                deferred_gl_vol = deferred_gl_vol + NVL(lr_defer_event(i).loss_gas_lift,0),
+                deferred_diluent_vol = deferred_diluent_vol + NVL(lr_defer_event(i).loss_diluent,0),
+                deferred_steam_inj_vol = deferred_steam_inj_vol + NVL(lr_defer_event(i).loss_steam_inj,0),
+                deferred_gas_inj_vol = deferred_gas_inj_vol + NVL(lr_defer_event(i).loss_gas_inj,0),
+                deferred_water_inj_vol = deferred_water_inj_vol + NVL(lr_defer_event(i).loss_water_inj,0),
+                deferred_gas_mass = deferred_gas_mass + NVL(lr_defer_event(i).loss_gas_mass,0),
+                deferred_net_oil_mass = deferred_net_oil_mass + NVL(lr_defer_event(i).loss_oil_mass,0),
+                deferred_cond_mass = deferred_cond_mass + NVL(lr_defer_event(i).loss_cond_mass,0),
+                deferred_water_mass = deferred_water_mass + NVL(lr_defer_event(i).loss_water_mass,0),
+                last_updated_by = NVL(EcDp_Context.getAppUser,USER)
+            WHERE object_id = p_object_id
+            AND daytime = cur_event_day.daytime
+            AND event_no = lr_defer_event(i).event_no;
+          END IF;
+        EXCEPTION
+          WHEN DUP_VAL_ON_INDEX THEN
+            RAISE_APPLICATION_ERROR(-20358,'Fail inserting a duplicate record at WELL_DAY_DEFER_ALLOC table.');
+        END;
+        <<SKIP_CALC>> NULL;
       END LOOP;
       CLOSE rc_deferment;
     END IF;
@@ -4596,5 +4601,157 @@ BEGIN
     END LOOP;
   END IF;
 END AddRowsAtDefDayTable;
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Procedure      : reuseOverlappedRecords
+-- Description    : To reuse the overlapped deferment after changes on the current modified
+--                  deferment record or current deletion, so that Event Loss will be recalculated again
+--
+-- Preconditions  :
+-- Postconditions : .
+--
+-- Using tables   : deferment_event
+--
+--
+--
+-- Using functions:
+-- Configuration
+-- required       :
+--
+-- Behavior       :
+--
+---------------------------------------------------------------------------------------------------
+PROCEDURE reuseOverlappedRecords(p_event_no NUMBER, p_object_id VARCHAR2, p_daytime DATE, p_end_date DATE DEFAULT NULL, p_object_type VARCHAR2, p_deferment_type VARCHAR2, p_user VARCHAR2, p_last_updated_date DATE)
+--</EC-DOC>
+IS
+  CURSOR cur_getChildDeferment (cp_event_no NUMBER) IS
+  SELECT a.event_no, a.object_id, a.daytime, a.end_date
+  FROM deferment_event a
+  WHERE a.parent_event_no = cp_event_no
+  AND a.object_type = 'WELL';
+
+  CURSOR cur_getOverlappedEvents (cp_event_no NUMBER, cp_wellobjectId VARCHAR2, cp_daytime DATE, cp_enddate DATE DEFAULT NULL, cp_currSysDTMinusOne DATE) IS
+  SELECT a.event_no, a.parent_event_no, a.daytime, a.end_date
+  FROM deferment_event a
+  WHERE a.event_no <> cp_event_no
+  AND a.object_id = cp_wellObjectId
+  AND NOT
+  (
+  a.daytime < cp_daytime AND NVL(a.end_date, cp_currSysDTMinusOne) <= cp_daytime
+  OR
+  a.daytime >= NVL(cp_enddate, cp_currSysDTMinusOne) AND NVL(a.end_date, cp_currSysDTMinusOne) > NVL(cp_enddate, cp_currSysDTMinusOne)
+  );
+
+  ln_Event_no              DEFERMENT_EVENT.EVENT_NO%TYPE;
+  lv2_object_id            DEFERMENT_EVENT.OBJECT_ID%TYPE;
+  ld_daytime               DEFERMENT_EVENT.DAYTIME%TYPE;
+  ld_end_date              DEFERMENT_EVENT.END_DATE%TYPE;
+  ln_OverlappedEvent_no    DEFERMENT_EVENT.EVENT_NO%TYPE;
+  ln_OverlappedParentE_no  DEFERMENT_EVENT.PARENT_EVENT_NO%TYPE;
+  ld_OverlappedDaytime     DEFERMENT_EVENT.DAYTIME%TYPE;
+  ld_OverlappedEnd_date    DEFERMENT_EVENT.END_DATE%TYPE;
+
+  ln_aCount_no             NUMBER;
+  ln_bCount_no             NUMBER;
+  ld_currSysDtMinusOne     DATE;
+
+  typ_srcEventNoforReCalc      t_sourceEventNoforReCalc      := t_sourceEventNoforReCalc();
+  typ_srcEventObjectID         t_sourceEventObjectID         := t_sourceEventObjectID();
+  typ_srcEventDaytime          t_sourceEventDaytime          := t_sourceEventDaytime();
+  typ_srcEventEnd_date         t_sourceEventEnd_date         := t_sourceEventEnd_date();
+  typ_tgtEventNoforReCalc      t_targetEventNoforReCalc      := t_targetEventNoforReCalc();
+  typ_tgtParentENoforReCalc    t_targetParentENoforReCalc    := t_targetParentENoforReCalc();
+  typ_tgtDaytimeforReCalc      t_targetDaytimeforReCalc      := t_targetDaytimeforReCalc();
+  typ_tgtEnd_dateforReCalc     t_targetEnd_dateforReCalc     := t_targetEnd_dateforReCalc();
+
+BEGIN
+  -- Delete a group of deferment events and that will loop thru each child to check with its related events to be reused for recalculation
+  ln_aCount_no := 0;
+  ln_bCount_no := 0;
+
+  IF p_deferment_type = 'GROUP' THEN
+    OPEN cur_getChildDeferment(p_event_no);
+    LOOP
+      FETCH cur_getChildDeferment INTO ln_event_no, lv2_object_id, ld_daytime, ld_end_date;
+      EXIT WHEN cur_getChildDeferment%NOTFOUND;
+      ln_aCount_no := ln_aCount_no + 1;
+      typ_srcEventNoforReCalc.EXTEND;
+      typ_srcEventObjectID.EXTEND;
+      typ_srcEventDaytime.EXTEND;
+      typ_srcEventEnd_date.EXTEND;
+      typ_srcEventNoforReCalc(ln_aCount_no) :=  ln_event_no;
+      typ_srcEventObjectID(ln_aCount_no)    :=  lv2_object_id;
+      typ_srcEventDaytime(ln_aCount_no)     :=  ld_daytime;
+      typ_srcEventEnd_date(ln_aCount_no)    :=  ld_end_date;
+    END LOOP;
+    CLOSE cur_getChildDeferment;
+  ELSE
+    IF p_object_type = 'WELL' THEN
+      typ_srcEventNoforReCalc.EXTEND;
+      typ_srcEventObjectID.EXTEND;
+      typ_srcEventDaytime.EXTEND;
+      typ_srcEventEnd_date.EXTEND;
+      typ_srcEventNoforReCalc(1)           :=  p_event_no;
+      typ_srcEventObjectID(1)              :=  p_object_id;
+      typ_srcEventDaytime(1)               :=  p_daytime;
+      typ_srcEventEnd_date(1)              :=  p_end_date;
+    END IF;
+  END IF;
+
+  FOR j IN 1..typ_srcEventNoforReCalc.COUNT LOOP
+    -- To be used for open-ended deferment NULL end date
+    ld_currSysDtMinusOne := TRUNC(Ecdp_Timestamp.getCurrentSysdate) - 1;
+    OPEN cur_getOverlappedEvents(typ_srcEventNoforReCalc(j), typ_srcEventObjectID(j), typ_srcEventDaytime(j), typ_srcEventEnd_date(j), ld_currSysDtMinusOne);
+    LOOP
+      FETCH cur_getOverlappedEvents INTO ln_OverlappedEvent_no, ln_OverlappedParentE_no, ld_OverlappedDaytime, ld_OverlappedEnd_date;
+      EXIT WHEN cur_getOverlappedEvents%NOTFOUND;
+
+      IF j = 1 THEN -- First row that will not need to check duplicate event_no
+        ln_bCount_no := ln_bCount_no + 1;
+        typ_tgtEventNoforReCalc.EXTEND;
+        typ_tgtParentENoforReCalc.EXTEND;
+        typ_tgtDaytimeforReCalc.EXTEND;
+        typ_tgtEnd_dateforReCalc.EXTEND;
+        typ_tgtEventNoforReCalc(ln_bCount_no) := ln_OverlappedEvent_no;
+        typ_tgtParentENoforReCalc(ln_bCount_no) := ln_OverlappedParentE_no;
+        typ_tgtDaytimeforReCalc(ln_bCount_no) := ld_OverlappedDaytime;
+        typ_tgtEnd_dateforReCalc(ln_bCount_no) := ld_OverlappedEnd_date;
+      ELSE
+        FOR k IN 1..typ_tgtEventNoforReCalc.COUNT LOOP
+          IF typ_tgtEventNoforReCalc(k) <> ln_OverlappedEvent_no THEN
+            ln_bCount_no := ln_bCount_no + 1;
+            typ_tgtEventNoforReCalc.EXTEND;
+            typ_tgtParentENoforReCalc.EXTEND;
+            typ_tgtDaytimeforReCalc.EXTEND;
+            typ_tgtEnd_dateforReCalc.EXTEND;
+            typ_tgtEventNoforReCalc(ln_bCount_no) := ln_OverlappedEvent_no;
+            typ_tgtParentENoforReCalc(ln_bCount_no) := ln_OverlappedParentE_no;
+            typ_tgtDaytimeforReCalc(ln_bCount_no) := ld_OverlappedDaytime;
+            typ_tgtEnd_dateforReCalc(ln_bCount_no) := ld_OverlappedEnd_date;
+          END IF;
+        END LOOP;
+      END IF;
+    END LOOP;
+    CLOSE cur_getOverlappedEvents;
+  END LOOP;
+
+  FOR m IN 1..typ_tgtEventNoforReCalc.COUNT LOOP
+    EcDp_Deferment.insertTempWellDefermntAlloc(typ_tgtEventNoforReCalc(m),
+                                               typ_tgtParentENoforReCalc(m),
+                                               typ_tgtDaytimeforReCalc(m),
+                                               NULL,
+                                               typ_tgtEnd_dateforReCalc(m),
+                                               NULL,
+                                               'X',
+                                               p_user,
+                                               p_last_updated_date);
+  END LOOP;
+
+  -- Letter 'X' is used for Reuse, letter 'R' is supposed to be ideal for Reuse but it is not applicable because 'U' is after the 'R' in the ascending order of I, U, R.
+  -- So, if there are multiple temp records for the same event no with IRU, it would not be processed in the right ascending order,
+  -- if it uses I Insert, U Update, and X Reuse, then these temp records with the same event no will be processed in the right ascending order if we implement this.
+
+END reuseOverlappedRecords;
 
 END  EcDp_Deferment;

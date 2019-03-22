@@ -8,7 +8,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '19'
+    sequence: !!float '20'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -16,7 +16,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '20'
+    sequence: !!float '21'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -24,7 +24,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '18'
+    sequence: !!float '19'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -32,7 +32,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '13'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -40,15 +40,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '14'
   CRON_EXPRESSION:
     columnName: CRON_EXPRESSION
-    typeName: VARCHAR2(80)
+    typeName: VARCHAR2(120)
     nullable: 'NO'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '10'
   JN_APPLN:
     columnName: JN_APPLN
     typeName: VARCHAR2(35)
@@ -104,7 +104,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '15'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -112,7 +112,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '16'
   RECORD_STATUS:
     columnName: RECORD_STATUS
     typeName: VARCHAR2(1)
@@ -120,7 +120,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '12'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -128,7 +128,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '21'
+    sequence: !!float '22'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -136,7 +136,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '17'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -144,7 +144,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '17'
+    sequence: !!float '18'
+  SCHED_NAME:
+    columnName: SCHED_NAME
+    typeName: VARCHAR2(120)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
   TIME_ZONE_ID:
     columnName: TIME_ZONE_ID
     typeName: VARCHAR2(80)
@@ -152,15 +160,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '11'
   TRIGGER_GROUP:
     columnName: TRIGGER_GROUP
-    typeName: VARCHAR2(80)
+    typeName: VARCHAR2(200)
     nullable: 'NO'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '8'
+    sequence: !!float '9'
   TRIGGER_NAME:
     columnName: TRIGGER_NAME
     typeName: VARCHAR2(512)
@@ -168,7 +176,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '7'
+    sequence: !!float '8'
 attributes:
   initialExtent: 65536
   iniTrans: 1

@@ -8,5 +8,6 @@ properties:
   BF_CODE: RC.0050
   NAME: Unit - Well Setup
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.rty/well_setup/CLASS_NAME/UNIT_AGR/DATA_CLASS/UNIT_WELL_SETUP/NAVMODEL/WELL_SETUP/TARGET/UNIT_AGR
 related: {}

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0088
   NAME: Interface Files
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/interface_contents
 related: {}

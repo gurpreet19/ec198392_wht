@@ -8,5 +8,6 @@ properties:
   BF_CODE: RC.0054
   NAME: Product Group Setup
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.rty/prod_group_setup/CLASS_NAME/PRODUCT_GROUP/DATA_CLASS/PRODUCT_GROUP_SETUP/NAVMODEL/PROD_GROUP_SETUP/TARGET/PRODUCT_GROUP
 related: {}

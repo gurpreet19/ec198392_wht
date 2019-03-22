@@ -10,7 +10,7 @@ properties:
   COMPONENT_EXT_NAME: /com.ec.revn.vo/fcst_stim_mth_query_quantities
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: VO_MO_FC_QQ
-  COMPONENT_LABEL: Forecast Query Quantities
+  COMPONENT_LABEL: Forecast Stream Item Quantities
   COMPONENT_TYPE: URL
   PARENT_COMPONENT_ID: VO_MO_FC
   PARENT_WINDOW_ID: ENERGYX

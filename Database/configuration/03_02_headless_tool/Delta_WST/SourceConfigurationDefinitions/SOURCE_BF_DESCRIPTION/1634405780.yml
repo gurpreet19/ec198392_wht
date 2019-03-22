@@ -7,15 +7,15 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0089
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_COST_OBJECT' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIN_COST_OBJECT' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p><span style="color: rgb(0, 0, 153);">EC has functionality for automatically
-    pick Accounts and    <strong>Cost Objects</strong> for the posting to an ERP system
-    of    individual line items in the Financial Documents.<br>    The posting information
-    is stored at the lowest level in the Document -    Transaction - Line Item - Line
-    Item Profit Centre - Line Item Profit Centre    Company hierarchy.<br>The logic
-    is to find first the applicable Account and then the applicable    <strong>Cost
-    Object</strong>.</span></p><p>        <strong>Cost Object Mapping screen</strong>    is
+  DESCRIPTION: '<p><em><span style="color: rgb(0, 102, 204);">EC has functionality
+    for automatically pick Accounts and <strong>Cost Objects</strong> for the posting
+    to an ERP system of individual line items in the Financial Documents.<br>    The
+    posting information is stored at the lowest level in the Document -    Transaction
+    - Line Item - Line Item Profit Centre - Line Item Profit Centre    Company hierarchy.<br>The
+    logic is to find first the applicable Account and then the applicable <strong>Cost
+    Object</strong>.</span></em></p><p>      <strong>Cost Object Mapping screen</strong>    is
     used to define the rules for finding the correct Cost Object - Cost    Centre
     or WBS / AFE - for a Line Item where the Account for the Line Item    has been
     set to use a Cost Object.</p><p>    <u>The concept is to find a best match based

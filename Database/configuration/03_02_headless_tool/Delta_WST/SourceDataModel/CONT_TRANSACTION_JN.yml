@@ -16,7 +16,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '196'
+    sequence: !!float '204'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -24,7 +24,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '197'
+    sequence: !!float '205'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -32,7 +32,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '198'
+    sequence: !!float '206'
   BL_DATE:
     columnName: BL_DATE
     typeName: DATE
@@ -49,6 +49,38 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '117'
+  BOOKING_GROUP_LABEL_1:
+    columnName: BOOKING_GROUP_LABEL_1
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '163'
+  BOOKING_GROUP_LABEL_2:
+    columnName: BOOKING_GROUP_LABEL_2
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '167'
+  BOOKING_LOCAL_LABEL_1:
+    columnName: BOOKING_LOCAL_LABEL_1
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '162'
+  BOOKING_LOCAL_LABEL_2:
+    columnName: BOOKING_LOCAL_LABEL_2
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '166'
   BOOKING_TO_GROUP_IND:
     columnName: BOOKING_TO_GROUP_IND
     typeName: VARCHAR2(1)
@@ -80,7 +112,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '185'
+    sequence: !!float '193'
   CARGO_NAME:
     columnName: CARGO_NAME
     typeName: VARCHAR2(240)
@@ -160,7 +192,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '187'
+    sequence: !!float '195'
   CONTRACT_ACCOUNT_CLASS:
     columnName: CONTRACT_ACCOUNT_CLASS
     typeName: VARCHAR2(240)
@@ -168,7 +200,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '186'
+    sequence: !!float '194'
   CONTRACT_DATE:
     columnName: CONTRACT_DATE
     typeName: DATE
@@ -184,7 +216,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '190'
+    sequence: !!float '198'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -192,7 +224,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '191'
+    sequence: !!float '199'
   DATE_1:
     columnName: DATE_1
     typeName: DATE
@@ -200,7 +232,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '180'
+    sequence: !!float '188'
   DATE_2:
     columnName: DATE_2
     typeName: DATE
@@ -208,7 +240,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '181'
+    sequence: !!float '189'
   DATE_3:
     columnName: DATE_3
     typeName: DATE
@@ -216,7 +248,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '182'
+    sequence: !!float '190'
   DATE_4:
     columnName: DATE_4
     typeName: DATE
@@ -224,7 +256,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '183'
+    sequence: !!float '191'
   DATE_5:
     columnName: DATE_5
     typeName: DATE
@@ -232,7 +264,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '184'
+    sequence: !!float '192'
   DAYTIME:
     columnName: DAYTIME
     typeName: DATE
@@ -664,7 +696,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '192'
+    sequence: !!float '200'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -672,7 +704,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '193'
+    sequence: !!float '201'
   LOADING_DATE_COMMENCED:
     columnName: LOADING_DATE_COMMENCED
     typeName: DATE
@@ -889,6 +921,22 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '21'
+  PRICING_BOOKING_LABEL_1:
+    columnName: PRICING_BOOKING_LABEL_1
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '160'
+  PRICING_BOOKING_LABEL_2:
+    columnName: PRICING_BOOKING_LABEL_2
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '164'
   PRICING_CURRENCY_CODE:
     columnName: PRICING_CURRENCY_CODE
     typeName: VARCHAR2(32)
@@ -905,6 +953,22 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '138'
+  PRICING_MEMO_LABEL_1:
+    columnName: PRICING_MEMO_LABEL_1
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '161'
+  PRICING_MEMO_LABEL_2:
+    columnName: PRICING_MEMO_LABEL_2
+    typeName: VARCHAR2(240)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '165'
   PRICING_PERIOD_FROM_DATE:
     columnName: PRICING_PERIOD_FROM_DATE
     typeName: DATE
@@ -1064,7 +1128,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '189'
+    sequence: !!float '197'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -1072,7 +1136,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '199'
+    sequence: !!float '207'
   REVERSAL_IND:
     columnName: REVERSAL_IND
     typeName: VARCHAR2(1)
@@ -1096,7 +1160,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '194'
+    sequence: !!float '202'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -1104,7 +1168,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '195'
+    sequence: !!float '203'
   RVP:
     columnName: RVP
     typeName: NUMBER
@@ -1184,7 +1248,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '170'
+    sequence: !!float '178'
   TEXT_10:
     columnName: TEXT_10
     typeName: VARCHAR2(240)
@@ -1192,7 +1256,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '179'
+    sequence: !!float '187'
   TEXT_2:
     columnName: TEXT_2
     typeName: VARCHAR2(240)
@@ -1200,7 +1264,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '171'
+    sequence: !!float '179'
   TEXT_3:
     columnName: TEXT_3
     typeName: VARCHAR2(240)
@@ -1208,7 +1272,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '172'
+    sequence: !!float '180'
   TEXT_4:
     columnName: TEXT_4
     typeName: VARCHAR2(240)
@@ -1216,7 +1280,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '173'
+    sequence: !!float '181'
   TEXT_5:
     columnName: TEXT_5
     typeName: VARCHAR2(240)
@@ -1224,7 +1288,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '174'
+    sequence: !!float '182'
   TEXT_6:
     columnName: TEXT_6
     typeName: VARCHAR2(240)
@@ -1232,7 +1296,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '175'
+    sequence: !!float '183'
   TEXT_7:
     columnName: TEXT_7
     typeName: VARCHAR2(240)
@@ -1240,7 +1304,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '176'
+    sequence: !!float '184'
   TEXT_8:
     columnName: TEXT_8
     typeName: VARCHAR2(240)
@@ -1248,7 +1312,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '177'
+    sequence: !!float '185'
   TEXT_9:
     columnName: TEXT_9
     typeName: VARCHAR2(240)
@@ -1256,7 +1320,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '178'
+    sequence: !!float '186'
   TOT_PRICE_NOT_ROUNDED:
     columnName: TOT_PRICE_NOT_ROUNDED
     typeName: NUMBER
@@ -1264,7 +1328,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '188'
+    sequence: !!float '196'
   TRANSACTION_DATE:
     columnName: TRANSACTION_DATE
     typeName: DATE
@@ -1472,7 +1536,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '160'
+    sequence: !!float '168'
   VALUE_10:
     columnName: VALUE_10
     typeName: NUMBER
@@ -1480,7 +1544,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '169'
+    sequence: !!float '177'
   VALUE_2:
     columnName: VALUE_2
     typeName: NUMBER
@@ -1488,7 +1552,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '161'
+    sequence: !!float '169'
   VALUE_3:
     columnName: VALUE_3
     typeName: NUMBER
@@ -1496,7 +1560,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '162'
+    sequence: !!float '170'
   VALUE_4:
     columnName: VALUE_4
     typeName: NUMBER
@@ -1504,7 +1568,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '163'
+    sequence: !!float '171'
   VALUE_5:
     columnName: VALUE_5
     typeName: NUMBER
@@ -1512,7 +1576,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '164'
+    sequence: !!float '172'
   VALUE_6:
     columnName: VALUE_6
     typeName: NUMBER
@@ -1520,7 +1584,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '165'
+    sequence: !!float '173'
   VALUE_7:
     columnName: VALUE_7
     typeName: NUMBER
@@ -1528,7 +1592,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '166'
+    sequence: !!float '174'
   VALUE_8:
     columnName: VALUE_8
     typeName: NUMBER
@@ -1536,7 +1600,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '167'
+    sequence: !!float '175'
   VALUE_9:
     columnName: VALUE_9
     typeName: NUMBER
@@ -1544,7 +1608,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '168'
+    sequence: !!float '176'
   VALUE_ADJUSTMENT:
     columnName: VALUE_ADJUSTMENT
     typeName: NUMBER

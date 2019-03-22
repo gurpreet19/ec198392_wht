@@ -8,5 +8,6 @@ properties:
   BF_CODE: RP.0012
   NAME: Query Builder
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.netscreens/query_builder
 related: {}

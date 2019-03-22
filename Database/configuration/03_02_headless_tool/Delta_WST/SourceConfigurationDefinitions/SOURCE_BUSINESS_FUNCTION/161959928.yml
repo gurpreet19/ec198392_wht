@@ -8,5 +8,6 @@ properties:
   BF_CODE: FI.0003
   NAME: Monthly Financial Item
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.fi/financial_item_entry/TIME_SPAN/MTH
 related: {}

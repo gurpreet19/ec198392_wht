@@ -9,5 +9,12 @@ properties:
   BF_DESCRIPTION_NO: CD.0088
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/interface_contents' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>    <strong>Interface Files screen</strong>    is used to show the outbound interface files with their content produced by    EC.</p><p>    <u>The screen is divided into three parts:</u></p><p>    <strong><em>- Navigator</em></strong><br>    It is used to specify which data to show.<br>    <strong><em>- Files Section</em></strong><br>    The section is a table showing the files produced by EC.<br>    <strong><em>- Content Section</em></strong><br>    The section is the lowest showing the content of the selected file.</p><p>    The INTERFACE_CONTENTS table is populated with the EcDp_Outbound_Interface    package.</p>
+  DESCRIPTION: '<p><strong>Interface Files screen</strong> is used to show the outbound
+    interface files with their content produced by EC.</p><p>The screen is divided
+    into these sections:</p><p><strong style="color: rgb(0, 102, 204);">Navigator</strong></p><p>
+    It is used to specify which data to show.</p><p> <strong style="color: rgb(0,
+    102, 204);">Files Section</strong></p><p> The section is a table showing the files
+    produced by EC.</p><p><strong style="color: rgb(0, 102, 204);">Content Section</strong></p><p>
+    The section is the lowest showing the content of the selected file.</p><p>The
+    INTERFACE_CONTENTS table is populated with the EcDp_Outbound_Interface package.</p>'
 related: {}

@@ -4,29 +4,28 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_DEFERMENT_CANDIDATE" ("OBJECT_ID", "
             -- Ignore last row data for each object_id
             WHEN RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC) <> 1 OR ( IS_OFFICIAL='Y' AND (RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC))=1)
               THEN NVL(-- Consider daytime as start daytime if status =0
-                         DECODE(status, 0, daytime),
+                         DECODE(status, to_number(ecbp_deferment_status_log.getSystemSetting('DEFERMENT_STATUS_STOPPED', trunc(daytime))), daytime),
                        -- Consider daytime of previous row if that has status =0
-                         LAG(DECODE(status, 0, daytime)) OVER (PARTITION BY object_id ORDER BY object_id, daytime ASC)
+                         LAG(DECODE(status, to_number(ecbp_deferment_status_log.getSystemSetting('DEFERMENT_STATUS_STOPPED', trunc(daytime))), daytime)) OVER (PARTITION BY object_id ORDER BY object_id, daytime ASC)
                        )
             ELSE NULL
         END,CASE
             -- Ignore last row data for each object_id
             WHEN RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC) <> 1 OR ( IS_OFFICIAL='Y' AND (RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC))=1)
               THEN NVL(-- Consider daytime as end daytime if status =1
-                         DECODE(status, 1, daytime),
+                         DECODE(status, to_number(ecbp_deferment_status_log.getSystemSetting('DEFERMENT_STATUS_RUNNING', trunc(daytime))), daytime),
                        -- Consider daytime of following row if that has status =1
-                         LEAD(DECODE(status, 1, daytime)) OVER (PARTITION BY object_id ORDER BY object_id, daytime ASC)
+                         LEAD(DECODE(status, to_number(ecbp_deferment_status_log.getSystemSetting('DEFERMENT_STATUS_RUNNING', trunc(daytime))), daytime)) OVER (PARTITION BY object_id ORDER BY object_id, daytime ASC)
                        )
             ELSE NULL
         END) Daytime
       , CASE
             -- Ignore last row data for each object_id
             WHEN RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC) <> 1 OR ( IS_OFFICIAL='Y' AND (RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC))=1)
-
               THEN NVL(-- Consider daytime as start daytime if status =0
-                         DECODE(status, 0, daytime),
+                         DECODE(status, to_number(ecbp_deferment_status_log.getSystemSetting('DEFERMENT_STATUS_STOPPED', trunc(daytime))), daytime),
                        -- Consider daytime of previous row if that has status =0
-                         LAG(DECODE(status, 0, daytime)) OVER (PARTITION BY object_id ORDER BY object_id, daytime ASC)
+                         LAG(DECODE(status, to_number(ecbp_deferment_status_log.getSystemSetting('DEFERMENT_STATUS_STOPPED', trunc(daytime))), daytime)) OVER (PARTITION BY object_id ORDER BY object_id, daytime ASC)
                        )
             ELSE NULL
         END start_daytime
@@ -34,13 +33,13 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_DEFERMENT_CANDIDATE" ("OBJECT_ID", "
             -- Ignore last row data for each object_id
             WHEN RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC) <> 1 OR ( IS_OFFICIAL='Y' AND (RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC))=1)
               THEN NVL(-- Consider daytime as end daytime if status =1
-                         DECODE(status, 1, daytime),
+                         DECODE(status, to_number(ecbp_deferment_status_log.getSystemSetting('DEFERMENT_STATUS_RUNNING', trunc(daytime))), daytime),
                        -- Consider daytime of following row if
                        -- Next row is not last row for given object id
                        -- And it has status =1
                          CASE
                            WHEN RANK() OVER(PARTITION BY object_id ORDER BY daytime DESC) > 1
-                           THEN LEAD(DECODE(status, 1, daytime)) OVER (PARTITION BY object_id ORDER BY object_id, daytime ASC)
+                           THEN LEAD(DECODE(status, to_number(ecbp_deferment_status_log.getSystemSetting('DEFERMENT_STATUS_RUNNING', trunc(daytime))), daytime)) OVER (PARTITION BY object_id ORDER BY object_id, daytime ASC)
                            ELSE NULL
                          END
                        )

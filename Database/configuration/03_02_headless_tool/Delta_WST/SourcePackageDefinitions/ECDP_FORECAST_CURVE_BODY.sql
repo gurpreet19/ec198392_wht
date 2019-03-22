@@ -855,9 +855,9 @@ IS
           COND_S2_FACTOR
      FROM FCST_SHORTFALL_OVERRIDES
     WHERE (DAYTIME <= cp_daytime  AND VALID_TO >= cp_daytime)
-      AND WELL_ID = p_object_id
+      AND OBJECT_ID = p_object_id
       AND FORECAST_ID = p_forecast_id
-      AND OBJECT_ID = p_scenario_id;
+      AND SCENARIO_ID = p_scenario_id;
 
 CURSOR c_well_shortfall_factor ( cp_daytime DATE )
  IS
@@ -875,12 +875,12 @@ CURSOR c_well_shortfall_factor ( cp_daytime DATE )
           COND_S2_FACTOR
      FROM FCST_SHORTFALL_FACTORS
     WHERE FORECAST_ID = p_forecast_id
-      AND OBJECT_ID = p_scenario_id
+      AND SCENARIO_ID = p_scenario_id
       AND ( FACTOR_ID = ecdp_groups.findParentObjectId('FCTY_CLASS_1','operational','WELL',p_object_id,cp_daytime) OR FACTOR_ID = ecdp_groups.findParentObjectId('FIELD','geographical','WELL',p_object_id,cp_daytime))
       AND DAYTIME = (SELECT max(daytime)
                        FROM FCST_SHORTFALL_FACTORS
                       WHERE (FACTOR_ID = ecdp_groups.findParentObjectId('FCTY_CLASS_1','operational','WELL',p_object_id,cp_daytime) OR FACTOR_ID = ecdp_groups.findParentObjectId('FIELD','geographical','WELL',p_object_id,cp_daytime))
-                        AND object_id =  p_scenario_id
+                        AND SCENARIO_ID =  p_scenario_id
                         AND daytime <= cp_daytime);
 
 
@@ -897,9 +897,9 @@ CURSOR c_well_shortfall_factor ( cp_daytime DATE )
           WATER_COMP_RATE,
           WATER_COMP_VOLUME
    FROM FCST_COMPENSATION_EVENTS
-  WHERE OBJECT_COMP_ID = p_object_id
+  WHERE OBJECT_ID = p_object_id
     AND FORECAST_ID = p_forecast_id
-    AND OBJECT_ID = p_scenario_id
+    AND SCENARIO_ID = p_scenario_id
 	AND (DAY = cp_daytime OR (DAY < cp_daytime AND NVL( END_DAY, cp_daytime) >= cp_daytime ) )
     AND NVL(end_date,Ecdp_Productionday.getProductionDayStart('WELL',p_object_id,cp_daytime)+1) <> Ecdp_Productionday.getProductionDayStart('WELL',p_object_id,cp_daytime) 	;
 
@@ -985,7 +985,7 @@ BEGIN
                                  WHERE EVENT_ID = p_object_id
                                    AND trunc(DAYTIME) = cur_date
                                    AND FORECAST_ID = p_forecast_id
-                                   AND OBJECT_ID = p_scenario_id);
+                                   AND SCENARIO_ID = p_scenario_id);
 
           IF ln_count > 0 THEN                                                      -- SHORTFALL IF START
             FOR well_event IN c_well_event_alloc(cur_date)                          -- event allocation for loop start
@@ -1003,10 +1003,10 @@ BEGIN
             SELECT COUNT(*)
               INTO ln_count
               FROM FCST_SHORTFALL_OVERRIDES
-             WHERE WELL_ID = p_object_id
+             WHERE OBJECT_ID = p_object_id
                AND (DAYTIME <= cur_date  AND VALID_TO >= cur_date)
                AND FORECAST_ID = p_forecast_id
-               AND OBJECT_ID = p_scenario_id;
+               AND SCENARIO_ID = p_scenario_id;
 
             IF ln_count > 0 THEN
                 FOR well_shortfall IN c_well_shortfall_over(cur_date)                  --shortfall override for loop start

@@ -8,7 +8,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '22'
+    sequence: !!float '23'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -16,7 +16,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '23'
+    sequence: !!float '24'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -24,7 +24,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '24'
+    sequence: !!float '25'
+  CLASS_NAME:
+    columnName: CLASS_NAME
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -32,7 +40,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '17'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -40,7 +48,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '17'
+    sequence: !!float '18'
   DESCRIPTION:
     columnName: DESCRIPTION
     typeName: VARCHAR2(240)
@@ -48,7 +56,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '15'
   END_DATE:
     columnName: END_DATE
     typeName: DATE
@@ -56,7 +64,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '11'
   JN_APPLN:
     columnName: JN_APPLN
     typeName: VARCHAR2(35)
@@ -112,7 +120,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '18'
+    sequence: !!float '19'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -120,7 +128,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '19'
+    sequence: !!float '20'
   MASTER_SYS_CODE:
     columnName: MASTER_SYS_CODE
     typeName: VARCHAR2(32)
@@ -128,7 +136,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '14'
   OBJECT_CODE:
     columnName: OBJECT_CODE
     typeName: VARCHAR2(32)
@@ -152,7 +160,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '16'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -160,7 +168,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '25'
+    sequence: !!float '26'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -168,7 +176,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '20'
+    sequence: !!float '21'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -176,7 +184,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '21'
+    sequence: !!float '22'
   START_DATE:
     columnName: START_DATE
     typeName: DATE
@@ -184,7 +192,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '10'
   TEMPLATE_NO:
     columnName: TEMPLATE_NO
     typeName: VARCHAR2(16)
@@ -192,7 +200,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '12'
   WELL_HOLE_ID:
     columnName: WELL_HOLE_ID
     typeName: VARCHAR2(32)
@@ -200,7 +208,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '13'
 indexes:
   IR_WELL_JN:
     indexName: IR_WELL_JN

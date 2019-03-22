@@ -52,6 +52,8 @@ CREATE OR REPLACE PACKAGE EcDp_Performance_Test IS
 ** 25.08.2016  jainngou  ECPD-36092: New procedure-[calcWellResultRatio] added to calculate well result ratio and meter factor for Gas, Wat and Hcliq.
 ** 05.03.2018  khatrnit  ECPD-50409: Renamed function showDefinedTestDevices to showDefinedTestDevice and also changing return of OBJECT_ID instead of OBJECT_NAME
 ** 18.04.2018  khatrnit  ECPD-52664: New procedure-[addWellToProductionTestResult] added to insert well while inserting production test result.
+** 10.09.2018  chaudgau  ECPD-52897: New procedure setFlwlWellTestDefine and removeFlwlWellTestDefine has been added to initiate or remove flowline test based on
+**                                    flowline well connection
 *************************************************************************************************/
 
 --
@@ -303,7 +305,17 @@ PROCEDURE setWbiTestResult (
               p_created_by    VARCHAR2 DEFAULT NULL);
 
 --
+PROCEDURE setFlwlWellTestDefine (p_object_id VARCHAR2 -- WELL OBJECT ID
+                            ,p_test_no       NUMBER
+                            ,p_created_by    VARCHAR2 DEFAULT NULL);
 
+--
+PROCEDURE removeFlwlWellTestDefine
+(
+    p_object_id VARCHAR2 -- WELL OBJECT_ID
+   ,p_test_no   NUMBER
+);
+--
 PROCEDURE removeWbiTestDefine (p_object_id     VARCHAR2, -- WELL OBJECT ID
                                p_test_no       NUMBER);
 

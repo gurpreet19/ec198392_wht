@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0043
   NAME: Stream Item Category Shares
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/split_key/SPLIT_TYPE/STREAM_ITEM_CATEGORY
 related: {}

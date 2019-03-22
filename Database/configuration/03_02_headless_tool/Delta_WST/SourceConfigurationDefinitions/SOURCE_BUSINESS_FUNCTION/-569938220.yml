@@ -8,5 +8,6 @@ properties:
   BF_CODE: PR.0017
   NAME: Monthly Price Index - Dataset
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.sale.pr.screens/price_index_monthly_with_dim/CLASS/PRICE_INDEX_DS_MTH_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self
 related: {}

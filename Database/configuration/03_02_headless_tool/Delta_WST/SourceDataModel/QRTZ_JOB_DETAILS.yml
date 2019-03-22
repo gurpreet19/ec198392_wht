@@ -2,6 +2,7 @@
 name: QRTZ_JOB_DETAILS
 cnstPrimaryKey:
   columns:
+  - SCHED_NAME
   - JOB_NAME
   - JOB_GROUP
   name: PK_QRTZ_JOB_DETAILS
@@ -15,7 +16,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '17'
+    sequence: !!float '18'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -23,7 +24,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '18'
+    sequence: !!float '19'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -31,7 +32,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '19'
+    sequence: !!float '20'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -39,7 +40,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '12'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -47,15 +48,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '13'
   DESCRIPTION:
     columnName: DESCRIPTION
-    typeName: VARCHAR2(240)
+    typeName: VARCHAR2(250)
     nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '3'
+    sequence: !!float '4'
   IS_DURABLE:
     columnName: IS_DURABLE
     typeName: VARCHAR2(1)
@@ -63,23 +64,23 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '5'
-  IS_STATEFUL:
-    columnName: IS_STATEFUL
+    sequence: !!float '6'
+  IS_NONCONCURRENT:
+    columnName: IS_NONCONCURRENT
     typeName: VARCHAR2(1)
-    nullable: 'NO'
+    nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '7'
-  IS_VOLATILE:
-    columnName: IS_VOLATILE
+  IS_UPDATE_DATA:
+    columnName: IS_UPDATE_DATA
     typeName: VARCHAR2(1)
-    nullable: 'NO'
+    nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '6'
+    sequence: !!float '8'
   JOB_CLASS_NAME:
     columnName: JOB_CLASS_NAME
     typeName: VARCHAR2(256)
@@ -87,7 +88,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '4'
+    sequence: !!float '5'
   JOB_DATA:
     columnName: JOB_DATA
     typeName: BLOB
@@ -95,15 +96,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '10'
   JOB_GROUP:
     columnName: JOB_GROUP
-    typeName: VARCHAR2(80)
+    typeName: VARCHAR2(200)
     nullable: 'NO'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '2'
+    sequence: !!float '3'
   JOB_NAME:
     columnName: JOB_NAME
     typeName: VARCHAR2(512)
@@ -111,7 +112,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '1'
+    sequence: !!float '2'
   LAST_UPDATED_BY:
     columnName: LAST_UPDATED_BY
     typeName: VARCHAR2(30)
@@ -119,7 +120,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '14'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -127,7 +128,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '15'
   RECORD_STATUS:
     columnName: RECORD_STATUS
     typeName: VARCHAR2(1)
@@ -135,7 +136,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '11'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -143,7 +144,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '20'
+    sequence: !!float '21'
   REQUESTS_RECOVERY:
     columnName: REQUESTS_RECOVERY
     typeName: VARCHAR2(1)
@@ -151,7 +152,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '8'
+    sequence: !!float '9'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -159,7 +160,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '16'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -167,7 +168,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '17'
+  SCHED_NAME:
+    columnName: SCHED_NAME
+    typeName: VARCHAR2(120)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
 cnstChecks:
   CHK_QRTZ_JOB_DETAILS_1:
     searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')
@@ -198,7 +207,46 @@ indexes:
   I_QRTZ_JOB_DETAILS_1:
     indexName: I_QRTZ_JOB_DETAILS_1
     columns:
+    - SCHED_NAME
     - REQUESTS_RECOVERY
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_JOB_DETAILS_2:
+    indexName: I_QRTZ_JOB_DETAILS_2
+    columns:
+    - SCHED_NAME
+    - JOB_GROUP
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 65536
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_JOB_DETAILS_3:
+    indexName: I_QRTZ_JOB_DETAILS_3
+    columns:
+    - JOB_NAME
+    - JOB_GROUP
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536

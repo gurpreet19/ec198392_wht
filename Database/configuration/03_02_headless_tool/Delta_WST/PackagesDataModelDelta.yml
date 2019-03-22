@@ -418,6 +418,10 @@ ECBP_WELL_SUBDAILY: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECBP_WELL_SUBDAILY
   status: MODIFIED
   type: PACKAGE
+ECBP_WELL_TEST_STATUS_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: ECBP_WELL_TEST_STATUS_LOG
+  status: ADDED
+  type: PACKAGE
 ECBP_WELL_THEORETICAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECBP_WELL_THEORETICAL
   status: MODIFIED
@@ -432,6 +436,10 @@ ECBP_WET_GAS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: PACKAGE
 ECDB_BUILDUTILS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDB_BUILDUTILS
+  status: ADDED
+  type: PACKAGE
+ECDB_BUILDUTILS_ASUSER: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: ECDB_BUILDUTILS_ASUSER
   status: ADDED
   type: PACKAGE
 ECDB_UTILS: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -678,6 +686,10 @@ ECDP_DEFERMENT_EVENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_DEFERMENT_EVENT
   status: DELETED
   type: PACKAGE
+ECDP_DEFERMENT_LOG: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: ECDP_DEFERMENT_LOG
+  status: ADDED
+  type: PACKAGE
 ECDP_DEFER_LOSS_ACCOUNTING: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_DEFER_LOSS_ACCOUNTING
   status: MODIFIED
@@ -737,6 +749,10 @@ ECDP_FACILITY_ALLOCATED: !!com.ec.upgrade.schema.dto.DbObjectDTO
 ECDP_FACILITY_ATTRIBUTE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_FACILITY_ATTRIBUTE
   status: MODIFIED
+  type: PACKAGE
+ECDP_FACILITY_REFERENCE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: ECDP_FACILITY_REFERENCE
+  status: ADDED
   type: PACKAGE
 ECDP_FCST_FLUID: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_FCST_FLUID
@@ -840,6 +856,10 @@ ECDP_IMPORT: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: PACKAGE
 ECDP_INBOUND_INTERFACE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_INBOUND_INTERFACE
+  status: ADDED
+  type: PACKAGE
+ECDP_INJ_PERFORMANCE_TEST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: ECDP_INJ_PERFORMANCE_TEST
   status: ADDED
   type: PACKAGE
 ECDP_INVENTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -985,6 +1005,10 @@ ECDP_PINC: !!com.ec.upgrade.schema.dto.DbObjectDTO
 ECDP_PIPELINE_CALCULATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_PIPELINE_CALCULATION
   status: MODIFIED
+  type: PACKAGE
+ECDP_PLANNEDWELL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: ECDP_PLANNEDWELL
+  status: ADDED
   type: PACKAGE
 ECDP_PPA_PRICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_PPA_PRICE
@@ -1274,6 +1298,10 @@ ECDP_SUBDAILY_UTILITIES: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_SUBDAILY_UTILITIES
   status: MODIFIED
   type: PACKAGE
+ECDP_SYNCHRONISE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: ECDP_SYNCHRONISE
+  status: ADDED
+  type: PACKAGE
 ECDP_SYSTEM: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_SYSTEM
   status: MODIFIED
@@ -1344,6 +1372,10 @@ ECDP_TRANSACTION_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: PACKAGE
 ECDP_TRANS_INVENTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: ECDP_TRANS_INVENTORY
+  status: ADDED
+  type: PACKAGE
+ECDP_TRIGGER_UTILS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: ECDP_TRIGGER_UTILS
   status: ADDED
   type: PACKAGE
 ECDP_TRUCKTICKET_PARTITION: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -1510,53 +1542,17 @@ EC_BS_TRAN_INSTANTIATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: EC_BS_TRAN_INSTANTIATE
   status: MODIFIED
   type: PACKAGE
-EC_CLASS: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS
-  status: ADDED
-  type: PACKAGE
-EC_CLASS_ATTRIBUTE: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS_ATTRIBUTE
-  status: ADDED
-  type: PACKAGE
-EC_CLASS_ATTR_DB_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS_ATTR_DB_MAPPING
-  status: ADDED
-  type: PACKAGE
 EC_CLASS_ATTR_EDITABLE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: EC_CLASS_ATTR_EDITABLE
-  status: ADDED
-  type: PACKAGE
-EC_CLASS_ATTR_PRESENTATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS_ATTR_PRESENTATION
   status: ADDED
   type: PACKAGE
 EC_CLASS_ATTR_VALIDATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: EC_CLASS_ATTR_VALIDATION
   status: ADDED
   type: PACKAGE
-EC_CLASS_DB_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS_DB_MAPPING
-  status: ADDED
-  type: PACKAGE
-EC_CLASS_DEPENDENCY: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS_DEPENDENCY
-  status: ADDED
-  type: PACKAGE
 EC_CLASS_PROPERTY_CODES: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: EC_CLASS_PROPERTY_CODES
   status: DELETED
-  type: PACKAGE
-EC_CLASS_RELATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS_RELATION
-  status: ADDED
-  type: PACKAGE
-EC_CLASS_REL_DB_MAPPING: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS_REL_DB_MAPPING
-  status: ADDED
-  type: PACKAGE
-EC_CLASS_REL_PRESENTATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
-  name: EC_CLASS_REL_PRESENTATION
-  status: ADDED
   type: PACKAGE
 EC_DERIVED_STREAM: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: EC_DERIVED_STREAM
@@ -1564,7 +1560,7 @@ EC_DERIVED_STREAM: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: PACKAGE
 EC_GENERATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: EC_GENERATE
-  status: MODIFIED
+  status: DELETED
   type: PACKAGE
 EC_GENERATE_STREAM: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: EC_GENERATE_STREAM
@@ -1785,6 +1781,10 @@ UE_FORECAST_PRICE: !!com.ec.upgrade.schema.dto.DbObjectDTO
 UE_FORECAST_PROD: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: UE_FORECAST_PROD
   status: ADDED
+  type: PACKAGE
+UE_HARBOUR_DUES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: UE_HARBOUR_DUES
+  status: MODIFIED
   type: PACKAGE
 UE_INBOUND_INTERFACE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: UE_INBOUND_INTERFACE

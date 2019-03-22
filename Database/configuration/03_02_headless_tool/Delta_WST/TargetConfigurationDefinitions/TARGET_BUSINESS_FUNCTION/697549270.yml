@@ -8,5 +8,6 @@ properties:
   BF_CODE: CP.0033
   NAME: Forecast - Schedule Lifting
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.cp.screens/fcst_schedule_lifting
 related: {}

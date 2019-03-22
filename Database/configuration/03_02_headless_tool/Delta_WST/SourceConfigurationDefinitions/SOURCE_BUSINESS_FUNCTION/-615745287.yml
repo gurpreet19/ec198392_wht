@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0125
   NAME: Daily Facility Balancing
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/daily_fcty_balancing/GROUPMODEL/FCTY_CLASS_1
 related: {}

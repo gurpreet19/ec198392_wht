@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0077
   NAME: Period Contract Factors
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/period_factors/TARGET/CONTRACT/CLASS/TRCN_FACTOR
 related: {}

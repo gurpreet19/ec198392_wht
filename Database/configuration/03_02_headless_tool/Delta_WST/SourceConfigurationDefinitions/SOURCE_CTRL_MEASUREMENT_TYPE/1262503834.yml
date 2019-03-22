@@ -5,6 +5,7 @@ keys:
   T: CTRL_MEASUREMENT_TYPE
 parentKeys: {}
 properties:
+  DB_UNIT: null
   DESCRIPTION: GOR, GLR etc.
   FORMAT_MASK: '#0.000000'
   MEASUREMENT_TYPE: RATIO_GAS_LIQ

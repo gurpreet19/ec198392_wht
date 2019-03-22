@@ -23,6 +23,7 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Stor_Fcst_Balance IS
 **18.07.2017     baratmah  ECPD-45870 Modified calcStorageLevel,getAccEstLiftedQtySubDay,calcStorageLevelSubDay to Fix filtering on cargo status.
 **16.08.2017     thotesan  ECPD-39313: Modified cursor of calcStorageLevel for newly created table for perforamance improvement.
 **28.05.2018     sharawan  ECPD-56221: Revert changes related to day end not lifted, tank dip, actual balance. (JIRA reverted - ECPD-48695, ECPD-53197, ECPD-51454)
+**25.10.2018     baratmah  ECPD-59468: Modified calcStorageLevel to handle reading of Day End Not Lifted before forecast start as partial actuals
 ******************************************************************/
 
 /**private global session variables **/
@@ -64,6 +65,24 @@ FUNCTION calcStorageLevel(p_storage_id VARCHAR2
 RETURN NUMBER
 --</EC-DOC>
 IS
+
+	-- any exported not lifted before tank dip for completed cargos
+	CURSOR c_exported_compl(cp_storage_id VARCHAR2, cp_forecast_id VARCHAR2, cp_fcst_start DATE, cp_start DATE, cp_end DATE) IS
+		SELECT sum(a.export_qty) qty, sum(a.export_qty2) qty2, sum(a.export_qty3) qty3
+		FROM   stor_period_export_status a
+		WHERE  a.object_id = cp_storage_id
+		AND    a.daytime < cp_fcst_start
+		AND    a.cargo_no IN (SELECT n.cargo_no
+							  FROM   stor_fcst_lift_nom n, cargo_fcst_transport c, cargo_status_mapping csm
+							  WHERE  n.object_id = cp_storage_id
+							  AND    n.forecast_id = cp_forecast_id
+							  AND    c.cargo_no = n.cargo_no
+							  AND    c.forecast_id = n.forecast_id
+							  AND    c.cargo_status= csm.cargo_status
+							  AND    csm.ec_cargo_status <> 'D'
+							  AND    nvl(n.bl_date, n.nom_firm_date) >= cp_start
+							  AND    nvl(n.bl_date, n.nom_firm_date) <= cp_end)
+		AND    a.time_span = 'DAY';
 
 CURSOR c_sum_in (cp_storage_id VARCHAR2, cp_forecast_id VARCHAR2, cp_start DATE, cp_end DATE) IS
 	SELECT 	SUM(f.forecast_qty) forecast_qty,
@@ -159,12 +178,14 @@ CURSOR c_sum_out_sub_day (cp_storage_id VARCHAR2, cp_forecast_id VARCHAR2, cp_st
 				AND sn.production_day <= cp_end
 		) a;
 
+	ld_FcstStart	DATE;
 	ld_StartDate	DATE;
 	ld_EndDate		DATE;
 	ld_today		DATE;
 	ln_Dip 			NUMBER;
 	lnTotalIn		NUMBER;
 	lnTotalOut		NUMBER;
+	ln_ExpQty       NUMBER;
  	ln_balance_delta NUMBER;
     lv_prev_forecast_id forecast.object_id%type;
     lv_prev_object_id storage.object_id%type;
@@ -217,23 +238,38 @@ BEGIN
         lv_prev_qty:=gv_prev_qty;
     END IF;
 
+	ld_EndDate := p_daytime;
+
 	-- Get opening balance for forecast period
-	ld_StartDate := ec_forecast.start_date(p_forecast_id);
+	ld_FcstStart := ec_forecast.start_date(p_forecast_id);
+	ld_StartDate := ld_FcstStart;
     IF (lv_prev_forecast_id = p_forecast_id) AND (lv_prev_object_id = p_storage_id) AND (p_daytime >= ld_today) AND (trunc(lv_prev_date, 'DD') - trunc(p_daytime, 'DD') = 0) THEN
         --prev_date and p_daytime is identical and in the future
         RETURN NVL(lv_prev_qty, 0); --+0.0001;
-    ELSIF (lv_prev_forecast_id = p_forecast_id) AND (lv_prev_object_id = p_storage_id) AND (p_daytime>=ld_today) AND (trunc(lv_prev_date,'DD') - trunc(p_daytime-1,'DD')=0) THEN
-        --prev_date is the day before p_daytime and in the future
-        ld_StartDate := p_daytime;
-        ln_dip := NVL(lv_prev_qty,0); --DEBUG + .01;
     ELSE
-    	ln_Dip := getInitBalance(p_storage_id, p_forecast_id, p_xtra_qty);
-    	IF ln_Dip IS NULL THEN
-        ln_Dip := EcDp_Storage_Balance.calcStorageLevel(p_storage_id, ld_StartDate-1, NULL, p_xtra_qty, p_ignore_cache);
-    END IF;
+		IF (lv_prev_forecast_id = p_forecast_id) AND (lv_prev_object_id = p_storage_id) AND (p_daytime>=ld_today) AND (trunc(lv_prev_date,'DD') - trunc(p_daytime-1,'DD')=0) THEN
+			--prev_date is the day before p_daytime and in the future
+			ld_StartDate := p_daytime;
+			ln_dip := NVL(lv_prev_qty,0); --DEBUG + .01;
+		ELSE
+			ln_Dip := getInitBalance(p_storage_id, p_forecast_id, p_xtra_qty);
+			IF ln_Dip IS NULL THEN
+				ln_Dip := EcDp_Storage_Balance.calcStorageLevel(p_storage_id, ld_StartDate-1, NULL, p_xtra_qty, p_ignore_cache);
+			END IF;
+		END IF;
+		-- Find Exported Not Lifted records before last tank dip for cargos completed
+		FOR curExp IN c_exported_compl(p_storage_id, p_forecast_id, ld_FcstStart, ld_StartDate, ld_EndDate) LOOP
+			if p_xtra_qty = 1 then
+				ln_ExpQty := nvl(curExp.Qty2, 0); -- get daily exported-not-lifted
+			elsif p_xtra_qty = 2 then
+				ln_ExpQty := nvl(curExp.Qty3, 0); -- get daily exported-not-lifted
+			else
+				ln_ExpQty := nvl(curExp.Qty, 0); -- get daily exported-not-lifted
+			end if;
+		END LOOP;
+		ln_Dip := ln_Dip + nvl(ln_ExpQty, 0);
     END IF;
 
-	ld_EndDate := p_daytime;
 
 	-- get official/planned incomming
 	FOR curIn IN c_sum_in (p_storage_id, p_forecast_id, ld_StartDate, ld_EndDate) LOOP

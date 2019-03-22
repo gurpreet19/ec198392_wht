@@ -9,7 +9,7 @@ keys:
 parentKeys: {}
 properties:
   BF_CODE: FI.0008
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/fin_item_calc_daily' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/fin_item_calc/TIME_SPAN/DAY' )
   CLASS_NAME: null
   COMP_CODE: download
   NAME: Download

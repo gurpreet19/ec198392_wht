@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0051
   NAME: Revenue Booking Period - Re-open
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/fin_period/CLASS/SYSTEM_MTH_STATUS_BOOK/ACTION/REOPEN/PERIOD_TYPE/BOOKING
 related: {}

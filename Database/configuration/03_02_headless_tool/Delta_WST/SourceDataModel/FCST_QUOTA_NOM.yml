@@ -2,7 +2,7 @@
 name: FCST_QUOTA_NOM
 cnstPrimaryKey:
   columns:
-  - OBJECT_ID
+  - SCENARIO_ID
   - DAYTIME
   name: PK_FCST_QUOTA_NOM
   type: PRIMARYKEY
@@ -160,14 +160,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '125'
-  OBJECT_ID:
-    columnName: OBJECT_ID
-    typeName: VARCHAR2(32)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '1'
   OIL_NOM:
     columnName: OIL_NOM
     typeName: NUMBER
@@ -216,6 +208,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '127'
+  SCENARIO_ID:
+    columnName: SCENARIO_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(240)
@@ -1071,7 +1071,7 @@ cnstForeignKeys:
     deleteAction: NOACTION
     primaryTable: FORECAST
     columns:
-      OBJECT_ID: OBJECT_ID
+      SCENARIO_ID: OBJECT_ID
     name: FK_FCST_QUOTA_NOM_2
     type: FOREIGNKEY
     status: UNDEFINED

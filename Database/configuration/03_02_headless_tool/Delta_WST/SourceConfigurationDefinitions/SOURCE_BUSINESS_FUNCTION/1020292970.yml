@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0234
   NAME: Well Seasonal Value
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/well_seasonal_value
 related: {}

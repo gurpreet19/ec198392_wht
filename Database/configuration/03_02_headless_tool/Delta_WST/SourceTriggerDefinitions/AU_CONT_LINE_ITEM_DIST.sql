@@ -404,27 +404,29 @@ BEGIN
 
 -- update vendor split of none qty to be that of qty
 IF :New.LINE_ITEM_BASED_TYPE = 'QTY' AND NVL(ec_cont_transaction.reversal_ind(:new.transaction_key),'N') = 'N' THEN
-  UPDATE cont_li_dist_company
+   UPDATE cont_li_dist_company
     SET vendor_share =
          (SELECT vendor_share
             FROM cont_li_dist_company clid
-           WHERE transaction_key =             :new.Transaction_Key
-             AND line_item_key =               :New.line_item_key
-             AND line_item_based_type =         'QTY'
-             AND dist_id =                     :New.dist_id
-             AND vendor_id =                   cont_li_dist_company.vendor_id),
+           WHERE transaction_key            = :new.Transaction_Key
+             AND line_item_key              = :New.line_item_key
+             AND line_item_based_type       = 'QTY'
+             AND dist_id                    = :New.dist_id
+             AND vendor_id                  = cont_li_dist_company.vendor_id
+             AND nvl(stream_item_id,'NULL') = nvl(cont_li_dist_company.stream_item_id,'NULL')),
         split_share =
          (SELECT vendor_share
             FROM cont_li_dist_company clid
-           WHERE transaction_key =             :new.Transaction_Key
-             AND line_item_key =               :New.line_item_key
-             AND line_item_based_type =         'QTY'
-             AND dist_id =                     :New.dist_id
-             AND vendor_id =                   cont_li_dist_company.vendor_id)
-   WHERE transaction_key =             :new.Transaction_Key
-     AND line_item_key <>              :New.line_item_key
-     AND line_item_based_type          != 'QTY'
-     AND dist_id =                     :New.dist_id;
+           WHERE transaction_key            = :new.Transaction_Key
+             AND line_item_key              = :New.line_item_key
+             AND line_item_based_type       = 'QTY'
+             AND dist_id                    = :New.dist_id
+             AND vendor_id                  = cont_li_dist_company.vendor_id
+             AND nvl(stream_item_id,'NULL') = nvl(cont_li_dist_company.stream_item_id,'NULL'))
+   WHERE transaction_key      =  :new.Transaction_Key
+     AND line_item_key        <> :New.line_item_key
+     AND line_item_based_type != 'QTY'
+     AND dist_id              =  :New.dist_id;
 END IF;
 
 FOR cc IN c_company_dist LOOP

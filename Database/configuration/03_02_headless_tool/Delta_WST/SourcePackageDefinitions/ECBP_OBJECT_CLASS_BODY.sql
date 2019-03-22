@@ -27,6 +27,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Object_Class IS
 **  26.05.2015 abdulmaw ECPD-27318: Updated CopyObject function to support Month lock correctly
 **  10.09.2015 jainnraj ECPD-31624: Modified PROCEDURE StreamObject to remove FROM_DATE conditions from cursor c_strm_set_list and lv_value on line number 612.
 **  31.08.2016 dhavaalo ECPD-38607: Remove usage of EcDp_Utilities.executestatement.
+**  10.10.2018 bintjnor ECPD-54963: Added missing Facility Class 1 records in getObjName function.
 ****************************************************************/
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
@@ -800,6 +801,8 @@ BEGIN
 		lv2_return_val := ec_tank_version.name(p_object_id, p_daytime, '<=');
 	ELSIF p_object_type = 'EXTERNAL_LOCATION' THEN
 		lv2_return_val := ec_ext_location_version.name(p_object_id, p_daytime, '<=');
+	ELSIF p_object_type = 'FCTY_CLASS_1' THEN
+		lv2_return_val := ec_fcty_version.name(p_object_id, p_daytime, '<=');
 	END IF;
 
 	RETURN lv2_return_val;

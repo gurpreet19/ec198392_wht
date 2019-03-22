@@ -5,7 +5,8 @@ BEGIN
     -- $Revision: 1.2 $
     -- Common
     IF Inserting THEN
-      :NEW.record_status := NVL(:NEW.record_status,'P');
+
+      :new.record_status := nvl(:new.record_status, 'P');
       IF :new.created_by IS NULL THEN
          :new.created_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);
       END IF;
@@ -15,7 +16,7 @@ BEGIN
       END IF;
 
       IF :new.created_date IS NULL THEN
-         :new.created_date := Ecdp_Timestamp.getCurrentSysdate;
+         :new.created_date := EcDp_Timestamp.getCurrentSysdate;
       END IF;
       :new.rev_no := 0;
     ELSE
@@ -24,7 +25,7 @@ BEGIN
             :new.last_updated_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);
          END IF;
          IF NOT UPDATING('LAST_UPDATED_DATE') THEN
-           :new.last_updated_date := Ecdp_Timestamp.getCurrentSysdate;
+           :new.last_updated_date := EcDp_Timestamp.getCurrentSysdate;
          END IF;
       END IF;
     END IF;

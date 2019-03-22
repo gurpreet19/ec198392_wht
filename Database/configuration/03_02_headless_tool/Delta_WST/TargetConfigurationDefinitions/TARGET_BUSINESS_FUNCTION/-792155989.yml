@@ -8,5 +8,6 @@ properties:
   BF_CODE: PD.0003
   NAME: Corrective Actions
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pd.screens/corrective_actions
 related: {}

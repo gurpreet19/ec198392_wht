@@ -466,9 +466,6 @@ BEGIN
       END LOOP;
     END IF;
 
-    mysql := 'SELECT COUNT(*) FROM class_attribute WHERE class_name='||CHR(39)||substr(CheckCur.table_id,4)||CHR(39)||' AND attribute_name = ''PRODUCTION_DAY''';
-    EcDp_DynSql.WriteDebugText('Pck_Gen_Check.run_day_check','Determine if day column exists with: ' || mysql, 'DEBUG');
-
     -- Not all classes uses PRODUCTION_DAY or DAYTIME, need to resolve what to use
     For curDateAttr IN c_Class_Date_Columns(substr(CheckCur.table_id,4)) LOOP
       lv2_date_attrib := curDateAttr.attribute_name;
@@ -484,7 +481,6 @@ BEGIN
       END IF;
     END LOOP;
 
-    --  ln_is_subdaily := execute_sql_number(mysql);
     ld_date := p_day;
     ld_prod_day_end := p_day+1;
 

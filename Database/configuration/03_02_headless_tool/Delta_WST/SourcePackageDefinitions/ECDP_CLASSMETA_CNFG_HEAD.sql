@@ -118,6 +118,7 @@ FUNCTION isDisabled(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, 
 FUNCTION isReportOnly(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2) RETURN VARCHAR2;
 FUNCTION getLabel(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2) RETURN VARCHAR2; /* NOT USED*/
 FUNCTION getDbSortOrder(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2) RETURN NUMBER;
+FUNCTION getScreenSortOrder(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2) RETURN NUMBER;
 FUNCTION getAllocPriority(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2) RETURN NUMBER;
 FUNCTION getAccessControlMethod(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2) RETURN VARCHAR2; /* NOT USED*/
 FUNCTION getApprovalInd(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2) RETURN VARCHAR2; /* NOT USED*/

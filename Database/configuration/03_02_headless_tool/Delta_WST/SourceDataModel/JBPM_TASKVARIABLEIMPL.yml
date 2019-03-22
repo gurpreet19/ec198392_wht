@@ -3,7 +3,7 @@ name: JBPM_TASKVARIABLEIMPL
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008721
+  name: PK_JBPM_TASKVARIABLEIMPL
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

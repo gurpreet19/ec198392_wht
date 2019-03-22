@@ -2,15 +2,7 @@
 name: TRANS_INV_LI_PR_CNTRACC
 cnstPrimaryKey:
   columns:
-  - OBJECT_ID
-  - DAYTIME
-  - LINE_TAG
-  - PRODUCT_ID
-  - COST_TYPE
-  - TYPE
-  - ACCOUNT_CODE
-  - PROD_STREAM_ID
-  - SOURCE_TYPE
+  - ID
   name: PK_TRANS_INV_LI_PR_CNTRACC
   type: PRIMARYKEY
   status: UNDEFINED
@@ -186,7 +178,7 @@ columns:
   ID:
     columnName: ID
     typeName: NUMBER
-    nullable: 'YES'
+    nullable: 'NO'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
@@ -234,7 +226,7 @@ columns:
   PROD_STREAM_ID:
     columnName: PROD_STREAM_ID
     typeName: VARCHAR2(32)
-    nullable: 'NO'
+    nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
@@ -362,7 +354,7 @@ columns:
   SOURCE_TYPE:
     columnName: SOURCE_TYPE
     typeName: VARCHAR2(100)
-    nullable: 'NO'
+    nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED

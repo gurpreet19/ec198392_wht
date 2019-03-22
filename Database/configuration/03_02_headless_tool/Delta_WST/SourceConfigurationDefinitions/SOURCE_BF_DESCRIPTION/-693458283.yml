@@ -9,16 +9,17 @@ properties:
   BF_DESCRIPTION_NO: CD.0101
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_attribute/CLASS_NAME/REVN_CONTRACT/ACCESS_COLUMN/REVN_CODE' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p>    <strong>Contractual Attributes screen</strong>    is used to
-    change the contract attributes.</p><p>    Each contract has a Contract Template
-    (CO.2020) where the attributes are    defined. Depending on the template, different
-    attributes can therefore be    listed in this screen.</p><p>    <u>The screen
-    is divided into these sections:</u></p><p>    <em><strong>- Filter Navigator:</strong></em>    where
-    a Contract is selected.</p><p>    <em><strong>- Attributes Section: </strong></em>    where
-    all the attributes and current values for the selected Contract are    listed.</p><p>    <em><strong>-
-    Attribute Version Section: </strong></em>    where all versions of the selected
-    attribute in the previous section are    listed.    <br/>    If the attribute
-    is retrieved from a user exit function this section will    be empty because there
-    are no versions of the attribute.</p><p>    More information can be found at Transport
-    Contract Attributes screen (BF    CO.2021).</p>'
+  DESCRIPTION: '<p><strong>Contractual Attributes screen</strong> is used to change
+    the contract attributes.</p><p>Each contract has a Contract Template (BF CO.2020)
+    where the attributes are defined. Depending on the template, different attributes
+    can therefore be listed in this screen.</p><p>The screen is divided into these
+    sections:</p> <p> <strong style="color: rgb(0, 102, 204);">Navigator</strong></p><p>This
+    is where a Contract is selected.</p><p><strong style="color: rgb(0, 102, 204);">Attributes
+    Section</strong></p><p>This is a section where all the attributes and current
+    values for the selected Contract are listed.</p><p><strong style="color: rgb(0,
+    102, 204);">Attribute Version Section</strong></p><p>This is where all versions
+    of the selected attribute in the previous section are listed. <br> If the attribute
+    is retrieved from a user exit function this section will be empty because there
+    are no versions of the attribute.</p> <p>More information can be found at Transport
+    Contract Attributes screen (BF CO.2021).</p>'
 related: {}

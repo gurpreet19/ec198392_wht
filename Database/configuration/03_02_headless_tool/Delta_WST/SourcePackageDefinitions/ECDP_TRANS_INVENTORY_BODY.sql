@@ -855,16 +855,7 @@ BEGIN
 
 
       -- Rec set to copy from
-      lr_trans_inv_li_pr_cntracc := Ec_Trans_Inv_li_pr_cntracc.row_by_pk(var.object_id,
-                                                                         var.daytime,
-                                                                         var.line_tag,
-                                                                         var.product_id,
-                                                                         var.cost_type,
-                                                                         var.type,
-                                                                         var.account_code,
-                                                                         var.prod_stream_id,
-                                                                         var.source_type,
-                                                                         '=');
+      lr_trans_inv_li_pr_cntracc := Ec_Trans_Inv_li_pr_cntracc.row_by_pk(var.id);
 
       ln_res := CopyTransInvPosting(lr_trans_inv_li_pr_cntracc,
                                     p_object_id,
@@ -8252,8 +8243,7 @@ begin
   lv2_alt_prod_stream_id:=p_prod_stream_id;
   lv2_prod_stream_id:=p_alt_prod_stream_id;
   lv2_alt_inventory_id:=p_object_id;
-  rec_cntr := Ec_Trans_Inv_Li_Pr_Cntracc.row_by_pk(p_object_id,p_daytime,lv2_line_tag,
-          lv2_product_id,lv2_cost_type,lv2_type,lv2_account_code,p_prod_stream_id,lv2_source_type,'<=');
+  rec_cntr := Ec_Trans_Inv_Li_Pr_Cntracc.row_by_pk(n_id);
   n_ref_id:=n_id;
   ecdp_system_key.assignNextNumber('TRANS_INV_LI_PR_CNTRACC',n_id);
 

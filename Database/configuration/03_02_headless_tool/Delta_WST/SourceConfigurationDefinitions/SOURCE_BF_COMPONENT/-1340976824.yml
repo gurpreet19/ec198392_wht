@@ -9,7 +9,7 @@ keys:
 parentKeys: {}
 properties:
   BF_CODE: FI.0007
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/fin_item_calc_mth' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fi/fin_item_calc/TIME_SPAN/MTH' )
   CLASS_NAME: null
   COMP_CODE: view
   NAME: View

@@ -7,8 +7,17 @@ BEGIN
       IF :new.record_status IS NULL THEN
         :new.record_status := 'P';
       END IF;
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, :NEW.daytime);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_daytime, :NEW.production_day);
+
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_end_date, :NEW.end_date);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_end_date, :NEW.end_day);
+
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.valid_from_utc_date, :NEW.valid_from_date);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.valid_from_utc_date, :NEW.valid_from_day);
+
       IF :NEW.status = 'ACCEPTED' AND :NEW.use_calc='Y' THEN
-        :NEW.check_unique := :NEW.object_id || to_char(:NEW.valid_from_date,'dd.mm.yyyy hh24:mi:ss');
+        :NEW.check_unique := :NEW.object_id || to_char(:NEW.valid_from_utc_date,'dd.mm.yyyy hh24:mi:ss');
       ELSE
         :NEW.check_unique := null;
       END IF;
@@ -20,9 +29,21 @@ BEGIN
       END IF;
       :new.rev_no := 0;
     ELSE
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.production_day, :NEW.production_day);
+
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_end_date, :NEW.utc_end_date, :OLD.end_date, :NEW.end_date);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_end_date, :NEW.utc_end_date, :OLD.end_day, :NEW.end_day);
+
       IF ((:NEW.status <> :OLD.status OR :NEW.use_calc <> :OLD.use_calc OR :NEW.valid_from_date <> :OLD.valid_from_date) AND
            :NEW.status = 'ACCEPTED' AND :NEW.use_calc='Y') THEN
-        :NEW.check_unique := :NEW.object_id || to_char(:NEW.valid_from_date,'dd.mm.yyyy hh24:mi:ss');
+        IF :NEW.valid_from_date <> :OLD.valid_from_date THEN
+            :NEW.valid_from_utc_date := NULL;
+            EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.valid_from_utc_date, :NEW.valid_from_utc_date, :OLD.valid_from_date, :NEW.valid_from_date);
+            EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.valid_from_utc_date, :NEW.valid_from_utc_date, :OLD.valid_from_day, :NEW.valid_from_day);
+        END IF;
+
+        :NEW.check_unique := :NEW.object_id || to_char(:NEW.valid_from_utc_date,'dd.mm.yyyy hh24:mi:ss');
       ELSIF (:NEW.status <> 'ACCEPTED' OR :NEW.use_calc <> 'Y') THEN
         :NEW.check_unique := null;
       END IF;

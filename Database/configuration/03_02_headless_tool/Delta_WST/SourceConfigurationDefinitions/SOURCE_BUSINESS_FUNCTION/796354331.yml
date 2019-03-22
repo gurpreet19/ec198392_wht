@@ -8,5 +8,6 @@ properties:
   BF_CODE: SP.0005
   NAME: Document Un-transfer
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.sp/document_validation/MODE/UNTRANSFER
 related: {}

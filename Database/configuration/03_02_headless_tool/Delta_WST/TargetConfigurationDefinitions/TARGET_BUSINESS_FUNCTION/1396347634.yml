@@ -8,5 +8,6 @@ properties:
   BF_CODE: TO.0017
   NAME: BL/MR Light
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.to.screens/blmr_light
 related: {}

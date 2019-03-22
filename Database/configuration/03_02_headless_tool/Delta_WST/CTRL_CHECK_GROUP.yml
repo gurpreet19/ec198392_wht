@@ -1,3 +1,33 @@
+D_PWEL_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1018993432'
+  keys:
+    CHECK_GROUP: D_PWEL_STATUS
+    T: CTRL_CHECK_GROUP
+  parentKeys: {}
+  properties:
+    EC_USER_OBJECT: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status
+  related: {}
+  status: MODIFIED
+D_PWEL_STATUS_2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-141669'
+  keys:
+    CHECK_GROUP: D_PWEL_STATUS_2
+    T: CTRL_CHECK_GROUP
+  parentKeys: {}
+  properties:
+    EC_USER_OBJECT: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status
+  related: {}
+  status: MODIFIED
+D_PWEL_STATUS_3: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-141668'
+  keys:
+    CHECK_GROUP: D_PWEL_STATUS_3
+    T: CTRL_CHECK_GROUP
+  parentKeys: {}
+  properties:
+    EC_USER_OBJECT: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status
+  related: {}
+  status: MODIFIED
 M_ASSET_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '545985267'
   keys:

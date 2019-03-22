@@ -21,25 +21,4 @@ BEGIN
       END LOOP;
     END IF;
   END IF;
-
-  IF nvl(:new.property_code, :old.property_code) IN ('CLASS_SHORT_CODE',
-                                                     'LABEL',
-                                                     'ENSURE_REV_TEXT_ON_UPD',
-                                                     'READ_ONLY_IND',
-                                                     'INCLUDE_IN_VALIDATION',
-                                                     'JOURNAL_RULE_DB_SYNTAX',
-                                                     'LOCK_RULE',
-                                                     'LOCK_IND',
-                                                     'ACCESS_CONTROL_IND',
-                                                     'APPROVAL_IND',
-                                                     'SKIP_TRG_CHECK_IND',
-                                                     'INCLUDE_WEBSERVICE',
-                                                     'CREATE_EV_IND',
-                                                     'DESCRIPTION',
-                                                     'CALC_ENGINE_TABLE_WRITE_IND',
-                                                     'INCLUDE_IN_MAPPING_IND') THEN
-
-    ecdp_viewlayer_utils.set_dirty_ind('CLASS', 'MATVIEW', TRUE);
-
-  END IF;
 END;

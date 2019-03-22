@@ -8,5 +8,6 @@ properties:
   BF_CODE: TO.0028
   NAME: Send Sailing Advice
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.to.screens/send_sailing_advice
 related: {}

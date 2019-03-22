@@ -1,7 +1,11 @@
 CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_SYSTEM_SETTING" ("KEY", "LABEL", "VALUE", "DAYTIME", "RECORD_STATUS", "CREATED_BY", "CREATED_DATE", "LAST_UPDATED_BY", "LAST_UPDATED_DATE", "REV_NO", "REV_TEXT") AS 
   SELECT key
       ,c.label
-      ,nvl(value_string, nvl(to_char(value_number), to_char(value_date))) VALUE
+      ,nvl(value_string,
+           nvl((CASE WHEN key IN ('DEFERMENT_STATUS_RUNNING', 'DEFERMENT_STATUS_STOPPED') then RTRIM(to_char(value_number, 'FM99990D99999'), to_char(0, 'D'))
+                    ELSE to_char(value_number)
+                END),
+           to_char(value_date))) VALUE
       ,daytime daytime
       ,NULL record_status
       ,NULL created_by
@@ -17,7 +21,11 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_SYSTEM_SETTING" ("KEY", "LABEL", "VA
 UNION ALL
 SELECT key
       ,label
-      ,nvl(default_value_string, nvl(to_char(default_value_number), to_char(default_value_date))) VALUE
+      ,nvl(default_value_string,
+           nvl((CASE WHEN key IN ('DEFERMENT_STATUS_RUNNING', 'DEFERMENT_STATUS_STOPPED') then RTRIM(to_char(default_value_number, 'FM99990D99999'), to_char(0, 'D'))
+                    ELSE to_char(default_value_number)
+                END),
+               to_char(default_value_date))) VALUE
       ,TO_DATE('1900-01-01','YYYY-MM-DD') daytime
       ,NULL record_status
       ,NULL created_by

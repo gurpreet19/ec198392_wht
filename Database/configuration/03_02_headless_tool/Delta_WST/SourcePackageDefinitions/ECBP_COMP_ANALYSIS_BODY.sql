@@ -34,6 +34,9 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Comp_Analysis IS
 ** 27.02.2017  singishi ECPD-36028: Updated calcTotMolFrac, calcTotMolPeriodAnFrac, calcTotMassFrac, calcTotPeriodAnMassFrac, calcCompMassFrac, calcCompMassFracPeriodAn,  calcCompMolFrac, calcCompMolFracPeriodAn to handle 'RES','COND','LNG','NGL' phases
 **29.08.2017 kashisag  ECPD-36104: Added new function findWellHCLiqPhase
 **07.09.2017 kashisag  ECPD-36104: Added updated cursor condition for function findWellHCLiqPhase
+**09.07.2018 abdulmaw  ECPD-55985: Updated calcTotMolFrac, calcTotMolPeriodAnFrac, calcTotMassFrac, calcTotPeriodAnMassFrac, calcCompMassFrac, calcCompMassFracPeriodAn, calcCompMolFrac, calcCompMolFracPeriodAn
+                                   to use actual component molecular weight when it's available
+**23.10.2018 kaushaak  ECPD-51659: Added new function calcTheorDens
 ******************************************************************************************/
 
 
@@ -145,10 +148,7 @@ BEGIN
 
    FOR cur_rec IN c_tot_wt(p_analysis_no) LOOP
 
-      ln_mol_frac := cur_rec.wt_pct / ec_component_constant.mol_wt(lv2_object_id,
-                                                                   cur_rec.component_no,
-                                                                   lr_analyse_sample.daytime,
-                                                                   '<=');
+      ln_mol_frac := cur_rec.wt_pct / nvl(cur_rec.mol_wt, ec_component_constant.mol_wt(lv2_object_id, cur_rec.component_no, lr_analyse_sample.daytime, '<='));
 
       IF ln_mol_frac IS NULL THEN
 
@@ -238,10 +238,7 @@ BEGIN
 
    FOR cur_rec IN c_tot_period_an_wt(p_analysis_no) LOOP
 
-      ln_mol_frac := cur_rec.wt_pct / ec_component_constant.mol_wt(lv2_object_id,
-                                                                   cur_rec.component_no,
-                                                                   lr_analyse_sample.daytime,
-                                                                   '<=');
+       ln_mol_frac := cur_rec.wt_pct / nvl(cur_rec.mol_wt, ec_component_constant.mol_wt(lv2_object_id, cur_rec.component_no, lr_analyse_sample.daytime, '<='));
 
       IF ln_mol_frac IS NULL THEN
 
@@ -298,8 +295,8 @@ IS
 
    ln_return_val       NUMBER;
    lv2_standard_code   constant_standard.object_code%TYPE;
-   lv2_object_id varchar2(32);
-   lr_analyse_sample object_fluid_analysis%ROWTYPE;
+   lv2_object_id       VARCHAR2(32);
+   lr_analyse_sample   object_fluid_analysis%ROWTYPE;
    ln_mol_wt NUMBER;
    lv2_phase          VARCHAR2(32);
 
@@ -330,10 +327,7 @@ BEGIN
 
    FOR cur_rec IN c_tot_wt(p_analysis_no) LOOP
 
-      ln_mol_wt := cur_rec.mol_pct * ec_component_constant.mol_wt(lv2_object_id,
-                                                             cur_rec.component_no,
-                                                             lr_analyse_sample.daytime,
-                                                             '<=');
+      ln_mol_wt := cur_rec.mol_pct * nvl(cur_rec.mol_wt, ec_component_constant.mol_wt(lv2_object_id, cur_rec.component_no, lr_analyse_sample.daytime, '<='));
       -- Try analysis to get residue components
       IF ln_mol_wt IS NULL THEN
 
@@ -381,7 +375,7 @@ IS
 
    ln_return_val       NUMBER;
    lv2_standard_code   constant_standard.object_code%TYPE;
-   lv2_object_id varchar2(32);
+   lv2_object_id       VARCHAR2(32);
    lr_analyse_sample strm_analysis_event%ROWTYPE;
    ln_mol_wt NUMBER;
    lv2_phase          VARCHAR2(32);
@@ -412,10 +406,7 @@ BEGIN
 
    FOR cur_rec IN c_tot_period_an_wt(p_analysis_no) LOOP
 
-      ln_mol_wt := cur_rec.mol_pct * ec_component_constant.mol_wt(lv2_object_id,
-                                                             cur_rec.component_no,
-                                                             lr_analyse_sample.daytime,
-                                                             '<=');
+      ln_mol_wt := cur_rec.mol_pct * nvl(cur_rec.mol_wt, ec_component_constant.mol_wt(lv2_object_id, cur_rec.component_no, lr_analyse_sample.daytime, '<='));
       -- Try analysis to get residue components
       IF ln_mol_wt IS NULL THEN
 
@@ -523,7 +514,7 @@ IS
 
    ln_return_val       NUMBER;
    lv2_standard_code   constant_standard.object_code%TYPE;
-   lv2_object_id varchar2(32);
+   lv2_object_id       VARCHAR2(32);
    lr_analyse_sample object_fluid_analysis%ROWTYPE;
    lv2_phase          VARCHAR2(32);
 
@@ -531,6 +522,7 @@ BEGIN
 
    lv2_standard_code := EcDp_System.getAttributeText(p_daytime, 'STANDARD_CODE');
    lv2_phase         := ec_strm_version.stream_phase(p_object_id, p_daytime, '<=');
+   lr_analyse_sample := EcDp_Fluid_Analysis.getAnalysisSample(p_object_id, p_analysis_type, p_sampling_method, p_daytime);
 
    IF lv2_phase = 'GAS' THEN
 
@@ -550,17 +542,10 @@ BEGIN
    END IF;
 
 
-   ln_return_val := p_mol_pct * ec_component_constant.mol_wt(lv2_object_id,
-                                                             p_component_no,
-                                                             p_daytime,
-                                                             '<=');
+   ln_return_val := p_mol_pct * nvl(ec_fluid_analysis_component.mol_wt(lr_analyse_sample.analysis_no, p_component_no)
+                                   ,ec_component_constant.mol_wt(lv2_object_id, p_component_no, p_daytime, '<='));
    -- Try analysis to get residue components
    IF ln_return_val IS NULL THEN
-
-         lr_analyse_sample := EcDp_Fluid_Analysis.getAnalysisSample(p_object_id,
-                                                                    p_analysis_type,
-                                                                    p_sampling_method,
-                                                                    p_daytime);
 
         ln_return_val := p_mol_pct * lr_analyse_sample.cnpl_mol_wt;
 
@@ -603,7 +588,7 @@ IS
 
    ln_return_val       NUMBER;
    lv2_standard_code   constant_standard.object_code%TYPE;
-   lv2_object_id varchar2(32);
+   lv2_object_id       VARCHAR2(32);
    lr_analyse_sample strm_analysis_event%ROWTYPE;
    lv2_phase          VARCHAR2(32);
 
@@ -611,6 +596,7 @@ BEGIN
 
    lv2_standard_code := EcDp_System.getAttributeText(p_daytime, 'STANDARD_CODE');
    lv2_phase         := ec_strm_version.stream_phase(p_object_id, p_daytime, '<=');
+   lr_analyse_sample := EcDp_Fluid_Analysis.getPeriodAnalysisSample(p_object_id, p_analysis_type, p_sampling_method, p_daytime, p_daytime_summer_time);
 
    IF lv2_phase = 'GAS' THEN
 
@@ -630,18 +616,10 @@ BEGIN
    END IF;
 
 
-   ln_return_val := p_mol_pct * ec_component_constant.mol_wt(lv2_object_id,
-                                                             p_component_no,
-                                                             p_daytime,
-                                                             '<=');
+   ln_return_val := p_mol_pct * nvl(ec_strm_analysis_component.mol_wt(lr_analyse_sample.analysis_no, p_component_no)
+                                   ,ec_component_constant.mol_wt(lv2_object_id, p_component_no, p_daytime, '<='));
    -- Try analysis to get residue components
    IF ln_return_val IS NULL THEN
-
-         lr_analyse_sample := EcDp_Fluid_Analysis.getPeriodAnalysisSample(p_object_id,
-                                                                      p_analysis_type,
-                                                                      p_sampling_method,
-                                                                      p_daytime,
-                                                                      p_daytime_summer_time);
 
         ln_return_val := p_mol_pct * lr_analyse_sample.cnpl_mol_wt;
 
@@ -743,9 +721,9 @@ IS
 
 BEGIN
 
-   lv2_standard_code := EcDp_System.getAttributeText(p_daytime,
-                                                      'STANDARD_CODE');
+   lv2_standard_code := EcDp_System.getAttributeText(p_daytime, 'STANDARD_CODE');
    lv2_phase         := ec_strm_version.stream_phase(p_object_id, p_daytime, '<=');
+   lr_analyse_sample := EcDp_Fluid_Analysis.getAnalysisSample(p_object_id, p_analysis_type, p_sampling_method, p_daytime);
 
    IF lv2_phase = 'GAS' THEN
 
@@ -765,17 +743,9 @@ BEGIN
    END IF;
 
 
-   ln_return_val := p_weight_pct / ec_component_constant.mol_wt(lv2_object_id,
-                                                                p_component_no,
-                                                                p_daytime,
-                                                                '<=');
+   ln_return_val := p_weight_pct / nvl(ec_fluid_analysis_component.mol_wt(lr_analyse_sample.analysis_no, p_component_no)
+                                         ,ec_component_constant.mol_wt(lv2_object_id, p_component_no, p_daytime, '<='));
    IF ln_return_val IS NULL THEN
-
-
-      lr_analyse_sample := EcDp_Fluid_Analysis.getAnalysisSample(p_object_id,
-                                                                    p_analysis_type,
-                                                                    p_sampling_method,
-                                                                    p_daytime);
 
       IF p_weight_pct = 0 THEN
 
@@ -824,18 +794,18 @@ RETURN NUMBER
 --</EC-DOC>
 IS
 
-   ln_return_val         NUMBER;
+   ln_return_val        NUMBER;
    lv2_standard_code    constant_standard.object_code%TYPE;
-   lv2_object_id        varchar2(32);
+   lv2_object_id        VARCHAR2(32);
    lr_analyse_sample strm_analysis_event%ROWTYPE;
-   lv2_phase          VARCHAR2(32);
+   lv2_phase            VARCHAR2(32);
 
 
 BEGIN
 
-   lv2_standard_code := EcDp_System.getAttributeText(p_daytime,
-                                                      'STANDARD_CODE');
+   lv2_standard_code := EcDp_System.getAttributeText(p_daytime, 'STANDARD_CODE');
    lv2_phase         := ec_strm_version.stream_phase(p_object_id, p_daytime, '<=');
+   lr_analyse_sample := EcDp_Fluid_Analysis.getPeriodAnalysisSample(p_object_id, p_analysis_type, p_sampling_method, p_daytime, p_daytime_summer_time);
 
    IF lv2_phase = 'GAS' THEN
 
@@ -855,18 +825,9 @@ BEGIN
    END IF;
 
 
-   ln_return_val := p_weight_pct / ec_component_constant.mol_wt(lv2_object_id,
-                                                                p_component_no,
-                                                                p_daytime,
-                                                                '<=');
+   ln_return_val := p_weight_pct / nvl(ec_strm_analysis_component.mol_wt(lr_analyse_sample.analysis_no, p_component_no)
+                                         ,ec_component_constant.mol_wt(lv2_object_id, p_component_no, p_daytime, '<='));
    IF ln_return_val IS NULL THEN
-
-
-      lr_analyse_sample := EcDp_Fluid_Analysis.getPeriodAnalysisSample(p_object_id,
-                                                                    p_analysis_type,
-                                                                    p_sampling_method,
-                                                                    p_daytime,
-                                                                    p_daytime_summer_time);
 
       IF p_weight_pct = 0 THEN
 
@@ -1727,5 +1688,112 @@ RETURN lv2_return_val;
 
 END findWellHCLiqPhase;
 
+---<EC-DOC>
+----------------------------------------------------------------------------------------------------
+--- Function    : calcTheorDens
+--- Description : calculate a theoretical density for a given stream at sep conditions, based on latest comp analysis.
+---
+--- Preconditions:
+--- Postcondition:
+---
+--- Using Tables:
+---
+--- Configuration
+--- required:
+---
+--- Behaviour
+---
+----------------------------------------------------------------------------------------------------
+
+FUNCTION calcTheorDens(p_object_id       VARCHAR2,   --could be both WELL and STREAM
+                       p_daytime         DATE,
+                       p_standard_id     VARCHAR2 DEFAULT NULL,
+                       p_sampling_method VARCHAR2 DEFAULT NULL,
+                       p_fluid_state     VARCHAR2 DEFAULT NULL)
+
+RETURN NUMBER IS
+
+ln_return_val         NUMBER := 0;
+ln_density            NUMBER := 0;
+ln_sum_factor         NUMBER := 0;
+ln_analysis_no        NUMBER := NULL;
+ld_analysis_day       DATE;
+
+lv2_class_name        VARCHAR2(32);
+lv2_phase             VARCHAR2(32) := 'GAS';  -- The calculations are only valid for gas phase
+lv2_analysis_type     VARCHAR2(32);
+lv2_ref_object_id     VARCHAR2(32);
+lv2_standard_id       VARCHAR2(32);
+lv2_standard_code     VARCHAR2(32);
+lv2_fluid_state       VARCHAR2(32);
+lr_analysis_component fluid_analysis_component%ROWTYPE;
+lr_comp_const         component_constant%ROWTYPE;
+
+
+BEGIN
+    lv2_class_name := ecdp_objects.GetObjClassName(p_object_id);
+    lv2_analysis_type := replace(lv2_class_name,'EA','') ||'_'|| lv2_phase ||'_'|| 'COMP';
+
+    -- determine correct constant standard and fluid state
+    lv2_standard_code  := EcDp_System.getAttributeText(p_daytime, 'STANDARD_CODE');
+
+    IF lv2_phase = 'GAS' THEN
+
+        IF lv2_class_name = 'WELL'   THEN
+            lv2_standard_id   := ec_well_version.ref_gas_const_std_id(p_object_id, p_daytime,'<=');
+            lv2_fluid_state   := ec_well_version.ref_gas_fluid_state(p_object_id, p_daytime,'<=');
+        ELSIF
+            lv2_class_name = 'STREAM' THEN
+            lv2_standard_id   := ec_strm_version.ref_gas_const_std_id(p_object_id, p_daytime,'<=');
+            lv2_fluid_state   := ec_strm_version.ref_gas_fluid_state(p_object_id, p_daytime,'<=');
+        END IF;
+
+    END IF;
+
+    lv2_standard_id   := nvl(lv2_standard_id, ecdp_objects.GetObjIDFromCode('CONSTANT_STANDARD',lv2_standard_code));
+    lv2_fluid_state    := nvl(lv2_fluid_state, 'STD_ISO');
+
+    lv2_standard_id   := nvl(p_standard_id, lv2_standard_id);
+    lv2_fluid_state    := nvl(p_fluid_state, lv2_fluid_state);
+
+    --find the proper analysis number
+    ln_analysis_no    := ecdp_fluid_analysis.getLastAnalysisNumber(p_object_id, lv2_analysis_type, p_sampling_method, p_daytime, NULL, lv2_fluid_state);
+    IF ln_analysis_no IS NULL THEN    --look for a reference stream
+        IF lv2_class_name = 'WELL' THEN
+            lv2_ref_object_id := ec_well_version.well_reference_obj_id(p_object_id, p_daytime, '<=');
+        ELSIF lv2_class_name = 'STREAM' THEN
+            lv2_ref_object_id := ec_strm_version.ref_analysis_stream_id(p_object_id, p_daytime, '<=');
+        END IF;
+
+        IF lv2_ref_object_id IS NOT NULL AND lv2_ref_object_id <> p_object_id THEN
+            RETURN calcTheorDens(lv2_ref_object_id, p_daytime, p_standard_id, p_sampling_method, p_fluid_state);  -- Recursive call
+        ELSE
+            RETURN NULL;
+        END IF;
+    END IF;
+
+    ld_analysis_day       := ec_object_fluid_analysis.daytime(ln_analysis_no);
+
+    ln_density    :=0;
+    ln_sum_factor :=0;
+    FOR CompCur IN c_comp LOOP
+        lr_analysis_component := ec_fluid_analysis_component.row_by_pk(ln_analysis_no, CompCur.Comp_no);
+        lr_comp_const         := ec_component_constant.row_by_pk(lv2_standard_id, CompCur.comp_no, p_daytime, '<=');
+        ln_density            := ln_density + nvl((lr_analysis_component.mol_pct * lr_comp_const.ideal_density),0);
+        ln_sum_factor         := ln_sum_factor + nvl((lr_analysis_component.mol_pct * lr_comp_const.sum_factor),0);
+    END LOOP;
+
+    IF ln_density > 0 THEN
+        ln_density    := ln_density / 100;
+        ln_sum_factor := ln_sum_factor / 100;
+        ln_return_val := ln_density / (1 -  Power(ln_sum_factor, 2));
+    END IF;
+
+    RETURN ln_return_val;
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN RETURN NULL;
+
+END calcTheorDens;
 
 END;

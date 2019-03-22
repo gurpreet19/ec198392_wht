@@ -4,7 +4,7 @@ cnstPrimaryKey:
   columns:
   - MESSAGE_SYSTEM_ID
   - MESSAGE_ID
-  name: SYS_C008810
+  name: PK_JBPM_BPM_SYSTEM_MESSAGE
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0147
   NAME: Stream Category Usage
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/STREAM_CATEGORY/FROM_CLASS_NAME/STREAM_CATEGORY/TO_CLASS_NAME/STREAM_CATEGORY
 related: {}

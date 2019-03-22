@@ -3,7 +3,7 @@ name: JBPM_QUERYDEFINITIONSTORE
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008693
+  name: PK_JBPM_QUERYDEFINITIONSTORE
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

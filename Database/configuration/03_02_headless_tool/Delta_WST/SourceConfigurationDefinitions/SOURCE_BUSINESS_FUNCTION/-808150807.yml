@@ -8,5 +8,6 @@ properties:
   BF_CODE: PP.0041
   NAME: Stream Oil Component Forecast
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pp.screens/stream_component_forecast/CLASS_NAME/FCST_STRM_OIL/COMPONENT_SET_CLASS/FCST_STRM_OIL_COMPONENT/STRM_SET/PP.0041/COMP_SET/STRM_OIL_COMP
 related: {}

@@ -10,7 +10,7 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_constraints/CLASS_NAME/FCST_CONSTRAINTS' )
   DATA_LEVEL: 0.0
   DESCRIPTION: |-
-    <p>This business function is used to add/modify constrained capacity for Reservoir, Well, Gathering, Plant, Export and Commercial at Scenario level. This can be done for all phases i.e. Oil, Gas, Water, Condensate, Gas Lift, Diluent, Water Injection, Gas Injection, Steam Injection and CO2 Injection </p>
+    <p>This business function is used to add/modify constrained capacity for Reservoir, Well, Gathering, Plant, Export and Commercial at Scenario level. This can be done for all phases i.e. Oil, Gas, Water, Condensate, Gas Lift, Diluent, Water Injection, Gas Injection, Steam Injection and CO2 Injection.</p>
 
-    <p> Constraint data is filtered based on the date and Scenario selected on the navigator. There is also an attribute(function call) that displays the highest number of the constraint capacity for each phase and category.</p>
+    <p> Constraint data is filtered based on the date and Scenario selected on the navigator. There is also an attribute(function call) that displays the highest number of the constraint capacity for each phase and category.</p><p>The data will be displayed as follows :</p><ol><li>When &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are empty, all records will be displayed.</li><li>When only &ldquo;Filter From&rdquo; value is entered, records that are valid after the selected "Filter From" will be displayed.</li><li>When only &ldquo;Filter To&rdquo; value is entered, records that are valid before the selected "Filter To" will be displayed.</li><li>When both &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are entered, records that are valid after the selected "Filter From" and before the selected "Filter To" will be displayed.</li></ol>
 related: {}

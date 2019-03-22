@@ -8,5 +8,6 @@ properties:
   BF_CODE: PA.0006
   NAME: Process Notifications
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.jbpm/jbpm_process_notification
 related: {}

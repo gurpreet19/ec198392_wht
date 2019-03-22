@@ -3,7 +3,7 @@ name: JBPM_VARIABLEINSTANCELOG
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008724
+  name: PK_JBPM_VARIABLEINSTANCELOG
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

@@ -8,5 +8,6 @@ properties:
   BF_CODE: SD.0020
   NAME: Daily Dry Gas Flow Profile
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sd.screens/daily_dry_gas_profile
 related: {}

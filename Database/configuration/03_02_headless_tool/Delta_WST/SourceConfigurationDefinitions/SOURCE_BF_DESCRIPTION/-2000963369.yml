@@ -9,76 +9,81 @@ properties:
   BF_DESCRIPTION_NO: FC.1001
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/fcst_properties/FUNCTIONAL_AREA_CODE/QUANTITY_FORECAST' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p>FUNCTION_AREA_CODE = QUANTITY_FORECAST</p><p>This BF defines the
-    Quantity Forecast Cases for the system. </p><p>The system can handle two different
-    types of Quantity Forecast Cases: <br>�&nbsp;�Plan� � POPULATE_METHOD = PLAN<br>This
+  DESCRIPTION: '<p><strong>Forecast Quantity Properties screen</strong> is used to
+    define the Quantity Forecast Cases for the system.</p><p>FUNCTION_AREA_CODE =
+    QUANTITY_FORECAST</p><p>The system can handle two different types of Quantity
+    Forecast Cases:</p><p><strong>Plan</strong></p><p>POPULATE_METHOD = PLAN</p><p>This
     type of Quantity Forecast Case will not be updated with data from the Quantities
-    module when using the �Populate Forecast Case� function (see more details on this
+    module when using the "Populate Forecast Case" function (see more details on this
     function later in this document). It will not be influenced by the Quantities
-    data.<br>�&nbsp;�Closing Forecast� � POPULATE_METHOD = YEAR_TO_MONTH<br>A �Closing
-    Forecast� type of Quantity Forecast Case will consist of both Plan data and Final/Accrual
-    data (picked up from the Quantities module)<br>�&nbsp;Attribute: POPULATE_METHOD
-    = PLAN | YEAR_TO_MONTH</p><p>Through this BF the user can:<br>�&nbsp;Create new
-    Quantity Forecast Cases<br>Create a completely new Quantity Forecast Case.</p><p>�&nbsp;Modify
-    Quantity Forecast Cases<br>Modify attributes of existing Quantity Forecast Cases.</p><p>�&nbsp;Populate
-    Quantity Forecast Cases<br>Populate Quantity Forecast Cases of type �Closing Forecast�
+    data.</p><p><strong>Closing Forecast</strong></p><p>POPULATE_METHOD = YEAR_TO_MONTH</p><p>A
+    Closing Forecast type of Quantity Forecast Case will consist of both Plan data
+    and Final/Accrual data (picked up from the Quantities module)</p><p>Attribute:
+    POPULATE_METHOD = PLAN | YEAR_TO_MONTH</p><p>Through this BF the user can:</p><ul><li>Create
+    new Quantity Forecast Cases - Create a completely new Quantity Forecast Case.</li><li>Modify
+    Quantity Forecast Cases - Modify attributes of existing Quantity Forecast Cases.</li><li>Populate
+    Quantity Forecast Cases - Populate Quantity Forecast Cases of type "Closing Forecast"
     (POPULATE_METHOD = YEAR_TO_MONTH) with Final/Accrual data from the Quantities
-    module. </p><p>�&nbsp;Copy Quantity Forecast Cases<br>Copy an existing Quantity
-    Forecast Case to a new Quantity Forecast Case. Attributes of the new Quantity
-    Forecast Case can be modified.</p><p>�&nbsp;Delete Quantity Forecast Cases<br>It
-    is not allowed to delete a Quantity Forecast Case which is PUBLIC, set to OFFICIAL
-    and has status APPROVED.</p><p>The BF consists of these screen sections:</p><p>�&nbsp;Filter
-    Navigator<br>the YEAR selector of the Filter Navigator determines which forecast
-    cases to show. It will list all quantity forecast cases being valid for the selected
-    year.<br>Lists only the forecast cases being PUBLIC or PRIVATE for the user logged
-    in. </p><p>�&nbsp;Action Buttons<br>This section has two buttons:<br>o&nbsp;Populate
-    Forecast Case<br>o&nbsp;Copy Forecast Case</p><p>�&nbsp;Quantity Forecast Cases
-    Details<br>This section lists the attributes of the selected Quantity Forecast
-    Case in the Filter Navigator</p><p>Quantity Forecast Case Validation </p><p>There
-    can only exist ONE Quantity Forecast Case for each combination of the following
-    attributes:</p><p>FORECAST.POPULATE_METHOD&nbsp;= YEAR_TO_MONTH<br>FORECAST.YEAR&nbsp;&nbsp;&nbsp;=
-    &lt;year&gt;<br>FORECAST.MONTH&nbsp;&nbsp;&nbsp;= &lt;month &gt;<br>FORECAST.FORECAST_SCOPE&nbsp;=
-    &lt;PUBLIC &gt;<br>FORECAST.OFFICIAL_IND&nbsp;&nbsp;= &lt;Y &gt;</p><p>In other
-    words, there can only exist one official Closing Forecast for each Month/Year.
-    This must be validated when saving the attributes for a Quantity Forecast Case,
-    and an error message must be issued if this validation rule is breached. </p><p>Also,
-    there can only exist ONE Quantity Forecast Case for each combination of the following
-    attributes:</p><p>FORECAST.POPULATE_METHOD&nbsp;= PLAN<br>FORECAST.YEAR&nbsp;&nbsp;&nbsp;=
-    &lt;year&gt;<br>FORECAST. FORECAST_SCOPE&nbsp;= &lt;PUBLIC &gt;<br>FORECAST.OFFICIAL_IND
-    &nbsp;&nbsp;= &lt;Y &gt;</p><p>In other words, there can only exist one official
-    Plan for each Year. This must be validated when saving the attributes for a Quantity
+    module.</li><li>Copy Quantity Forecast Cases - Copy an existing Quantity Forecast
+    Case to a new Quantity Forecast Case. Attributes of the new Quantity Forecast
+    Case can be modified.</li><li>Delete Quantity Forecast Cases - It is not allowed
+    to delete a Quantity Forecast Case which is PUBLIC, set to OFFICIAL and has status
+    APPROVED.</li></ul><p>The BF consists of these screen sections:</p><p><strong
+    style="color: rgb(0, 71, 178);">Filter Navigator</strong></p><p>the YEAR selector
+    of the Filter Navigator determines which forecast cases to show. It will list
+    all quantity forecast cases being valid for the selected year.</p><p>Lists only
+    the forecast cases being PUBLIC or PRIVATE for the user logged in.</p><p><strong
+    style="color: rgb(0, 71, 178);">Action Buttons</strong></p><p>This section has
+    two buttons:</p><p><strong>Button </strong><strong style="color: rgb(0, 138, 0);">Populate
+    Forecast Case </strong></p><p><strong>Button </strong><strong style="color: rgb(0,
+    138, 0);">Copy Forecast Case </strong></p><p><strong style="color: rgb(0, 71,
+    178);">Quantity Forecast Cases Details</strong></p><p>This section lists the attributes
+    of the selected Quantity Forecast Case in the Filter Navigator</p><p>Quantity
+    Forecast Case Validation</p><p>There can only exist ONE Quantity Forecast Case
+    for each combination of the following attributes:</p><p>FORECAST.POPULATE_METHOD&nbsp;=
+    YEAR_TO_MONTH</p><p>FORECAST.YEAR&nbsp;&nbsp;&nbsp;= &lt;year&gt;</p><p>FORECAST.MONTH&nbsp;&nbsp;&nbsp;=
+    &lt;month &gt;</p><p>FORECAST.FORECAST_SCOPE&nbsp;= &lt;PUBLIC &gt;</p><p>FORECAST.OFFICIAL_IND&nbsp;&nbsp;=
+    &lt;Y &gt;</p><p>In other words, there can only exist one official Closing Forecast
+    for each Month/Year. This must be validated when saving the attributes for a Quantity
     Forecast Case, and an error message must be issued if this validation rule is
-    breached.</p><p>When the object start date has been changed, all the related quantities
-    will be removed and the plan date year will automatically set to year same as
-    object start year.</p><p>The plan date year must be in between object start year
-    and end year.</p><p><br>Populating Quantity Forecast Cases from external sources</p><p>Existing
-    Quantity Forecast Cases can be updated with quantity data from external sources
-    by executing a Scheduler Job: �UpdateQtyForecast�. The input to the scheduler
-    job will be a CSV file with reference to which Quantity Forecast Case to update.
-    The upload will update the quantities for the stream items listed in the CSV file
-    AND being part of the Quantity Forecast Case in question. The upload will trigger
-    the Cascade logic.<br>&nbsp;<br>The business function for &quot;Forecast Quantity
-    Properties&quot; displays each forecast case details by selecting one of the created
-    forecast case in filter navigator/</p><p>The business function contains a navigator
-    section and details data sections.&nbsp; The overall layout of the screen will
-    be according to the following possible combinations:</p><p>Sections&nbsp;Description</p><p>Navigator&nbsp;Always
-    visible<br>Data Section 1&nbsp;Always visible, but collapse/expand functionality
-    active<br>Data Section 2&nbsp;Always visible, showing two functional buttons �
-    Populate Forecast Case and Copy Forecast Case<br>Data Section 3&nbsp;Showing the
-    active forecast case in the forecast case selected in Data section 1</p><p><br>The
-    navigator section enables the selection of a time window (Year Selector).&nbsp;
-    A set of Quantity Forecast Cases will be listed based on the selected forecast
-    year in Year Selector.&nbsp; OBJECT_START_DATE = YEAR.</p><p>Data section 1 lists
-    all Quantity Forecast Cases that satisfy the navigation criteria (Functional Area
-    Code = QUANTITY_FORECAST) sorted descending on Year (most recent on top).&nbsp;
-    The list is scrollable and supports single record selection.&nbsp; Collapse/expand
-    functionality should be activated.&nbsp; There are no editable data elements in
-    data section 1.&nbsp; The selected record in this data section controls the content
-    of the data section 3.&nbsp; Initial focus is the top row in the data section.</p><p>Data
+    breached.</p><p>Also, there can only exist ONE Quantity Forecast Case for each
+    combination of the following attributes:</p><p>FORECAST.POPULATE_METHOD&nbsp;=
+    PLAN</p><p>FORECAST.YEAR&nbsp;&nbsp;&nbsp;= &lt;year&gt;</p><p>FORECAST. FORECAST_SCOPE&nbsp;=
+    &lt;PUBLIC &gt;</p><p>FORECAST.OFFICIAL_IND&nbsp;&nbsp;= &lt;Y &gt;</p><p>In other
+    words, there can only exist one official Plan for each Year. This must be validated
+    when saving the attributes for a Quantity Forecast Case, and an error message
+    must be issued if this validation rule is breached.</p><p>When the object start
+    date has been changed, all the related quantities will be removed and the plan
+    date year will automatically set to year same as object start year.</p><p>The
+    plan date year must be in between object start year and end year.</p><p><br></p><p>Populating
+    Quantity Forecast Cases from external sources</p><p>Existing Quantity Forecast
+    Cases can be updated with quantity data from external sources by executing a Scheduler
+    Job: "UpdateQtyForecast". The input to the scheduler job will be a CSV file with
+    reference to which Quantity Forecast Case to update. The upload will update the
+    quantities for the stream items listed in the CSV file AND being part of the Quantity
+    Forecast Case in question. The upload will trigger the Cascade logic.</p><p><br></p><p>The
+    business function for "Forecast Quantity Properties" displays each forecast case
+    details by selecting one of the created forecast case in filter navigator/</p><p>The
+    business function contains a navigator section and details data sections.&nbsp;The
+    overall layout of the screen will be according to the following possible combinations:</p><p>Sections&nbsp;Description</p><p>Navigator&nbsp;Always
+    visible</p><p>Data Section 1&nbsp;Always visible, but collapse/expand functionality
+    active</p><p>Data Section 2&nbsp;Always visible, showing two functional buttons
+    <strong style="color: rgb(0, 138, 0);">Populate Forecast Case</strong> and <strong
+    style="color: rgb(0, 138, 0);">Copy Forecast Case</strong></p><p>Data Section
+    3&nbsp;Showing the active forecast case in the forecast case selected in Data
+    section 1</p><p><br></p><p>The navigator section enables the selection of a time
+    window (Year Selector).&nbsp;A set of Quantity Forecast Cases will be listed based
+    on the selected forecast year in Year Selector.&nbsp;OBJECT_START_DATE = YEAR.</p><p>Data
+    section 1 lists all Quantity Forecast Cases that satisfy the navigation criteria
+    (Functional Area Code = QUANTITY_FORECAST) sorted descending on Year (most recent
+    on top).&nbsp;The list is scrollable and supports single record selection.&nbsp;Collapse/expand
+    functionality should be activated.&nbsp;There are no editable data elements in
+    data section 1.&nbsp;The selected record in this data section controls the content
+    of the data section 3.&nbsp;Initial focus is the top row in the data section.</p><p>Data
     section 2 shows the two functional buttons which are Populate Forecast Case and
     Copy Forecast Case. There are no editable data elements in data section 2.</p><p>Data
     section 3 shows the details of selected quantity forecast case in filter navigator
     in Form style. The details of data can be updated and saved into database. This
     section also shows an empty form to allow user insert/create a new quantity forecast
-    case while user presses new button in navigator.<br></p>'
+    case while user presses new button in navigator.</p>'
 related: {}

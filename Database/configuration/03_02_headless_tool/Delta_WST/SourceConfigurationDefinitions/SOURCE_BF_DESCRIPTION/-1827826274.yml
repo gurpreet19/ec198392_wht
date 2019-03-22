@@ -11,23 +11,28 @@ properties:
   DATA_LEVEL: 0.0
   DESCRIPTION: '<p>A deferment is an event that leads to production or injection not
     meeting the planned production or injection numbers. The Deferment screen (PD.0020)
-    is used to enter and calculate deferment losses.</p><p>A deferment can affect
-    one single well only or multiple wells. The deferment can lead to a full shut-in
-    (Downtime deferment) of the well(s) or just a reduction (Constraint deferment)
-    of the well(s) flow rate. Deferments are classified and categorized to be able
-    to create reports explaining why production or injection plans were not met.</p><p>This
-    BF is used to enter both downtime and constraint deferments as defined below:</p><ul
-    style="list-style-type: disc; margin-left: 40px;"><li>A Downtime deferment means
-    that the production is shut-in, not only reduced.</li><li>A Constraint deferment
-    means that the production is not shut-in, only reduced.</li></ul><p>''Deferment''
-    data section will filter the records based on the selected navigator. Meanwhile,
-    records in ''Wells in Group'' are showed based on the parent group. Navigator
-    will only filter records in ''Deferment'' data section.</p><p>Both downtime and
-    constraint deferments can be recorded against:</p><ul style="list-style-type:
-    disc; margin-left: 40px;"><li><p><em>Single well only</em></p></li><li><p><em>Group
-    events (Not well deferments)</em><br>These events are used where the constraints
-    are not on the well, rather on the Facility, Well Hookup, Equipment, or Tank level.
-    For such events, event losses will be calculated as mentioned below:</p><ul style="list-style-type:circle;margin-left:40px;"><li>If
+    is used to enter and calculate deferment losses as well as to monitor its calculation
+    logs.</p><p>This BF contains two tabs-</p><ol><li>Deferment tab is used to enter
+    both downtime and constraint deferments as defined below:</li><ul style="list-style-type:
+    disc;margin-left:40px;"><li>A Downtime deferment means that the production is
+    shut-in, not only reduced.</li><li>A Constraint deferment means that the production
+    is not shut-in, only reduced.</li><li>Records are filtered as per navigation selection.</li></ul></ol><ol
+    start="2"><li>Calculation Logs tab is used to provide full coverage of deferment
+    calculation logs to the user.</li><ul style="list-style-type: disc;margin-left:40px;"><li>Records
+    are filtered based upon From Date and To Date only.</li></ul></ol><p><span style="color:
+    rgb(64, 103, 165);">DEFERMENT</span></p><p>A deferment can affect one single well
+    only or multiple wells. The deferment can lead to a full shut-in (Downtime deferment)
+    of the well(s) or just a reduction (Constraint deferment) of the well(s) flow
+    rate. Deferments are classified and categorized to be able to create reports explaining
+    why production or injection plans were not met.</p><p>''Deferment'' data section
+    will filter the records based on the selected navigator. Meanwhile, records in
+    ''Wells in Group'' are showed based on the parent group. Navigator will only filter
+    records in ''Deferment'' data section.</p><p>Both downtime and constraint deferments
+    can be recorded against:</p><ul style="list-style-type: disc;margin-left:40px;"><li><p><em>Single
+    well only</em></p></li><li><p><em>Group events (Not well deferments)</em><br>These
+    events are used where the constraints are not on the well, rather on the Facility,
+    Well Hookup, Equipment, or Tank level. For such events, event losses will be calculated
+    as mentioned below:</p><ul style="list-style-type:circle;margin-left:40px;"><li>If
     Loss Volume is null and Loss Rate is not null then Event Loss will be Loss Rate
     * Period for which deferment occurred.</li><li>If both Loss Rate and Loss Volume
     are not null then Event Loss will be equal to Loss Volume.</li></ul></li><li><p><em>Group</em><br>A
@@ -194,5 +199,9 @@ properties:
     ''Wells in Group''. User will then need to click on ''Refresh'' button manually
     to see the changes.</li></ul></span></td></tr><tr cass="ui-widget-content ui-datatable-even"
     role="row"><td role="gridcell"><span>Sum From Wells</span></td><td role="gridcell"><span>This
-    button is used to sum up the child''s event loss rates to its parent''s loss rate.</span></td></tr></tbody></table></div></div></div>'
+    button is used to sum up the child''s event loss rates to its parent''s loss rate.</span></td></tr></tbody></table></div></div></div><p><span
+    style="color: rgb(64, 103, 165);">CALCULATION LOGS</span></p><p>Calculation Logs
+    tab will have information about the calculation run date, the user who executed
+    it, the period of deferment events that has been recalculated, execution duration
+    and its status.</p>'
 related: {}

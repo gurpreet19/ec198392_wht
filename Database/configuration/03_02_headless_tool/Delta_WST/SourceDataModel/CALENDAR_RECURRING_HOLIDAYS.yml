@@ -58,7 +58,7 @@ columns:
     sequence: !!float '10'
   DATE_FUNCTION_HOLIDAY:
     columnName: DATE_FUNCTION_HOLIDAY
-    typeName: VARCHAR2(20)
+    typeName: VARCHAR2(32)
     nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN

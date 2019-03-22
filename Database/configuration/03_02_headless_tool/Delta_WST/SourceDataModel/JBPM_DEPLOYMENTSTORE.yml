@@ -3,7 +3,7 @@ name: JBPM_DEPLOYMENTSTORE
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008648
+  name: PK_JBPM_DEPLOYMENTSTORE
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

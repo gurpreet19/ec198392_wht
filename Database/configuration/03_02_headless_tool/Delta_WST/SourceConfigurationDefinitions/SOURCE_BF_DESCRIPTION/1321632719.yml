@@ -11,22 +11,26 @@ properties:
   DATA_LEVEL: 0.0
   DESCRIPTION: "<p>This business function is used to display the analysis for a comparison\
     \ object selected on the navigator. <br/>\n    Comparison object is defined in\
-    \ Forecast Define Scenarios to Compare(PP.0056).</p>\n    <p>The business function\
-    \ consists of five tabs as follows:</p>\n    <ol><li> Scenario Analysis</li> <li>\
-    \ Details Per Variable</li><li> Details Per Phase</li><li> Events Per Category</li><li>\
-    \ Event Details </li></ol><br/>\n    <h><b>1. <u>SCENARIO ANALYSIS</u></b></h><p>This\
-    \ business function is used to display the calculated analysis for a comparison\
-    \ defined in PP.0056:Forecast Define Scenarios to Compare.</p>\n    <p>Currently,\
-    \ the screen has a tab - SCENARIO ANALYSIS and it is divided into the following\
-    \ data sections:</p>\n    <p><b>Analysis Result</b></p>\n    <p>This data section\
-    \ will filter analysis result for each component and phase based on the selected\
-    \ Analysis Type and Comparison.</p>\n    <p> There is a dependency between the\
-    \ analysis and the components filtered and the calculation should check the dependency\
-    \ prior to inserting the results in FCST_SCENARIO_ANALYSIS table.</P>\n    <p>The\
-    \ analysis type is maintained as EC Codes (CO.1011) and the code type is &quot;FCST_SCENARIO_ANALYSIS_TYPE&quot;</p>\n\
-    \    <p>The components  are defined as EC Codes (CO.1011). To configure the list\
-    \ of codes, go to EC Codes - All Screen -> Select Code Type=&quot;FCST_COMPONENT_ANALYSIS&quot;\
-    \ -> Configure Code as required. Please remember to build the dependency between\
+    \ Forecast Define Scenarios to Compare(PP.0056). Each comparison is linked to\
+    \ the last selected asset from the navigator (Production Unit, Facility, etc.)).\
+    \ For eg: if Comparison 01 is created when the navigator is selected up to Production\
+    \ Unit, it will only be filtered when the navigator is until Production Unit.</p>\n\
+    \    <p>The business function consists of five tabs as follows:</p>\n    <ol><li>\
+    \ Scenario Analysis</li> <li> Details Per Variable</li><li> Details Per Phase</li><li>\
+    \ Events Per Category</li><li> Event Details </li></ol><br/>\n    <h><b>1. <u>SCENARIO\
+    \ ANALYSIS</u></b></h><p>This business function is used to display the calculated\
+    \ analysis for a comparison defined in PP.0056:Forecast Define Scenarios to Compare.</p>\n\
+    \    <p>Currently, the screen has a tab - SCENARIO ANALYSIS and it is divided\
+    \ into the following data sections:</p>\n    <p><b>Analysis Result</b></p>\n \
+    \   <p>This data section will filter analysis result for each component and phase\
+    \ based on the selected Analysis Type and Comparison.</p>\n    <p> There is a\
+    \ dependency between the analysis and the components filtered and the calculation\
+    \ should check the dependency prior to inserting the results in FCST_SCENARIO_ANALYSIS\
+    \ table.</P>\n    <p>The analysis type is maintained as EC Codes (CO.1011) and\
+    \ the code type is &quot;FCST_SCENARIO_ANALYSIS_TYPE&quot;</p>\n    <p>The components\
+    \  are defined as EC Codes (CO.1011). To configure the list of codes, go to EC\
+    \ Codes - All Screen -> Select Code Type=&quot;FCST_COMPONENT_ANALYSIS&quot; ->\
+    \ Configure Code as required. Please remember to build the dependency between\
     \ these two EC Codes.</p>\n    <p> The available phases are Oil, Gas, Water, Condensate,\
     \ Gas Lift, Diluent, Gas Injection, Water Injection, Steam Injection and CO2 Injection.</p>\n\
     \    <p> The UPDATE ANALYSIS button calls ecdp_forecast_prod.calculateanalysis\
@@ -97,15 +101,15 @@ properties:
     \ in Group data section displays the Event Losses for Well(s) based on the Event\
     \ selected in the section \"Events Details\". <br/>\n    Suggestion: In order\
     \ to make it shorter and simple to read, we can place the statement clearly below\
-    \ to user.</p>\n    </p><center><h><b>CONFIGURATION</b></h></center>\n    <p>The\
-    \ functionality of this Business Function can be customized by plugging customized\
-    \ classes adhering to certain defined norms.</p>\n    <p>The default configuration\
-    \ for this Business Function is as follows:</p>\n    <p><b>/com.ec.prod.pp.screens/forecast_scenarios_analysis</b><br/>\n\
+    \ to user.</p>\n    </p><h><b>CONFIGURATION</b></h>\n    <p>The functionality\
+    \ of this Business Function can be customized by plugging customized classes adhering\
+    \ to certain defined norms.</p>\n    <p>The default configuration for this Business\
+    \ Function is as follows:</p>\n    <p><b>/com.ec.prod.pp.screens/forecast_scenarios_analysis</b><br/>\n\
     \    <b>/CLASS_NAME_ANALYSIS_1</b>/FCST_SCENARIO_ANALYSIS<br/><b>/CLASS_NAME_ANALYSIS_2</b>/FCST_ANALYSIS_COMMENT<br/><b>/CLASS_NAME_ANALYSIS_3</b>/FCST_ANALYSIS_DOCUMENTS<br/>\n\
     \    <b>/CLASS_NAME_VARIABLE_1</b>/FCST_SUMM_VAR_CPR<br/><b>/CLASS_NAME_VARIABLE_2</b>/FCST_SUMM_VAR_MTH_CPR<br/><b>/CLASS_NAME_VARIABLE_3</b>/FCST_SUMM_VAR_DAY_CPR<br/>\n\
     \    <b>/CLASS_NAME_PHASE_1</b>/FCST_SUMM_PHASE_CPR<br/><b>/CLASS_NAME_PHASE_2</b>/FCST_SUMM_PHASE_MTH_CPR<br/><b>/CLASS_NAME_PHASE_3</b>/FCST_SUMM_PHASE_DAY_CPR<br/>\n\
     \    <b>/CLASS_NAME_EVENT_1</b>/FCST_SUMM_REASON_CPR<br/><b>/CLASS_NAME_EVENT_2</b>/FCST_SUMM_REASON_MTH_CPR<br/><b>/CLASS_NAME_EVENT_3</b>/FCST_SUMM_REASON_DAY_CPR<br/>\n\
-    \    <b>/CLASS_NAME_EVENT_DETAILS_1</b>/FCST_SUMM_REASON_CPR<br/>/CLASS_NAME_EVENT_DETAILS_2</b>/FCST_SUMM_EVENT_DETAILS<br/><b>/CLASS_NAME_EVENT_DETAILS_3</b>/FCST_SUMM_EVENT_CHILD<br/>?screentemplate=/com.ec.prod.pp.screens/forecast_scenarios_analysis<br/></p><p>The\
+    \    <b>/CLASS_NAME_EVENT_DETAILS_1</b>/FCST_SUMM_REASON_CPR<br/>/CLASS_NAME_EVENT_DETAILS_2</b>/FCST_SUMM_EVENT_DETAILS<br/><b>/CLASS_NAME_EVENT_DETAILS_3</b>/FCST_SUMM_EVENT_CHILD<br/>?screentemplate=/com.ec.prod.pp.screens/forecast_scenarios_analysis<br/></p<p>The\
     \ class configuration for all the data sections in the tabs are as follows:</p>\n\
     \    <ol><li><b>CLASS_NAME_ANALYSIS_1</b>\n    <p>This class configuration is\
     \ related to the section &quot;ANALYSIS RESULT&quot; in the tab &quot;SCENARIO_ANALYSIS&quot;.</p></li>\n\

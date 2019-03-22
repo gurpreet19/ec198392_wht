@@ -8,5 +8,6 @@ properties:
   BF_CODE: CP.0066
   NAME: Forecast - Berth Slot Calendar
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.cp.screens/fcst_berth_slot_calendar/CLASS/FCST_CARGO_CALENDAR/SORT_TYPE/DESC
 related: {}

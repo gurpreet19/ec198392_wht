@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0112
   NAME: Event Tank Status - Dip and Export
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/event_tank_status_dip_and_export
 related: {}

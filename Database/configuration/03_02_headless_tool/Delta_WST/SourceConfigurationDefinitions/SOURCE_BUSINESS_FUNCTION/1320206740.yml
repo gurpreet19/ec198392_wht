@@ -8,5 +8,6 @@ properties:
   BF_CODE: IN.0010
   NAME: Inventory Quantities
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.in/verify_quantities
 related: {}

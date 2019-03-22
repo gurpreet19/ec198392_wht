@@ -8,5 +8,6 @@ properties:
   BF_CODE: PA.0004
   NAME: Process Overview
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.jbpm/jbpm_process_overview
 related: {}

@@ -8,5 +8,6 @@ properties:
   BF_CODE: PP.0058
   NAME: Forecast Quota and Nomination
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pp.screens/forecast_quota_nomination/CLASS_NAME/FCST_QUOTA_NOM
 related: {}

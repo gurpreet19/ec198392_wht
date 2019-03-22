@@ -9,12 +9,24 @@ properties:
   BF_DESCRIPTION_NO: PP.0056
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_define_scenarios/CLASS_NAME/FORECAST_COMPARISON/CLASS_NAME_2/FCST_COMPARE_DOCUMENTS' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |-
-    <p>This business function is used to define a comparison between two scenarios. The defined comparison can then be viewed in PP.0061:Forecast Scenarios Analysis</p>
-
-    <p>Each comparison will have to be assigned a unique code. Each comparison involve two scenarios which may or may not belong to the same Forecast.</p>
-
-    <p>Each scenario can have an offset, given as a whole number of months. This means that it is possible to compare only parts of the scenarios, and/or compare data at different time periods. For example, using a period of January to March and a scenario 2 offset of -12 months would compare scenario 1&apos;s Q1 of the current year against scenario 2&apos;s Q1 of the previous year. <p>
-
-    <p>The comparison can have different types and these types are configured as EC Codes. To configure the list of codes, go to EC Codes - All Screen -> Select Code Type='FCST_DEFINE_COMPARISON_TYPE' -> Configure Code as required.</p><p>The supported file upload formats can be configured by using the system property &quot;Forecast Define Scenarios to Compare Allowed File Extensions&quot; in Maintain System Settings (CO.1006). Allowed file extensions need to be listed as comma separated values (eg. .docx,.pdf). Setting the value .* will allow all file extensions to be uploaded. This is also the default value.</p>
+  DESCRIPTION: '<p>This business function is used to define a comparison between two
+    scenarios. The defined comparison can then be viewed in PP.0061:Forecast Scenarios
+    Analysis</p><p>Each comparison will have to be assigned a unique code and it is
+    linked to the last selected asset from the navigator (Production Unit, Facility,
+    etc.). For eg: if Comparison 01 is created when the navigator is selected up to
+    Production Unit, it will only be filtered when the navigator is until Production
+    Unit. Each comparison involve two scenarios which may or may not belong to the
+    same Forecast.</p><p>Each scenario can have an offset, given as a whole number
+    of months. This means that it is possible to compare only parts of the scenarios,
+    and/or compare data at different time periods. For example, using a period of
+    January to March and a scenario 2 offset of -12 months would compare scenario
+    1''s Q1 of the current year against scenario 2''s Q1 of the previous year.</p><p>The
+    comparison can have different types and these types are configured as EC Codes.
+    To configure the list of codes, go to EC Codes - All Screen -&gt; Select Code
+    Type=''FCST_DEFINE_COMPARISON_TYPE'' -&gt; Configure Code as required.</p><p>The
+    supported file upload formats can be configured by using the system property "Forecast
+    Define Scenarios to Compare Allowed File Extensions" in Maintain System Settings
+    (CO.1006). Allowed file extensions need to be listed as comma separated values
+    (eg. .docx,.pdf). Setting the value .* will allow all file extensions to be uploaded.
+    This is also the default value.</p><p><br></p>'
 related: {}

@@ -1111,6 +1111,12 @@ BEGIN
 
    lv2_sqlClause := lv2_sqlClause || ' AND (j.TAG) = ''' || p_rec_ssl.Tag ||'''';
 
+     --IF normal reversals not included then filter
+       IF NVL(ec_ctrl_system_attribute.attribute_text(p_period, 'JOURNAL_MAP_NO_REVERSALS', '<='),'N')='Y' THEN
+       lv2_sqlClause := lv2_sqlClause || ' AND (MANUAL_IND = ''Y'' OR (REVERSAL_DATE IS NULL ';
+       lv2_sqlClause := lv2_sqlClause || ' AND NOT EXISTS (SELECT OBJECT_ID FROM CONT_DOC WHERE j.period = period AND DOCUMENT_TYPE = ''COST_DATASET'' AND j.document_key=preceding_document_key and record_status in (''A'',''V'' ))))';
+       END IF;
+
    -- Separate clause for the period date checks
    lv2_sqlDateClause := ' AND TRUNC(j.period,''MM'') = ' || lv2_period;
 

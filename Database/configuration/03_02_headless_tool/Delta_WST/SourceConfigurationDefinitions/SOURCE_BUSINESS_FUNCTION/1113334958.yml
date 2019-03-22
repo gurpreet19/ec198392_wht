@@ -6,7 +6,8 @@ keys:
 parentKeys: {}
 properties:
   BF_CODE: CO.0027
-  NAME: Stream
+  NAME: Stream - by Group Model
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STREAM/TARGET/STREAM/CLASS_NAME/STREAM
 related: {}

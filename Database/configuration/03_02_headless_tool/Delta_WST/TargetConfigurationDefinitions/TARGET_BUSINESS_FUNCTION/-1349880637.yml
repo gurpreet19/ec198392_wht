@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0084
   NAME: Allocation Network
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/ALLOC_NETWORK
 related: {}

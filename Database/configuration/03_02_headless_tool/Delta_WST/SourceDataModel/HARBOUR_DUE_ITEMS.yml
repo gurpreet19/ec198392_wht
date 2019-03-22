@@ -2,7 +2,7 @@
 name: HARBOUR_DUE_ITEMS
 cnstPrimaryKey:
   columns:
-  - START_DATE
+  - DAYTIME
   - DUE_CODE
   - DUE_ITEM_CODE
   name: PK_HARBOUR_DUE_ITEMS
@@ -89,6 +89,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '27'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
   DUE_CODE:
     columnName: DUE_CODE
     typeName: VARCHAR2(32)
@@ -177,14 +185,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '6'
-  START_DATE:
-    columnName: START_DATE
-    typeName: DATE
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '1'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(16)
@@ -320,6 +320,7 @@ cnstForeignKeys:
     primaryTable: HARBOUR_DUES
     columns:
       DUE_CODE: DUE_CODE
+      DAYTIME: DAYTIME
     name: FK_HARBOUR_DUE_ITEMS_1
     type: FOREIGNKEY
     status: UNDEFINED
@@ -336,6 +337,7 @@ indexes:
     indexName: IFK_HARBOUR_DUE_ITEMS_1
     columns:
     - DUE_CODE
+    - DAYTIME
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536

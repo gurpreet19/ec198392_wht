@@ -8,5 +8,6 @@ properties:
   BF_CODE: FC.0026
   NAME: Daily Nomination Point AFS
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.fc.screens/daily_nompnt_afs/TARGET/NOMINATION_POINT/CLASS1/FCST_NOMPNT_DAY_AFS/CLASS2/FCST_NOMPNT_DAY_CPY_AFS
 related: {}

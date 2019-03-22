@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0066
   NAME: Daily Electrical Stream Status
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/daily_electrical_stream_status
 related: {}

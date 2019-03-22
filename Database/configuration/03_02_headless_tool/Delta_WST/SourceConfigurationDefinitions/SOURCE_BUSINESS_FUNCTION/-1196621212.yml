@@ -8,5 +8,6 @@ properties:
   BF_CODE: PP.0048
   NAME: Forecast Quality Factors
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pp.screens/forecast_quality_factors/CLASS_NAME/FCST_QUALITY_FACTORS
 related: {}

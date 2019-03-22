@@ -1,539 +1,3 @@
--- Loading ./ECPD21876_UPGRADE_SCRIPT...
-DECLARE 
-HASENTRY NUMBER;
-BEGIN
-	-- The script will perform the followings in the sequence below:-
-	--1.Create stream set for the stream that has grs Vol method=MEASURED_TRUCKED_LOAD. 
-	--Important: This can only be run after there's an entry for PO.0056_U in stream set.
-
-	INSERT INTO TV_STREAM_SET_LIST (STREAM_ID,CODE,FROM_DATE, END_DATE, CREATED_BY, CREATED_DATE) 
-	SELECT SV.OBJECT_ID, 'PO.0056_U',SV.DAYTIME,SV.END_DATE, NVL(ECDP_PINC.getInstallModeTag(), USER), TRUNC(SYSDATE) FROM STRM_VERSION SV WHERE SV.GRS_VOL_METHOD = 'MEASURED_TRUCKED_UNLOAD' ;
-	 
-	--2.Grs vol method in STRM_VERSION table needs to be updated accordingly as MEASURED_TRUCKED_LOAD,MEASURED_TRUCKED_UNLOAD
-	--are no longer valid methods.
-	--update STRM_VERSION  set  GRS_VOL_METHOD = 'MEASURED_TRUCKED' where GRS_VOL_METHOD in ('MEASURED_TRUCKED_LOAD','MEASURED_TRUCKED_UNLOAD');
-	--3. Move data from net_vol to net_vol_adj and set the net_vol to null. This is because NET_VOL_ADJ will have priority 1 and --not be adjusted by VCF later, while NET_VOL will be priority 2 --and will be adjusted by VCF if available.
-
-	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_STRM_TRANSPORT_EVENT'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_TRANSPORT_EVENT DISABLE';
-		END IF;
-	
-	UPDATE STRM_TRANSPORT_EVENT SET NET_VOL_ADJ = NET_VOL, NET_VOL = NULL WHERE DATA_CLASS_NAME IN ('STRM_TRUCK_UNLOAD_VOL', 'STRM_TRUCK_UNLOAD_MASS');
-
-	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_STRM_TRANSPORT_EVENT'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_TRANSPORT_EVENT ENABLE';
-		END IF;
-EXCEPTION
-   WHEN OTHERS 
-     THEN
-       
-       IF HASENTRY > 0 THEN 
-           EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_TRANSPORT_EVENT ENABLE';
-       END IF;
-        
-        raise_application_error(-20000,
-                            'ERROR: Some Other fatal error occured :- '||SQLERRM);
-
-
-END;
---~^UTDELIM^~--	
--- ECPD25492_WELL_CHRONOLOGY_UPGRADE...
-BEGIN
-
-	UPDATE DV_WELL_CHRONOLOGY T SET WELL_CHRON_CODE = 'INPRODUCTION' WHERE T.WELL_CHRON_CODE = 'IN PRODUCTION';
-
-END;
---~^UTDELIM^~--
-DECLARE 
-HASENTRY NUMBER; 	
-BEGIN
-	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_STRM_VERSION'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_VERSION DISABLE';
-		END IF;
-
-	UPDATE STRM_VERSION SET GCV_METHOD ='REF_VALUE' WHERE GCV_METHOD = 'GCV';
-	
-	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_STRM_VERSION'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_VERSION ENABLE';
-		END IF;
-EXCEPTION
-   WHEN OTHERS 
-     THEN
-
-       IF HASENTRY > 0 THEN 
-           EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_VERSION ENABLE';
-       END IF;
-        
-        raise_application_error(-20000,
-                            'ERROR: Some Other fatal error occured :- '||SQLERRM);
-
-
-END;
---~^UTDELIM^~--	
--- ECPD-30871
-/*This is to update all the records having object_type as 'EQPM' instead of 'Chiller,Compressor,Co2 Removal Unit and so on*/ 
-DECLARE 
-HASENTRY NUMBER;
-BEGIN
-	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_WELL_EQUIP_DOWNTIME'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_WELL_EQUIP_DOWNTIME DISABLE';
-		END IF;
-		
-	UPDATE WELL_EQUIP_DOWNTIME 
-	SET object_type=ec_equipment.eqpm_type(OBJECT_ID) 
-	WHERE object_type='EQPM';
-	Commit;
-	
-	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_WELL_EQUIP_DOWNTIME'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_WELL_EQUIP_DOWNTIME ENABLE';
-		END IF;
-EXCEPTION
-   WHEN OTHERS 
-     THEN
-
-       IF HASENTRY > 0 THEN 
-           EXECUTE IMMEDIATE 'ALTER TRIGGER IU_WELL_EQUIP_DOWNTIME ENABLE';
-       END IF;
-        
-        raise_application_error(-20000,
-                            'ERROR: Some Other fatal error occured :- '||SQLERRM);
-
-END;
---~^UTDELIM^~--
-
--- ECPD-30308
-
--- Block 1 : For migration of Prosty Code
--- Query will skip any Reason code which already exists in prosty_code
-BEGIN
-    INSERT INTO PROSTY_CODES
-        (CODE_TYPE, CODE, CODE_TEXT, IS_SYSTEM_CODE, IS_DEFAULT, IS_ACTIVE, SORT_ORDER, DESCRIPTION
-        )
-    SELECT 'WEL_DT_REAS_1' code_type,
-           rc.reason_code code,
-           initcap(rc.reason_code) code_text,
-           'N' is_system_code,
-           'N' is_default,
-           'Y' is_active,
-           (SELECT nvl(MAX(a.sort_order), 0)
-              FROM prosty_codes a
-             WHERE a.code_type = 'WELL_DT_REAS_1') + (rownum * 10) sort_order,
-           INITCAP(rc.reason_code) description
-      FROM (SELECT DISTINCT UPPER(TRIM(reason_code_1)) reason_code
-              FROM well_equip_downtime
-             WHERE reason_code_1 IS NOT NULL
-               AND UPPER(TRIM(reason_code_1)) NOT IN
-                   (SELECT upper(TRIM(code))
-                      FROM prosty_codes
-                     WHERE code_type = 'WELL_DT_REAS_1')) rc
-    UNION ALL
-    SELECT 'WEL_DT_REAS_2' code_type,
-           rc.reason_code code,
-           initcap(rc.reason_code) code_text,
-           'N' is_system_code,
-           'N' is_default,
-           'Y' is_active,
-           (SELECT nvl(MAX(a.sort_order), 0)
-              FROM prosty_codes a
-             WHERE a.code_type = 'WELL_DT_REAS_2') + (rownum * 10) sort_order,
-           INITCAP(rc.reason_code) description
-      FROM (SELECT DISTINCT UPPER(TRIM(reason_code_2)) reason_code
-              FROM well_equip_downtime
-             WHERE reason_code_2 IS NOT NULL
-               AND UPPER(TRIM(reason_code_2)) NOT IN
-                   (SELECT upper(TRIM(code))
-                      FROM prosty_codes
-                     WHERE code_type = 'WELL_DT_REAS_2')) rc
-    UNION ALL
-    SELECT 'WEL_DT_REAS_3' code_type,
-           rc.reason_code code,
-           initcap(rc.reason_code) code_text,
-           'N' is_system_code,
-           'N' is_default,
-           'Y' is_active,
-           (SELECT nvl(MAX(a.sort_order), 0)
-              FROM prosty_codes a
-             WHERE a.code_type = 'WELL_DT_REAS_3') + (rownum * 10) sort_order,
-           INITCAP(rc.reason_code) description
-      FROM (SELECT DISTINCT UPPER(TRIM(reason_code_3)) reason_code
-              FROM well_equip_downtime
-             WHERE reason_code_3 IS NOT NULL
-               AND UPPER(TRIM(reason_code_3)) NOT IN
-                   (SELECT upper(TRIM(code))
-                      FROM prosty_codes
-                     WHERE code_type = 'WELL_DT_REAS_3')) rc
-    UNION ALL
-    SELECT 'WEL_DT_REAS_4' code_type,
-           rc.reason_code code,
-           initcap(rc.reason_code) code_text,
-           'N' is_system_code,
-           'N' is_default,
-           'Y' is_active,
-           (SELECT nvl(MAX(a.sort_order), 0)
-              FROM prosty_codes a
-             WHERE a.code_type = 'WELL_DT_REAS_4') + (rownum * 10) sort_order,
-           INITCAP(rc.reason_code) description
-      FROM (SELECT DISTINCT UPPER(TRIM(reason_code_4)) reason_code
-              FROM well_equip_downtime
-             WHERE reason_code_4 IS NOT NULL
-               AND UPPER(TRIM(reason_code_4)) NOT IN
-                   (SELECT upper(TRIM(code))
-                      FROM prosty_codes
-                     WHERE code_type = 'WELL_DT_REAS_4')) rc;
-    COMMIT;
-END;
---~^UTDELIM^~--
-
--- Block 2 : For data upgrade from well downtime screen to well deferment
-DECLARE
--- Cursor Declaration
--- Pull data for D/T Type Group and Single
-CURSOR c_parent_well_downtime_rec
-IS
-SELECT
-       object_id, object_type, event_no, parent_event_no, downtime_type
-       ,downtime_categ, daytime, end_date, downtime_class_type, master_event_id
-       ,parent_daytime, parent_master_event_id, parent_object_id
-       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
-       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
-       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
-       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
-       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
-       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
-       ,date_3, date_4, date_5, rev_text
-  FROM well_equip_downtime wd
- WHERE (wd.downtime_categ='WELL_OFF' AND wd.downtime_class_type IN ('GROUP','SINGLE'));
-
--- Pull data for D/T Type Group Child
-CURSOR c_child_well_downtime_rec(pn_parent_event_no NUMBER)
-IS
-SELECT
-       object_id, object_type, event_no, parent_event_no, downtime_type
-       ,downtime_categ, daytime, end_date, downtime_class_type, master_event_id
-       ,parent_daytime, parent_master_event_id, parent_object_id
-       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
-       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
-       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
-       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
-       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
-       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
-       ,date_3, date_4, date_5, rev_text
-  FROM well_equip_downtime wd
- WHERE wd.downtime_categ='WELL_OFF'
-   AND wd.downtime_class_type = 'GROUP_CHILD'
-   AND parent_event_no = pn_parent_event_no;
-
--- Local variable declaration
-ln_event_no well_deferment.event_no%TYPE;
-
-BEGIN
-
-  FOR cpr IN c_parent_well_downtime_rec
-  LOOP
-    INSERT INTO well_deferment
-        (
-            object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
-          , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
-          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-          , cond_loss_rate, cond_loss_volume
-          , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
-          , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
-          , steam_inj_loss_volume, water_inj_loss_rate
-          , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-          , comments, value_1, value_2, value_3
-          , value_4, value_5, value_6, value_7, value_8, value_9
-          , value_10, text_1, text_2, text_3, text_4, text_5, text_6
-          , text_7, text_8, text_9
-          , text_10, date_1, date_2, date_3, date_4, date_5
-          , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
-          , rev_text, equipment_id
-        )
-    VALUES
-        (
-            cpr.object_id, cpr.object_type, NULL, 'DOWN', cpr.downtime_class_type, 'N'
-          , cpr.daytime, cpr.end_date, cpr.master_event_id, NULL, NULL, NULL
-          , UPPER(TRIM(cpr.reason_code_1)),  UPPER(TRIM(cpr.reason_code_2)), UPPER(TRIM(cpr.reason_code_3)), UPPER(TRIM(cpr.reason_code_4))
-          , cpr.cond_loss_rate, cpr.cond_loss_volume
-          , cpr.gas_loss_rate, cpr.gas_loss_volume, cpr.gas_inj_loss_rate, cpr.gas_inj_loss_volume
-          , cpr.oil_loss_rate, cpr.oil_loss_volume, cpr.steam_inj_loss_rate
-          , cpr.steam_inj_loss_volume, cpr.water_inj_loss_rate
-          , cpr.water_inj_loss_volume, cpr.water_loss_rate, cpr.water_loss_volume, cpr.status
-          , cpr.comments, cpr.value_1, cpr.value_2, cpr.value_3
-          , cpr.value_4, cpr.value_5, cpr.value_6, cpr.value_7, cpr.value_8, cpr.value_9
-          , cpr.value_10, cpr.text_1, cpr.text_2, cpr.text_3, cpr.text_4, cpr.text_5, cpr.text_6
-          , cpr.text_7, cpr.text_8, cpr.text_9
-          , cpr.text_10, cpr.date_1, cpr.date_2, cpr.date_3, cpr.date_4, cpr.date_5
-          , NVL2(cpr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(cpr.reason_code_2,'WELL_DT_REAS_2',NULL)
-          , NVL2(cpr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(cpr.reason_code_4,'WELL_DT_REAS_4',NULL)
-          , cpr.rev_text, cpr.equipment_id
-        ) RETURNING event_no INTO ln_event_no;
-
-    IF cpr.downtime_class_type <> 'SINGLE' THEN
-
-        FOR ccr IN c_child_well_downtime_rec(cpr.event_no)
-        LOOP
-
-          INSERT INTO well_deferment
-              (
-                  object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
-                , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
-                , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-                , cond_loss_rate, cond_loss_volume
-                , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
-                , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
-                , steam_inj_loss_volume, water_inj_loss_rate
-                , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-                , comments, value_1, value_2, value_3
-                , value_4, value_5, value_6, value_7, value_8, value_9
-                , value_10, text_1, text_2, text_3, text_4, text_5, text_6
-                , text_7, text_8, text_9
-                , text_10, date_1, date_2, date_3, date_4, date_5
-                , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
-                , rev_text, equipment_id
-              )
-          VALUES
-              (
-                  ccr.object_id, ccr.object_type, ln_event_no, 'DOWN', ccr.downtime_class_type, 'N'
-                , ccr.daytime, ccr.end_date, ccr.master_event_id, ccr.parent_daytime, ccr.parent_master_event_id, ccr.parent_object_id
-                , UPPER(TRIM(ccr.reason_code_1)),  UPPER(TRIM(ccr.reason_code_2)), UPPER(TRIM(ccr.reason_code_3)), UPPER(TRIM(ccr.reason_code_4))
-                , ccr.cond_loss_rate, ccr.cond_loss_volume
-                , ccr.gas_loss_rate, ccr.gas_loss_volume, ccr.gas_inj_loss_rate, ccr.gas_inj_loss_volume
-                , ccr.oil_loss_rate, ccr.oil_loss_volume, ccr.steam_inj_loss_rate
-                , ccr.steam_inj_loss_volume, ccr.water_inj_loss_rate
-                , ccr.water_inj_loss_volume, ccr.water_loss_rate, ccr.water_loss_volume, ccr.status
-                , ccr.comments, ccr.value_1, ccr.value_2, ccr.value_3
-                , ccr.value_4, ccr.value_5, ccr.value_6, ccr.value_7, ccr.value_8, ccr.value_9
-                , ccr.value_10, ccr.text_1, ccr.text_2, ccr.text_3, ccr.text_4, ccr.text_5, ccr.text_6
-                , ccr.text_7, ccr.text_8, ccr.text_9
-                , ccr.text_10, ccr.date_1, ccr.date_2, ccr.date_3, ccr.date_4, ccr.date_5
-                , NVL2(ccr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(ccr.reason_code_2,'WELL_DT_REAS_2',NULL)
-                , NVL2(ccr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(ccr.reason_code_4,'WELL_DT_REAS_4',NULL)
-                , ccr.rev_text, ccr.equipment_id
-              );
-        END LOOP;
-    END IF;
-  END LOOP;
-  COMMIT;
-END;
---~^UTDELIM^~--
-
--- Block 3 : For data upgrade from well constraint screen to well deferment
-DECLARE
--- Cursor Declaration
--- Pull data for D/T Type Group and Single
-CURSOR c_parent_well_downtime_rec
-IS
-SELECT
-       object_id, object_type, event_no, parent_event_no, downtime_type
-       ,downtime_categ, daytime, end_date, downtime_class_type, master_event_id
-       ,parent_daytime, parent_master_event_id, parent_object_id
-       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
-       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
-       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
-       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
-       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
-       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
-       ,date_3, date_4, date_5, rev_text
-  FROM well_equip_downtime wd
- WHERE (wd.downtime_categ='WELL_LOW' AND wd.downtime_class_type IN ('GROUP','SINGLE'));
-
--- Pull data for D/T Type Group Child
-CURSOR c_child_well_downtime_rec(pn_parent_event_no NUMBER)
-IS
-SELECT
-       object_id, object_type, event_no, parent_event_no, downtime_type
-       ,downtime_categ, daytime, end_date, downtime_class_type, master_event_id
-       ,parent_daytime, parent_master_event_id, parent_object_id
-       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
-       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
-       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
-       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
-       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
-       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
-       ,date_3, date_4, date_5, rev_text
-  FROM well_equip_downtime wd
- WHERE wd.downtime_categ='WELL_LOW'
-   AND wd.downtime_class_type = 'GROUP_CHILD'
-   AND parent_event_no = pn_parent_event_no;
-
--- Local variable declaration
-ln_event_no well_deferment.event_no%TYPE;
-
-BEGIN
-
-  FOR cpr IN c_parent_well_downtime_rec
-  LOOP
-    INSERT INTO well_deferment
-        (
-            object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
-          , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
-          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-          , cond_loss_rate, cond_loss_volume
-          , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
-          , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
-          , steam_inj_loss_volume, water_inj_loss_rate
-          , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-          , comments, value_1, value_2, value_3
-          , value_4, value_5, value_6, value_7, value_8, value_9
-          , value_10, text_1, text_2, text_3, text_4, text_5, text_6
-          , text_7, text_8, text_9
-          , text_10, date_1, date_2, date_3, date_4, date_5
-          , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
-          , rev_text, equipment_id
-         )
-    VALUES
-        (
-            cpr.object_id, cpr.object_type, NULL, 'CONSTRAINT', cpr.downtime_class_type, 'N'
-          , cpr.daytime, cpr.end_date, cpr.master_event_id, NULL, NULL, NULL
-          , UPPER(TRIM(cpr.reason_code_1)),  UPPER(TRIM(cpr.reason_code_2)), UPPER(TRIM(cpr.reason_code_3)), UPPER(TRIM(cpr.reason_code_4))
-          , cpr.cond_loss_rate, cpr.cond_loss_volume
-          , cpr.gas_loss_rate, cpr.gas_loss_volume, cpr.gas_inj_loss_rate, cpr.gas_inj_loss_volume
-          , cpr.oil_loss_rate, cpr.oil_loss_volume, cpr.steam_inj_loss_rate
-          , cpr.steam_inj_loss_volume, cpr.water_inj_loss_rate
-          , cpr.water_inj_loss_volume, cpr.water_loss_rate, cpr.water_loss_volume, cpr.status
-          , cpr.comments, cpr.value_1, cpr.value_2, cpr.value_3
-          , cpr.value_4, cpr.value_5, cpr.value_6, cpr.value_7, cpr.value_8, cpr.value_9
-          , cpr.value_10, cpr.text_1, cpr.text_2, cpr.text_3, cpr.text_4, cpr.text_5, cpr.text_6
-          , cpr.text_7, cpr.text_8, cpr.text_9
-          , cpr.text_10, cpr.date_1, cpr.date_2, cpr.date_3, cpr.date_4, cpr.date_5
-          , NVL2(cpr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(cpr.reason_code_2,'WELL_DT_REAS_2',NULL)
-          , NVL2(cpr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(cpr.reason_code_4,'WELL_DT_REAS_4',NULL)
-          , cpr.rev_text, cpr.equipment_id
-        ) RETURNING event_no INTO ln_event_no;
-
-    IF cpr.downtime_class_type <> 'SINGLE' THEN
-
-        FOR ccr IN c_child_well_downtime_rec(cpr.event_no)
-        LOOP
-
-          INSERT INTO well_deferment
-              (
-                  object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
-                , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
-                , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-                , cond_loss_rate, cond_loss_volume
-                , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
-                , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
-                , steam_inj_loss_volume, water_inj_loss_rate
-                , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-                , comments, value_1, value_2, value_3
-                , value_4, value_5, value_6, value_7, value_8, value_9
-                , value_10, text_1, text_2, text_3, text_4, text_5, text_6
-                , text_7, text_8, text_9
-                , text_10, date_1, date_2, date_3, date_4, date_5
-                , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
-                , rev_text, equipment_id
-              )
-          VALUES
-              (
-                  ccr.object_id, ccr.object_type, ln_event_no, 'CONSTRAINT', ccr.downtime_class_type, 'N'
-                , ccr.daytime, ccr.end_date, ccr.master_event_id, ccr.parent_daytime, ccr.parent_master_event_id, ccr.parent_object_id
-                , UPPER(TRIM(ccr.reason_code_1)),  UPPER(TRIM(ccr.reason_code_2)), UPPER(TRIM(ccr.reason_code_3)), UPPER(TRIM(ccr.reason_code_4))
-                , ccr.cond_loss_rate, ccr.cond_loss_volume
-                , ccr.gas_loss_rate, ccr.gas_loss_volume, ccr.gas_inj_loss_rate, ccr.gas_inj_loss_volume
-                , ccr.oil_loss_rate, ccr.oil_loss_volume, ccr.steam_inj_loss_rate
-                , ccr.steam_inj_loss_volume, ccr.water_inj_loss_rate
-                , ccr.water_inj_loss_volume, ccr.water_loss_rate, ccr.water_loss_volume, ccr.status
-                , ccr.comments, ccr.value_1, ccr.value_2, ccr.value_3
-                , ccr.value_4, ccr.value_5, ccr.value_6, ccr.value_7, ccr.value_8, ccr.value_9
-                , ccr.value_10, ccr.text_1, ccr.text_2, ccr.text_3, ccr.text_4, ccr.text_5, ccr.text_6
-                , ccr.text_7, ccr.text_8, ccr.text_9
-                , ccr.text_10, ccr.date_1, ccr.date_2, ccr.date_3, ccr.date_4, ccr.date_5
-                , NVL2(ccr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(ccr.reason_code_2,'WELL_DT_REAS_2',NULL)
-                , NVL2(ccr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(ccr.reason_code_4,'WELL_DT_REAS_4',NULL)
-                , ccr.rev_text, ccr.equipment_id
-              );
-        END LOOP;
-    END IF;
-  END LOOP;
-  COMMIT;
-END;
---~^UTDELIM^~--
-
--- Block 4 : For data upgrade from Equipment Downtime screen to well deferment
-DECLARE
--- Cursor Declaration
--- Pull data for D/T Type Group and Group_Child
--- Ignore data for Group record as we are moving all Group_child row as Group D/T
-CURSOR c_well_eqpm_downtime_rec
-IS
-SELECT
-       object_id, DECODE(downtime_type,'EQPM_DT','EQPM',object_type) object_type, event_no,NULL parent_event_no, downtime_type
-       ,downtime_categ, daytime, end_date, DECODE(downtime_type,'EQPM_DT','GROUP',downtime_class_type) downtime_class_type, master_event_id
-       ,NULL parent_daytime,NULL parent_master_event_id,NULL parent_object_id
-       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
-       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
-       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
-       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
-       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
-       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
-       ,date_3, date_4, date_5, rev_text
-  FROM well_equip_downtime wd
- WHERE (wd.downtime_categ='EQPM_OFF' AND wd.downtime_class_type IN ('GROUP_CHILD','SINGLE'));
-
-BEGIN
-
-  FOR cpr IN c_well_eqpm_downtime_rec
-  LOOP
-    INSERT INTO well_deferment
-        (
-            object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
-          , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
-          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-          , cond_loss_rate, cond_loss_volume
-          , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
-          , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
-          , steam_inj_loss_volume, water_inj_loss_rate
-          , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
-          , comments, value_1, value_2, value_3
-          , value_4, value_5, value_6, value_7, value_8, value_9
-          , value_10, text_1, text_2, text_3, text_4, text_5, text_6
-          , text_7, text_8, text_9
-          , text_10, date_1, date_2, date_3, date_4, date_5
-          , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
-          , rev_text, equipment_id
-        )
-    VALUES
-        (
-            cpr.object_id, cpr.object_type, cpr.parent_event_no, 'DOWN', cpr.downtime_class_type, 'N'
-          , cpr.daytime, cpr.end_date, cpr.master_event_id, cpr.parent_daytime, cpr.parent_master_event_id, cpr.parent_object_id
-          , UPPER(TRIM(cpr.reason_code_1)),  UPPER(TRIM(cpr.reason_code_2)), UPPER(TRIM(cpr.reason_code_3)), UPPER(TRIM(cpr.reason_code_4))
-          , cpr.cond_loss_rate, cpr.cond_loss_volume
-          , cpr.gas_loss_rate, cpr.gas_loss_volume, cpr.gas_inj_loss_rate, cpr.gas_inj_loss_volume
-          , cpr.oil_loss_rate, cpr.oil_loss_volume, cpr.steam_inj_loss_rate
-          , cpr.steam_inj_loss_volume, cpr.water_inj_loss_rate
-          , cpr.water_inj_loss_volume, cpr.water_loss_rate, cpr.water_loss_volume, cpr.status
-          , cpr.comments, cpr.value_1, cpr.value_2, cpr.value_3
-          , cpr.value_4, cpr.value_5, cpr.value_6, cpr.value_7, cpr.value_8, cpr.value_9
-          , cpr.value_10, cpr.text_1, cpr.text_2, cpr.text_3, cpr.text_4, cpr.text_5, cpr.text_6
-          , cpr.text_7, cpr.text_8, cpr.text_9
-          , cpr.text_10, cpr.date_1, cpr.date_2, cpr.date_3, cpr.date_4, cpr.date_5
-          , NVL2(cpr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(cpr.reason_code_2,'WELL_DT_REAS_2',NULL)
-          , NVL2(cpr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(cpr.reason_code_4,'WELL_DT_REAS_4',NULL)
-          , cpr.rev_text, cpr.equipment_id
-        );
-  END LOOP;
-  COMMIT;
-END;
---~^UTDELIM^~--
-
 select EcDp_System_key.assignNextNumber('MHM_MSG') from dual
 --~^UTDELIM^~--	
 
@@ -1278,275 +742,6 @@ END;
 BEGIN
 	ecdp_classmeta.RefreshMViews;
 END;
---~^UTDELIM^~--
--- Purpose of script : It will migrate data from Equipment Downtime (PD.0007) to Equipment Downtime (PD.0022)
--- Created  : 01-JUL-2017  (Gaurav Chaudhary)
---
--- Modification history:
--- Date         Whom      Change description:
--- ----         -----     -----------------------------------
--- 01-JUL-2017  chaudgau  Initial Version
---
-
--- PL/SQL Block : For data upgrade from Equipment Downtime screen (PD.0007) to Equipment Downtime (PD.0022)
--- EC Code for child record will be considered as group_child
-
-DECLARE
-
--- Cursor Declaration
--- Pull data for D/T Type Group, Single and Group child
--- Move data for parent data section with new event_no and use it to migrate child data section data, along with updation of parent_event_no
--- EC Ccode Data from downtime_type will be moved to equip_downtime.downtime_class_type column
--- Production day and end day will be generated for each record
-
-CURSOR c_parent_eqpm_downtime_rec
-IS
-SELECT
-       object_id, object_type, event_no, master_event_id
-     , NULL parent_event_no, NULL parent_object_id, NULL parent_daytime
-     , downtime_type, downtime_class_type, daytime, end_date
-     , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-     , comments
-     , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
-     , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
-     , date_1, date_2, date_3, date_4, date_5
-     , rev_text, record_status
-  FROM well_equip_downtime wd
- WHERE (wd.downtime_categ='EQPM_OFF' AND wd.downtime_class_type IN ('GROUP','SINGLE'));
- 
-CURSOR c_child_eqpm_downtime_rec(pn_parent_event_no NUMBER)
-IS
-SELECT
-       object_id, object_type, event_no, master_event_id
-     , parent_event_no, parent_object_id, parent_daytime
-     , downtime_type, downtime_class_type, daytime, end_date
-     , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-     , comments
-     , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
-     , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
-     , date_1, date_2, date_3, date_4, date_5
-     , rev_text, record_status
-  FROM well_equip_downtime wd
- WHERE (wd.downtime_categ='EQPM_OFF' AND wd.downtime_class_type = 'GROUP_CHILD')
-   AND parent_event_no = pn_parent_event_no;
-
- ln_event_no equip_downtime.event_no%TYPE;
-
-BEGIN
-
-  FOR cpr IN c_parent_eqpm_downtime_rec
-  LOOP
-    INSERT INTO equip_downtime
-        (
-            object_id, object_type, master_event_id
-          , parent_event_no, parent_daytime, parent_object_id
-          , downtime_class_type, daytime, end_date
-          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-          , comments
-          , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
-          , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
-          , date_1, date_2, date_3, date_4, date_5
-          , rev_text, record_status
-        )
-    VALUES
-        (
-            cpr.object_id, cpr.object_type, cpr.master_event_id
-          , cpr.parent_event_no, cpr.parent_daytime, cpr.parent_object_id
-          , cpr.downtime_type, cpr.daytime, cpr.end_date
-          , cpr.reason_code_1, cpr.reason_code_2, cpr.reason_code_3, cpr.reason_code_4
-          , cpr.comments
-          , cpr.value_1, cpr.value_2, cpr.value_3, cpr.value_4, cpr.value_5, cpr.value_6, cpr.value_7, cpr.value_8, cpr.value_9, cpr.value_10
-          , cpr.text_1, cpr.text_2, cpr.text_3, cpr.text_4, cpr.text_5, cpr.text_6, cpr.text_7, cpr.text_8, cpr.text_9, cpr.text_10
-          , cpr.date_1, cpr.date_2, cpr.date_3, cpr.date_4, cpr.date_5
-          , cpr.rev_text, cpr.record_status
-        ) RETURNING event_no INTO ln_event_no;
-
-        IF cpr.downtime_class_type = 'GROUP' THEN
-             FOR ccr IN c_child_eqpm_downtime_rec(cpr.event_no)
-             LOOP
-                 INSERT INTO equip_downtime
-                (
-                    object_id, object_type, master_event_id
-                  , parent_event_no, parent_daytime, parent_object_id
-                  , downtime_class_type, daytime, end_date
-                  , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-                  , comments
-                  , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
-                  , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
-                  , date_1, date_2, date_3, date_4, date_5
-                  , rev_text, record_status
-                )
-            VALUES
-                (
-                    ccr.object_id, ccr.object_type, ccr.master_event_id
-                  , ln_event_no, ccr.parent_daytime, ccr.parent_object_id 
-                  , 'GROUP_CHILD', ccr.daytime, ccr.end_date
-                  , ccr.reason_code_1, ccr.reason_code_2, ccr.reason_code_3, ccr.reason_code_4
-                  , ccr.comments
-                  , ccr.value_1, ccr.value_2, ccr.value_3, ccr.value_4, ccr.value_5, ccr.value_6, ccr.value_7, ccr.value_8, ccr.value_9, ccr.value_10
-                  , ccr.text_1, ccr.text_2, ccr.text_3, ccr.text_4, ccr.text_5, ccr.text_6, ccr.text_7, ccr.text_8, ccr.text_9, ccr.text_10
-                  , ccr.date_1, ccr.date_2, ccr.date_3, ccr.date_4, ccr.date_5
-                  , ccr.rev_text, ccr.record_status
-                );
-             END LOOP;
-        END IF;
-  END LOOP;
-  COMMIT;
-END;
---~^UTDELIM^~--
-
--- Purpose of script : It will migrate data from Equipment Downtime tab on Deferment screen(PD.0020) to Equipment Downtime (PD.0022)
--- Created  : 01-JUL-2017  (Gaurav Chaudhary)
---
--- Modification history:
--- Date         Whom      Change description:
--- ----         -----     -----------------------------------
--- 01-JUL-2017  chaudgau  Initial Version
---
-
--- PL/SQL Block : For data upgrade from Equipment Downtime tab on Deferment screen(PD.0020) to Equipment Downtime (PD.0022)
--- EC Code for downtime_class_type will be considered as EQPM_DT
-
-
--- Cursor Declaration
--- Pull data for D/T Type Group, Single and Group child
--- Move data for parent data section with new event_no and use it to migrate child data section data, along with updation of parent_event_no
--- EC Ccode Data from downtime_type will be moved to equip_downtime.downtime_class_type column
--- Production day and end day will be generated for each record
- 
-BEGIN
-
-    INSERT INTO equip_downtime
-        (
-            object_id, object_type, master_event_id
-          , parent_event_no, parent_daytime, parent_object_id
-          , downtime_class_type, daytime, end_date, day, end_day
-          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
-          , comments
-          , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
-          , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
-          , date_1, date_2, date_3, date_4, date_5
-          , rev_text, record_status
-        )
-    SELECT
-		   wd.object_id, wd.object_type, wd.master_event_id
-		 , NULL parent_event_no, NULL parent_daytime, NULL parent_object_id
-		 , 'EQPM_DT' downtime_type, wd.daytime, wd.end_date, wd.day, wd.end_day
-		 , wd.reason_code_type_1, wd.reason_code_type_2, wd.reason_code_type_3, wd.reason_code_type_4
-		 , wd.comments
-		 , wd.value_1, wd.value_2, wd.value_3, wd.value_4, wd.value_5, wd.value_6, wd.value_7, wd.value_8, wd.value_9, wd.value_10
-		 , wd.text_1, wd.text_2, wd.text_3, wd.text_4, wd.text_5, wd.text_6, wd.text_7, wd.text_8, wd.text_9, wd.text_10
-		 , wd.date_1, wd.date_2, wd.date_3, wd.date_4, wd.date_5
-		 , wd.rev_text, wd.record_status
-	  FROM well_deferment wd
-	  JOIN eqpm_version oa ON oa.object_id = wd.object_id
-	 WHERE wd.deferment_type = 'SINGLE'
-     AND wd.daytime >= oa.daytime
-     AND (oa.end_date is NULL OR wd.daytime < oa.end_date);
-
-  COMMIT;
-END;
---~^UTDELIM^~--
-
-DECLARE
-      HASENTRY NUMBER;
-     sqlQuery clob:='UPDATE ALLOC_JOB_PASS SET METHOD = ''DISPATCHING_SCHD''  WHERE JOB_NO = (select job_no from alloc_job_definition where code = ''DAILY_DISP_SCH_CALC'') and JOB_PASS_NO = ''5''';
-BEGIN
-
-   SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS DISABLE';
-		END IF;
-		
-     EXECUTE IMMEDIATE sqlQuery;
-	 
-	  SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
-		END IF;
-	 
-	 
-     dbms_output.put_line('SUCCESS: ' || sqlQuery);
-     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
-     EXCEPTION
-        WHEN OTHERS THEN
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
-		END IF;
-         --UPDATE_MILESTONE_WITH_ERROR('post_add_table_column');
-         raise_application_error(-20000, 'ERROR: Some Other fatal error occured' || SQLERRM);
- END;
---~^UTDELIM^~--
-
-DECLARE
-     HASENTRY NUMBER;
-     sqlQuery clob:='UPDATE ALLOC_JOB_PASS SET METHOD = ''DISPATCHING_SCHD''  WHERE JOB_NO = (select job_no from alloc_job_definition where code = ''SUB_DAILY_DISP_SCH_CALC'') and JOB_PASS_NO = ''8''';
-BEGIN
-    
-	  SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS DISABLE';
-		END IF;
-		
-     EXECUTE IMMEDIATE sqlQuery;
-	 
-	 	  SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
-		END IF;
-	 
-     dbms_output.put_line('SUCCESS: ' || sqlQuery);
-     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
-     EXCEPTION
-        WHEN OTHERS THEN
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
-		END IF;
-         --UPDATE_MILESTONE_WITH_ERROR('post_add_table_column');
-         raise_application_error(-20000, 'ERROR: Some Other fatal error occured' || SQLERRM);
- END;
---~^UTDELIM^~--
-
-DECLARE
- HASENTRY NUMBER;
-	 sqlQuery clob  :='UPDATE ALLOC_JOB_PASS SET METHOD = ''DISPATCHING_SCHD'' where METHOD = ''DISPATCHING_SCH''';
-	 sqlQuery2 clob :='UPDATE ALLOC_JOB_PASS SET METHOD_CODE=''ALLOC_PASS_METHOD'' WHERE METHOD_CODE IS NULL';
-	 
-BEGIN
-    
-	  SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS DISABLE';
-		END IF;
-
-     EXECUTE IMMEDIATE sqlQuery;
-	 dbms_output.put_line('SUCCESS: ' || sqlQuery);
-     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
-	 
-	 EXECUTE IMMEDIATE sqlQuery2;
-	 dbms_output.put_line('SUCCESS: ' || sqlQuery2);
-     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
-	 
-	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
-		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
-		END IF;
-	 
-     
-     EXCEPTION
-        WHEN OTHERS THEN
-		IF HASENTRY > 0 THEN 
-		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
-		END IF;
-         --UPDATE_MILESTONE_WITH_ERROR('post_add_table_column');
-         raise_application_error(-20000, 'ERROR: Some Other fatal error occured' || SQLERRM);
- END;
 --~^UTDELIM^~--
 BEGIN
 ecdp_viewlayer.BuildViewLayer('FIN_ITEM_DATASET_MATRIX',p_force => 'Y'); 
@@ -5188,4 +4383,961 @@ CREATE INDEX IR_CLASS_REL_PRESENTATION ON CLASS_REL_PRESENTATION
    NEXT 65536
  )
  TABLESPACE &ts_index
+--~^UTDELIM^~--
+
+DECLARE
+BEGIN
+  ecdp_viewlayer_utils.buildObjectRelCascadeView;
+
+  UPDATE production_day_version SET production_day_offset_hrs = ecdp_timestamp_utils.timeOffsetToHrs(offset) WHERE production_day_offset_hrs IS NULL;
+  
+  UPDATE objects_version_table 
+  SET    production_day_id = EcDp_Objects.resolveProductionDayId(class_name, object_id, daytime)
+  WHERE  production_day_id IS NULL;
+
+  UPDATE objects_version_table 
+  SET    time_zone = EcDp_Objects.resolveDomainObjectName('TIME_ZONE_REGION', class_name, object_id, daytime)
+  WHERE  time_zone IS NULL;
+
+  COMMIT;
+END;
+--~^UTDELIM^~--
+
+begin
+ execute immediate 'create table RESTORE_OBJECT_DEF(type VARCHAR2(30),table_name VARCHAR2(30),name VARCHAR2(1000),definition CLOB)';
+END;
+--~^UTDELIM^~--
+
+begin   
+ execute immediate 'create sequence utctime_sequence minvalue 1 maxvalue 10000 start with 1 increment by 1 nocache';
+END;
+--~^UTDELIM^~--
+
+begin
+ execute immediate 'create table UTC_TIMEZONE_MASTER(job_no NUMBER,table_name VARCHAR2(40),status VARCHAR2(1) default ''P'')';
+END;
+--~^UTDELIM^~--
+
+begin
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_ACC_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_ACC_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_CAP', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_CAP_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_AVAIL', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_AVAIL_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_DELIVERY', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_DELIVERY_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_FORECAST', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_FORECAST_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_NOM', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_NOM_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_SHIP_NOM', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_DP_SHIP_NOM_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'CNTR_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'DEFER_LOSS_STRM_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'DEFER_LOSS_STRM_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'DELPNT_SUB_DAY_TARGET', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'DELPNT_SUB_DAY_TARGET_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'EQPM_ANALYSIS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'EQPM_ANALYSIS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'EQPM_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'EQPM_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'EQPM_EVENT_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'EQPM_EVENT_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'EQPM_SUB_DAY_RESTRICTION', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'EQPM_SUB_DAY_RESTRICTION_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'FCST_COMPENSATION_EVENTS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'FCST_COMPENSATION_EVENTS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'WELL_TRANSPORT_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'WELL_TRANSPORT_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'STRM_TRANSPORT_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (1, 'STRM_TRANSPORT_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FCST_LIFT_ACC_ADJ', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FCST_LIFT_ACC_ADJ_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FCST_LIFT_ACC_ADJ_SINGLE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FCST_LIFT_ACC_ADJ_SINGLE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FCST_NOMPNT_SUB_DAY_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FCST_NOMPNT_SUB_DAY_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FLOWLINE_SUB_WELL_CONN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FLOWLINE_SUB_WELL_CONN_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FLWL_SUB_DAY_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'FLWL_SUB_DAY_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'IFLW_PERIOD_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'IFLW_PERIOD_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'IFLW_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'IFLW_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'IWEL_PERIOD_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'IWEL_PERIOD_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'IWEL_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'IWEL_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACCOUNT_ADJUSTMENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACCOUNT_ADJUSTMENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACCOUNT_ADJ_SINGLE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACCOUNT_ADJ_SINGLE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACC_SUB_DAY_BAL_AL', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACC_SUB_DAY_BAL_AL_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACC_SUB_DAY_FCST_FC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACC_SUB_DAY_FCST_FC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACC_SUB_DAY_FORECAST', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACC_SUB_DAY_FORECAST_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACC_SUB_DAY_OFFICIAL', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'LIFT_ACC_SUB_DAY_OFFICIAL_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'METER_SUB_DAY_MEAS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'METER_SUB_DAY_MEAS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'MSG_CNTR_SUB_DAY_DP_SHIP', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (2, 'MSG_CNTR_SUB_DAY_DP_SHIP_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'NOMPNT_SUB_DAY_CONFIRMATION', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'NOMPNT_SUB_DAY_CONFIRMATION_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'NOMPNT_SUB_DAY_DELIVERY', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'NOMPNT_SUB_DAY_DELIVERY_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'NOMPNT_SUB_DAY_NOMINATION', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'NOMPNT_SUB_DAY_NOMINATION_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OBJECT_PLAN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OBJECT_PLAN_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OBJLOC_SUB_DAY_NOMINATION', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OBJLOC_SUB_DAY_NOMINATION_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OBJLOC_SUB_DAY_TARGET', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OBJLOC_SUB_DAY_TARGET_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OBJ_TRAN_SUB_DAY_NOM_BOUND', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OBJ_TRAN_SUB_DAY_NOM_BOUND_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OPLOC_SUB_DAY_RESTRICT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'OPLOC_SUB_DAY_RESTRICT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PERF_PERIOD_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PERF_PERIOD_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PFLW_SAMPLE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PFLW_SAMPLE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PFLW_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PFLW_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_PC_TRANSACTION', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_PC_TRANSACTION_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_PIGGING_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_PIGGING_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_SUB_DAY_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_SUB_DAY_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_SUB_DAY_PC_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_SUB_DAY_PC_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_SUB_DAY_PC_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PIPE_SUB_DAY_PC_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PRICE_INDEX_SUB_DAY_VALUE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (3, 'PRICE_INDEX_SUB_DAY_VALUE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PROD_PRICE_SUB_DAY_VALUE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PROD_PRICE_SUB_DAY_VALUE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PSEP_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PSEP_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PTST_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PTST_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PWEL_PERIOD_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PWEL_PERIOD_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PWEL_SAMPLE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PWEL_SAMPLE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PWEL_SUB_DAY_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PWEL_SUB_DAY_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PWEL_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'PWEL_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'SEPA_SUB_DAY_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'SEPA_SUB_DAY_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'SEPA_SUB_DAY_PC_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'SEPA_SUB_DAY_PC_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_FCST_SUB_DAY_LIFT_NOM', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_FCST_SUB_DAY_LIFT_NOM_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_BAL_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_BAL_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_FCST_FCAST', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_FCST_FCAST_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_FORECAST', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_FORECAST_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_LIFT_NOM', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_LIFT_NOM_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_OFFICIAL', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_OFFICIAL_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_PC_FCST', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STOR_SUB_DAY_PC_FCST_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STRM_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (4, 'STRM_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SAMPLE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SAMPLE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_CPYCP_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_CPYCP_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_CPY_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_CPY_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_CP_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_CP_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_PCCPY_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_PCCPY_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_PC_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_PC_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_PC_CP_ALLOC', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_PC_CP_ALLOC_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_SCHEME', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_SCHEME_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_WELL_CONN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'STRM_WELL_CONN_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'TEST_DEVICE_SAMPLE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'TEST_DEVICE_SAMPLE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WBI_SAMPLE', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WBI_SAMPLE_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WBI_SUB_DAY_STATUS', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WBI_SUB_DAY_STATUS_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WELL_EVENT', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WELL_EVENT_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WELL_PERIOD_TOTALIZER', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WELL_PERIOD_TOTALIZER_JN', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WELL_SWING_CONNECTION', 'P');
+	insert into utc_timezone_master (JOB_NO, TABLE_NAME, STATUS) values (5, 'WELL_SWING_CONNECTION_JN', 'P');
+
+	commit;
+end;
+--~^UTDELIM^~--
+
+CREATE OR REPLACE PACKAGE ecdp_localtimestamp IS
+	FUNCTION local2utc( p_daytime DATE, p_timezone varchar2) RETURN DATE;
+END ecdp_localtimestamp;
+--~^UTDELIM^~--
+
+CREATE OR REPLACE PACKAGE BODY ecdp_localtimestamp IS
+
+FUNCTION local2utc( p_daytime DATE, p_timezone varchar2) RETURN DATE IS
+  ld_return_date    DATE;
+BEGIN
+
+  BEGIN
+    ld_return_date := CAST(FROM_TZ(CAST(p_daytime AS TIMESTAMP), p_timezone) AT TIME ZONE 'UTC' AS DATE);
+  EXCEPTION WHEN OTHERS THEN
+    IF SQLCODE = -1878 THEN
+     -- Invalid date. Return NULL, according to previous code
+     ld_return_date := NULL;
+    ELSE
+      RAISE;
+    END IF;
+  END;
+
+  RETURN ld_return_date;
+END local2utc;
+
+END ecdp_localtimestamp;
+--~^UTDELIM^~--
+
+CREATE OR REPLACE PACKAGE populate_utc_timezone IS
+  /**************************************************************
+  ** Package:    temp_copyRenameTable
+  **
+  ** $Revision: 1.14 $
+  **
+  ** Filename:   temp_copyRenameTable-head.sql
+  **
+  ** Part of :   Upgrade 12.1
+  **
+  ** Purpose:
+  **
+  ** General Logic:
+  **
+  ** Document References:
+  **
+  **
+  ** Created:   21.12.98  Arild Vervik, ISI AS
+  ** Modified:  22.11.18  Gaurav Parmani
+  **
+  **************************************************************/
+
+  PROCEDURE utctime_update(p_table_name varchar2,
+                              p_timezone   varchar2,
+                              p_tablespace varchar2);
+    PROCEDURE executeJob(p_job_no number);
+
+END;
+--~^UTDELIM^~--
+
+CREATE OR REPLACE PACKAGE BODY populate_utc_timezone IS
+
+  syntax_error EXCEPTION;
+  P_PRIMARY_KEY       VARCHAR2(30) := 'PRIMARY_KEY';
+  P_FOREIGN_KEY       VARCHAR2(30) := 'FOREIGN_KEY';
+  P_CHILD_FOREIGN_KEY VARCHAR2(30) := 'CHILD_FOREIGN_KEY';
+  P_UNIQUE_KEY        VARCHAR2(30) := 'UNIQUE_KEY';
+  P_CHECK_CONS        VARCHAR2(30) := 'CHECK_CONSTRAINT';
+  P_INDEXES           VARCHAR2(30) := 'INDEXES';
+  P_TRIGGER           VARCHAR2(30) := 'TRIGGER';
+  P_COMMENT           VARCHAR2(30) := 'COMMENT';
+  P_COL_COMMENT       VARCHAR2(30) := 'COLUMN_COMMENT';
+  P_DEFAULT_VALUE     VARCHAR2(30) := 'DEFAULT_VALUE';
+  p_seq_no            number;
+  v_sql               varchar2(1000);
+  p_count             number;
+  v_utc_end_date      number;
+  v_summer_time       number;
+  v_end_summer_time   number;
+  l_exception EXCEPTION;
+  PRAGMA EXCEPTION_INIT(l_exception, -01442);
+
+  PROCEDURE executeJob(p_job_no number) IS
+
+    lv2_timezone   varchar2(100);
+    lv2_tablespace varchar2(100);
+
+  BEGIN
+
+   select pref_verdi into lv2_timezone  from t_preferanse where pref_id = 'TIME_ZONE_REGION';
+   select pref_verdi into lv2_tablespace  from t_preferanse where pref_id = 'TS_DATA';
+
+    for i in (select table_name from UTC_TIMEZONE_MASTER a
+               where a.job_no = p_job_no and status = 'P') loop
+
+      v_sql := 'select count(1) from ' || i.table_name ||
+               ' where rownum<2 ';
+
+      execute immediate v_sql into p_count;
+
+      if p_count <> 0 then
+
+        BEGIN
+
+          ecdp_dynsql.WriteTempText(i.table_name, '--- Executing Job ----' || p_job_no || ' for table ' || i.table_name);
+          utctime_update(i.TABLE_NAME, lv2_timezone, lv2_tablespace);
+
+          update UTC_TIMEZONE_MASTER set status = 'C' where job_no = p_job_no and table_name = i.table_name;
+        EXCEPTION
+          WHEN OTHERS THEN
+            update UTC_TIMEZONE_MASTER set status = 'F' where job_no = p_job_no and table_name = i.table_name;
+
+        END;
+
+      else
+
+        ecdp_dynsql.WriteTempText(i.table_name,'Count is 0 for table : ' || i.table_name);
+        update UTC_TIMEZONE_MASTER set status = 'N' where job_no = p_job_no and table_name = i.table_name;
+
+      end if;
+
+      commit;
+
+    END LOOP; -- exit when all tables data has been proceed
+
+  END executeJob;
+
+  PROCEDURE restore_objects(P_TABLE_NAME VARCHAR2, P_NAME VARCHAR2) is
+
+    CURSOR c_RESTORE_OBJECT_DEF IS
+      SELECT * FROM RESTORE_OBJECT_DEF Y WHERE Y.TYPE = P_NAME and y.table_name=P_TABLE_NAME;
+
+  begin
+
+    FOR i in c_RESTORE_OBJECT_DEF LOOP
+      Begin
+        ecdp_dynsql.WriteTempText(i.table_name,'Restore  :: ' || P_NAME || ' Name :: ' || i.name);
+        execute immediate i.Definition;
+      Exception
+        when l_exception then
+          null;
+        when others then
+          ecdp_dynsql.WriteTempText(p_table_name,'ERROR while Restoring ' || P_NAME ||
+           ' for :: ' || p_table_name || ' ' || sqlcode || ' ' || sqlerrm);
+      end;
+    END LOOP;
+  end;
+
+  --<EC-DOC>
+  ---------------------------------------------------------------------------------------------------
+  -- function       : utctime_update
+  -- Description    : Copy table content to a new table including population of UTC_DAYTIME based on
+  --                   DAYTIME, summertime flag and UTC_END_DATE based on ENDDATE,end summertime flag
+  --
+  -- Preconditions  : Table has OBJECT_ID, DAYTIME,, SUMMER_TIME,,UTC_DAYTIME
+  --                  columns, according to EC standard
+  --                  Tables which have END_DATE has UTC_END_DATE column.Also END_SUMMERTIME is present as per the applicability
+  --                  All DAYTIME and END_DATE values is valid for assosiated time_zone.
+  --
+  --
+  --
+  -- Postcondition  : UTC_DAYTIME and UTC_END_DATE is populated and all triggers, constraints, indexes which are lost
+  --                  during population are regenerated after the population is done.
+  -- Using Tables   :
+  --
+  -- Using functions:
+  --
+  -- Configuration
+  -- required       :
+  --
+  -- Behavior      :
+  --
+  ---------------------------------------------------------------------------------------------------
+
+  --</EC-DOC>
+
+  PROCEDURE utctime_update(p_table_name varchar2,
+                           p_timezone   varchar2,
+                           p_tablespace varchar2) is
+
+    cursor c_table_columns is
+      select column_name from user_tab_columns where table_name = p_table_name
+             and column_name not in  ('OBJECT_ID', 'UTC_DAYTIME', 'UTC_END_DATE') order by COLUMN_ID;
+
+    cursor c_indexes is
+      select * from user_indexes a where table_name = p_table_name
+      and not exists(select 1 from user_constraints b where b.CONSTRAINT_NAME = a.INDEX_NAME);
+
+    cursor c_triggers is
+       SELECT TRIGGER_NAME NAME,REPLACE(REPLACE(TRIM(BOTH ' ' FROM TRIM(
+       BOTH CHR(13) FROM TRIM(BOTH CHR(10) FROM REPLACE(DBMS_METADATA.GET_DDL('TRIGGER',TRIGGER_NAME),'"' || USER || '".',''))))
+       ,'ALTER TRIGGER "' || TRIGGER_NAME || '" ENABLE'),'ALTER TRIGGER "' || TRIGGER_NAME || '" DISABLE') TEXT
+       FROM USER_TRIGGERS WHERE taBLE_name = p_table_name ORDER BY TRIGGER_NAME;
+
+    cursor c_fk_cons is
+      select uc1.constraint_name,uc1.table_name,uc2.table_name reference_table,uc2.CONSTRAINT_NAME reference_cons_name
+       from user_constraints uc1, user_constraints uc2 where uc1.table_name = p_table_name
+       and uc1.constraint_type = 'R' and uc2.constraint_name = uc1.r_constraint_name;
+
+     cursor c_child_cons is
+         select uc1.constraint_name,uc1.table_name,uc2.table_name reference_table,uc2.CONSTRAINT_NAME reference_cons_name
+         from user_constraints uc1, user_constraints uc2
+         where uc2.table_name =p_table_name and uc1.constraint_type = 'R'
+         and uc2.constraint_name = uc1.r_constraint_name
+         AND uc1.TABLE_NAME<>uc2.TABLE_NAME;
+
+    cursor c_pk_cons is
+      select * from user_constraints uc1
+      where uc1.table_name = p_table_name
+      and uc1.constraint_type = 'P';
+
+    cursor c_uk_cons is
+      select * from user_constraints uc1
+      where uc1.table_name = p_table_name
+      and uc1.constraint_type = 'U';
+
+    cursor c_check_cons is
+      select * from user_constraints uc1
+       where uc1.table_name = p_table_name
+       and uc1.constraint_type = 'C';
+
+   cursor c_comments is
+       select c.TABLE_NAME, c.COMMENTS from user_tab_comments c where
+       c.TABLE_NAME = p_table_name AND C.COMMENTS is not null;
+
+   cursor c_col_comments is
+       select c.TABLE_NAME, c.COLUMN_NAME, c.COMMENTS from user_col_comments c
+       where c.TABLE_NAME = p_table_name AND C.COMMENTS is not null;
+
+   cursor c_time_zones is
+      select time_zone from objects_version_table o
+      where time_zone <> p_timezone
+      group by time_zone
+      order by time_zone;
+
+   cursor c_default_value is
+       select a.TABLE_NAME,a.COLUMN_NAME,a.DATA_DEFAULT from user_tab_columns a where
+       a.table_name =p_table_name and data_default is not null;
+
+    lv2_columns varchar2(32000);
+    lv2_sql     varchar2(32000);
+    lv3_sql     varchar2(32000);
+
+    TYPE l_tab is table of VARCHAR2(2000);
+    lv2_tz_offset    varchar2(10);
+    ln_originalcount number;
+    ln_newcount      number;
+    l_sql            varchar2(2000);
+    l_col_tab        l_tab;
+    r_col_tab        l_tab;
+    l_child_col_tab  l_tab;
+    r_child_col_tab  l_tab;
+    l_columns        varchar2(4000);
+    r_columns        varchar2(4000);
+    l_child_columns  varchar2(4000);
+    r_child_columns        varchar2(4000);
+
+  begin
+
+    select utctime_sequence.nextval into p_seq_no from dual;
+
+    ecdp_dynsql.WriteTempText(p_table_name,'Fetching Index Definition :: ' || p_table_name);
+
+    FOR i in c_indexes LOOP
+      insert into RESTORE_OBJECT_DEF
+      values
+        (P_INDEXES,
+         p_table_name,
+         i.index_name,
+         dbms_metadata.get_ddl('INDEX', i.index_name));
+      commit;
+    END LOOP;
+
+     ecdp_dynsql.WriteTempText(p_table_name,'Fetching Column Default Value Definition for :: ' || p_table_name);
+
+    FOR i in c_default_value LOOP
+      insert into RESTORE_OBJECT_DEF values
+      (P_DEFAULT_VALUE,p_table_name,null,'alter table ' || i.TABLE_NAME || ' modify ' || i.COLUMN_NAME || ' default ' ||  i.DATA_DEFAULT);
+   END LOOP;
+
+    ecdp_dynsql.WriteTempText(p_table_name,'Fetching Table Comments Definition :: ' || p_table_name);
+
+    FOR i in c_comments LOOP
+      insert into RESTORE_OBJECT_DEF values
+        (P_COMMENT,p_table_name,null,'Comment on Table ' || i.table_name || ' is ''' || i.comments || '''');
+    END LOOP;
+
+    ecdp_dynsql.WriteTempText(p_table_name,'Fetching Table Column Comments Definition :: '
+      ||  p_table_name);
+
+    FOR i in c_col_comments LOOP
+      insert into RESTORE_OBJECT_DEF
+      values
+        (P_COL_COMMENT,p_table_name,i.column_name, 'Comment on Column ' || i.table_name || '.' || i.column_name || ' is ''' || i.comments || '''');
+    END LOOP;
+
+    ecdp_dynsql.WriteTempText(p_table_name, 'Fetching Trigger Definition');
+
+    FOR i in c_triggers LOOP
+      insert into RESTORE_OBJECT_DEF
+      values
+        (P_TRIGGER, p_table_name, i.name, i.text);
+    END LOOP;
+
+    ecdp_dynsql.WriteTempText(p_table_name,
+                              'Fetching Foreign Key constraint :: ' ||
+                              p_table_name);
+
+    FOR i in c_fk_cons LOOP
+      BEGIN
+        select column_name bulk collect into l_col_tab
+          from user_cons_columns ucc where constraint_name = i.constraint_name order by ucc.POSITION;
+
+         select column_name bulk collect into r_col_tab
+          from user_cons_columns ucc where constraint_name = i.reference_cons_name order by ucc.POSITION;
+      EXCEPTION
+        WHEN OTHERS THEN
+       ecdp_dynsql.WriteTempText(p_table_name,'ERROR while fetching foreign key columns for '
+        || p_table_name || ' ' || sqlcode || sqlerrm);
+      END;
+
+      l_columns := '';
+      r_columns := '';
+
+     FOR j in 1 .. l_col_tab.count LOOP
+        l_columns := l_columns || l_col_tab(j);
+        if (j <> l_col_tab.count) then
+          l_columns := l_columns || ',';
+        end if;
+      END LOOP;
+
+       FOR k in 1 .. r_col_tab.count LOOP
+        r_columns := r_columns || r_col_tab(k);
+        if (k <> r_col_tab.count) then
+          r_columns := r_columns || ',';
+        end if;
+      END LOOP;
+
+      l_sql := 'ALTER TABLE ' || i.table_name || ' ADD CONSTRAINT ' ||
+               i.constraint_name || ' FOREIGN KEY (' || l_columns ||
+               ') REFERENCES ' || i.reference_table || '( ' || r_columns || ')';
+
+      insert into RESTORE_OBJECT_DEF
+      values
+        (P_FOREIGN_KEY, p_table_name, i.constraint_name, l_sql);
+    END LOOP;
+
+    ecdp_dynsql.WriteTempText(p_table_name,'Fetching Child Table constraint for  :: ' || p_table_name);
+
+    FOR i in c_child_cons LOOP
+      BEGIN
+        select column_name  bulk collect into l_child_col_tab
+        from user_cons_columns ucc where constraint_name = i.constraint_name order by ucc.POSITION;
+
+        select column_name bulk collect into r_child_col_tab
+        from user_cons_columns ucc where constraint_name = i.reference_cons_name order by ucc.POSITION;
+
+      EXCEPTION
+        WHEN OTHERS THEN
+        ecdp_dynsql.WriteTempText(p_table_name,'ERROR while fetching child foreign key columns for '
+        || p_table_name || sqlcode || sqlerrm);
+      END;
+      l_child_columns := '';
+      r_child_columns := '';
+
+      FOR j in 1 .. l_child_col_tab.count LOOP
+        l_child_columns := l_child_columns || l_child_col_tab(j);
+        if (j <> l_child_col_tab.count) then
+          l_child_columns := l_child_columns || ',';
+        end if;
+      END LOOP;
+
+       FOR h in 1 .. r_child_col_tab.count LOOP
+        r_child_columns := r_child_columns || r_child_col_tab(h);
+        if (h <> r_child_col_tab.count) then
+          r_child_columns := r_child_columns || ',';
+        end if;
+      END LOOP;
+
+      l_sql := 'ALTER TABLE ' || i.table_name || ' ADD CONSTRAINT ' ||
+               i.constraint_name || ' FOREIGN KEY (' || l_child_columns ||
+               ') REFERENCES ' || i.reference_table || '( ' ||
+               r_child_columns || ')';
+
+      insert into RESTORE_OBJECT_DEF
+      values
+        (P_CHILD_FOREIGN_KEY, p_table_name, i.constraint_name, l_sql);
+    END LOOP;
+
+    ecdp_dynsql.WriteTempText(p_table_name,
+                              'Fetching Primary Key constraint :: ' ||
+                              p_table_name);
+    FOR i in c_pk_cons LOOP
+      BEGIN
+        select column_name bulk collect into l_col_tab
+        from user_cons_columns ucc where constraint_name = i.constraint_name ORDER BY UCC.POSITION;
+      EXCEPTION
+        WHEN OTHERS THEN
+           ecdp_dynsql.WriteTempText(p_table_name,'ERROR while fetching primary key columns for '
+        || p_table_name || sqlcode || sqlerrm);
+      END;
+      l_columns := '';
+
+      FOR j in 1 .. l_col_tab.count LOOP
+        l_columns := l_columns || l_col_tab(j);
+        if (j <> l_col_tab.count) then
+          l_columns := l_columns || ',';
+        end if;
+      END LOOP;
+
+      l_sql := 'ALTER TABLE ' || i.table_name || ' ADD CONSTRAINT ' ||
+               i.constraint_name || ' PRIMARY KEY (' || l_columns || ')';
+      insert into RESTORE_OBJECT_DEF
+      values
+        (P_PRIMARY_KEY, p_table_name, i.constraint_name, l_sql);
+
+    END LOOP;
+
+    ecdp_dynsql.WriteTempText(p_table_name,'Fetching Unique Key constraint :: ' || p_table_name);
+
+    FOR i in c_uk_cons LOOP
+      BEGIN
+        select column_name bulk collect into l_col_tab
+        from user_cons_columns ucc  where constraint_name = i.constraint_name ORDER BY UCC.POSITION;
+      EXCEPTION
+        WHEN OTHERS THEN
+            ecdp_dynsql.WriteTempText(p_table_name,'ERROR while fetching unique
+             key columns for ' || p_table_name || sqlcode || sqlerrm);
+      END;
+      l_columns := '';
+
+      FOR j in 1 .. l_col_tab.count LOOP
+        l_columns := l_columns || l_col_tab(j);
+        if (j <> l_col_tab.count) then
+          l_columns := l_columns || ',';
+        end if;
+      END LOOP;
+
+      l_sql := 'ALTER TABLE ' || i.table_name || ' ADD CONSTRAINT ' ||
+               i.constraint_name || ' UNIQUE (' || l_columns || ')';
+      insert into RESTORE_OBJECT_DEF
+      values
+        (P_UNIQUE_KEY, p_table_name, i.constraint_name, l_sql);
+
+    END LOOP;
+
+    ecdp_dynsql.WriteTempText(p_table_name,'Fetching Check constraints :: ' || p_table_name);
+    FOR i in c_check_cons LOOP
+      insert into RESTORE_OBJECT_DEF
+      values
+        (P_CHECK_CONS,
+         p_table_name,
+         i.constraint_name,
+         dbms_metadata.get_ddl('CONSTRAINT', i.constraint_name));
+    END LOOP;
+
+    commit;
+
+    -- Assuming that the majority of the objects initially will have the given time_zone (system default) the strategy is
+    -- to populate the table with UTC based on that time zone, and ignoring the summertime flag
+    -- will fix these rows afterwards together with objects belonging to other time zones
+    -- Measurements indicates that is it is faster to have simple functions in the create table select that is correct for most of the rows,
+    -- rather than checking each row for special handeling.
+
+    --  lv2_columns := 'OBJECT_ID, CAST(FROM_TZ(CAST(daytime AS localtimestamp), '''||p_timezone||''') AT TIME ZONE ''UTC'' AS DATE) as UTC_DAYTIME ';
+    --  Using function call here to handle if the daytime localtimestamp is not valid for the default time zone, this can happen on spring daylight saving
+    --  if there are some objects belonging to another time zone, or there are ERRORs in the data.
+    begin
+
+       select count(1) into v_utc_end_date from user_tab_columns y where y.TABLE_NAME=p_table_name
+       and y.COLUMN_NAME='UTC_END_DATE';
+
+       select count(1) into v_summer_time from user_tab_columns y where y.TABLE_NAME=p_table_name
+       and y.COLUMN_NAME='SUMMER_TIME';
+
+       select count(1) into v_end_summer_time from user_tab_columns y where y.TABLE_NAME=p_table_name
+       and y.COLUMN_NAME='END_SUMMER_TIME';
+
+      lv2_columns := 'OBJECT_ID, EcDp_localTimestamp.local2utc(daytime,''' ||
+                     p_timezone || ''') as UTC_DAYTIME ';
+
+      If v_utc_end_date <> 0 then
+        lv2_columns := lv2_columns || ',EcDp_localTimestamp.local2utc(end_date,''' ||
+                       p_timezone || ''') as UTC_END_DATE';
+
+      end if;
+
+    end;
+
+    FOR curCol in c_table_columns LOOP
+
+      lv2_columns := lv2_columns || ', ' || curCol.column_name;
+
+    END LOOP;
+
+    -- It will still work if the table is empty, to complext to differensiate if the rowcount is small
+    -- Assuming that the majority of rows will be in the default time zone, don't try to filter here copy all rows and the update for the exceptions
+    -- Have tried the other approach and even with a nologging approach it is much slower
+    lv2_sql := 'CREATE TABLE TEMP_TAB_' || p_seq_no || ' tablespace ' ||  p_tablespace || ' NOLOGGING AS
+                SELECT ' || lv2_columns || ' FROM ' || p_table_name || ' t ';
+
+    begin
+      ecdp_dynsql.WriteTempText(p_table_name,'Creating Temperory table for :: ' || p_table_name);
+      EXECUTE IMMEDIATE lv2_sql;
+    exception
+      when others then
+        ecdp_dynsql.WriteTempText(p_table_name,'ERROR while Creating Temperory table for :: ' || p_table_name || sqlcode || sqlerrm);
+    end;
+    
+
+    -- Update UTC_DAYTIME and UTC_END_DATE for the objects linked with another time zone
+    FOR curTZ in c_time_zones LOOP
+
+      -- Update UTC_DAYTIME by default for other timezone
+      lv2_sql := 'UPDATE TEMP_TAB_' || p_seq_no ||
+                 '  t set UTC_DAYTIME = ecdp_localtimestamp.local2utc(daytime,''' ||
+                 curTZ.time_zone || ''') ';
+      lv2_sql := lv2_sql ||
+                 ' WHERE exists (select 1 from objects_version_table o ';
+      lv2_sql := lv2_sql ||
+                 ' where o.object_id  = t.object_id and t.daytime >= o.daytime and t.daytime < nvl(o.end_date,t.daytime+1) and o.time_zone = ''' ||
+                 curTZ.time_zone || ''')';
+
+      begin
+        ecdp_dynsql.WriteTempText(p_table_name,'Updating UTC daytime for other timezone :: ' || lv2_sql);
+        EXECUTE IMMEDIATE lv2_sql;
+      exception
+        when others then
+          ecdp_dynsql.WriteTempText(p_table_name,'ERROR while Updating UTC daytime for other timezone :: ' || lv2_sql || sqlcode || sqlerrm);
+      end;
+
+      -- Update UTC_END_DATE by default for other timezone
+      IF v_utc_end_date <> 0 then
+
+        lv3_sql := 'UPDATE TEMP_TAB_' || p_seq_no ||
+                   '  t set UTC_END_DATE = ecdp_localtimestamp.local2utc(END_DATE,''' || curTZ.time_zone || ''') ';
+        lv3_sql := lv3_sql ||
+                   ' WHERE exists (select 1 from objects_version_table o ';
+        lv3_sql := lv3_sql ||
+                   ' where o.object_id  = t.object_id and t.daytime >= o.daytime and t.daytime < nvl(o.end_date,t.daytime+1) and o.time_zone = ''' ||
+                   curTZ.time_zone || ''')';
+        begin
+          ecdp_dynsql.WriteTempText(p_table_name,'Updating UTC end date for other timezone :: ' || lv3_sql);
+          EXECUTE IMMEDIATE lv3_sql;
+        exception
+          when others then
+            ecdp_dynsql.WriteTempText(p_table_name,
+                                      'ERROR while Updating UTC end date for other timezone :: ' ||
+                                      lv3_sql || sqlcode || sqlerrm);
+        end;
+      END IF;
+    END LOOP;
+    
+    -- Handling the overlapping hour in authum when daylight saving is turned off, and we get duplicate records,
+    -- Ignoring for now that there are some odd time zones where the offset is changing with other than 1 hour
+    -- the default handeling over will do it correct for the winter time records, but we need to correct the summer_time = 'Y'
+    -- The twist here is that it west of UTC time zone we need to add one hour going from local to utc    
+    lv2_tz_offset := '-1/24';
+      
+    -- Need to correct the overlapping hour of UTC_DAYTIME column for all timezones
+    IF v_summer_time <> 0 then
+       lv2_sql := 'UPDATE  TEMP_TAB_' || p_seq_no ||
+           ' t set UTC_DAYTIME = UTC_DAYTIME ' || lv2_tz_offset;
+            lv2_sql := lv2_sql ||
+           ' WHERE ( summer_time = ''Y'' and exists (select 1 from TEMP_TAB_' ||
+           p_seq_no ||
+           '  t2 where t2.object_id = t.object_id and t2.daytime = t.daytime and t2.summer_time = ''N''))';
+      begin       
+        ecdp_dynsql.WriteTempText(p_table_name,
+                    'Updating UTC daytime for overlapping hours :: ' ||
+                    lv2_sql);
+        EXECUTE IMMEDIATE lv2_sql;
+      exception
+      when others then
+        ecdp_dynsql.WriteTempText(p_table_name,
+                    'ERROR while Updating daytime for overlapping hours :: ' ||
+                    lv2_sql || sqlcode || sqlerrm);
+      end;
+    end if;
+
+
+    --  Need to correct the overlapping hour of UTC_END_DATE column for all timezone
+    IF v_utc_end_date <> 0 and v_end_summer_time <> 0 then
+
+      lv3_sql := 'UPDATE  TEMP_TAB_' || p_seq_no ||
+           ' t set UTC_END_DATE = UTC_END_DATE ' || lv2_tz_offset;
+      lv3_sql := lv3_sql ||
+           ' WHERE ( end_summer_time = ''Y'' and exists (select 1 from TEMP_TAB_' ||
+           p_seq_no ||
+           '  t2 where t2.object_id = t.object_id and t2.end_date = t.end_date and t2.end_summer_time = ''N''))';
+
+      begin
+          ecdp_dynsql.WriteTempText(p_table_name,
+                        'Updating UTC_END_DATE for overlapping hours :: ' ||
+                        lv3_sql);
+          EXECUTE IMMEDIATE lv3_sql;
+      exception
+          when others then
+            ecdp_dynsql.WriteTempText(p_table_name,
+                        'ERROR while Updating UTC_END_DATE for overlapping hours :: ' ||
+                        lv3_sql || sqlcode || sqlerrm);
+      end;
+    END IF;
+
+    Commit;
+
+    -- Need to add drop and rename table
+    -- But first check that we got all rows over, and that we have unique utc_daytime for all rows.
+    ln_originalcount := ecdp_dynsql.EXECUTE_SINGLEROW_VARCHAR2('select count(*) from ' ||
+                                                               p_table_name);
+    ln_newcount      := ecdp_dynsql.EXECUTE_SINGLEROW_VARCHAR2('select count(*) from TEMP_TAB_' ||
+                                                               p_seq_no ||
+                                                               '  where UTC_DAYTIME is not null');
+
+    -- Not using this because it is slow (15 sec+ )
+    -- select count(*) from (select distinct object_id, utc_daytime from TEMP_TAB_' || p_seq_no || ' );
+
+    IF ln_newcount < ln_originalcount THEN
+
+      Raise_Application_Error(-20000,
+                              'Not all rows migrated for ' || p_table_name ||
+                              '. compare with TEMP_TAB_' || p_seq_no ||
+                              '  to look for missing values or duplicates in UTC_DAYTIME.');
+
+    ELSE
+
+      lv2_sql := 'DROP table ' || p_table_name ||
+                 ' cascade constraints purge ';
+      ecdp_dynsql.WriteTempText(p_table_name,
+                                'Dropping orignal table :: ' ||
+                                p_table_name);
+      EXECUTE IMMEDIATE lv2_sql;
+
+      lv2_sql := 'RENAME TEMP_TAB_' || p_seq_no || '  TO ' || p_table_name;
+      ecdp_dynsql.WriteTempText(p_table_name,
+                                'Renaming temp table  to orignal name :: ' ||
+                                p_table_name);
+      EXECUTE IMMEDIATE lv2_sql;
+
+      ecdp_dynsql.WriteTempText(p_table_name,
+                                'Restoring all Primary key, FK, Unique triggers, etc :: ' ||
+                                p_table_name);
+
+      restore_objects(p_table_name, P_DEFAULT_VALUE);
+      restore_objects(p_table_name, P_PRIMARY_KEY);
+      restore_objects(p_table_name, P_FOREIGN_KEY);
+      restore_objects(p_table_name, P_CHILD_FOREIGN_KEY);
+      restore_objects(p_table_name, P_UNIQUE_KEY);
+      restore_objects(p_table_name, P_CHECK_CONS);
+      restore_objects(p_table_name, P_INDEXES);
+      restore_objects(p_table_name, P_TRIGGER);
+      restore_objects(p_table_name, P_COMMENT);
+      restore_objects(p_table_name, P_COL_COMMENT);
+
+      ecdp_dynsql.WriteTempText(p_table_name,'Deleting records from RESTORE_OBJECT_DEF for input table :: ' || p_table_name);
+
+     delete from RESTORE_OBJECT_DEF y where y.table_name = p_table_name;
+     commit;
+
+    END IF;
+
+    ecdp_dynsql.WriteTempText(p_table_name,'Finished populating UTC daytime and UTC end date for :: ' || p_table_name);
+
+  EXCEPTION
+    when others then
+      ecdp_dynsql.WriteTempText(p_table_name,'ERROR while processing UTC daytime
+                                 for table ' || substr(sqlerrm, 1, 3000));
+      RAISE;
+
+  end utctime_update;
+
+END;
+--~^UTDELIM^~--
+
+declare
+l_var number;
+v_count number;
+
+begin
+    dbms_job.submit(l_var,'populate_utc_timezone.executeJob(1);');
+    
+    dbms_job.submit(l_var,'populate_utc_timezone.executeJob(2);');
+    
+    dbms_job.submit(l_var,'populate_utc_timezone.executeJob(3);');
+    
+    dbms_job.submit(l_var,'populate_utc_timezone.executeJob(4);');
+    
+    dbms_job.submit(l_var,'populate_utc_timezone.executeJob(5);');
+    
+	commit; 
+    
+	<<default_number>>
+	select count(1) into v_count from user_jobs where WHAT like 'populate_utc_timezone.executeJob(%';
+
+	 if v_count<> 0 then 
+	  dbms_lock.sleep(seconds => 30);
+	  GOTO default_number;
+	 end if; 
+end;
+--~^UTDELIM^~--
+
+declare
+begin
+   
+ execute immediate ' alter table strm_Well_Conn disable all triggers';
+	
+	UPDATE strm_well_conn t set UTC_DAYTIME = UTC_DAYTIME-1/24 WHERE ( SUMMERTIME_DAYTIME = 'Y' and 
+	exists (select 1 from strm_well_conn  t2 where t2.object_id = t.object_id and t2.daytime = t.daytime and t2.SUMMERTIME_DAYTIME = 'N'));
+    
+	UPDATE strm_well_conn t set UTC_END_DATE = UTC_END_DATE-1/24 WHERE ( SUMMERTIME_END_DATE = 'Y' and exists (select 1 from strm_well_conn
+	t2 where t2.object_id = t.object_id and t2.end_date = t.end_date and t2.SUMMERTIME_END_DATE = 'N'));
+  
+	UPDATE strm_well_conn_jn t set UTC_DAYTIME = UTC_DAYTIME-1/24 WHERE ( SUMMERTIME_DAYTIME = 'Y' and 
+	exists (select 1 from strm_well_conn_jn  t2 where t2.object_id = t.object_id and t2.daytime = t.daytime and t2.SUMMERTIME_DAYTIME = 'N'));
+    
+	UPDATE strm_well_conn_jn t set UTC_END_DATE = UTC_END_DATE-1/24 WHERE ( SUMMERTIME_END_DATE = 'Y' and exists (select 1 from strm_well_conn_jn
+	t2 where t2.object_id = t.object_id and t2.end_date = t.end_date and t2.SUMMERTIME_END_DATE = 'N'));
+   
+	commit;
+  
+  execute immediate 'alter table strm_Well_Conn enable all triggers';
+     
+end ;
+--~^UTDELIM^~-- 
+ 
+begin
+execute immediate 'drop table RESTORE_OBJECT_DEF';
+end ;
+--~^UTDELIM^~--  
+
+begin
+execute immediate 'drop table UTC_TIMEZONE_MASTER';
+end ;
+--~^UTDELIM^~--  
+
+begin
+execute immediate 'drop  sequence utctime_sequence';
+end ;
+--~^UTDELIM^~-- 
+ 
+begin
+execute immediate 'drop package ecdp_localtimestamp';
+end ;
+--~^UTDELIM^~--  
+
+begin
+execute immediate 'drop package populate_utc_timezone';
+end ;
 --~^UTDELIM^~--

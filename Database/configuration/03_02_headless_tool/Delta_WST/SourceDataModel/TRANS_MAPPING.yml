@@ -365,6 +365,7 @@ cnstUniqueKeys:
   UK_TRANS_MAPPING_1:
     columns:
     - TAG_ID
+    - SOURCE_ID
     name: UK_TRANS_MAPPING_1
     type: UNIQUEKEY
     status: UNDEFINED

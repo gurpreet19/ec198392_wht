@@ -305,6 +305,9 @@ findGasMassDay,findWaterMassDay,findCondMassDay to modify all the curve methods 
 **      21.11.2017 dhavaalo ECPD-45043: Remove reference of PD.0006.
 **      01.03.2018 singishi ECPD-51137: Removed all the references for PD.0001.02 and PD.0002.02
 **      13.03.2018 abdulmaw ECPD-52711: Added support for EcBp_HCM_VFM
+**      01.10.2018 abdulmaw ECPD-50441: Added support for VFM and VFM_NET
+**      22.10.2018 solibhar ECPD-49510: Added support for MPM2 and MPM2_NET in getOilStdRateDay,getGasStdRateDay,getWatStdRateDay,getCondStdRateDay and in getOilStdVolSubDay,getGasStdVolSubDay,getWatStdVolSubDay,getCondStdVolSubDay
+**      23.10.2018 kaushaak ECPD-51659: Modified findGasStdDensity
 *****************************************************************/
 
 
@@ -1089,6 +1092,12 @@ lv2_calc_method := Nvl(p_calc_method, lr_well_version.calc_method);
       ln_ret_val := lr_pwel_day_status.avg_mpm_oil_rate - Nvl(ln_diluent_rate,0);    --Subtract diluent contribution if present
   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM_NET) THEN
       ln_ret_val := lr_pwel_day_status.avg_mpm_oil_rate;    --Return MPM reading without subtracting diluent
+  ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2) THEN
+    ln_diluent_rate := getDiluentStdRateDay(p_object_id, p_daytime, lr_well_version.diluent_method);
+      ln_ret_val := lr_pwel_day_status.avg_mpm2_oil_rate - Nvl(ln_diluent_rate,0);    --Subtract diluent contribution if present
+
+  ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2_NET) THEN
+      ln_ret_val := lr_pwel_day_status.avg_mpm2_oil_rate;    --Return MPM2 reading without subtracting diluent
 
 -- ECPD-29803 Logic for consecutive well test
 
@@ -1116,6 +1125,15 @@ lv2_calc_method := Nvl(p_calc_method, lr_well_version.calc_method);
   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_PRIORITIZED) THEN
 
     ln_ret_val := EcBp_HCM_VFM.getOilStdRateDay(p_object_id, p_daytime);
+
+  ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM) THEN
+
+    ln_diluent_rate := getDiluentStdRateDay(p_object_id, p_daytime, lr_well_version.diluent_method);
+    ln_ret_val := lr_pwel_day_status.avg_vfm_oil_rate - Nvl(ln_diluent_rate,0);
+
+  ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+
+    ln_ret_val := lr_pwel_day_status.avg_vfm_oil_rate;
 
   END IF;
 
@@ -1852,6 +1870,13 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM_NET) THEN
        ln_ret_val       := lr_pwel_day_status.avg_mpm_gas_rate; --Return MPM reading without subtracting gas lift
 
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2) THEN
+     ln_gas_lift_rate := getGasLiftStdRateDay(p_object_id, p_daytime, lr_well_version.gas_lift_method);
+       ln_ret_val       := lr_pwel_day_status.avg_mpm2_gas_rate - Nvl(ln_gas_lift_rate,0);    --Subtract gas lift contribution if present
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2_NET) THEN
+       ln_ret_val       := lr_pwel_day_status.avg_mpm2_gas_rate; --Return MPM reading without subtracting gas lift
+
+
    ELSIF ( lv2_calc_method = EcDp_Calc_Method.CONSEC_WELL_TEST ) THEN
     ln_result_no := EcDp_Performance_Test.getLastValidWellResultNo(p_object_id, p_daytime);
     ln_count_day := 1;
@@ -1875,6 +1900,15 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_PRIORITIZED) THEN
 
      ln_ret_val := EcBp_HCM_VFM.getGasStdRateDay(p_object_id, p_daytime);
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM) THEN
+
+     ln_gas_lift_rate := getGasLiftStdRateDay(p_object_id, p_daytime, lr_well_version.gas_lift_method);
+     ln_ret_val := lr_pwel_day_status.avg_vfm_gas_rate - Nvl(ln_gas_lift_rate,0);
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+
+     ln_ret_val := lr_pwel_day_status.avg_vfm_gas_rate;
 
    ELSE  -- unknown method
       ln_ret_val := NULL;
@@ -2572,6 +2606,11 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM_NET) THEN
        ln_ret_val := lr_pwel_day_status.avg_mpm_water_rate; --Measured MPM reading without subtract powerwater if present
 
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2) THEN
+       ln_ret_val := lr_pwel_day_status.avg_mpm2_water_rate - NVL(lr_pwel_day_status.avg_powerwater_rate,0); --Subtract powerwater if present
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2_NET) THEN
+       ln_ret_val := lr_pwel_day_status.avg_mpm2_water_rate; --Measured MPM2 reading without subtract powerwater if present
+
    ELSIF (lv2_calc_method = EcDp_Calc_Method.CONSEC_WELL_TEST)  THEN
     ln_result_no := EcDp_Performance_Test.getLastValidWellResultNo(p_object_id, p_daytime);
     ln_count_day := 1;
@@ -2595,6 +2634,14 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_PRIORITIZED) THEN
 
      ln_ret_val := EcBp_HCM_VFM.getWatStdRateDay(p_object_id, p_daytime);
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM) THEN
+
+     ln_ret_val := lr_pwel_day_status.avg_vfm_water_rate - NVL(lr_pwel_day_status.avg_powerwater_rate,0);
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+
+     ln_ret_val := lr_pwel_day_status.avg_vfm_water_rate;
 
    ELSE -- undefined
       ln_ret_val :=  NULL;
@@ -3264,29 +3311,38 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM_NET) THEN
      ln_ret_val  := lr_pwel_day_status.avg_mpm_cond_rate;
 
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2) THEN
+     ln_ret_val  := lr_pwel_day_status.avg_mpm2_cond_rate;
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2_NET) THEN
+     ln_ret_val  := lr_pwel_day_status.avg_mpm2_cond_rate;
+
    ELSIF (lv2_calc_method = EcDp_Calc_Method.CONSEC_WELL_TEST) THEN
-		ln_result_no := EcDp_Performance_Test.getLastValidWellResultNo(p_object_id, p_daytime);
-		ln_count_day := 1;
+     ln_result_no := EcDp_Performance_Test.getLastValidWellResultNo(p_object_id, p_daytime);
+     ln_count_day := 1;
 
-		SELECT NVL(NET_COND_RATE_ADJ, 0), NVL(DURATION, 0) INTO ln_volume, ln_duration
-		FROM PWEL_RESULT
-		WHERE RESULT_NO = ln_result_no;
+     SELECT NVL(NET_COND_RATE_ADJ, 0), NVL(DURATION, 0) INTO ln_volume, ln_duration
+     FROM PWEL_RESULT
+     WHERE RESULT_NO = ln_result_no;
 
-		FOR cur_well_test in c_prev_well_test(p_object_id, ln_result_no) LOOP
-		  IF TRUNC(cur_well_test.valid_from_date) = TRUNC(ec_pwel_result.valid_from_date(p_object_id, ln_result_no) - ln_count_day) THEN
-			ln_count_day := ln_count_day + 1;
-			ln_volume := ln_volume + cur_well_test.net_cond_rate_adj;
-			ln_duration := ln_duration + cur_well_test.duration;
-		  ELSE
-			EXIT;
-		  END IF;
-		END LOOP;
+     FOR cur_well_test in c_prev_well_test(p_object_id, ln_result_no) LOOP
+        IF TRUNC(cur_well_test.valid_from_date) = TRUNC(ec_pwel_result.valid_from_date(p_object_id, ln_result_no) - ln_count_day) THEN
+            ln_count_day := ln_count_day + 1;
+            ln_volume := ln_volume + cur_well_test.net_cond_rate_adj;
+            ln_duration := ln_duration + cur_well_test.duration;
+        ELSE
+            EXIT;
+        END IF;
+     END LOOP;
 
-		ln_ret_val := (ln_volume/ln_duration) * NVL(ec_pwel_day_status.on_stream_hrs(p_object_id, p_daytime, '<='), EcDp_Well.getPwelOnStreamHrs(p_object_id, p_daytime));
+     ln_ret_val := (ln_volume/ln_duration) * NVL(ec_pwel_day_status.on_stream_hrs(p_object_id, p_daytime, '<='), EcDp_Well.getPwelOnStreamHrs(p_object_id, p_daytime));
 
    ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_PRIORITIZED) THEN
 
      ln_ret_val := EcBp_HCM_VFM.getCondStdRateDay(p_object_id, p_daytime);
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+
+     ln_ret_val := lr_pwel_day_status.avg_vfm_cond_rate;
 
    ELSE
         ln_ret_val := NULL;
@@ -4361,9 +4417,9 @@ IS
 
    lv2_calc_method  VARCHAR2(32);
    ln_ret_val       NUMBER;
+   lv2_ref_strm_id  VARCHAR2(32);
    lr_analysis      object_fluid_analysis%ROWTYPE;
    ln_air_dens      NUMBER;
-
 
 BEGIN
 
@@ -4383,9 +4439,12 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.WELL_REFERENCE) THEN
       ln_ret_val := ecdp_well_ref_values.getAttribute(p_object_id,'GAS_DENSITY',p_daytime);
 
-   ELSIF (substr(lv2_calc_method,1,9) = EcDp_Calc_Method.USER_EXIT) THEN      ln_ret_val := Ue_Well_Theoretical.findGasStdDensity(
-               p_object_id,
-               p_daytime);
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.ANALYSIS_QUALITY_STRM) THEN  --estimates the density from quality stream compositional analysis
+      lv2_ref_strm_id := ec_well_version.fluid_quality(p_object_id, p_daytime,'<=');
+      ln_ret_val := ecbp_comp_analysis.calcTheorDens(lv2_ref_strm_id, p_daytime);
+
+   ELSIF (substr(lv2_calc_method,1,9) = EcDp_Calc_Method.USER_EXIT) THEN
+      ln_ret_val := Ue_Well_Theoretical.findGasStdDensity(p_object_id, p_daytime);
 
    ELSE  -- undefined
       ln_ret_val := NULL;
@@ -4584,7 +4643,7 @@ BEGIN
       END IF;
 
    ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM_NET) THEN
-	    ln_ret_val := ec_pwel_day_status.avg_mpm_oil_mass_rate(p_object_id,p_daytime,'=');
+      ln_ret_val := ec_pwel_day_status.avg_mpm_oil_mass_rate(p_object_id,p_daytime,'=');
 
 
    ELSIF (substr(lv2_calc_method,1,9) = EcDp_Calc_Method.USER_EXIT) THEN
@@ -4595,6 +4654,10 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_PRIORITIZED) THEN
 
       ln_ret_val := EcBp_HCM_VFM.findOilMassDay(p_object_id, p_daytime);
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+
+      ln_ret_val := ec_pwel_day_status.avg_vfm_oil_mass_rate(p_object_id,p_daytime,'=');
 
    ELSE  -- undefined
          ln_ret_val := NULL;
@@ -4753,6 +4816,10 @@ BEGIN
 
       ln_ret_val := EcBp_HCM_VFM.findGasMassDay(p_object_id, p_daytime);
 
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+
+      ln_ret_val := ec_pwel_day_status.avg_vfm_gas_mass_rate(p_object_id,p_daytime,'=');
+
    ELSE  -- undefined
          ln_ret_val := NULL;
 
@@ -4910,6 +4977,10 @@ BEGIN
 
       ln_ret_val := EcBp_HCM_VFM.findWaterMassDay(p_object_id, p_daytime);
 
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+
+      ln_ret_val := ec_pwel_day_status.avg_vfm_wat_mass_rate(p_object_id,p_daytime,'=');
+
    ELSE  -- undefined
          ln_ret_val := NULL;
 
@@ -5066,6 +5137,10 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_PRIORITIZED) THEN
 
       ln_ret_val := EcBp_HCM_VFM.findCondMassDay(p_object_id, p_daytime);
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+
+      ln_ret_val := ec_pwel_day_status.avg_vfm_cond_mass_rate(p_object_id,p_daytime,'=');
 
    ELSE  -- undefined
          ln_ret_val := NULL;
@@ -5293,6 +5368,34 @@ BEGIN
       ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
       ln_ret_val       := lr_sub_day_rec.avg_mpm_oil_rate * ln_on_strm_ratio; --Returns MPM value without subtraction of artificial lifts
 
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      lr_sub_day_rec := ec_pwel_sub_day_status.row_by_pk(p_object_id, p_daytime);
+      ln_ret_val := lr_sub_day_rec.avg_mpm2_oil_rate;
+      ln_diluent_vol := getDiluentStdVolSubDay(p_object_id, p_daytime,ec_well_version.diluent_sub_day_method(p_object_id,
+                                                p_daytime,
+                                                '<='));
+      ln_ret_val := ln_ret_val * ln_on_strm_ratio;	  -- calculate mpm2 day rate to a mpm2 sub daily volume
+      ln_ret_val := ln_ret_val - Nvl(ln_diluent_vol,0); --Subtract diluent contribution if present
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2_NET) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      ln_ret_val       := lr_sub_day_rec.avg_mpm2_oil_rate * ln_on_strm_ratio; --Returns MPM2 value without subtraction of artificial lifts
+
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      ln_ret_val       := lr_sub_day_rec.avg_vfm_oil_rate;
+      ln_diluent_vol   := getDiluentStdVolSubDay(p_object_id, p_daytime,ec_well_version.diluent_sub_day_method(p_object_id,
+                                                p_daytime,
+                                                '<='));
+      ln_ret_val       := ln_ret_val * ln_on_strm_ratio;	  -- calculate vfm day rate to a vfm sub daily volume
+      ln_ret_val       := ln_ret_val - Nvl(ln_diluent_vol,0); --Subtract diluent contribution if present
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      ln_ret_val       := lr_sub_day_rec.avg_vfm_oil_rate * ln_on_strm_ratio;
+
    ELSE-- if GP2, get the oil from condensate
       IF (lv2_well_type = Ecdp_Well_Type.GAS_PRODUCER_2) THEN
          ln_ret_val := getCondStdVolSubDay(p_object_id, p_daytime,NULL);
@@ -5476,6 +5579,33 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM_NET) THEN
       ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
 	  ln_ret_val       := lr_sub_day_rec.avg_mpm_gas_rate * ln_on_strm_ratio; --Returns MPM value without subtraction of artificial lifts
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2) THEN
+     ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+     lr_sub_day_rec   := ec_pwel_sub_day_status.row_by_pk(p_object_id, p_daytime);
+     ln_ret_val       := lr_sub_day_rec.avg_mpm2_gas_rate;
+     ln_gas_lift_rate := getGasLiftStdVolSubDay(p_object_id, p_daytime, ec_well_version.gas_lift_sub_day_method(p_object_id,
+                                                p_daytime,
+                                                '<='));
+     ln_ret_val       := ln_ret_val * ln_on_strm_ratio;	  -- calculate mpm2 day rate to a mpm2 sub daily volume
+     ln_ret_val       := ln_ret_val - Nvl(ln_gas_lift_rate,0);    --Subtract gas lift contribution if present
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2_NET) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+	  ln_ret_val       := lr_sub_day_rec.avg_mpm2_gas_rate * ln_on_strm_ratio; --Returns MPM2 value without subtraction of artificial lifts
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      ln_ret_val       := lr_sub_day_rec.avg_vfm_gas_rate;
+      ln_gas_lift_rate := getGasLiftStdVolSubDay(p_object_id, p_daytime, ec_well_version.gas_lift_sub_day_method(p_object_id,
+                                                p_daytime,
+                                                '<='));
+      ln_ret_val       := ln_ret_val * ln_on_strm_ratio;	  -- calculate vfm day rate to a vfm sub daily volume
+      ln_ret_val       := ln_ret_val - Nvl(ln_gas_lift_rate,0); --Subtract gas lift contribution if present
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      ln_ret_val       := lr_sub_day_rec.avg_vfm_gas_rate * ln_on_strm_ratio;
 
    ELSE  -- Undefined
       ln_ret_val := NULL;
@@ -5674,6 +5804,16 @@ BEGIN
       ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
 	  ln_ret_val       := lr_sub_day_rec.avg_mpm_water_rate * ln_on_strm_ratio; --Returns MPM value without subtraction of artificial lifts
 
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2) THEN
+     ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+     lr_sub_day_rec := ec_pwel_sub_day_status.row_by_pk(p_object_id, p_daytime);
+     ln_ret_val     := lr_sub_day_rec.avg_mpm2_water_rate - NVL(lr_sub_day_rec.avg_powerwater_rate,0); --Subtract powerwater if present
+     ln_ret_val     := ln_ret_val * ln_on_strm_ratio;	  -- calculate mpm2 day rate to a mpm2 sub daily volume
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2_NET) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+	  ln_ret_val       := lr_sub_day_rec.avg_mpm2_water_rate * ln_on_strm_ratio; --Returns MPM2 value without subtraction of artificial lifts
+
   ELSIF (lv2_calc_method = EcDp_Calc_Method.GAS_WGR) THEN
      ln_gas_rate := getGasStdVolSubDay(p_object_id, p_daytime, lr_well_version.calc_gas_method);
       IF ln_gas_rate > 0 THEN   -- Only worth getting WGR if Gas is > 0
@@ -5683,6 +5823,16 @@ BEGIN
       ELSE
          ln_ret_val := NULL;
       END IF;
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      ln_ret_val       := lr_sub_day_rec.avg_vfm_water_rate - NVL(lr_sub_day_rec.avg_powerwater_rate,0); --Subtract powerwater if present
+      ln_ret_val       := ln_ret_val * ln_on_strm_ratio;	  -- calculate vfm day rate to a vfm sub daily volume
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      ln_ret_val       := lr_sub_day_rec.avg_vfm_water_rate * ln_on_strm_ratio;
+
    ELSE  -- undefined
       ln_ret_val := NULL;
 
@@ -5891,6 +6041,19 @@ BEGIN
    ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM_NET) THEN
      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
      ln_ret_val       := lr_sub_day_rec.avg_mpm_cond_rate * ln_on_strm_ratio; --Returns MPM value without subtraction of artificial lifts
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2) THEN
+     ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+     lr_sub_day_rec := ec_pwel_sub_day_status.row_by_pk(p_object_id, p_daytime);
+     ln_ret_val  := lr_sub_day_rec.avg_mpm2_cond_rate;
+     ln_ret_val       := ln_ret_val * ln_on_strm_ratio;	  -- calculate mpm2 day rate to a mpm2 sub daily volume
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.MPM2_NET) THEN
+     ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+     ln_ret_val       := lr_sub_day_rec.avg_mpm2_cond_rate * ln_on_strm_ratio; --Returns MPM2 value without subtraction of artificial lifts
+
+   ELSIF (lv2_calc_method = EcDp_Calc_Method.VFM_NET) THEN
+      ln_on_strm_ratio := lr_sub_day_rec.on_stream_hrs / 24;
+      ln_ret_val       := lr_sub_day_rec.avg_vfm_cond_rate * ln_on_strm_ratio;
 
    ELSE  -- undefined
       ln_ret_val := NULL;

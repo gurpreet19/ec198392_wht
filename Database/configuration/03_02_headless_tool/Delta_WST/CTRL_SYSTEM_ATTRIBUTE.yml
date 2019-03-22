@@ -70,6 +70,16 @@ ATTRIBUTE_TYPE=ALLOW_BATCH_OPTION DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.
   properties: {}
   related: {}
   status: ADDED
+ATTRIBUTE_TYPE=ALLOW_SALE_CALC_LOCK_MTH DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1112660857'
+  keys:
+    ATTRIBUTE_TYPE: ALLOW_SALE_CALC_LOCK_MTH
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ATTRIBUTE_TYPE=ALLOW_WT_MULTISELECT DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '2124892749'
   keys:
@@ -190,6 +200,16 @@ ATTRIBUTE_TYPE=CASCADE_LOG_LEVEL DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.e
   properties: {}
   related: {}
   status: ADDED
+ATTRIBUTE_TYPE=CASCADE_LOG_LOCATION DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '823891135'
+  keys:
+    ATTRIBUTE_TYPE: CASCADE_LOG_LOCATION
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ATTRIBUTE_TYPE=CASCADE_SI_CHANGE DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-294074286'
   keys:
@@ -271,7 +291,7 @@ ATTRIBUTE_TYPE=DEFERMENT_VERSION DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.e
   parentKeys: {}
   properties:
     ATTRIBUTE_TEXT: PD.0020
-    COMMENTS: Choose between PD.0001 / PD.0004 / PD.0020
+    COMMENTS: Choose between PD.0004 / PD.0020
   related: {}
   status: MODIFIED
 ATTRIBUTE_TYPE=DEF_USE_STREAM_ITEMS_IND DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -504,6 +524,16 @@ ATTRIBUTE_TYPE=JOUR_EXT_PROC_LOG_LEVEL DAYTIME=01-01-1900 12:01:00: !!com.ec.upg
   properties: {}
   related: {}
   status: ADDED
+ATTRIBUTE_TYPE=MAX_SHORT_DAYS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '818653113'
+  keys:
+    ATTRIBUTE_TYPE: MAX_SHORT_DAYS
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
 ATTRIBUTE_TYPE=MOVE_TO_LONG_TERM DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1989907773'
   keys:
@@ -524,6 +554,16 @@ ATTRIBUTE_TYPE=ORIG_COUNTRY_AT_TRANS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgra
   properties: {}
   related: {}
   status: ADDED
+ATTRIBUTE_TYPE=PD.0001/2_HIDE_REPORT DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1541540468'
+  keys:
+    ATTRIBUTE_TYPE: PD.0001/2_HIDE_REPORT
+    DAYTIME: 1900-01-01T00:00:00Z
+    T: CTRL_SYSTEM_ATTRIBUTE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: DELETED
 ATTRIBUTE_TYPE=PROCESS_ONLY_OPEN_DOCS DAYTIME=01-01-1900 12:01:00: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1452627377'
   keys:

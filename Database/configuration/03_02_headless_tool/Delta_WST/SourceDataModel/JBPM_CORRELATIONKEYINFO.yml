@@ -3,7 +3,7 @@ name: JBPM_CORRELATIONKEYINFO
 cnstPrimaryKey:
   columns:
   - KEYID
-  name: SYS_C008640
+  name: PK_JBPM_CORRELATIONKEYINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

@@ -55,7 +55,6 @@ TYPE t_ctrl_gen_function_rows IS TABLE OF c_ctrl_gen_functions%ROWTYPE;
 
 TYPE t_alias_map IS TABLE OF VARCHAR2(30) INDEX BY VARCHAR2(30);
 TYPE Varchar_30_M IS TABLE OF VARCHAR(30) INDEX BY VARCHAR2(30);
-TYPE t_flush_tables IS TABLE OF VARCHAR2(30);
 
 TYPE r_table_data IS RECORD (
    table_name VARCHAR2(30),
@@ -69,8 +68,7 @@ TYPE r_table_data IS RECORD (
    alias      t_alias_map,
    jnDataType Varchar_30_M,
    dataType   Varchar_30_M,
-   isNullable Varchar_30_M,
-   pday_buffer BOOLEAN
+   isNullable Varchar_30_M
 );
 
 pv_package_header DBMS_SQL.varchar2a;
@@ -105,9 +103,6 @@ BEGIN
 END;
 ]';
 
-lt_flush_tables t_flush_tables := t_flush_tables('WELL_VERSION', 'STOR_VERSION', 'TANK_VERSION', 'WELL_HOOKUP_VERSION', 'CHEM_TANK_VERSION', 'FCTY_VERSION',
-                                    'PIPE_VERSION', 'SEPA_VERSION', 'FLWL_VERSION', 'STRM_VERSION', 'EQPM_VERSION', 'TEST_DEVICE_VERSION');
-
 -- Bitmasks values used to indicate which objects to generate.
 --
 I_PCK_MASK   CONSTANT INTEGER := Power(2, 0);
@@ -117,6 +112,7 @@ I_JN_MASK    CONSTANT INTEGER := Power(2, 3);
 I_IU_MASK    CONSTANT INTEGER := Power(2, 4);
 I_AUT_MASK   CONSTANT INTEGER := Power(2, 5);
 I_AIUDT_MASK CONSTANT INTEGER := Power(2, 6);
+I_JN_INDEX_MASK CONSTANT INTEGER := Power(2, 7);
 
 ----------------------------------------------------------------------------------------
 -- Return inpot string surrounded by single quotes
@@ -819,8 +815,8 @@ BEGIN
    -----------------------------------------------------------
    FOR i IN 1..tbl.pk_cols.COUNT LOOP
       IF tbl.pk_cols(i).column_name != 'SUMMER_TIME' THEN
-         lv2_parameter_list := lv2_parameter_list || lv2_delim || Lower(tbl.pk_cols(i).column_name);
-         lv2_delim := ', ';
+      lv2_parameter_list := lv2_parameter_list || lv2_delim || Lower(tbl.pk_cols(i).column_name);
+      lv2_delim := ', ';
       END IF;
    END LOOP;
 
@@ -1156,8 +1152,8 @@ BEGIN
          lv2_parameter_list_s := substr(lv2_parameter_list,1, LENGTH(lv2_parameter_list)-1) ||','|| CHR(10) || '          p_summertime VARCHAR2 DEFAULT NULL)';
          lv2_where_clause_s := lv2_where_clause ||CHR(10) || 'AND SUMMER_TIME = nvl(p_summertime, SUMMER_TIME)' || CHR(10) ||'ORDER BY SUMMER_TIME ';
       ELSE
-         lv2_parameter_list_s := lv2_parameter_list;
-         lv2_where_clause_s := lv2_where_clause;
+      lv2_parameter_list_s := lv2_parameter_list;
+      lv2_where_clause_s := lv2_where_clause;
       END IF;
 
       addBodyLine(
@@ -1419,8 +1415,8 @@ BEGIN
                    lv2_parameter_list_cursor_s := substr(lv2_parameter_list_cursor,1, LENGTH(lv2_parameter_list_cursor)-1) ||','|| CHR(10) || '        p_summertime)';
                    lv2_row_cache_key := lv2_row_cache_key || '||p_summertime';
             ELSE
-                   lv2_parameter_list_oper_s := lv2_parameter_list_oper;
-                   lv2_parameter_list_cursor_s := lv2_parameter_list_cursor;
+            lv2_parameter_list_oper_s := lv2_parameter_list_oper;
+            lv2_parameter_list_cursor_s := lv2_parameter_list_cursor;
             END IF;
 
             lv2_fn_name := 'row_by_rel_operator';
@@ -1773,8 +1769,11 @@ END buildPINCTrigger;
 PROCEDURE buildIUTrigger
 IS
    lv2_trigger_body VARCHAR2(4000);
-   lv2_sys_guid VARCHAR2(2000);
-   lv2_utc_time_zone VARCHAR2(2000);
+   lv2_sys_guid VARCHAR2(1000);
+   lv2_utc_daytime VARCHAR2(1000);
+   lv2_up_utc_date VARCHAR2(1000);
+   lv2_prod_day VARCHAR2(1000);
+   lv2_up_prod_day VARCHAR2(1000);
    lv2_daytime VARCHAR2(240);
    lv2_day VARCHAR2(240);
    lv2_dayhr VARCHAR2(240);
@@ -1798,23 +1797,66 @@ BEGIN
                       '      END IF;' || chr(10);
    END IF;
 
-   lv2_utc_time_zone := NULL;
+   lv2_utc_daytime := NULL;
 
    IF hasColumn('UTC_DAYTIME') = 'Y' AND
-      hasColumn('DAYTIME') = 'Y' AND
-      hasColumn('SUMMER_TIME') = 'Y' AND
-      hasColumn('TIME_ZONE') = 'Y' THEN
+      hasColumn('DAYTIME') = 'Y' THEN
       -- Add sync code
-      lv2_utc_time_zone := '      EcDp_Timestamp_Utils.syncUtcDate(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.time_zone, ' ||
-        ':NEW.daytime, :NEW.summer_time);' || CHR(10) || '      EcDp_Timestamp_Utils.setProductionDay';
-      IF hasColumn('PRODUCTION_DAY') = 'Y' THEN
-        lv2_utc_time_zone := lv2_utc_time_zone || '(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.production_day);';
-      ELSIF hasColumn('EVENT_DAY') = 'Y' THEN
-        lv2_utc_time_zone := lv2_utc_time_zone || '(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.event_day);';
-      ELSIF hasColumn('DAY') = 'Y' THEN
-        lv2_utc_time_zone := lv2_utc_time_zone || '(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.day);';
+      IF hasColumn('SUMMER_TIME') = 'Y' THEN
+         lv2_utc_daytime := '      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, ' ||
+           ':NEW.daytime, :NEW.summer_time);' || CHR(10);
+         lv2_up_utc_date := '      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime' ||
+            ', :OLD.daytime, :NEW.daytime, :OLD.summer_time, :NEW.summer_time);' || CHR(10);
+      ELSE
+         lv2_utc_daytime := '      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, ' ||
+           ':NEW.daytime);' || CHR(10);
+         lv2_up_utc_date := '      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime' ||
+            ', :OLD.daytime, :NEW.daytime);' || CHR(10);
       END IF;
-      lv2_utc_time_zone := lv2_utc_time_zone || CHR(10);
+
+      IF hasColumn('PRODUCTION_DAY') = 'Y' THEN
+	    lv2_prod_day := '      :NEW.production_day := EcDp_Timestamp.getProductionDayFromLocal(:NEW.object_id, :NEW.daytime);';
+	    lv2_up_prod_day := '      :NEW.production_day := EcDp_Timestamp.getProductionDayFromLocal(:NEW.object_id, :NEW.daytime);';
+      ELSIF hasColumn('EVENT_DAY') = 'Y' THEN
+	    lv2_prod_day := '      :NEW.event_day := EcDp_Timestamp.getProductionDayFromLocal(:NEW.object_id, :NEW.daytime);';
+	    lv2_up_prod_day := '      :NEW.event_day := EcDp_Timestamp.getProductionDayFromLocal(:NEW.object_id, :NEW.daytime);';
+      ELSIF hasColumn('DAY') = 'Y' THEN
+	    lv2_prod_day := '      :NEW.day := EcDp_Timestamp.getProductionDayFromLocal(:NEW.object_id, :NEW.daytime);';
+	    lv2_up_prod_day := '      :NEW.day := EcDp_Timestamp.getProductionDayFromLocal(:NEW.object_id, :NEW.daytime);';
+      ELSE
+        -- production_day not exists
+        lv2_prod_day := '';
+        lv2_up_prod_day := '';
+      END IF;
+      lv2_utc_daytime := lv2_utc_daytime || lv2_prod_day || CHR(10);
+      lv2_up_utc_date := CHR(10) || lv2_up_utc_date || lv2_up_prod_day || CHR(10);
+   END IF;
+
+   IF hasColumn('UTC_END_DATE') = 'Y' AND
+      hasColumn('END_DATE') = 'Y' THEN
+      -- Add sync code
+      IF hasColumn('END_SUMMER_TIME') = 'Y' THEN
+         lv2_utc_daytime := lv2_utc_daytime || CHR(10) || '      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_end_date, ' ||
+           ':NEW.end_date, :NEW.end_summer_time);' || CHR(10);
+         lv2_up_utc_date := lv2_up_utc_date || CHR(10) || '      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_end_date, :NEW.utc_end_date' ||
+            ', :OLD.end_date, :NEW.end_date, :OLD.end_summer_time, :NEW.end_summer_time);' || CHR(10);
+      ELSE
+         lv2_utc_daytime := lv2_utc_daytime || CHR(10) || '      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_end_date, ' ||
+           ':NEW.end_date);' || CHR(10);
+         lv2_up_utc_date := lv2_up_utc_date || CHR(10) || '      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_end_date, :NEW.utc_end_date' ||
+            ', :OLD.end_date, :NEW.end_date);' || CHR(10);
+      END IF;
+
+      IF hasColumn('END_DAY') = 'Y' THEN
+	    lv2_prod_day := '      :NEW.end_day := EcDp_Timestamp.getProductionDayFromLocal(:NEW.object_id, :NEW.end_date);';
+	    lv2_up_prod_day := '      :NEW.end_day := EcDp_Timestamp.getProductionDayFromLocal(:NEW.object_id, :NEW.end_date);';
+      ELSE
+        -- production_day not exists
+        lv2_prod_day := '';
+        lv2_up_prod_day := '';
+      END IF;
+      lv2_utc_daytime := lv2_utc_daytime || lv2_prod_day || CHR(10);
+      lv2_up_utc_date := lv2_up_utc_date || lv2_up_prod_day || CHR(10);
    END IF;
 
    lv2_daytime := NULL;
@@ -1849,7 +1891,7 @@ q'[BEGIN
     IF Inserting THEN
 ]' || lv2_daytime ||  lv2_day ||  lv2_dayhr || q'[
       :new.record_status := nvl(:new.record_status, 'P');
-]' || lv2_sys_guid || lv2_utc_time_zone || q'[
+]' || lv2_sys_guid || lv2_utc_daytime || q'[
       IF :new.created_by IS NULL THEN
          :new.created_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);
       END IF;
@@ -1857,7 +1899,7 @@ q'[BEGIN
          :new.created_date := EcDp_Timestamp.getCurrentSysdate;
       END IF;
       :new.rev_no := 0;
-    ELSE
+    ELSE ]' || lv2_up_utc_date || q'[
       IF Nvl(:new.record_status,'P') = Nvl(:old.record_status,'P') THEN
          IF NOT UPDATING('LAST_UPDATED_BY') THEN
             :new.last_updated_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);
@@ -1907,13 +1949,13 @@ BEGIN
           'FOR EACH ROW ' || CHR(10) ||
           'BEGIN ' || CHR(10) ||
           '    IF Inserting THEN' || CHR(10) ||
-          '      ec_generate.iudObject(' || CASE WHEN lb_has_class_name_column THEN ' :NEW.class_name, ' ELSE '''' || tbl.table_name || ''', ' END ||
+          '      ecdp_trigger_utils.iudObject(' || CASE WHEN lb_has_class_name_column THEN ' :NEW.class_name, ' ELSE '''' || tbl.table_name || ''', ' END ||
           'NULL, :NEW.object_id, :NEW.object_code, :NEW.start_date, :NEW.end_date, :NEW.created_by, :NEW.created_date);' || CHR(10) ||
           '    ELSIF Updating THEN' || CHR(10) ||
-          '      ec_generate.iudObject(' || CASE WHEN lb_has_class_name_column THEN ' :OLD.class_name, ' ELSE '''' || tbl.table_name || ''', ' END ||
+          '      ecdp_trigger_utils.iudObject(' || CASE WHEN lb_has_class_name_column THEN ' :OLD.class_name, ' ELSE '''' || tbl.table_name || ''', ' END ||
           ':OLD.object_id, :NEW.object_id, :NEW.object_code, :NEW.start_date, :NEW.end_date, :NEW.created_by, :NEW.created_date);' || CHR(10) ||
           '    ELSE' || CHR(10) ||
-          '      ec_generate.iudObject(' || CASE WHEN lb_has_class_name_column THEN ' :OLD.class_name, ' ELSE '''' || tbl.table_name || ''', ' END ||
+          '      ecdp_trigger_utils.iudObject(' || CASE WHEN lb_has_class_name_column THEN ' :OLD.class_name, ' ELSE '''' || tbl.table_name || ''', ' END ||
           ':OLD.object_id,NULL, :OLD.object_code, :OLD.start_date, :OLD.end_date, :OLD.created_by, :OLD.created_date, FALSE);' || CHR(10) ||
           '    END IF;' || CHR(10) ||
           'END;' || CHR(10));
@@ -1924,13 +1966,13 @@ BEGIN
           'FOR EACH ROW ' || CHR(10) ||
           'BEGIN ' || CHR(10) ||
           '    IF Inserting THEN' || CHR(10) ||
-          '      ec_generate.iudObjectVersion(''' || tbl.table_name || ''', ' ||
+          '      ecdp_trigger_utils.iudObjectVersion(''' || tbl.table_name || ''', ' ||
           'NULL, :NEW.object_id, :NEW.name, :NEW.daytime, :NEW.end_date, :NEW.created_by, :NEW.created_date);' || CHR(10) ||
           '    ELSIF Updating THEN' || CHR(10) ||
-          '      ec_generate.iudObjectVersion(''' || tbl.table_name || ''', ' ||
+          '      ecdp_trigger_utils.iudObjectVersion(''' || tbl.table_name || ''', ' ||
           ':OLD.object_id, :NEW.object_id, :NEW.name, :NEW.daytime, :NEW.end_date, :NEW.created_by, :NEW.created_date);' || CHR(10) ||
           '    ELSE' || CHR(10) ||
-          '      ec_generate.iudObjectVersion(''' || tbl.table_name || ''', ' ||
+          '      ecdp_trigger_utils.iudObjectVersion(''' || tbl.table_name || ''', ' ||
           ':OLD.object_id, NULL, :OLD.name, :OLD.daytime, :OLD.end_date, :OLD.created_by, :OLD.created_date, FALSE);' || CHR(10) ||
           '    END IF;' || CHR(10) ||
           'END;' || CHR(10));
@@ -2027,6 +2069,98 @@ BEGIN
    RETURN I_JN_MASK;
 END JN_TRIGGERS;
 
+----------------------------------------------------------------------------------------
+-- Bit mask for "generate JN index"
+----------------------------------------------------------------------------------------
+FUNCTION JN_INDEX
+RETURN INTEGER
+IS
+BEGIN
+   RETURN I_JN_INDEX_MASK;
+END JN_INDEX;
+
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Procedure      : generateJnIndex
+-- Description    : This procedure generates indexes for JN tables, based on
+--                  the primary key of the base table.
+--                  If the table has any index except on the REC_ID column
+--                  , then the index is not generated
+-- Postconditions :
+--
+-- Using tables   : user_tables
+--                  user_ind_columns
+--                  user_constraints
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      : If p_table_name is null, then indexes generated for all JN tables
+--                  If p_table_name is given, then indexes generated only for that table
+---------------------------------------------------------------------------------------------------
+PROCEDURE generateJnIndex(p_table VARCHAR2 DEFAULT '%') IS
+  ln_count PLS_INTEGER;
+  lv2_columns VARCHAR2(2000);
+  lv2_stmt VARCHAR2(2000);
+BEGIN
+  FOR tab in (WITH t1 as
+               (select table_name
+                 from user_tables
+                where table_name like '%/_JN' ESCAPE '/'),
+              t2 as
+               (select table_name
+                 from user_tables
+                where table_name not like '/%_JN' ESCAPE '/'
+                  and table_name like p_table)
+              SELECT t1.table_name jn_table_name, t2.table_name
+                FROM t1
+                join t2
+                  ON substr(t1.table_name, 1, length(t1.table_name) - 3) =
+                     t2.table_name)
+   LOOP
+
+    select count(*)
+      into ln_count
+      from user_ind_columns
+      where table_name = tab.jn_table_name
+      AND column_name != 'REC_ID';
+
+    if ln_count>0 then
+      dbms_output.put_line('--'||tab.jn_table_name||' - more than 1 index, will NOT generate index');
+    else
+      dbms_output.put_line(CHR(10)||tab.jn_table_name);
+      begin
+      select listagg(a.column_name,', ')
+         within group ( order by a.column_position)
+       into lv2_columns
+       from user_ind_columns a
+       join user_constraints b
+       on b.constraint_name = a.index_name
+       where b.table_name = tab.table_name
+       and b.constraint_type='P'
+       and b.table_name != 'AUDIT_LOGIN';
+
+       IF length(lv2_columns)>0 THEN
+         lv2_stmt := 'CREATE INDEX IG_'||substr(tab.jn_table_name,1,27)
+           ||' ON '||tab.jn_table_name||'('||lv2_columns||')';
+         dbms_output.put_line(lv2_stmt);
+         BEGIN
+           EXECUTE IMMEDIATE lv2_stmt;
+           EXCEPTION
+             WHEN OTHERS THEN
+               dbms_output.put_line(sqlerrm);
+         END;
+       END IF;
+
+      end;
+    end if;
+
+  END LOOP;
+END;
+
 ---------------------------------------------------------------------------------------------------
 -- Generate triggers and EC package for the given table, or all tables if none is given.
 -- The target type mask determines which objects to generate.
@@ -2093,6 +2227,7 @@ IS
   b_generate_iu BOOLEAN := bitand(p_target_mask, IU_TRIGGERS) > 0;
   b_generate_iur BOOLEAN := bitand(p_target_mask, IUR_TRIGGERS) > 0;
   b_generate_jn BOOLEAN := bitand(p_target_mask, JN_TRIGGERS) > 0;
+  b_generate_jn_index BOOLEAN := bitand(p_target_mask, JN_INDEX) > 0;
 
   m_exists Varchar_30_M;
 
@@ -2124,6 +2259,7 @@ BEGIN
       b_generate_iu := bitand(p_target_mask, IU_TRIGGERS) > 0 AND curTable.object_type = 'TABLE';
       b_generate_iur := bitand(p_target_mask, IUR_TRIGGERS) > 0 AND curTable.object_type = 'TABLE';
       b_generate_jn := bitand(p_target_mask, JN_TRIGGERS) > 0 AND curTable.object_type = 'TABLE';
+      b_generate_jn_index := bitand(p_target_mask, JN_INDEX) > 0 AND curTable.object_type = 'TABLE';
 
       IF NOT b_regenerate_existing THEN
         b_generate_package := b_generate_package AND NOT m_exists.EXISTS(substr('EC_'||curTable.table_name, 1, 30));
@@ -2141,7 +2277,8 @@ BEGIN
               b_generate_aiudt OR
               b_generate_iu OR
               b_generate_iur OR
-              b_generate_jn) THEN
+              b_generate_jn OR
+			  b_generate_jn_index) THEN
         CONTINUE;
       END IF;
 
@@ -2175,15 +2312,11 @@ BEGIN
          v_target_mask := v_target_mask + JN_TRIGGERS;
       END IF;
 
-      tbl.table_name := curTable.table_name;
+      IF b_generate_jn_index THEN
+         v_target_mask := v_target_mask + JN_INDEX;
+      END IF;
 
-      tbl.pday_buffer := FALSE;
-      FOR one IN lt_flush_tables.FIRST..lt_flush_tables.LAST LOOP
-        IF lt_flush_tables(one) = tbl.table_name THEN
-          tbl.pday_buffer := TRUE;
-          EXIT;
-        END IF;
-      END LOOP;
+      tbl.table_name := curTable.table_name;
 
       IF b_generate_package OR b_generate_ap OR b_generate_iu THEN
          OPEN c_table_key_columns(curTable.key_table_name);
@@ -2277,25 +2410,13 @@ BEGIN
 
       IF b_generate_aut THEN
         IF tbl.ctrlObj.object_name IS NOT NULL AND Nvl(tbl.ctrlObj.ec_package, 'Y') = 'Y' THEN
-          IF tbl.pday_buffer THEN
-            buildTrigger(
-                 substr('AUT_'||tbl.table_name, 1, 30),
-                 'CREATE OR REPLACE TRIGGER ' || substr('AUT_'||tbl.table_name, 1, 30) || CHR(10) ||
-                 'AFTER UPDATE ON ' || tbl.table_name || CHR(10) ||
-                 'BEGIN ' || CHR(10) || '    '||
-                 substr('EC_'||tbl.table_name, 1, 30) || '.flush_row_cache;' || CHR(10) ||
-                 '    ' || 'ecdp_productionday.flush_buffer;' || CHR(10) ||
-                 'END;' || CHR(10));
-
-          ELSE
-            buildTrigger(
+          buildTrigger(
                  substr('AUT_'||tbl.table_name, 1, 30),
                  'CREATE OR REPLACE TRIGGER ' || substr('AUT_'||tbl.table_name, 1, 30) || CHR(10) ||
                  'AFTER UPDATE ON ' || tbl.table_name || CHR(10) ||
                  'BEGIN ' || CHR(10) || '    '||
                  substr('EC_'||tbl.table_name, 1, 30) || '.flush_row_cache;' || CHR(10) ||
                  'END;' || CHR(10));
-          END IF;
         END IF;
       END IF;
 
@@ -2321,6 +2442,10 @@ BEGIN
       IF b_generate_jn AND tbl.jn_cols.COUNT > 0 THEN
          buildJournalTrigger;
       END IF;
+
+	  IF b_generate_jn_index THEN
+        generateJnIndex(tbl.table_name);
+	  END IF;
    END LOOP;
 END generate;
 

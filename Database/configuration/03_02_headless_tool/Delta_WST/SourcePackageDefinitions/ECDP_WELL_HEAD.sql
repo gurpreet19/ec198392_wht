@@ -79,6 +79,7 @@ CREATE OR REPLACE PACKAGE EcDp_Well IS
 **          22.12.2017 singishi  ECPD-51137 removed all the instances of well_deferment_event table.
 **          02-04-2018 kaushaak  ECPD-53796: Modified getDailyWellDownHrs
 **          19-04-2018 abdulmaw  ECPD-55145: Modified getDailyWellDownHrs to support 2 injection type well
+**          10.09.2018 solibhar ECPD-58838: Added new function IsPlannedWell()
 *****************************************************************/
 
 FUNCTION calcWellTypeFracDay(
@@ -342,6 +343,9 @@ PROCEDURE updateopfctyidOnConnObjects(
 
 FUNCTION wellOnTest(p_well_id VARCHAR2,
                     p_daytime DATE)
+RETURN VARCHAR2;
+
+FUNCTION IsPlannedWell(p_object_id VARCHAR2, p_daytime DATE)
 RETURN VARCHAR2;
 
 END EcDp_Well;

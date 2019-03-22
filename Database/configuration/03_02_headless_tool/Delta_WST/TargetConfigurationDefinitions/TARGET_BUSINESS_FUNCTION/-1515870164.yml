@@ -8,5 +8,6 @@ properties:
   BF_CODE: PA.0005
   NAME: Todo List
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.jbpm/todo_list_ec_jbpm_task
 related: {}

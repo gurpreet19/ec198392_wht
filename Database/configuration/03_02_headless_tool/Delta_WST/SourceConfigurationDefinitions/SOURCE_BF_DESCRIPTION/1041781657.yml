@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0105
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar_collection' )
   DATA_LEVEL: 0.0
   DESCRIPTION: '<p><strong>Calendar Collection Screen</strong> is used for grouping
     several Calendars into a group.</p><p>EC has functionality for automatically determining
@@ -19,47 +19,113 @@ properties:
     When using the Calendar Collection together with Payment Due Date calculation,
     Document Date calculation and Document Received Date etc. it will be the combination
     of Business Days / Holidays of the calendars in the collection that will determine
-    the Business Days / Holidays.</p><h2><strong style="color: rgb(0, 0, 153);">Navigator</strong></h2><p>Navigator
-    settings allow the user to define the search criteria for Calendar Collection
-    and list them in the table below:</p><p><u>Navigator has one selection option:</u></p><p><strong>1.
-    Date</strong> - Auto filled with the first day of the current month.<br>This is
-    the date Calendar Collection objects are Valid to.</p><h3><strong style="color:
+    the Business Days / Holidays.</p><p><br></p><p>The screen is organized with these
+    key components:</p><p>- Navigator&nbsp;</p><p>- List of Calendar Collection objects&nbsp;</p><p>-
+    Tabs for Calendar Collection Object / Calendar Collection Members / Calendar Collection
+    Setup / Calendar Collection Usage</p><p><br></p><h2><strong style="color: rgb(0,
+    0, 153);">Navigator</strong></h2><p><br></p><p>Navigator settings allow the user
+    to define the search criteria for Calendar Collection and list them in the table
+    below:</p><p><u>Navigator has one selection option:</u></p><p><strong>1. Date</strong>
+    - Auto filled with the first day of the current month.</p><p>This is the date
+    Calendar Collection objects are Valid to.</p><p><br></p><h3><strong style="color:
     rgb(0, 0, 153);">Calendar List Section</strong></h3><p>This section displays all
     Calendar Collections matching the Navigator criteria. By default, 20 records are
     shown in a single page. User has the liberty to modify the number of records to
     be displayed in a page using the Filter option presents just above the Calendar
-    Collection list.</p><h2><strong style="color: rgb(0, 0, 153);">Tab Calendar Collection</strong></h2><p>This
-    tab is used for defining Calendar Collection objects, which can then be used for
-    grouping several Calendar objects into a group. User can create a new Calendar
-    Collection object or amend an existing one and can also create new versions of
-    the Calendar Collection using this tab.</p><u>Creating a new Calendar Collection
-    object will have these columns / attributes:</u><br><p><strong>1. Code</strong>
-    - Mandatory <br>This is the code of the Calendar Collection. Should be unique.</p><p><strong>2.
-    Name</strong> - Mandatory <br>This is the name the Calendar Collection belongs
-    to.</p><p><strong>3. Start Date</strong> - Mandatory <br>This is the date Calendar
-    Collection is Valid from.</p><p><strong>4. End Date</strong> - Optional<br>This
-    is the date Calendar Collection is Valid to.</p><p><strong>5. Description</strong>
-    - Optional<br>This is a voluntary description of the Calendar Collection object.</p><p><strong>6.
-    Comment </strong> - Optional<br>This is a comment for the Calendar Collection
-    object</p><h2><strong style="color: rgb(0, 0, 153);">Tab Calendar Collection Setup</strong></h2><p>This
-    is used for grouping several Calendars into a group calendar called Calendar Collection.</p><u>Creating
-    a new Calendar Collection setup will have these columns:</u><br><p><strong>1.
-    Date </strong> - Mandatory<br>This is the date the added Calendar is Valid from.</p><p><strong>2.
-    Code </strong> - Non-Editable<br>This is the code of the Calendar and is Auto-Populated
-    from the Name Drop Down.</p><p><strong>3. Name</strong> - Mandatory<br>This is
-    the name the Calendar we are supposed to select from the dropdown. The records
-    in the dropdowns gets populated from the <strong>Calendar Screen</strong> in EC.</p><h2><strong
-    style="color: rgb(0, 0, 153);">Tab Calendar Usage</strong></h2><p>This tab is
-    used to give an overview of the various relations from the Calendar Collection
+    Collection list.</p><p><br></p><h2><strong style="color: rgb(0, 0, 153);">Tab
+    Calendar Collection</strong></h2><p>This tab is used for defining Calendar Collection
+    objects, which can then be used for grouping several Calendar objects into a group.
+    User can create a new Calendar Collection object or amend an existing one and
+    can also create new versions of the Calendar Collection using this tab.</p><p><u>Creating
+    a new Calendar Collection object will have these columns / attributes:</u></p><p><strong>1.
+    Code</strong> - Mandatory</p><p>This is the code of the Calendar Collection. Should
+    be unique.</p><p><strong>2. Name</strong> - Mandatory</p><p>This is the name the
+    Calendar Collection belongs to.</p><p><strong>3. Start Date</strong> - Mandatory</p><p>This
+    is the date Calendar Collection is Valid from.</p><p><strong>4. End Date</strong>
+    - Optional</p><p>This is the date Calendar Collection is Valid to.</p><p><strong>5.
+    Description</strong> - Optional</p><p>This is a voluntary description of the Calendar
+    Collection object.</p><p><strong>6. Comment </strong> - Optional</p><p>This is
+    a comment for the Calendar Collection object</p><p><br></p><h2><strong style="color:
+    rgb(0, 0, 153);">Tab Calendar Collection Members</strong></h2><p>This is used
+    for grouping several Calendars into a group calendar called Calendar Collection.</p><p><u>Creating
+    a new Calendar Collection setup will have these columns:</u></p><p><strong>1.
+    Date </strong> - Mandatory</p><p>This is the date the added Calendar is Valid
+    from.</p><p><strong>2. Code </strong> - Non-Editable</p><p>This is the code of
+    the Calendar and is Auto-Populated from the Name Drop Down.</p><p><strong>3. Name</strong>
+    - Mandatory</p><p>This is the name the Calendar we are supposed to select from
+    the dropdown. The records in the dropdowns gets populated from the <strong>Calendar
+    Screen</strong> in EC.</p><p><br></p><h2><strong style="color: rgb(0, 0, 153);">Tab
+    Calendar Collection Setup</strong></h2><p>This tab allows for instantiating a
+    calendar or all the calendars associated with a Calendar Collection for a new
+    year as well as managing Business Days, Holidays, and Holidays and Observances
+    for a given calendar year.</p><p>When entering the tab EC will by default show
+    the calendar for the year that is selected in the Date field of the Navigator.
+    If the selected calendar has not been instantiated for the year given by the navigator
+    date, then the year closest to the navigator date will be shown.</p><p>The tab
+    has these data elements:</p><p>List of calendars associated with selected Calendar
+    Collection object, an additional option ''All'' will be listed to show the combined
+    information like holidays, comments for all the linked calendars in the Calendar
+    Widget.</p><p>Dropdown&nbsp;<strong>Select Year to Show -&nbsp;</strong>This dropdown
+    lists all the years the selected calendar or combined years of all the calendars
+    linked with the Calendar Collection has been instantiated for.</p><p><strong>Button&nbsp;</strong><strong
+    style="color: rgb(0, 153, 0);">Show&nbsp;</strong></p><p>A view of a full calendar
+    year for the year selected in the ''Select Year to Show'' dropdown will be shown
+    in Calendar widget when clicking this button.</p><p>Dropdown&nbsp;<strong>Add
+    Year to Calendar -&nbsp;</strong>Dropdown for selecting a year to instantiate
+    the selected calendar or if ''All'' is selected then to instantiate all the calendars
+    linked with the selected Calendar Collection</p><p><strong>Button&nbsp;</strong><strong
+    style="color: rgb(0, 153, 0);">Generate&nbsp;</strong></p><p>The Calendar is instantiated
+    for the year selected in the ''Add Year to Calendar'' dropdown.</p><p>To instantiate
+    the Calendar the selected year must be valid within the object start date and
+    end date and also it must be active on the first date of the selected year for
+    instantiation. For examples -</p><p>- If the Calendar object starts from 1st January
+    2005, the Calendar cannot be instantiated before year 2005.</p><p>- If the Calendar
+    object starts from 1st January 2005 and ends on 1st January 2050, the Calendar
+    cannot be instantiated before year 2005 and for the year after 2049.&nbsp;</p><p>-
+    If the Calendar object starts from 2nd January 2005 or any later date of the year
+    2005, Calendar cannot be instantiated for the year 2005 however, it can be instantiated
+    for the year 2006.</p><p>- If the Calendar object starts from 1st January 2005
+    and ends on 2nd January 2050, Calendar can be instantiated between any year 2005
+    and 2050 however, it cannot be instantiated for the year after 2051.</p><p>Date
+    field&nbsp;<strong>Selected Date&nbsp;</strong>- This date field shows the date
+    selected in the Calendar widget. This date will be updated when clicking a date
+    in the Calendar widget.</p><p><strong>Button&nbsp;</strong><strong style="color:
+    rgb(0, 153, 0);">Set to Holiday&nbsp;</strong></p><p>This button will set the
+    date given by the Selected Date as a Holiday.</p><p><strong>Button&nbsp;</strong><strong
+    style="color: rgb(0, 153, 0);">Set to Business Day&nbsp;</strong></p><p>This button
+    will set the date given by the Selected Date as a Business Day.</p><p><strong>Text
+    field Holidays and Observances</strong>&nbsp;- This field allows for adding a
+    new ''Holidays and Observances'' entry to the calendar for the date given by the
+    Selected Date.</p><p><strong>Button&nbsp;</strong><strong style="color: rgb(0,
+    153, 0);">Create&nbsp;</strong></p><p>This button will add the new ''Holidays
+    and Observances'' entry to the calendar for the date given by the Selected Date.
+    If there is already an existing ''Holidays and Observances'' entry for the selected
+    date then an error message is displayed and the user is informed to make any changes
+    to an exiting ''Holidays and Observances'' entry at the bottom section of the
+    screen</p><p><br></p><h3><strong style="color: rgb(0, 0, 153);">Calendar Widget
+    Section</strong></h3><p>This sections shows the instantiated calendar or combined
+    data for the calendars linked with the calendar collection for a given year.&nbsp;</p><p><u>The
+    color coding is as follows:</u></p><p>- Black text for the date: This is a Business
+    Day.</p><p>- Red text for the date: This is a Holiday.</p><p>- Light blue background:
+    This date has a ''Holidays and Observances'' entry. The ''Holidays and Observances''
+    entry is shown as a tooltip when hoovering over the date.</p><p>- Green background:
+    Selected date with no Holidays and Observances'' entry.</p><p>- Red border around
+    the date: This is the Selected Date.</p><p><br></p><h3><strong style="color: rgb(0,
+    0, 153);">Holidays and Observation Section</strong></h3><p>The list of Holidays
+    and Observances for the calendar are displayed here. The user can update or delete
+    entries here. For adding entries, please see the ''Text field Holidays and Observances''
+    above.</p><p><br></p><h2><strong style="color: rgb(0, 0, 153);">Tab Calendar Usage</strong></h2><p>This
+    tab is used to give an overview of the various relations from the Calendar Collection
     class to other EC classes. A single Calendar/Calendar Collection can be used in
-    multiple classes.</p><p>The tab is divided into two sections:</p><h3><strong style="color:
-    rgb(0, 0, 153);">Attribute/Relations List section </strong></h3><p>The section
-    lists the various relations for the Calendar Collection class.</p><p>It will list
-    1: N type of relations where the Calendar Collection class is at the single side.
-    It will also list all the N: M type of relations where the selected class is either
-    at the N-side or the M-side of the relation.</p><p>For each relation in the Relation
-    List, the user can see which objects the selected Calendar Collection has relations
-    to.</p><h3><strong style="color: rgb(0, 0, 153);">Relation Details section</strong></h3><p>The
-    section lists the objects that the Calendar Collection class has relation to for
-    the relation selected in the Relations List section.</p>'
+    multiple classes.</p><p>The tab is divided into two sections:</p><p><br></p><h3><strong
+    style="color: rgb(0, 0, 153);">Attribute/Relations List section </strong></h3><p>The
+    section lists the various relations for the Calendar Collection class.</p><p>It
+    will list 1: N type of relations where the Calendar Collection class is at the
+    single side. It will also list all the N: M type of relations where the selected
+    class is either at the N-side or the M-side of the relation.</p><p>For each relation
+    in the Relation List, the user can see which objects the selected Calendar Collection
+    has relations to.</p><p><br></p><h3><strong style="color: rgb(0, 0, 153);">Relation
+    Details section</strong></h3><p>The section lists the objects that the Calendar
+    Collection class has relation to for the relation selected in the Relations List
+    section.</p>'
 related: {}

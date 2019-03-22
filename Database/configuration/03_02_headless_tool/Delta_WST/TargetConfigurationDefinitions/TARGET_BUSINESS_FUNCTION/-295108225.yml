@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0172
   NAME: Splitigator
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/SPLITIGATOR/TARGET/SPLITIGATOR/CLASS_NAME/SPLITIGATOR
 related: {}

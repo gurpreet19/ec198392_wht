@@ -8,5 +8,6 @@ properties:
   BF_CODE: SD.0001
   NAME: Weekly Gas Sales Forecast
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sd.screens/daily_forecast
 related: {}

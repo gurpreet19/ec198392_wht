@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0079
   NAME: Daily Electrical Stream Status, by Stream
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/period_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_ELE/STRM_SET/PO.0079
 related: {}

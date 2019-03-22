@@ -3,7 +3,7 @@ name: FCST_CONSTRAINTS
 cnstPrimaryKey:
   columns:
   - DAYTIME
-  - OBJECT_ID
+  - SCENARIO_ID
   name: PK_FCST_CONSTRAINTS
   type: PRIMARYKEY
   status: UNDEFINED
@@ -416,14 +416,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '178'
-  OBJECT_ID:
-    columnName: OBJECT_ID
-    typeName: VARCHAR2(32)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '3'
   OIL_COMMERCIAL_CONS:
     columnName: OIL_COMMERCIAL_CONS
     typeName: NUMBER
@@ -504,6 +496,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '180'
+  SCENARIO_ID:
+    columnName: SCENARIO_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
   SI_COMMERCIAL_CONS:
     columnName: SI_COMMERCIAL_CONS
     typeName: NUMBER
@@ -1495,7 +1495,7 @@ cnstForeignKeys:
     deleteAction: NOACTION
     primaryTable: FORECAST
     columns:
-      OBJECT_ID: OBJECT_ID
+      SCENARIO_ID: OBJECT_ID
     name: FK_FCST_CONSTRAINTS_2
     type: FOREIGNKEY
     status: UNDEFINED
@@ -1529,7 +1529,7 @@ indexes:
   IFK_FCST_CONSTRAINTS_2:
     indexName: IFK_FCST_CONSTRAINTS_2
     columns:
-    - OBJECT_ID
+    - SCENARIO_ID
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536

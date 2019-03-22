@@ -12,7 +12,7 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
   CLASS_NAME: INTERFACE_PENDING_CARGO
   COMP_CODE: interface_pending_doc
-  NAME: Pending
+  NAME: Navigator (form) > Pending (tab) > Pending (table)
   SIGNING_REQ_IND: null
   URL: /interface_pending_doc
 related: {}

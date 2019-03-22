@@ -3,7 +3,7 @@ name: JBPM_PROCESSINSTANCELOG
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008691
+  name: PK_JBPM_PROCESSINSTANCELOG
   type: PRIMARYKEY
   status: UNDEFINED
 columns:
@@ -111,6 +111,22 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '14'
+  SLACOMPLIANCE:
+    columnName: SLACOMPLIANCE
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '16'
+  SLA_DUE_DATE:
+    columnName: SLA_DUE_DATE
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '15'
   START_DATE:
     columnName: START_DATE
     typeName: TIMESTAMP(6)
@@ -118,7 +134,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '17'
   STATUS:
     columnName: STATUS
     typeName: NUMBER(10,0)
@@ -126,7 +142,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '18'
   USER_IDENTITY:
     columnName: USER_IDENTITY
     typeName: VARCHAR2(255 CHAR)

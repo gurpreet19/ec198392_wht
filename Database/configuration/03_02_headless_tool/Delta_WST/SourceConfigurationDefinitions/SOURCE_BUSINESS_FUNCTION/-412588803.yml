@@ -8,5 +8,6 @@ properties:
   BF_CODE: WR.0071
   NAME: Perforation Active Status
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.wr.screens/perforation_active_status
 related: {}

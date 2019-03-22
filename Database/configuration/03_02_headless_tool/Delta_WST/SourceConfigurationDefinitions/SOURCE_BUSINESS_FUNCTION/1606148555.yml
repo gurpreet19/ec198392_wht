@@ -8,5 +8,6 @@ properties:
   BF_CODE: PR.0019
   NAME: Product Price List - Dataset
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.sale.pr.screens/product_price_list_with_dim/CLASS/PRODUCT_PRICE_DS_LIST
 related: {}

@@ -9,20 +9,5 @@ properties:
   BF_DESCRIPTION_NO: CD.0034
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/cd_ec_codes/SYSTEM_CODE_IND/N' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p><span style="color: rgb(0, 0, 153);">    There are 3 screens under
-    CODES section:<br>    - EC Codes-All (BF CO.1011)<br>    - EC Codes - Non-System
-    Codes (BF CD.0034)<br>    - EC Codes - System Codes (BF CD.0084)</span></p><p><span
-    style="color: rgb(0, 0, 153);">    Generally all Codes are shown in EC Codes-All
-    screen and all these are    categorized and shown in other screens (Non-System
-    or System Codes screens)    based upon the System Code Attribute.<br>    EC Codes
-    need to have System Attributes configured for separation into    Non-System /
-    System screens.</span></p><p>    <strong>EC Codes - Non-System Codes screen</strong>    is
-    used to handle all EC codes that are not System codes, i.e.    IS_SYSTEM_CODE
-    = N.</p><p>    Non-System Codes allow customers to change items in some of the
-    dropdownsthat the customer can expand with new choices. <br> These are EC Codes    <em>available</em>
-    to the end users and can be changed without key    functionality in EC <em>crashing</em>.</p><p>    Typically
-    EC Codes - Non-System Codes screen is available to different    users compare
-    to the EC Codes - System Codes screen that is only handling    EC codes where
-    IS_SYSTEM_CODES = Y.<br>    The System EC codes are normally NOT to be changed
-    as this can cause    unpredictable behavior of EC.</p>'
+  DESCRIPTION: <p>EC codes are basically categorized string constants.</p><p>There are three EC code screens:</p><ul><li>EC Codes-All (BF CO.1011)</li><li>EC Codes - Non-System Codes (BF CD.0034)</li><li>EC Codes - System Codes (BF CD.0084)</li></ul><p>Generally all EC codes are shown in the EC Codes-All screen, whereas the other two screens show only system or non-system EC codes based on the value of the "System Code" attribute. This is split into multiple screens to allow easy access control for end users.</p><p>The <strong>EC Codes - Non-System Codes</strong> screen is used to handle EC codes that are not system codes, i.e. IS_SYSTEM_CODE = N.</p><p>Non-system codes are meant to be modifiable by customers. It is safe to add, remove or edit these EC codes. One should still be careful when editing or removing EC codes that are in use.</p><p><br></p><p><br></p>
 related: {}

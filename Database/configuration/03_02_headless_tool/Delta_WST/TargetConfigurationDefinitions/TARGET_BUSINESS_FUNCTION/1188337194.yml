@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0104
   NAME: Create Calculation Rule
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/create_calc_rule
 related: {}

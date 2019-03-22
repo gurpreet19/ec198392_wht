@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0111
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/FOREX_SOURCE' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FOREX_SOURCE' )
   DATA_LEVEL: 0.0
   DESCRIPTION: <p>    <strong>Exchange Rate Source screen</strong>    is used to manage the various Exchange Rate sources available in the    system.<br>    The system can handle Exchange Rates for a given date from various sources.</p><p>   <u> Typical examples </u> of Exchange Rate Source objects would be a Bank publishing    Exchange Rates, or the ERP system in case the Exchange Rates used in EC are    coming from the ERP system.<br>    If the Exchange Rates are manually entered a Manual Exchange Rate Source    object should be added.</p>
 related: {}

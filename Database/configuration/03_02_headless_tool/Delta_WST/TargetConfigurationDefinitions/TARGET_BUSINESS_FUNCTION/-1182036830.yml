@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0178
   NAME: Chiller
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CHILLER/TARGET/CHILLER/CLASS_NAME/CHILLER
 related: {}

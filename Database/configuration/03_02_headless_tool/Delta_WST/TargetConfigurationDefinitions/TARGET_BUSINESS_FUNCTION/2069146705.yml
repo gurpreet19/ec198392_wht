@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.2055
   NAME: BF Tab Configuration
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.co.screens/tab_configuration
 related: {}

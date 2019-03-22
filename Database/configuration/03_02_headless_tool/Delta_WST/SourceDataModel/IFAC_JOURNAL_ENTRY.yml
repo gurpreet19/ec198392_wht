@@ -970,6 +970,28 @@ indexes:
     descend: ASC
     type: NORMAL
     status: UNDEFINED
+  I_IFAC_JOURNAL_ENTRY_17:
+    indexName: I_IFAC_JOURNAL_ENTRY_17
+    columns:
+    - PERIOD
+    - DATASET
+    - FIN_ACCOUNT_CODE
+    - FIN_WBS_CODE
+    - IS_MAX_SOURCE_DOC_VER_IND
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 1048576
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 10
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
   I_IFAC_JOURNAL_ENTRY_2:
     indexName: I_IFAC_JOURNAL_ENTRY_2
     columns:

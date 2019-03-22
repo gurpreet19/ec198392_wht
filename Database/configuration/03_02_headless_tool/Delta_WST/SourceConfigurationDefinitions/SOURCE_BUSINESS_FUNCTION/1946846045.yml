@@ -8,5 +8,6 @@ properties:
   BF_CODE: FC.1015
   NAME: Forecast Split Share Overview
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.fc/split_key_year/SPLIT_TYPE/SPLIT_ITEM_OTHER/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES
 related: {}

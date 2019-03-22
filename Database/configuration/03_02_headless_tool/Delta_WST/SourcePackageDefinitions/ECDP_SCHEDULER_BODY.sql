@@ -91,7 +91,7 @@ END;
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
 -- Function       : isJobExecuting
--- Description    : Gets the Whether or not the job is currrently executing
+-- Description    : Whether or not the job is currently executing
 --
 -- Preconditions  :
 -- Postconditions :
@@ -354,15 +354,8 @@ END QuartLongTimeToEcDate;
 FUNCTION DateToEcDate(theDate DATE) RETURN DATE
 IS
 --</EC-DOC>
-CURSOR c_ts IS
-  SELECT ECDP_DATE_TIME.getTZoffsetInDays(tz_offset(pref_verdi)) AS x FROM t_preferanse WHERE pref_id = 'TIME_ZONE_REGION';
-  offset NUMBER;
 BEGIN
-    offset := 0;  -- Default value used if no valid entries found.
-  FOR cur IN  c_ts LOOP
-    offset := cur.x;
-  END LOOP;
-  RETURN theDate + (offset);
+   RETURN Ecdp_Timestamp.utc2local(NULL, theDate);
 END DateToEcDate;
 
 --These are all the same the just call CronPart with the appropriate index
@@ -737,19 +730,20 @@ FUNCTION isJobStateful(NAME VARCHAR2, sgroup VARCHAR2) RETURN VARCHAR2
 IS
  return_val NUMBER;
    CURSOR c_col_val IS
-   SELECT is_stateful col
+   SELECT is_nonconcurrent, is_update_data
    FROM qrtz_job_details
 WHERE job_name = NAME AND job_group = sgroup;
 
 BEGIN
    FOR cur_row IN c_col_val LOOP
-      return_val := cur_row.col;
+      return_val := cur_row.is_nonconcurrent + cur_row.is_update_data;
    END LOOP;
 
-IF(return_val = 0) THEN
-RETURN 'N';
-END IF;
-  RETURN 'Y';
+  IF (return_val = 2) THEN
+      RETURN 'Y';
+  END IF;
+
+  RETURN 'N';
 END;
 
 

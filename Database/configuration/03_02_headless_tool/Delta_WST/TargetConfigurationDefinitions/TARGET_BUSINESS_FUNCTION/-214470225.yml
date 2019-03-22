@@ -8,5 +8,6 @@ properties:
   BF_CODE: RP.0010
   NAME: Excel Report Designer
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.netscreens/xls_report_designer
 related: {}

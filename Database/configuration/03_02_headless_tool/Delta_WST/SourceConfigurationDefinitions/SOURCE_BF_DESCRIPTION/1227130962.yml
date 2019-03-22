@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0021
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/BANK' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/BANK' )
   DATA_LEVEL: 0.0
   DESCRIPTION: '<p>    <strong>Bank screen</strong>    is used to manage the Bank
     objects.<br>    Each Bank can hold one or more Bank Accounts and the Bank Accounts    connected

@@ -229,6 +229,7 @@ CURSOR c_attr_presentation_syntax_max(
                                          AND p.presentation_cntx = x.presentation_cntx
                                          AND p.property_code = x.property_code
                                          AND p.property_type = x.property_type
+                                         AND p.owner_cntx = x.owner_cntx
     WHERE p.class_name = p_class_name
     AND   p.attribute_name = p_attribute_name
     AND   p.property_type = p_property_type
@@ -261,6 +262,7 @@ CURSOR c_rel_presentation_syntax_max(
                                         AND p.presentation_cntx = x.presentation_cntx
                                         AND p.property_code = x.property_code
                                         AND p.property_type = x.property_type
+                                        AND p.owner_cntx = x.owner_cntx
     WHERE p.from_class_name = p_from_class_name
     AND   p.to_class_name = p_to_class_name
     AND   p.role_name = p_role_name

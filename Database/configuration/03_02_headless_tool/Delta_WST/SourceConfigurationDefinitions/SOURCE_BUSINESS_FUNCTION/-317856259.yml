@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.1062
   NAME: Maintain Library Calculation
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.bs.calc.screens/maintain_calculation/CALC_SCOPE/PUBLIC_SUB
 related: {}

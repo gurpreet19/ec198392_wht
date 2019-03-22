@@ -8,5 +8,6 @@ properties:
   BF_CODE: WR.0078
   NAME: Monthly Allocated Production Well Data
   PROFILE_CLASS_NAME: WELL
+  TARGET_CONDITION: null
   URL: /com.ec.prod.wr.screens/monthly_alloc_well_data/CLASS_NAME/PWEL_MTH_ALLOC
 related: {}

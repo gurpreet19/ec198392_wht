@@ -3,6 +3,8 @@ CREATE OR REPLACE PACKAGE BODY EcDp_RR_Revn_Mapping IS
 ** Package        :  EcDp_RR_Revn_Mapping, body part
 *****************************************************************/
 
+TYPE type_cursor IS REF CURSOR;
+
     FUNCTION GetMissingItems(
          p_object_codes                    T_TABLE_VARCHAR2
         ,p_journal_mapping_id              cost_mapping.object_id%TYPE
@@ -573,20 +575,23 @@ IS
     lv2_prec_documnet_key cont_doc.preceding_document_key%TYPE;
     lrec_je_cont cont_journal_entry%ROWTYPE;
     ld_reversal_date DATE;
+	lv2_only_manual VARCHAR2(32);
 
-    CURSOR c_doc_je_cont(cp_document_key VARCHAR2, cp_dataset VARCHAR2) IS
+    CURSOR c_doc_je_cont(cp_document_key VARCHAR2, cp_dataset VARCHAR2,cp_manual VARCHAR2) IS
     SELECT *
       FROM cont_journal_entry e
      WHERE e.document_key = cp_document_key
        AND e.dataset = cp_dataset
-       AND e.reversal_date IS NULL;
+       AND e.reversal_date IS NULL
+	   AND (NVL(MANUAL_IND,'N') = 'Y'
+	   OR  cp_manual = 'N');
 
 BEGIN
 
     lv2_prec_documnet_key := ec_cont_doc.preceding_document_key(p_document_key);
     ld_reversal_date := trunc(Ecdp_Timestamp.getCurrentSysdate,'DD');
-
-    FOR journal_entry IN c_doc_je_cont(lv2_prec_documnet_key, p_dataset)
+    lv2_only_manual := NVL(ec_ctrl_system_attribute.attribute_text(ec_cont_doc.period(p_document_key), 'JOURNAL_MAP_NO_REVERSALS', '<='),'N');
+    FOR journal_entry IN c_doc_je_cont(lv2_prec_documnet_key, p_dataset, lv2_only_manual)
     LOOP
         lrec_je_cont := journal_entry;
         lrec_je_cont.journal_entry_no := null;
@@ -2988,7 +2993,7 @@ RETURN varchar2 IS
              and nvl(cm.end_date,cp_daytime+1) > cp_daytime
              and cmss.daytime <= cp_daytime
              AND OBJECT_TYPE = 'OBJECT_LIST'
-             AND cmss.operator = 'IN'
+             AND cmss.operator in ('EXISTS', 'IN')
              AND cmss.src_code = list.object_code(+)
              AND list.object_code is null
              and src_type = cp_type
@@ -3471,7 +3476,7 @@ END GetSourceMappingData;
             if nvl(ecdp_objects.GetObjStartDate(ecdp_objects.GetObjIDFromCode(p_src_type,lo_all_codes(idx_all_codes))),p_daytime)> p_daytime then
               RAISE_APPLICATION_ERROR(-20001, 'The date given is before the state date of the object ('|| ecdp_objects.GetObjStartDate(ecdp_objects.GetObjIDFromCode(p_src_type,lo_all_codes(idx_all_codes))) || '), this is not allowed. Please correct');
             END IF;
-         INSERT INTO DV_OBJECT_LIST_SETUP (OBJECT_CODE, DAYTIME, GENERIC_OBJECT_CODE, SORT_ORDER, GENERIC_CLASS_NAME) VALUES (p_src_obj_list_name, p_daytime, lo_all_codes(idx_all_codes), 10, p_src_type);
+         INSERT INTO DV_OBJECT_LIST_SETUP (OBJECT_CODE, DAYTIME, GENERIC_OBJECT_CODE, SORT_ORDER, GENERIC_CLASS_NAME, CREATED_BY,CREATED_DATE) VALUES (p_src_obj_list_name, p_daytime, lo_all_codes(idx_all_codes), 10, p_src_type,ecdp_context.getAppUser,ecdp_date_time.getCurrentSysdate);
          END IF;
         END LOOP;
         END LOOP;
@@ -3519,7 +3524,7 @@ END GetSourceMappingData;
             if nvl(ecdp_objects.GetObjStartDate(ecdp_objects.GetObjIDFromCode(p_src_type,lo_all_codes(idx_all_codes))),p_daytime)> p_daytime then
               RAISE_APPLICATION_ERROR(-20001, 'The date given is before the state date of the object ('|| ecdp_objects.GetObjStartDate(ecdp_objects.GetObjIDFromCode(p_src_type,lo_all_codes(idx_all_codes))) || '), this is not allowed. Please correct');
             END IF;
-         INSERT INTO DV_OBJECT_LIST_SETUP (OBJECT_ID, DAYTIME, GENERIC_OBJECT_CODE, SORT_ORDER, GENERIC_CLASS_NAME) VALUES (p_src_obj_list_id, p_daytime, lo_all_codes_unhandled(idx_all_codes), 10, p_src_type);
+         INSERT INTO DV_OBJECT_LIST_SETUP (OBJECT_ID, DAYTIME, GENERIC_OBJECT_CODE, SORT_ORDER, GENERIC_CLASS_NAME, CREATED_BY, CREATED_DATE) VALUES (p_src_obj_list_id, p_daytime, lo_all_codes_unhandled(idx_all_codes), 10, p_src_type,ecdp_context.getAppUser,ecdp_date_time.getCurrentSysdate);
          END IF;
         END LOOP;
         END LOOP;
@@ -4308,5 +4313,65 @@ END;
 
 
 END;
+
+     FUNCTION GetExclusionValue(
+        p_journal_entry_no number,
+        p_column_name varchar2,
+        p_journal_entry_src varchar2,
+        p_daytime date)
+     return varchar2 is
+
+        lv_sql VARCHAR2(4000);
+        lv_return_value varchar2(4000);
+        LV_column_name varchar2(4000);
+        ln_journal_entry_no NUMBER;
+        lv_source varchar2(4);
+
+        lc_li_dist_pc                      type_cursor;
+
+     begin
+        ln_journal_entry_no := p_journal_entry_no;
+        lv_source := p_journal_entry_src;
+        LV_column_name:=p_column_name;
+
+        IF lv_source= 'EXCL' THEN
+           ln_journal_entry_no:=ec_cont_journal_entry_EXCL.ref_journal_entry_no(p_journal_entry_no);
+           lv_source:=ec_cont_journal_entry_EXCL.ref_journal_entry_src(p_journal_entry_no);
+        END IF;
+
+        IF p_column_name IN ('FIN_ACCOUNT_NAME','FIN_COST_CENTER_NAME','FIN_WBS_NAME','FIN_REVENUE_ORDER_NAME','COMPANY_NAME','CONTRACT_NAME') THEN
+           LV_column_name := REPLACE(LV_column_name,'_NAME','');
+           IF p_column_name!='FIN_WBS_NAME' THEN
+            LV_column_name:=LV_column_name||'_CODE';
+           END IF;
+        ELSIF LV_column_name LIKE 'ORIG_' ||'%' THEN
+              LV_column_name := REPLACE(LV_column_name,'ORIG_','');
+        ELSIF LV_column_name ='FIN_WBS_CODE' THEN
+              LV_column_name := 'FIN_WBS';
+
+        END IF;
+
+          lv_sql := 'SELECT ' || LV_column_name || ' FROM TV_' || lv_source ||'_JOURNAL_ENTRY WHERE journal_entry_no=' || ln_journal_entry_no;
+
+          begin
+
+          OPEN lc_li_dist_pc FOR
+              lv_sql;
+          LOOP
+              FETCH lc_li_dist_pc
+              INTO lv_return_value;
+              EXIT WHEN lc_li_dist_pc%NOTFOUND;
+           END LOOP;
+
+           exception when others then
+                lv_return_value:= null;
+           end;
+
+           IF p_column_name IN ('FIN_ACCOUNT_NAME','FIN_COST_CENTER_NAME','FIN_WBS_NAME','FIN_REVENUE_ORDER_NAME') THEN
+             lv_return_value := ecdp_objects.GetObjName(ecdp_objects.GetObjIDFromCode(LV_column_name,lv_return_value),p_DAYTIME);
+          END IF;
+
+        return lv_return_value;
+     END GetExclusionValue;
 
 END EcDp_RR_Revn_Mapping;

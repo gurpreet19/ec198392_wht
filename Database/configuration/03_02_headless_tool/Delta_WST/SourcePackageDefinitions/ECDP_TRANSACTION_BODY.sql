@@ -1214,6 +1214,14 @@ BEGIN
       ifac_unique_key_2,
       ifac_tt_conn_code,
       sales_order,
+      pricing_booking_label_1,
+      pricing_memo_label_1,
+      booking_local_label_1,
+      booking_group_label_1,
+      pricing_booking_label_2,
+      booking_local_label_2,
+      booking_group_label_2,
+      pricing_memo_label_2,
       value_1,
       value_2,
       value_3,
@@ -1328,6 +1336,14 @@ BEGIN
       p_ifac_unique_key_2,
       lrec_tt.ifac_tt_conn_code,
       p_sales_order,
+      GetPricingBookingLabel(p_document_id, p_daytime, p_trans_template_id),
+      GetPricingMemoLabel(p_document_id, p_daytime, p_trans_template_id),
+      GetBookingLocalLabel(p_document_id, p_daytime),
+      GetBookingGroupLabel(p_document_id, p_daytime),
+      GetPricingBookingCode(p_document_id, p_daytime, p_trans_template_id),
+	  GetBookingLocalCode(p_document_id, p_daytime),
+	  GetBookingGroupCode(p_document_id, p_daytime),
+      GetPricingMemoCode(p_document_id, p_daytime, p_trans_template_id),
       lrec_tt.value_1,
       lrec_tt.value_2,
       lrec_tt.value_3,
@@ -1357,6 +1373,10 @@ BEGIN
 
 
     lrec_t := ec_cont_transaction.row_by_pk(lv2_trans_id);
+    --Set Transaction Sort Order for the newly created Transaction
+    SetTransSortOrder(lrec_t, TRUE, p_user);
+    --Set the Transaction Name for the newly created Transaction
+    SetTransactionName(lrec_t,p_user,NULL);
 
     lv2_text_line := ec_transaction_tmpl_version.trans_text_before(p_trans_template_id, p_daytime, '<=');
     lv2_line_type := 'TRANS_TEXT_BEFORE';
@@ -1670,6 +1690,14 @@ BEGIN
         ,dist_code
         ,dist_type
         ,dist_object_type
+        ,pricing_booking_label_1
+        ,pricing_memo_label_1
+        ,booking_local_label_1
+        ,booking_group_label_1
+        ,pricing_booking_label_2
+        ,booking_local_label_2
+        ,booking_group_label_2
+        ,pricing_memo_label_2
         ,date_1
         ,date_2
         ,date_3
@@ -1803,6 +1831,14 @@ BEGIN
         ,lrec_trans.dist_code
         ,lrec_trans.dist_type
         ,lrec_trans.dist_object_type
+        ,GetPricingBookingLabel(p_document_id, p_daytime, lrec_trans.trans_template_id)
+        ,GetPricingMemoLabel(p_document_id, p_daytime, lrec_trans.trans_template_id)
+        ,GetBookingLocalLabel(p_document_id, p_daytime)
+        ,GetBookingGroupLabel(p_document_id, p_daytime)
+        ,GetPricingBookingCode(p_document_id, p_daytime, lrec_trans.trans_template_id)
+        ,GetBookingLocalCode(p_document_id, p_daytime)
+        ,GetBookingGroupCode(p_document_id, p_daytime)
+        ,GetPricingMemoCode(p_document_id, p_daytime, lrec_trans.trans_template_id)
         ,lrec_trans.date_1
         ,lrec_trans.date_2
         ,lrec_trans.date_3
@@ -3456,7 +3492,7 @@ BEGIN
               END IF;
 
               IF Trans.Carrier_Id IS NULL THEN
-                p_val_msg := 'Missing Vessel/Carrier.';
+                p_val_msg := 'Missing Carrier.';
                 p_val_code := 'VESSEL';
                 RAISE validation_exception;
               END IF;
@@ -4345,110 +4381,79 @@ END ValidateUOMs;
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-PROCEDURE DelTransaction(
-   p_object_id VARCHAR2,
-   p_transaction_key VARCHAR2
-   )
+FUNCTION DelTransaction(
+   p_transaction_key VARCHAR2,
+   p_child_only VARCHAR2 DEFAULT 'N'
+   ) RETURN VARCHAR2
 IS
-
-
-lrec_trans cont_transaction%ROWTYPE := ec_cont_transaction.row_by_pk(p_transaction_key);
-lrec_doc cont_document%ROWTYPE := ec_cont_document.row_by_pk(lrec_trans.document_key);
-
-document_not_open EXCEPTION;
-last_transaction EXCEPTION;
-transaction_date EXCEPTION;
-transaction_reversed EXCEPTION;
-
-ln_transaction_count NUMBER;
+    lrec_trans              cont_transaction%ROWTYPE    := ec_cont_transaction.row_by_pk(p_transaction_key);
+    lrec_doc                cont_document%ROWTYPE       := ec_cont_document.row_by_pk(lrec_trans.document_key);
+    lb_msg_ind              BOOLEAN                     := TRUE;
+    lv2_isDeletable         VARCHAR2(300);
+    ln_transaction_count    NUMBER;
 
 BEGIN
+    lv2_isDeletable := isTransactionDeletable(p_transaction_key, p_msg_ind => 'Y');
+    IF lv2_isDeletable <> 'Y' THEN
+        -- Transaction cannot be deleted
+        RETURN lv2_isDeletable;
+    ELSE
+        -- Delete transaction and subelements:
 
+        -- Delete from cont_line_item_dist_uom, since these are "detail" records of transaction
+        DELETE FROM cont_line_item_dist_uom t
+         WHERE t.line_item_key IN
+               (SELECT t2.line_item_key
+                  FROM cont_line_item_dist t2
+                 WHERE t2.transaction_key = lrec_trans.transaction_key);
 
-     SELECT count(*)
-       INTO ln_transaction_count
-       FROM cont_transaction t
-      WHERE t.document_key = lrec_trans.document_key;
+        -- Delete from cont_line_item_dist, since these are "detail" records of transaction
+        DELETE FROM cont_line_item_dist t
+         WHERE t.transaction_key = lrec_trans.transaction_key;
 
-     -- Do not delete last transaction
-     IF (ln_transaction_count < 2) THEN
-        RAISE last_transaction;
-     END IF;
+        -- Delete from cont_line_item, since these are "detail" records of transaction
+        DELETE FROM cont_line_item_uom t
+         WHERE t.line_item_key IN
+               (SELECT t2.line_item_key
+                  FROM cont_line_item t2
+                 WHERE t2.transaction_key = lrec_trans.transaction_key);
+        -- Delete from cont_line_item, since these are "detail" records of transaction
+        DELETE FROM cont_line_item t
+         WHERE t.transaction_key = lrec_trans.transaction_key;
 
-     -- Do not delete transaction unless document is open
-     IF (lrec_doc.document_level_code <> 'OPEN') THEN
-        RAISE document_not_open;
-     END IF;
+        -- Delete from cont_transaction_qty, since these are "attached" records of transaction
+        DELETE FROM cont_transaction_qty_uom t
+         WHERE t.transaction_key = lrec_trans.transaction_key;
 
-     -- If transaction has link to a reversed transaction do not delete
-     IF (lrec_trans.reversed_trans_key IS NOT NULL) THEN
-        RAISE transaction_reversed;
-     END IF;
+        -- Delete from cont_transaction_qty, since these are "attached" records of transaction
+        DELETE FROM cont_transaction_qty t
+         WHERE t.transaction_key = lrec_trans.transaction_key;
 
-         -- Delete from cont_line_item_dist_uom, since these are "detail" records of transaction
-         DELETE FROM cont_line_item_dist_uom t
-          WHERE t.line_item_key IN
-                (SELECT t2.line_item_key
-                   FROM cont_line_item_dist t2
-                  WHERE t2.transaction_key = lrec_trans.transaction_key);
-         -- Delete from cont_line_item_dist, since these are "detail" records of transaction
-         DELETE FROM cont_line_item_dist t
-          WHERE t.transaction_key = lrec_trans.transaction_key;
+        -- Delete from cont_trans_comments, since there are "attached" records of the transaction
+        DELETE FROM cont_trans_comments t
+         WHERE t.transaction_key = lrec_trans.transaction_key;
 
-         -- Delete from cont_line_item, since these are "detail" records of transaction
-         DELETE FROM cont_line_item_uom t
-          WHERE t.line_item_key IN
-                (SELECT t2.line_item_key
-                   FROM cont_line_item t2
-                  WHERE t2.transaction_key = lrec_trans.transaction_key);
-         -- Delete from cont_line_item, since these are "detail" records of transaction
-         DELETE FROM cont_line_item t
-          WHERE t.transaction_key = lrec_trans.transaction_key;
+         UPDATE ifac_sales_qty
+            SET transaction_key = NULL,
+                trans_key_set_ind = 'N',
+                ignore_ind = 'Y'
+          WHERE transaction_key = lrec_trans.transaction_key
+            AND contract_id = lrec_trans.object_id;
 
-         -- Delete from cont_transaction_qty, since these are "attached" records of transaction
-         DELETE FROM cont_transaction_qty_uom t
-          WHERE t.transaction_key = lrec_trans.transaction_key;
+         UPDATE ifac_cargo_value
+            SET transaction_key = NULL,
+                trans_key_set_ind = 'N',
+                ignore_ind = 'Y'
+          WHERE transaction_key = lrec_trans.transaction_key
+            AND contract_id = lrec_trans.object_id;
 
-         -- Delete from cont_transaction_qty, since these are "attached" records of transaction
-         DELETE FROM cont_transaction_qty t
-          WHERE t.transaction_key = lrec_trans.transaction_key;
+        -- Delete from cont_transaction, since this are the one to be deleted
+        IF (p_child_only = 'N') THEN
+            DELETE FROM cont_transaction t WHERE t.transaction_key = lrec_trans.transaction_key;
+        END IF;
+    END IF;
 
-         -- Delete from cont_trans_comments, since there are "attached" records of the transaction
-         DELETE FROM cont_trans_comments t
-          WHERE t.transaction_key = lrec_trans.transaction_key;
-
-          UPDATE ifac_sales_qty
-             SET transaction_key = NULL,
-                 trans_key_set_ind = 'N',
-                 ignore_ind = 'Y'
-           WHERE transaction_key = lrec_trans.transaction_key
-             AND contract_id = p_object_id;
-
-            UPDATE ifac_cargo_value
-               SET transaction_key = NULL,
-                   trans_key_set_ind = 'N',
-                   ignore_ind = 'Y'
-             WHERE transaction_key = lrec_trans.transaction_key
-               AND contract_id = p_object_id;
-
-
-         -- Delete from cont_transaction, since this are the one to be deleted
-         DELETE FROM cont_transaction t WHERE t.transaction_key = lrec_trans.transaction_key;
-
-EXCEPTION
-
-    WHEN document_not_open THEN
-                Raise_Application_Error(-20000,'Document not open, can not delete transaction');
-
-    WHEN last_transaction THEN
-                Raise_Application_Error(-20000,'Can not delete last transaction');
-
-    WHEN transaction_date THEN
-                Raise_Application_Error(-20000,'Transaction has been processed, can not delete transaction');
-
-    WHEN transaction_reversed THEN
-                Raise_Application_Error(-20000,'Can not delete a transaction which is reversal of another transaction');
-
+    RETURN lv2_isDeletable;
 END DelTransaction;
 
 PROCEDURE DelEmptyTransactions (
@@ -4503,34 +4508,29 @@ END DelEmptyTransactions;
 -- delete single transaction. return true/false indicating if it has been deleted or not.
 FUNCTION DelEmptyTransaction (
    p_transaction_key VARCHAR2
-   ) RETURN BOOLEAN
+   )
+RETURN BOOLEAN
 IS
-
-  lrec_tran cont_transaction%ROWTYPE := ec_cont_transaction.row_by_pk(p_transaction_key);
-  lb_deleted BOOLEAN := FALSE;
-
+  lrec_tran cont_transaction%ROWTYPE    := ec_cont_transaction.row_by_pk(p_transaction_key);
+  lb_deleted    BOOLEAN                 := FALSE;
+  lv2_feedback  VARCHAR2(300);
 BEGIN
+    IF lrec_tran.object_id IS NOT NULL THEN
+        IF IsTransactionEmpty(lrec_tran.transaction_key) THEN
+            lv2_feedback := DelTransaction(lrec_tran.transaction_key);
 
-  IF lrec_tran.object_id IS NOT NULL THEN
-
-    IF IsTransactionEmpty(lrec_tran.transaction_key) THEN
-
-       DelTransaction(lrec_tran.object_id, lrec_tran.transaction_key);
-       lb_deleted := TRUE;
-
-       -- Update VAT country and NO for document
-       EcDp_Document.UpdDocumentVat(lrec_tran.document_key, ec_cont_document.daytime(lrec_tran.document_key), NULL);
-
+            IF (lv2_feedback = 'Y') THEN
+                lb_deleted := TRUE;
+                -- Update VAT country and NO for document
+                EcDp_Document.UpdDocumentVat(lrec_tran.document_key, ec_cont_document.daytime(lrec_tran.document_key), NULL);
+            ELSE
+                Raise_Application_Error(-20000, lv2_feedback);
+            END IF;
+        END IF;
+    ELSE
+        lb_deleted := TRUE; -- gone missing..?
     END IF;
-
-  ELSE
-
-    lb_deleted := TRUE; -- gone missing..?
-
-  END IF;
-
-  RETURN lb_deleted;
-
+    RETURN lb_deleted;
 END DelEmptyTransaction;
 
 
@@ -4555,9 +4555,14 @@ IS
      WHERE ct.document_key = cp_document_key
        AND ct.preceding_trans_key IS NULL
        AND ct.reversed_trans_key IS NULL;
+
+    lv2_feedback VARCHAR(300);
 BEGIN
     FOR i_trans IN c_new_transactions(p_document_key) LOOP
-        DelTransaction(i_trans.object_id, i_trans.transaction_key);
+        lv2_feedback := DelTransaction(i_trans.transaction_key);
+        IF lv2_feedback <> 'Y' THEN
+            Raise_Application_Error(-20000, lv2_feedback);
+        END IF;
     END LOOP;
 END DelNewTransactions;
 
@@ -4592,17 +4597,11 @@ BEGIN
 
 END IsTransactionEmpty;
 
-
-
-
-
-
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
--- Procedure      : UpdTransExRate
--- Description    : Updates ex rate booking/other either using default rates from currency, or from user input in screen Process Transaction General.
---                  Last case collects rates from cont_transaction as these are stored on DAOSave prior to the action calling this procedure.
---                  NOTYET: Due to the user input situation, the update in cont_transaction is perhaps already done.
+-- FUNCTION       : UpdTransExRate
+-- Description    : This  will update all the exchange rates for selected transaction from exchange
+--                  rate table
 --
 -- Preconditions  :
 -- Postconditions :
@@ -4615,12 +4614,13 @@ END IsTransactionEmpty;
 --
 -- Behaviour      :
 -------------------------------------------------------------------------------------------------------------------------------------------
-PROCEDURE UpdTransExRate
+FUNCTION UpdTransExRate
  (p_transaction_key VARCHAR2,
   p_user VARCHAR2,
   p_pick_ex_rates_from_trans VARCHAR2 DEFAULT 'N'
   )
---</EC-DOC>
+RETURN VARCHAR2
+
 IS
 
 lrec_cont_transaction cont_transaction%ROWTYPE;
@@ -4633,19 +4633,27 @@ ln_ex_pricing_booking NUMBER;
 ln_ex_pricing_memo NUMBER;
 ln_ex_booking_local NUMBER;
 ln_ex_booking_group NUMBER;
+lv_end_user_message   VARCHAR2(1024);
+TYPE ln_rec IS RECORD (
+                       ex_pric_book VARCHAR2(100),
+                       ex_pric_memo VARCHAR2(100),
+                       ex_book_local VARCHAR2(100),
+                       ex_book_group VARCHAR2(100)
+                       );
+ln_rec_selected     ln_rec;
 
 BEGIN
 
 lrec_cont_transaction := ec_cont_transaction.row_by_pk(p_transaction_key);
+
+
 lv2_booking_curr := ec_cont_document.booking_currency_code(lrec_cont_transaction.document_key);
 lv2_memo_curr := ec_cont_document.memo_currency_code(lrec_cont_transaction.document_key);
 lv2_local_curr := EcDp_Contract_Setup.GetLocalCurrencyCode(ec_cont_transaction.object_id(p_transaction_key), lrec_cont_transaction.daytime);
 lv2_group_curr := ec_ctrl_system_attribute.attribute_text(lrec_cont_transaction.daytime, 'GROUP_CURRENCY_CODE', '<=');
 
      -- Bail out if reallocation. Gets exrates from preceding doc.
-     IF ec_cont_document.document_concept(ec_cont_transaction.document_key(p_transaction_key)) = 'REALLOCATION' THEN
-        RETURN;
-     END IF;
+    IF ec_cont_document.document_concept(ec_cont_transaction.document_key(p_transaction_key)) != 'REALLOCATION' THEN
 
      IF (p_pick_ex_rates_from_trans = 'N') THEN
 
@@ -4673,6 +4681,24 @@ lv2_group_curr := ec_ctrl_system_attribute.attribute_text(lrec_cont_transaction.
                                                                       lrec_cont_transaction.ex_booking_group_date,
                                                                       lrec_cont_transaction.ex_booking_group_id,
                                                                       lrec_cont_transaction.ex_booking_group_ts);
+  --Selecting no of rows to be updated.
+    BEGIN
+     SELECT ex_pricing_booking,
+            ex_pricing_memo,
+            ex_booking_local,
+            ex_booking_group
+      INTO ln_rec_selected
+      FROM cont_transaction
+      WHERE transaction_key = p_transaction_key;
+
+	  EXCEPTION
+        WHEN OTHERS THEN
+          ln_rec_selected.ex_pric_book := NULL;
+          ln_rec_selected.ex_pric_memo := NULL;
+          ln_rec_selected.ex_book_local := NULL;
+          ln_rec_selected.ex_book_group := NULL;
+       END;
+
 
      -- update with new currency data
        UPDATE cont_transaction
@@ -4682,6 +4708,8 @@ lv2_group_curr := ec_ctrl_system_attribute.attribute_text(lrec_cont_transaction.
               ex_booking_group   = CASE WHEN ln_ex_booking_group   IS NOT NULL THEN ln_ex_booking_group   ELSE ex_booking_group   END,
               last_updated_by    = p_user
         WHERE transaction_key = p_transaction_key;
+
+
      END IF;
 
      -- force recalculation of curr change
@@ -4690,17 +4718,29 @@ lv2_group_curr := ec_ctrl_system_attribute.attribute_text(lrec_cont_transaction.
             ,last_updated_by = p_user
      WHERE  transaction_key = p_transaction_key;
 
+      IF ln_ex_pricing_booking != NVL(ln_rec_selected.ex_pric_book,0) OR ln_ex_pricing_memo !=  NVL(ln_rec_selected.ex_pric_memo,0) OR
+        ln_ex_booking_local != NVL(ln_rec_selected.ex_book_local,0) OR ln_ex_booking_group !=  NVL(ln_rec_selected.ex_book_group,0) THEN
+
+      lv_end_user_message := 'Success.!'||chr(10)||'Rates updated for transaction key '|| p_transaction_key;
+
+     ELSE
+
+      lv_end_user_message := 'All rates are up to date.';
+
+      END IF;
+
+       RETURN lv_end_user_message;
+
+     ELSE RETURN NULL;
+
+     END IF;
+
 END UpdTransExRate;
 
---<EC-DOC>
+--</EC-DOC>
 ---------------------------------------------------------------------------------------------------
--- Procedure      : UpdTransExRate
--- Description    : Updates ex rate booking/other either using default rates from currency, or from user input in screen Process Transaction General.
---                  Last case collects rates from cont_transaction as these are stored on DAOSave prior to the action calling this procedure.
---                  NOTYET: Due to the user input situation, the update in cont_transaction is perhaps already done.
---
--- Preconditions  :
--- Postconditions :
+-- FUNCTION       : UpdTransAllExRate
+-- Description    : Updates all the exchange rates for all transaction from exchnage rate table within a particular document.
 --
 -- Using tables   : cont_transaction,cont_line_item
 --
@@ -4710,17 +4750,133 @@ END UpdTransExRate;
 --
 -- Behaviour      :
 -------------------------------------------------------------------------------------------------------------------------------------------
-PROCEDURE UpdSelectedTransExRate
- (p_transaction_key VARCHAR2,
-  p_user VARCHAR2,
-  p_pb_ind VARCHAR2, --pricing booking indicator
-  p_pm_ind VARCHAR2, --pricing memo indicator
-  p_bl_ind VARCHAR2, --booking local indicator
-  p_bg_ind VARCHAR2, --pricing group indicator
-  p_pick_ex_rates_from_trans VARCHAR2 DEFAULT 'N',
-  p_copy_selection VARCHAR2 DEFAULT 'Y'
-  )
+FUNCTION UpdTransAllExRate(p_doc_key                  VARCHAR2,
+                           p_user                     VARCHAR2,
+                           p_pick_ex_rates_from_trans VARCHAR2 DEFAULT 'N')
+  RETURN VARCHAR2
 --</EC-DOC>
+ IS
+
+  TYPE cont_doc_trans IS TABLE OF cont_transaction%ROWTYPE INDEX BY PLS_INTEGER;
+
+  lrec_cont_transaction cont_doc_trans;
+  lv2_booking_curr      CONT_DOCUMENT.BOOKING_CURRENCY_CODE%TYPE;
+  lv2_memo_curr         CONT_DOCUMENT.MEMO_CURRENCY_CODE%TYPE;
+  lv2_group_curr        CTRL_SYSTEM_ATTRIBUTE.ATTRIBUTE_TEXT%TYPE;
+  lv2_local_curr        VARCHAR2(32);
+  lv_end_user_message   VARCHAR2(1024);
+  ln_ex_pricing_booking NUMBER;
+  ln_ex_pricing_memo    NUMBER;
+  ln_ex_booking_local   NUMBER;
+  ln_ex_booking_group   NUMBER;
+
+BEGIN
+
+  SELECT * BULK COLLECT
+    INTO lrec_cont_transaction
+    FROM cont_transaction
+   WHERE document_key = p_doc_key;
+
+
+  FOR i IN lrec_cont_transaction.first .. lrec_cont_transaction.last LOOP
+
+    -- Bail out if reallocation. Gets exrates from preceding doc.
+
+    IF ec_cont_document.document_concept(ec_cont_transaction.document_key(lrec_cont_transaction(i).transaction_key)) !='REALLOCATION' THEN
+
+      IF (p_pick_ex_rates_from_trans = 'N') THEN
+
+        lv2_booking_curr := ec_cont_document.booking_currency_code(lrec_cont_transaction(i).document_key);
+        lv2_memo_curr    := ec_cont_document.memo_currency_code(lrec_cont_transaction(i).document_key);
+        lv2_local_curr   := EcDp_Contract_Setup.GetLocalCurrencyCode(ec_cont_transaction.object_id(lrec_cont_transaction(i).TRANSACTION_KEY),lrec_cont_transaction(i).daytime);
+        lv2_group_curr   := ec_ctrl_system_attribute.attribute_text(lrec_cont_transaction(i).daytime,'GROUP_CURRENCY_CODE','<=');
+
+        ln_ex_pricing_booking := ecdp_currency.GetExRateViaCurrency(lrec_cont_transaction(i).pricing_currency_code,
+                                                                    lv2_booking_curr,
+                                                                    null,
+                                                                    lrec_cont_transaction(i).ex_pricing_booking_date,
+                                                                    lrec_cont_transaction(i).ex_pricing_booking_id,
+                                                                    lrec_cont_transaction(i).ex_pricing_booking_ts);
+
+        ln_ex_pricing_memo := ecdp_currency.GetExRateViaCurrency(lrec_cont_transaction(i).pricing_currency_code,
+                                                                 lv2_memo_curr,
+                                                                 null,
+                                                                 lrec_cont_transaction(i).ex_pricing_memo_date,
+                                                                 lrec_cont_transaction(i).ex_pricing_memo_id,
+                                                                 lrec_cont_transaction(i).ex_pricing_memo_ts);
+
+        ln_ex_booking_local := ecdp_currency.GetExRateViaCurrency(lv2_booking_curr,
+                                                                  lv2_local_curr,
+                                                                  null,
+                                                                  lrec_cont_transaction(i).ex_booking_local_date,
+                                                                  lrec_cont_transaction(i).ex_booking_local_id,
+                                                                  lrec_cont_transaction(i).ex_booking_local_ts);
+
+        ln_ex_booking_group := ecdp_currency.GetExRateViaCurrency(lv2_booking_curr,
+                                                                  lv2_group_curr,
+                                                                  null,
+                                                                  lrec_cont_transaction(i).ex_booking_group_date,
+                                                                  lrec_cont_transaction(i).ex_booking_group_id,
+                                                                  lrec_cont_transaction(i).ex_booking_group_ts);
+
+      IF NVL(lrec_cont_transaction(i).ex_pricing_booking,0) != ln_ex_pricing_booking OR NVL(lrec_cont_transaction(i).ex_pricing_memo,0) != ln_ex_pricing_memo OR
+        NVL(lrec_cont_transaction(i).ex_booking_local,0) != ln_ex_booking_local OR NVL(lrec_cont_transaction(i).ex_booking_group,0) != ln_ex_booking_group THEN
+
+              -- update with new currency data
+              UPDATE cont_transaction
+                 SET ex_pricing_booking = CASE WHEN ln_ex_pricing_booking IS NOT NULL THEN ln_ex_pricing_booking ELSE lrec_cont_transaction(i).ex_pricing_booking END,
+                     ex_pricing_memo =    CASE WHEN ln_ex_pricing_memo    IS NOT NULL THEN ln_ex_pricing_memo    ELSE lrec_cont_transaction(i).ex_pricing_memo    END,
+                     ex_booking_local =   CASE WHEN ln_ex_booking_local   IS NOT NULL THEN ln_ex_booking_local   ELSE lrec_cont_transaction(i).ex_booking_local   END,
+                     ex_booking_group =   CASE WHEN ln_ex_booking_group   IS NOT NULL THEN ln_ex_booking_group   ELSE lrec_cont_transaction(i).ex_booking_group   END,
+                     last_updated_by  = p_user
+               WHERE document_key = p_doc_key
+               AND transaction_key = lrec_cont_transaction(i).transaction_key;
+
+               lv_end_user_message := 'Success.!'||chr(10)||'Rates Updated for all transactions of ' || p_doc_key;
+
+        ELSIF  lv_end_user_message IS NULL THEN
+
+          lv_end_user_message := 'All rates are up to date.';
+
+        END IF;
+
+      END IF;
+
+      -- force recalculation of curr change
+      UPDATE cont_line_item
+         SET rev_text        = 'Recalculation due to new exchange rates',
+             last_updated_by = p_user
+       WHERE document_key = p_doc_key
+       AND transaction_key = lrec_cont_transaction(i).transaction_key;
+
+    ELSE RETURN NULL;
+
+    END IF;
+
+  END LOOP;
+
+RETURN lv_end_user_message;
+
+END UpdTransAllExRate;
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- FUNCTION       : UpdSelectedTransExRate
+-- Description    : Updates selected exchnage rate for selected transaction from exchnage rate table within document.
+--
+-- Using tables   : cont_transaction,cont_line_item.
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+-------------------------------------------------------------------------------------------------------------------------------------------
+FUNCTION UpdSelectedTransExRate
+ (p_transaction_key VARCHAR2,
+  p_curr_from_to VARCHAR2,
+  p_user VARCHAR2,
+  p_pick_ex_rates_from_trans VARCHAR2 DEFAULT 'N'
+  ) RETURN VARCHAR2
+
 IS
 
 lrec_cont_transaction cont_transaction%ROWTYPE;
@@ -4729,11 +4885,16 @@ lv2_booking_curr VARCHAR2(32);
 lv2_memo_curr VARCHAR2(32);
 lv2_local_curr VARCHAR2(32);
 lv2_group_curr VARCHAR2(32);
-lv_document_key VARCHAR2(32);
+ln_ex_pricing_booking NUMBER;
+ln_ex_pricing_memo NUMBER;
+ln_ex_booking_local NUMBER;
+ln_ex_booking_group NUMBER;
+lv_end_user_message   VARCHAR2(1024);
 
 BEGIN
 
 lrec_cont_transaction := ec_cont_transaction.row_by_pk(p_transaction_key);
+
 
 lv2_booking_curr := ec_cont_document.booking_currency_code(lrec_cont_transaction.document_key);
 lv2_memo_curr := ec_cont_document.memo_currency_code(lrec_cont_transaction.document_key);
@@ -4741,87 +4902,408 @@ lv2_local_curr := EcDp_Contract_Setup.GetLocalCurrencyCode(ec_cont_transaction.o
 lv2_group_curr := ec_ctrl_system_attribute.attribute_text(lrec_cont_transaction.daytime, 'GROUP_CURRENCY_CODE', '<=');
 
      -- Bail out if reallocation. Gets exrates from preceding doc.
-     IF ec_cont_document.document_concept(ec_cont_transaction.document_key(p_transaction_key)) = 'REALLOCATION' THEN
-        RETURN;
-     END IF;
+    IF ec_cont_document.document_concept(ec_cont_transaction.document_key(p_transaction_key)) != 'REALLOCATION' THEN
 
-     IF (p_pick_ex_rates_from_trans = 'N') THEN
+      IF (p_pick_ex_rates_from_trans = 'N') THEN
 
-     -- update with new currency data
-
-       IF NVL(p_pb_ind,'N') = 'Y' THEN
-       UPDATE cont_transaction
-          SET ex_pricing_booking = ecdp_currency.GetExRateViaCurrency(lrec_cont_transaction.pricing_currency_code,
+       ln_ex_pricing_booking := ecdp_currency.GetExRateViaCurrency(lrec_cont_transaction.pricing_currency_code,
                                                                       lv2_booking_curr,
                                                                       null,
                                                                       lrec_cont_transaction.ex_pricing_booking_date,
                                                                       lrec_cont_transaction.ex_pricing_booking_id,
-                                                                      lrec_cont_transaction.ex_pricing_booking_ts),
-              last_updated_by    = p_user
-        WHERE transaction_key = p_transaction_key;
-       END IF;
-
-       IF NVL(p_pm_ind,'N') = 'Y' THEN
-       UPDATE cont_transaction
-          SET ex_pricing_memo   = ecdp_currency.GetExRateViaCurrency(lrec_cont_transaction.pricing_currency_code,
+                                                                      lrec_cont_transaction.ex_pricing_booking_ts);
+       ln_ex_pricing_memo := ecdp_currency.GetExRateViaCurrency(lrec_cont_transaction.pricing_currency_code,
                                                                       lv2_memo_curr,
                                                                       null,
                                                                       lrec_cont_transaction.ex_pricing_memo_date,
                                                                       lrec_cont_transaction.ex_pricing_memo_id,
-                                                                      lrec_cont_transaction.ex_pricing_memo_ts),
-              last_updated_by    = p_user
-        WHERE transaction_key = p_transaction_key;
-       END IF;
-
-       IF NVL(p_bl_ind,'N') = 'Y' THEN
-       UPDATE cont_transaction
-          SET ex_booking_local   = ecdp_currency.GetExRateViaCurrency(lv2_booking_curr,
+                                                                      lrec_cont_transaction.ex_pricing_memo_ts);
+       ln_ex_booking_local := ecdp_currency.GetExRateViaCurrency(lv2_booking_curr,
                                                                       lv2_local_curr,
                                                                       null,
                                                                       lrec_cont_transaction.ex_booking_local_date,
                                                                       lrec_cont_transaction.ex_booking_local_id,
-                                                                      lrec_cont_transaction.ex_booking_local_ts),
-              last_updated_by    = p_user
-        WHERE transaction_key = p_transaction_key;
-       END IF;
-
-       IF NVL(p_bg_ind,'N') = 'Y' THEN
-       UPDATE cont_transaction
-          SET ex_booking_group   = ecdp_currency.GetExRateViaCurrency(lv2_booking_curr,
+                                                                      lrec_cont_transaction.ex_booking_local_ts);
+       ln_ex_booking_group := ecdp_currency.GetExRateViaCurrency(lv2_booking_curr,
                                                                       lv2_group_curr,
                                                                       null,
                                                                       lrec_cont_transaction.ex_booking_group_date,
                                                                       lrec_cont_transaction.ex_booking_group_id,
-                                                                      lrec_cont_transaction.ex_booking_group_ts),
-              last_updated_by    = p_user
+                                                                      lrec_cont_transaction.ex_booking_group_ts);
+
+     -- update with new currency data
+
+    IF (p_curr_from_to LIKE 'Pricing%to Booking%') AND (ln_ex_pricing_booking != NVL(lrec_cont_transaction.ex_pricing_booking,0))  THEN
+
+      UPDATE cont_transaction
+        SET ex_pricing_booking = CASE WHEN ln_ex_pricing_booking IS NOT NULL THEN ln_ex_pricing_booking ELSE ex_pricing_booking END
         WHERE transaction_key = p_transaction_key;
-       END IF;
 
-     END IF;
+      lv_end_user_message :='Success.!' ||chr(10)|| p_curr_from_to || ' Rate Updated for Transaction Key '|| p_transaction_key;
 
-     IF (NVL(p_pb_ind,'N') = 'Y' OR NVL(p_pm_ind,'N') = 'Y' OR NVL(p_bl_ind,'N') = 'Y' OR NVL(p_bg_ind,'N') = 'Y') OR p_pick_ex_rates_from_trans <> 'N'  THEN
-       -- force recalculation of curr change
-       UPDATE cont_line_item
-       SET    rev_text = 'Recalculation due to new exchange rates'
-              ,last_updated_by = p_user
-       WHERE  transaction_key = p_transaction_key;
-     END IF;
+    ELSIF (p_curr_from_to LIKE 'Pricing%to Memo%') AND (ln_ex_pricing_memo != NVL(lrec_cont_transaction.Ex_Pricing_Memo,0)) THEN
 
-     IF p_copy_selection = 'Y' THEN
-       -- Copy selection setting to the other transactions
-        lv_document_key := ec_cont_transaction.document_key(p_transaction_key);
-       UPDATE cont_transaction ct
-          SET ct.pricing_to_booking_ind = NVL(p_pb_ind, 'N'),
-              ct.pricing_to_memo_ind    = NVL(p_pm_ind, 'N'),
-              ct.booking_to_local_ind   = NVL(p_bl_ind, 'N'),
-              ct.booking_to_group_ind   = NVL(p_bg_ind, 'N')
-        WHERE ct.transaction_key IN
-              (SELECT transaction_key
-                 FROM cont_transaction
-                WHERE document_key = lv_document_key);
-      END IF;
+      UPDATE cont_transaction
+         SET ex_pricing_memo = CASE WHEN ln_ex_pricing_memo IS NOT NULL THEN ln_ex_pricing_memo ELSE ex_pricing_memo END
+         WHERE transaction_key = p_transaction_key;
+
+        lv_end_user_message :='Success.!' ||chr(10)|| p_curr_from_to || ' Rate Updated for Transaction Key '|| p_transaction_key;
+
+     ELSIF (p_curr_from_to LIKE 'Booking%to Local%') AND (ln_ex_booking_local != NVL(lrec_cont_transaction.Ex_Booking_Local,0)) THEN
+
+      UPDATE cont_transaction
+         SET ex_booking_local = CASE WHEN ln_ex_booking_local IS NOT NULL THEN ln_ex_booking_local ELSE ex_booking_local END
+         WHERE transaction_key = p_transaction_key;
+
+     lv_end_user_message :='Success.!' ||chr(10)|| p_curr_from_to || ' Rate Updated for Transaction Key '|| p_transaction_key;
+
+    ELSIF(p_curr_from_to LIKE 'Booking%to Group%') AND (ln_ex_booking_group != NVL(lrec_cont_transaction.Ex_Booking_Group,0)) THEN
+
+      UPDATE cont_transaction
+         SET ex_booking_group = CASE WHEN ln_ex_booking_group IS NOT NULL THEN ln_ex_booking_group ELSE ex_booking_group END
+         WHERE transaction_key = p_transaction_key;
+
+    lv_end_user_message :='Success.!' ||chr(10)|| p_curr_from_to || ' Rate Updated for Transaction Key '|| p_transaction_key;
+
+    ELSIF lv_end_user_message IS NULL THEN
+
+    lv_end_user_message :='All rates are up to date.';
+
+    END IF;
+
+   END IF;
+
+
+     -- force recalculation of curr change
+     UPDATE cont_line_item
+     SET    rev_text = 'Recalculation due to new exchange rates'
+            ,last_updated_by = p_user
+     WHERE  transaction_key = p_transaction_key;
+
+     RETURN lv_end_user_message;
+
+       ELSE RETURN NULL;
+
+   END IF;
 
 END UpdSelectedTransExRate;
+
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- FUNCTION       : CopyTransExRate
+-- Description    : Copies all four exchange rates from selected transaction to all other transaction
+--                  within document on period document screen.
+--
+-- Using tables   : cont_transaction,cont_line_item.
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+-------------------------------------------------------------------------------------------------------------------------------------------
+FUNCTION CopyTransExRate
+ (p_transaction_key VARCHAR2,
+  p_user VARCHAR2
+  )
+  RETURN VARCHAR2
+
+IS
+
+lrec_cont_transaction cont_transaction%ROWTYPE;
+
+ln_ex_pricing_booking NUMBER := 0;
+ln_ex_pricing_memo NUMBER := 0;
+ln_ex_booking_local NUMBER := 0;
+ln_ex_booking_group NUMBER := 0;
+lv_end_user_message   VARCHAR2(1024);
+
+CURSOR c_allTrans(cp_document_key VARCHAR2, cp_transaction_key VARCHAR2) IS
+      SELECT *
+      FROM cont_transaction ct
+      WHERE ct.document_key = cp_document_key
+      AND ct.transaction_key <> cp_transaction_key
+      AND ct.preceding_trans_key IS NULL
+      AND ct.reversed_trans_key IS NULL;
+
+BEGIN
+
+lrec_cont_transaction := ec_cont_transaction.row_by_pk(p_transaction_key);
+
+FOR rec IN c_allTrans(lrec_cont_transaction.document_key, p_transaction_key) LOOP
+
+    --reset all these to null for each transaction
+    ln_ex_pricing_booking := NULL;
+    ln_ex_pricing_memo := NULL;
+    ln_ex_booking_local := NULL;
+    ln_ex_booking_group := NULL;
+
+    --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
+    IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
+    lrec_cont_transaction.ex_pricing_booking_date = rec.ex_pricing_booking_date AND
+    lrec_cont_transaction.ex_pricing_booking_ts = rec.ex_pricing_booking_ts AND
+    lrec_cont_transaction.ex_pricing_booking_dbc = rec.ex_pricing_booking_dbc  THEN
+
+       ln_ex_pricing_booking := lrec_cont_transaction.ex_pricing_booking;
+
+    END IF;
+
+    --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
+    IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
+    lrec_cont_transaction.ex_pricing_memo_date = rec.ex_pricing_memo_date AND
+    lrec_cont_transaction.ex_pricing_memo_ts = rec.ex_pricing_memo_ts AND
+    lrec_cont_transaction.ex_pricing_memo_dbc = rec.ex_pricing_memo_dbc  THEN
+
+       ln_ex_pricing_memo := lrec_cont_transaction.ex_pricing_memo;
+
+    END IF;
+
+     --verify transactions having the same Forex Source / Forex Time Scope / Forex Date Base Code
+    IF lrec_cont_transaction.ex_booking_local_date = rec.ex_booking_local_date AND
+    lrec_cont_transaction.ex_booking_local_ts = rec.ex_booking_local_ts AND
+    lrec_cont_transaction.ex_booking_local_dbc = rec.ex_booking_local_dbc  THEN
+
+       ln_ex_booking_local := lrec_cont_transaction.ex_booking_local ;
+
+    END IF;
+
+     --verify transactions having the same Forex Source / Forex Time Scope / Forex Date Base Code
+    IF lrec_cont_transaction.ex_booking_group_date = rec.ex_booking_group_date AND
+    lrec_cont_transaction.ex_booking_group_ts = rec.ex_booking_group_ts AND
+    lrec_cont_transaction.ex_booking_group_dbc = rec.ex_booking_group_dbc  THEN
+
+       ln_ex_booking_group := lrec_cont_transaction.ex_booking_group;
+
+    END IF;
+
+    IF   (ln_ex_pricing_booking IS NOT NULL AND ln_ex_pricing_booking != nvl(rec.ex_pricing_booking,0))
+      OR (ln_ex_pricing_memo IS NOT NULL AND ln_ex_pricing_memo != nvl(rec.ex_pricing_memo,0))
+      OR (ln_ex_booking_local IS NOT NULL AND ln_ex_booking_local != nvl(rec.ex_booking_local,0))
+      OR (ln_ex_booking_group IS NOT NULL  AND ln_ex_booking_group != nvl(rec.ex_booking_group,0)) THEN
+
+        UPDATE cont_transaction
+          SET ex_pricing_booking = NVL(ln_ex_pricing_booking, ex_pricing_booking),
+              ex_pricing_memo   = NVL(ln_ex_pricing_memo, ex_pricing_memo),
+              ex_booking_local   = NVL(ln_ex_booking_local, ex_booking_local),
+              ex_booking_group   = NVL(ln_ex_booking_group, ex_booking_group),
+              last_updated_by    = p_user
+         WHERE transaction_key = rec.transaction_key;
+
+        -- force recalculation of curr change
+         UPDATE cont_line_item
+         SET    rev_text = 'Recalculation due to new exchange rates'
+                ,last_updated_by = p_user
+         WHERE transaction_key = rec.transaction_key;
+
+         lv_end_user_message := 'Success.!'||chr(10)|| 'All Rates of transaction key '|| p_transaction_key ||' copied to all other transactions.';
+
+     ELSIF lv_end_user_message IS NULL THEN
+
+         lv_end_user_message:= 'All rates are up to date.';
+
+     END IF;
+
+   END LOOP;
+
+     RETURN lv_end_user_message;
+
+END CopyTransExRate;
+
+
+--<EC-DOC>
+-------------------------------------------------------------------------------------
+-- FUNCTION       : CopyRateOtherTrans
+-- Description    : Copies Selected exchange(pricing to booking/pricing to memo/booking to local
+--                  /booking to group) rate of transaction to all other transaction in document.
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   : cont_transaction,cont_line_item.
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+
+--------------------------------------------------------------------------------------
+FUNCTION CopyRateOtherTrans (
+   p_transaction_key VARCHAR2,
+   p_curr_from_to    VARCHAR2,
+   p_user            VARCHAR2
+   )RETURN VARCHAR2
+IS
+
+lrec_cont_transaction cont_transaction%ROWTYPE;
+
+ln_ex_pricing_booking NUMBER := 0;
+ln_ex_pricing_memo NUMBER := 0;
+ln_ex_booking_local NUMBER := 0;
+ln_ex_booking_group NUMBER := 0;
+lv_end_user_message VARCHAR2(2000);
+
+CURSOR c_allTrans(cp_document_key VARCHAR2, cp_transaction_key VARCHAR2) IS
+
+      SELECT *
+      FROM cont_transaction ct
+      WHERE ct.document_key = cp_document_key
+      AND ct.transaction_key <> cp_transaction_key
+      AND ct.preceding_trans_key IS NULL
+      AND ct.reversed_trans_key IS NULL;
+
+BEGIN
+
+  lrec_cont_transaction := ec_cont_transaction.row_by_pk(p_transaction_key);
+
+  FOR rec IN c_allTrans(lrec_cont_transaction.document_key, p_transaction_key) LOOP
+
+     IF p_curr_from_to LIKE 'Pricing%to Booking%' THEN
+
+       --reset all these to null for each transaction
+       ln_ex_pricing_booking := NULL;
+
+       --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
+       IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
+          lrec_cont_transaction.ex_pricing_booking_date = rec.ex_pricing_booking_date AND
+          lrec_cont_transaction.ex_pricing_booking_ts = rec.ex_pricing_booking_ts AND
+          lrec_cont_transaction.ex_pricing_booking_dbc = rec.ex_pricing_booking_dbc  THEN
+
+           ln_ex_pricing_booking := lrec_cont_transaction.ex_pricing_booking;
+
+       END IF;
+
+       IF ln_ex_pricing_booking IS NOT NULL AND nvl(rec.ex_pricing_booking,0) != ln_ex_pricing_booking THEN
+
+          UPDATE cont_transaction
+            SET ex_pricing_booking = NVL(ln_ex_pricing_booking, ex_pricing_booking),
+                last_updated_by    = p_user
+           WHERE transaction_key = rec.transaction_key;
+
+          -- force recalculation of curr change
+           UPDATE cont_line_item
+           SET    rev_text = 'Recalculation due to new exchange rates'
+                  ,last_updated_by = p_user
+           WHERE transaction_key = rec.transaction_key;
+
+           lv_end_user_message := 'Success.!'||chr(10)||p_curr_from_to || ' Rate of transactions key '|| p_transaction_key || ' is Copied to all other transactions';
+
+       END IF;
+
+      END IF;
+
+
+      IF p_curr_from_to LIKE  'Pricing%to Memo%' THEN
+
+       --reset all these to null for each transaction
+       ln_ex_pricing_booking := NULL;
+
+       --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
+       IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
+          lrec_cont_transaction.ex_pricing_memo_date = rec.ex_pricing_memo_date AND
+          lrec_cont_transaction.ex_pricing_memo_ts = rec.ex_pricing_memo_ts AND
+          lrec_cont_transaction.ex_pricing_memo_dbc = rec.ex_pricing_memo_dbc  THEN
+
+           ln_ex_pricing_memo := lrec_cont_transaction.ex_pricing_memo;
+
+       END IF;
+
+       IF ln_ex_pricing_memo IS NOT NULL AND nvl(rec.ex_pricing_memo,0) != ln_ex_pricing_memo THEN
+
+          UPDATE cont_transaction
+            SET ex_pricing_memo = NVL(ln_ex_pricing_memo, ex_pricing_memo),
+                last_updated_by    = p_user
+           WHERE transaction_key = rec.transaction_key;
+
+          -- force recalculation of curr change
+           UPDATE cont_line_item
+           SET    rev_text = 'Recalculation due to new exchange rates'
+                  ,last_updated_by = p_user
+           WHERE transaction_key = rec.transaction_key;
+
+           lv_end_user_message := 'Success.!'||chr(10)||p_curr_from_to || ' Rate of transactions key '|| p_transaction_key || ' is Copied to all other transactions';
+
+       END IF;
+
+      END IF;
+
+      IF p_curr_from_to LIKE  'Booking%to Local%' THEN
+
+       --reset all these to null for each transaction
+       ln_ex_booking_local := NULL;
+
+       --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
+       IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
+          lrec_cont_transaction.ex_booking_local_date = rec.ex_booking_local_date AND
+          lrec_cont_transaction.ex_booking_local_ts = rec.ex_booking_local_ts AND
+          lrec_cont_transaction.ex_booking_local_dbc = rec.ex_booking_local_dbc  THEN
+
+           ln_ex_booking_local := lrec_cont_transaction.ex_booking_local;
+
+       END IF;
+
+       IF ln_ex_booking_local IS NOT NULL AND nvl(rec.ex_booking_local,0) != ln_ex_booking_local THEN
+
+          UPDATE cont_transaction
+            SET ex_booking_local = NVL(ln_ex_booking_local, ex_booking_local),
+                last_updated_by    = p_user
+           WHERE transaction_key = rec.transaction_key;
+
+          -- force recalculation of curr change
+           UPDATE cont_line_item
+           SET    rev_text = 'Recalculation due to new exchange rates'
+                  ,last_updated_by = p_user
+           WHERE transaction_key = rec.transaction_key;
+
+           lv_end_user_message := 'Success.!'||chr(10)||p_curr_from_to || ' Rate of transactions key '|| p_transaction_key || ' is Copied to all other transactions';
+
+       END IF;
+
+      END IF;
+
+      IF p_curr_from_to LIKE  'Booking%to Group%' THEN
+
+       --reset all these to null for each transaction
+       ln_ex_booking_group := NULL;
+
+       --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
+       IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
+          lrec_cont_transaction.ex_booking_group_date = rec.ex_booking_group_date AND
+          lrec_cont_transaction.ex_booking_group_ts = rec.ex_booking_group_ts AND
+          lrec_cont_transaction.ex_booking_group_dbc = rec.ex_booking_group_dbc  THEN
+
+           ln_ex_booking_group := lrec_cont_transaction.ex_booking_group;
+
+       END IF;
+
+       IF ln_ex_booking_group IS NOT NULL AND nvl(rec.ex_booking_group,0) != ln_ex_booking_group THEN
+
+          UPDATE cont_transaction
+            SET ex_booking_group = NVL(ln_ex_booking_group, ex_booking_group),
+                last_updated_by    = p_user
+           WHERE transaction_key = rec.transaction_key;
+
+          -- force recalculation of curr change
+           UPDATE cont_line_item
+           SET    rev_text = 'Recalculation due to new exchange rates'
+                  ,last_updated_by = p_user
+           WHERE transaction_key = rec.transaction_key;
+
+           lv_end_user_message := 'Success.!'||chr(10)||p_curr_from_to || ' Rate of transactions key '|| p_transaction_key || ' is Copied to all other transactions';
+
+       END IF;
+
+      END IF;
+
+      IF lv_end_user_message IS NULL THEN
+
+           lv_end_user_message := 'All rates are up to date.';
+
+      END IF;
+
+  END LOOP;
+
+     RETURN lv_end_user_message;
+
+END CopyRateOtherTrans;
+
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
@@ -5315,6 +5797,14 @@ IS
 BEGIN
 
     IF lrec_document.document_level_code <> 'OPEN' THEN
+
+        RETURN 'false';
+
+    ELSIF lrec_document.reversal_ind = 'Y' THEN
+
+        RETURN 'false';
+
+    ELSIF lrec_document.DOCUMENT_CONCEPT = 'REALLOCATION' THEN
 
         RETURN 'false';
 
@@ -6621,6 +7111,9 @@ IS
   ld_object_start_date    DATE;
   missing_country         EXCEPTION;
   lb_point_updated        BOOLEAN := FALSE;
+  lv2_business_unit_id    VARCHAR2(32) := NULL;
+  lv2_document_key        VARCHAR2(32) := NULL;
+  lv2_document_date       DATE;
 
   CURSOR c_ins(cp_code_or_name VARCHAR2, cp_code VARCHAR2, cp_daytime DATE) IS
      SELECT c.object_id, c.object_code
@@ -6631,8 +7124,8 @@ IS
             OR REPLACE(UPPER(c.object_code),' ', '_') = cp_code
             OR cv.name = cp_code_or_name);
 
-CURSOR c_min_DP IS
-     SELECT min(start_date) start_date FROM delivery_point;
+CURSOR c_min_DP (cp_business_unit_id VARCHAR2) IS
+     SELECT min(daytime) start_date FROM DELPNT_VERSION WHERE business_unit_id=cp_business_unit_id;
 
 CURSOR c_min_contract IS
      SELECT min(start_date) start_date FROM contract;
@@ -6640,6 +7133,12 @@ CURSOR c_min_contract IS
 BEGIN
 
   IF p_delivery_point IS NOT NULL THEN
+
+    lv2_document_key := ec_cont_transaction.document_key(p_transaction_key);
+
+    lv2_document_date := ec_cont_document.document_date(ec_cont_transaction.document_key(p_transaction_key));
+
+    lv2_business_unit_id := ec_contract_area_version.business_unit_id(ec_contract_area.object_id_by_uk(ec_CONT_DOCUMENT.contract_area_code(lv2_document_key)),lv2_document_date,'<=');
 
     lv2_delivery_point_code := REPLACE(UPPER(SUBSTR(p_delivery_point,1,32)),' ', '_');
 
@@ -6651,7 +7150,7 @@ BEGIN
 
     IF lv2_object_id IS NULL THEN
 
-        FOR rsmin_DP IN c_min_DP LOOP
+        FOR rsmin_DP IN c_min_DP(lv2_business_unit_id) LOOP
             ld_object_start_date := rsmin_DP.start_date;
         END LOOP;
 
@@ -6661,16 +7160,31 @@ BEGIN
            END LOOP;
         END IF;
 
+        ld_object_start_date := NVL(ld_object_start_date,to_date('1900-01-01','YYYY-MM-DD'));
+
         INSERT INTO delivery_point
           (object_code, start_date, created_by, created_date)
         VALUES
-          (lv2_delivery_point_code, NVL(ld_object_start_date,to_date('1900-01-01','YYYY-MM-DD')), p_user_id, p_daytime)
+          (lv2_delivery_point_code, ld_object_start_date, p_user_id, ecdp_date_time.getCurrentsysdate)
         RETURNING object_id INTO lv2_object_id;
 
         INSERT INTO delpnt_version
-          (object_id, daytime, name, country_id, created_by, created_date)
+          (object_id, daytime, name, country_id, business_unit_id, created_by, created_date)
         VALUES
-          (lv2_object_id, NVL(ld_object_start_date,to_date('1900-01-01','YYYY-MM-DD')), p_delivery_point, p_destination_country_id, p_user_id, p_daytime);
+          (lv2_object_id, ld_object_start_date, p_delivery_point, p_destination_country_id, lv2_business_unit_id, p_user_id, ecdp_date_time.getCurrentsysdate);
+
+        EcDp_nav_model_obj_relation.Syncronize(
+           'INSERTING',
+           'BUSINESS_UNIT',
+           'DELIVERY_POINT',
+           'BUSINESS_UNIT',
+           lv2_business_unit_id,
+           NULL,
+           lv2_object_id,
+           ld_object_start_date,
+           ld_object_start_date,
+           ld_object_start_date,
+           ld_object_start_date);
 
           UPDATE cont_transaction t
              SET t.delivery_point_code = ec_delivery_point.object_code(lv2_object_id),
@@ -7964,15 +8478,15 @@ END triggerIULogic;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
--- Function       : isTransactionEditable
--- Description    : Function to return whether a transaction is editable or not (Y or N)
+-- Function       : isTransEditableOrDeletable
+-- Description    : Function to return whether a transaction is editable or deletable (Y or N).
 --
 -- Preconditions  : Transaction key must be provided.
 -- Postconditions :
 --
 -- Using tables   : cont_transaction
 --
--- Using functions: ec_cont_transaction.
+-- Using packages : ec_cont_transaction, ecdp_document, ec_cont_document, ec_ctrl_system_attribute, ue_cont_transaction.
 --
 -- Configuration
 -- required       :
@@ -7980,76 +8494,103 @@ END triggerIULogic;
 -- Behaviour      :
 --
 ---------------------------------------------------------------------------------------------------
-FUNCTION isTransactionEditable(
-         p_transaction_key VARCHAR2,
-         p_level VARCHAR2 DEFAULT 'TRANS') -- Alternatively FIELD or COMPANY
+FUNCTION isTransEditableOrDeletable(
+    p_operation         VARCHAR2,
+    p_transaction_key   VARCHAR2,
+    p_level             VARCHAR2,
+    p_msg           OUT VARCHAR2)
 RETURN VARCHAR2
 --</EC-DOC>
 IS
+    CURSOR c_trans_count IS
+    SELECT count(*) cnt
+      FROM cont_transaction t
+     WHERE t.document_key = ec_cont_transaction.document_key(p_transaction_key);
 
-  lv2_editable VARCHAR2(1) := 'Y';
-  lrec_ct cont_transaction%rowtype := ec_cont_transaction.row_by_pk(p_transaction_key);
-  lv2_doc_key VARCHAR2(32) := lrec_ct.document_key;
-
+    lv2_flag        VARCHAR2(1)     := 'Y';
+    lrec_ct         cont_transaction%rowtype := ec_cont_transaction.row_by_pk(p_transaction_key);
+    lv2_op_txt      VARCHAR2(10);
+    lv2_msg         VARCHAR2(200)   := 'Transaction can be deleted.';
+    lv2_msg_ue_pre  VARCHAR2(200);
+    lv2_msg_ue_post VARCHAR2(200);
+    ln_cnt          NUMBER;
 BEGIN
 
-  IF ue_cont_transaction.isisTransactionEditableUEE = 'TRUE' THEN
+    lv2_op_txt :=
+        CASE p_operation
+            WHEN 'EDIT'     THEN 'edited'
+            WHEN 'DELETE'   THEN 'deleted'
+        END;
+    --
+    -- RULES HIERARCHY PROCESSING -> Trying to oppose editable/deletable:
+    IF lv2_flag = 'Y' THEN
+        -- Preprocessing User-exit has returned TRUE - continue...
+        IF ecdp_document.isDocumentEditable(lrec_ct.document_key) = 'N' THEN
+            -- If the document is not editable then the transaction inherits this
+            -- If Document or Transaction is reversed => Document/Transaction is NOT open => Not editable/deletable
+            lv2_flag := 'N';
+            lv2_msg  := 'The parent document is not open hence the transaction cannot be ' || lv2_op_txt || '.';
 
-     lv2_editable := ue_cont_transaction.isTransactionEditable(p_transaction_key,p_level);
+        ELSIF lrec_ct.reversal_ind = 'Y' THEN
+            -- The transaction is a reversal => Not editable/deletable
+            lv2_flag := 'N';
+            lv2_msg  := 'This transaction is a Reversal and cannot be ' || lv2_op_txt || '.';
 
-  ELSE
+        ELSIF (lrec_ct.ppa_trans_code IS NOT NULL) THEN
+            -- If transaction is used for Prior Period Price Adjustments => Not editable/deletable
+            lv2_flag := 'N';
+            lv2_msg  := 'This transaction is used for a Prior Period Price Adjustments and cannot be ' || lv2_op_txt || '.';
 
-    IF ue_cont_transaction.isisTransactionEditablePreUEE = 'TRUE' THEN
+        ELSIF p_operation = 'EDIT'
+            AND isTransactionInterfaced(p_transaction_key) = 'Y'
+            AND NVL(ec_ctrl_system_attribute.attribute_text(lrec_ct.daytime,'EDIT_INTERFACED_DOCS','<='),'N') != 'Y' THEN
+            -- If operation is E AND transaction is interfaced AND system attribute EDIT_INTERFACED_DOCS is NOT Y => Not editable/deletable
+            lv2_flag := 'N';
+            lv2_msg  := 'This is an interfaced transaction and cannot be ' || lv2_op_txt || '.';
 
-       lv2_editable := ue_cont_transaction.isTransactionEditablePre(p_transaction_key,p_level);
+        ELSIF p_operation = 'DELETE'
+            AND isTransactionInterfaced(p_transaction_key) = 'Y' THEN
+            -- If transaction is interfaced => Not editable/deletable
+            lv2_flag := 'N';
+            lv2_msg  := 'This is an interfaced transaction and cannot be ' || lv2_op_txt || '.';
 
+        ELSIF ec_cont_document.document_concept(lrec_ct.document_key) = 'REALLOCATION' THEN
+             -- Reallocations are not editable on transaction level, only on field and company level
+            IF p_level = 'TRANS' THEN
+                lv2_flag := 'N';
+                lv2_msg  := 'Reallocations cannot be ' || lv2_op_txt || ' on Transaction level, only on Field/Profit Center level';
+
+            ELSIF p_level = 'COMPANY' THEN
+                lv2_flag := 'N';
+                lv2_msg  := 'Reallocations cannot be ' || lv2_op_txt || ' on Company level, only on Field/Profit Center level';
+            --ELSIF p_level = 'FIELD' THEN
+            --    lv2_flag := 'Y';
+            END IF;
+
+        ELSIF p_operation = 'DELETE' THEN
+            -- A Document must have at least one transaction i.e. the last transaction cannot be deleted
+            -- (This rule is moved in here from DelTransaction)
+            FOR rec IN c_trans_count LOOP
+                ln_cnt := rec.cnt;
+            END LOOP ;
+            IF ln_cnt < 2 THEN
+                lv2_flag := 'N';
+                lv2_msg  := 'The last transaction on a document cannot be ' || lv2_op_txt || '.';
+            END IF;
+
+        ELSE
+            NULL; -- lv2_flag is already initialized to Y
+        END IF;
     END IF;
 
-    -- Check if the transaction is a reversal
-    lv2_editable := CASE lrec_ct.reversal_ind WHEN 'Y' THEN 'N' ELSE 'Y' END;
+    -- Finalize
+    p_msg := lv2_msg; -- Set OUT parameter
+    RETURN lv2_flag;
 
-    -- Check if the transaction is the result of interfaced quantity
-
-    IF lv2_editable = 'Y' and nvl(ec_ctrl_system_attribute.attribute_text(lrec_ct.daytime,'EDIT_INTERFACED_DOCS','<='),'N') != 'Y'
-      THEN
-       lv2_editable := CASE isTransactionInterfaced(p_transaction_key) WHEN 'Y' THEN 'N' ELSE 'Y' END;
-    END IF;
-
-    -- Check if the document is editable, if so the transaction inherits this.
-    IF lv2_editable = 'Y' THEN
-       lv2_editable := ecdp_document.isDocumentEditable(lv2_doc_key);
-    END IF;
-
-    -- Reallocations are not editable on transaction level, only on field and company level
-    IF lv2_editable = 'Y' THEN
-       IF ec_cont_document.document_concept(lv2_doc_key) = 'REALLOCATION' THEN
-         IF p_level = 'TRANS' THEN
-           lv2_editable := 'N';
-         ELSIF p_level IN ('FIELD','COMPANY') THEN
-           lv2_editable := 'Y';
-         END IF;
-       END IF;
-    END IF;
-
-    IF lv2_editable = 'Y' THEN
-       IF lrec_ct.ppa_trans_code IS NOT NULL THEN
-           lv2_editable := 'N';
-       END IF;
-    END IF;
-
-    IF ue_cont_transaction.isisTransactionEditablePostUEE = 'TRUE' THEN
-
-       lv2_editable := ue_cont_transaction.isTransactionEditablePost(p_transaction_key,p_level);
-
-    END IF;
-
-    END IF;
-
-  RETURN lv2_editable;
-
-END isTransactionEditable;
+END isTransEditableOrDeletable;
 
 
+---------------------------------------------------------------------------------------------------
 FUNCTION isTransactionInterfaced(p_transaction_key VARCHAR2)
 RETURN VARCHAR2
 IS
@@ -8069,6 +8610,172 @@ BEGIN
   RETURN lv2_found;
 
 END isTransactionInterfaced;
+
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isTransactionEditable
+-- Description    : Function to return whether a transaction is editable or not (Y or N)
+--                  If p_msg_ind is 'Y' then a user friendly message is returned instead of N.
+--                  Use arrow notation to set the p_msg_ind if p_level is to use the default value:
+--                  isTransactionEditable ('SomeTransKey', p_msg_ind => 'Y')
+--
+-- Preconditions  : Transaction key must be provided.
+-- Postconditions :
+--
+-- Using tables   : cont_transaction
+--
+-- Using functions: ec_cont_transaction.
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+---------------------------------------------------------------------------------------------------
+FUNCTION isTransactionEditable(
+        p_transaction_key VARCHAR2,
+        p_level VARCHAR2 DEFAULT 'TRANS',   -- Alternatively FIELD or COMPANY
+        p_msg_ind VARCHAR2 DEFAULT 'N')     -- When 'Y' => Returns user friendly message instead of 'N' when result is false ('N')
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+    lv2_flag        VARCHAR2(1)     := 'Y';
+    lv2_op          VARCHAR2(10)    := 'EDIT';
+    lv2_op_txt      VARCHAR2(10)    := 'edited';
+    lv2_msg         VARCHAR2(200);
+    lv2_msg_ue      VARCHAR2(200);
+    lv2_msg_ue_pre  VARCHAR2(200);
+    lv2_msg_main    VARCHAR2(1000);
+    lv2_msg_ue_post VARCHAR2(200);
+    lv2_retval      VARCHAR2(200);
+BEGIN
+    IF ue_cont_transaction.isIsTransEditableUEE = 'TRUE' THEN
+        -- Run insteadOf-UserExit
+        lv2_flag := ue_cont_transaction.isTransactionEditable(p_transaction_key, p_level, lv2_msg_ue);
+        -- Set default or custom message
+        IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+            lv2_msg := NVL(lv2_msg_ue,'This transaction is evaluated by an InsteadOf User-exit and the result is that the transaction cannot be ' || lv2_op_txt || '. ');
+        END IF;
+    ELSE
+        IF ue_cont_transaction.isIsTransEditablePreUEE = 'TRUE' THEN
+            -- Run PRE-processing-UserExit
+            lv2_flag := ue_cont_transaction.isTransactionEditablePre(p_transaction_key, p_level, lv2_msg_ue_pre);
+            -- Set default or custom message
+            IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+                lv2_msg := NVL(lv2_msg_ue_pre,'This transaction is evaluated by a Preprocessing User-exit and the result is that the transaction cannot be ' || lv2_op_txt || '. ');
+            END IF;
+        END IF;
+        --
+        IF lv2_flag = 'Y' THEN
+            -- Run SHARED rules between Editable and Deletable
+            lv2_flag := isTransEditableOrDeletable (lv2_op, p_transaction_key, p_level, lv2_msg_main);
+            lv2_msg  := lv2_msg_main;
+        END IF;
+        --
+        IF ue_cont_transaction.isIsTransEditablePostUEE = 'TRUE' THEN
+            -- Run POST-processing-UserExit
+            lv2_flag := ue_cont_transaction.isTransactionEditablePost(p_transaction_key, p_level, lv2_flag, lv2_msg_ue_post);
+            -- Set default or custom message
+            IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+                lv2_msg := NVL(lv2_msg_ue_pre,'This transaction is evaluated by a Postprocessing User-exit and the result is that the transaction cannot be ' || lv2_op_txt || '. ');
+            END IF;
+        END IF;
+    END IF;
+
+    -- Evaluate and set the return value
+    lv2_retval :=
+        CASE
+            WHEN lv2_flag = 'Y' AND p_msg_ind <> 'Y' THEN lv2_flag
+            WHEN lv2_flag = 'Y'                      THEN ''
+            WHEN lv2_flag = 'N' AND p_msg_ind <> 'Y' THEN lv2_flag
+            ELSE                                          '[ErrMsg]' || lv2_msg
+        END;
+    RETURN lv2_retval;
+END isTransactionEditable;
+
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isTransactionDeletable
+-- Description    : Function to return whether a transaction is deletable or not (Y or N)
+--                  If p_msg_ind is 'Y' then a user friendly message is returned instead of N.
+--                  Use arrow notation to set the p_msg_ind if p_level is to use the default value:
+--                  isTransactionEditable ('SomeTransKey', p_msg_ind => 'Y')
+--
+-- Preconditions  : Transaction key must be provided.
+-- Postconditions :
+--
+-- Using tables   : cont_transaction
+--
+-- Using functions: ec_cont_transaction.
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+---------------------------------------------------------------------------------------------------
+FUNCTION isTransactionDeletable(
+        p_transaction_key VARCHAR2,
+        p_level VARCHAR2 DEFAULT 'TRANS',   -- Alternatively FIELD or COMPANY
+        p_msg_ind VARCHAR2 DEFAULT 'N')     -- When 'Y' => Returns user friendly message instead of 'N' when result is false ('N')
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+    lv2_flag        VARCHAR2(1)     := 'Y';
+    lv2_op          VARCHAR2(10)    := 'DELETE';
+    lv2_op_txt      VARCHAR2(10)    := 'deleted';
+    lv2_msg         VARCHAR2(200);
+    lv2_msg_ue      VARCHAR2(200);
+    lv2_msg_ue_pre  VARCHAR2(200);
+    lv2_msg_main    VARCHAR2(1000);
+    lv2_msg_ue_post VARCHAR2(200);
+    lv2_retval      VARCHAR2(200);
+BEGIN
+    IF ue_cont_transaction.isIsTransDeletableUEE = 'TRUE' THEN
+        -- Run insteadOf-UserExit
+        lv2_flag := ue_cont_transaction.isTransactionDeletable(p_transaction_key, p_level, lv2_msg_ue);
+        -- Set default or custom message
+        IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+            lv2_msg := NVL(lv2_msg_ue,'This transaction is evaluated by an InsteadOf User-exit and the result is that the transaction cannot be ' || lv2_op_txt || '.');
+        END IF;
+    ELSE
+        IF ue_cont_transaction.isIsTransDeletablePreUEE = 'TRUE' THEN
+            -- Run PRE-processing-UserExit
+            lv2_flag := ue_cont_transaction.isTransactionDeletablePre(p_transaction_key, p_level, lv2_msg_ue_pre);
+            -- Set default or custom message
+            IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+                lv2_msg := NVL(lv2_msg_ue_pre,'This transaction is evaluated by a Preprocessing User-exit and the result is that the transaction cannot be ' || lv2_op_txt || '.');
+            END IF;
+        END IF;
+        --
+        IF lv2_flag = 'Y' THEN
+            -- Run SHARED rules between Editable and Deletable
+            lv2_flag := isTransEditableOrDeletable (lv2_op, p_transaction_key, p_level, lv2_msg_main);
+            lv2_msg  := lv2_msg_main;
+        END IF;
+        --
+        IF ue_cont_transaction.isIsTransDeletablePostUEE = 'TRUE' THEN
+            -- Run POST-processing-UserExit
+            lv2_flag := ue_cont_transaction.isTransactionDeletablePost(p_transaction_key, p_level, lv2_flag, lv2_msg_ue_post);
+            -- Set default or custom message
+            IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+                lv2_msg := NVL(lv2_msg_ue_post,'This transaction is evaluated by a Postprocessing User-exit and the result is that the transaction cannot be ' || lv2_op_txt || '.');
+            END IF;
+        END IF;
+    END IF;
+
+    -- Evaluate and set the return value
+    lv2_retval :=
+        CASE
+            WHEN lv2_flag = 'Y' AND p_msg_ind <> 'Y' THEN lv2_flag
+            WHEN lv2_flag = 'Y'                      THEN ''
+            WHEN lv2_flag = 'N' AND p_msg_ind <> 'Y' THEN lv2_flag
+            ELSE                                          '[ErrMsg]' || lv2_msg
+        END;
+    RETURN lv2_retval;
+END isTransactionDeletable;
 
 
 --<EC-DOC>
@@ -8518,313 +9225,6 @@ BEGIN
  RETURN 'Y';
 
 END isEmptyTrans;
-
-
---<EC-DOC>
----------------------------------------------------------------------------------------------------
--- Procedure      : CopyTransExRate
--- Description    : Copy ex rate booking/other either using default rates from currency, or from user input in screen Process Transaction General.
---                  Last case collects rates from cont_transaction as these are stored on DAOSave prior to the action calling this procedure.
---                  NOTYET: Due to the user input situation, the update in cont_transaction is perhaps already done.
---
--- Preconditions  :
--- Postconditions :
---
--- Using tables   : cont_transaction,cont_line_item
---
--- Using functions: EcDp_Currency.GetExRate
--- Configuration
--- required       :
---
--- Behaviour      :
--------------------------------------------------------------------------------------------------------------------------------------------
-PROCEDURE CopyTransExRate
- (p_transaction_key VARCHAR2,
-  p_user VARCHAR2
-  )
---</EC-DOC>
-IS
-
-lrec_cont_transaction cont_transaction%ROWTYPE;
-
-ln_ex_pricing_booking NUMBER := 0;
-ln_ex_pricing_memo NUMBER := 0;
-ln_ex_booking_local NUMBER := 0;
-ln_ex_booking_group NUMBER := 0;
-
-CURSOR c_allTrans(cp_document_key VARCHAR2, cp_transaction_key VARCHAR2) IS
-      SELECT *
-      FROM cont_transaction ct
-      WHERE ct.document_key = cp_document_key
-      AND ct.transaction_key <> cp_transaction_key
-      AND ct.preceding_trans_key IS NULL
-      AND ct.reversed_trans_key IS NULL;
-
-BEGIN
-
-lrec_cont_transaction := ec_cont_transaction.row_by_pk(p_transaction_key);
-
-FOR rec IN c_allTrans(lrec_cont_transaction.document_key, p_transaction_key) LOOP
-
-    --reset all these to null for each transaction
-    ln_ex_pricing_booking := NULL;
-    ln_ex_pricing_memo := NULL;
-    ln_ex_booking_local := NULL;
-    ln_ex_booking_group := NULL;
-
-    --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
-    IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
-    lrec_cont_transaction.ex_pricing_booking_date = rec.ex_pricing_booking_date AND
-    lrec_cont_transaction.ex_pricing_booking_ts = rec.ex_pricing_booking_ts AND
-    lrec_cont_transaction.ex_pricing_booking_dbc = rec.ex_pricing_booking_dbc  THEN
-
-       ln_ex_pricing_booking := lrec_cont_transaction.ex_pricing_booking;
-
-    END IF;
-
-    --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
-    IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
-    lrec_cont_transaction.ex_pricing_memo_date = rec.ex_pricing_memo_date AND
-    lrec_cont_transaction.ex_pricing_memo_ts = rec.ex_pricing_memo_ts AND
-    lrec_cont_transaction.ex_pricing_memo_dbc = rec.ex_pricing_memo_dbc  THEN
-
-       ln_ex_pricing_memo := lrec_cont_transaction.ex_pricing_memo;
-
-    END IF;
-
-     --verify transactions having the same Forex Source / Forex Time Scope / Forex Date Base Code
-    IF lrec_cont_transaction.ex_booking_local_date = rec.ex_booking_local_date AND
-    lrec_cont_transaction.ex_booking_local_ts = rec.ex_booking_local_ts AND
-    lrec_cont_transaction.ex_booking_local_dbc = rec.ex_booking_local_dbc  THEN
-
-       ln_ex_booking_local := lrec_cont_transaction.ex_booking_local ;
-
-    END IF;
-
-     --verify transactions having the same Forex Source / Forex Time Scope / Forex Date Base Code
-    IF lrec_cont_transaction.ex_booking_group_date = rec.ex_booking_group_date AND
-    lrec_cont_transaction.ex_booking_group_ts = rec.ex_booking_group_ts AND
-    lrec_cont_transaction.ex_booking_group_dbc = rec.ex_booking_group_dbc  THEN
-
-       ln_ex_booking_group := lrec_cont_transaction.ex_booking_group;
-
-    END IF;
-
-    IF ln_ex_pricing_booking IS NOT NULL OR ln_ex_pricing_memo IS NOT NULL
-    OR ln_ex_booking_local IS NOT NULL OR ln_ex_booking_group IS NOT NULL THEN
-
-        UPDATE cont_transaction
-          SET ex_pricing_booking = NVL(ln_ex_pricing_booking, ex_pricing_booking),
-              ex_pricing_memo   = NVL(ln_ex_pricing_memo, ex_pricing_memo),
-              ex_booking_local   = NVL(ln_ex_booking_local, ex_booking_local),
-              ex_booking_group   = NVL(ln_ex_booking_group, ex_booking_group),
-              last_updated_by    = p_user
-         WHERE transaction_key = rec.transaction_key;
-
-        -- force recalculation of curr change
-         UPDATE cont_line_item
-         SET    rev_text = 'Recalculation due to new exchange rates'
-                ,last_updated_by = p_user
-         WHERE transaction_key = rec.transaction_key;
-
-     END IF;
-
-END LOOP;
-
-END CopyTransExRate;
-
---<EC-DOC>
----------------------------------------------------------------------------------------------------
--- Procedure      : UpdTransExRate
--- Description    : Updates ex rate booking/other either using default rates from currency, or from user input in screen Process Transaction General.
---                  Last case collects rates from cont_transaction as these are stored on DAOSave prior to the action calling this procedure.
---                  NOTYET: Due to the user input situation, the update in cont_transaction is perhaps already done.
---
--- Preconditions  :
--- Postconditions :
---
--- Using tables   : cont_transaction,cont_line_item
---
--- Using functions: EcDp_Currency.GetExRate
--- Configuration
--- required       :
---
--- Behaviour      :
--------------------------------------------------------------------------------------------------------------------------------------------
-PROCEDURE CopySelectedTransExRate
- (p_transaction_key VARCHAR2,
-  p_user VARCHAR2,
-  p_pb_ind VARCHAR2, -- pricing booking indicator
-  p_pm_ind VARCHAR2, -- pricing memo indicator
-  p_bl_ind VARCHAR2, -- booking local indicator
-  p_bg_ind VARCHAR2,  -- pricing group indicator
-  p_copy_selection VARCHAR2 DEFAULT 'Y'
-  )
---</EC-DOC>
-IS
-
-lrec_cont_transaction cont_transaction%ROWTYPE;
-
-ln_ex_pricing_booking NUMBER := 0;
-ln_ex_pricing_memo NUMBER := 0;
-ln_ex_booking_local NUMBER := 0;
-ln_ex_booking_group NUMBER := 0;
-
-CURSOR c_allTrans(cp_document_key VARCHAR2, cp_transaction_key VARCHAR2) IS
-
-      SELECT *
-      FROM cont_transaction ct
-      WHERE ct.document_key = cp_document_key
-      AND ct.transaction_key <> cp_transaction_key
-      AND ct.preceding_trans_key IS NULL
-      AND ct.reversed_trans_key IS NULL;
-
-BEGIN
-
-  lrec_cont_transaction := ec_cont_transaction.row_by_pk(p_transaction_key);
-
-  FOR rec IN c_allTrans(lrec_cont_transaction.document_key, p_transaction_key) LOOP
-
-     IF NVL(p_pb_ind,'N') = 'Y' THEN
-
-       --reset all these to null for each transaction
-       ln_ex_pricing_booking := NULL;
-
-       --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
-       IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
-          lrec_cont_transaction.ex_pricing_booking_date = rec.ex_pricing_booking_date AND
-          lrec_cont_transaction.ex_pricing_booking_ts = rec.ex_pricing_booking_ts AND
-          lrec_cont_transaction.ex_pricing_booking_dbc = rec.ex_pricing_booking_dbc  THEN
-
-           ln_ex_pricing_booking := lrec_cont_transaction.ex_pricing_booking;
-
-       END IF;
-
-       IF ln_ex_pricing_booking IS NOT NULL THEN
-
-          UPDATE cont_transaction
-            SET ex_pricing_booking = NVL(ln_ex_pricing_booking, ex_pricing_booking),
-                last_updated_by    = p_user
-           WHERE transaction_key = rec.transaction_key;
-
-          -- force recalculation of curr change
-           UPDATE cont_line_item
-           SET    rev_text = 'Recalculation due to new exchange rates'
-                  ,last_updated_by = p_user
-           WHERE transaction_key = rec.transaction_key;
-
-       END IF;
-
-      END IF;
-
-
-      IF NVL(p_pm_ind,'N') = 'Y' THEN
-
-       --reset all these to null for each transaction
-       ln_ex_pricing_booking := NULL;
-
-       --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
-       IF lrec_cont_transaction.pricing_currency_code = rec.pricing_currency_code AND
-          lrec_cont_transaction.ex_pricing_memo_date = rec.ex_pricing_memo_date AND
-          lrec_cont_transaction.ex_pricing_memo_ts = rec.ex_pricing_memo_ts AND
-          lrec_cont_transaction.ex_pricing_memo_dbc = rec.ex_pricing_memo_dbc  THEN
-
-           ln_ex_pricing_memo := lrec_cont_transaction.ex_pricing_memo;
-
-       END IF;
-
-       IF ln_ex_pricing_memo IS NOT NULL THEN
-
-          UPDATE cont_transaction
-            SET ex_pricing_memo = NVL(ln_ex_pricing_memo, ex_pricing_memo),
-                last_updated_by    = p_user
-           WHERE transaction_key = rec.transaction_key;
-
-          -- force recalculation of curr change
-           UPDATE cont_line_item
-           SET    rev_text = 'Recalculation due to new exchange rates'
-                  ,last_updated_by = p_user
-           WHERE transaction_key = rec.transaction_key;
-
-       END IF;
-
-      END IF;
-
-      IF NVL(p_bl_ind,'N') = 'Y' THEN
-
-       --reset all these to null for each transaction
-       ln_ex_booking_local := NULL;
-
-       --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
-       IF lrec_cont_transaction.ex_booking_local_date = rec.ex_booking_local_date AND
-          lrec_cont_transaction.ex_booking_local_ts = rec.ex_booking_local_ts AND
-          lrec_cont_transaction.ex_booking_local_dbc = rec.ex_booking_local_dbc  THEN
-
-           ln_ex_booking_local := lrec_cont_transaction.ex_booking_local;
-
-       END IF;
-
-       IF ln_ex_booking_local IS NOT NULL THEN
-
-          UPDATE cont_transaction
-            SET ex_booking_local = NVL(ln_ex_booking_local, ex_booking_local),
-                last_updated_by    = p_user
-           WHERE transaction_key = rec.transaction_key;
-
-          -- force recalculation of curr change
-           UPDATE cont_line_item
-           SET    rev_text = 'Recalculation due to new exchange rates'
-                  ,last_updated_by = p_user
-           WHERE transaction_key = rec.transaction_key;
-
-       END IF;
-
-      END IF;
-
-      IF NVL(p_bg_ind,'N') = 'Y' THEN
-
-       --reset all these to null for each transaction
-       ln_ex_booking_group := NULL;
-
-       --verify transactions having the same Pricing Currency / Forex Source / Forex Time Scope / Forex Date Base Code
-       IF lrec_cont_transaction.ex_booking_group_date = rec.ex_booking_group_date AND
-          lrec_cont_transaction.ex_booking_group_ts = rec.ex_booking_group_ts AND
-          lrec_cont_transaction.ex_booking_group_dbc = rec.ex_booking_group_dbc  THEN
-
-           ln_ex_booking_group := lrec_cont_transaction.ex_booking_group;
-
-       END IF;
-
-       IF ln_ex_booking_group IS NOT NULL THEN
-
-          UPDATE cont_transaction
-            SET ex_booking_group = NVL(ln_ex_booking_group, ex_booking_group),
-                last_updated_by    = p_user
-           WHERE transaction_key = rec.transaction_key;
-
-          -- force recalculation of curr change
-           UPDATE cont_line_item
-           SET    rev_text = 'Recalculation due to new exchange rates'
-                  ,last_updated_by = p_user
-           WHERE transaction_key = rec.transaction_key;
-
-       END IF;
-
-      END IF;
-
-      IF p_copy_selection = 'Y' THEN
-        -- Copy selection setting to the other transactions
-        UPDATE cont_transaction ct SET
-               ct.pricing_to_booking_ind = NVL(p_pb_ind,'N'),
-               ct.pricing_to_memo_ind    = NVL(p_pm_ind,'N'),
-               ct.booking_to_local_ind   = NVL(p_bl_ind,'N'),
-               ct.booking_to_group_ind   = NVL(p_bg_ind,'N')
-         WHERE ct.transaction_key = rec.transaction_key;
-      END IF;
-
-  END LOOP;
-
-END CopySelectedTransExRate;
 
 
     -----------------------------------------------------------------------
@@ -9388,11 +9788,13 @@ SELECT t.*
 ;
 
 BEGIN
+ IF( ec_cont_document.document_level_code(ec_cont_transaction.document_key(p_transaction_key)) = 'OPEN') THEN
+
    FOR LineItemCur IN c_line_item LOOP
        ecdp_line_item.fill_li_val_perc(LineItemCur, p_user);
 
    END LOOP;
-
+END IF;
 END UpdPercentageLineItem;
 
 --<EC-DOC>
@@ -9892,7 +10294,8 @@ FUNCTION IsReducedConfig(p_contract_id     VARCHAR2,
                          p_contract_doc_id VARCHAR2,
                          p_trans_temp_id   VARCHAR2,
                          p_transaction_key VARCHAR2,
-                         p_daytime         DATE
+                         p_daytime         DATE,
+                         p_dist_only       BOOLEAN DEFAULT FALSE
   )
 RETURN BOOLEAN
 --</EC-DOC>
@@ -9940,7 +10343,7 @@ BEGIN
     END LOOP;
 
     -- Will return FALSE if either distibution is found or price object has been set.
-    lb_ret_val := (ln_distribution_count = 0) OR (lrec_ttv.price_object_id IS NULL);
+    lb_ret_val := (ln_distribution_count = 0) OR (lrec_ttv.price_object_id IS NULL and p_dist_only = false);
 
   -- transaction or trans template was not set, try with doc setup
   ELSIF p_contract_doc_id IS NOT NULL THEN
@@ -9949,7 +10352,7 @@ BEGIN
     FOR rsTTV IN c_ttv LOOP
 
       -- Run recusively with TRANSACTION_TEMPLATE level
-      lb_ret_val := IsReducedConfig(NULL, NULL, rsTTV.object_id, NULL, p_daytime);
+      lb_ret_val := IsReducedConfig(NULL, NULL, rsTTV.object_id, NULL, p_daytime, p_dist_only);
 
       EXIT WHEN lb_ret_val;
 
@@ -9961,7 +10364,7 @@ BEGIN
     FOR rsCDV IN c_cdv LOOP
 
       -- Run recusively with CONTRACT_DOC level
-      lb_ret_val := IsReducedConfig(NULL, rsCDV.object_id, NULL, NULL, p_daytime);
+      lb_ret_val := IsReducedConfig(NULL, rsCDV.object_id, NULL, NULL, p_daytime, p_dist_only);
 
       EXIT WHEN lb_ret_val;
 
@@ -9976,13 +10379,14 @@ END IsReducedConfig;
 FUNCTION IsReducedConfig(p_contract_id     VARCHAR2,
                          p_contract_doc_id VARCHAR2,
                          p_trans_temp_id   VARCHAR2,
-                         p_daytime         DATE
+                         p_daytime         DATE,
+                         p_dist_only       BOOLEAN DEFAULT FALSE
   ) RETURN VARCHAR2
 IS
   lv2_ret_val VARCHAR2(1) := 'N';
 BEGIN
 
-  IF IsReducedConfig(p_contract_id, p_contract_doc_id, p_trans_temp_id, NULL, p_daytime) THEN
+  IF IsReducedConfig(p_contract_id, p_contract_doc_id, p_trans_temp_id, NULL, p_daytime, p_dist_only) THEN
     lv2_ret_val := 'Y';
   END IF;
 
@@ -10613,16 +11017,8 @@ BEGIN
 
       -- Find the name format for the transaction
       lrec_transaction_version := ec_transaction_tmpl_version.row_by_pk(p_transaction.TRANS_TEMPLATE_ID, p_transaction.DAYTIME, '<=');
-      IF lrec_transaction_version.CONT_TRANS_NAME_FORMAT IS NOT NULL THEN
-        lv_transaction_template_name := lrec_transaction_version.CONT_TRANS_NAME_FORMAT;
-      ELSE
-        lv_transaction_template_name := lrec_transaction_version.NAME;
-      END IF;
-
-      IF lv_transaction_template_name IS NULL THEN
-        lv_result := '';
-      ELSE
-        lv_result := lv_transaction_template_name;
+      IF lrec_transaction_version.CONT_TRANS_NAME_FORMAT IS NOT NULL THEN --Do placeholder replacement
+        lv_result := lrec_transaction_version.CONT_TRANS_NAME_FORMAT;
 
         IF (INSTR(lv_result, '$PRODUCT_NAME') > 0 ) THEN
           lv_placeholder_value := resolveNamePlaceholderValue('PRODUCT_NAME', p_transaction);
@@ -10654,9 +11050,12 @@ BEGIN
           lv_result := REPLACE(lv_result, '$QTY_TYPE', lv_placeholder_value);
         END IF;
 
-      END IF; -- template name is not null?
-
-
+      ELSE --No Transaction Name format defined
+        lv_result := p_transaction.name;
+        IF lv_result = null THEN --use name from Transaction Template
+          lv_result := lrec_transaction_version.NAME;
+        END IF;
+     END IF;
       IF ue_cont_transaction.isGetTransNamePostUEE = 'TRUE' THEN
           -- Call POST user exit
           lv_result := ue_cont_transaction.GetTransactionNamePost(p_transaction, lv_result, p_size_limit);
@@ -11914,7 +12313,7 @@ IS
     lv2_contract_comp  VARCHAR2(32);
     lrec_t             cont_transaction%rowtype;
     lv2_dist_id        VARCHAR2(32);
-    lv2_dist_name      VARCHAR2(32);
+    lv2_dist_name      VARCHAR2(1000);
 BEGIN
    lrec_t              := ec_cont_transaction.row_by_pk(p_transaction_key);
    lv2_contract_comp   := ecdp_contract_setup.getcontractcomposition(lrec_t.object_id,lrec_t.trans_template_id,lrec_t.daytime);
@@ -11923,6 +12322,22 @@ BEGIN
 
     RETURN lv2_dist_name;
 END GetDistObjectName;
+
+------------------------+-----------------------------------+------------------------------------+---------------------------
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetDistObjectTypeName(
+                         p_transaction_key                  VARCHAR2 DEFAULT NULL)
+RETURN VARCHAR2
+IS
+    lv2_dist_obj_name    VARCHAR2(1000);
+BEGIN
+    lv2_dist_obj_name := Ec_Class_Property_Cnfg.property_value(
+        Ec_Cont_Transaction.dist_object_type(p_transaction_key),
+        'LABEL', 'APPLICATION', 0, '/EC');
+
+    RETURN lv2_dist_obj_name;
+END GetDistObjectTypeName;
+
 ------------------------+-----------------------------------+------------------------------------+---------------------------
 ------------------------+-----------------------------------+------------------------------------+---------------------------
 FUNCTION FindPrecedingTransKeys(
@@ -12339,6 +12754,7 @@ CURSOR c_trans  IS
 SELECT LEVEL priority,ct.transaction_key ,ct.preceding_trans_key ,ct.ppa_trans_code,cd.document_key,cd.actual_reversal_date
                FROM cont_transaction ct,cont_document cd
                 WHERE ct.document_key = cd.document_key
+                AND cd.document_concept != 'DEPENDENT_WITHOUT_REVERSAL'
                START WITH ct.transaction_key=p_transaction_key
                CONNECT BY prior ct.transaction_key=ct.preceding_trans_key
                ORDER BY LEVEL DESC;
@@ -12496,6 +12912,303 @@ BEGIN
   RETURN lv_return;
 end  TransactionLevelVatRate;
 
+FUNCTION GetPricingBookingLabel(p_document_key      VARCHAR2,
+                                p_daytime           DATE,
+                                p_trans_template_id VARCHAR2)
+  RETURN VARCHAR2 IS
+  lv_booking_currency_id       cont_document.booking_currency_id%TYPE;
+  lv_pricing_currency_id       TRANSACTION_TMPL_VERSION.Pricing_Currency_Id%TYPE;
+  lv_pricing_currency_name     currency_version.name%TYPE;
+  lv_booking_currency_name     currency_version.name%TYPE;
+  lv_get_pricing_booking_label VARCHAR2(4000);
 
+BEGIN
+
+  lv_pricing_currency_id   := ec_transaction_tmpl_version.pricing_currency_id(p_trans_template_id,
+                                                                              p_daytime,
+                                                                              '<=');
+  lv_pricing_currency_name := ec_currency_version.name(lv_pricing_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  lv_booking_currency_id   := ec_cont_document.booking_currency_id(p_document_key);
+  lv_booking_currency_name := ec_currency_version.name(lv_booking_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+
+  IF lv_booking_currency_name is NULL THEN
+    lv_get_pricing_booking_label := NULL;
+  ELSE
+    lv_get_pricing_booking_label := 'Pricing (' || lv_pricing_currency_name || ')' ||
+                                    ' to Booking (' ||
+                                    lv_booking_currency_name || ')';
+  END IF;
+  RETURN lv_get_pricing_booking_label;
+END GetPricingBookingLabel;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+
+FUNCTION GetPricingMemoLabel(p_document_key      VARCHAR2,
+                             p_daytime           DATE,
+                             p_trans_template_id VARCHAR2) RETURN VARCHAR2 IS
+  lv_memo_currency_id       cont_document.memo_currency_id%TYPE;
+  lv_memo_currency_name     currency_version.name%TYPE;
+  lv_pricing_currency_id    TRANSACTION_TMPL_VERSION.Pricing_Currency_Id%TYPE;
+  lv_pricing_currency_name  currency_version.name%TYPE;
+  lv_get_pricing_memo_label VARCHAR2(4000);
+
+BEGIN
+
+  lv_pricing_currency_id   := ec_transaction_tmpl_version.pricing_currency_id(p_trans_template_id,
+                                                                              p_daytime,
+                                                                              '<=');
+  lv_pricing_currency_name := ec_currency_version.name(lv_pricing_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  lv_memo_currency_id      := ec_cont_document.memo_currency_id(p_document_key);
+  lv_memo_currency_name    := ec_currency_version.name(lv_memo_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+
+  IF lv_memo_currency_name is NULL THEN
+    lv_get_pricing_memo_label := NULL;
+  ELSE
+    lv_get_pricing_memo_label := 'Pricing (' || lv_pricing_currency_name || ')' ||
+                                 ' to Memo (' || lv_memo_currency_name || ')';
+  END IF;
+
+  RETURN lv_get_pricing_memo_label;
+
+END GetPricingMemoLabel;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+
+FUNCTION GetBookingLocalLabel(p_document_key    VARCHAR2,
+                              p_daytime         DATE) RETURN VARCHAR2 IS
+  lv_booking_currency_id     cont_document.booking_currency_id%TYPE;
+  lv_booking_currency_name   currency_version.name%TYPE;
+  lv_owner_company_id        CONT_DOCUMENT.OWNER_COMPANY_ID%TYPE;
+  lv_local_currency_id       COMPANY_VERSION.LOCAL_CURRENCY_ID%TYPE;
+  lv_local_currency_name     currency_version.name%TYPE;
+  lv_get_booking_local_label VARCHAR2(4000);
+
+BEGIN
+  lv_booking_currency_id   := ec_cont_document.booking_currency_id(p_document_key);
+  lv_booking_currency_name := ec_currency_version.name(lv_booking_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  lv_owner_company_id      := ec_cont_document.owner_company_id(p_document_key);
+  lv_local_currency_id     := ec_company_version.local_currency_id(lv_owner_company_id,
+                                                                   p_daytime,
+                                                                   '<=');
+  lv_local_currency_name   := ec_currency_version.name(lv_local_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  IF lv_local_currency_name IS NULL THEN
+    lv_get_booking_local_label := NULL;
+  ELSE
+    lv_get_booking_local_label := 'Booking (' || lv_booking_currency_name || ')' ||
+                                  ' to Local (' || lv_local_currency_name || ')';
+  END IF;
+  RETURN lv_get_booking_local_label;
+
+END GetBookingLocalLabel;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+
+FUNCTION GetBookingGroupLabel(p_document_key    VARCHAR2,
+                              p_daytime         DATE) RETURN VARCHAR2 IS
+  lv_booking_currency_id     cont_document.booking_currency_id%TYPE;
+  lv_booking_currency_name   currency_version.name%TYPE;
+  lv_group_currency_code     currency.object_code%TYPE;
+  lv_group_currency_id       cont_document.memo_currency_id%TYPE;
+  lv_group_currency_name     currency_version.name%TYPE;
+  lv_get_booking_group_label VARCHAR2(4000);
+  invalid_currency EXCEPTION;
+
+BEGIN
+  lv_booking_currency_id   := ec_cont_document.booking_currency_id(p_document_key);
+  lv_booking_currency_name := ec_currency_version.name(lv_booking_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  lv_group_currency_code   := ec_ctrl_system_attribute.attribute_text(P_DAYTIME,
+                                                                      'GROUP_CURRENCY_CODE',
+                                                                      '<=');
+  IF lv_group_currency_code IS NULL THEN
+    lv_get_booking_group_label := null;
+  ELSE
+    lv_group_currency_id := ecdp_objects.GetObjIDFromCode('CURRENCY',
+                                                          lv_group_currency_code);
+
+    IF lv_group_currency_id IS NULL THEN
+      RAISE invalid_currency;
+    END IF;
+
+    lv_group_currency_name := ec_currency_version.name(lv_group_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+
+    IF lv_group_currency_name IS NULL THEN
+      lv_get_booking_group_label := NULL;
+    ELSE
+      lv_get_booking_group_label := 'Booking (' || lv_booking_currency_name || ')' ||
+                                    ' to Group (' || lv_group_currency_name || ')';
+    END IF;
+  END IF;
+  RETURN lv_get_booking_group_label;
+
+EXCEPTION
+  WHEN invalid_currency THEN
+
+    Raise_Application_Error(-20000,
+                            'The currency defined as Group Currency - ' ||
+                            lv_group_currency_code ||
+                            '- in System Attribute GROUP_CURRENCY_CODE is not a valid currency code');
+END GetBookingGroupLabel;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetPricingBookingCode(p_document_key      VARCHAR2,
+                               p_daytime           DATE,
+                               p_trans_template_id VARCHAR2)
+  RETURN VARCHAR2 IS
+  lv_booking_currency_id   cont_document.booking_currency_id%TYPE;
+  lv_pricing_currency_id   transaction_tmpl_version.pricing_currency_id%TYPE;
+  lv_pricing_currency_name currency_version.name%TYPE;
+  lv_booking_currency_name currency_version.name%TYPE;
+  lv_GetPricingBookingCode VARCHAR2(4000);
+
+BEGIN
+
+  lv_pricing_currency_id   := ec_transaction_tmpl_version.pricing_currency_id(p_trans_template_id,
+                                                                              p_daytime,
+                                                                              '<=');
+  lv_pricing_currency_name := ec_currency_version.name(lv_pricing_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  lv_booking_currency_id   := ec_cont_document.booking_currency_id(p_document_key);
+  lv_booking_currency_name := ec_currency_version.name(lv_booking_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  IF lv_booking_currency_name is NULL THEN
+    lv_GetPricingBookingCode := NULL;
+  ELSE
+    lv_GetPricingBookingCode := lv_pricing_currency_name || ' to ' ||
+                                lv_booking_currency_name;
+  END IF;
+  RETURN lv_GetPricingBookingCode;
+END GetPricingBookingCode;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+
+FUNCTION GetPricingMemoCode(p_document_key      VARCHAR2,
+                            p_daytime           DATE,
+                            p_trans_template_id VARCHAR2) RETURN VARCHAR2 IS
+  lv_pricing_currency_id   transaction_tmpl_version.pricing_currency_id%TYPE;
+  lv_memo_currency_id      cont_document.memo_currency_id%TYPE;
+  lv_pricing_currency_name currency_version.name%TYPE;
+  lv_memo_currency_name    currency_version.name%TYPE;
+  lv_get_pricing_memo_code VARCHAR2(4000);
+
+BEGIN
+
+  lv_pricing_currency_id   := ec_transaction_tmpl_version.pricing_currency_id(p_trans_template_id,
+                                                                              p_daytime,
+                                                                              '<=');
+  lv_pricing_currency_name := ec_currency_version.name(lv_pricing_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+
+  lv_memo_currency_id   := ec_cont_document.memo_currency_id(p_document_key);
+  lv_memo_currency_name := ec_currency_version.name(lv_memo_currency_id,
+                                                    p_daytime,
+                                                    '<=');
+
+  IF lv_memo_currency_name IS NULL THEN
+    lv_get_pricing_memo_code := NULL;
+  ELSE
+    lv_get_pricing_memo_code := lv_pricing_currency_name || ' to ' ||
+                                lv_memo_currency_name;
+  END IF;
+
+  RETURN lv_get_pricing_memo_code;
+
+END GetPricingMemoCode;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+
+FUNCTION GetBookingLocalCode(p_document_key    VARCHAR2,
+                             p_daytime         DATE) RETURN VARCHAR2 IS
+  lv_booking_currency_id    cont_document.booking_currency_id%TYPE;
+  lv_booking_currency_name  currency_version.name%TYPE;
+  lv_owner_company_id       cont_document.owner_company_id%TYPE;
+  lv_local_currency_id      company_version.local_currency_id%TYPE;
+  lv_local_currency_name    currency_version.name%TYPE;
+  lv_get_booking_local_code VARCHAR2(4000);
+
+BEGIN
+  lv_booking_currency_id   := ec_cont_document.booking_currency_id(p_document_key);
+  lv_booking_currency_name := ec_currency_version.name(lv_booking_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  lv_owner_company_id      := ec_cont_document.owner_company_id(p_document_key);
+  lv_local_currency_id     := EC_COMPANY_VERSION.local_currency_id(lv_owner_company_id,
+                                                                   p_daytime,
+                                                                   '<=');
+  lv_local_currency_name   := ec_currency_version.name(lv_local_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  IF lv_local_currency_name IS NULL THEN
+    lv_get_booking_local_code := NULL;
+  ELSE
+    lv_get_booking_local_code := lv_booking_currency_name || ' to ' ||
+                                 lv_local_currency_name;
+  END IF;
+
+  RETURN lv_get_booking_local_code;
+
+END GetBookingLocalCode;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+
+FUNCTION GetBookingGroupCode(p_document_key    VARCHAR2,
+                             p_daytime         DATE) RETURN VARCHAR2 IS
+  lv_booking_currency_id    cont_document.booking_currency_id%TYPE;
+  lv_booking_currency_name  currency_version.name%TYPE;
+  lv_group_currency_code    currency.object_code%TYPE;
+  lv_group_currency_id      cont_document.memo_currency_id%TYPE;
+  lv_group_currency_name    currency_version.name%TYPE;
+  lv_get_booking_group_code VARCHAR2(4000);
+  invalid_currency EXCEPTION;
+
+BEGIN
+  lv_booking_currency_id   := ec_cont_document.booking_currency_id(p_document_key);
+  lv_booking_currency_name := ec_currency_version.name(lv_booking_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+  lv_group_currency_code   := ec_ctrl_system_attribute.attribute_text(P_DAYTIME,
+                                                                      'GROUP_CURRENCY_CODE',
+                                                                      '<=');
+  IF lv_group_currency_code IS NULL THEN
+    lv_get_booking_group_code := NULL;
+  ELSE
+    lv_group_currency_id := ecdp_objects.GetObjIDFromCode('CURRENCY',
+                                                          lv_group_currency_code);
+
+    IF lv_group_currency_id IS NULL THEN
+      RAISE invalid_currency;
+    END IF;
+
+    lv_group_currency_name := ec_currency_version.name(lv_group_currency_id,
+                                                       p_daytime,
+                                                       '<=');
+
+    IF lv_group_currency_name IS NULL THEN
+      lv_get_booking_group_code := NULL;
+    ELSE
+      lv_get_booking_group_code := lv_booking_currency_name || ' to ' ||
+                                   lv_group_currency_name;
+    END IF;
+  END IF;
+
+  RETURN lv_get_booking_group_code;
+EXCEPTION
+  WHEN invalid_currency THEN
+    Raise_Application_Error(-20000,
+                            'The currency defined as Group Currency - ' ||
+                            lv_group_currency_code ||
+                            '- in System Attribute GROUP_CURRENCY_CODE is not a valid currency code');
+END GetBookingGroupCode;
 
 END Ecdp_Transaction;

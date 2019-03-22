@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0108
   NAME: Daily Nomination Point Transfer
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/daily_nomination_point_transfer/CLASS/TRNP_DAY_NOM_TRANSFER/NOMINATION_CYCLE/false/CATEGORY/ENTRY_EXIT_PATH/SHOW_OPERATIONAL/N
 related: {}

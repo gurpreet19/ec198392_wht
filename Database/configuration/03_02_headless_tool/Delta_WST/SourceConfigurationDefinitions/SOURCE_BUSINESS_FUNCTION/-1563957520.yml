@@ -8,5 +8,6 @@ properties:
   BF_CODE: RC.0056
   NAME: Tract
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.rty/manage_object_navmodel_nav/CLASS_NAME/TRACT/NAVMODEL/WELL_SETUP/TARGET/TRACT/TARGET_TYPE/parent
 related: {}

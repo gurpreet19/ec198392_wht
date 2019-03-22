@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0006
   NAME: Monthly Tank Status
   PROFILE_CLASS_NAME: TANK
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/monthly_tank_status
 related: {}

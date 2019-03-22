@@ -12,7 +12,7 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
   CLASS_NAME: null
   COMP_CODE: ProcessButton
-  NAME: Documents
+  NAME: Navigator (form) > Documents (tab) > Process (button)
   SIGNING_REQ_IND: null
   URL: /ProcessButton
 related: {}

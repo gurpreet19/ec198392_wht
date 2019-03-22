@@ -9,7 +9,7 @@ keys:
 parentKeys: {}
 properties:
   BF_CODE: CD.0107
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_DATE_TERM' )
   CLASS_NAME: DOC_DATE_TERM
   COMP_CODE: objectdates
   NAME: Object Start Date and End Date

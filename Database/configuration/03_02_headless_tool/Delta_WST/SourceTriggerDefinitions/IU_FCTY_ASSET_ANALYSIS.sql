@@ -2,7 +2,7 @@ CREATE OR REPLACE EDITIONABLE TRIGGER "IU_FCTY_ASSET_ANALYSIS"
 BEFORE INSERT OR UPDATE ON FCTY_ASSET_ANALYSIS
 FOR EACH ROW
 BEGIN
-    -- Basis
+    -- Common
     IF Inserting THEN
       :new.record_status := nvl(:new.record_status, 'P');
 

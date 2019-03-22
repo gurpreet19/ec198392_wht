@@ -219,7 +219,7 @@ columns:
     sequence: !!float '34'
   STATUS:
     columnName: STATUS
-    typeName: NUMBER(1,0)
+    typeName: NUMBER(10,5)
     nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN

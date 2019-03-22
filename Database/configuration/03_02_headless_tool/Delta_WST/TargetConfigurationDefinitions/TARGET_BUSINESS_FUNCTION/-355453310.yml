@@ -8,5 +8,6 @@ properties:
   BF_CODE: SA.0013
   NAME: Monthly Contract Expenditure Forecast
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sa.screens/monthly_expenditure_forecast
 related: {}

@@ -23,7 +23,7 @@ PROCEDURE AddMissingGrantsReadOnly(p_role_name IN VARCHAR2)
 is
 
    CURSOR c_object_to_grant IS
-   select /*+ Rule */ 'GRANT SELECT ON ' || a.object_name || ' to ' || p_role_name  || chr(10) text
+   select /*+ Rule */ 'GRANT READ ON ' || a.object_name || ' to ' || p_role_name  || chr(10) text
    from user_objects a
        left join user_tab_privs b on ( b.grantee = p_role_name
                                        and b.table_name = a.object_name
@@ -185,7 +185,7 @@ AND   not (a.object_name like 'RV%')
 AND   b.grantee is null
 AND   ( ( not substr(a.object_name,1,2) in('DV','TV','IV') ) OR  (ut.trigger_name is not  null) )
 AND   not a.object_name in ('DAO_CLASS_DEPENDENCY','DAO_META','DEFERMENT_GROUPS','GROUPS','OBJECTS','OBJECTS_VERSION')
-and  not exists ( select 1 from class c where c.class_name = substr(a.object_name,4) and substr(a.object_name,1,3) in ('DV','TV','IV')  and c.read_only_ind = 'Y')
+and  not exists ( select 1 from class_cnfg c where c.class_name = substr(a.object_name,4) and substr(a.object_name,1,3) in ('DV','TV','IV')  and ecdp_classmeta_cnfg.isReadOnly(c.class_name) = 'Y')
 ;
 
    lv2_sql        VARCHAR2(2000);

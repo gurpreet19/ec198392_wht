@@ -7,11 +7,11 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0099
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_UOP_DEPR_KEY' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIN_UOP_DEPR_KEY' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p><span style="color: rgb(0, 0, 153);">    UOP - unit of production
-    - the way to report reserves in EC.</span></p><p>    <strong>UOP Key screen</strong>    is
-    used to set up the UOP Key properties.</p><p>    <u>The properties are defined
+  DESCRIPTION: '<p><em><span style="color: rgb(0, 102, 204);">UOP - unit of production
+    - the way to report reserves in EC.</span></em></p><p><strong>UOP Key screen</strong>
+    is used to set up the UOP Key properties.</p><p>    <u>The properties are defined
     with:</u><br>    - Name,<br>    - Description,<br>    - Company - Legal Entity
     the Depreciation Key is related to,<br>    - Key Type and Key Number - showing
     the type of reserves and refers to the    Depreciation Key / Type in the ERP system.</p>'

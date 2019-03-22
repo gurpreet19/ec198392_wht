@@ -29,24 +29,24 @@ properties:
     each holding designated documents. Supported document upload formats can be configured
     using the system property &quot;Allowed File Extensions for Cargo Documents Upload&quot.
     Only pdf files can be merged.</p><p>The tabs in this screen has been enhanced
-    to support optional hiding of tab #2, see Maintain System Settings / Custom Settings
-    and modify the property called&nbsp;Cargo Doc - Show Tab #2. A value of True or
-    null will make the tab appear, False will hide the tab. Changing this value will
-    require a restart/flush to take immediate&nbsp;effect. This also support to show
-    all parcels independent of the selection made in parcels-section, turn this feature
-    on by setting the system setting Cargo Doc -&nbsp;List All to True. This will
-    normally require that the class is updated to show parcel as a column.</p><p>To
-    display a message with the option of ok or cancel there is a system setting called:
-    Cargo Doc Generate - Confirmation Message. This property should be a text&nbsp;which
-    will be displayed to the end-user upon clicking the Generate button.</p><p>System
-    setting Cargo Doc Generate - Receipt List is a text list of Message Contact Codes
-    of the form: &lsquo;RECIPIENT1&rsquo;,&rsquo;RECIPIENT2&rsquo;,.. which will impose
-    that only&nbsp;the documents for this/these receipients will generated regardless
-    of the complete document instruction.</p><p>When using an external report generation
-    system, there exists an option to generate the documents for the individual parcels
-    as a scheduled task, this can result in&nbsp;a major performance increase if there
-    is a cluster of servers used to generate reports. Check out the boolean system
-    setting Cargo Doc Generate &ndash; Scheduled.</p><p>The column can be custom sorting
-    by sending the COLUMN_SORT and SORT_TYPE in the url. The default sorting are by
-    Daytime descending.</p>'
+    to support optional hiding of &quot;Other Document&quot tab, see Maintain System
+    Settings / Custom Settings and modify the property called&nbsp;Cargo Doc - &quot;Other
+    Document&quot tab. A value of True or null will make the tab appear, False will
+    hide the tab. Changing this value will require a restart/flush to take immediate&nbsp;effect.
+    This also support to show all parcels independent of the selection made in parcels-section,
+    turn this feature on by setting the system setting Cargo Doc -&nbsp;List All to
+    True. This will normally require that the class is updated to show parcel as a
+    column.</p><p>To display a message with the option of ok or cancel there is a
+    system setting called: Cargo Doc Generate - Confirmation Message. This property
+    should be a text&nbsp;which will be displayed to the end-user upon clicking the
+    Generate button.</p><p>System setting Cargo Doc Generate - Receipt List is a text
+    list of Message Contact Codes of the form: &lsquo;RECIPIENT1&rsquo;,&rsquo;RECIPIENT2&rsquo;,..
+    which will impose that only&nbsp;the documents for this/these receipients will
+    generated regardless of the complete document instruction.</p><p>When using an
+    external report generation system, there exists an option to generate the documents
+    for the individual parcels as a scheduled task, this can result in&nbsp;a major
+    performance increase if there is a cluster of servers used to generate reports.
+    Check out the boolean system setting Cargo Doc Generate &ndash; Scheduled.</p><p>The
+    column can be custom sorting by sending the COLUMN_SORT and SORT_TYPE in the url.
+    The default sorting are by Daytime descending.</p>'
 related: {}

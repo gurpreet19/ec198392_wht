@@ -8,5 +8,6 @@ properties:
   BF_CODE: WR.0077
   NAME: Monthly Production Well Status
   PROFILE_CLASS_NAME: WELL
+  TARGET_CONDITION: null
   URL: /com.ec.prod.wr.screens/monthly_production_well_status/CLASS_NAME/PWEL_MTH_STATUS
 related: {}

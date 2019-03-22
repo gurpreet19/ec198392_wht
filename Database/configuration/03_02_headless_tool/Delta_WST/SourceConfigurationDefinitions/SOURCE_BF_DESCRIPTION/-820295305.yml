@@ -9,27 +9,5 @@ properties:
   BF_DESCRIPTION_NO: CA.0001
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.ca.screens/cargo' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;line-height:normal;background:white"><span
-    style="font-size: 10pt; font-family: Arial, sans-serif;">This screen is used to
-    record information about a planned lifting. It contains basic information about
-    the future lifting, including status. This information can normally be derived
-    from the official cargo schedule for the terminal.<o:p></o:p></span></p><p class="MsoNormal"
-    style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;line-height:normal;background:white"><span
-    style="font-size: 10pt; font-family: Arial, sans-serif;">The intention is that
-    all information that can be recorded prior to the actual lifting can be recorded
-    so that information and reports prepared during or after the lifting can refer
-    to all relevant cargo information.</span><span style="font-size: 10.5pt; font-family:
-    Arial, sans-serif;"><o:p></o:p></span></p><p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;line-height:normal;background:white"><span
-    style="font-size: 10pt; font-family: Arial, sans-serif;">This screen is based
-    on the principle that a cargo consists of one or more cargo parcels, with each
-    parcel having a defined owner company(Consignor) and a primary buying party (Consignee).
-    This approach is quite common for offshore equity liftings, which indeed is the
-    prime purpose of CA.0001.</span><span style="font-size: 10.5pt; font-family: Arial,
-    sans-serif;"><o:p></o:p></span></p><p class="MsoNormal"></p><p class="MsoNormal"
-    style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;line-height:normal;background:white"><span
-    style="font-size: 10pt; font-family: Arial, sans-serif;">A group lifting occurs
-    when more than one consignor lifts in the same cargo. The principle applied here
-    is that a grouplifting must be represented with one parcel for each lifter (consignor).</span><span
-    style="font-size: 10.5pt; font-family: Arial, sans-serif;"><o:p></o:p></span></p><p
-    class="MsoNormal"><o:p></o:p></p>'
+  DESCRIPTION: <p>This screen is used to record information about a planned lifting. It contains basic information about the future lifting, including status. This information can normally be derived from the official cargo schedule for the terminal.</p><p>The intention is to record all information which shall be accounted prior to the actual lifting can be recorded. Therefore,&nbsp;information and reports generated during or after the lifting could refer to all relevant cargo information.</p><p>This screen is based on the principle that a cargo consists of one or more cargo parcels, with each parcel having a defined owner company(Consignor) and a primary buying party (Consignee). This approach is quite common for offshore equity liftings, which indeed is the prime purpose of CA.0001.</p><p>A group lifting occurs when more than one consignor lifts in the same cargo. The principle applied here is that a grouplifting must be represented with one parcel for each lifter (consignor).</p><p><br></p>
 related: {}

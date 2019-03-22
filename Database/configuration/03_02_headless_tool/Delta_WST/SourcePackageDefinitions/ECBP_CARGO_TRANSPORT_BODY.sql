@@ -26,6 +26,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Cargo_Transport IS
 **       27.03.2013   leeeewei  ECPD-7256: Renamed Ecbp_Cargo_Numbering to ue_cargo_numbering
 **       15.04.2015   muhammah  ECPD-29411: Updated PROCEDURE bdCargoTransport to delete from cargo_protest_list and cargo_protest
 **       03.07.2017   asareswi  ECPD-45818: Replaced sysdate with Ecdp_Timestamp.getCurrentSysdate
+**       01.10.2018   sharawan  ECPD-59763: Updated procedure cleanLonesomeCargoes to check for system property setting before delete lonesome cargoes
 ********************************************************************/
 
 --<EC-DOC>
@@ -330,20 +331,27 @@ END getDateDiff;
 PROCEDURE cleanLonesomeCargoes
 --</EC-DOC>
 IS
-CURSOR c_lonesome_cargo
-IS
-SELECT cargo_no
-FROM cargo_transport c
-WHERE not exists (SELECT 'X' FROM storage_lift_nomination s
-                  WHERE s.cargo_no = c.cargo_no);
-BEGIN
-	FOR curLonesomeCargo IN c_lonesome_cargo LOOP
-		-- cleanup
-		bdCargoTransport(curLonesomeCargo.cargo_no);
+  CURSOR c_lonesome_cargo
+  IS
+  SELECT cargo_no
+  FROM cargo_transport c
+  WHERE not exists (SELECT 'X' FROM storage_lift_nomination s
+                    WHERE s.cargo_no = c.cargo_no);
 
-		DELETE FROM cargo_transport
-		WHERE cargo_no = curLonesomeCargo.cargo_no;
-	END LOOP;
+  lv_clean_lonesome VARCHAR2(1);
+
+BEGIN
+  lv_clean_lonesome := ecdp_ctrl_property.getSystemProperty('/com/ec/tran/cargo/delete_liftings/clean_lonesome_cargo');
+
+  IF nvl(lv_clean_lonesome, 'Y') = 'Y' THEN
+    FOR curLonesomeCargo IN c_lonesome_cargo LOOP
+      -- cleanup
+      bdCargoTransport(curLonesomeCargo.cargo_no);
+
+      DELETE FROM cargo_transport
+      WHERE cargo_no = curLonesomeCargo.cargo_no;
+    END LOOP;
+  END IF;
 
 END cleanLonesomeCargoes;
 

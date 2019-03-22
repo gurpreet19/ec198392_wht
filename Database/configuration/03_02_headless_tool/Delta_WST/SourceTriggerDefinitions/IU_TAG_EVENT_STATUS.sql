@@ -2,9 +2,10 @@ CREATE OR REPLACE EDITIONABLE TRIGGER "IU_TAG_EVENT_STATUS"
 BEFORE INSERT OR UPDATE ON TAG_EVENT_STATUS
 FOR EACH ROW
 BEGIN
-    -- Basis
+    -- Common
     IF Inserting THEN
       :new.record_status := nvl(:new.record_status, 'P');
+
       IF :new.created_by IS NULL THEN
          :new.created_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);
       END IF;

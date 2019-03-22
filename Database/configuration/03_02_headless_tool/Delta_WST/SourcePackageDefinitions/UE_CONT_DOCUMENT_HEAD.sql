@@ -55,6 +55,9 @@ isGenCargoDocUEPostEnabled VARCHAR(32) := 'FALSE';
 isUpdLineItemCustomerUEEnabled VARCHAR2(32) := 'FALSE';
 isReversedProcPeriodUEEnabled VARCHAR2(32) := 'FALSE';
 isTransferUEEnabled VARCHAR2(32) := 'FALSE';
+isIsInsTransAllowedUEE VARCHAR(32) := 'FALSE';
+isIsInsTransAllowedPreUEE VARCHAR(32) := 'FALSE';
+isIsInsTransAllowedPostUEE VARCHAR(32) := 'FALSE';
 
 
 PROCEDURE FillDocument(p_document_key VARCHAR2, p_user VARCHAR2);
@@ -151,6 +154,22 @@ PROCEDURE SetPPAInterest(p_document_key VARCHAR2, p_user VARCHAR2);
 PROCEDURE GenReverseDocumentUE(p_document_key VARCHAR2);
 
 FUNCTION IsDocLevelLocked(p_document_key VARCHAR2) RETURN VARCHAR2;
+
+FUNCTION isInsertingTransAllowed(
+         p_document_key VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2;
+
+FUNCTION isInsertingTransAllowedPre(
+         p_document_key VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2;
+
+FUNCTION isInsertingTransAllowedPost(
+         p_document_key VARCHAR2,
+         p_status VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2;
 
 FUNCTION GetRepURL(p_doc_template_id VARCHAR2, p_daytime DATE) RETURN VARCHAR2;
 

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CP.0073
   NAME: Nomination Split
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.cp.screens/fcst_nomination_split
 related: {}

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0034
   NAME: EC Codes - Non-System Codes
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/cd_ec_codes/SYSTEM_CODE_IND/N
 related: {}

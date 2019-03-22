@@ -93,6 +93,8 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Well_Potential IS
 ** 12-05-2017 jainnraj ECPD-42563: Renamed function call getProdForecastId to getProdScenarioId.
 ** 16-08-2017 shindani ECPD-31708: Updated getCurveRate to support new parameter AVG_DP_VENTURI.
 ** 28-12-2017 jainnraj ECPD-31884: Removing all the calls where potential_method is Ecdp_Calc_Method.FORECAST
+** 21-12-2018 leongwen ECPD-56158: Implement the similar Deferment Calculation Logic from PD.0020 to Forecast Event PP.0047
+                                   Modified function findSteamInjectionPotential to support FORECAST_PROD potential method.
 *****************************************************************/
 
 ------------------------------------------------------------------
@@ -1467,6 +1469,10 @@ BEGIN
     ln_total_inj_rate :=  ln_fraction_rate    + (((ld_daytime + 1) - nvl(ld_cur_date,ld_daytime)) *  ln_inj_rate);
 
     ln_return_val := ln_total_inj_rate;
+
+  ELSIF (lv2_potential_method = Ecdp_Calc_Method.FORECAST_PROD) THEN
+    lv2_scenario_id := ecbp_forecast_prod.getProdScenarioId(p_object_id,p_daytime);
+    ln_return_val := NVL(ec_fcst_iwel_day_alloc.alloc_inj_vol(p_object_id,p_daytime,'SI',lv2_scenario_id), ec_fcst_iwel_day.steam_inj_rate(p_object_id,p_daytime,lv2_scenario_id,'<='));
 
   ELSIF (lv2_potential_method = Ecdp_Calc_Method.BUDGET_PLAN) THEN
     ln_return_val := ec_object_plan.steam_inj_rate(p_object_id,p_daytime,'WELL_PLAN_BUDGET', '<=');

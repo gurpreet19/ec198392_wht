@@ -3,7 +3,7 @@ name: JBPM_NOTIFICATION
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008664
+  name: PK_JBPM_NOTIFICATION
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE?screentemplate=/com.ec.tran.co.screens/contract_attribute&TARGET_CONDITION=SALE_IND='Y'
+  COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE?screentemplate=/com.ec.tran.co.screens/contract_attribute
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: CONTRACT_SALE_ATTR
   COMPONENT_LABEL: Sale Contract Attributes

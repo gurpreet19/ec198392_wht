@@ -9,7 +9,7 @@ keys:
 parentKeys: {}
 properties:
   BF_CODE: RC.0053
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_GROUP' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCT_GROUP' )
   CLASS_NAME: PRODUCT_GROUP
   COMP_CODE: objectdates
   NAME: Object Start Date and End Date

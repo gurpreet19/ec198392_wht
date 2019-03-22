@@ -29,7 +29,8 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Flowline_Theoretical IS
 **                                    		  findWaterCutPct,findCondGasRatio and findGasOilRatio function to calculate Theoretical Water and Gas values correctly for day offset for Daily and sub-daily screen.
 **											  Code Formatting done
 **          31.08.2016  keskaash  ECPD-37224: Added new functions getAllocGasVolDay,getAllocOilVolDay,getAllocWaterVolDay,getAllocCondVolDay to get the well allocation data.
-**          27.09.16 keskaash ECPD-35756: Added function getSubseaWellMassRateDay and findHCMassDay
+**          27.09.2016 	keskaash  ECPD-35756: Added function getSubseaWellMassRateDay and findHCMassDay
+**          02.10.2018  bintjnor  ECPD-36657: Updated getGasStdRateDay to return MPM Gas rate minus gas lift rate for Theoretical Gas Method MPM, and return MPM Gas rate for MPM_NET
 *****************************************************************/
 
 
@@ -429,6 +430,9 @@ BEGIN
       ln_ret_val := NULL;
     END IF;
   ELSIF (lv2_calc_method = EcDp_Calc_method.MPM) THEN
+    lr_day_rec := ec_pflw_day_status.row_by_pk(p_object_id, p_daytime);
+    ln_ret_val := lr_day_rec.avg_mpm_gas_rate - nvl(lr_day_rec.avg_gl_rate,0);
+  ELSIF (lv2_calc_method = EcDp_Calc_method.MPM_NET) THEN
     lr_day_rec := ec_pflw_day_status.row_by_pk(p_object_id, p_daytime);
     ln_ret_val := lr_day_rec.avg_mpm_gas_rate;
   ELSIF lv2_calc_method = EcDp_Calc_Method.SUBSEA_WELLS THEN

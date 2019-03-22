@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0049
   NAME: Well
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/manage_object_groupmodel_nav/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/WELL
 related: {}

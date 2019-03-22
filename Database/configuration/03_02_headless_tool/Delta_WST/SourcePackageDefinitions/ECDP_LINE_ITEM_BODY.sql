@@ -545,239 +545,235 @@ END;
     ----+----------------------------------+-------------------------------
     PROCEDURE gen_dist_party_f_sk_p(p_line_item_key VARCHAR2,
                       p_customer_id   VARCHAR2,
-                      p_user          VARCHAR2)
+                      p_user          VARCHAR2,
+                      p_member_id     VARCHAR2 DEFAULT NULL)
 
     --</EC-DOC>
     IS
-
-
-    lv2_contract_id                VARCHAR2(32);
-    lv2_document_key               VARCHAR2(32);
-    lv_transaction_key             VARCHAR2(32);
-    lv2_transaction_template_id    VARCHAR2(32);
-    lv2_split_key_id               VARCHAR2(32);
-    lv2_dist_object_id             VARCHAR2(32);
-    lv2_uom_code                   VARCHAR2(32);
-    ld_daytime                     DATE;
-    lv2_alloc_stream_item_id       VARCHAR2(32);
-    lv2_child_split_key_id         VARCHAR2(32);
-    ld_transaction_date            DATE;
-    lv2_fin_code contract_version.financial_code%type;
-    lv2_doc_customer_id            VARCHAR2(32);
-
-    lv2_stream_item_id          VARCHAR2(32);
-    lv2_use_si_ind              VARCHAR2(32);
-    lv2_node_id                 VARCHAR2(32);
-    lv2_profit_centre_id        VARCHAR2(32);
-    lv2_company_stream_item_id      VARCHAR2(32);
-    lrec_ttv                    transaction_tmpl_version%ROWTYPE;
-    lrec_sks                    split_key_setup%ROWTYPE;
-
+        lv2_contract_id                VARCHAR2(32);
+        lv2_document_key               VARCHAR2(32);
+        lv_transaction_key             VARCHAR2(32);
+        lv2_transaction_template_id    VARCHAR2(32);
+        lv2_split_key_id               VARCHAR2(32);
+        lv2_dist_object_id             VARCHAR2(32);
+        lv2_uom_code                   VARCHAR2(32);
+        ld_daytime                     DATE;
+        lv2_alloc_stream_item_id       VARCHAR2(32);
+        lv2_child_split_key_id         VARCHAR2(32);
+        ld_transaction_date            DATE;
+        lv2_fin_code                   contract_version.financial_code%type;
+        lv2_doc_customer_id            VARCHAR2(32);
+        lv2_stream_item_id             VARCHAR2(32);
+        lv2_use_si_ind                 VARCHAR2(32);
+        lv2_node_id                    VARCHAR2(32);
+        lv2_profit_centre_id           VARCHAR2(32);
+        lrec_ttv                       transaction_tmpl_version%ROWTYPE;
+        lrec_sks                       split_key_setup%ROWTYPE;
 
     BEGIN
+        lv2_contract_id                := ec_cont_line_item.object_id(p_line_item_key);
+        ld_daytime                     := ec_cont_line_item.daytime(p_line_item_key);
+        lv2_document_key               := ec_cont_line_item.document_key(p_line_item_key);
+        lv2_uom_code                   := ec_transaction_tmpl_version.uom1_code(lv2_transaction_template_id,ld_daytime);
+        lv2_fin_code                   := ec_contract_version.financial_code(lv2_contract_id,ld_daytime,'<=');
+        lv_transaction_key             := ec_cont_line_item.transaction_key(p_line_item_key);
+        ld_transaction_date            := ec_cont_transaction.transaction_date(lv_transaction_key);
+        lv2_transaction_template_id    := ec_cont_transaction.trans_template_id(lv_transaction_key);
+        lrec_ttv                       := ec_transaction_tmpl_version.row_by_pk(lv2_transaction_template_id, ld_daytime, '<=');
+        lv2_split_key_id               := ec_transaction_tmpl_version.split_key_id(lv2_transaction_template_id, ld_daytime, '<=');
+        lv2_dist_object_id             := ec_stream_item_version.field_id(ec_cont_transaction.stream_item_id(lv_transaction_key), ld_daytime, '<=');
+        lv2_doc_customer_id            := NVL(p_customer_id, ecdp_contract_setup.GetDocCustomerId(lv2_document_key));
+        lv2_use_si_ind                 := lrec_ttv.use_stream_items_ind;
 
+        FOR LIVFCur IN gc_split_key_setup(lv2_split_key_id,ld_daytime) LOOP
+            lv2_alloc_stream_item_id := LIVFCur.source_member_id;
+            lrec_sks:= ec_split_key_setup.row_by_pk(lv2_split_key_id,LIVFCur.id, ld_daytime, '<=');
+            lv2_child_split_key_id := lrec_sks.child_split_key_id;
 
-    lv2_contract_id                       := ec_cont_line_item.object_id(p_line_item_key);
-    ld_daytime                            := ec_cont_line_item.daytime(p_line_item_key);
-    lv2_document_key                      := ec_cont_line_item.document_key(p_line_item_key);
-    lv2_uom_code                          := ec_transaction_tmpl_version.uom1_code(lv2_transaction_template_id,ld_daytime);
-    lv2_fin_code                          := ec_contract_version.financial_code(lv2_contract_id,ld_daytime,'<=');
-    lv_transaction_key                    := ec_cont_line_item.transaction_key(p_line_item_key);
-    ld_transaction_date                   := ec_cont_transaction.transaction_date(lv_transaction_key);
-    lv2_transaction_template_id           := ec_cont_transaction.trans_template_id(lv_transaction_key);
-    lrec_ttv                              := ec_transaction_tmpl_version.row_by_pk(lv2_transaction_template_id, ld_daytime, '<=');
-    lv2_split_key_id                      := ec_transaction_tmpl_version.split_key_id(lv2_transaction_template_id, ld_daytime, '<=');
-    lv2_dist_object_id                    := ec_stream_item_version.field_id(ec_cont_transaction.stream_item_id(lv_transaction_key), ld_daytime, '<=');
-    lv2_doc_customer_id                   := NVL(p_customer_id, ecdp_contract_setup.GetDocCustomerId(lv2_document_key));
+            IF lv2_use_si_ind = 'N' THEN
+                lv2_profit_centre_id := lrec_sks.profit_centre_id;
+                lv2_node_id := NULL;
+                lv2_dist_object_id := lv2_profit_centre_id;
+                lv2_stream_item_id := lv2_profit_centre_id;
+            ELSE
+                lv2_stream_item_id := LIVFCur.id;
+                SELECT DECODE(ec_stream_item_version.value_point(lv2_stream_item_id, ld_daytime, '<='),'TO_NODE'
+                    ,ec_strm_version.to_node_id(ec_stream_item.stream_id(lv2_stream_item_id), ld_daytime, '<=')
+                    ,'FROM_NODE'
+                    ,ec_strm_version.from_node_id(ec_stream_item.stream_id(lv2_stream_item_id), ld_daytime, '<=')
+                    ,NULL) INTO lv2_node_id
+                FROM cont_line_item
+                WHERE line_item_key = p_line_item_key;
+                lv2_dist_object_id := ec_stream_item_version.field_id(lv2_stream_item_id,ld_daytime, '<='); -- Field_id
+            END IF;
 
-    lv2_use_si_ind                        := lrec_ttv.use_stream_items_ind;
+            IF NVL(p_member_id,lv2_dist_object_id) = lv2_dist_object_id THEN
+                -- not yet, check if valid field
+                INSERT INTO cont_line_item_dist (
+                    object_id,
+                    line_item_key,
+                    document_key,
+                    transaction_key,
+                    STREAM_ITEM_ID,
+                    DIST_ID,
+                    NODE_ID,
+                    name,
+                    description,
+                    value_adjustment,
+                    PRICE_CONCEPT_CODE,
+                    PRICE_ELEMENT_CODE,
+                    LINE_ITEM_TYPE,
+                    STIM_VALUE_CATEGORY_CODE,
+                    SORT_ORDER,
+                    REPORT_CATEGORY_CODE,
+                    MOVE_QTY_TO_VO_IND,
+                    CONTRIBUTION_FACTOR,
+                    UOM1_CODE,
+                    UOM2_CODE,
+                    UOM3_CODE,
+                    UOM4_CODE,
+                    SPLIT_SHARE,
+                    ALLOC_STREAM_ITEM_ID,
+                    DAYTIME,
+                    LINE_ITEM_BASED_TYPE,
+                    VAT_CODE,
+                    VAT_RATE,
+                    JV_BILLABLE,
+                    comments,
+                    created_by,
+                    created_date,
+                    record_status,
+                    profit_centre_id
+                )
+                SELECT
+                      object_id,
+                      line_item_key,
+                      document_key,
+                      transaction_key,
+                      lv2_stream_item_id, -- take to_object from split key
+                      lv2_dist_object_id,
+                      lv2_node_id,
+                      name,
+                      description,
+                      value_adjustment,
+                      PRICE_CONCEPT_CODE,
+                      PRICE_ELEMENT_CODE,
+                      LINE_ITEM_TYPE,
+                      STIM_VALUE_CATEGORY_CODE,
+                      SORT_ORDER,
+                      REPORT_CATEGORY_CODE,
+                      MOVE_QTY_TO_VO_IND,
+                      CONTRIBUTION_FACTOR,
+                      UOM1_CODE,
+                      UOM2_CODE,
+                      UOM3_CODE,
+                      UOM4_CODE,
+                      Ecdp_split_key.GetSplitShareMth(lv2_split_key_id,LIVFCur.id, NVL(ld_transaction_date, ld_daytime), lv2_uom_code, 'SP_SPLIT_KEY'), -- pick share
+                      lv2_alloc_stream_item_id,
+                      ld_daytime,
+                      LINE_ITEM_BASED_TYPE,
+                      VAT_CODE,
+                      VAT_RATE,
+                      decode(ec_contract_version.bank_details_level_code(lv2_contract_id, ld_daytime, '<='),'JV_BILLABLE','JV_BILLABLE',null),
+                      LIVFCur.comments_mth,
+                      created_by,
+                      created_date,
+                      'P',
+                      lv2_profit_centre_id
+                FROM cont_line_item
+                WHERE line_item_key = p_line_item_key;
 
-          FOR LIVFCur IN gc_split_key_setup(lv2_split_key_id,ld_daytime) LOOP
+                IF (ec_cont_transaction.dist_split_type(lv_transaction_key) = 'SOURCE_SPLIT' AND ld_transaction_date IS NOT NULL) THEN
+                    Ecdp_Transaction.UpdTransSourceSplitShare(lv_transaction_key
+                        ,ec_cont_transaction_qty.net_qty1(lv_transaction_key)
+                        ,ec_cont_transaction_qty.uom1_code(lv_transaction_key)
+                        ,ld_transaction_date);
+                END IF;
 
-              lv2_alloc_stream_item_id := LIVFCur.source_member_id;
-              lrec_sks:= ec_split_key_setup.row_by_pk(lv2_split_key_id,LIVFCur.id, ld_daytime, '<=');
-              lv2_child_split_key_id := lrec_sks.child_split_key_id;
-
-               IF lv2_use_si_ind = 'N' THEN
-                   lv2_profit_centre_id := lrec_sks.profit_centre_id;
-                   lv2_node_id := NULL;
-                   lv2_dist_object_id := lv2_profit_centre_id;
-                   lv2_stream_item_id := lv2_profit_centre_id;
-
-                 ELSE
-                    lv2_stream_item_id := LIVFCur.id;
-                    select DECODE(ec_stream_item_version.value_point(lv2_stream_item_id, ld_daytime, '<='),'TO_NODE'
-                        ,ec_strm_version.to_node_id(ec_stream_item.stream_id(lv2_stream_item_id), ld_daytime, '<=')
-                        ,'FROM_NODE'
-                        ,ec_strm_version.from_node_id(ec_stream_item.stream_id(lv2_stream_item_id), ld_daytime, '<=')
-                        ,NULL) INTO lv2_node_id FROM cont_line_item WHERE line_item_key = p_line_item_key;
-                     lv2_dist_object_id := ec_stream_item_version.field_id(lv2_stream_item_id,ld_daytime, '<='); -- Field_id
-
-                  END IF;
-
-              -- not yet, check if valid field
-              INSERT INTO cont_line_item_dist
-                  (object_id,
-                  line_item_key,
-                  document_key,
-                  transaction_key,
-                  STREAM_ITEM_ID,
-                  DIST_ID,
-                  NODE_ID,
-                  name,
-                  description,
-                  value_adjustment,
-                  PRICE_CONCEPT_CODE ,
-                  PRICE_ELEMENT_CODE  ,
-                  LINE_ITEM_TYPE  ,
-                  STIM_VALUE_CATEGORY_CODE  ,
-                  SORT_ORDER  ,
-                  REPORT_CATEGORY_CODE  ,
-                  MOVE_QTY_TO_VO_IND,
-                  CONTRIBUTION_FACTOR,
-                  UOM1_CODE  ,
-                  UOM2_CODE  ,
-                  UOM3_CODE  ,
-                  UOM4_CODE  ,
-                  SPLIT_SHARE,
-                  ALLOC_STREAM_ITEM_ID,
-                  DAYTIME,
-                  LINE_ITEM_BASED_TYPE,
-                  VAT_CODE,
-                  VAT_RATE,
-                  JV_BILLABLE,
-                  comments,
-                  created_by,
-                  created_date,
-                  record_status,
-                  profit_centre_id
-              )
-              SELECT
-                  object_id,
-                  line_item_key,
-                  document_key,
-                  transaction_key,
-                  lv2_stream_item_id, -- take to_object from split key
-                  lv2_dist_object_id,
-                  lv2_node_id,
-                  name,
-                  description,
-                  value_adjustment,
-                  PRICE_CONCEPT_CODE ,
-                  PRICE_ELEMENT_CODE  ,
-                  LINE_ITEM_TYPE  ,
-                  STIM_VALUE_CATEGORY_CODE  ,
-                  SORT_ORDER  ,
-                  REPORT_CATEGORY_CODE  ,
-                  MOVE_QTY_TO_VO_IND,
-                  CONTRIBUTION_FACTOR,
-                  UOM1_CODE  ,
-                  UOM2_CODE  ,
-                  UOM3_CODE  ,
-                  UOM4_CODE  ,
-                  Ecdp_split_key.GetSplitShareMth(lv2_split_key_id,LIVFCur.id, NVL(ld_transaction_date, ld_daytime), lv2_uom_code, 'SP_SPLIT_KEY'), -- pick share
-                  lv2_alloc_stream_item_id,
-                  ld_daytime,
-                  LINE_ITEM_BASED_TYPE,
-                  VAT_CODE,
-                  VAT_RATE,
-                  decode(ec_contract_version.bank_details_level_code(lv2_contract_id, ld_daytime, '<='),'JV_BILLABLE','JV_BILLABLE',null),
-                  LIVFCur.comments_mth,
-                  created_by,
-                  created_date,
-                  'P',
-                  lv2_profit_centre_id
-              FROM cont_line_item
-              WHERE line_item_key = p_line_item_key;
-
-              IF (ec_cont_transaction.dist_split_type(lv_transaction_key) = 'SOURCE_SPLIT' AND ld_transaction_date IS NOT NULL) THEN
-                  Ecdp_Transaction.UpdTransSourceSplitShare(lv_transaction_key
-                            ,ec_cont_transaction_qty.net_qty1(lv_transaction_key)
-                            ,ec_cont_transaction_qty.uom1_code(lv_transaction_key)
-                            ,ld_transaction_date);
-              END IF;
-
-              FOR SplitCur IN gc_split_key_setup_company(lv2_child_split_key_id, lv2_contract_id,lv2_doc_customer_id, lv2_fin_code, ld_daytime) LOOP
-
-
-
-                      INSERT INTO cont_li_dist_company (
-                          object_id
-                          ,line_item_key
-                          ,daytime
-                          ,stream_item_id
-                          ,dist_id
-                          ,document_key
-                          ,transaction_key
-                          ,node_id
-                          ,name
-                          ,description
-                          ,comments
-                          ,vendor_id
-                          ,vendor_share
-                          ,customer_id
-                          ,customer_share
-                          ,split_share
-                          ,sort_order
-                          ,report_category_code
-                          ,value_adjustment
-                          ,uom1_code
-                          ,uom2_code
-                          ,uom3_code
-                          ,uom4_code
-                          ,price_concept_code
-                          ,price_element_code
-                          ,stim_value_category_code
-                          ,line_item_type
-                          ,line_item_based_type
-                          ,company_stream_item_id
-                          ,move_qty_to_vo_ind
-                          ,contribution_factor
-                          ,profit_centre_id
-                          )
-                      SELECT
-                          d.Object_id,
-                          d.Line_item_key,
-                          d.Daytime,
-                          d.stream_item_id,
-                          d.dist_id,
-                          d.document_key,
-                          d.transaction_key,
-                          d.node_id,
-                          '' ,
-                          '' ,
-                          SplitCur.comments_mth,
-                          SplitCur.vendor_id,
-                          SplitCur.vendor_share,
-                          SplitCur.customer_id,
-                          SplitCur.customer_share,
-                          SplitCur.vendor_share * SplitCur.customer_share,
-                          d.sort_order,
-                          d.report_category_code,
-                          d.value_adjustment,
-                          d.uom1_code,
-                          d.uom2_code,
-                          d.uom3_code,
-                          d.uom4_code,
-                          d.price_concept_code,
-                          d.price_element_code,
-                          d.stim_value_category_code,
-                          d.line_item_type,
-                          d.line_item_based_type,
-                          SplitCur.split_member_id,
-                          d.move_qty_to_vo_ind,
-                          d.contribution_factor,
-                          d.profit_centre_id
-                      FROM
-                          cont_line_item_dist d
-                      WHERE line_item_key = p_line_item_key
-                        AND d.dist_id = lv2_dist_object_id;
-
-
-              END LOOP;
-
-          END LOOP;
-
+                FOR SplitCur IN gc_split_key_setup_company(lv2_child_split_key_id, lv2_contract_id,lv2_doc_customer_id, lv2_fin_code, ld_daytime) LOOP
+                    INSERT INTO cont_li_dist_company (
+                        object_id
+                        ,line_item_key
+                        ,daytime
+                        ,stream_item_id
+                        ,dist_id
+                        ,document_key
+                        ,transaction_key
+                        ,node_id
+                        ,name
+                        ,description
+                        ,comments
+                        ,vendor_id
+                        ,vendor_share
+                        ,customer_id
+                        ,customer_share
+                        ,split_share
+                        ,sort_order
+                        ,report_category_code
+                        ,value_adjustment
+                        ,uom1_code
+                        ,uom2_code
+                        ,uom3_code
+                        ,uom4_code
+                        ,price_concept_code
+                        ,price_element_code
+                        ,stim_value_category_code
+                        ,line_item_type
+                        ,line_item_based_type
+                        ,company_stream_item_id
+                        ,move_qty_to_vo_ind
+                        ,contribution_factor
+                        ,profit_centre_id
+                    )
+                    SELECT
+                        d.Object_id,
+                        d.Line_item_key,
+                        d.Daytime,
+                        d.stream_item_id,
+                        d.dist_id,
+                        d.document_key,
+                        d.transaction_key,
+                        d.node_id,
+                        '',
+                        '',
+                        SplitCur.comments_mth,
+                        SplitCur.vendor_id,
+                        SplitCur.vendor_share,
+                        SplitCur.customer_id,
+                        SplitCur.customer_share,
+                        SplitCur.vendor_share * SplitCur.customer_share,
+                        d.sort_order,
+                        d.report_category_code,
+                        d.value_adjustment,
+                        d.uom1_code,
+                        d.uom2_code,
+                        d.uom3_code,
+                        d.uom4_code,
+                        d.price_concept_code,
+                        d.price_element_code,
+                        d.stim_value_category_code,
+                        d.line_item_type,
+                        d.line_item_based_type,
+                        SplitCur.split_member_id,
+                        d.move_qty_to_vo_ind,
+                        d.contribution_factor,
+                        d.profit_centre_id
+                    FROM cont_line_item_dist d
+                    WHERE line_item_key = p_line_item_key
+                    AND d.dist_id = lv2_dist_object_id
+                    --Make sure not to insert duplicates
+                    AND NOT EXISTS (
+                        SELECT line_item_key, dist_id, vendor_id, customer_id, stream_item_id
+                        FROM cont_li_dist_company
+                        WHERE line_item_key = d.Line_item_key
+                        AND dist_id = d.dist_id
+                        AND vendor_id = SplitCur.vendor_id
+                        AND customer_id = SplitCur.customer_id
+                        AND stream_item_id = d.stream_item_id
+                    );
+                END LOOP;
+            END IF;
+        END LOOP;
     END;
 
 
@@ -909,39 +905,110 @@ END;
        ,p_ifac_pc_idxes                    IN OUT NOCOPY t_table_number
     )
     IS
-        l_ifac_all                         t_table_ifac_sales_qty;
-        l_ifac_li                          t_ifac_sales_qty;
+        l_ifac_all                          t_table_ifac_sales_qty;
+        l_ifac_li                           t_ifac_sales_qty;
+        l_ifac_li_dist                      cont_line_item_dist%ROWTYPE;
+        lb_resync_si                        boolean;
+        l_ifac_line_item                    cont_line_item%ROWTYPE;
+
+      cursor c_clid(cp_line_item_key varchar2, cp_dist_id varchar2) is
+      select * from cont_line_item_dist
+       where line_item_key = cp_line_item_key
+         and dist_id = cp_dist_id;
+
+      TYPE t_li_rec IS RECORD (
+          line_item_key cont_line_item.line_item_key%TYPE
+      );
+      TYPE t_li_table IS TABLE OF t_li_rec;
+      ltab_li t_li_table := t_li_table();
+
+      lb_other_line_item_interfaced BOOLEAN;
+      lv2_trans_key varchar2(32);
     BEGIN
         l_ifac_all := p_context.ifac_period;
         l_ifac_li := l_ifac_all(p_ifac_li_level_idx);
+        l_ifac_line_item := ec_cont_line_item.row_by_pk(p_line_item_key);
+        ltab_li.extend;
+        ltab_li(ltab_li.LAST).line_item_key := p_line_item_key;
 
+        --Need to find other line items to add from template if not interfaced in.
+        IF l_ifac_line_item.line_item_based_type = 'QTY' THEN
+          FOR cli in c_get_li_meta(l_ifac_line_item.transaction_key) LOOP
+              IF cli.line_item_key != p_line_item_key THEN
+
+                 lb_other_line_item_interfaced:=false;
+                 FOR idx_li IN p_context.ifac_period.first .. p_context.ifac_period.last LOOP
+                   IF p_context.ifac_period(idx_li).line_item_key =  cli.line_item_key
+                     AND p_context.ifac_period(idx_li).CREATION_TYPE = 'INTERFACE'
+                     AND p_context.ifac_period(idx_li).INTERFACE_LEVEL != 'TRANS'
+                      and ec_cont_line_item.line_item_template_id(cli.line_item_key) is not null then
+                      lb_other_line_item_interfaced:=true;
+                      CONTINUE;
+                   END IF;
+                 END LOOP;
+
+                 IF lb_other_line_item_interfaced = false then
+                   ltab_li.extend;
+                   ltab_li(ltab_li.LAST).line_item_key := cli.line_item_key;
+                 END IF;
+              END IF;
+          END LOOP;
+        END IF;
         -- generates distribution for reduced config
         IF ecdp_transaction.IsReducedConfig(
             NULL,
             NULL,
             p_transaction_rec.trans_template_id,
             p_transaction_rec.transaction_key,
-            p_transaction_rec.supply_from_date) THEN
-
+            p_transaction_rec.supply_from_date,
+            true) THEN
             -- Deletes existing distributions
             IF UPPER(p_transaction_version_rec.use_stream_items_ind) = 'N' THEN
                 remove_dist_p(p_line_item_key);
             END IF;
 
+
             IF UPPER(p_transaction_version_rec.use_stream_items_ind) = 'Y' THEN
-                gen_dist_party_f_conf_field(
-                    p_line_item_key, NULL, p_context.user_id, l_ifac_li.uom1_code);
+              FOR idx in  ltab_li.first .. ltab_li.last loop
+                 gen_dist_party_f_conf_field(
+                  ltab_li(idx).line_item_key, NULL, p_context.user_id, l_ifac_li.uom1_code);
+               END LOOP;
+
             ELSE
                 FOR idx_pc IN p_ifac_pc_idxes.first .. p_ifac_pc_idxes.last LOOP
-                    gen_dist_party_f_given(
-                        p_line_item_key,
-                        NULL,
-                        p_context.user_id,
-                        l_ifac_li.uom1_code,
-                        l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID,
-                        l_ifac_all(p_ifac_pc_idxes(idx_pc)).PERIOD_START_DATE);
+                     FOR idx in  ltab_li.first .. ltab_li.last loop
+                          gen_dist_party_f_given(
+                              ltab_li(idx).line_item_key,
+                              NULL,
+                              p_context.user_id,
+                              l_ifac_li.uom1_code,
+                              l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID,
+                              l_ifac_all(p_ifac_pc_idxes(idx_pc)).PERIOD_START_DATE);
+                      END LOOP;
                 END LOOP;
             END IF;
+        ELSE
+          FOR idx_pc IN p_ifac_pc_idxes.first .. p_ifac_pc_idxes.last LOOP
+            FOR idx in  ltab_li.first .. ltab_li.last loop
+                lv2_trans_key := null;
+                IF UPPER(p_transaction_version_rec.use_stream_items_ind) = 'N' THEN
+                  l_ifac_li_dist := ec_cont_line_item_dist.row_by_pk(ltab_li(idx).line_item_key,
+                  l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID,
+                  l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID );
+                  lv2_trans_key := l_ifac_li_dist.transaction_key;
+                ELSE
+                  for clid in c_clid(ltab_li(idx).line_item_key,l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID ) LOOP
+                      lv2_trans_key:=clid.transaction_key;
+                  END LOOP;
+                END IF;
+                IF lv2_trans_key is null then
+                      gen_dist_party_f_SK_P(ltab_li(idx).line_item_key,
+                          NULL,
+                          p_context.user_id,
+                          l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID);
+                END IF;
+           END LOOP;
+         END LOOP;
         END IF;
     END;
 
@@ -960,9 +1027,55 @@ END;
     IS
         l_ifac_all                         t_table_ifac_cargo_value;
         l_ifac_li                          t_ifac_cargo_value;
+
+        l_ifac_li_dist                      cont_line_item_dist%ROWTYPE;
+        lb_resync_si                        boolean;
+        l_ifac_line_item                    cont_line_item%ROWTYPE;
+        lv2_trans_key                       VARCHAR2(32);
+
+      cursor c_clid(cp_line_item_key varchar2, cp_dist_id varchar2) is
+      select * from cont_line_item_dist
+       where line_item_key = cp_line_item_key
+         and dist_id = cp_dist_id;
+
+        TYPE t_li_rec IS RECORD (
+            line_item_key cont_line_item.line_item_key%TYPE
+        );
+        TYPE t_li_table IS TABLE OF t_li_rec;
+        ltab_li t_li_table := t_li_table();
+
+        lb_other_line_item_interfaced BOOLEAN;
+
     BEGIN
         l_ifac_all := p_context.ifac_cargo;
         l_ifac_li := l_ifac_all(p_ifac_li_level_idx);
+        l_ifac_line_item := ec_cont_line_item.row_by_pk(p_line_item_key);
+
+        ltab_li.extend;
+        ltab_li(ltab_li.LAST).line_item_key := p_line_item_key;
+
+        --Need to find other line items to add from template if not interfaced in.
+        IF l_ifac_line_item.line_item_based_type = 'QTY' THEN
+          FOR cli in c_get_li_meta(l_ifac_line_item.transaction_key) LOOP
+              IF cli.line_item_key != p_line_item_key THEN
+                 lb_other_line_item_interfaced:=false;
+                 FOR idx_li IN p_context.ifac_cargo.first .. p_context.ifac_cargo.last LOOP
+                   IF p_context.ifac_cargo(idx_li).line_item_key =  cli.line_item_key
+                     AND p_context.ifac_cargo(idx_li).CREATION_TYPE = 'INTERFACE'
+                     AND p_context.ifac_cargo(idx_li).INTERFACE_LEVEL != 'TRANS'
+                     and ec_cont_line_item.line_item_template_id(cli.line_item_key) is not null then
+                      lb_other_line_item_interfaced:=true;
+                      CONTINUE;
+                   END IF;
+                 END LOOP;
+
+                 IF lb_other_line_item_interfaced = false then
+                   ltab_li.extend;
+                   ltab_li(ltab_li.LAST).line_item_key := cli.line_item_key;
+                 END IF;
+              END IF;
+          END LOOP;
+        END IF;
 
         -- generates distribution for reduced config
         IF ecdp_transaction.IsReducedConfig(
@@ -970,28 +1083,56 @@ END;
             NULL,
             p_transaction_rec.trans_template_id,
             p_transaction_rec.transaction_key,
-            p_transaction_rec.daytime) THEN
-
+            p_transaction_rec.daytime,
+            true) THEN
             -- Deletes existing distributions
             IF UPPER(p_transaction_version_rec.use_stream_items_ind) = 'N' THEN
                 remove_dist_p(p_line_item_key);
             END IF;
 
             IF UPPER(p_transaction_version_rec.use_stream_items_ind) = 'Y' THEN
-                gen_dist_party_f_conf_field(
-                    p_line_item_key, NULL, p_context.user_id, l_ifac_li.uom1_code);
+                FOR idx in  ltab_li.first .. ltab_li.last loop
+                    gen_dist_party_f_conf_field(
+                        ltab_li(idx).line_item_key, NULL, p_context.user_id, l_ifac_li.uom1_code);
+                END LOOP;
             ELSE
                 FOR idx_pc IN p_ifac_pc_idxes.first .. p_ifac_pc_idxes.last LOOP
-                    gen_dist_party_f_given(
-                        p_line_item_key,
-                        NULL,
-                        p_context.user_id,
-                        l_ifac_li.uom1_code,
-                        l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID,
-                        l_ifac_all(p_ifac_pc_idxes(idx_pc)).POINT_OF_SALE_DATE);
+                     FOR idx in  ltab_li.first .. ltab_li.last loop
+                          gen_dist_party_f_given(
+                              ltab_li(idx).line_item_key,
+                              NULL,
+                              p_context.user_id,
+                              l_ifac_li.uom1_code,
+                              l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID,
+                              l_ifac_all(p_ifac_pc_idxes(idx_pc)).POINT_OF_SALE_DATE);
+                      END LOOP;
                 END LOOP;
             END IF;
-        END IF;
+
+        ELSE
+          FOR idx_pc IN p_ifac_pc_idxes.first .. p_ifac_pc_idxes.last LOOP
+            FOR idx in  ltab_li.first .. ltab_li.last loop
+                lv2_trans_key := null;
+                IF UPPER(p_transaction_version_rec.use_stream_items_ind) = 'N' THEN
+                  l_ifac_li_dist := ec_cont_line_item_dist.row_by_pk(ltab_li(idx).line_item_key,
+                  l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID,
+                  l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID );
+                  lv2_trans_key := l_ifac_li_dist.transaction_key;
+                ELSE
+                  for clid in c_clid(ltab_li(idx).line_item_key,l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID ) LOOP
+                      lv2_trans_key:=clid.transaction_key;
+                  END LOOP;
+                END IF;
+                IF lv2_trans_key is null then
+                      gen_dist_party_f_SK_P(ltab_li(idx).line_item_key,
+                          NULL,
+                          p_context.user_id,
+                          l_ifac_all(p_ifac_pc_idxes(idx_pc)).PROFIT_CENTER_ID);
+                END IF;
+           END LOOP;
+         END LOOP;
+      END IF;
+
     END;
 
 
@@ -1664,6 +1805,75 @@ END;
         UPDATE cont_line_item
         SET dist_method = p_line_item_rec.dist_method
         WHERE line_item_key = p_line_item_rec.line_item_key;
+
+
+        IF p_line_item_rec.line_item_based_type = 'QTY' THEN
+            IF ec_transaction_tmpl_version.transaction_scope(ec_cont_transaction.trans_template_id(p_line_item_rec.Transaction_Key) , p_line_item_rec.daytime,'<=')='PERIOD_BASED' THEN
+                  UPDATE cont_line_item_dist
+                  SET split_share=
+                      NVL((SELECT split_share
+                                          FROM cont_line_item_dist clid
+                                         WHERE transaction_key =             p_line_item_rec.transaction_key
+                                           AND line_item_key =               p_line_item_rec.line_item_key
+                                           AND line_item_based_type =         'QTY'
+                                           AND dist_id =                   cont_line_item_dist.dist_id),split_share),
+                      last_updated_by=nvl(last_updated_by,created_by)
+                  WHERE line_item_key != p_line_item_rec.line_item_key
+                   AND transaction_key = p_line_item_rec.transaction_key
+                   AND (select count(*) from
+                                         ifac_sales_qty isq
+                                         where alloc_no_max_ind = 'Y'
+                                           AND TRANS_KEY_SET_IND = 'Y'
+                                           AND TRANSACTION_KEY = cont_line_item_dist.transaction_key
+                                           AND LINE_ITEM_KEY = cont_line_item_dist.line_item_key
+                                           AND dist_ID = cont_line_item_dist.dist_id) = 0;
+
+
+                  UPDATE cont_line_item
+                  SET dist_method = p_line_item_rec.dist_method,
+                      last_updated_by=nvl(last_updated_by,created_by)
+                  WHERE line_item_key != p_line_item_rec.line_item_key
+                   AND transaction_key = p_line_item_rec.transaction_key
+                   AND (select count(*) from
+                                         ifac_sales_qty isq
+                                         where alloc_no_max_ind = 'Y'
+                                           AND TRANS_KEY_SET_IND = 'Y'
+                                           AND TRANSACTION_KEY = cont_line_item.transaction_key
+                                           AND LINE_ITEM_KEY = cont_line_item.line_item_key) = 0;
+              ELSE
+                      UPDATE cont_line_item_dist
+                        SET split_share=
+                            NVL((SELECT split_share
+                                                FROM cont_line_item_dist clid
+                                               WHERE transaction_key =             p_line_item_rec.transaction_key
+                                                 AND line_item_key =               p_line_item_rec.line_item_key
+                                                 AND line_item_based_type =         'QTY'
+                                                 AND dist_id =                   cont_line_item_dist.dist_id),split_share),
+                            last_updated_by=nvl(last_updated_by,created_by)
+                        WHERE line_item_key != p_line_item_rec.line_item_key
+                         AND transaction_key = p_line_item_rec.transaction_key
+                         AND (select count(*) from
+                                               ifac_cargo_value icv
+                                               where alloc_no_max_ind = 'Y'
+                                                 AND TRANS_KEY_SET_IND = 'Y'
+                                                 AND TRANSACTION_KEY = cont_line_item_dist.transaction_key
+                                                 AND LINE_ITEM_KEY = cont_line_item_dist.line_item_key
+                                                 AND dist_ID = cont_line_item_dist.dist_id) = 0;
+
+
+                        UPDATE cont_line_item
+                        SET dist_method = p_line_item_rec.dist_method,
+                            last_updated_by=nvl(last_updated_by,created_by)
+                        WHERE line_item_key != p_line_item_rec.line_item_key
+                         AND transaction_key = p_line_item_rec.transaction_key
+                         AND (select count(*) from
+                                               ifac_cargo_value icv
+                                               where alloc_no_max_ind = 'Y'
+                                                 AND TRANS_KEY_SET_IND = 'Y'
+                                                 AND TRANSACTION_KEY = cont_line_item.transaction_key
+                                                 AND LINE_ITEM_KEY = cont_line_item.line_item_key) = 0;
+              END IF;
+       END IF;
     END;
 
     -----------------------------------------------------------------------
@@ -2787,10 +2997,11 @@ END;
     IS
         l_transaction_key                  cont_transaction.transaction_key%TYPE;
     BEGIN
+        l_transaction_key := ec_cont_line_item.transaction_key(p_line_item_key);
         del_componding_interests_li_p(p_line_item_key);
         del_ic_p(p_line_item_key);
 
-        l_transaction_key := ec_cont_line_item.transaction_key(p_line_item_key);
+
         ecdp_transaction.UpdPercentageLineItem(l_transaction_key, 'SYSTEM');
     END;
 
@@ -4824,6 +5035,10 @@ BEGIN
     IF lrec_li.line_item_based_type != ecdp_revn_ft_constants.li_btype_quantity THEN
         lrec_li.li_unique_key_1 := p_li_unique_key_1;
         lrec_li.li_unique_key_2 := p_li_unique_key_2;
+    END IF;
+
+    IF(lrec_li.line_item_type IS NULL and lrec_li.line_item_based_type='FREE_UNIT_PRICE_OBJECT') THEN
+       RAISE_APPLICATION_ERROR(-20000,'Price Element '||lrec_li.price_element_code|| ' for Price Concept '||lrec_li.price_concept_code|| ' has no Line Item Type set. Please correct and try again.');
     END IF;
 
     INSERT INTO CONT_LINE_ITEM
@@ -6898,10 +7113,120 @@ END LOOP;
 IF lv_result IS NOT NULL THEN
    RAISE_APPLICATION_ERROR(-20000,'A CALC_QTY_VALUE based-type line item template can not be placed on a transaction that has quantity line item templates');
 END IF;
-
-
-
 END ValidateCalcQtyValueLI;
+
+---------------------------------------------------------------------------------------------------
+-- Function       : ValidateLineItemTemplate
+-- Description    : To validate Line Item Template rows on post save.
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   : line_item_template, line_item_tmpl_version
+--
+-- Using functions:
+-- Configuration
+-- required       :
+--
+-- Behaviour      : To be called from screen xml during SaveService. Will return
+--                  user feedback if any validation findings.
+--                  Mark: To be called after GenericDaoBusinessAction. This to have all
+--                  updated rows validated in one go.
+---------------------------------------------------------------------------------------------------
+FUNCTION ValidateLineItemTemplate(p_transaction_template_id VARCHAR2,
+                                  p_daytime                 DATE,
+                                  p_type                    VARCHAR2)
+RETURN VARCHAR2
+IS
+    CURSOR c_missing_sort_order(cp_transaction_template_id VARCHAR2, cp_type VARCHAR2) IS
+        select o.object_code
+        from line_item_template o inner join line_item_tmpl_version oa on oa.object_id = o.object_id
+        where o.transaction_template_id = cp_transaction_template_id
+        and o.sort_order is null
+        and (
+            (oa.line_item_based_type     in ('QTY') and cp_type = 'QTY') or
+            (oa.line_item_based_type not in ('QTY') and cp_type = 'OLI'))
+        order by o.object_code;
+
+    CURSOR c_unique_count(cp_transaction_template_id VARCHAR2, cp_daytime DATE, cp_type VARCHAR2) IS
+        select * from (
+            select
+                o.sort_order,
+                (select count(o_count.object_id)
+                 from line_item_template o_count inner join line_item_tmpl_version oa_count on oa_count.object_id = o_count.object_id
+                 where o_count.transaction_template_id = o.transaction_template_id
+                 and o_count.sort_order = o.sort_order
+                 and (
+                     (oa_count.line_item_based_type     in ('QTY') and cp_type = 'QTY') or
+                     (oa_count.line_item_based_type not in ('QTY') and cp_type = 'OLI'))
+                 ) as sort_order_count
+            from line_item_template o inner join line_item_tmpl_version oa on oa.object_id = o.object_id
+            where o.transaction_template_id = cp_transaction_template_id
+            and oa.daytime = cp_daytime
+            and (
+                (oa.line_item_based_type     in ('QTY') and cp_type = 'QTY') or
+                (oa.line_item_based_type not in ('QTY') and cp_type = 'OLI'))
+            )
+        where sort_order_count > 1;
+
+    CURSOR c_first_category_code(cp_transaction_template_id VARCHAR2, cp_daytime DATE) IS
+        select * from (
+            select o.object_id, o.object_code, oa.daytime, o.sort_order, nvl(oa.stim_value_category_code, 'NULL') stim_value_category_code, ec_prosty_codes.code_text(oa.stim_value_category_code, 'STIM_VALUE_CATEGORY_CODE') stim_value_category_name
+            from line_item_template o inner join line_item_tmpl_version oa on oa.object_id = o.object_id
+            where o.transaction_template_id = cp_transaction_template_id
+            and oa.daytime = cp_daytime
+            and oa.line_item_based_type = 'QTY'
+            order by o.sort_order)
+        where rownum <= 1;
+
+    lv_user_feedback  VARCHAR2(1024) := '';
+    lv_line_item_type VARCHAR2(1024) := '';
+BEGIN
+    --Validate input parameters
+    IF nvl(p_type, 'NULL') != 'QTY' AND nvl(p_type, 'NULL') != 'OLI' THEN
+        lv_user_feedback := 'Error!' || chr(10) || 'Not able to validate line items. The validation type (' || nvl(p_type, 'NULL') || ') is wrong or not specified.';
+        RETURN lv_user_feedback;
+    END IF;
+    lv_line_item_type := CASE nvl(p_type, 'NULL') WHEN 'QTY' THEN 'Quantity' WHEN 'OLI' THEN 'Other' ELSE '' END || ' Line Items';
+
+    --Validate missing sort order (QTY and OLI)
+    IF nvl(lv_user_feedback, 'NULL') = 'NULL' THEN
+        FOR v IN c_missing_sort_order(p_transaction_template_id, p_type) LOOP
+            lv_user_feedback := 'Sort order on ' || lv_line_item_type || ' is mandatory. Sort order is missing on line item ''' || v.object_code || '''.';
+            EXIT;
+        END LOOP;
+    END IF;
+
+    --Validate unique sort orders (QTY and OLI)
+    IF nvl(lv_user_feedback, 'NULL') = 'NULL' THEN
+        FOR v IN c_unique_count(p_transaction_template_id, p_daytime, p_type) LOOP
+            lv_user_feedback := 'The sort order on ' || lv_line_item_type || ' must be unique. Sort order ' || v.sort_order || ' exists ' || v.sort_order_count || ' times.';
+            EXIT;
+        END LOOP;
+    END IF;
+
+    --Validate Quantity Source (QTY's only)
+    IF nvl(lv_user_feedback, 'NULL') = 'NULL' THEN
+        FOR v IN c_first_category_code(p_transaction_template_id, p_daytime) LOOP
+            IF v.stim_value_category_code <> 'NET_CURRENT' THEN
+                lv_user_feedback := 'The first Quantity Line Item (' || v.object_code || ') must have Quantity Source as ''' || ec_prosty_codes.code_text('NET_CURRENT', 'STIM_VALUE_CATEGORY_CODE') || '''. Right now it is ''' || v.stim_value_category_name || '''.';
+            END IF;
+        END LOOP;
+    END IF;
+
+    --Format user feedback
+    IF nvl(lv_user_feedback, 'NULL') != 'NULL' THEN
+        lv_user_feedback :=
+        '[ErrMsg]Not able to save!' || chr(10) ||
+        lv_user_feedback || chr(10) ||
+        'Please correct to have the business logic to work as intended.';
+    END IF;
+
+    RETURN lv_user_feedback;
+EXCEPTION
+    WHEN OTHERS THEN
+        Raise_Application_Error(-20000, 'There was an error performing the requested operation ' || SQLCODE || ' '|| SUBSTR(SQLERRM, 1, 240) );
+END ValidateLineItemTemplate;
 
 
 --<EC-DOC>
@@ -7853,81 +8178,69 @@ END getPPAIntBaseAmount;
 --
 ---------------------------------------------------------------------------------------------------
 
-FUNCTION split_share_rebalance(p_qty_no  number,
-                               p_line_item_key VARCHAR2,
-                               p_field_id VARCHAR2,
-                               p_share_value NUMBER,
-                               p_vendor_id VARCHAR2 DEFAULT NULL)
-                               RETURN VARCHAR2
-         IS
-  ln_return NUMBER;
-  ln_total NUMBER;
+FUNCTION split_share_rebalance(p_qty_no         NUMBER,
+                               p_line_item_key  VARCHAR2,
+                               p_dist_id        VARCHAR2,
+                               p_share_value    NUMBER,
+                               p_vendor_id      VARCHAR2 DEFAULT NULL,
+                               p_stream_item_id VARCHAR2 DEFAULT NULL) RETURN VARCHAR2
+IS
+  ln_return                    NUMBER;
+  ln_total                     NUMBER;
   max_dist_id                  VARCHAR2(32);
   max_vendor_id                VARCHAR2(32);
   ln_precision                 NUMBER;
-  BEGIN
 
+BEGIN
   ln_precision := nvl(ec_ctrl_unit_conversion.precision('PCT','FRAC',ec_cont_line_item.daytime(p_line_item_key),'<='),5) + 2;
 
   IF p_vendor_id IS NULL THEN
-
     SELECT nvl(SUM(nvl(round(
                      decode(p_qty_no,
                          1,split_share,
                          2,split_share_qty2,
                          3,split_share_qty3,
                          4,split_share_qty4),ln_precision),0)),0) INTO ln_total
-      FROM cont_line_item_dist ctlid
-     WHERE ctlid.line_item_key = p_line_item_key;
-
-
+      FROM cont_line_item_dist
+     WHERE line_item_key = p_line_item_key;
   ELSE
-      SELECT nvl(SUM(nvl(round(
-                       decode(p_qty_no,
+    SELECT nvl(SUM(nvl(round(
+                     decode(p_qty_no,
                          1,vendor_share,
                          2,vendor_share_qty2,
                          3,vendor_share_qty3,
                          4,vendor_share_qty4),ln_precision),0)),0) INTO ln_total
-        FROM cont_li_dist_company ctlidc
-       WHERE ctlidc.line_item_key = p_line_item_key
-         AND dist_id = p_field_id;
-
-
-
+      FROM cont_li_dist_company
+     WHERE line_item_key = p_line_item_key
+       AND dist_id = p_dist_id
+       AND nvl(stream_item_id, 'NULL') = nvl(p_stream_item_id, nvl(stream_item_id, 'NULL'));
   END IF;
 
   ln_return := ROUND(p_share_value,ln_precision);
 
-
   IF ln_total <> 1 AND ln_total > 0.99 THEN
-
     IF p_vendor_id IS NULL THEN
-        SELECT max(dist_id) INTO max_dist_id
-          FROM cont_line_item_dist ctlid
-         WHERE ctlid.line_item_key = p_line_item_key;
+      SELECT max(dist_id) INTO max_dist_id
+        FROM cont_line_item_dist ctlid
+       WHERE ctlid.line_item_key = p_line_item_key;
 
-         IF p_field_id = max_dist_id THEN
-           ln_return :=  ln_return + 1 - ln_total;
-         END IF;
+      IF p_dist_id = max_dist_id THEN
+        ln_return :=  ln_return + 1 - ln_total;
+      END IF;
+    ELSE
+      SELECT MAX(vendor_id) INTO max_vendor_id
+        FROM cont_li_dist_company ctlidc
+       WHERE ctlidc.line_item_key = p_line_item_key
+         AND ctlidc.dist_id = dist_id;
 
-     ELSE
-         SELECT MAX(vendor_id) INTO max_vendor_id
-          FROM cont_li_dist_company ctlidc
-         WHERE ctlidc.line_item_key = p_line_item_key
-           AND ctlidc.dist_id = dist_id;
+      IF  max_vendor_id = p_vendor_id THEN
+        ln_return :=  ln_return + 1 - ln_total;
+      END IF;
+    END IF;
+  END IF;
 
-         IF  max_vendor_id = p_vendor_id THEN
-           ln_return :=  ln_return + 1 - ln_total;
-         END IF;
-
-     END IF;
- END IF;
-
-
-    RETURN ln_return;
-END  split_share_rebalance;
-
-
+  RETURN ln_return;
+END split_share_rebalance;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------

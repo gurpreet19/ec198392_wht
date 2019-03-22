@@ -8,5 +8,6 @@ properties:
   BF_CODE: RC.0060
   NAME: Monthly Royalty Process
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.rty/revn_calc_mth/ACCRUAL_IND/N
 related: {}

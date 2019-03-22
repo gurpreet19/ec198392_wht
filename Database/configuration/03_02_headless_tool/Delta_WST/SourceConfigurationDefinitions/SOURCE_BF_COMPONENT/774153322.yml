@@ -12,7 +12,7 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
   CLASS_NAME: FIN_CARGO_DOC_SIMPLE
   COMP_CODE: documents
-  NAME: Document
+  NAME: Navigator (form) > Documents (tab) > Document (table)
   SIGNING_REQ_IND: null
   URL: /documents
 related: {}

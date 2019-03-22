@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.revn.fi/fin_item_calc_daily
+  COMPONENT_EXT_NAME: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/DAY?screentemplate=/com.ec.revn.fi/fin_item_calc
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: FINANCIAL_ITEM_CALC_DAILY
   COMPONENT_LABEL: Daily Financial Item Calculation

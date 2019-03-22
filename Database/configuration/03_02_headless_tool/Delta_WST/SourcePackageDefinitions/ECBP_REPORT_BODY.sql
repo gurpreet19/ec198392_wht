@@ -1673,6 +1673,53 @@ BEGIN
     END IF;
 END hasAccessToReportRunable;
 
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : hasAccessToReportDefinition
+-- Description    : Check if the user has access to see the report definition.
+---------------------------------------------------------------------------------------------------
+FUNCTION hasAccessToReportDefinition(p_rep_group_code VARCHAR2, p_report_area_id VARCHAR2)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+    lv_no_access_count NUMBER;
+
+BEGIN
+    -- Check access to Report Area (ringfencing)
+    IF p_report_area_id is not NULL THEN
+        select count(*) into lv_no_access_count
+          from ov_report_area
+         where rownum = 1
+           and object_id = p_report_area_id;
+
+        IF lv_no_access_count = 0 THEN
+            RETURN 'N';
+        END IF;
+    END IF;
+
+    -- Check access to report definition parameters connected to object classes
+    select count(*) into lv_no_access_count
+      from report_def_grp_version rdgv,
+           report_definition_param rdp,
+           report_definition rd
+     where rdgv.rep_group_code = p_rep_group_code
+       and rd.rep_group_code = rdgv.rep_group_code
+       and rdp.report_definition_no = rd.report_definition_no
+       and rdp.access_check_ind = 'Y'
+       and rdp.parameter_value is not null
+       and rdp.parameter_type = 'EC_OBJECT_TYPE'
+       and ecdp_objects.CheckObjectAccess(rdp.parameter_value, rdp.parameter_sub_type) <> 'Y'
+       and rownum = 1;
+
+    IF lv_no_access_count = 0 THEN
+        RETURN 'Y';
+    END IF;
+
+    RETURN 'N';
+END hasAccessToReportDefinition;
+
+
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
 -- Function       : hasAccessToPublishedReport

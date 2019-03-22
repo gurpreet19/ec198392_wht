@@ -3,7 +3,7 @@ name: JBPM_EXECUTIONERRORINFO
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008742
+  name: PK_JBPM_EXECUTIONERRORINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

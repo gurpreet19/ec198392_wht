@@ -2,8 +2,8 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_JOU_MAP_DE_SETUP_HIST" ("JN_OPERATIO
   (
 ----------------------------------------------------------------------------------------------------
 -- File name: v_JOU_MAP_DE_SETUP_HIST.sql
--- View name: v_JOU_MAP_DATA_SET_HIST
---v_JOU_MAP_DE_SETUP_HIST
+-- View name: v_JOU_MAP_DE_SETUP_HIST
+--
 -- $Revision: 1.0 $
 --
 -- Purpose  : combine both Historical and Current version of records.
@@ -18,7 +18,7 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_JOU_MAP_DE_SETUP_HIST" ("JN_OPERATIO
     SELECT
     'CURRENT' jn_operation
     ,NVL(last_updated_by,created_by) jn_oracle_user
-    ,Ecdp_Timestamp.getCurrentSysdate jn_datetime
+    ,Ecdp_Timestamp.getCurrentSysdate + INTERVAL '1' SECOND jn_datetime
     ,'CURRENT' jn_notes
     ,NULL jn_appln
     ,NULL jn_session

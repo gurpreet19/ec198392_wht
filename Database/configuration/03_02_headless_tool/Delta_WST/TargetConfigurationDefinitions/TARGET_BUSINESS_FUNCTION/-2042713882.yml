@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0107
   NAME: Calculation Job Definition
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/alloc_job_definition
 related: {}

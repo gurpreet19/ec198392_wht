@@ -72,6 +72,27 @@ related:
   - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
     keys:
       CODE1: operational
+      CODE2: FCTY_CLASS_2
+      CODE3: null
+      CODE_TYPE1: DEFER_GROUP_TYPES
+      CODE_TYPE2: DEFER_OBJECT_TYPES
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: operational
+      PROSTY_CODES.CODE_TYPE: DEFER_GROUP_TYPES
+    properties:
+      CODE1: operational
+      CODE2: FCTY_CLASS_2
+      CODE3: null
+      CODE_TYPE1: DEFER_GROUP_TYPES
+      CODE_TYPE2: DEFER_OBJECT_TYPES
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: operational
       CODE2: TANK
       CODE3: null
       CODE_TYPE1: DEFER_GROUP_TYPES

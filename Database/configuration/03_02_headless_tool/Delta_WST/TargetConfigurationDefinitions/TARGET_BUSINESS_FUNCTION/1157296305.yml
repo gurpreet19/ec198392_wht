@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.1020
   NAME: Class Relations
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/maintain_class_relation
 related: {}

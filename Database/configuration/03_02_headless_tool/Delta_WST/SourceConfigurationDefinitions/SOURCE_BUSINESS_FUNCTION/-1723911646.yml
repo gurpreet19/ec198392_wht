@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0238
   NAME: Equipment Connection
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/equip_conn
 related: {}

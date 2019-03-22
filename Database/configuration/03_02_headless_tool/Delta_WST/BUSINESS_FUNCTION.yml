@@ -106,6 +106,15 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.bpm.ext.legacy.web/jbpm_process_overview: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-591343645'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.bpm.ext.legacy.web/jbpm_process_overview
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.ecdm.co.screens/imp_agent_config: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1236415322'
   keys:
@@ -223,6 +232,15 @@
   properties: {}
   related: {}
   status: DELETED
+/com.ec.frmw.co.developer/formdesigner: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '990584946'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.developer/formdesigner
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.frmw.co.netscreens/maintain_calculation: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1442699044'
   keys:
@@ -286,6 +304,16 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.frmw.co.screens/class_attr_pres_config: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '442680560'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/class_attr_pres_config
+  parentKeys: {}
+  properties:
+    NAME: Class Attribute Presentation Config
+  related: {}
+  status: MODIFIED
 /com.ec.frmw.co.screens/class_configuration: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1332154889'
   keys:
@@ -304,6 +332,16 @@
   properties: {}
   related: {}
   status: DELETED
+/com.ec.frmw.co.screens/ec_codes: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1645659669'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/ec_codes
+  parentKeys: {}
+  properties:
+    NAME: EC Codes - All
+  related: {}
+  status: MODIFIED
 /com.ec.frmw.co.screens/maintain_class_attr_property: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1366083278'
   keys:
@@ -413,33 +451,6 @@
   properties: {}
   related: {}
   status: DELETED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/BALANCE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1461891035'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/BALANCE
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/BANK: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1134135939'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/BANK
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/BANK_ACCOUNT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '330982731'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/BANK_ACCOUNT
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.frmw.co.screens/manage_object/CLASS_NAME/CALC_CONTEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '261708774'
   keys:
@@ -468,15 +479,6 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CONFIG_VARIABLE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1188408568'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/CONFIG_VARIABLE
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.frmw.co.screens/manage_object/CLASS_NAME/COUNTRY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1536059243'
   keys:
@@ -495,101 +497,11 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CUSTOMER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '604987039'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/CUSTOMER
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1083527637'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_RECEIVED_TERM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1323218046'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_RECEIVED_TERM
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_TEMPLATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-863877630'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_TEMPLATE
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/EC_CODE_OBJECT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '2098552241'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/EC_CODE_OBJECT
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIELD: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-794551879'
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIELD
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIELD_GROUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '570002521'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIELD_GROUP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_COST_OBJECT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1493436348'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_COST_OBJECT
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_UOP_DEPR_KEY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-424576767'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_UOP_DEPR_KEY
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/FOREX_SOURCE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '643429599'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FOREX_SOURCE
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/INVENTORY_AREA: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-361375823'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/INVENTORY_AREA
   parentKeys: {}
   properties: {}
   related: {}
@@ -603,33 +515,6 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/OBJECT_LIST: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '2010351421'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/OBJECT_LIST
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PAYMENT_SCHEME: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1413231647'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PAYMENT_SCHEME
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PAYMENT_TERM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1753455974'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PAYMENT_TERM
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1491602926'
   keys:
@@ -639,173 +524,11 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_GROUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1876900658'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_GROUP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_NODE_ITEM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-881529313'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_NODE_ITEM
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_SALES_ORDER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1693984438'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_SALES_ORDER
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PROD_STREAM_GROUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1382175527'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/PROD_STREAM_GROUP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.frmw.co.screens/manage_object/CLASS_NAME/REGION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1478608373'
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/REGION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/ROYALTY_DEPOSITOR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1601054317'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/ROYALTY_DEPOSITOR
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/ROYALTY_OWNER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '44220959'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/ROYALTY_OWNER
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/SPLIT_ITEM_OTHER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-281111830'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/SPLIT_ITEM_OTHER
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1521413761'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_CATEGORY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1615638780'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_CATEGORY
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_CATEGORY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-2075853972'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_CATEGORY
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_COLLECTION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-773716596'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_COLLECTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/SUMMARY_SET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '2066644392'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/SUMMARY_SET
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/SUMMARY_SETUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1770372675'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/SUMMARY_SETUP
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INVENTORY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '13679204'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INVENTORY
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INV_TMPL_SET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-281184834'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INV_TMPL_SET
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/UNIT_AGR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-292582798'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/UNIT_AGR
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/VAT_CODE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1173127132'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/VAT_CODE
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.frmw.co.screens/manage_object/CLASS_NAME/VENDOR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1593328713'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/VENDOR
   parentKeys: {}
   properties: {}
   related: {}
@@ -1175,6 +898,33 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/BALANCE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1183938167'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/BALANCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/BANK: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-175991711'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/BANK
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/BANK_ACCOUNT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2100600785'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/BANK_ACCOUNT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CALC_GRP_CONTEXT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '922576848'
   keys:
@@ -1184,11 +934,200 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CONFIG_VARIABLE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '802297748'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CONFIG_VARIABLE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CUSTOMER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '578382723'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CUSTOMER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_DATE_TERM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1281117327'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_DATE_TERM
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_RECEIVED_TERM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1286438686'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_RECEIVED_TERM
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_TEMPLATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '999506150'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_TEMPLATE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/EC_CODE_OBJECT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1809002389'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/EC_CODE_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIELD_GROUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1725192971'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIELD_GROUP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIN_COST_OBJECT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1107325528'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIN_COST_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIN_UOP_DEPR_KEY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '490889701'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIN_UOP_DEPR_KEY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FOREX_SOURCE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1788153917'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FOREX_SOURCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/INVENTORY_AREA: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-650925675'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/INVENTORY_AREA
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/OBJECT_LIST: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-284844071'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/OBJECT_LIST
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PAYMENT_SCHEME: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1123681795'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PAYMENT_SCHEME
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PAYMENT_TERM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-678127542'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PAYMENT_TERM
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCT_GROUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '53421674'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCT_GROUP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCT_NODE_ITEM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1728127419'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCT_NODE_ITEM
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCT_SALES_ORDER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2074765850'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCT_SALES_ORDER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PROD_STREAM_GROUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-303135037'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PROD_STREAM_GROUP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/REPORT_AREA: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '745471731'
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/REPORT_AREA
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/ROYALTY_DEPOSITOR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-84256247'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/ROYALTY_DEPOSITOR
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/ROYALTY_OWNER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1974543291'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/ROYALTY_OWNER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/SPLIT_ITEM_OTHER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '634354638'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/SPLIT_ITEM_OTHER
   parentKeys: {}
   properties: {}
   related: {}
@@ -1203,6 +1142,105 @@
     BF_CODE: CO.0243
   related: {}
   status: MODIFIED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1119951771'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_CATEGORY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1229527960'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_CATEGORY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_ITEM_CATEGORY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-995175856'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_ITEM_CATEGORY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_ITEM_COLLECTION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1624132752'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_ITEM_COLLECTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/SUMMARY_SET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-228551100'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/SUMMARY_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/SUMMARY_SETUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-594272289'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/SUMMARY_SETUP
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INVENTORY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-372431616'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INVENTORY
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INV_TMPL_SET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-986204766'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INV_TMPL_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/UNIT_AGR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-319187114'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/UNIT_AGR
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/VAT_CODE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1199731448'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/VAT_CODE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/VENDOR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1048036819'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/VENDOR
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.frmw.co.screens/manage_object_navmodel_nav/CLASS_NAME/PRICE_RATE/NAVMODEL/SALE_PR/TARGET/PRICE_RATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1050021707'
   keys:
@@ -1524,6 +1562,15 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.prod.co.screens/fcty_reference_value: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1605998393'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.co.screens/fcty_reference_value
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.prod.co.screens/manage_equipment: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '966379067'
   keys:
@@ -1551,6 +1598,15 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.prod.co.screens/manage_planned_well: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-802310500'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.co.screens/manage_planned_well
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.prod.co.screens/stream_seasonal_value: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-320289736'
   keys:
@@ -1574,6 +1630,15 @@
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.prod.co.screens/well_seasonal_value
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.ha.screens/daily_data_status_process_facility: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1081934475'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.ha.screens/daily_data_status_process_facility
   parentKeys: {}
   properties: {}
   related: {}
@@ -1776,11 +1841,29 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_NGL/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_NGL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '708612264'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_NGL/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_NGL
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_STM/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_STM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-89966054'
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.prod.po.screens/daily_stream_status/CLASS_NAME/STRM_DAY_STREAM_MEAS_STM/CLASS_NAME_DETAIL/STRM_DAY_STREAM_DER_STM
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1000360808'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.po.screens/daily_tank_status/CLASS_NAME/TANK_DAY_INV_VOL
   parentKeys: {}
   properties: {}
   related: {}
@@ -1799,6 +1882,15 @@
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.prod.po.screens/daily_test_device_status
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.po.screens/daily_water_overboard_status_by_stream: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2018961974'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.po.screens/daily_water_overboard_status_by_stream
   parentKeys: {}
   properties: {}
   related: {}
@@ -1836,6 +1928,15 @@
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.prod.po.screens/monthly_fcty_balancing_adj
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-670221486'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_NGL/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_NGL
   parentKeys: {}
   properties: {}
   related: {}
@@ -2005,24 +2106,6 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-782845144'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_DAY_STATUS
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_POTENTIAL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '546192523'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_POTENTIAL
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.prod.pp.screens/daily_forecast_parent/GROUPMODEL/AREA/TARGET/AREA/CLASS_NAME/FCST_AREA_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1127496392'
   keys:
@@ -2042,20 +2125,38 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-537864567'
+/com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2067094480'
   keys:
     T: BUSINESS_FUNCTION
-    URL: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS
+    URL: /com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_DAY_STATUS
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-/com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_POTENTIAL/INJ_TYPE/Y: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1932961443'
+/com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_POTENTIAL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1711992189'
   keys:
     T: BUSINESS_FUNCTION
-    URL: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_POTENTIAL/INJ_TYPE/Y
+    URL: /com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_POTENTIAL
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '654550924'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_POTENTIAL/INJ_TYPE/Y: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '6705126'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_POTENTIAL/INJ_TYPE/Y
   parentKeys: {}
   properties: {}
   related: {}
@@ -2079,11 +2180,11 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '195851390'
+/com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-942873381'
   keys:
     T: BUSINESS_FUNCTION
-    URL: /com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY
+    URL: /com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY
   parentKeys: {}
   properties: {}
   related: {}
@@ -2302,15 +2403,6 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.prod.pp.screens/monthly_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_MTH_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1616495281'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.prod.pp.screens/monthly_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_MTH_STATUS
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.prod.pp.screens/monthly_forecast_parent/GROUPMODEL/AREA/TARGET/AREA/CLASS_NAME/FCST_AREA_MTH_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-812166185'
   keys:
@@ -2330,11 +2422,20 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.prod.pp.screens/monthly_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_MTH_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-2144564816'
+/com.ec.prod.pp.screens/monthly_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_MTH_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1150859201'
   keys:
     T: BUSINESS_FUNCTION
-    URL: /com.ec.prod.pp.screens/monthly_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_MTH_STATUS
+    URL: /com.ec.prod.pp.screens/monthly_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_MTH_STATUS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.pp.screens/monthly_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_MTH_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1115827379'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.pp.screens/monthly_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_MTH_STATUS
   parentKeys: {}
   properties: {}
   related: {}
@@ -2507,6 +2608,51 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.prod.pt.screens/automatic_test_define: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1608073957'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.pt.screens/automatic_test_define
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.pt.screens/inj_test_define: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-119821729'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.pt.screens/inj_test_define
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.pt.screens/inj_test_events: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-75517507'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.pt.screens/inj_test_events
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.pt.screens/inj_test_result: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '281385153'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.pt.screens/inj_test_result
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.pt.screens/inj_test_stable_periods_summarise: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1756744997'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.pt.screens/inj_test_stable_periods_summarise
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.prod.pt.screens/prod_test_samples: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-561858891'
   keys:
@@ -2524,6 +2670,72 @@
   parentKeys: {}
   properties:
     PROFILE_CLASS_NAME: WELL
+  related: {}
+  status: MODIFIED
+/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_GAS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1692514468'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_GAS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1300980954'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/IFLW_DAY_STATUS_WATER
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/PFLW_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '905965097'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/daily_flowline_status_by_flowline/CLASS_NAME/PFLW_DAY_STATUS
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.wr.screens/daily_perforation_interval_data: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1567093744'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/daily_perforation_interval_data
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '886768445'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: INSTRUMENTATION_TYPE in ('1')
+  related: {}
+  status: MODIFIED
+/com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1780954032'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: INSTRUMENTATION_TYPE in ('2')
+  related: {}
+  status: MODIFIED
+/com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1780954033'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: INSTRUMENTATION_TYPE in ('3')
   related: {}
   status: MODIFIED
 /com.ec.prod.wr.screens/daily_well_hookup_and_well_status/CLASS_NAME/PWEL_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -2580,6 +2792,80 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-487287083'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('1')
+  related: {}
+  status: MODIFIED
+/com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-131448504'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('2')
+  related: {}
+  status: MODIFIED
+/com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-131448503'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('3')
+  related: {}
+  status: MODIFIED
+? /com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS
+: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '34847278'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('1')
+  related: {}
+  status: MODIFIED
+? /com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2
+: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2131031502'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('2')
+  related: {}
+  status: MODIFIED
+? /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS
+: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1506889368'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('1')
+  related: {}
+  status: MODIFIED
+? /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2
+: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-609336008'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('2')
+  related: {}
+  status: MODIFIED
 /com.ec.prod.wr.screens/sub_daily_validation/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_SUB_DAY_VALID: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '2073427314'
   keys:
@@ -2589,6 +2875,26 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1961167247'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: FLOWLINE_TYPE in ('OP')
+  related: {}
+  status: MODIFIED
+/com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/WELL/TARGET/WELL/OWNER/WELL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1885628219'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/WELL/TARGET/WELL/OWNER/WELL
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: ISPRODUCER in ('Y')
+  related: {}
+  status: MODIFIED
 /com.ec.prod.wr.screens/well_blowdown: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1430252333'
   keys:
@@ -2975,11 +3281,11 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1438653325'
+/com.ec.revn.cd/manage_calendar_collection: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-251996764'
   keys:
     T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION
+    URL: /com.ec.revn.cd/manage_calendar_collection
   parentKeys: {}
   properties: {}
   related: {}
@@ -3436,38 +3742,29 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.revn.fi/calculation_group: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-575447732'
+/com.ec.revn.fi/fin_item_calc/TIME_SPAN/DAY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1789600086'
   keys:
     T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.fi/calculation_group
+    URL: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/DAY
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-/com.ec.revn.fi/fin_item_calc_daily: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-911356118'
+/com.ec.revn.fi/fin_item_calc/TIME_SPAN/MTH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1789590865'
   keys:
     T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.fi/fin_item_calc_daily
+    URL: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/MTH
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-/com.ec.revn.fi/fin_item_calc_mth: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '2054924530'
+/com.ec.revn.fi/fin_item_calc/TIME_SPAN/YR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '912102955'
   keys:
     T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.fi/fin_item_calc_mth
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.revn.fi/fin_item_calc_yearly: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1877562471'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.fi/fin_item_calc_yearly
+    URL: /com.ec.revn.fi/fin_item_calc/TIME_SPAN/YR
   parentKeys: {}
   properties: {}
   related: {}
@@ -3835,15 +4132,6 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.revn.sp/banking_details: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1401885370'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.sp/banking_details
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.revn.sp/company_splits: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-341018402'
   keys:
@@ -3966,24 +4254,6 @@
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.revn.sp/document_finder
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.revn.sp/document_general: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '793098055'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.sp/document_general
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.revn.sp/document_information: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1553390603'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.sp/document_information
   parentKeys: {}
   properties: {}
   related: {}
@@ -4213,15 +4483,6 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.revn.sp/reallocation: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '374158934'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.sp/reallocation
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.revn.sp/revn_calc_log: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '346821963'
   keys:
@@ -4267,38 +4528,11 @@
   properties: {}
   related: {}
   status: ADDED
-/com.ec.revn.sp/transaction_general: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1178193884'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.sp/transaction_general
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 /com.ec.revn.sp/transaction_mapping: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-260489206'
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.revn.sp/transaction_mapping
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.revn.sp/transaction_quantities: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '654966189'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.sp/transaction_quantities
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-/com.ec.revn.sp/transaction_values: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1967612314'
-  keys:
-    T: BUSINESS_FUNCTION
-    URL: /com.ec.revn.sp/transaction_values
   parentKeys: {}
   properties: {}
   related: {}
@@ -5276,6 +5510,26 @@
   properties: {}
   related: {}
   status: ADDED
+/com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-527661150'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: SALE_IND='Y'
+  related: {}
+  status: MODIFIED
+/com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/TRAN_CODE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '607912766'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/TRAN_CODE
+  parentKeys: {}
+  properties:
+    TARGET_CONDITION: TRAN_IND='Y'
+  related: {}
+  status: MODIFIED
 /com.ec.tran.co.screens/contract_attribute_dim_matrix/ACCESS_COLUMN/TRAN_CODE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '756846945'
   keys:
@@ -5758,6 +6012,15 @@
     NAME: Period Component Recovery Factors
   related: {}
   status: MODIFIED
+/com.ec.tran.gd.screens/daily_capacity_trades: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '314231108'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.tran.gd.screens/daily_capacity_trades
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ? /com.ec.tran.gd.screens/daily_contract_balance/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT/CLASS/TRCN_DAY_NOM_BAL2/CLASS_2/TRNP_DAY_NOM_BAL_CNT_IN2/CLASS_3/TRNP_DAY_NOM_TRANSF_BAL/CLASS_4/TRNP_DAY_NOM_BAL_CN_OUT2
 : !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-562762744'
@@ -5818,6 +6081,15 @@
   properties: {}
   related: {}
   status: DELETED
+/com.ec.tran.gd.screens/daily_path_delivery: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '150122846'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.tran.gd.screens/daily_path_delivery
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.tran.gd.screens/daily_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1145990573'
   keys:
@@ -5832,6 +6104,16 @@
   keys:
     T: BUSINESS_FUNCTION
     URL: /com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DAY_NOM_PATH_MATRIX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+? /com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM
+: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1454620477'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM
   parentKeys: {}
   properties: {}
   related: {}
@@ -5982,6 +6264,15 @@
     BF_CODE: GD.0077.02
   related: {}
   status: MODIFIED
+/com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1905843799'
+  keys:
+    T: BUSINESS_FUNCTION
+    URL: /com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com.ec.tran.gd.screens/pipeline_trade_confirmation: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1617441827'
   keys:

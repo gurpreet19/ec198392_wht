@@ -228,6 +228,11 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
           specialColumns: ''
       selfReferencingColumns: ''
       specialColumns: ''
+    APP_SPACE_CNTX:
+      displayText: App Space Context
+      filterCondition: ''
+      groupKeyColumn: CODE
+      keyColumns: CODE
     BF_COMPONENT:
       callableColumns:
       - column: BUSINESS_FUNCTION_NO
@@ -293,6 +298,82 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
           mapping:
             PROFILE_CODE: PROFILE_CODE
           parent: BF_PROFILE
+    BPM_EC_GCOMMAND:
+      displayText: Bpm Ec Gcommand
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: COMMAND_NAME
+      keyColumns: COMMAND_NAME
+      related:
+        BPM_EC_GCOMMAND_OP:
+          callableColumns:
+          - column: BPM_EC_GCOMMAND_ID
+            query: ' ''(SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME=''''''
+              || (SELECT Z.COMMAND_NAME FROM BPM_EC_GCOMMAND Z WHERE Z.BPM_EC_GCOMMAND_ID
+              = BPM_EC_GCOMMAND_OP.BPM_EC_GCOMMAND_ID AND  ROWNUM <2) || '''''')'' '
+          displayText: Bpm Ec Gcommand OP
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: (SELECT COMMAND_NAME from BPM_EC_GCOMMAND WHERE BPM_EC_GCOMMAND_ID = BPM_EC_GCOMMAND_OP.BPM_EC_GCOMMAND_ID)
+          keyColumns: OP_NAME
+          mapping:
+            BPM_EC_GCOMMAND_ID: BPM_EC_GCOMMAND_ID
+          parent: BPM_EC_GCOMMAND
+          selfReferencingColumns: ''
+          specialColumns: ''
+    BPM_EC_GCOMMAND_HANDLER:
+      callableColumns:
+      - column: BPM_EC_GCOMMAND_ID
+        query: ' ''(SELECT X.BPM_EC_GCOMMAND_ID FROM BPM_EC_GCOMMAND X WHERE X.COMMAND_NAME=''''''
+          || (SELECT Z.COMMAND_NAME FROM BPM_EC_GCOMMAND Z WHERE Z.BPM_EC_GCOMMAND_ID
+          = BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID AND  ROWNUM <2) || '''''')'' '
+      dependsOn:
+      - BPM_EC_GCOMMAND
+      displayText: Bpm Ec Gcommand Handler
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: (SELECT ('COMMAND_NAME=' || COMMAND_NAME) from BPM_EC_GCOMMAND WHERE BPM_EC_GCOMMAND_ID = BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID) || ' SORT_ORDER=' || SORT_ORDER
+      keyColumns: BPM_EC_GCOMMAND_ID,SORT_ORDER
+      related:
+        BPM_EC_GCOMMAND_HANDLER_P:
+          callableColumns:
+          - column: BPM_EC_GCOMMAND_HANDLER_ID
+            query: (select ('(select BPM_EC_GCOMMAND_HANDLER_ID from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and SORT_ORDER = ''' || BPM_EC_GCOMMAND_HANDLER.SORT_ORDER || ''' and COMMAND_NAME = ''' || BPM_EC_GCOMMAND.COMMAND_NAME || ''')') from BPM_EC_GCOMMAND_HANDLER,BPM_EC_GCOMMAND where BPM_EC_GCOMMAND_HANDLER.BPM_EC_GCOMMAND_ID=BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID and BPM_EC_GCOMMAND_HANDLER_ID = BPM_EC_GCOMMAND_HANDLER_P.BPM_EC_GCOMMAND_HANDLER_ID)
+          displayText: Bpm Ec Gcommand Handler P
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: (SELECT ('COMMAND_NAME=' || COMMAND_NAME || ' SORT_ORDER=' || SORT_ORDER) from BPM_EC_GCOMMAND_HANDLER, BPM_EC_GCOMMAND WHERE BPM_EC_GCOMMAND.BPM_EC_GCOMMAND_ID = BPM_EC_GCOMMAND_HANDLER.Bpm_Ec_Gcommand_Id and BPM_EC_GCOMMAND_HANDLER_ID = BPM_EC_GCOMMAND_HANDLER_P.BPM_EC_GCOMMAND_HANDLER_ID)
+          keyColumns: PARAM_NAME,BPM_EC_GCOMMAND_HANDLER_ID
+          mapping:
+            BPM_EC_GCOMMAND_HANDLER_ID: BPM_EC_GCOMMAND_HANDLER_ID
+          parent: BPM_EC_GCOMMAND_HANDLER
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    BPM_PROC_OV_CONFIG_ATT:
+      displayText: Bpm Proc Ov Config Attribute
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('TYPE=' || TYPE || ' KEY=' || KEY || ' NAME=' || NAME)
+      keyColumns: TYPE,KEY,NAME
+    BPM_PROC_OV_LIST_PROPERTY:
+      displayText: Bpm Proc Ov List Property
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('PROPERTY_CLAZZ=' || PROPERTY_CLAZZ || ' NAME=' || NAME || ' PROCESS_TEMPLATE_NO=' || PROCESS_TEMPLATE_NO)
+      keyColumns: PROPERTY_CLAZZ,NAME,PROCESS_TEMPLATE_NO
+    BPM_VIEWER_TAG:
+      displayText: Bpm Viewer Tag
+      filterCondition: ''
+      groupKeyColumn: TAG
+      keyColumns: TAG
+    BPM_VIEWER_TAG_ATT:
+      displayText: Bpm Viewer Tag Attribute
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('TAG=' || TAG || ' NAME=' || NAME)
+      keyColumns: TAG,NAME
     BUSINESS_ACTION:
       dependsOn:
       - OV_FUNCTIONAL_AREA
@@ -313,6 +394,19 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
       filterCondition: ''
       groupKeyColumn: URL
       keyColumns: URL
+    CALENDAR_OFFSET:
+      displayText: Calendar Offset
+      filterCondition: ''
+      groupKeyColumn: OFFSET
+      keyColumns: OFFSET
+    CLASS_PROPERTY_CODES:
+      displayText: Class Property Codes
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('PROPERTY_TABLE_NAME='|| PROPERTY_TABLE_NAME || ' PROPERTY_CODE=' || PROPERTY_CODE || ' PROPERTY_TYPE=' || PROPERTY_TYPE)
+      keyColumns: PROPERTY_TABLE_NAME,PROPERTY_CODE,PROPERTY_TYPE
+      selfReferencingColumns: ''
+      specialColumns: ''
     CNTX_MENU_ITEM:
       callableColumns:
       - column: BF_COMPONENT_ACTION_NO
@@ -360,22 +454,6 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
       - column: OBJECT_ID
         query: ''
       related:
-        CONFIG_VARIABLE_PARAM:
-          displayText: Config Variable Param
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(CONFIG_VARIABLE_ID)
-          keyColumns: OBJECT_CODE
-          mapping:
-            OBJECT_ID: CONFIG_VARIABLE_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          - column: CONFIG_VARIABLE_ID
-            query: ''
-          parent: CONFIG_VARIABLE
-          selfReferencingColumns: ''
-          specialColumns: ''
         CONFIG_VARIABLE_VERSION:
           dependsOn:
           - CALC_CONTEXT
@@ -392,6 +470,62 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
           - column: CALC_CONTEXT_ID
             query: ''
           parent: CONFIG_VARIABLE
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CONFIG_VARIABLE_PARAM:
+      dependsOn:
+      - CONFIG_VARIABLE
+      displayText: Config Variable Param
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+      keyColumns: OBJECT_ID
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      - column: CONFIG_VARIABLE_ID
+        query: ''
+      related:
+        CONFIG_VARIABLE_PARAM_VRSN:
+          displayText: Config Variable Param Vrsn
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CONFIG_VARIABLE_PARAM
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    CONSTANT_STANDARD:
+      displayText: Constant Standard
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+      keyColumns: OBJECT_ID
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        CONSTANT_STANDARD_VERSION:
+          displayText: Constant Standard Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: CONSTANT_STANDARD
           selfReferencingColumns: ''
           specialColumns: ''
       selfReferencingColumns: ''
@@ -603,6 +737,69 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
       keyColumns: AXIS_PARAMETER,CLASS_NAME
       selfReferencingColumns: ''
       specialColumns: ''
+    DUMMY_OBJECT:
+      displayText: Dummy Object
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+      keyColumns: OBJECT_ID
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        DUMMY_OBJECT_VERSION:
+          displayText: Dummy Object Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: DUMMY_OBJECT
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    ENUMERATION:
+      displayText: Enumeration
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('OBJECT_CODE=' || ECDP_OBJECTS.GETOBJCODE(OBJECT_ID) || ' CLASS_NAME=' || CLASS_NAME)
+      keyColumns: OBJECT_ID,CLASS_NAME
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        ENUMERATION_VERSION:
+          displayText: Enumeration Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: (SELECT 'OBJECT_CODE=' || ECDP_OBJECTS.GETOBJCODE(OBJECT_ID) || ' CLASS_NAME=' || CLASS_NAME FROM ENUMERATION X WHERE X.OBJECT_ID = ENUMERATION_VERSION.OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: ENUMERATION
+          selfReferencingColumns: ''
+          specialColumns: ''
+      selfReferencingColumns: ''
+      specialColumns: ''
+    JBPM_BPM_EXT_META:
+      displayText: Jbpm Bpm Ext Meta
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('NAME=' || NAME || ' VERSION=' || VERSION)
+      keyColumns: NAME,VERSION
+    MODULE_STATUS:
+      displayText: Module Status
+      filterCondition: ''
+      groupKeyColumn: MODULE_CODE
+      keyColumns: MODULE_CODE
     NAV_MODEL:
       displayText: Navigation Models
       filterCondition: ''
@@ -617,6 +814,32 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
       groupKeyColumn: UPGDUID
       groupKeyColumnSubQuery: ( ' CODE=' || CODE || ' DAYTIME=' || TO_CHAR(DAYTIME,'DD-MM-YYYY') )
       keyColumns: DAYTIME,CODE
+      selfReferencingColumns: ''
+      specialColumns: ''
+    PRODUCTION_DAY:
+      displayText: Production Day
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+      keyColumns: OBJECT_ID
+      objectIdColumns:
+      - column: OBJECT_ID
+        query: ''
+      related:
+        PRODUCTION_DAY_VERSION:
+          displayText: Production Day Version
+          filterCondition: ''
+          groupKeyColumn: UPGDUID
+          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
+          keyColumns: OBJECT_ID,DAYTIME
+          mapping:
+            OBJECT_ID: OBJECT_ID
+          objectIdColumns:
+          - column: OBJECT_ID
+            query: ''
+          parent: PRODUCTION_DAY
+          selfReferencingColumns: ''
+          specialColumns: ''
       selfReferencingColumns: ''
       specialColumns: ''
     PROSTY_CODES:
@@ -688,6 +911,11 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
           specialColumns: ''
       selfReferencingColumns: ''
       specialColumns: ''
+    T_BASIS_LANGUAGE:
+      displayText: Language
+      filterCondition: ''
+      groupKeyColumn: LANGUAGE_ID
+      keyColumns: LANGUAGE_ID
     T_BASIS_LANGUAGE_SOURCE:
       displayText: Language Source
       filterCondition: ''
@@ -704,232 +932,15 @@ BASISCONFIG: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
           mapping:
             SOURCE_ID: SOURCE_ID
           parent: T_BASIS_LANGUAGE_SOURCE
+    VISUAL_TRACING_CONFIG:
+      displayText: Visual Tracing Config
+      filterCondition: ''
+      groupKeyColumn: UPGDUID
+      groupKeyColumnSubQuery: ('TR_AREA=' || TR_AREA || ' DATA_ENTITY_CAT=' || DATA_ENTITY_CAT)
+      keyColumns: TR_AREA,DATA_ENTITY_CAT
 CALCULATION: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
   displayText: Calculation Configuration
   groups:
-    CALCULATION:
-      dependsOn:
-      - CALC_CONTEXT
-      - CALC_LIBRARY
-      displayText: Calculation
-      filterCondition: ''
-      groupKeyColumn: UPGDUID
-      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-      keyColumns: OBJECT_ID
-      objectIdColumns:
-      - column: OBJECT_ID
-        query: ''
-      - column: CALC_CONTEXT_ID
-        query: ''
-      - column: CALC_LIBRARY_ID
-        query: ''
-      related:
-        CALCULATION_VERSION:
-          displayText: Calculation Version
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME
-          mapping:
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: MAIN_CALCULATION_ID
-            query: ''
-          - column: OBJECT_ID
-            query: ''
-          - column: IMPL_CALCULATION_ID
-            query: ''
-          parent: CALCULATION
-          selfReferencingColumns: ''
-          specialColumns: XLS_TEMPLATE
-        CALC_EQUATION:
-          displayText: Calculation Equation
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME,EXEC_ORDER
-          mapping:
-            DAYTIME: DAYTIME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALCULATION_VERSION
-          selfReferencingColumns: ''
-          specialColumns: DESCRIPTION,ITERATIONS,CONDITION,EQUATION
-        CALC_PROCESS_ELEMENT:
-          displayText: Calculation Process Element
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(CALCULATION_ID)
-          keyColumns: OBJECT_ID
-          mapping:
-            OBJECT_ID: CALCULATION_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          - column: CALCULATION_ID
-            query: ''
-          parent: CALCULATION
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_PROCESS_ELM_VERSION:
-          displayText: Calculation Process Element Version
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE((SELECT X.CALCULATION_ID FROM CALC_PROCESS_ELEMENT X WHERE X.OBJECT_ID = CALC_PROCESS_ELM_VERSION.OBJECT_ID AND ROWNUM<2))
-          keyColumns: OBJECT_ID,DAYTIME
-          mapping:
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          - column: IMPLEMENTING_CALC_ID
-            query: ''
-          parent: CALC_PROCESS_ELEMENT
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_PROCESS_TRANSITION:
-          displayText: Calculation Process Transition
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(CALCULATION_ID)
-          keyColumns: OBJECT_ID
-          mapping:
-            OBJECT_ID: CALCULATION_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          - column: CALCULATION_ID
-            query: ''
-          parent: CALCULATION
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_PROC_ELM_ITERATION:
-          displayText: Calculation Process Element Iteration
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE((SELECT X.CALCULATION_ID FROM CALC_PROCESS_ELEMENT X WHERE X.OBJECT_ID = CALC_PROC_ELM_ITERATION.OBJECT_ID AND ROWNUM<2))
-          keyColumns: OBJECT_ID,DAYTIME,CALCULATION_ID,CALC_SET_NAME
-          mapping:
-            DAYTIME: DAYTIME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          - column: CALCULATION_ID
-            query: ''
-          parent: CALC_PROCESS_ELM_VERSION
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_PROC_TRAN_VERSION:
-          displayText: Calculation Process Transition Version
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE((SELECT X.CALCULATION_ID FROM CALC_PROCESS_TRANSITION X WHERE X.OBJECT_ID = CALC_PROC_TRAN_VERSION.OBJECT_ID AND ROWNUM<2))
-          keyColumns: OBJECT_ID,DAYTIME
-          mapping:
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          - column: FROM_ELEMENT_ID
-            query: ''
-          - column: TO_ELEMENT_ID
-            query: ''
-          parent: CALC_PROCESS_TRANSITION
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_SET:
-          dependsOn:
-          - CALC_OBJECT_TYPE
-          - CALC_CONTEXT
-          displayText: Calculation Set
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME,CALC_SET_NAME
-          mapping:
-            DAYTIME: DAYTIME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: CALC_CONTEXT_ID
-            query: ''
-          - column: OBJECT_ID
-            query: ''
-          parent: CALCULATION_VERSION
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_SET_COMBINATION:
-          displayText: Calculation Set Combination
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME,CALC_SET_NAME
-          mapping:
-            CALC_SET_NAME: CALC_SET_NAME
-            DAYTIME: DAYTIME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_SET
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_SET_CONDITION:
-          displayText: Calculation Set Condition
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME,CALC_SET_NAME,OPERATOR,OP1_SQL_SYNTAX,OP2_SET_COND_TYPE,OP2_SET_COND_VALUE
-          mapping:
-            CALC_SET_NAME: CALC_SET_NAME
-            DAYTIME: DAYTIME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_SET
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_SET_EQUATION:
-          displayText: Calculation Set Equation
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME,CALC_SET_NAME,EXEC_ORDER
-          mapping:
-            CALC_SET_NAME: CALC_SET_NAME
-            DAYTIME: DAYTIME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_SET
-          selfReferencingColumns: ''
-          specialColumns: DESCRIPTION,ITERATIONS,CONDITION,EQUATION
-        CALC_VARIABLE_LOCAL:
-          dependsOn:
-          - CALC_OBJECT_TYPE
-          - CALC_CONTEXT
-          displayText: Calculation Variable Local
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME,CALC_VAR_SIGNATURE
-          mapping:
-            DAYTIME: DAYTIME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          - column: CALC_CONTEXT_ID
-            query: ''
-          parent: CALCULATION_VERSION
-          selfReferencingColumns: ''
-          specialColumns: ''
-      selfReferencingColumns: ''
-      specialColumns: ''
     CALC_CONTEXT:
       displayText: Calculation Context
       filterCondition: ''
@@ -939,242 +950,6 @@ CALCULATION: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle
       objectIdColumns:
       - column: OBJECT_ID
         query: ''
-      related:
-        CALC_CONTEXT_VERSION:
-          displayText: Calculation Context Version
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME
-          mapping:
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_CONTEXT
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_OBJECT_ATTRIBUTE:
-          displayText: Calculation Object Attribute
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE,NAME
-          mapping:
-            OBJECT_ID: OBJECT_ID
-            OBJECT_TYPE_CODE: OBJECT_TYPE_CODE
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_OBJECT_TYPE
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_OBJECT_FILTER:
-          displayText: Calculation Object Filter
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE,IMPL_CLASS_NAME,SQL_SYNTAX
-          mapping:
-            OBJECT_ID: OBJECT_ID
-            OBJECT_TYPE_CODE: OBJECT_TYPE_CODE
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_OBJECT_TYPE
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_OBJECT_TYPE:
-          displayText: Calculation Object Type
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE
-          mapping:
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_CONTEXT
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_OBJ_ATTR_DB_MAPPING:
-          displayText: Calculation Object Attribute Db Mapping
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,OBJECT_TYPE_CODE,IMPL_CLASS_NAME,NAME
-          mapping:
-            NAME: NAME
-            OBJECT_ID: OBJECT_ID
-            OBJECT_TYPE_CODE: OBJECT_TYPE_CODE
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_OBJECT_ATTRIBUTE
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_VARIABLE:
-          dependsOn:
-          - CALC_OBJECT_TYPE
-          displayText: Calculation Variable
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE
-          mapping:
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_CONTEXT
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_VAR_KEY_READ_MAPPING:
-          displayText: Calculation Variable Key Read Mapping
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE,CALC_DATASET,CLS_NAME,SQL_SYNTAX
-          mapping:
-            CALC_DATASET: CALC_DATASET
-            CALC_VAR_SIGNATURE: CALC_VAR_SIGNATURE
-            CLS_NAME: CLS_NAME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_VAR_READ_MAPPING
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_VAR_KEY_WRITE_MAPPING:
-          displayText: Calculation Variable Key Write Mapping
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE,CALC_DATASET,CLS_NAME,SQL_SYNTAX
-          mapping:
-            CALC_DATASET: CALC_DATASET
-            CALC_VAR_SIGNATURE: CALC_VAR_SIGNATURE
-            CLS_NAME: CLS_NAME
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_VAR_WRITE_MAPPING
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_VAR_READ_MAPPING:
-          displayText: Calculation Variable Read Mapping
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE,CALC_DATASET,CLS_NAME
-          mapping:
-            CALC_VAR_SIGNATURE: CALC_VAR_SIGNATURE
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_VARIABLE
-          selfReferencingColumns: ''
-          specialColumns: ''
-        CALC_VAR_WRITE_MAPPING:
-          displayText: Calculation Variable Write Mapping
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,CALC_VAR_SIGNATURE,CALC_DATASET,CLS_NAME
-          mapping:
-            CALC_VAR_SIGNATURE: CALC_VAR_SIGNATURE
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_VARIABLE
-          selfReferencingColumns: ''
-          specialColumns: ''
-      selfReferencingColumns: ''
-      specialColumns: ''
-    CALC_GRP_CONTEXT:
-      displayText: Calculation Group Context
-      filterCondition: ''
-      groupKeyColumn: OBJECT_CODE
-      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-      keyColumns: OBJECT_CODE
-      objectIdColumns:
-      - column: OBJECT_ID
-        query: ''
-      related:
-        CALC_GRP_CONTEXT_VERSION:
-          displayText: Calculation Group Context Version
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME
-          mapping:
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-          parent: CALC_GRP_CONTEXT
-          selfReferencingColumns: ''
-          specialColumns: ''
-      selfReferencingColumns: ''
-      specialColumns: ''
-    CALC_LIBRARY:
-      displayText: Calculation Library
-      filterCondition: ''
-      groupKeyColumn: OBJECT_CODE
-      groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-      keyColumns: OBJECT_CODE
-      objectIdColumns:
-      - column: OBJECT_ID
-        query: ''
-      related:
-        CALC_LIBRARY_VERSION:
-          displayText: Calculation Library Version
-          filterCondition: ''
-          groupKeyColumn: UPGDUID
-          groupKeyColumnSubQuery: ECDP_OBJECTS.GETOBJCODE(OBJECT_ID)
-          keyColumns: OBJECT_ID,DAYTIME
-          mapping:
-            OBJECT_ID: OBJECT_ID
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          parent: CALC_LIBRARY
-          selfReferencingColumns: ''
-          specialColumns: ''
-      selfReferencingColumns: ''
-      specialColumns: ''
-    CALC_RULE:
-      displayText: Calculation Rule
-      filterCondition: ''
-      groupKeyColumn: OBJECT_CODE
-      groupKeyColumnSubQuery: ''
-      keyColumns: OBJECT_CODE
-      objectIdColumns:
-      - column: OBJECT_ID
-        query: ''
-      related:
-        CALC_RULE_VERSION:
-          dependsOn:
-          - CALC_CONTEXT
-          displayText: Calculation Rule Version
-          filterCondition: ''
-          groupKeyColumn: OBJECT_CODE
-          groupKeyColumnSubQuery: ''
-          keyColumns: OBJECT_CODE,DAYTIME
-          mapping:
-            OBJECT_CODE: OBJECT_CODE
-          objectIdColumns:
-          - column: OBJECT_ID
-            query: ''
-          - column: CALC_CONTEXT_ID
-            query: ''
-          parent: CALC_RULE
-          selfReferencingColumns: ''
-          specialColumns: CALC_RULE_DEFINITION,CALC_RULE_DOCUMENT
       selfReferencingColumns: ''
       specialColumns: ''
 REPORTING: !!com.ec.upgrade.ecconfig.model.ConfigurationSettingBundle

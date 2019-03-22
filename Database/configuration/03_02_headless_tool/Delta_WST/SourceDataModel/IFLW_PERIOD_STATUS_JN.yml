@@ -8,7 +8,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '37'
+    sequence: !!float '36'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -16,7 +16,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '38'
+    sequence: !!float '37'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -24,7 +24,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '39'
+    sequence: !!float '38'
   AVG_CHOKE_SIZE:
     columnName: AVG_CHOKE_SIZE
     typeName: NUMBER
@@ -32,7 +32,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '18'
+    sequence: !!float '17'
   AVG_FLOWLINE_PRESS:
     columnName: AVG_FLOWLINE_PRESS
     typeName: NUMBER
@@ -40,7 +40,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '19'
+    sequence: !!float '18'
   AVG_FLOWLINE_SS_PRESS:
     columnName: AVG_FLOWLINE_SS_PRESS
     typeName: NUMBER
@@ -48,7 +48,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '22'
+    sequence: !!float '21'
   AVG_FLOWLINE_SS_TEMP:
     columnName: AVG_FLOWLINE_SS_TEMP
     typeName: NUMBER
@@ -56,7 +56,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '21'
+    sequence: !!float '20'
   AVG_FLOWLINE_TEMP:
     columnName: AVG_FLOWLINE_TEMP
     typeName: NUMBER
@@ -64,7 +64,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '20'
+    sequence: !!float '19'
   AVG_TS_DSC_PRESS:
     columnName: AVG_TS_DSC_PRESS
     typeName: NUMBER
@@ -72,7 +72,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '23'
+    sequence: !!float '22'
   AVG_TS_DSC_TEMP:
     columnName: AVG_TS_DSC_TEMP
     typeName: NUMBER
@@ -80,7 +80,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '24'
+    sequence: !!float '23'
   COMMENTS:
     columnName: COMMENTS
     typeName: VARCHAR2(2000)
@@ -88,7 +88,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '29'
+    sequence: !!float '28'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -96,7 +96,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '31'
+    sequence: !!float '30'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -104,7 +104,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '32'
+    sequence: !!float '31'
   DAY:
     columnName: DAY
     typeName: DATE
@@ -112,7 +112,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '12'
   DAYTIME:
     columnName: DAYTIME
     typeName: DATE
@@ -128,7 +128,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '15'
   INJ_VOL:
     columnName: INJ_VOL
     typeName: NUMBER
@@ -136,7 +136,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '17'
+    sequence: !!float '16'
   JN_APPLN:
     columnName: JN_APPLN
     typeName: VARCHAR2(35)
@@ -192,7 +192,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '33'
+    sequence: !!float '32'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -200,7 +200,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '34'
+    sequence: !!float '33'
   MEAS_INJ_VOL:
     columnName: MEAS_INJ_VOL
     typeName: NUMBER
@@ -208,7 +208,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '25'
+    sequence: !!float '24'
   OBJECT_ID:
     columnName: OBJECT_ID
     typeName: VARCHAR2(32)
@@ -224,7 +224,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '13'
   PERIOD_SECS:
     columnName: PERIOD_SECS
     typeName: NUMBER
@@ -232,7 +232,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '14'
   RECORD_STATUS:
     columnName: RECORD_STATUS
     typeName: VARCHAR2(1)
@@ -240,7 +240,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '30'
+    sequence: !!float '29'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -248,7 +248,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '40'
+    sequence: !!float '39'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -256,7 +256,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '35'
+    sequence: !!float '34'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -264,7 +264,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '36'
+    sequence: !!float '35'
   RISER_VALVE_STATUS:
     columnName: RISER_VALVE_STATUS
     typeName: NUMBER
@@ -272,7 +272,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '27'
+    sequence: !!float '26'
   SAFETY_VALVE_STATUS:
     columnName: SAFETY_VALVE_STATUS
     typeName: NUMBER
@@ -280,7 +280,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '28'
+    sequence: !!float '27'
   SUMMER_TIME:
     columnName: SUMMER_TIME
     typeName: VARCHAR2(1)
@@ -288,7 +288,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '11'
   TIME_SPAN:
     columnName: TIME_SPAN
     typeName: VARCHAR2(16)
@@ -296,15 +296,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
-  TIME_ZONE:
-    columnName: TIME_ZONE
-    typeName: VARCHAR2(65)
-    nullable: 'YES'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '10'
   USER_IND:
     columnName: USER_IND
     typeName: VARCHAR2(1)
@@ -312,7 +304,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '26'
+    sequence: !!float '25'
   UTC_DAYTIME:
     columnName: UTC_DAYTIME
     typeName: DATE
@@ -320,7 +312,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '9'
 indexes:
   IR_IFLW_PERIOD_STATUS_JN:
     indexName: IR_IFLW_PERIOD_STATUS_JN

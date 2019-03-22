@@ -8,5 +8,6 @@ properties:
   BF_CODE: SD.0048
   NAME: Daily Sales Nomination Overview
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sd.screens/period_dp_np_data/CLASS1/SLNP_DAY_NOMINATION/CLASS2/SLNP_DAY_NOMINATION/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0048
 related: {}

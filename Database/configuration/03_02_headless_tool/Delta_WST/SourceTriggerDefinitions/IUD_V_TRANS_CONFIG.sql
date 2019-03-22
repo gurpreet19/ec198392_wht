@@ -62,7 +62,8 @@ IF DELETING OR UPDATING THEN
   SELECT last_transfer, last_transfer_write, force_read
     INTO ld_last_transfer, ld_last_transfer_write, lv2_force_read
     FROM trans_target_time
-   WHERE target_tagid = :Old.tag_id;
+   WHERE target_tagid = :Old.tag_id
+   AND   target_sourceid = :Old.source_id;
 
   IF UPDATING ('LAST_TRANSFER') THEN
 		ld_last_transfer := Nvl(:New.last_transfer, :Old.last_transfer);
@@ -126,10 +127,12 @@ END IF;
 IF DELETING THEN
 
 	DELETE FROM trans_target_time
-   WHERE target_tagid = :Old.tag_id;
+   WHERE target_tagid = :Old.tag_id
+   AND   target_sourceid = :Old.source_id;
 
 	DELETE FROM trans_mapping
-   WHERE tag_id = :Old.tag_id;
+   WHERE tag_id = :Old.tag_id
+   AND   source_id = :Old.source_id;
 
 END IF;
 
@@ -235,7 +238,8 @@ IF UPDATING THEN
      SET target_tagid = lv2_tag_id,
          last_transfer = ld_last_transfer,
          force_read = lv2_force_read
-   WHERE target_tagid = :Old.tag_id;
+   WHERE target_tagid = :Old.tag_id
+   AND   target_sourceid = :Old.source_id;
 
 END IF;
 
@@ -328,12 +332,14 @@ IF INSERTING THEN
   INSERT INTO trans_target_time (
 --  	sysnam,
     target_tagid,
+    target_sourceid,
     last_transfer,
     force_read
   )
   VALUES (
 --  	'EC',
     lv2_tag_id,
+    lv2_source_id,
     ld_last_transfer,
     lv2_force_read
   );

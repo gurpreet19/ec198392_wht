@@ -12,7 +12,7 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
   CLASS_NAME: null
   COMP_CODE: reportselector
-  NAME: Report Selector
+  NAME: Navigator (form) > Reports (tab) > Reports (table) > Report Selector (form)
   SIGNING_REQ_IND: null
   URL: /reportselector
 related: {}

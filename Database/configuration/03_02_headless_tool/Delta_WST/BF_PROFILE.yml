@@ -442,6 +442,54 @@ DEF_TRAN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
         BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DAY_NOM_PATH_MATRIX')
         PROFILE_CODE: DEF_TRAN
       status: ADDED
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        BF_CODE: GD.0153
+        PROFILE_CODE: DEF_TRAN
+        T: BF_PROFILE_SETUP
+      parentKeys:
+        BF_PROFILE.PROFILE_CODE: DEF_TRAN
+      properties:
+        BF_CODE: GD.0153
+        BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/daily_path_delivery')
+        PROFILE_CODE: DEF_TRAN
+      status: ADDED
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        BF_CODE: GD.0154
+        PROFILE_CODE: DEF_TRAN
+        T: BF_PROFILE_SETUP
+      parentKeys:
+        BF_PROFILE.PROFILE_CODE: DEF_TRAN
+      properties:
+        BF_CODE: GD.0154
+        BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/period_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N')
+        PROFILE_CODE: DEF_TRAN
+      status: ADDED
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        BF_CODE: GD.0155
+        PROFILE_CODE: DEF_TRAN
+        T: BF_PROFILE_SETUP
+      parentKeys:
+        BF_PROFILE.PROFILE_CODE: DEF_TRAN
+      properties:
+        BF_CODE: GD.0155
+        BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/daily_pipeline_segment_contracted_nominations/TARGET/PIPELINE_SEGMENT/NAV_MODEL/TRAN_OPERATIONAL/BF_PROFILE/GD.0155/CLASS1/TRPS_DAY_NOMINATION/CLASS2/TRPS_DAY_CNTR_NOM')
+        PROFILE_CODE: DEF_TRAN
+      status: ADDED
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        BF_CODE: GD.0156
+        PROFILE_CODE: DEF_TRAN
+        T: BF_PROFILE_SETUP
+      parentKeys:
+        BF_PROFILE.PROFILE_CODE: DEF_TRAN
+      properties:
+        BF_CODE: GD.0156
+        BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL = '/com.ec.tran.gd.screens/daily_capacity_trades')
+        PROFILE_CODE: DEF_TRAN
+      status: ADDED
   status: UNDEFINED
 INJ: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '72645'

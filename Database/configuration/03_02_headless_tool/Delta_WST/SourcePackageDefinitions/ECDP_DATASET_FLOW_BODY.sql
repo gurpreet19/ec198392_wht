@@ -2397,17 +2397,26 @@ FUNCTION getMappingText( p_daytime date, p_ref_id VARCHAR2, p_mapping_type VARCH
              SELECT exec_order INTO ln_exec_no from calc_equation where  to_char(seq_no) = p_mapping_id;
              lv_return := ecdp_calculation.getCalculationPath(lv_object_id,p_daytime,CHR(10)) || ' Equation:' || ln_exec_no;
            WHEN 'TI_LINE_PROD_EXT' THEN
-           Select object_id,line_tag,product_id,cost_type
-                 into lv_object_id,lv_line,lv_product_id,lv_cost_type
-            from v_trans_inv_li_pr_over
-            where to_char(id) = p_mapping_id
-             AND period = p_daytime
-             AND nvl(end_date,p_daytime) +1 > p_daytime ;
+                IF p_mapping_id LIKE 'TEMPLATE%' THEN
+                    SELECT DISTINCT ec_trans_inventory_version.config_template(object_id, p_daytime, '<=') object_id, line_tag, product_id, cost_type
+                      INTO lv_object_id, lv_line, lv_product_id, lv_cost_type
+                      FROM v_trans_inv_li_pr_over
+                     WHERE to_char(id) = p_mapping_id
+                       AND period      = p_daytime
+                       AND ec_trans_inventory_version.config_template(object_id, p_daytime, '<=') IS NOT NULL;
+                ELSE
+                    SELECT object_id,line_tag,product_id,cost_type
+                      INTO lv_object_id,lv_line,lv_product_id,lv_cost_type
+                      FROM v_trans_inv_li_pr_over
+                     WHERE to_char(id) = p_mapping_id
+                       AND period      = p_daytime;
+                END IF;
 
-             lv_return := 'Inventory:' || ec_trans_inventory_version.name(lv_object_id, p_daytime, '<=');
-             lv_return := lv_return || '/ Line:'  || ec_trans_inv_line.name(lv_object_id,p_daytime,lv_line,'<=');
-             lv_return := lv_return || '/ Product:'  || ec_product_version.name( lv_product_id,p_daytime);
-             lv_return := lv_return || '/ Cost:' || ec_prosty_codes.code_text(lv_cost_type,'PRODUCT_COST_TYPE');
+
+                lv_return := 'Inventory:' || ec_trans_inventory_version.name(lv_object_id, p_daytime, '<=');
+                lv_return := lv_return || '/ Line:'  || ec_trans_inv_line.name(lv_object_id, p_daytime,lv_line,'<=');
+                lv_return := lv_return || '/ Product:'  || ec_product_version.name(lv_product_id, p_daytime, '<=');
+                lv_return := lv_return || '/ Cost:' || ec_prosty_codes.code_text(lv_cost_type, 'PRODUCT_COST_TYPE');
 
 
            WHEN 'TI_VARIABLE' THEN
@@ -2722,7 +2731,7 @@ FUNCTION getMappingParameters(p_daytime date, p_ref_id VARCHAR2, p_mapping_type 
 
             lv_attribute_name := substr(lv_param,1,instr(lv_param,'|')-1);
 
-            lv_attribute_name := nvl(ec_class_attr_presentation.label(p_class_name,lv_attribute_name),lv_attribute_name);
+            lv_attribute_name := nvl(ecdp_classmeta_cnfg.getLabel(p_class_name,lv_attribute_name),lv_attribute_name);
             lv_value := substr(lv_param,instr(lv_param,'|')+1);
 
             lv_value := nvl(ecdp_objects.GetObjName(lv_value,p_daytime), lv_value);

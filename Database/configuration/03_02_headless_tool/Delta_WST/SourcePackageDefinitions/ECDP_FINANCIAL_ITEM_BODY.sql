@@ -228,7 +228,6 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Financial_Item IS
        company_id,
        fin_acct_id,
        sort_order,
-       data_fallback_method,
        format_mask,
        comments,
        created_by)
@@ -247,7 +246,6 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Financial_Item IS
              t.company_id,
              t.fin_acct_id,
              t.sort_order,
-             t.data_fallback_method,
              t.format_mask,
              t.comments,
              p_user
@@ -344,7 +342,6 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Financial_Item IS
                  COST_OBJECT_ID,
                  UNIT,
                  DATASET_PRIORITY,
-                 DATA_FALLBACK_METHOD,
                  TEMPLATE_CODE,
                  FIN_ACCT_ID,
                  COMPANY_ID,
@@ -363,7 +360,6 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Financial_Item IS
                  i.COST_OBJECT_ID,
                  i.UNIT,
                  i.DATASET_PRIORITY,
-                 i.DATA_FALLBACK_METHOD,
                  i.TEMPLATE_CODE,
                  i.FIN_ACCT_ID,
                  i.COMPANY_ID,
@@ -529,7 +525,6 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Financial_Item IS
                   COST_OBJECT_ID,
                   UNIT,
                   DATASET_PRIORITY,
-                  DATA_FALLBACK_METHOD,
                   TEMPLATE_CODE,
                   FIN_ACCT_ID,
                   COMPANY_ID,
@@ -549,7 +544,6 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Financial_Item IS
                   i.COST_OBJECT_ID,
                   i.UNIT,
                   i.DATASET_PRIORITY,
-                  i.DATA_FALLBACK_METHOD,
                   i.TEMPLATE_CODE,
                   i.FIN_ACCT_ID,
                   i.COMPANY_ID,
@@ -1087,18 +1081,28 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Financial_Item IS
   FUNCTION GetValueByPriority(value_calculated     NUMBER,
                               value_interfaced     NUMBER,
                               value_override       NUMBER,
-                              data_fallback_method VARCHAR2) RETURN NUMBER IS
+                              P_Fin_Item_ID        VARCHAR2,
+                              P_Daytime            DATE) RETURN NUMBER IS
+
+
 
     lv_result_value NUMBER := 0;
+    lv_Data_Fallback VARCHAR2(40);
+
   BEGIN
-    IF data_fallback_method = 'OVERRIDDEN_CALCULATED_INTERFACED' or
-       data_fallback_method IS NULL THEN
+
+    lv_Data_Fallback := EC_FINANCIAL_ITEM_VERSION.data_fallback_method(P_Fin_Item_ID,
+                                                                       P_Daytime,
+                                                                       '<=');
+
+    IF lv_Data_Fallback = 'OVERRIDDEN_CALCULATED_INTERFACED' or
+       lv_Data_Fallback IS NULL THEN
       lv_result_value := nvl(value_override, value_calculated);
       IF (lv_result_value is NULL or lv_result_value = '') THEN
         lv_result_value := value_interfaced;
       END IF;
     END IF;
-    IF data_fallback_method = 'OVERRIDDEN_INTERFACED_CALCULATED' THEN
+    IF lv_Data_Fallback = 'OVERRIDDEN_INTERFACED_CALCULATED' THEN
       lv_result_value := nvl(value_override, value_interfaced);
       IF (lv_result_value is NULL or lv_result_value = '') THEN
         lv_result_value := value_calculated;
@@ -1106,10 +1110,103 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Financial_Item IS
     END IF;
 
     RETURN lv_result_value;
+
   EXCEPTION
-    WHEN OTHERS THEN
+   WHEN OTHERS THEN
       Raise_Application_Error(-20000, SQLERRM || '\n\n' || 'Technical:\n');
+
   END GetValueByPriority;
+
+-------------------------------------------------------------------------------------------------
+  -- Function       : UpdateValuePriority
+  -- Description    : updates result value based on data fallback method
+  -------------------------------------------------------------------------------------------------
+  PROCEDURE UpdateValuePriority(P_Fin_Item_ID        VARCHAR2,
+                                P_Daytime            DATE) IS
+
+
+  CURSOR fin_item_list IS
+    SELECT e.VALUE_INTERFACED,
+           e.VALUE_CALCULATED,
+           e.VALUE_OVERRIDE,
+           e.VALUE_RESULT,
+           e.status
+      FROM dv_fin_item_entry e
+     WHERE e.FIN_ITEM_ID = P_Fin_Item_ID
+       AND daytime >= P_Daytime;
+
+     BEGIN
+
+      FOR I IN fin_item_list LOOP
+
+       UPDATE DV_FIN_ITEM_ENTRY
+          SET value_result = ECDP_FINANCIAL_ITEM.GetValueByPriority(I.value_calculated,I.value_interfaced,I.value_override,P_Fin_Item_ID,P_Daytime)
+        WHERE value_result != ECDP_FINANCIAL_ITEM.GetValueByPriority(I.value_calculated,I.value_interfaced,I.value_override,P_Fin_Item_ID,P_Daytime)
+          AND record_status = 'P';
+
+       END LOOP;
+
+  	 END UpdateValuePriority;
+
+  -------------------------------------------------------------------------------------------------
+  -- Function       : UpdateFormatMask
+  -- Description    : updates the value of format mask in template and transactional screens.
+  ---------------------------------------------------------------------------------------------------
+  PROCEDURE UpdateFormatMask(P_Fin_Item_ID        VARCHAR2,
+                             P_Daytime            DATE) IS
+
+
+  CURSOR templ_attr_list(cp_fin_item_id VARCHAR2, cp_daytime DATE) IS
+
+      SELECT d.fin_item_id,
+             o.format_mask o_format_mask,
+             d.daytime     d_daytime,
+             d.format_mask d_format_mask
+        FROM DV_FIN_ITEM_TEMPL_ATTR d, OV_FINANCIAL_ITEM o
+       WHERE d.fin_item_id = o.object_id
+         AND d.fin_item_id = cp_fin_item_id
+         AND d.format_mask != ec_prosty_codes.code_text(o.format_mask, 'CNTR_FORMAT_MASK')
+         AND d.daytime BETWEEN o.DAYTIME AND NVL(o.END_DATE - 1, d.DAYTIME)
+         AND o.daytime = cp_daytime;
+
+   CURSOR fin_entry_list(cp_fin_item_id VARCHAR2, cp_daytime DATE) IS
+
+      SELECT d.fin_item_id,
+             o.format_mask o_format_mask,
+             d.daytime d_daytime,
+             d.format_mask d_format_mask
+      FROM DV_FIN_ITEM_ENTRY d, OV_FINANCIAL_ITEM o
+      WHERE d.fin_item_id = o.object_id
+      AND d.fin_item_id = CP_Fin_Item_ID
+      AND d.format_mask != ec_prosty_codes.code_text(o.format_mask,'CNTR_FORMAT_MASK')
+      AND d.daytime BETWEEN o.DAYTIME AND NVL(o.END_DATE-1, d.DAYTIME)
+      AND o.daytime = cp_daytime;
+
+  BEGIN
+
+      FOR I IN templ_attr_list(P_Fin_Item_ID, P_Daytime) LOOP
+
+         UPDATE DV_FIN_ITEM_TEMPL_ATTR
+            SET FORMAT_MASK = ec_prosty_codes.code_text(I.o_format_mask,'CNTR_FORMAT_MASK')
+          WHERE FORMAT_MASK = I.d_format_mask
+            AND FIN_ITEM_ID = I.FIN_ITEM_ID
+            AND daytime = I.d_daytime
+            AND record_status = 'P';
+
+       END LOOP;
+
+       FOR I IN fin_entry_list(P_Fin_Item_ID,P_Daytime ) LOOP
+
+         UPDATE DV_FIN_ITEM_ENTRY
+            SET FORMAT_MASK = ec_prosty_codes.code_text(I.o_format_mask,'CNTR_FORMAT_MASK')
+          WHERE FORMAT_MASK = I.d_format_mask
+            AND FIN_ITEM_ID = I.fin_item_id
+            AND daytime = I.d_daytime
+            AND record_status = 'P';
+
+       END LOOP;
+
+  END UpdateFormatMask;
 
   -------------------------------------------------------------------------------------------------
   -- Function       : monthValue

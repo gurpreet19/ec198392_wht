@@ -9,7 +9,7 @@ keys:
 parentKeys: {}
 properties:
   BF_CODE: CD.0105
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar_collection/CLASS_NAME/CALENDAR_COLLECTION' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/manage_calendar_collection' )
   CLASS_NAME: CALENDAR_COLLECTION
   COMP_CODE: newobjectdates
   NAME: New Object Start Date and End Date

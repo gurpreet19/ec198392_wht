@@ -498,7 +498,6 @@ END CreateDocument;
     PROCEDURE ClearDocument(
          p_document_key                    cont_doc.document_key%TYPE
         ,p_keep_reversal_je                ecdp_revn_common.T_BOOLEAN_STR
-        ,p_rerun                           VARCHAR2 DEFAULT 'Y'
         )
     IS
         lv2_document_type cont_doc.document_type%TYPE;

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0042
   NAME: Stream Item Category Split Key
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/manage_object_split_key/CLASS_NAME/SPLIT_KEY/SPLIT_TYPE/STREAM_ITEM_CATEGORY
 related: {}

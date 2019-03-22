@@ -3,7 +3,7 @@ name: JBPM_BPM_DATA_SET_USAGE_WS
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008850
+  name: PK_JBPM_BPM_DATASET_USAGE_WS
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

@@ -8,5 +8,6 @@ properties:
   BF_CODE: WR.0075
   NAME: Sub Daily Production Well Status 1 - Validation
   PROFILE_CLASS_NAME: WELL
+  TARGET_CONDITION: ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('1')
   URL: /com.ec.prod.wr.screens/sub_daily_validation/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_SUB_DAY_VALID
 related: {}

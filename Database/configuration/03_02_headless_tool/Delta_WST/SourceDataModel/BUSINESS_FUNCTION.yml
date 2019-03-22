@@ -14,7 +14,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '15'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -22,7 +22,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '16'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -30,7 +30,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '14'
   BF_CODE:
     columnName: BF_CODE
     typeName: VARCHAR2(32)
@@ -54,7 +54,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '7'
+    sequence: !!float '8'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -62,7 +62,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '8'
+    sequence: !!float '9'
   LAST_UPDATED_BY:
     columnName: LAST_UPDATED_BY
     typeName: VARCHAR2(30)
@@ -70,7 +70,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '10'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -78,7 +78,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '11'
   NAME:
     columnName: NAME
     typeName: VARCHAR2(240)
@@ -102,7 +102,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '6'
+    sequence: !!float '7'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -110,7 +110,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '17'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -118,7 +118,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '12'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -126,7 +126,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '13'
+  TARGET_CONDITION:
+    columnName: TARGET_CONDITION
+    typeName: VARCHAR2(2000)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
   URL:
     columnName: URL
     typeName: VARCHAR2(1000)

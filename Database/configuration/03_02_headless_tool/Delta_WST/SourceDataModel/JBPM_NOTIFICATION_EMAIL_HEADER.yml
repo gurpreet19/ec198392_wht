@@ -4,7 +4,7 @@ cnstPrimaryKey:
   columns:
   - NOTIFICATION_ID
   - MAPKEY
-  name: SYS_C008672
+  name: PK_JBPM_NOTIFICATION_HEADER
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

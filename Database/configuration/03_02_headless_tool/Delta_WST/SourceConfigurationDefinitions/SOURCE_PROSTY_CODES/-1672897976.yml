@@ -14,7 +14,7 @@ properties:
   IS_ACTIVE: Y
   IS_DEFAULT: null
   IS_SYSTEM_CODE: N
-  SORT_ORDER: 40.0
+  SORT_ORDER: 50.0
   TEXT_1: null
   TEXT_10: null
   TEXT_2: null

@@ -16,7 +16,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '18'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -24,7 +24,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '17'
+    sequence: !!float '19'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -32,7 +32,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '18'
+    sequence: !!float '20'
   CLASS_NAME:
     columnName: CLASS_NAME
     typeName: VARCHAR2(32)
@@ -48,7 +48,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '12'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -56,7 +56,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '13'
   DAYTIME:
     columnName: DAYTIME
     typeName: DATE
@@ -80,7 +80,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '14'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -88,7 +88,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '15'
   NAME:
     columnName: NAME
     typeName: VARCHAR2(240)
@@ -129,6 +129,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '3'
+  PRODUCTION_DAY_ID:
+    columnName: PRODUCTION_DAY_ID
+    typeName: VARCHAR2(32)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
   RECORD_STATUS:
     columnName: RECORD_STATUS
     typeName: VARCHAR2(1)
@@ -136,7 +144,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '11'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -144,7 +152,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '19'
+    sequence: !!float '21'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -152,7 +160,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '16'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -160,7 +168,25 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '17'
+  TIME_ZONE:
+    columnName: TIME_ZONE
+    typeName: VARCHAR2(65)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
+cnstForeignKeys:
+  FK_OBJECTS_VERSION_TABLE_1:
+    updateAction: UNKNOWN
+    deleteAction: NOACTION
+    primaryTable: PRODUCTION_DAY
+    columns:
+      PRODUCTION_DAY_ID: OBJECT_ID
+    name: FK_OBJECTS_VERSION_TABLE_1
+    type: FOREIGNKEY
+    status: UNDEFINED
 attributes:
   initialExtent: 65536
   iniTrans: 1

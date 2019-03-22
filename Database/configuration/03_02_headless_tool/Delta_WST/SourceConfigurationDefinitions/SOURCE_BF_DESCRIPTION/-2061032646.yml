@@ -9,18 +9,18 @@ properties:
   BF_DESCRIPTION_NO: PO.0005
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_tank_status_1' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: "<p>This BF is used when either daily tank volume data or only strapping\
-    \ height (for one single product) is available. Energy Components will automatically\
-    \ create a new record for a new production day for all tanks having tank meter\
-    \ frequency = &quot;DAY&quot;. For tanks having tank meter frequency = &quot;EVENT&quot;,\
-    \ there will be no automatic instantiation, the user will have to manually press\
-    \ the insert new record button and select the right tank from the tank drop down.\
-    \ All data is treated as closing tank reading at the end of the production day.\
-    \ Therefore there is no time associated with the reading.</p>\n\n<p>Opening volume\
-    \ for a day is calculated as last available closing volume, for daily tanks it\
-    \ will always be yesterday closing. If today is the tank&rsquo;s start day there\
-    \ will be no value for yesterday&rsquo;s closing, and opening volume is set to\
-    \ 0.</p>\n\n<p>If Strapping tables is used, it can return either mass or either\
-    \ mass or volume, depending on the method configured for the tank. EC will calculate\
-    \ the opposite unit if density is available, either entered manually or "
+  DESCRIPTION: '<p>This BF is used when either daily tank volume data or only strapping
+    height (for one single product) is available. Energy Components will automatically
+    create a new record for a new production day for all tanks having tank meter frequency
+    = "DAY". For tanks having tank meter frequency = "EVENT", there will be no automatic
+    instantiation, the user will have to manually press the insert new record button
+    and select the right tank from the tank drop down. All data is treated as closing
+    tank reading at the end of the production day. Therefore there is no time associated
+    with the reading.</p><p>Opening volume for a day is calculated as last available
+    closing volume, for daily tanks it will always be yesterday closing. If today
+    is the tank�s start day there will be no value for yesterday�s closing, and opening
+    volume is set to 0.</p><p>If Strapping tables is used, it can return either mass
+    or either mass or volume, depending on the method configured for the tank. EC
+    will calculate the opposite unit if density is available, either entered manually
+    or as a reference value<span style="color: rgb(23, 43, 77);">.</span></p>'
 related: {}

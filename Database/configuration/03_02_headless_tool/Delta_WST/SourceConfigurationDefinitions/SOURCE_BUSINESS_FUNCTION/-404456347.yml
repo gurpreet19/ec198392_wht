@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0047
   NAME: Other Split Key Shares
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/split_key/SPLIT_TYPE/SPLIT_ITEM_OTHER
 related: {}

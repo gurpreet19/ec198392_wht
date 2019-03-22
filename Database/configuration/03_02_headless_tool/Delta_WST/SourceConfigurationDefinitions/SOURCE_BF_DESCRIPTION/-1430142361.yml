@@ -9,8 +9,25 @@ properties:
   BF_DESCRIPTION_NO: CO.0142
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_func_area/CLASS_NAME/MESSAGE_DEFINITION/FUNC_AREA_FK/FUNCTIONAL_AREA_ID' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |
-    <p>This is a generic maintain screen; see description of generic maintain screens in the beginning of the configuration manual.</p>
-
-    <p>The &quot;Maintain Message Type&quot; screen is used to create and maintain Message Type. A message type is owned by the associated functional area.</p>
+  DESCRIPTION: '<p><strong>Maintain Message Type screen</strong> is used to create
+    and maintain Message Type. A message type is owned by the associated functional
+    area. Each message type has a set of parameters which define how messages behave.</p><p>Some
+    of these parameters are described below</p><ul><li> <strong>Message Type Code</strong>:
+    a unique identifier of a message</li><li> <strong>Message Type Name</strong>:
+    a descriptive name of a message</li><li> <strong>Subject</strong>: a subject for
+    a message displayed in the message journal screen.</li><li> <strong>Handling</strong>:
+    specifies the automation of the message (Manual, semi-automatic, automatic)</li><li>
+    <strong>Loading Job</strong>: The full name of the java class used for loading
+    the inbound message. All message types of inbound messages should have a loading
+    job</li><li> <strong>Generating Job</strong>: The full name of a java class used
+    for generating a message</li><li> <strong>Validating Job</strong>: The full name
+    of a java class used to validate a message</li><li> <strong>Internal Format</strong>:
+    internal format of a message (XML, Report and Free Text)</li><li> <strong>Direction</strong>:
+    Indicates the direction of the message (In, Out, Both)</li><li> <strong>Frequency</strong>:
+    How frequently the message is sent (Daily, Weekly, Monthly, Event based)</li><li>
+    <strong>XML Schema URL</strong>: refers to the location of the schema which define
+    the specific internal XML</li><li> <strong>Message Format</strong>: tells whether
+    the messages have XML or text in the body tag or if the message actually is some
+    kind of attachment to be distributed </li><li><strong>Default Sender</strong>:
+    Default sender of the message type.</li></ul><p><br></p>'
 related: {}

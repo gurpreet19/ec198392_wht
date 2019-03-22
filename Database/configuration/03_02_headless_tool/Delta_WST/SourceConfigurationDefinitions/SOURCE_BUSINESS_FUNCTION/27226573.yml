@@ -8,5 +8,6 @@ properties:
   BF_CODE: CP.0064
   NAME: Monthly Reference Entitlement
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.cp.screens/monthly_reference_entitlement
 related: {}

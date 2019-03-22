@@ -54,6 +54,7 @@ CREATE OR REPLACE PACKAGE BODY EcBP_Storage_Lift_Nomination IS
   **      19.06.2017 sharawan ECPD-43478: Modified deleteNomination to exclude first of month to_date.
   **      03.07.2017 asareswi ECPD-45818: Replaced sysdate with Ecdp_Timestamp.getCurrentSysdate
   **      16.08.2017 thotesan ECPD-39313: Modified aggrSubDayLifting for performance improvement.
+  **      23.10.2018 asareswi ECPD-59464: Modified calcSubDayLifting to get truncated date_time.
   ********************************************************************/
 
   --<EC-DOC>
@@ -1939,6 +1940,7 @@ BEGIN
 		IF ld_act_lifted_date IS NOT NULL AND ld_act_lifted_date < ld_date_time THEN
 			ld_date_time := ld_act_lifted_date;
 		END IF;
+		ld_date_time := TRUNC(ld_date_time, 'HH24');
 		lv_summertime := ecdp_date_time.summertime_flag(ecdp_date_time.local2utc(ld_date_time));
 
 		-- Find houly rate

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0079
   NAME: Product Usage
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/PRODUCT/FROM_CLASS_NAME/PRODUCT/TO_CLASS_NAME/PRODUCT
 related: {}

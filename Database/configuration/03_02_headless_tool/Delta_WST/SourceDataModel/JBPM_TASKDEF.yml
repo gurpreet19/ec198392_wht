@@ -3,7 +3,7 @@ name: JBPM_TASKDEF
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008717
+  name: PK_JBPM_TASKDEF
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

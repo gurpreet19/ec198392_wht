@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0145
   NAME: Cost Object Mapping Assistance
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/cost_object_popup/SHOW_CLOSE_BUTTON/false
 related: {}

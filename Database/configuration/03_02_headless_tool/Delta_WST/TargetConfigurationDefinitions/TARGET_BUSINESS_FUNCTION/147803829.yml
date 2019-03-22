@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0168
   NAME: Steam Generator
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STEAM_GENERATOR/TARGET/STEAM_GENERATOR/CLASS_NAME/STEAM_GENERATOR
 related: {}

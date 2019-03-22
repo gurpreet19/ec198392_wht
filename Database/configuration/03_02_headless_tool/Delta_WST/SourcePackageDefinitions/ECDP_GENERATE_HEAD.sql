@@ -37,6 +37,11 @@ FUNCTION  JN_TRIGGERS    RETURN INTEGER;
 FUNCTION  IU_TRIGGERS    RETURN INTEGER;
 
 /**
+ * Bitmask to generate JN index
+ */
+FUNCTION JN_INDEX RETURN INTEGER;
+
+/**
  * Bitmask to generate AUT triggers
  */
 FUNCTION  AUT_TRIGGERS   RETURN INTEGER;

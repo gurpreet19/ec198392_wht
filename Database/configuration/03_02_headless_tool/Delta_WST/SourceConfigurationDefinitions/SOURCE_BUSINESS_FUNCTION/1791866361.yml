@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0109
   NAME: Document Sequence
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/manage_doc_sequence/CLASS_NAME/DOC_SEQUENCE
 related: {}

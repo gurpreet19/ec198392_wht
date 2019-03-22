@@ -3,7 +3,7 @@ name: JBPM_EMAIL_HEADER
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008730
+  name: PK_JBPM_EMAIL_HEADER
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

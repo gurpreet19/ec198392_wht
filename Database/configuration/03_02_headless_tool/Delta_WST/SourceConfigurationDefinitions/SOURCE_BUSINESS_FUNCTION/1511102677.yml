@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0230
   NAME: Tank Tap
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/tank_tap
 related: {}

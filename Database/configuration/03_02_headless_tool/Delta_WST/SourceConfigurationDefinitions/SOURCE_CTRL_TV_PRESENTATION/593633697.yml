@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_DAY_STATUS?screentemplate=/com.ec.prod.pp.screens/daily_forecast&TARGETCONDITION=ISPRODUCEROROTHER in ('Y')
+  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_DAY_STATUS?screentemplate=/com.ec.prod.pp.screens/daily_forecast_well
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: PROD_FCST_PWEL_DAY
   COMPONENT_LABEL: Daily Production Well Forecast

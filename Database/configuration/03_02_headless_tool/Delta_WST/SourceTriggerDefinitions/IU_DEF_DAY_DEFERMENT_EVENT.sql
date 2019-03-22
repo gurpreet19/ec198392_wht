@@ -24,18 +24,18 @@ BEGIN
       END IF;
       :new.rev_no := 0;
 
-      IF :NEW.day IS NULL THEN
-         :new.day := EcDp_ProductionDay.getProductionDay(null,:NEW.defer_level_object_id, :NEW.daytime, null);
-      END IF;
-
-      IF :NEW.end_day IS NULL THEN
-         IF  :NEW.end_date IS NOT NULL THEN
-            :new.end_day := EcDp_ProductionDay.getProductionDay(null,:NEW.defer_level_object_id, :NEW.end_date, null);
-         END IF;
-      END IF;
-
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.defer_level_object_id, :NEW.utc_daytime, :NEW.daytime);
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.defer_level_object_id, :NEW.utc_end_date, :NEW.end_date);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.defer_level_object_id, :NEW.utc_daytime, :NEW.day);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.defer_level_object_id, :NEW.utc_end_date, :NEW.end_day);
 
     ELSE
+
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.defer_level_object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.defer_level_object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.day, :NEW.day);
+
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.defer_level_object_id, :OLD.utc_end_date, :NEW.utc_end_date, :OLD.end_date, :NEW.end_date);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.defer_level_object_id, :OLD.utc_end_date, :NEW.utc_end_date, :OLD.end_day, :NEW.end_day);
 
 	  IF :NEW.delete_newer_child='Y' AND :NEW.end_date IS NOT NULL THEN
 	    UPDATE def_day_summary_event
@@ -65,9 +65,6 @@ BEGIN
          END IF;
          IF NOT UPDATING('LAST_UPDATED_DATE') THEN
            :new.last_updated_date := Ecdp_Timestamp.getCurrentSysdate;
-         END IF;
-         IF (:new.end_date <> :old.end_date)  OR (:old.end_date is NULL) THEN
-            :new.end_day := EcDp_ProductionDay.getProductionDay(null,:NEW.defer_level_object_id, :NEW.end_date, null);
          END IF;
       END IF;
     END IF;

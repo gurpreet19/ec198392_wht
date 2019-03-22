@@ -8,5 +8,6 @@ properties:
   BF_CODE: FC.0025
   NAME: Daily AFS
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.fc.screens/daily_afs/TARGET/SUPPLY_POINT/CLASS1/FCST_SP_DAY_AFS/CLASS2/FCST_SP_DAY_CPY_AFS
 related: {}

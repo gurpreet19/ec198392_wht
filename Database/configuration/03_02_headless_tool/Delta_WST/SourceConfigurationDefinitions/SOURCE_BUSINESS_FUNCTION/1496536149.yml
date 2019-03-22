@@ -8,5 +8,6 @@ properties:
   BF_CODE: PD.0021
   NAME: Deferment - by Well
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pd.screens/well_deferment_by_well
 related: {}

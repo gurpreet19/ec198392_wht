@@ -3,7 +3,7 @@ name: JBPM_BPM_PROCESSES
 cnstPrimaryKey:
   columns:
   - PROCESS_REF_GLOBAL_ID
-  name: SYS_C008862
+  name: PK_JBPM_BPM_PROCESSES
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

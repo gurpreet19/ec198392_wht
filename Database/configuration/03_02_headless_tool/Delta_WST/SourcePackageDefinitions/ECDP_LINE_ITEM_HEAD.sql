@@ -582,6 +582,11 @@ PROCEDURE ValidateCalcQtyValueLI(p_transaction_template_id VARCHAR2,
                                  p_li_based_type           VARCHAR2,
                                  p_daytime                 DATE);
 
+FUNCTION ValidateLineItemTemplate(p_transaction_template_id VARCHAR2,
+                                  p_daytime                 DATE,
+                                  p_type                    VARCHAR2)
+RETURN VARCHAR2;
+
 FUNCTION GetInterestBaseRate (
          p_daytime DATE,
          p_frequency VARCHAR2,
@@ -662,12 +667,12 @@ FUNCTION getPPAIntBaseAmount(lrec_trans cont_transaction%ROWTYPE,
                            p_from_date       IN OUT DATE) RETURN NUMBER;
 
 
-FUNCTION split_share_rebalance(p_qty_no  number,
-                               p_line_item_key VARCHAR2,
-                               p_field_id VARCHAR2,
-                               p_share_value NUMBER,
-                               p_vendor_id VARCHAR2 DEFAULT NULL)
-                               RETURN VARCHAR2;
+FUNCTION split_share_rebalance(p_qty_no         NUMBER,
+                               p_line_item_key  VARCHAR2,
+                               p_dist_id        VARCHAR2,
+                               p_share_value    NUMBER,
+                               p_vendor_id      VARCHAR2 DEFAULT NULL,
+                               p_stream_item_id VARCHAR2 DEFAULT NULL) RETURN VARCHAR2;
 
 PROCEDURE RoundDistLevel(
                p_line_item_key              VARCHAR2

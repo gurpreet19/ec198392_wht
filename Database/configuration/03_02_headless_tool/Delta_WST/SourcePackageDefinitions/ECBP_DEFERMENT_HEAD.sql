@@ -40,6 +40,7 @@ CREATE OR REPLACE PACKAGE EcBp_Deferment IS
 ** 08-11-2017 dhavaalo ECPD-50429: checkIfEventOverlaps new default input parameter added.
 ** 12.02.2018 leongwen ECPD-52636: Moved function deduct1secondYn to package EcBp_Deferment here.
 ** 28.02.2018 leongwen ECPD-45873: Added function getParentEventLossMassRate, getEventLossMassRate, getParentEventLossMass, getEventLossMass, getEventLossMassNoChildEvent and getPotentialMassRate.
+** 20.08.2018 khatrnit ECPD-53583: Added function getParentComment to get parent comment for the child deferment event.
 *****************************************************************/
 
 PROCEDURE checkIfEventOverlaps(p_object_id VARCHAR2, p_daytime DATE, p_end_date DATE,  p_event_type VARCHAR2, p_event_no NUMBER,p_parent_event_no NUMBER DEFAULT 1);
@@ -123,5 +124,7 @@ FUNCTION getEventLossMass(p_event_no NUMBER, p_phase VARCHAR2, p_object_id VARCH
 FUNCTION getEventLossMassNoChildEvent(p_event_no NUMBER, p_event_attribute VARCHAR2) RETURN NUMBER;
 
 FUNCTION getPotentialMassRate(p_event_no NUMBER, p_potential_attribute VARCHAR2) RETURN NUMBER;
+
+FUNCTION getParentComment(p_event_no NUMBER) RETURN VARCHAR2;
 
 END EcBp_Deferment;

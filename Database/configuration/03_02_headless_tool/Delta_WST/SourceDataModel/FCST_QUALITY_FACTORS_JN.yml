@@ -185,14 +185,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '229'
-  OBJECT_ID:
-    columnName: OBJECT_ID
-    typeName: VARCHAR2(32)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '9'
   OIL_API_FACTOR:
     columnName: OIL_API_FACTOR
     typeName: NUMBER
@@ -241,6 +233,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '231'
+  SCENARIO_ID:
+    columnName: SCENARIO_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(240)

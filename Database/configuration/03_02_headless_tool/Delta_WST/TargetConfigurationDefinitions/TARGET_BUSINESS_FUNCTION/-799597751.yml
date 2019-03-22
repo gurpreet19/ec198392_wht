@@ -8,5 +8,6 @@ properties:
   BF_CODE: CP.0002
   NAME: Schedule Lifting
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.cp.screens/schedule_lifting
 related: {}

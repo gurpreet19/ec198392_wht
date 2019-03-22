@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0149
   NAME: Bank Account Usage
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/BANK_ACCOUNT/FROM_CLASS_NAME/BANK_ACCOUNT/TO_CLASS_NAME/BANK_ACCOUNT
 related: {}

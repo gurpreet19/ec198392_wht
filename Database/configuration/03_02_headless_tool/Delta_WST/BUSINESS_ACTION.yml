@@ -68,21 +68,11 @@ NAME=Deleting FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationIte
   properties: {}
   related: {}
   status: DELETED
-NAME=FinItemDailyCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-16966056'
+NAME=FinItemCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-713864969'
   keys:
     FUNCTIONAL_AREA_ID: null
-    NAME: FinItemDailyCalculation
-    T: BUSINESS_ACTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-NAME=FinItemMonthlyCalculation FUNCTIONAL_AREA=: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1888724300'
-  keys:
-    FUNCTIONAL_AREA_ID: null
-    NAME: FinItemMonthlyCalculation
+    NAME: FinItemCalculation
     T: BUSINESS_ACTION
   parentKeys: {}
   properties: {}

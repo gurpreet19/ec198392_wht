@@ -3,7 +3,7 @@ name: JBPM_CONTEXTMAPPINGINFO
 cnstPrimaryKey:
   columns:
   - MAPPINGID
-  name: SYS_C008637
+  name: PK_JBPM_CONTEXTMAPPINGINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

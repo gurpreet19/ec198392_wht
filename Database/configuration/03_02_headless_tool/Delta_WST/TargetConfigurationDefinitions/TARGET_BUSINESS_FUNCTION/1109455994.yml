@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0082
   NAME: Daily Capacity Validation
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/capacity_validation/DATA1_CLASS/TRCN_DAY_CAP_VALID/DATA2_CLASS/TRCN_SUB_DAY_CAP_VALID/NAV_MODEL/TRAN_COMMERCIAL/TARGET/CONTRACT?screentemplate=/com.ec.tran.gd.screens/capacity_validation
 related: {}

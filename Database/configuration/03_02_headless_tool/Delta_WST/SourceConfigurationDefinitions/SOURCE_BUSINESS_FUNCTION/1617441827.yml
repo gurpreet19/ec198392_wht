@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0012
   NAME: Pipeline Trading Confirmation
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/pipeline_trade_confirmation
 related: {}

@@ -30,7 +30,7 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_IWEL_DAY_COMBINATION" ("OBJECT_ID", 
        iwel_period_status s
  WHERE w.object_id = wv.object_id
    AND w.object_id = s.object_id
-   AND s.active_well_status <> 'CLOSED_LT'
+   AND s.active_well_status NOT IN ('CLOSED_LT','PLANNED')
    AND wv.isgasinjector = 'Y'
    AND d.daytime >= w.start_date
    AND (w.end_date IS NULL OR d.daytime < w.end_date)
@@ -60,7 +60,7 @@ SELECT w.object_id,
        iwel_period_status s
  WHERE w.object_id = wv.object_id
    AND w.object_id = s.object_id
-   AND s.active_well_status <> 'CLOSED_LT'
+   AND s.active_well_status NOT IN ('CLOSED_LT','PLANNED')
    AND wv.iswaterinjector = 'Y'
    AND d.daytime >= w.start_date
    AND (w.end_date IS NULL OR d.daytime < w.end_date)
@@ -90,7 +90,7 @@ SELECT w.object_id,
        iwel_period_status s
 WHERE w.object_id = wv.object_id
     AND w.object_id = s.object_id
-   AND s.active_well_status <> 'CLOSED_LT'
+   AND s.active_well_status NOT IN ('CLOSED_LT','PLANNED')
    AND wv.issteaminjector = 'Y'
    AND d.daytime >= w.start_date
    AND (w.end_date IS NULL OR d.daytime < w.end_date)
@@ -120,7 +120,7 @@ SELECT w.object_id,
        iwel_period_status s
  WHERE w.object_id = wv.object_id
    AND w.object_id = s.object_id
-   AND s.active_well_status <> 'CLOSED_LT'
+   AND s.active_well_status NOT IN ('CLOSED_LT','PLANNED')
    AND wv.isco2injector = 'Y'
    AND d.daytime >= w.start_date
    AND (w.end_date IS NULL OR d.daytime < w.end_date)

@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0016
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_CATEGORY' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_ITEM_CATEGORY' )
   DATA_LEVEL: 0.0
   DESCRIPTION: <p>    <strong>Stream Item Category screen</strong>    is used to define and maintain Stream Item Category objects.</p><p>    Each Stream Item will have a Stream Item Category object attached and it is    used for categorization of the Stream Item.</p>
 related: {}

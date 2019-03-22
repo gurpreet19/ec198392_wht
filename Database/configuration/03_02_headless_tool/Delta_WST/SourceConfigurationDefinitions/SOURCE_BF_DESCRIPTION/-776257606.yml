@@ -9,5 +9,5 @@ properties:
   BF_DESCRIPTION_NO: FC.1015
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.fc/split_key_year/SPLIT_TYPE/SPLIT_ITEM_OTHER/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: In this screen the Other Split Keys shares for &quot;TERM&quot; and &quot;SPOT&quot; are created and maintained. These shares are used for calculating the split between spot and term sale in a Gas Sales Forecast case.
+  DESCRIPTION: <p><strong>Forecast Split Share Overview screen</strong> is used to create and maintain the Other Split Keys shares for "TERM" and "SPOT". These shares are used for calculating the split between spot and term sale in a Gas Sales Forecast case.</p>
 related: {}

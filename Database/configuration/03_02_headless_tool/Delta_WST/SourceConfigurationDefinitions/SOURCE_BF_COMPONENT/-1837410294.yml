@@ -12,7 +12,7 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/ec_codes' )
   CLASS_NAME: EC_CODES
   COMP_CODE: codes
-  NAME: EC Codes
+  NAME: EC Codes - All
   SIGNING_REQ_IND: null
   URL: /codes
 related: {}

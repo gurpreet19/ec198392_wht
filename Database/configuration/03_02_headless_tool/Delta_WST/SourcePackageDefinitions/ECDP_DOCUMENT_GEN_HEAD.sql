@@ -118,7 +118,7 @@ PROCEDURE CleanupStimRecords(p_company_id     VARCHAR2,
 ------------------------------------------------------------------------------------------------------------
 PROCEDURE aggregateLevelQty(p_transaction_key VARCHAR2,
                             p_dist_id         VARCHAR2,
-                            p_from_level      VARCHAR2, -- COMPANY or FIELD
+                            p_from_level      VARCHAR2, -- COMPANY or PROFIT_CENTRE
                             p_user_id         VARCHAR2);
 ------------------------------------------------------------------------------------------------------------
 PROCEDURE executeUserAction(

@@ -2,6 +2,7 @@
 name: QRTZ_TRIGGERS
 cnstPrimaryKey:
   columns:
+  - SCHED_NAME
   - TRIGGER_NAME
   - TRIGGER_GROUP
   name: PK_QRTZ_TRIGGERS
@@ -34,7 +35,7 @@ columns:
     sequence: !!float '26'
   CALENDAR_NAME:
     columnName: CALENDAR_NAME
-    typeName: VARCHAR2(80)
+    typeName: VARCHAR2(200)
     nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
@@ -58,7 +59,7 @@ columns:
     sequence: !!float '19'
   DESCRIPTION:
     columnName: DESCRIPTION
-    typeName: VARCHAR2(240)
+    typeName: VARCHAR2(250)
     nullable: 'YES'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
@@ -72,14 +73,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '12'
-  IS_VOLATILE:
-    columnName: IS_VOLATILE
-    typeName: VARCHAR2(1)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '5'
   JOB_DATA:
     columnName: JOB_DATA
     typeName: BLOB
@@ -90,12 +83,12 @@ columns:
     sequence: !!float '15'
   JOB_GROUP:
     columnName: JOB_GROUP
-    typeName: VARCHAR2(80)
+    typeName: VARCHAR2(200)
     nullable: 'NO'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '4'
+    sequence: !!float '5'
   JOB_NAME:
     columnName: JOB_NAME
     typeName: VARCHAR2(512)
@@ -103,7 +96,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '3'
+    sequence: !!float '4'
   LAST_UPDATED_BY:
     columnName: LAST_UPDATED_BY
     typeName: VARCHAR2(30)
@@ -184,6 +177,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '23'
+  SCHED_NAME:
+    columnName: SCHED_NAME
+    typeName: VARCHAR2(120)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
   START_TIME:
     columnName: START_TIME
     typeName: NUMBER
@@ -194,12 +195,12 @@ columns:
     sequence: !!float '11'
   TRIGGER_GROUP:
     columnName: TRIGGER_GROUP
-    typeName: VARCHAR2(80)
+    typeName: VARCHAR2(200)
     nullable: 'NO'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '2'
+    sequence: !!float '3'
   TRIGGER_NAME:
     columnName: TRIGGER_NAME
     typeName: VARCHAR2(512)
@@ -207,7 +208,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '1'
+    sequence: !!float '2'
   TRIGGER_STATE:
     columnName: TRIGGER_STATE
     typeName: VARCHAR2(16)
@@ -231,6 +232,7 @@ cnstForeignKeys:
     primaryTable: QRTZ_JOB_DETAILS
     columns:
       JOB_GROUP: JOB_GROUP
+      SCHED_NAME: SCHED_NAME
       JOB_NAME: JOB_NAME
     name: FK_QRTZ_TRIGGERS_1
     type: FOREIGNKEY
@@ -247,6 +249,7 @@ indexes:
   IFK_QRTZ_TRIGGERS_1:
     indexName: IFK_QRTZ_TRIGGERS_1
     columns:
+    - SCHED_NAME
     - JOB_NAME
     - JOB_GROUP
     isUnique: NONUNIQUE
@@ -284,7 +287,89 @@ indexes:
   I_QRTZ_TRIGGERS_1:
     indexName: I_QRTZ_TRIGGERS_1
     columns:
+    - SCHED_NAME
     - NEXT_FIRE_TIME
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_10:
+    indexName: I_QRTZ_TRIGGERS_10
+    columns:
+    - SCHED_NAME
+    - MISFIRE_INSTR
+    - NEXT_FIRE_TIME
+    - TRIGGER_STATE
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_11:
+    indexName: I_QRTZ_TRIGGERS_11
+    columns:
+    - SCHED_NAME
+    - MISFIRE_INSTR
+    - NEXT_FIRE_TIME
+    - TRIGGER_GROUP
+    - TRIGGER_STATE
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_12:
+    indexName: I_QRTZ_TRIGGERS_12
+    columns:
+    - TRIGGER_NAME
+    - TRIGGER_GROUP
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_13:
+    indexName: I_QRTZ_TRIGGERS_13
+    columns:
+    - JOB_NAME
+    - JOB_GROUP
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536
@@ -302,6 +387,7 @@ indexes:
   I_QRTZ_TRIGGERS_2:
     indexName: I_QRTZ_TRIGGERS_2
     columns:
+    - SCHED_NAME
     - TRIGGER_STATE
     isUnique: NONUNIQUE
     isCompressed: DISABLED
@@ -320,8 +406,9 @@ indexes:
   I_QRTZ_TRIGGERS_3:
     indexName: I_QRTZ_TRIGGERS_3
     columns:
-    - NEXT_FIRE_TIME
+    - SCHED_NAME
     - TRIGGER_STATE
+    - NEXT_FIRE_TIME
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536
@@ -339,7 +426,107 @@ indexes:
   I_QRTZ_TRIGGERS_4:
     indexName: I_QRTZ_TRIGGERS_4
     columns:
-    - IS_VOLATILE
+    - SCHED_NAME
+    - JOB_GROUP
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_5:
+    indexName: I_QRTZ_TRIGGERS_5
+    columns:
+    - SCHED_NAME
+    - CALENDAR_NAME
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_6:
+    indexName: I_QRTZ_TRIGGERS_6
+    columns:
+    - SCHED_NAME
+    - TRIGGER_GROUP
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_7:
+    indexName: I_QRTZ_TRIGGERS_7
+    columns:
+    - SCHED_NAME
+    - TRIGGER_NAME
+    - TRIGGER_GROUP
+    - TRIGGER_STATE
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_8:
+    indexName: I_QRTZ_TRIGGERS_8
+    columns:
+    - SCHED_NAME
+    - TRIGGER_GROUP
+    - TRIGGER_STATE
+    isUnique: NONUNIQUE
+    isCompressed: DISABLED
+    initialExtent: 65536
+    nextExtent: 262144
+    minExtent: 1
+    maxExtent: 2147483645
+    pctFree: 50
+    pctIncrease: 0
+    indexStatus: VALID
+    isPartitioned: 'NO'
+    isGenerated: 'NO'
+    descend: ASC
+    type: NORMAL
+    status: UNDEFINED
+  I_QRTZ_TRIGGERS_9:
+    indexName: I_QRTZ_TRIGGERS_9
+    columns:
+    - SCHED_NAME
+    - MISFIRE_INSTR
+    - NEXT_FIRE_TIME
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536

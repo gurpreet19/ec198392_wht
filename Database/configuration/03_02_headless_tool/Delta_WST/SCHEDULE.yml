@@ -178,20 +178,10 @@ NAME=ERPDocProcess SCHEDULE_GROUP=REVN: !!com.ec.upgrade.ecconfig.model.Configur
   properties: {}
   related: {}
   status: ADDED
-NAME=FinItemDailyCalculation SCHEDULE_GROUP=REVN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1033990349'
+NAME=FinItemCalculation SCHEDULE_GROUP=REVN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1590382030'
   keys:
-    NAME: FinItemDailyCalculation
-    SCHEDULE_GROUP: (SELECT O.OBJECT_ID FROM OBJECTS O WHERE (O.CLASS_NAME='FUNCTIONAL_AREA' OR O.CLASS_NAME IN (SELECT CHILD_CLASS FROM CLASS_DEPENDENCY_CNFG WHERE PARENT_CLASS ='FUNCTIONAL_AREA' AND DEPENDENCY_TYPE = 'IMPLEMENTS')) AND O.CODE ='REVN' AND ROWNUM < 2)
-    T: SCHEDULE
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-NAME=FinItemMonthlyCalculation SCHEDULE_GROUP=REVN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1717299879'
-  keys:
-    NAME: FinItemMonthlyCalculation
+    NAME: FinItemCalculation
     SCHEDULE_GROUP: (SELECT O.OBJECT_ID FROM OBJECTS O WHERE (O.CLASS_NAME='FUNCTIONAL_AREA' OR O.CLASS_NAME IN (SELECT CHILD_CLASS FROM CLASS_DEPENDENCY_CNFG WHERE PARENT_CLASS ='FUNCTIONAL_AREA' AND DEPENDENCY_TYPE = 'IMPLEMENTS')) AND O.CODE ='REVN' AND ROWNUM < 2)
     T: SCHEDULE
   parentKeys: {}

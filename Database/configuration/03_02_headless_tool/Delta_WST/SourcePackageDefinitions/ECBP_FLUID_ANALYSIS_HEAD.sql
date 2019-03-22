@@ -21,6 +21,7 @@ CREATE OR REPLACE PACKAGE EcBp_Fluid_Analysis IS
 ** 06.05.2010 oonnnng  ECPD-14276: Added checkEqpmReferenceValueLock() and checkWellReferenceValueLock() functions.
 ** 09.11.2010 rajarsar ECPD-15008: Added checkChokeModelRefValueLock()
 ** 19.06.2012 limmmchu ECPD-21070: Modified getPeriodCompSet()
+** 10.10.2018 rainanid ECPD-58847: Added checkFctyReferenceValueLock()
 *****************************************************************/
 
 -- Lock check procedures
@@ -36,6 +37,7 @@ PROCEDURE checkStrmComponentLock(p_operation VARCHAR2, p_new_lock_columns EcDp_M
 FUNCTION getCompSet(p_class_name VARCHAR2, p_object_id  VARCHAR2, p_daytime  DATE, p_analysis_type  VARCHAR2) RETURN VARCHAR2;
 FUNCTION getPeriodCompSet(p_object_id  VARCHAR2, p_daytime  DATE, p_analysis_type  VARCHAR2) RETURN VARCHAR2;
 PROCEDURE checkChokeModelRefValueLock(p_operation VARCHAR2, p_new_lock_columns  IN OUT EcDp_Month_Lock.column_list, p_old_lock_columns  IN OUT EcDp_Month_Lock.column_list);
+PROCEDURE checkFctyReferenceValueLock(p_operation VARCHAR2, p_new_lock_columns IN OUT EcDp_Month_Lock.column_list, p_old_lock_columns IN OUT EcDp_Month_Lock.column_list);
 
 
 END EcBp_Fluid_Analysis;

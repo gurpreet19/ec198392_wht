@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0135
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/EC_CODE_OBJECT' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/EC_CODE_OBJECT' )
   DATA_LEVEL: 0.0
   DESCRIPTION: <p>    <strong>EC Code Object screen</strong>    is used to set up Objects of type EC Code.</p><p>    The initial intention is to use the lists for Cost Mapping related classes.</p>
 related: {}

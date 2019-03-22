@@ -46,6 +46,10 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Forecast_Cargo_Planning IS
 ** 08/11/2017  sharawan         ECPD-50442: Modified copyToOriginal to add missing condition to check on cargo_status of cargo_fcst_transport table.
 ** 16/11/2017  prashwag         ECPD-50600: Modified copyToOriginal(storage_lift_nomination, stor_sub_day_lift_nom and storage_lift_nom_split tables) to copy back forecast to original only when cargo status is 'T'.
 ** 01/06/2018  asareswi         ECPD-56285: Modified copyToOriginal, copyFromOriginal, copyFromForecast. Added split_no in them.
+** 11/10/2018  thotesan         ECPD-59768: Modified copyFromOriginal, copyFromForecast. removed INSERT statement for fcst_oploc_day_restrict which was causing duplicate insert in table.
+** 17/10/2018  baratmah         ECPD-59768: Modified procedure copyToOriginal. Added MERGE statement to copy the restriction data from forecast to original.
+** 30/10/2018  prashwag         ECPD-59526: Added generic coloums in cargo_fcst_transport and cargo_fcst_transport.
+** 15/11/2018  thotesan         ECPD-59863: Modified copyToOriginal to accomodate flexible status coming from ue for Copy to origional functionality.
 ********************************************************************/
 
 PROCEDURE createForecast(p_new_forecast_code VARCHAR2
@@ -210,10 +214,10 @@ BEGIN
 
 	-- copy cargo
 	INSERT INTO  cargo_fcst_transport(forecast_id,cargo_no,CARGO_NAME,CARRIER_ID,AGENT,SURVEYOR,LAYTIME,EST_ARRIVAL,EST_DEPARTURE,CARGO_STATUS,PROD_FCTY_ID,MASTER,PILOT,TUGS_ARR,TUGS_DEP,DRAUGHT_MARK_ARR_AFT,DRAUGHT_MARK_ARR_CENTER,DRAUGHT_MARK_ARR_FORWARD,DRAUGHT_MARK_DEP_AFT,DRAUGHT_MARK_DEP_CENTER,DRAUGHT_MARK_DEP_FORWARD,VOYAGE_NO,BERTH_ID,
-		text_1,text_2,text_3,text_4,text_5,text_6,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,date_1,date_2,date_3,date_4,date_5,date_6,date_7,
+		text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_13,text_14,text_15,text_16,text_17,text_18,text_19,text_20,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,value_11,value_12,value_13,value_14,value_15,value_16,value_17,value_18,value_19,value_20,value_21,value_22,value_23,value_24,value_25,value_26,value_27,value_28,value_29,value_30,value_31,value_32,value_33,value_34,value_35,value_36,value_37,value_38,value_39,value_40,value_41,value_42,value_43,value_44,value_45,value_46,value_47,value_48,value_49,value_50,value_51,value_52,value_53,value_54,value_55,date_1,date_2,date_3,date_4,date_5,date_6,date_7,date_8,date_9,date_10,date_11,date_12,date_13,date_14,date_15,
     	created_by)
     SELECT p_new_forecast_id, cargo_no,CARGO_NAME,CARRIER_ID,AGENT,SURVEYOR,LAYTIME,EST_ARRIVAL,EST_DEPARTURE,CARGO_STATUS,PROD_FCTY_ID,MASTER,PILOT,TUGS_ARR,TUGS_DEP,DRAUGHT_MARK_ARR_AFT,DRAUGHT_MARK_ARR_CENTER,DRAUGHT_MARK_ARR_FORWARD,DRAUGHT_MARK_DEP_AFT,DRAUGHT_MARK_DEP_CENTER,DRAUGHT_MARK_DEP_FORWARD,VOYAGE_NO,BERTH_ID,
-		text_1,text_2,text_3,text_4,text_5,text_6,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,date_1,date_2,date_3,date_4,date_5,date_6,date_7,
+		text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_13,text_14,text_15,text_16,text_17,text_18,text_19,text_20,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,value_11,value_12,value_13,value_14,value_15,value_16,value_17,value_18,value_19,value_20,value_21,value_22,value_23,value_24,value_25,value_26,value_27,value_28,value_29,value_30,value_31,value_32,value_33,value_34,value_35,value_36,value_37,value_38,value_39,value_40,value_41,value_42,value_43,value_44,value_45,value_46,value_47,value_48,value_49,value_50,value_51,value_52,value_53,value_54,value_55,date_1,date_2,date_3,date_4,date_5,date_6,date_7,date_8,date_9,date_10,date_11,date_12,date_13,date_14,date_15,
 		ecdp_context.getAppUser
 	FROM cargo_transport t
 	WHERE cargo_no in (select cargo_no
@@ -270,13 +274,6 @@ BEGIN
 		AND n.daytime < p_end_date
 		AND n.object_id = l.object_id
 		AND l.storage_id = nvl(p_storage_id, l.storage_id);
-
-	INSERT INTO FCST_OPLOC_DAY_RESTRICT (forecast_id, object_id, daytime, restricted_capacity, restriction_type, comments, created_by,value_1,value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10, text_1, text_2, text_3, text_4)
-	SELECT p_new_forecast_id, o.object_id, daytime, restricted_capacity, restriction_type, comments, ecdp_context.getAppUser,value_1,value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10, text_1, text_2, text_3, text_4
-	FROM OPLOC_DAILY_RESTRICTION o, carrier c
-	WHERE o.daytime >= p_start_date
-		AND o.daytime < p_end_date
-		AND o.object_id = c.object_id;
 
 	INSERT INTO FCST_RECOVERY_FACTOR (forecast_id, object_id, daytime, component_no, class_name, frac, created_by,value_1,value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10, text_1, text_2, text_3, text_4)
 	SELECT p_new_forecast_id, o.object_id, daytime, component_no, 'FCST_RECOVERY_FACTOR', frac, ecdp_context.getAppUser,value_1,value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10, text_1, text_2, text_3, text_4
@@ -484,10 +481,10 @@ BEGIN
 
 	-- copy cargo
 	INSERT INTO  cargo_fcst_transport(forecast_id,cargo_no,CARGO_NAME,CARRIER_ID,AGENT,SURVEYOR,LAYTIME,EST_ARRIVAL,EST_DEPARTURE,CARGO_STATUS,PROD_FCTY_ID,MASTER,PILOT,TUGS_ARR,TUGS_DEP,DRAUGHT_MARK_ARR_AFT,DRAUGHT_MARK_ARR_CENTER,DRAUGHT_MARK_ARR_FORWARD,DRAUGHT_MARK_DEP_AFT,DRAUGHT_MARK_DEP_CENTER,DRAUGHT_MARK_DEP_FORWARD,VOYAGE_NO,BERTH_ID,
-		text_1,text_2,text_3,text_4,text_5,text_6,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,date_1,date_2,date_3,date_4,date_5,date_6,date_7,
+		text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_13,text_14,text_15,text_16,text_17,text_18,text_19,text_20,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,value_11,value_12,value_13,value_14,value_15,value_16,value_17,value_18,value_19,value_20,value_21,value_22,value_23,value_24,value_25,value_26,value_27,value_28,value_29,value_30,value_31,value_32,value_33,value_34,value_35,value_36,value_37,value_38,value_39,value_40,value_41,value_42,value_43,value_44,value_45,value_46,value_47,value_48,value_49,value_50,value_51,value_52,value_53,value_54,value_55,date_1,date_2,date_3,date_4,date_5,date_6,date_7,date_8,date_9,date_10,date_11,date_12,date_13,date_14,date_15,
     	created_by)
     SELECT p_new_forecast_id, cargo_no,CARGO_NAME,CARRIER_ID,AGENT,SURVEYOR,LAYTIME,EST_ARRIVAL,EST_DEPARTURE,CARGO_STATUS,PROD_FCTY_ID,MASTER,PILOT,TUGS_ARR,TUGS_DEP,DRAUGHT_MARK_ARR_AFT,DRAUGHT_MARK_ARR_CENTER,DRAUGHT_MARK_ARR_FORWARD,DRAUGHT_MARK_DEP_AFT,DRAUGHT_MARK_DEP_CENTER,DRAUGHT_MARK_DEP_FORWARD,VOYAGE_NO,BERTH_ID,
-		text_1,text_2,text_3,text_4,text_5,text_6,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,date_1,date_2,date_3,date_4,date_5,date_6,date_7,
+		text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_13,text_14,text_15,text_16,text_17,text_18,text_19,text_20,value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,value_11,value_12,value_13,value_14,value_15,value_16,value_17,value_18,value_19,value_20,value_21,value_22,value_23,value_24,value_25,value_26,value_27,value_28,value_29,value_30,value_31,value_32,value_33,value_34,value_35,value_36,value_37,value_38,value_39,value_40,value_41,value_42,value_43,value_44,value_45,value_46,value_47,value_48,value_49,value_50,value_51,value_52,value_53,value_54,value_55,date_1,date_2,date_3,date_4,date_5,date_6,date_7,date_8,date_9,date_10,date_11,date_12,date_13,date_14,date_15,
 		ecdp_context.getAppUser
 	FROM cargo_fcst_transport t
 	WHERE t.forecast_id = p_forecast_id
@@ -556,14 +553,6 @@ BEGIN
 		AND n.daytime < p_end_date
 		AND n.object_id = l.object_id
 		AND l.storage_id= nvl(p_storage_id, l.storage_id);
-
-	INSERT INTO FCST_OPLOC_DAY_RESTRICT (forecast_id,object_id,daytime, restricted_capacity, restriction_type, comments, created_by,value_1,value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10, text_1, text_2, text_3, text_4)
-	SELECT p_new_forecast_id, o.object_id, daytime, restricted_capacity, restriction_type, comments, ecdp_context.getAppUser,value_1,value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10, text_1, text_2, text_3, text_4
-	FROM FCST_OPLOC_DAY_RESTRICT o, carrier c
-	WHERE o.forecast_id = p_forecast_id
-		AND o.daytime >= p_start_date
-		AND o.daytime < p_end_date
-		AND o.object_id = c.object_id;
 
 	INSERT INTO FCST_RECOVERY_FACTOR (forecast_id, object_id, daytime, component_no, class_name, frac, created_by,value_1,value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10, text_1, text_2, text_3, text_4)
 	SELECT p_new_forecast_id, o.object_id, daytime, component_no, class_name, frac, ecdp_context.getAppUser,value_1,value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10, text_1, text_2, text_3, text_4
@@ -841,17 +830,14 @@ BEGIN
 	nvl(co.est_arrival, t.EST_ARRIVAL) est_arrival,
 	nvl(co.est_departure, t.EST_DEPARTURE) est_departure,
 	t.CARGO_STATUS,t.PROD_FCTY_ID,t.MASTER,t.PILOT,t.TUGS_ARR,t.TUGS_DEP,t.DRAUGHT_MARK_ARR_AFT,t.DRAUGHT_MARK_ARR_CENTER,t.DRAUGHT_MARK_ARR_FORWARD,t.DRAUGHT_MARK_DEP_AFT,t.DRAUGHT_MARK_DEP_CENTER,t.DRAUGHT_MARK_DEP_FORWARD,t.VOYAGE_NO,t.BERTH_ID,
-		    t.text_1,t.text_2,t.text_3,t.text_4,t.text_5,t.text_6,
-		    t.value_1,t.value_2,t.value_3,t.value_4,t.value_5,t.value_6,t.value_7,t.value_8,t.value_9,t.value_10,
-		    t.date_1,t.date_2,t.date_3,t.date_4,t.date_5,t.date_6,t.date_7, t.rev_no
+		    t.text_1,t.text_2,t.text_3,t.text_4,t.text_5,t.text_6,t.text_7,t.text_8,t.text_9,t.text_10,t.text_11,t.text_12,t.text_13,t.text_14,t.text_15,t.text_16,t.text_17,t.text_18,t.text_19,t.text_20,t.value_1,t.value_2,t.value_3,t.value_4,t.value_5,t.value_6,t.value_7,t.value_8,t.value_9,t.value_10,t.value_11,t.value_12,t.value_13,t.value_14,t.value_15,t.value_16,t.value_17,t.value_18,t.value_19,t.value_20,t.value_21,t.value_22,t.value_23,t.value_24,t.value_25,t.value_26,t.value_27,t.value_28,t.value_29,t.value_30,t.value_31,t.value_32,t.value_33,t.value_34,t.value_35,t.value_36,t.value_37,t.value_38,t.value_39,t.value_40,t.value_41,t.value_42,t.value_43,t.value_44,t.value_45,t.value_46,t.value_47,t.value_48,t.value_49,t.value_50,t.value_51,t.value_52,t.value_53,t.value_54,t.value_55,t.date_1,t.date_2,t.date_3,t.date_4,t.date_5,t.date_6,t.date_7,t.date_8,t.date_9,t.date_10,t.date_11,t.date_12,t.date_13,t.date_14,t.date_15,t.rev_no
 		FROM cargo_fcst_transport t,
 		     forecast c,
 			 cargo_transport co
 		WHERE t.forecast_id = p_forecast_id
 		      AND co.cargo_no(+) = t.cargo_no
 		      AND t.forecast_id = c.object_id
-			  AND t.cargo_status = 'T' -- only copy forecsts having cargo_status = Tentative
-              AND Nvl(co.cargo_status,'T') ='T' -- only copy to Original if status is Tentative
+			  AND ue_forecast_cargo_planning.includeInCopy(t.forecast_id,t.cargo_no,NULL,co.cargo_status,t.cargo_status)='Y'
 		      AND t.cargo_no in (select cargo_no
 		              FROM  stor_fcst_lift_nom n
 		              WHERE n.forecast_id = c.object_id
@@ -862,20 +848,16 @@ BEGIN
 	WHEN MATCHED THEN
 		UPDATE SET o.cargo_name = f.cargo_name, o.carrier_id = f.carrier_id, o.agent = f.agent, o.surveyor = f.surveyor, o.laytime = f.laytime,
 		o.EST_ARRIVAL = f.EST_ARRIVAL,o.EST_DEPARTURE = f.EST_DEPARTURE,
-		o.PROD_FCTY_ID = f.PROD_FCTY_ID,o.MASTER = f.MASTER,o.PILOT = f.PILOT,o.TUGS_ARR = f.TUGS_ARR,o.TUGS_DEP = f.TUGS_DEP,o.DRAUGHT_MARK_ARR_AFT = f.DRAUGHT_MARK_ARR_AFT,o.DRAUGHT_MARK_ARR_CENTER = f.DRAUGHT_MARK_ARR_CENTER,o.DRAUGHT_MARK_ARR_FORWARD = f.DRAUGHT_MARK_ARR_FORWARD,o.DRAUGHT_MARK_DEP_AFT = f.DRAUGHT_MARK_DEP_AFT,o.DRAUGHT_MARK_DEP_CENTER = f.DRAUGHT_MARK_DEP_CENTER,o.DRAUGHT_MARK_DEP_FORWARD = f.DRAUGHT_MARK_DEP_FORWARD,o.VOYAGE_NO = f.VOYAGE_NO,o.BERTH_ID = f.BERTH_ID,
-		o.value_1 = f.value_1, o.value_2 = f.value_2, o.value_3 = f.value_3, o.value_4 = f.value_4, o.value_5 = f.value_5, o.value_6 = f.value_6, o.value_7 = f.value_7, o.value_8 = f.value_8, o.value_9 = f.value_9, o.value_10 = f.value_10,
+		o.PROD_FCTY_ID = f.PROD_FCTY_ID,o.MASTER = f.MASTER,o.PILOT = f.PILOT,o.TUGS_ARR = f.TUGS_ARR,o.TUGS_DEP = f.TUGS_DEP,o.DRAUGHT_MARK_ARR_AFT = f.DRAUGHT_MARK_ARR_AFT,o.DRAUGHT_MARK_ARR_CENTER = f.DRAUGHT_MARK_ARR_CENTER,o.DRAUGHT_MARK_ARR_FORWARD = f.DRAUGHT_MARK_ARR_FORWARD,o.DRAUGHT_MARK_DEP_AFT = f.DRAUGHT_MARK_DEP_AFT,o.DRAUGHT_MARK_DEP_CENTER = f.DRAUGHT_MARK_DEP_CENTER,o.DRAUGHT_MARK_DEP_FORWARD = f.DRAUGHT_MARK_DEP_FORWARD,o.VOYAGE_NO = f.VOYAGE_NO,o.BERTH_ID = f.BERTH_ID,o.CARGO_STATUS=f.CARGO_STATUS,
+		o.value_1 = f.value_1, o.value_2 = f.value_2, o.value_3 = f.value_3, o.value_4 = f.value_4, o.value_5 = f.value_5, o.value_6 = f.value_6, o.value_7 = f.value_7, o.value_8 = f.value_8, o.value_9 = f.value_9, o.value_10 = f.value_10,o.value_11 = f.value_11, o.value_12 = f.value_12, o.value_13 = f.value_13, o.value_14 = f.value_14, o.value_15 = f.value_15, o.value_16 = f.value_16, o.value_17 = f.value_17, o.value_18 = f.value_18, o.value_19 = f.value_19, o.value_20 = f.value_20,o.value_21 = f.value_21, o.value_22 = f.value_22, o.value_23 = f.value_23, o.value_24 = f.value_24, o.value_25 = f.value_25, o.value_26 = f.value_26, o.value_27 = f.value_27, o.value_28 = f.value_28, o.value_29 = f.value_29, o.value_30 = f.value_30,o.value_31 = f.value_31, o.value_32 = f.value_32, o.value_33 = f.value_33, o.value_34 = f.value_34, o.value_35 = f.value_35, o.value_36 = f.value_36, o.value_37 = f.value_37, o.value_38 = f.value_38, o.value_39 = f.value_39, o.value_40 = f.value_40,o.value_41 = f.value_41, o.value_42 = f.value_42, o.value_43 = f.value_43, o.value_44 = f.value_44, o.value_45 = f.value_45, o.value_46 = f.value_46, o.value_47 = f.value_47, o.value_48 = f.value_48, o.value_49 = f.value_49, o.value_50 = f.value_50,o.value_51 = f.value_51, o.value_52 = f.value_52, o.value_53 = f.value_53, o.value_54 = f.value_54, o.value_55 = f.value_55,
 		o.text_1 = f.text_1, o.text_2 = f.text_2, o.text_3 = f.text_3, o.text_4 = f.text_4,o.text_5 = f.text_5, o.text_6 = f.text_6,
-		o.date_1 = f.date_1, o.date_2 =f.date_2, o.date_3 = f.date_3, o.date_4 = f.date_4, o.date_5 = f.date_5,o.date_6 = f.date_6,o.date_7 =f.date_7, last_updated_by = ecdp_context.getAppUser, o.rev_no= decode(f.rev_no, 0, o.rev_no, o.rev_no + 1)
+		o.text_7 = f.text_7, o.text_8 = f.text_8, o.text_9 = f.text_9, o.text_10 = f.text_10,o.text_11 = f.text_11, o.text_12 = f.text_12,
+		o.text_13 = f.text_13, o.text_14 = f.text_14, o.text_15 = f.text_15, o.text_16 = f.text_16,o.text_17 = f.text_17, o.text_18 = f.text_18,o.text_19 = f.text_19, o.text_20 = f.text_20,o.date_1 = f.date_1, o.date_2 =f.date_2, o.date_3 = f.date_3, o.date_4 = f.date_4, o.date_5 = f.date_5,o.date_6 = f.date_6,o.date_7 =f.date_7,o.date_8 = f.date_8, o.date_9 =f.date_9, o.date_10 = f.date_10, o.date_11 = f.date_11, o.date_12 = f.date_12,o.date_13 = f.date_13,o.date_14 =f.date_14,o.date_15 =f.date_15,last_updated_by = ecdp_context.getAppUser, o.rev_no= decode(f.rev_no, 0, o.rev_no, o.rev_no + 1)
 	WHEN NOT MATCHED THEN
 		INSERT (o.cargo_no, o.cargo_name, o.carrier_id, o.agent, o.surveyor, o.laytime,o.EST_ARRIVAL,o.EST_DEPARTURE,o.CARGO_STATUS,o.PROD_FCTY_ID,o.MASTER,o.PILOT,o.TUGS_ARR,o.TUGS_DEP,o.DRAUGHT_MARK_ARR_AFT,o.DRAUGHT_MARK_ARR_CENTER,o.DRAUGHT_MARK_ARR_FORWARD,o.DRAUGHT_MARK_DEP_AFT,o.DRAUGHT_MARK_DEP_CENTER,o.DRAUGHT_MARK_DEP_FORWARD,o.VOYAGE_NO,o.BERTH_ID,
-		    o.text_1,o.text_2,o.text_3,o.text_4,o.text_5,o.text_6,
-		    o.value_1,o.value_2,o.value_3,o.value_4,o.value_5,o.value_6,o.value_7,o.value_8,o.value_9,o.value_10,
-		    o.date_1,o.date_2,o.date_3,o.date_4,o.date_5,o.date_6,o.date_7,
-		    created_by)
+		    o.text_1,o.text_2,o.text_3,o.text_4,o.text_5,o.text_6,o.text_7,o.text_8,o.text_9,o.text_10,o.text_11,o.text_12,o.text_13,o.text_14,o.text_15,o.text_16,o.text_17,o.text_18,o.text_19,o.text_20,o.value_1,o.value_2,o.value_3,o.value_4,o.value_5,o.value_6,o.value_7,o.value_8,o.value_9,o.value_10,o.value_11,o.value_12,o.value_13,o.value_14,o.value_15,o.value_16,o.value_17,o.value_18,o.value_19,o.value_20,o.value_21,o.value_22,o.value_23,o.value_24,o.value_25,o.value_26,o.value_27,o.value_28,o.value_29,o.value_30,o.value_31,o.value_32,o.value_33,o.value_34,o.value_35,o.value_36,o.value_37,o.value_38,o.value_39,o.value_40,o.value_41,o.value_42,o.value_43,o.value_44,o.value_45,o.value_46,o.value_47,o.value_48,o.value_49,o.value_50,o.value_51,o.value_52,o.value_53,o.value_54,o.value_55,o.date_1,o.date_2,o.date_3,o.date_4,o.date_5,o.date_6,o.date_7,o.date_8,o.date_9,o.date_10,o.date_11,o.date_12,o.date_13,o.date_14,o.date_15,created_by)
 		VALUES (f.cargo_no, f.cargo_name, f.carrier_id, f.agent, f.surveyor, f.laytime,f.EST_ARRIVAL,f.EST_DEPARTURE,f.CARGO_STATUS,f.PROD_FCTY_ID,f.MASTER,f.PILOT,f.TUGS_ARR,f.TUGS_DEP,f.DRAUGHT_MARK_ARR_AFT,f.DRAUGHT_MARK_ARR_CENTER,f.DRAUGHT_MARK_ARR_FORWARD,f.DRAUGHT_MARK_DEP_AFT,f.DRAUGHT_MARK_DEP_CENTER,f.DRAUGHT_MARK_DEP_FORWARD,f.VOYAGE_NO,f.BERTH_ID,
-		    f.text_1,f.text_2,f.text_3,f.text_4,f.text_5,f.text_6,
-		    f.value_1,f.value_2,f.value_3,f.value_4,f.value_5,f.value_6,f.value_7,f.value_8,f.value_9,f.value_10,
-		    f.date_1,f.date_2,f.date_3,f.date_4,f.date_5,f.date_6,f.date_7, ecdp_context.getAppUser);
+		    f.text_1,f.text_2,f.text_3,f.text_4,f.text_5,f.text_6,f.text_7,f.text_8,f.text_9,f.text_10,f.text_11,f.text_12,f.text_13,f.text_14,f.text_15,f.text_16,f.text_17,f.text_18,f.text_19,f.text_20,f.value_1,f.value_2,f.value_3,f.value_4,f.value_5,f.value_6,f.value_7,f.value_8,f.value_9,f.value_10,f.value_11,f.value_12,f.value_13,f.value_14,f.value_15,f.value_16,f.value_17,f.value_18,f.value_19,f.value_20,f.value_21,f.value_22,f.value_23,f.value_24,f.value_25,f.value_26,f.value_27,f.value_28,f.value_29,f.value_30,f.value_31,f.value_32,f.value_33,f.value_34,f.value_35,f.value_36,f.value_37,f.value_38,f.value_39,f.value_40,f.value_41,f.value_42,f.value_43,f.value_44,f.value_45,f.value_46,f.value_47,f.value_48,f.value_49,f.value_50,f.value_51,f.value_52,f.value_53,f.value_54,f.value_55,f.date_1,f.date_2,f.date_3,f.date_4,f.date_5,f.date_6,f.date_7,f.date_8,f.date_9,f.date_10,f.date_11,f.date_12,f.date_13,f.date_14,f.date_15,ecdp_context.getAppUser);
 
 	-- delete nominations
 	FOR curDelNom IN c_del_nom(p_forecast_id) LOOP
@@ -905,8 +887,7 @@ BEGIN
 			AND n.forecast_id = p_forecast_id
 			AND n.forecast_id = c.object_id
 		    AND co.cargo_no (+) = n.cargo_no
-			AND t.cargo_status = 'T'
-			AND Nvl(co.cargo_status,'T') = 'T'
+			AND ue_forecast_cargo_planning.includeInCopy(n.forecast_id,n.cargo_no,n.parcel_no,co.cargo_status,t.cargo_status)='Y'
 			AND Nvl(n.DELETED_IND, 'N') <> 'Y'
 			AND n.nom_firm_date >= c.start_date
 		    AND n.nom_firm_date < c.end_date
@@ -954,8 +935,7 @@ BEGIN
                     AND n.forecast_id = p_forecast_id
                     AND co.cargo_no (+) = n.cargo_no
 					AND n.forecast_id = c.object_id
-					AND t.cargo_status = 'T'
-                    AND Nvl(co.cargo_status,'T') ='T'
+					AND ue_forecast_cargo_planning.includeInCopy(n.forecast_id,n.cargo_no,n.parcel_no,co.cargo_status,t.cargo_status)='Y'
                     AND n.nom_firm_date >= c.start_date
                     AND n.nom_firm_date < c.end_date
                     AND n.object_id = nvl(c.storage_id, n.object_id))
@@ -974,8 +954,7 @@ BEGIN
                     AND n.cargo_no = t.cargo_no
                     AND n.forecast_id = p_forecast_id
                     AND co.cargo_no (+) = n.cargo_no
-                    AND t.cargo_status = 'T'
-                    AND Nvl(co.cargo_status,'T') ='T')
+                    AND ue_forecast_cargo_planning.includeInCopy(n.forecast_id,n.cargo_no,n.parcel_no,co.cargo_status,t.cargo_status)='Y')
                       AND NOT EXISTS (SELECT *
                                         FROM stor_fcst_sub_day_lift_nom sc
                                        WHERE sc.forecast_id = p_forecast_id
@@ -1047,19 +1026,32 @@ BEGIN
 	MERGE INTO OPLOC_DAILY_RESTRICTION o
 	USING (SELECT f.object_id, f.daytime, f.restricted_capacity, f.restriction_type, f.comments, f.rev_no
 		FROM FCST_OPLOC_DAY_RESTRICT f,
-			 forecast c,
-			 carrier a
+			 forecast c
 		WHERE f.forecast_id = p_forecast_id
 			  AND f.forecast_id = c.object_id
 			  AND f.daytime >= c.start_date
-			  AND f.daytime < c.end_date
-			  AND f.object_id = a.object_id ) t
+			  AND f.daytime < c.end_date) t
 	ON (o.object_id = t.object_id AND o.daytime = t.daytime)
 	WHEN MATCHED THEN
 		UPDATE SET o.restricted_capacity  = t.restricted_capacity, o.restriction_type = t.restriction_type, o.comments = t.comments, last_updated_by = ecdp_context.getAppUser, o.rev_no= decode(t.rev_no, 0, o.rev_no, o.rev_no + 1)
 	WHEN NOT MATCHED THEN
 		INSERT (o.object_id, o.daytime, o.restricted_capacity, o.restriction_type, o.comments, o.created_by)
 		VALUES (t.object_id, t.daytime, t.restricted_capacity, t.restriction_type, t.comments, ecdp_context.getAppUser);
+
+	MERGE INTO OPLOC_PERIOD_RESTRICTION o
+    USING (SELECT r.object_id, r.start_date, r.end_date, r.restricted_capacity, r.restriction_type, r.comments,
+        r.value_1, r.value_2, r.value_3, r.value_4, r.value_5, r.value_6, r.value_7, r.value_8, r.value_9, r.value_10,
+        r.text_1, r.text_2, r.text_3, r.text_4, ecdp_context.getAppUser,r.rev_no
+            FROM FCST_OPLOC_PERIOD_RESTR r
+            WHERE r.forecast_id = p_forecast_id ) t
+      ON (o.object_id = t.object_id AND t.end_date >= o.start_date
+        AND t.start_date < o.end_date)
+  WHEN MATCHED THEN
+    UPDATE SET o.restricted_capacity  = t.restricted_capacity, o.restriction_type = t.restriction_type, o.comments = t.comments, last_updated_by = ecdp_context.getAppUser, o.rev_no= decode(t.rev_no, 0, o.rev_no, o.rev_no + 1)
+  WHEN NOT MATCHED THEN
+    INSERT (o.object_id, o.start_date,o.end_date, o.restricted_capacity, o.restriction_type, o.comments, o.created_by)
+    VALUES (t.object_id, t.start_date,t.end_date, t.restricted_capacity, t.restriction_type, t.comments, ecdp_context.getAppUser);
+
 
 MERGE INTO OBJ_EVENT_CP_TRAN_FACTOR o
 	USING (SELECT f.object_id, f.daytime, f.component_no, f.class_name, f.frac, f.rev_no
@@ -1172,8 +1164,7 @@ MERGE INTO OBJ_EVENT_DIM1_CP_TRAN_FAC o
                               AND sf.forecast_id = p_forecast_id
 							  AND sf.forecast_id = c.object_id
 							  AND co.cargo_no (+) = sf.cargo_no
-							  AND t.cargo_status = 'T'
-                              AND Nvl(co.cargo_status,'T') ='T'
+							  AND ue_forecast_cargo_planning.includeInCopy(sf.forecast_id,sf.cargo_no,sf.parcel_no,co.cargo_status,t.cargo_status)='Y'
 			                  AND Nvl(sf.DELETED_IND, 'N') <> 'Y'
 		                      AND sf.nom_firm_date >= c.start_date
 		                      AND sf.nom_firm_date < c.end_date

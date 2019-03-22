@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0235
   NAME: Stream Seasonal Values
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/stream_seasonal_value
 related: {}

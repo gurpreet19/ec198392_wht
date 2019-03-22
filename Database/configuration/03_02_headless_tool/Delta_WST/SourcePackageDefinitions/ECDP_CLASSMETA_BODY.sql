@@ -2488,26 +2488,8 @@ END getClassNonKeysMandatory;
 PROCEDURE RefreshMViews(p_refresh_method IN VARCHAR2 DEFAULT NULL, p_force IN VARCHAR2 DEFAULT 'N')
 --</EC-DOC>
 IS
-   lv2_class_meta_mviews VARCHAR2(1000) :=
-      'CLASS'
-      ||',CLASS_ATTR_DB_MAPPING'
-      ||',CLASS_ATTRIBUTE'
-      ||',CLASS_DB_MAPPING'
-      ||',CLASS_DEPENDENCY'
-      ||',CLASS_REL_DB_MAPPING'
-      ||',CLASS_RELATION'
-      ||',CLASS_TRIGGER_ACTION'
-      ||',CLASS_ATTR_PRESENTATION'
-      ||',CLASS_REL_PRESENTATION';
 BEGIN
-  IF Nvl(p_force, 'N') = 'Y' THEN
-    dbms_mview.refresh(lv2_class_meta_mviews, p_refresh_method);
-  ELSE
-    FOR cur IN (SELECT object_name FROM viewlayer_dirty_log WHERE dirty_type = 'MATVIEW' AND dirty_ind = 'Y') LOOP
-      dbms_mview.refresh(cur.object_name, p_refresh_method);
-    END LOOP;
-  END IF;
-  ecdp_viewlayer_utils.set_dirty_ind(NULL, 'MATVIEW', FALSE);
+  NULL;
 END RefreshMViews;
 
 END EcDp_ClassMeta;

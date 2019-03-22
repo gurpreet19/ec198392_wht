@@ -3,7 +3,7 @@ name: JBPM_PROCESSINSTANCEINFO
 cnstPrimaryKey:
   columns:
   - INSTANCEID
-  name: SYS_C008688
+  name: PK_JBPM_PROCESSINSTANCEINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

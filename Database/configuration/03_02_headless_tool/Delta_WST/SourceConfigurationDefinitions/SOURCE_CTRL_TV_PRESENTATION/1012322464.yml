@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INV_TMPL_SET?screentemplate=/com.ec.frmw.co.screens/manage_object
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INV_TMPL_SET?screentemplate=/com.ec.frmw.co.screens/manage_object_nav
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: TIN_TRANS_INV_TMPL_SET
   COMPONENT_LABEL: Transactional Inventory Layout Set

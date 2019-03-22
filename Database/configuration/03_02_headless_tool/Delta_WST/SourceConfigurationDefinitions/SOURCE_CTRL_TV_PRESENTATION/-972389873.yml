@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS?screentemplate=/com.ec.prod.pp.screens/daily_injection_forecast&TARGETCONDITION=ISINJECTOR in ('Y')
+  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_DAY_STATUS?screentemplate=/com.ec.prod.pp.screens/daily_injection_forecast
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: INJ_WELL_FCST_DAY
   COMPONENT_LABEL: Daily Injection Well Forecast

@@ -8,5 +8,6 @@ properties:
   BF_CODE: WR.0076
   NAME: Monthly Steam Injection Well Status
   PROFILE_CLASS_NAME: WELL
+  TARGET_CONDITION: null
   URL: /com.ec.prod.wr.screens/monthly_steam_injection_well_status
 related: {}

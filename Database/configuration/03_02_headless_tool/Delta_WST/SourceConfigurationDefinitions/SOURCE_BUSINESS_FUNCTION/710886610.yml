@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0232
   NAME: Facility Analysis Items
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/facility_analysis_items
 related: {}

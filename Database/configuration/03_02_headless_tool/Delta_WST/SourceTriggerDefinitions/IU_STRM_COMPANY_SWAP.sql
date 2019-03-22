@@ -6,7 +6,6 @@ BEGIN
     -- Common
     IF Inserting THEN
       :NEW.record_status := NVL(:NEW.record_status,'P');
-
       IF :new.swap_no IS NULL THEN
 
          EcDp_System_Key.assignNextNumber('STRM_COMPANY_SWAP', :new.swap_no);

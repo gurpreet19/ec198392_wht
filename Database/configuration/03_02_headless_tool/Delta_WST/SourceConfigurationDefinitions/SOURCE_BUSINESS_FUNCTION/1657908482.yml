@@ -8,5 +8,6 @@ properties:
   BF_CODE: SA.0037
   NAME: Daily Contractual Volume
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/period_day_np_data/CLASS/SLCN_DAY_PRODUCT_QTY/NAV_MODEL/SALE_COMMERCIAL/TARGET/CONTRACT/BF_PROFILE/SA.0037
 related: {}

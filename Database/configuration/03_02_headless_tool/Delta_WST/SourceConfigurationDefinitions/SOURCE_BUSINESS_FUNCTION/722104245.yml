@@ -8,5 +8,6 @@ properties:
   BF_CODE: IN.0007
   NAME: Inventory Item Selection
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.in/inv_setup_item_selection/STREAM_CATEGORY_CODE/INV
 related: {}

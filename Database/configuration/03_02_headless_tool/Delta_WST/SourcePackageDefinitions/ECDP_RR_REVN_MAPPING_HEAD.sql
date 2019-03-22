@@ -424,4 +424,11 @@ CREATE OR REPLACE PACKAGE EcDp_RR_Revn_Mapping IS
         p_journal_entry_no number,
         p_reference_id varchar2
        );
+
+     FUNCTION GetExclusionValue(
+        p_journal_entry_no number,
+        p_column_name varchar2,
+        p_journal_entry_src varchar2,
+        p_daytime date) return varchar2;
+
 END EcDp_RR_Revn_Mapping;

@@ -62,4 +62,10 @@ PROCEDURE SafeBuild(p_object_name VARCHAR2,
 FUNCTION is_dirty(p_object_name IN VARCHAR2, p_dirty_type IN VARCHAR2) RETURN BOOLEAN;
 PROCEDURE set_dirty_ind(p_object_name IN VARCHAR2, p_dirty_type IN VARCHAR2, p_dirty IN BOOLEAN);
 
+FUNCTION resolvePriority(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2, p_root_class_name IN VARCHAR2, p_property_code IN VARCHAR2)
+RETURN VARCHAR2
+RESULT_CACHE;
+
+PROCEDURE buildObjectRelCascadeView;
+
 END ecdp_viewlayer_utils;

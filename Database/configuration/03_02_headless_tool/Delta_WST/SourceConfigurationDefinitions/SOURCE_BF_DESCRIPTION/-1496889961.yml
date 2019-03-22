@@ -47,5 +47,19 @@ properties:
     \ for by opening or unchoking another well) or to variations in treatment parameters\
     \ (Example: A gas well can be opened to compensate for the failure of a gas-lift\
     \ compressor). One or more such variations can arise at the same time for appropriate\
-    \ reason codes and the reason codes can be configured.</"
+    \ reason codes and the reason codes can be configured.</p><div class=\"ui-widget-header\
+    \ ui-corner-top\"><span class=\"ecTextHeader\">Configuration in Maintain User\
+    \ Settings (CO.1008)</span><p>This screen has a configurable mandatory level for\
+    \ navigator. It enables the user to define mandatory level for the given group\
+    \ model. This can be configured in Maintain User Settings (CO.1008):</p><div class=\"\
+    ui-widget\"><div class=\"ui-datatable-tablewrapper\"><table role=\"grid\" cellpadding=\"\
+    10\"><thead><tr role=\"row\"><th width=\"350\" class=\"ui-state-default\" role=\"\
+    columnheader\" aria-label=\"Property\" scope=\"col\"><span>Property</span></th><th\
+    \ class=\"ui-state-default\" role=\"columnheader\" aria-label=\"Value\" scope=\"\
+    col\"><span>Value</span></th></tr></thead><tbody class=\"ui-datatable-data ui-widget-content\"\
+    ><tr class=\"ui-widget-content ui-datatable-even\" role=\"row\"><td role=\"gridcell\"\
+    ><span>Deferment: Custom Mandatory Navigation - Operational</span></td><td role=\"\
+    gridcell\"><span>Mandatory level in Operational group model navigator. Options:PRODUCTIONUNIT|SUB_UNIT|AREA|SUB_AREA|FCTY_CLASS_2|FCTY_CLASS_1</span></td></tr><tr><td>Deferment:Custom\
+    \ Mandatory Navigation - Geographical</td><td role=\"gridcell\"\"><span>Mandatory\
+    \ level in Geographical group model navigator. Options: AREA|FIELD</span></td></tr></tbody></table></div></div></div>"
 related: {}

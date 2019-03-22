@@ -8,9 +8,9 @@ parentKeys: {}
 properties:
   ALT_CODE: null
   CODE: MPM
-  CODE_TEXT: Multiphase meter
+  CODE_TEXT: MPM incl artificial lift
   CODE_TYPE: FLWL_CALC_GAS_MTD
-  DESCRIPTION: Multiphase meter
+  DESCRIPTION: MPM measured incl gas lift
   IS_ACTIVE: Y
   IS_DEFAULT: null
   IS_SYSTEM_CODE: Y

@@ -14,20 +14,19 @@ CREATE OR REPLACE PACKAGE EcDp_Storage_Balance IS
 **
 ** Date        Whom  Change description:
 ** ----------  ----- -------------------------------------------
-** 26.05.2015  sharawan     ECPD-19047: Added parameter p_ignore_cache to calcStorageLevel and calcStorageLevelSubDay
+** 26.05.2015  sharawan     ECPD-19047: Added parameter p_ignore_cache to calcStorageLevel and calcStorageLevelSubDay.
+** 22.10.2018  prashwag     ECPD-59463: Added new function getStorageDip.
 *****************************************************************/
 
+FUNCTION getStorageDip(p_storage_id VARCHAR2, p_daytime DATE, p_condition VARCHAR2, p_group VARCHAR2, p_type VARCHAR) RETURN NUMBER;
+
 FUNCTION getAccLiftedQtyMth(p_lifting_account_id VARCHAR2, p_daytime DATE, p_xtra_qty NUMBER DEFAULT 0) RETURN NUMBER;
---
 
 FUNCTION getAccEstLiftedQtyMth(p_lifting_account_id VARCHAR2, p_daytime DATE, p_xtra_qty NUMBER DEFAULT 0, p_incl_delta VARCHAR2 DEFAULT 'N') RETURN NUMBER;
---
 
 FUNCTION getAccEstLiftedQtyDay(p_lifting_account_id VARCHAR2, p_daytime DATE, p_xtra_qty NUMBER DEFAULT 0, p_incl_delta VARCHAR2 DEFAULT 'N') RETURN NUMBER;
---
 
 FUNCTION getAccEstLiftedQtySubDay(p_lifting_account_id VARCHAR2, p_startdate DATE, p_enddate DATE, p_xtra_qty NUMBER DEFAULT 0, p_incl_delta VARCHAR2 DEFAULT 'N', p_summer_time VARCHAR2 DEFAULT NULL) RETURN NUMBER;
---
 
 FUNCTION getLiftedQtyMth(p_object_id VARCHAR2, p_daytime DATE, p_xtra_qty NUMBER DEFAULT 0) RETURN NUMBER;
 

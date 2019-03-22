@@ -10,7 +10,7 @@ properties:
   DEFAULT_VALUE_DATE: null
   DEFAULT_VALUE_NUMBER: null
   DEFAULT_VALUE_STRING: null
-  DESCRIPTION: Mandatory level in Geographical group model navigator for Deferment (PD.0020) and Equipment Downtime (PD.0022) screen. Options:AREA|FIELD
+  DESCRIPTION: Mandatory level in Geographical group model navigator for Deferment (PD.0020) , Equipment Downtime (PD.0022) and Forecast Event (PP.0047) screen. Options:AREA|FIELD
   KEY: CUSTOM_TARGET_MANDATORY_GEO
   LABEL: Deferment:Custom Mandatory Navigation-Geographical
   LIST_OF_VALUES: null

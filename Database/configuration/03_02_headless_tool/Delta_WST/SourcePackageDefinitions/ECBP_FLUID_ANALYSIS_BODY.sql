@@ -25,6 +25,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Fluid_Analysis IS
 ** 19.06.2012 limmmchu ECPD-21070: Modified getPeriodCompSet() to included STRM_OIL_COMP, STRM_LNG_COMP and STRM_PC_COMP
 ** 17.09.2013 wonggkai ECPD-25076: Modified CheckFluidComponentLock, changed p_new_lock_columns checking.
 ** 24.09.2013 wonggkai ECPD-25076: Modified CheckAnalysisLock, rollback previous changes
+** 10.10.2018 rainanid ECPD-58847: Added checkFctyReferenceValueLock()
 *****************************************************************/
 
 --<EC-DOC>
@@ -1305,5 +1306,123 @@ BEGIN
 
 END checkChokeModelRefValueLock;
 
+
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Procedure      : checkFctyReferenceValueLock
+-- Description    :
+--
+-- Preconditions  : Checks whether a last dated facility reference record affects a locked month.
+--
+-- Postconditions :
+--
+-- Using tables   :
+--
+-- Using functions: ec_Fcty_reference_value,
+--                  EcDp_Month_Lock.checkUpdateOfLDOForLock,
+--                  EcDp_Month_Lock.buildIdentifierString,
+--                  EcDp_Month_Lock.checkIfColumnsUpdated,
+--                  EcDp_Month_Lock.validatePeriodForLockOverlap
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+--
+---------------------------------------------------------------------------------------------------
+PROCEDURE checkFctyReferenceValueLock(p_operation VARCHAR2, p_new_lock_columns  IN OUT EcDp_Month_Lock.column_list, p_old_lock_columns  IN OUT EcDp_Month_Lock.column_list)
+--</EC-DOC>
+IS
+
+ld_new_current_valid DATE;
+ld_old_current_valid DATE;
+ld_new_next_valid DATE;
+ld_old_next_valid DATE;
+ld_old_prev_valid DATE;
+
+ld_locked_month DATE;
+lv2_id VARCHAR2(2000);
+lv2_columns_updated VARCHAR2(1);
+
+lv2_o_obj_id                  VARCHAR2(32);
+lv2_n_obj_id                  VARCHAR2(32);
+
+BEGIN
+
+   ld_new_current_valid := p_new_lock_columns('DAYTIME').column_data.AccessDate;
+   ld_old_current_valid := p_old_lock_columns('DAYTIME').column_data.AccessDate;
+
+   IF p_old_lock_columns.EXISTS('OBJECT_ID')  THEN
+      lv2_o_obj_id := p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
+   END IF;
+
+   IF p_new_lock_columns.EXISTS('OBJECT_ID')  THEN
+      lv2_n_obj_id := p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
+   END IF;
+
+   IF p_operation = 'INSERTING' THEN -- Only when inserting new valid analysis
+
+      lv2_id := EcDp_Month_Lock.buildIdentifierString(p_new_lock_columns);
+
+      ld_new_next_valid := ec_fcty_reference_value.next_daytime(
+                           p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2,
+                           ld_new_current_valid);
+
+      EcDp_Month_Lock.validatePeriodForLockOverlap(p_operation, ld_new_current_valid, ld_new_next_valid, lv2_id, lv2_n_obj_id);
+
+   ELSIF p_operation = 'UPDATING' THEN
+
+      lv2_id := EcDp_Month_Lock.buildIdentifierString(p_new_lock_columns);
+
+      -- get the next valid daytime
+      ld_new_next_valid := ec_fcty_reference_value.next_daytime(
+                           p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2,
+                           ld_new_current_valid);
+
+      ld_old_next_valid := ec_fcty_reference_value.next_daytime(
+                           p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2,
+                           ld_old_current_valid);
+
+      IF ld_new_next_valid = ld_old_current_valid THEN
+         ld_new_next_valid := ld_old_next_valid;
+      END IF;
+
+      -- Get previous record
+      ld_old_prev_valid := ec_fcty_reference_value.prev_daytime(
+                                  p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2,
+                                  ld_old_current_valid);
+
+      p_old_lock_columns('DAYTIME').is_checked := 'Y';
+
+      IF EcDp_Month_Lock.checkIfColumnsUpdated(p_old_lock_columns) THEN
+         lv2_columns_updated := 'Y';
+      ELSE
+         lv2_columns_updated := 'N';
+      END IF;
+
+      EcDp_Month_Lock.checkUpdateOfLDOForLock(ld_new_current_valid,
+                                             ld_old_current_valid,
+                                             ld_new_next_valid,
+                                             ld_old_next_valid,
+                                             ld_old_prev_valid,
+                                             lv2_columns_updated,
+                                             lv2_id,
+                                             lv2_n_obj_id);
+
+   ELSIF p_operation = 'DELETING' THEN -- Only when deleting a valid analysis
+
+      lv2_id := EcDp_Month_Lock.buildIdentifierString(p_old_lock_columns);
+
+      ld_old_next_valid := ec_fcty_reference_value.next_daytime(
+                           p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2,
+                           ld_old_current_valid);
+
+      EcDp_Month_Lock.validatePeriodForLockOverlap(p_operation, ld_old_current_valid, ld_old_next_valid, lv2_id, lv2_o_obj_id);
+
+   END IF;
+
+END checkFctyReferenceValueLock;
 
 END EcBp_Fluid_Analysis;

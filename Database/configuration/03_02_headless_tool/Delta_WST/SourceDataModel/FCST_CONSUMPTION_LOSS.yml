@@ -2,7 +2,7 @@
 name: FCST_CONSUMPTION_LOSS
 cnstPrimaryKey:
   columns:
-  - OBJECT_ID
+  - SCENARIO_ID
   - DAYTIME
   name: PK_FCST_CONSUMPTION_LOSS
   type: PRIMARYKEY
@@ -176,14 +176,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '127'
-  OBJECT_ID:
-    columnName: OBJECT_ID
-    typeName: VARCHAR2(32)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '1'
   OIL_INT_CONSUMPTION:
     columnName: OIL_INT_CONSUMPTION
     typeName: NUMBER
@@ -232,6 +224,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '129'
+  SCENARIO_ID:
+    columnName: SCENARIO_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(240)
@@ -1087,7 +1087,7 @@ cnstForeignKeys:
     deleteAction: NOACTION
     primaryTable: FORECAST
     columns:
-      OBJECT_ID: OBJECT_ID
+      SCENARIO_ID: OBJECT_ID
     name: FK_FCST_CONSUMPTION_LOSS_2
     type: FOREIGNKEY
     status: UNDEFINED

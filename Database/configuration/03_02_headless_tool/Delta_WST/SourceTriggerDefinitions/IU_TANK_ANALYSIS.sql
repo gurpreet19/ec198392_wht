@@ -14,17 +14,16 @@ BEGIN
          EcDp_System_Key.assignNextNumber('TANK_ANALYSIS', :new.analysis_no);
       END IF;
 
-	  IF :NEW.production_day IS NULL THEN
-        :new.production_day := EcDp_ProductionDay.getProductionDay(NULL,:NEW.object_id, :NEW.daytime);
-      END IF;
+	  IF :NEW.object_class_name IS NULL THEN
+        :NEW.object_class_name := Ecdp_Objects.GetObjClassName(:NEW.object_id);
+	  END IF;
+
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, :NEW.daytime);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_daytime, :NEW.production_day);
 
 	  IF :NEW.valid_from_date IS NULL THEN
         :NEW.valid_from_date := :NEW.production_day;
       END IF;
-
-	  IF :NEW.object_class_name IS NULL THEN
-        :NEW.object_class_name := Ecdp_Objects.GetObjClassName(:NEW.object_id);
-	  END IF;
 
       IF :new.created_by IS NULL THEN
         :new.created_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);
@@ -37,9 +36,8 @@ BEGIN
       :new.rev_no := 0;
     ELSE
 
-      IF :NEW.daytime <> :OLD.daytime THEN
-        :new.production_day := Ecdp_Productionday.getProductionDay(NULL, :NEW.object_id, :NEW.daytime);
-      END IF;
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.production_day, :NEW.production_day);
 
 	  IF Nvl(:new.record_status,'P') = Nvl(:old.record_status,'P') THEN
          IF NOT UPDATING('LAST_UPDATED_BY') THEN

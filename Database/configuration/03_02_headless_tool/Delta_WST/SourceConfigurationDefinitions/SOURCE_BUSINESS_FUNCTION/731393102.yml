@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0011
   NAME: Product Price Object
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/general_price_object/CLASS_NAME/PRICE_OBJECT
 related: {}

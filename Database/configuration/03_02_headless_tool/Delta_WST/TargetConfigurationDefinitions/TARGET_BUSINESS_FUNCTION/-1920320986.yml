@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0005.04
   NAME: Daily Tank Status - Single Dip
   PROFILE_CLASS_NAME: TANK
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/daily_tank_status_single_dip
 related: {}

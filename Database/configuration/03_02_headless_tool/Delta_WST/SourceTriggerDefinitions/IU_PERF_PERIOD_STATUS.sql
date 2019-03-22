@@ -16,8 +16,8 @@ BEGIN
       END IF;
       :new.rev_no := 0;
 
-      EcDp_Timestamp_Utils.syncUtcDate(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.time_zone, :NEW.daytime, :NEW.summer_time);
-      EcDp_Timestamp_Utils.setProductionDay(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.day);
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, :NEW.daytime, :NEW.summer_time);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_daytime, :NEW.day);
 
       IF :NEW.active_perf_status IS NULL THEN
          :NEW.active_perf_status := EcDp_System.getDependentCode('ACTIVE_PERF_STATUS', 'PERF_STATUS', :NEW.perf_status);
@@ -27,6 +27,9 @@ BEGIN
       :NEW.active_perf_status := EcDp_System.getDependentCode('ACTIVE_PERF_STATUS', 'PERF_STATUS', :NEW.perf_status);
 
     ELSE
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime, :OLD.summer_time, :NEW.summer_time);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.day, :NEW.day);
+
       IF Nvl(:new.record_status,'P') = Nvl(:old.record_status,'P') THEN
          IF NOT UPDATING('LAST_UPDATED_BY') THEN
             :new.last_updated_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);

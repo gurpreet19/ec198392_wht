@@ -244,7 +244,7 @@ FUNCTION local2utc(p_datetime DATE,p_summertime_flag varchar2 DEFAULT 'N', p_pda
 
 BEGIN
   ld_return := Ecdp_Timestamp.local2utc('PRODUCTION_DAY', p_pday_object_id, p_datetime);
-  lv_timezone := Ecdp_Timestamp.getTimeZone('PRODUCTION_DAY', p_pday_object_id, p_datetime);
+  lv_timezone := Ecdp_Timestamp.getTimeZone(p_pday_object_id, p_datetime);
   lr_dst_switch := getDSTCache(lv_timezone, p_datetime);
 
   IF lr_dst_switch.winter = ld_return THEN
@@ -274,7 +274,7 @@ IS
   lr_dst_switch     t_dst_switch;
 BEGIN
 
-  lv_timezone := Ecdp_Timestamp.getTimeZone('PRODUCTION_DAY', p_pday_object_id, p_date);
+  lv_timezone := Ecdp_Timestamp.getTimeZone(p_pday_object_id, p_date);
   lr_dst_switch := getDSTCache(lv_timezone, p_date);
 
   IF lc_dst_switch.summer IS NULL THEN

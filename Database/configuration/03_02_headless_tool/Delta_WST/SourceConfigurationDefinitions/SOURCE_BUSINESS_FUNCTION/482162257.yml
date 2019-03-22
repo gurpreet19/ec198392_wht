@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0050
   NAME: Revenue Reporting Period - Close
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/fin_period/CLASS/SYSTEM_MTH_STATUS_REPORT/ACTION/CLOSE/PERIOD_TYPE/REPORTING
 related: {}

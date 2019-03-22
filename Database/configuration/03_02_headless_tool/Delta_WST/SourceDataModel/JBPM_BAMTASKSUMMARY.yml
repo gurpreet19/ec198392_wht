@@ -3,7 +3,7 @@ name: JBPM_BAMTASKSUMMARY
 cnstPrimaryKey:
   columns:
   - PK
-  name: SYS_C008629
+  name: PK_JBPM_BAMTASKSUMMARY
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

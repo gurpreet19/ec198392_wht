@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: IN.0033
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/TRANS_INV_TMPL_SET' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/TRANS_INV_TMPL_SET' )
   DATA_LEVEL: 0.0
   DESCRIPTION: '<p>    <em style="color: rgb(0, 0, 153);">        Transactional Inventory
     module in EC Revenue allows complex        inventory valuations using the EC calculation

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0061
   NAME: Compressor
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/COMPRESSOR/TARGET/COMPRESSOR/CLASS_NAME/COMPRESSOR
 related: {}

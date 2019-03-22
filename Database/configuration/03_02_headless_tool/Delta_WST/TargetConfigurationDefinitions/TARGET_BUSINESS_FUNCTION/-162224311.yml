@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.2022
   NAME: Create Forecast
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: Period/com.ec.tran.co.screens/forecast_period
 related: {}

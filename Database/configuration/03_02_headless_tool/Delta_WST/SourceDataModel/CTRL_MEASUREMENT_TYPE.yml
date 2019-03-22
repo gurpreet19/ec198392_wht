@@ -14,7 +14,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '13'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -22,7 +22,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '14'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -30,7 +30,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '12'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -38,7 +38,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '5'
+    sequence: !!float '6'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -46,7 +46,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '6'
+    sequence: !!float '7'
+  DB_UNIT:
+    columnName: DB_UNIT
+    typeName: VARCHAR2(16)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
   DESCRIPTION:
     columnName: DESCRIPTION
     typeName: VARCHAR2(240)
@@ -54,7 +62,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '3'
+    sequence: !!float '4'
   FORMAT_MASK:
     columnName: FORMAT_MASK
     typeName: VARCHAR2(32)
@@ -70,7 +78,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '7'
+    sequence: !!float '8'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -78,7 +86,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '8'
+    sequence: !!float '9'
   MEASUREMENT_TYPE:
     columnName: MEASUREMENT_TYPE
     typeName: VARCHAR2(32)
@@ -94,7 +102,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '4'
+    sequence: !!float '5'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -102,7 +110,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '15'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -110,7 +118,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '10'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -118,7 +126,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '11'
 cnstChecks:
   CHK_CTRL_MEASUREMENT_TYPE_1:
     searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')

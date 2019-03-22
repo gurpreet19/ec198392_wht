@@ -83,6 +83,8 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Fluid_Analysis IS
 ** 06.10.2017 kashisag ECPD-23090: Added new copy analysis procedure to copy analysis for Stream/Well component analysis
 ** 24.04.2018 kashisag ECPD-23090: Updated copy analysis procedure to remove summertime logic for period screens
 ** 18.05.2018 abdulmaw ECPD-56058: Updated copyAnalysis to update valid from logic for period screens
+** 09.07.2018 abdulmaw ECPD-53163: Updated calcTotMolFrac, calcTotMolPeriodAnFrac, calcTotMassFrac, calcTotPeriodAnMassFrac, calcCompMassFrac, calcCompMassFracPeriodAn, calcCompMolFrac, calcCompMolFracPeriodAn
+                                   to use actual component molecular weight when it's available
 *****************************************************************/
 
 CURSOR c_analysis(cp_object_id         stream.object_id%TYPE,
@@ -1236,6 +1238,8 @@ IS
    ln_analysis_no     NUMBER;
    ln_count_blank_mol NUMBER :=0;
    ln_count_blank_wt  NUMBER :=0;
+   ln_mol_pct         NUMBER :=0;
+   ln_wt_pct          NUMBER :=0;
 
    lr_analysis       object_fluid_analysis%ROWTYPE;
    lr_next_analysis  object_fluid_analysis%ROWTYPE;
@@ -1279,27 +1283,29 @@ BEGIN
        FOR comp_rec IN c_comp(ana_rec.analysis_no) LOOP
          IF (p_convert_to = 'WT_TO_MOL' OR p_convert_to IS NULL) and ln_count_blank_wt = 0 THEN
            IF ln_tot_mol_frac > 0 THEN
-             UPDATE fluid_analysis_component
-               SET  mol_pct = 100 * EcBp_Comp_Analysis.calcCompMolFrac( p_object_id,
+             ln_mol_pct := 100 * EcBp_Comp_Analysis.calcCompMolFrac( p_object_id,
                                                                        ana_rec.daytime,
                                                                        comp_rec.component_no,
                                                                        ana_rec.analysis_type,
                                                                        ana_rec.sampling_method,
-                                                                       comp_rec.wt_pct) / ln_tot_mol_frac,
-                          last_updated_by=p_user_id
+                                                                       comp_rec.wt_pct) / ln_tot_mol_frac;
+             UPDATE fluid_analysis_component
+                SET mol_pct = ln_mol_pct,
+                    last_updated_by=p_user_id
                WHERE CURRENT OF c_comp;
            END IF;
          END IF;
          IF (p_convert_to = 'MOL_TO_WT' OR p_convert_to IS NULL) and ln_count_blank_mol = 0 THEN
            IF ln_tot_mass_frac > 0 THEN
-             UPDATE   fluid_analysis_component
-               SET      wt_pct = 100 * EcBp_Comp_Analysis.calcCompMassFrac( p_object_id,
+             ln_wt_pct := 100 * EcBp_Comp_Analysis.calcCompMassFrac( p_object_id,
                                                                     ana_rec.daytime,
                                                                     comp_rec.component_no,
                                                                     ana_rec.analysis_type,
                                                                     ana_rec.sampling_method,
-                                                                    comp_rec.mol_pct) / ln_tot_mass_frac,
-                            last_updated_by=p_user_id
+                                                                    comp_rec.mol_pct) / ln_tot_mass_frac;
+             UPDATE  fluid_analysis_component
+                SET  wt_pct = ln_wt_pct,
+                     last_updated_by=p_user_id
                WHERE CURRENT OF c_comp;
            END IF;
          END IF;
@@ -1348,6 +1354,8 @@ IS
    lr_next_analysis  STRM_ANALYSIS_EVENT%ROWTYPE;
    ln_count_blank_mol NUMBER :=0;
    ln_count_blank_wt  NUMBER :=0;
+   ln_mol_pct         NUMBER :=0;
+   ln_wt_pct          NUMBER :=0;
 BEGIN
 
    -- lock test
@@ -1389,15 +1397,16 @@ BEGIN
        IF (p_convert_to = 'WT_TO_MOL' OR p_convert_to IS NULL) and ln_count_blank_wt = 0 THEN
          IF ln_tot_mol_frac > 0 THEN
 
-           UPDATE strm_analysis_component
-             SET  mol_pct = 100 * EcBp_Comp_Analysis.calcCompMolFracperiodAn( p_object_id,
+           ln_mol_pct := 100 * EcBp_Comp_Analysis.calcCompMolFracperiodAn( p_object_id,
                                                                       ana_rec.daytime,
                                                                       ana_rec.daytime_summer_time,
                                                                       comp_rec.component_no,
                                                                       ana_rec.analysis_type,
                                                                       ana_rec.sampling_method,
-                                                                      comp_rec.wt_pct) / ln_tot_mol_frac,
-                         last_updated_by=p_user_id
+                                                                      comp_rec.wt_pct) / ln_tot_mol_frac;
+                UPDATE strm_analysis_component
+                   SET mol_pct = ln_mol_pct,
+                       last_updated_by=p_user_id
              WHERE CURRENT OF c_comp_periodAn;
 
          END IF;
@@ -1405,15 +1414,16 @@ BEGIN
        IF (p_convert_to = 'MOL_TO_WT' OR p_convert_to IS NULL) and ln_count_blank_mol = 0 THEN
          IF ln_tot_mass_frac > 0 THEN
 
-           UPDATE   strm_analysis_component
-             SET      wt_pct = 100 * EcBp_Comp_Analysis.calcCompMassFracPeriodAn( p_object_id,
+           ln_wt_pct := 100 * EcBp_Comp_Analysis.calcCompMassFracPeriodAn( p_object_id,
                                                                 ana_rec.daytime,
                                                                 ana_rec.daytime_summer_time,
                                                                 comp_rec.component_no,
                                                                 ana_rec.analysis_type,
                                                                 ana_rec.sampling_method,
-                                                                comp_rec.mol_pct) / ln_tot_mass_frac,
-                        last_updated_by=p_user_id
+                                                                comp_rec.mol_pct) / ln_tot_mass_frac;
+                UPDATE strm_analysis_component
+                   SET wt_pct = ln_wt_pct,
+                       last_updated_by=p_user_id
            WHERE CURRENT OF c_comp_periodAn;
          END IF;
        END IF;

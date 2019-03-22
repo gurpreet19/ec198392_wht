@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0121
   NAME: Test Device Event Data
   PROFILE_CLASS_NAME: TEST_DEVICE
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/test_device_event
 related: {}

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.1073
   NAME: Application Server Health
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /xhtml/pages/app-server-status
 related: {}

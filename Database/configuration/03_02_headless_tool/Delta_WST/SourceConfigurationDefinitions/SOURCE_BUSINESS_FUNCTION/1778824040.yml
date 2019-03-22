@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0111
   NAME: Period Stream Oil Component Analysis
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/period_stream_component_analysis/CLASS_NAME/STRM_OIL_ANALYSIS_EVENT/STRM_SET/PO.0111/CLASS_NAME_DETAIL/STRM_OIL_ANA_EVENT_COMP/COMP_SET/STRM_OIL_COMP/PHASE/OIL
 related: {}

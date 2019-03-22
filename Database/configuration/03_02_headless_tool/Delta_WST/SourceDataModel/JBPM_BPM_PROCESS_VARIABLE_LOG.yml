@@ -6,7 +6,7 @@ cnstPrimaryKey:
   - NODE_ID
   - PROCESS_INSTANCE_ID
   - VARIABLE_TYPE
-  name: SYS_C008801
+  name: PK_JBPM_BPM_PROC_VAR_LOG
   type: PRIMARYKEY
   status: UNDEFINED
 columns:
@@ -34,6 +34,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '2'
+  OPT_LOCK:
+    columnName: OPT_LOCK
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
   OWNER_GLOBAL_ID:
     columnName: OWNER_GLOBAL_ID
     typeName: VARCHAR2(255 CHAR)

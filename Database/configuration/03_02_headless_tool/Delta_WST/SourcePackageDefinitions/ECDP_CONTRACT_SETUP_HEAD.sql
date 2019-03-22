@@ -595,31 +595,30 @@ PROCEDURE populateFactorPrice(p_daytime DATE, p_price_group_id VARCHAR2, p_user 
         p_d_contract_owner_id           VARCHAR2 DEFAULT NULL,
         p_d_restrict_customer_att       VARCHAR2 DEFAULT NULL)
     RETURN VARCHAR2;
-	---------------------------------------------------------------------------------------
-	 PROCEDURE IsdateConflicting(p_target_price_object_id   VARCHAR2,
-		p_target_price_element_code VARCHAR2,
-		p_source_price_object_id VARCHAR2,
-		p_source_price_element_code VARCHAR2 ,
-		p_daytime DATE,
-		p_end_date DATE);
+   ---------------------------------------------------------------------------------------
+     PROCEDURE IsdateConflicting(p_target_price_object_id   VARCHAR2,
+        p_target_price_element_code VARCHAR2,
+        p_source_price_object_id VARCHAR2,
+        p_source_price_element_code VARCHAR2 ,
+        p_daytime DATE,
+        p_end_date DATE);
     ------------------------------------+-------------------------------------------------
       FUNCTION IsPriceEditable(
-    	p_price_object_id		VARCHAR2,
-		p_price_element_code VARCHAR2)
-	  RETURN VARCHAR2;
+         p_price_object_id		VARCHAR2,
+         p_price_element_code VARCHAR2)
+      RETURN VARCHAR2;
     --------------------------------------------------------------------------------------
      PROCEDURE IfSrcObjElmCodeSameAsTarget(
-		p_target_price_object_id   VARCHAR2,
-		p_target_price_element_code VARCHAR2,
-		p_source_price_object_id VARCHAR2,
+        p_target_price_object_id   VARCHAR2,
+        p_target_price_element_code VARCHAR2,
+        p_source_price_object_id VARCHAR2,
 		p_source_price_element_code VARCHAR2 ) ;
 	--------------------------------------------------------------------------------------
-	PROCEDURE IsdateOverlappingOnUpd(
+	  PROCEDURE IsdateOverlappingOnUpd(
 		p_target_price_object_id   VARCHAR2,
 		p_target_price_element_code VARCHAR2,
 		p_source_price_object_id VARCHAR2,
 		p_source_price_element_code VARCHAR2 ,
 		p_daytime DATE,p_end_date DATE );
-    --------------------------------------------------------------------------------------
-
+    -----------------------------------------------------------------------------------------
 	END Ecdp_Contract_Setup;

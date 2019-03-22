@@ -227,7 +227,7 @@ END checkWellStatusLock;
 -- Preconditions  :                                                                              --
 -- Postconditions :                                                                              --
 -- Using tables   :  			                                                                 --
--- Using functions: ECDP_UNIT.GetUnitLabel  ,ec_class_attr_presentation.uom_code				 --
+-- Using functions: ECDP_UNIT.GetUnitLabel  ,ecdp_classmeta_cnfg.getUomCode				 --
 -- Configuration                                                                                 --
 -- required       :                                                                              --
 --                                                                                               --
@@ -279,7 +279,7 @@ END getVolumeUOM;
 -- Preconditions  :                                                                              --
 -- Postconditions :                                                                              --
 -- Using tables   :  			                                                                 --
--- Using functions: ECDP_UNIT.GetUnitLabel  ,ec_class_attr_presentation.uom_code				 --
+-- Using functions: ECDP_UNIT.GetUnitLabel  ,ecdp_classmeta_cnfg.getUomCode				 --
 -- Configuration                                                                                 --
 -- required       :                                                                              --
 --                                                                                               --

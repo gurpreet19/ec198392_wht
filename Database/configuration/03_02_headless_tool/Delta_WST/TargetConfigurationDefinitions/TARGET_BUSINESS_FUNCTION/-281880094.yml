@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.2036
   NAME: Contract Group List
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_calc_group_list/OBJ_CLASS/CONTRACT_GROUP/DATA_CLASS/CONTRACT_GROUP_LIST
 related: {}

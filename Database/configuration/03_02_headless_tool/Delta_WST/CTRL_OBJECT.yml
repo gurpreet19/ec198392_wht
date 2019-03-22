@@ -556,6 +556,15 @@ CNTR_CAP_LOC_CONNECTION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupE
   properties: {}
   related: {}
   status: ADDED
+CNTR_DAY_CAP_TRADE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1174887458'
+  keys:
+    OBJECT_NAME: CNTR_DAY_CAP_TRADE
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CNTR_DIM1_PERIOD_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1524775152'
   keys:
@@ -934,6 +943,15 @@ COST_MAPPING_VERSION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExte
   properties: {}
   related: {}
   status: ADDED
+CTRL_CONVERSION_SETUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1081121096'
+  keys:
+    OBJECT_NAME: CTRL_CONVERSION_SETUP
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CTRL_DASHBOARD: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '431613344'
   keys:
@@ -965,6 +983,24 @@ CTRL_PINC_REPORT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1183434065'
   keys:
     OBJECT_NAME: CTRL_PINC_REPORT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CTRL_REPORT_UNIT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-76697125'
+  keys:
+    OBJECT_NAME: CTRL_REPORT_UNIT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CTRL_UNIT_SETUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2073214518'
+  keys:
+    OBJECT_NAME: CTRL_UNIT_SETUP
     T: CTRL_OBJECT
   parentKeys: {}
   properties: {}
@@ -1154,6 +1190,24 @@ EC_CODE_OBJECT_VERSION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupEx
   fileName: '2144265001'
   keys:
     OBJECT_NAME: EC_CODE_OBJECT_VERSION
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ENUMERATION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-617701849'
+  keys:
+    OBJECT_NAME: ENUMERATION
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ENUMERATION_VERSION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1819137696'
+  keys:
+    OBJECT_NAME: ENUMERATION_VERSION
     T: CTRL_OBJECT
   parentKeys: {}
   properties: {}
@@ -1957,6 +2011,15 @@ FCTY_DEFERMENT_EVENT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExte
   properties: {}
   related: {}
   status: DELETED
+FCTY_REFERENCE_VALUE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '746907904'
+  keys:
+    OBJECT_NAME: FCTY_REFERENCE_VALUE
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 FCTY_SPILL_EVENT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '728760266'
   keys:
@@ -2311,6 +2374,24 @@ IFLW_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
     PINC_TRIGGER_IND: N
   related: {}
   status: MODIFIED
+IFLW_RESULT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-999041836'
+  keys:
+    OBJECT_NAME: IFLW_RESULT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+IFLW_SAMPLE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-974290335'
+  keys:
+    OBJECT_NAME: IFLW_SAMPLE
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 IMP_SOURCE_FILE_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '16100708'
   keys:
@@ -2455,6 +2536,51 @@ INV_VALUATION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   properties: {}
   related: {}
   status: ADDED
+ITST_DEFINITION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1200731482'
+  keys:
+    OBJECT_NAME: ITST_DEFINITION
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ITST_EVENT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-16545465'
+  keys:
+    OBJECT_NAME: ITST_EVENT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ITST_GRAPH_DEFINE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1176507007'
+  keys:
+    OBJECT_NAME: ITST_GRAPH_DEFINE
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ITST_OBJECT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-244948462'
+  keys:
+    OBJECT_NAME: ITST_OBJECT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+ITST_RESULT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-156006672'
+  keys:
+    OBJECT_NAME: ITST_RESULT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 IWEL_DAY_ALLOC: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '822467368'
   keys:
@@ -2495,6 +2621,24 @@ IWEL_PERIOD_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtend
     PINC_TRIGGER_IND: N
   related: {}
   status: MODIFIED
+IWEL_RESULT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2026398023'
+  keys:
+    OBJECT_NAME: IWEL_RESULT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+IWEL_SAMPLE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2051149524'
+  keys:
+    OBJECT_NAME: IWEL_SAMPLE
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 LIFTING_ACTIVITY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1114734217'
   keys:
@@ -2636,6 +2780,15 @@ NOMPNT_MTH_DELIVERY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExten
   fileName: '1495077159'
   keys:
     OBJECT_NAME: NOMPNT_MTH_DELIVERY
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+NOMPNT_NP_DAY_DELIVERY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2031983009'
+  keys:
+    OBJECT_NAME: NOMPNT_NP_DAY_DELIVERY
     T: CTRL_OBJECT
   parentKeys: {}
   properties: {}
@@ -3279,6 +3432,15 @@ PROD_WELL_FORECAST: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtend
   properties: {}
   related: {}
   status: DELETED
+PROPOSED_WELL_TESTS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1450048969'
+  keys:
+    OBJECT_NAME: PROPOSED_WELL_TESTS
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 PVTSIM_COMP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1962917211'
   keys:
@@ -4098,6 +4260,24 @@ TEST_DEVICE_DAY_STATUS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupEx
   properties: {}
   related: {}
   status: ADDED
+TEST_DEVICE_INJ_RESULT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1337967373'
+  keys:
+    OBJECT_NAME: TEST_DEVICE_INJ_RESULT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TEST_DEVICE_INJ_SAMPLE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1313215872'
+  keys:
+    OBJECT_NAME: TEST_DEVICE_INJ_SAMPLE
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 TEST_DEVICE_RESULT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-945938119'
   keys:
@@ -4323,6 +4503,24 @@ TRAN_ZONE_OPLOC_CONN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExte
   properties: {}
   related: {}
   status: ADDED
+TRPS_DAY_CNTR_NOM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '953778551'
+  keys:
+    OBJECT_NAME: TRPS_DAY_CNTR_NOM
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+TRPS_DAY_NOMINATION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1426872251'
+  keys:
+    OBJECT_NAME: TRPS_DAY_NOMINATION
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 TUG_BOAT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '618030073'
   keys:
@@ -4399,6 +4597,24 @@ VIEWLAYER_DIRTY_LOG: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExten
   fileName: '1881290308'
   keys:
     OBJECT_NAME: VIEWLAYER_DIRTY_LOG
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WBI_INJ_RESULT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1059031592'
+  keys:
+    OBJECT_NAME: WBI_INJ_RESULT
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WBI_INJ_SAMPLE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1034280091'
+  keys:
+    OBJECT_NAME: WBI_INJ_SAMPLE
     T: CTRL_OBJECT
   parentKeys: {}
   properties: {}
@@ -4530,6 +4746,15 @@ WELL_SETUP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '761850796'
   keys:
     OBJECT_NAME: WELL_SETUP
+    T: CTRL_OBJECT
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WELL_TEST_CREATION_LOG: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-809368800'
+  keys:
+    OBJECT_NAME: WELL_TEST_CREATION_LOG
     T: CTRL_OBJECT
   parentKeys: {}
   properties: {}

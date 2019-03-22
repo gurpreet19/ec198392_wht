@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: PP.0055
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_PWEL_POTENTIAL' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_forecast_well/GROUPMODEL/WELL/CLASS_NAME/FCST_PWEL_POTENTIAL' )
   DATA_LEVEL: 0.0
   DESCRIPTION: |-
     <p>This business function is used to capture Production Well Potentials for a Scenario. </p>

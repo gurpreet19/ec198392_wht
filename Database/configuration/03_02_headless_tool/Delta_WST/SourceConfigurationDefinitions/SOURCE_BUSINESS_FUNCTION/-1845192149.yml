@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0134
   NAME: VAT Country Setup
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/setup_vat_code_relations_basic
 related: {}

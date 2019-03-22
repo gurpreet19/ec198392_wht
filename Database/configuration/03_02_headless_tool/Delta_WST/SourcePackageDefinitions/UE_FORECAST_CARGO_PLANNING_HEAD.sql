@@ -18,6 +18,7 @@ CREATE OR REPLACE PACKAGE ue_Forecast_Cargo_Planning IS
   ** 15/01/2016  sharawan  ECPD-33109: added parameter for copyFromOriginal and copyFromForecast used in Forecast Manager screen
   ** 27/09/2016  asareswi  ECPD-39168: Added procedure PopulateStorage to populate PROD stream data into TRAN table
   ** 15/08/2017  sharawan  ECPD-47293: Added procedure validateDate to validate End Date when creating Forecast in Forecast Manager screen
+  ** 15/11/2018  thotesan  ECPD-59863: Added function includeInCopy to get cargo status for Copy to orgional plan.
   *************************************************************************/
 
   PROCEDURE copyFromOriginal(p_new_forecast_code VARCHAR2,
@@ -60,5 +61,5 @@ CREATE OR REPLACE PACKAGE ue_Forecast_Cargo_Planning IS
 							, p_stream_id VARCHAR2);
 
   PROCEDURE validateDate(p_from_date DATE, p_to_date DATE);
-
+  FUNCTION includeInCopy(p_forecast_id VARCHAR2, p_cargo_no NUMBER, p_parcel_no NUMBER,p_cargo_status VARCHAR2,p_fcst_cargo_status VARCHAR2) RETURN VARCHAR2;
 END ue_Forecast_Cargo_Planning;

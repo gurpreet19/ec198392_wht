@@ -35,6 +35,10 @@ ld_contract_end_date DATE;
 lv2_forex_date_ind VARCHAR2(10);
 lv2_curr_source   VARCHAR2(32);
 lv2_curr_duration VARCHAR2(10);
+lv2_skip_ex_inv_pr_booking VARCHAR2(1) := 'N';
+lv2_skip_ex_inv_pr_memo VARCHAR2(1) := 'N';
+lv2_skip_ex_inv_bk_local VARCHAR2(1) := 'N';
+lv2_skip_ex_inv_bk_group VARCHAR2(1) := 'N';
 
 lrec_updating_row CONT_TRANSACTION%ROWTYPE;
 
@@ -94,6 +98,7 @@ BEGIN
             ELSE
 
                 :New.ex_inv_pricing_booking := 1/:New.ex_pricing_booking;
+                lv2_skip_ex_inv_pr_booking := 'Y';
 
             END IF;
 
@@ -108,12 +113,14 @@ BEGIN
             ELSE
 
                 :New.ex_inv_pricing_memo := 1/:New.ex_pricing_memo;
+                lv2_skip_ex_inv_pr_memo := 'Y';
 
             END IF;
 
         END IF;
 
-        IF NVL(:Old.ex_inv_pricing_booking,0) <> NVL(:New.ex_inv_pricing_booking,0) THEN
+        IF NVL(:Old.ex_inv_pricing_booking,0) <> NVL(:New.ex_inv_pricing_booking,0)
+        AND lv2_skip_ex_inv_pr_booking = 'N' THEN
 
             IF :New.ex_inv_pricing_booking <= 0 THEN
 
@@ -127,7 +134,8 @@ BEGIN
 
         END IF;
 
-        IF NVL(:Old.ex_inv_pricing_memo,0) <> NVL(:New.ex_inv_pricing_memo,0) THEN
+        IF NVL(:Old.ex_inv_pricing_memo,0) <> NVL(:New.ex_inv_pricing_memo,0)
+        AND lv2_skip_ex_inv_pr_memo = 'N' THEN
 
             IF :New.ex_inv_pricing_memo <= 0 THEN
 
@@ -150,6 +158,7 @@ BEGIN
             ELSE
 
                 :New.ex_inv_booking_local := 1/:New.ex_booking_local;
+                lv2_skip_ex_inv_bk_local := 'Y';
 
             END IF;
 
@@ -164,12 +173,14 @@ BEGIN
             ELSE
 
                 :New.ex_inv_booking_group := 1/:New.ex_booking_group;
+                lv2_skip_ex_inv_bk_group := 'Y';
 
             END IF;
 
         END IF;
 
-        IF NVL(:Old.ex_inv_booking_local,0) <> NVL(:New.ex_inv_booking_local,0) THEN
+        IF NVL(:Old.ex_inv_booking_local,0) <> NVL(:New.ex_inv_booking_local,0)
+          AND lv2_skip_ex_inv_bk_local = 'N' THEN
 
             IF :New.ex_inv_booking_local = 0 THEN
 
@@ -184,7 +195,8 @@ BEGIN
 
         END IF;
 
-        IF NVL(:Old.ex_inv_booking_group,0) <> NVL(:New.ex_inv_booking_group,0) THEN
+        IF NVL(:Old.ex_inv_booking_group,0) <> NVL(:New.ex_inv_booking_group,0)
+          AND lv2_skip_ex_inv_bk_group = 'N' THEN
 
             IF :New.ex_inv_booking_group <= 0 THEN
 
@@ -646,36 +658,36 @@ BEGIN
 
 
         IF ltab_ex(1).EX_IND IS NOT NULL THEN
-            :New.EX_PRICING_BOOKING_DATE := ltab_ex(1).EX_DATE;
-            :New.EX_PRICING_BOOKING := ltab_ex(1).EX_VALUE;
-            :New.EX_INV_PRICING_BOOKING := ltab_ex(1).EX_INV_VALUE;
+            :New.EX_PRICING_BOOKING_DATE := nvl(ltab_ex(1).EX_DATE,:New.EX_PRICING_BOOKING_DATE);
+            :New.EX_PRICING_BOOKING := nvl(ltab_ex(1).EX_VALUE,:New.EX_PRICING_BOOKING);
+            :New.EX_INV_PRICING_BOOKING := nvl(ltab_ex(1).EX_INV_VALUE,:New.EX_INV_PRICING_BOOKING);
         ELSIF (ltab_ex(1).FROM_CURR_CODE = ltab_ex(1).TO_CURR_CODE) AND (:Old.EX_PRICING_BOOKING is null AND :Old.EX_INV_PRICING_BOOKING is null) THEN
             :New.EX_PRICING_BOOKING     := 1;
             :New.EX_INV_PRICING_BOOKING := 1;
         END IF;
 
         IF ltab_ex(2).EX_IND IS NOT NULL THEN
-            :New.EX_PRICING_MEMO_DATE := ltab_ex(2).EX_DATE;
-            :New.EX_PRICING_MEMO := ltab_ex(2).EX_VALUE;
-            :New.EX_INV_PRICING_MEMO := ltab_ex(2).EX_INV_VALUE;
+            :New.EX_PRICING_MEMO_DATE := nvl(ltab_ex(2).EX_DATE,:New.EX_PRICING_MEMO_DATE);
+            :New.EX_PRICING_MEMO := nvl(ltab_ex(2).EX_VALUE,:New.EX_PRICING_MEMO);
+            :New.EX_INV_PRICING_MEMO := nvl(ltab_ex(2).EX_INV_VALUE,:New.EX_INV_PRICING_MEMO);
         ELSIF ltab_ex(2).FROM_CURR_CODE = ltab_ex(2).TO_CURR_CODE AND (:Old.EX_PRICING_MEMO is null AND :Old.EX_INV_PRICING_MEMO is null) THEN
             :New.EX_PRICING_MEMO     := 1;
             :New.EX_INV_PRICING_MEMO := 1;
         END IF;
 
         IF ltab_ex(3).EX_IND IS NOT NULL THEN
-            :New.EX_BOOKING_LOCAL_DATE := ltab_ex(3).EX_DATE;
-            :New.EX_BOOKING_LOCAL := ltab_ex(3).EX_VALUE;
-            :New.EX_INV_BOOKING_LOCAL := ltab_ex(3).EX_INV_VALUE;
+            :New.EX_BOOKING_LOCAL_DATE := nvl(ltab_ex(3).EX_DATE,:New.EX_BOOKING_LOCAL_DATE);
+            :New.EX_BOOKING_LOCAL := nvl(ltab_ex(3).EX_VALUE,:New.EX_BOOKING_LOCAL);
+            :New.EX_INV_BOOKING_LOCAL := nvl(ltab_ex(3).EX_INV_VALUE,:New.EX_INV_BOOKING_LOCAL);
         ELSIF ltab_ex(3).FROM_CURR_CODE = ltab_ex(3).TO_CURR_CODE AND (:Old.EX_BOOKING_LOCAL is null AND :Old.EX_INV_BOOKING_LOCAL is null) THEN
             :New.EX_BOOKING_LOCAL     := 1;
             :New.EX_INV_BOOKING_LOCAL := 1;
         END IF;
 
         IF ltab_ex(4).EX_IND IS NOT NULL THEN
-            :New.EX_BOOKING_GROUP_DATE := ltab_ex(4).EX_DATE;
-            :New.EX_BOOKING_GROUP := ltab_ex(4).EX_VALUE;
-            :New.EX_INV_BOOKING_GROUP := ltab_ex(4).EX_INV_VALUE;
+            :New.EX_BOOKING_GROUP_DATE := nvl(ltab_ex(4).EX_DATE,:New.EX_BOOKING_GROUP_DATE);
+            :New.EX_BOOKING_GROUP := nvl(ltab_ex(4).EX_VALUE,:New.EX_BOOKING_GROUP);
+            :New.EX_INV_BOOKING_GROUP := nvl(ltab_ex(4).EX_INV_VALUE,:New.EX_INV_BOOKING_GROUP);
         ELSIF ltab_ex(4).FROM_CURR_CODE = ltab_ex(4).TO_CURR_CODE AND (:Old.EX_BOOKING_GROUP is null AND :Old.EX_INV_BOOKING_GROUP is null) THEN
             :New.EX_BOOKING_GROUP     := 1;
             :New.EX_INV_BOOKING_GROUP := 1;
@@ -1035,8 +1047,6 @@ BEGIN
          -- Use the old transaction name here
          lrec_updating_row.NAME := :OLD.NAME;
 
-         -- get the new transaction name
-         :New.Name := ecdp_transaction.getTransactionName(lrec_updating_row, 240);
 
       END IF;
    END IF;

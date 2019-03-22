@@ -13,5 +13,13 @@ properties:
     \ injection and losses of Oil, Condensate and Gas for a scenario.</p>\n\t<p> Internal\
     \ consumption is the quantity of hydrocarbons produced and used on site as fuel.</p>\n\
     \t<p>Injection corresponds to the quantity of hydrocarbons injected into the wells\
-    \ to maintain pressure.</p>\n\t"
+    \ to maintain pressure.</p>\n\t<p>The data will be displayed as follows :</p><ol><li>When\
+    \ &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are empty, all\
+    \ records will be displayed.</li><li>When only &ldquo;Filter From&rdquo; value\
+    \ is entered, records that are valid after the selected \"Filter From\" will be\
+    \ displayed.</li><li>When only &ldquo;Filter To&rdquo; value is entered, records\
+    \ that are valid before the selected \"Filter To\" will be displayed.</li><li>When\
+    \ both &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are entered,\
+    \ records that are valid after the selected \"Filter From\" and before the selected\
+    \ \"Filter To\" will be displayed.</li></ol>"
 related: {}

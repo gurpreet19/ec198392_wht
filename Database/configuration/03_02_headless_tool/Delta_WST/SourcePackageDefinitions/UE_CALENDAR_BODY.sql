@@ -93,4 +93,45 @@ BEGIN
 
 END GetCollActualDatePost;
 
+-------------------------------------------------------------------------------------------------
+-- Function       : GetRecurringHoliday
+-- Description    : This is a POST user-exit addon to the standard EcDp_Calendar.GetRecurringHoliday.
+-- Preconditions  : Must be enabled using global variable isGetRecurringHolidayPostUEE
+-- Postconditions :
+-- Using tables   :
+-- Using functions:
+-- Configuration  :
+-- required       :
+-- Behaviour      :
+-------------------------------------------------------------------------------------------------
+
+FUNCTION GetRecurringHoliday(p_recurring_holiday_code VARCHAR2,
+                             p_year                   NUMBER)
+RETURN DATE
+IS
+ ld_retval DATE;
+ ld_month  DATE;
+ ld_year   DATE;
+BEGIN
+  ld_retval := NULL;
+
+  ld_year := trunc(to_date(p_year,'yyyy'),'YYYY');
+    -- This is an example of how to use the user exit functionality
+    -- No guarantee for future support of these specific examples.
+  CASE
+    WHEN p_recurring_holiday_code = 'UK_SPRING_BANK_HOLIDAY' THEN
+      --Find the last Monday of May
+      ld_month := add_months(ld_year, +4);  --To get to May
+      ld_retval := ecdp_calendar.GetLastDayofMonth(ld_month,'Monday');
+    WHEN p_recurring_holiday_code = 'UK_EARLY_MAY_BANK_HOLIDAY' THEN
+      --Find the first Monday of May
+      ld_month := add_months(ld_year,+4); --To get to May
+      ld_retval := ecdp_calendar.GetNthDayofMonth(ld_month,'Monday',1);
+    ELSE
+      ld_retval := NULL;
+  END CASE;
+  RETURN ld_retval;
+END GetRecurringHoliday;
+
+-------------------------------------------------------------------------------------------------
 END ue_Calendar;

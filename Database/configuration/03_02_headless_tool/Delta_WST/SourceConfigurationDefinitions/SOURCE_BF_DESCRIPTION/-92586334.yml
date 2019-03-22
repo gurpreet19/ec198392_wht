@@ -9,44 +9,34 @@ properties:
   BF_DESCRIPTION_NO: PD.0024
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pd.screens/automatic_deferment_raw_data' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<div><p>Automatic Deferment Raw Data screen is used to monitor status
-    of well/equipment and maintain proposed events. The staging area maintains well
-    and equipment status in ON/OFF state. This screen is read only and gives option
-    to automatic or manually create deferment events.</p></div><p>The data coming
-    from SCADA are fed into ''Raw data'' section in this screen. Business user can
-    configure threshold limit for creating proposed event. Events are created upon
-    reaching threshold value. For example: Let''s take threshold of 15 minutes. A
-    well whose status has changed to ''Off'' at 00:00, will wait till new record of
-    00:15 appears with same status. Then new deferment event is created at 00:15,
-    with the start date of 00:00.</p><p>Curtailment of routines are handled in following
-    ways:</p><ul style="list-style-type: disc; margin-left: 40px;"><li>Delete repetitive
-    status.</li><li>Delete false positive (noise entry).</li></ul><p>Automatic deferment
-    has three data sections:</p><ul style="list-style-type: disc; margin-left: 40px;"><li>Raw
+  DESCRIPTION: '<p>Automatic Deferment Raw Data screen is used to monitor status of
+    well and maintain proposed events. The staging area maintains well status in ON/OFF
+    state. This screen is read only and gives option to automatically or manually
+    create deferment events.</p><p>The data coming from SCADA are fed into ''Raw data''
+    section in this screen. Business user can configure threshold limit for creating
+    proposed event. Events are created upon reaching threshold value. For example:
+    Let''s take threshold of 15 minutes. A well whose status has changed to ''Off''
+    at 00:00, will wait till new record of 00:15 appears with same status. Then new
+    deferment event is created at 00:15, with the start date of 00:00.</p><p>Curtailment
+    of routines are handled in following ways:</p><ul><li>Delete repetitive status.</li><li>Delete
+    false positive (noise entry).</li></ul><p>Automatic deferment has three data sections:</p><ul><li>Raw
     Data - This section which captures object name, status, time, event created.</li><li>Proposed
-    Deferment Events - Captures proposed deferment events based on raw data inputs.</li>
-    <li>System Settings - This section shows properties configured in Maintain System
-    Settings (CO.1006).</li></ul><p>Well and Equipment Object Types are populated
-    based on the ''Operational'' or ''Collection Point'' group model.<p><div class="ui-widget-header
-    ui-corner-top"><span class="ecTextHeader">Configuration in Maintain System Settings
-    (CO.1006)</span><p></p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
-    role="grid" cellpadding="10"><thead><tr role="row"><th width="350" class="ui-state-default"
-    role="columnheader" aria-label="Object" scope="col"><span><center>Property</center></span></th><th
-    class="ui-state-default" role="columnheader" aria-label="Code" scope="col" colspan="2"><span><center>Value</center></span></th></tr></thead><tbody
-    class="ui-datatable-data ui-widget-content"><tr><td>Automatic Deferment Raw Data:
-    Auto-generate Deferment Event </td><td>On/Off</td></tr><tr><td>Automatic Deferment
-    Raw Data: Flush setting in days</td><td>Any values in days.(This can be configured
-    in EC Code for Code Type = DEFERMENT_LOG_FLUSH)</td></tr><tr><td>Automatic Deferment
-    Raw Data: Threshold setting</td><td>Any value in minutes. (This can be configured
-    in EC Code for Code Type = DEFERMENT_STATUS_THRESHOLD)</td></tr><tr><td>Automatic
-    Deferment Raw Data: Event creation screen</td><td>PD.0020/PD.0023</td></tr></tbody></table></div></td></tr><div
-    class="ui-widget-header ui-corner-top"><span class="ecTextHeader">BUTTONS IN AUTOMATIC
-    DEFERMENT</span><p></p><div class="ui-widget"><div class="ui-datatable-tablewrapper"><table
-    role="grid" cellpadding="10"><thead><tr role="row"><th width="350" class="ui-state-default"
-    role="columnheader" aria-label="Object" scope="col"><span><center>Button</center></span></th><th
-    class="ui-state-default" role="columnheader" aria-label="Code" scope="col" colspan="2"><span><center>Description</center></span></th></tr></thead><tbody
-    class="ui-datatable-data ui-widget-content"><tr><td>Create Events</td><td>This
-    button is used to create deferment event based on the configuration in Maintain
-    System Settings (CO.1006) for the target screen.</td></tr><tr><td>Flush Data</td><td>The
-    button is used to flush all the data from staging table based on the configuration
-    of flush setting in Maintain System Settings (CO.1006).</td></tr></tbody></table></div></div></div></div></div>'
+    Deferment Events - Captures proposed deferment events based on raw data inputs.</li><li>System
+    Settings - This section shows properties configured in Maintain System Settings
+    (CO.1006).</li></ul><p>Well  Object Types are populated based on the ''Operational''
+    or ''Collection Point'' group model.</p><p>Configuration in Maintain System Settings
+    (CO.1006)Property</p><p>Value</p><p>Automatic Deferment Raw Data: Auto-generate
+    Deferment Event On/OffAutomatic Deferment Raw Data: Flush setting in daysAny values
+    in days.(This can be configured in EC Code for Code Type = DEFERMENT_LOG_FLUSH)Automatic
+    Deferment Raw Data: Threshold settingAny value in minutes. (This can be configured
+    in EC Code for Code Type = DEFERMENT_STATUS_THRESHOLD)Automatic Deferment Raw
+    Data: Event creation screenPD.0020/PD.0023Automatic Deferment Raw Data: Custom
+    Status for RunningCustomize the running status of well (Default status is 1)Automatic
+    Deferment Raw Data: Custom Status for StoppedCustomize the stopped status of well
+    (Default status is 0)</p><p>BUTTONS IN AUTOMATIC DEFERMENTButton</p><p>Description</p><p>Create
+    EventsThis button is used to create deferment event based on the configuration
+    in Maintain System Settings (CO.1006) for the target screen.Flush DataThe button
+    is used to flush all the data except for the last two change of events from staging
+    table based on the configuration of flush setting in Maintain System Settings
+    (CO.1006).</p>'
 related: {}

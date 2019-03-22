@@ -2,7 +2,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Deferment_Status_Log IS
 /****************************************************************
 ** Package        :  EcBp_Deferment_Status_Log, body part
 **
-** $Revision: 1.0 $
+** $Revision: 1.1 $
 **
 ** Purpose        :  This package is responsible for supporting business function
 **                   related to Automatic Deferment Raw Data (PD.0024)
@@ -18,6 +18,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Deferment_Status_Log IS
 ** 30.05.2018 jainnraj ECPD-56263 Modified purgeStatusNoise to update line 138 to update the close event
 ** 01.06.2018 jainnraj ECPD-56263 Modified flushData to get the no of days from latest system settings entry
 ** 05.06.2018 chaudgau ECPD-54420 Added new procedure promoteOfficial and changed logic for purgeStatusNoise and getPrevStatus
+** 17.09.2018 mehrorak ECPD-57148:Removed the hardcoded values for running/stop status and fetched the values from system settings
 ********************************************************************/
 CURSOR c_def_status_log(p_object_id varchar2,p_daytime date)
 IS
@@ -164,8 +165,8 @@ BEGIN
 
       IF UPPER(ln_automatic_deferment) = 'ON' THEN
         -- Call for auto creation of event if automatic deferment setting is on
-        createEvent( p_start_date => CASE WHEN p_prev_status = 0 THEN p_prev_daytime END
-                    ,p_end_date => CASE WHEN p_prev_status = 1 THEN p_prev_daytime END
+        createEvent( p_start_date => CASE WHEN p_prev_status = to_number(getSystemSetting('DEFERMENT_STATUS_STOPPED', trunc(p_prev_daytime))) THEN p_prev_daytime END
+                    ,p_end_date => CASE WHEN p_prev_status = to_number(getSystemSetting('DEFERMENT_STATUS_RUNNING', trunc(p_prev_daytime))) THEN p_prev_daytime END
                     ,p_object_id => p_object_id
                     ,p_created_by => USER);
       END IF;

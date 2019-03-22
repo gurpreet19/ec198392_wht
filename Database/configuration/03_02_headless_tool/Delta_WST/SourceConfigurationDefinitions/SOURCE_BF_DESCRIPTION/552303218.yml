@@ -10,7 +10,8 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/forecast_scenarios_comparison/CLASS_NAME_VARIABLE_1/FCST_SUMM_VAR_CPR/CLASS_NAME_VARIABLE_2/FCST_SUMM_VAR_MTH_CPR/CLASS_NAME_VARIABLE_3/FCST_SUMM_VAR_DAY_CPR/CLASS_NAME_PHASE_1/FCST_SUMM_PHASE_CPR/CLASS_NAME_PHASE_2/FCST_SUMM_PHASE_MTH_CPR/CLASS_NAME_PHASE_3/FCST_SUMM_PHASE_DAY_CPR/CLASS_NAME_EVENT_1/FCST_SUMM_REASON_CPR/CLASS_NAME_EVENT_2/FCST_SUMM_REASON_MTH_CPR/CLASS_NAME_EVENT_3/FCST_SUMM_REASON_DAY_CPR/CLASS_NAME_EVENT_DETAILS_1/FCST_SUMM_REASON_CPR/CLASS_NAME_EVENT_DETAILS_2/FCST_SUMM_EVENT_DETAILS/CLASS_NAME_EVENT_DETAILS_3/FCST_SUMM_EVENT_CHILD' )
   DATA_LEVEL: 0.0
   DESCRIPTION: |-
-    <p>This business function consists of four tabs as follows:</p>
+    <p>The &quot;Date&quot; filter is only used to filter group model. Forecast 1 is selected using &quot;Forecast 1 Date&quot; and &quot;Forecast 1 Type&quot; dropdowns. Similarly, Forecast 2 is selected using &quot;Forecast 2 Date&quot; and &quot;Forecast 2 Type&quot; dropdowns. Both Forecast dropdowns are sorted in the descending order of daytime.</p>
+     <p>Forecast scenarios are compared for same months unless Scenario 2 Offset [months] is provided. Offset values can be positive or negative When Scenario Offset is set to &quot;3&quot; then Monthly average value of 2011-01 in Scenario 1 is compared to Monthly average value of 2011-04 in Scenario 2. Similarly, when Scenario Offset is set to &quot;-2&quot; then Monthly average value of 2011-03 in Scenario 1 is compared to Monthly average value of 2011-01 in Scenario 2.</p><p>This business function consists of four tabs as follows:</p>
     <ol><li> Details Per Variable</li><li> Details Per Phase</li><li> Events Per Category</li><li> Event Details </li></ol><br/>
     <h><b>1. <u>DETAILS PER VARIABLE</u></b></h>
     <p>This tab displays the average value differences for the selected variable and phase between Scenario 1 and Scenario 2. The variables are as below:</p><br/>
@@ -91,5 +92,5 @@ properties:
     <p><b>REASON_CODE_1</b> - Reason Code<br/><b>DAYTIME</b> - Date<br/></p></ol><br/><b>Advise to User:</b>
     <p>Queries to DV_FCST_SUMM_VAR_CPR and DV_FCST_SUMM_PHASE_CPR classes using an SQL editor must be accompanied by &quot;WHERE&quot; condition
     that includes FROM_MONTH and TO_MONTH columns as it is affected by a large dataset.
-    FROM_MONTH and TO_MONTH must be compared with &quot;=&quot; sign, because there is a GROUP BY in the view. This is not an issue on the scr
+    FROM_MONTH and TO_MONTH must be compared with &quot;=&quot; sign, because there is a GROUP BY in the view. This is not an issue on the screen.</p>
 related: {}

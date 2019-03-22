@@ -320,7 +320,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '8'
   OIL_S1P_FACTOR:
     columnName: OIL_S1P_FACTOR
     typeName: NUMBER
@@ -377,6 +377,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '259'
+  SCENARIO_ID:
+    columnName: SCENARIO_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
   SI_S1P_FACTOR:
     columnName: SI_S1P_FACTOR
     typeName: NUMBER
@@ -2073,14 +2081,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '20'
-  WELL_ID:
-    columnName: WELL_ID
-    typeName: VARCHAR2(32)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '8'
   WI_S1P_FACTOR:
     columnName: WI_S1P_FACTOR
     typeName: NUMBER

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0184
   NAME: Fuel Systems
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/FUEL_SYSTEMS/TARGET/FUEL_SYSTEMS/CLASS_NAME/FUEL_SYSTEMS
 related: {}

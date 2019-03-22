@@ -9,15 +9,21 @@ properties:
   BF_DESCRIPTION_NO: PA.0005
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.bpm.ext.ec.web/jbpm_todo_list' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p>This screen is personal to the current user and lists all manual
-    tasks assigned to this user either by the username or one of the roles mapped
-    to the user. A manual task might be configured to include variables that should
-    be applied to the execution context. Manual tasks are only created by a process
-    definition through an active process instance.</p><p>There is no insert functionality
-    in this screen.</p><p>The tasks are categorized into:</p><ul><li>Available: All
-    on going tasks preassigned or assigned to current user, or preassigned to a role
-    the current user has.</li><li>Completed: All tasks completed by current user.
-    Note that it only shows completed tasks in active process instances.</li><li>Exceptional:
-    All exceptional tasks assigned to current user. Exceptional tasks includes failed,
-    error, exited and obsolete tasks.</li></ul>'
+  DESCRIPTION: '<p>This screen is personal to the current user and lists all tasks
+    assigned to this user either by the username or one of the roles mapped to the
+    user. The tasks in this screen can be created by an active process instance or
+    by a user directly from the screen. A task might be configured to include variables
+    that should be applied to the execution context.</p><p>Tasks can be created manually
+    through the <b>CREATE TASK</b> button functionality in this screen. After the
+    button is clicked a new popup window opens where the user can fill in the following
+    fields: <ul><li><i>Task Name</i>: A mandatory name to identify the task </li><li><i>Assignee</i>:
+    a user or comma separated list of users (OPTIONAL, if Assigned Group is given)</li><li><i>Assigned
+    group</i>: a role or comma-separated roles (OPTIONAL, if Assignee is given)</li><li><i>Due
+    Date</i>: the expiration date of the task (OPTIONAL)</li><li><i>Description</i>:description
+    associated with the task (OPTIONAL)</li></ul> </p><p>The tasks are categorized
+    into:</p><ul><li>Available: All on going tasks preassigned or assigned to current
+    user, or preassigned to a role the current user has.</li><li>Completed: All tasks
+    completed by current user. Note that it only shows completed tasks in active process
+    instances.</li><li>Exceptional: All exceptional tasks assigned to current user.
+    Exceptional tasks includes failed, error, exited and obsolete tasks.</li></ul>'
 related: {}

@@ -8,5 +8,6 @@ properties:
   BF_CODE: IN.0022
   NAME: Transactional Inventory Layout
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.in/transaction_inventory_template
 related: {}

@@ -8,5 +8,6 @@ properties:
   BF_CODE: SA.0033
   NAME: Forecast - Monthly Contract Acccount Company Status
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sa.screens/fcst_monthly_contr_acc_company_status
 related: {}

@@ -173,7 +173,7 @@ RETURN VARCHAR2
 
 IS
 
-lv2_return_val VARCHAR2(32);
+lv2_return_val VARCHAR2(240);
 
 BEGIN
 

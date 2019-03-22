@@ -135,6 +135,27 @@ related:
   - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
     keys:
       CODE1: EVENT
+      CODE2: PO.0132
+      CODE3: null
+      CODE_TYPE1: TANK_METER_FREQ
+      CODE_TYPE2: TANK_BF_USAGE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+      T: CTRL_CODE_DEPENDENCY
+    parentKeys:
+      PROSTY_CODES.CODE: EVENT
+      PROSTY_CODES.CODE_TYPE: TANK_METER_FREQ
+    properties:
+      CODE1: EVENT
+      CODE2: PO.0132
+      CODE3: null
+      CODE_TYPE1: TANK_METER_FREQ
+      CODE_TYPE2: TANK_BF_USAGE
+      CODE_TYPE3: null
+      DEPENDENCY_TYPE: WHATEVER
+  - !!com.ec.upgrade.ecconfig.model.ConfigurationItem
+    keys:
+      CODE1: EVENT
       CODE2: WR.0060
       CODE3: null
       CODE_TYPE1: TANK_METER_FREQ

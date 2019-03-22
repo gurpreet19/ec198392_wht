@@ -12,9 +12,11 @@ properties:
   DESCRIPTION: '<p>This screen is for Todo List managers to display all tasks associated
     with a specific role. The presentation is similar to the Todo List screen where
     tasks are displayed in three tabs: Available, Completed, Exceptional. However,
-    users can only perform refresh, stop and release operations in this screen. In
-    order to see tasks in the screen, the user must have a special role called JBPM.TASKADMIN.</p><p>There
-    is no insert functionality in this screen.</p><p>The tasks are categorized into:</p><ul><li>Available:
+    users can only perform refresh, release and reassign operations in this screen.
+    A task can only be reassigned to users that are listed in the task''s preassigned
+    users or have one of the task''s preassigned roles. In order to see tasks in the
+    screen, the user must have a special role called JBPM.TASKADMIN.</p><p>There is
+    no insert functionality in this screen.</p><p>The tasks are categorized into:</p><ul><li>Available:
     All on going tasks preassigned or assigned to a user, or preassigned to a role
     the current user has.</li><li>Completed: All completed tasks. Note that it only
     shows completed tasks in active process instances.</li><li>Exceptional: All exceptional

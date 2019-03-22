@@ -9,8 +9,5 @@ properties:
   BF_DESCRIPTION_NO: MHM.0010
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/send_freetext_msg' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |
-    <p>The &ldquo;Send Freetext Message&rdquo; screen is used to send text messages based on predefined templates. In order to successfully create and send a text message a properly defined distribution list must exist for the selected message template. A properly defined distribution list must as a minimum have a sender defined. In addition there must be message distribution entry with a parameter name called SUBJECT with a value match against the actual subject of the message template.</p>
-
-    <p>Note that there is no restriction in editing the template and that the message content will not be checked against any business rules.</p>
+  DESCRIPTION: <p>The <strong>Send Freetext Message</strong> screen is used to send text messages based on predefined templates. In order to successfully create and send a text message a properly defined distribution list must exist for the selected message template. A properly defined distribution list must have at least one sender defined. In addition, there must be message distribution entry with a parameter name called SUBJECT with a value match against the actual subject of the message template.</p><p>Note that there is no restriction in editing the template and that the message content will not be checked against any business rules.</p>
 related: {}

@@ -9,7 +9,7 @@ properties:
   BF_DESCRIPTION_NO: CD.0100
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/uoplist_management' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p><span style="color: rgb(0, 0, 153);">    UOP - unit of production
-    - the way to report reserves in EC.</span></p><p>    <strong>UOP Key Items screen</strong>    is
-    used to determine what Stream Items to be included to the selected UOP    Key.</p>'
+  DESCRIPTION: '<p><em><span style="color: rgb(0, 102, 204);">UOP - unit of production
+    - the way to report reserves in EC.</span></em></p><p><strong>UOP Key Items screen</strong>
+    is used to determine what Stream Items to be included to the selected UOP    Key.</p>'
 related: {}

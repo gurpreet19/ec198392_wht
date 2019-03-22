@@ -31,5 +31,5 @@ properties:
           - Water Injection
           - Gas injection
           - Steam injection
-          - CO2 injection </p>
+          - CO2 injection. </p><n><p>The data will be displayed as follows :</p><ol><li>When &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are empty, all records will be displayed.</li><li>When only &ldquo;Filter From&rdquo; value is entered, records that are valid after the selected "Filter From" will be displayed.</li><li>When only &ldquo;Filter To&rdquo; value is entered, records that are valid before the selected "Filter To" will be displayed.</li><li>When both &ldquo;Filter From&rdquo; and &ldquo;Filter To&rdquo; values are entered, records that are valid after the selected "Filter From" and before the selected "Filter To" will be displayed.</li></ol></n
 related: {}

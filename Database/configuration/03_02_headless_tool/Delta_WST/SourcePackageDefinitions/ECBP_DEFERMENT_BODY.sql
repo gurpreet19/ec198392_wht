@@ -67,6 +67,8 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Deferment IS
 ** 02.05.2018 shindani ECPD-54698: Modified function getPotentialRate,getPotentialMassRate to show correct potential rate based on ditsinct object_id and parent_daytime.
 ** 03.05.2018 jainnraj ECPD-54031: Modified procedure checkIfEventOverlaps to check for overlapping records, if the record is added from database.
 ** 17.05.2018 leongwen ECPD-55952: Modified procedure chkDefermentConstraintLock and chkDefermentDayLock to pass in the right type of date value to EcDp_ProductionDay.getProductionDayOffset based on p_operation type value check
+** 20.08.2018 khatrnit ECPD-53583: Added function getParentComment to get parent comment for the child deferment event.
+** 19.10.2018 kaushaak ECPD-59504: Modified getPotentialRate.
 *****************************************************************/
 
 --<EC-DOC>
@@ -751,7 +753,7 @@ IS
 BEGIN
 
   BEGIN
-    SELECT wed_1.object_id, wed_1.daytime, wed_1.deferment_type, wed_1.parent_object_id, wed_1.parent_daytime
+    SELECT wed_1.object_id, wed_1.day, wed_1.deferment_type, wed_1.parent_object_id, wed_1.parent_daytime
     INTO lv2_object_id,ld_daytime,lv2_deferment_type,lv2_parent_object_id,ld_parent_daytime
     FROM DEFERMENT_EVENT wed_1
     WHERE wed_1.event_no  = p_event_no
@@ -2462,5 +2464,39 @@ BEGIN
 
   RETURN ln_return_val;
 END getPotentialMassRate;
+
+--<EC-DOC>
+-----------------------------------------------------------------------------------------------------
+-- Function       : getParentComment                                                               --
+-- Description    : Returns Parent Comment for the child deferment event                           --
+-- Preconditions  :
+-- Postconditions :                                                                                --
+--                                                                                                 --
+-- Using tables   : deferment_event
+--                                                                                                 --
+-- Using functions:
+--
+--                                                                                                 --
+-- Configuration                                                                                   --
+-- required       :                                                                                --
+--                                                                                                 --
+-- Behaviour      :                                                                                --
+--                                                                                                 --
+-----------------------------------------------------------------------------------------------------
+FUNCTION getParentComment(p_event_no NUMBER)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+  lv_parent_comment VARCHAR2(2000);
+
+BEGIN
+  SELECT b.comments INTO lv_parent_comment
+  FROM deferment_event a
+  INNER JOIN deferment_event b
+  ON a.parent_event_no = b.event_no
+  WHERE a.event_no = p_event_no;
+
+  RETURN lv_parent_comment;
+END getParentComment;
 
 END  EcBp_Deferment;

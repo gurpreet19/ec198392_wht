@@ -3,7 +3,7 @@ name: FCST_SUMMARY_DAY
 cnstPrimaryKey:
   columns:
   - DAYTIME
-  - OBJECT_ID
+  - SCENARIO_ID
   name: PK_FCST_SUMMARY_DAY
   type: PRIMARYKEY
   status: UNDEFINED
@@ -584,14 +584,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '216'
-  OBJECT_ID:
-    columnName: OBJECT_ID
-    typeName: VARCHAR2(32)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '1'
   OIL_AVAIL_EXPORT:
     columnName: OIL_AVAIL_EXPORT
     typeName: NUMBER
@@ -704,6 +696,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '218'
+  SCENARIO_ID:
+    columnName: SCENARIO_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
   SI_COMPENSATION:
     columnName: SI_COMPENSATION
     typeName: NUMBER
@@ -1799,7 +1799,7 @@ cnstForeignKeys:
     deleteAction: NOACTION
     primaryTable: FORECAST
     columns:
-      OBJECT_ID: OBJECT_ID
+      SCENARIO_ID: OBJECT_ID
     name: FK_FCST_SUMMARY_DAY_2
     type: FOREIGNKEY
     status: UNDEFINED
@@ -1815,7 +1815,7 @@ indexes:
   IFK_FCST_SUMMARY_DAY_1:
     indexName: IFK_FCST_SUMMARY_DAY_1
     columns:
-    - OBJECT_ID
+    - SCENARIO_ID
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536

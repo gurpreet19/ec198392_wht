@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.2073
   NAME: Contract Capacity Location Connection
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.co.screens/object_connection/TARGET/CONTRACT_CAPACITY/CLASS_LIST/CNTR_CAPACITY_LIST/CLASS/CNTR_CAP_LOC_CONNECTION
 related: {}

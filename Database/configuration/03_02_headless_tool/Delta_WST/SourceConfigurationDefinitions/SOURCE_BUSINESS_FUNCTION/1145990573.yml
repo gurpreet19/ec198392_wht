@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0151
   NAME: Daily Path Nomination
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/daily_path_nomination/CLASS/TRNP_NP_DAY_NOM_PATH/SHOW_OPERATIONAL/N
 related: {}

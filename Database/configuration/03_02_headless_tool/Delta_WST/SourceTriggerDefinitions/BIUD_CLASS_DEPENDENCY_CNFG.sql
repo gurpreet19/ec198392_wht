@@ -10,6 +10,4 @@ BEGIN
     ecdp_viewlayer_utils.set_dirty_ind(nvl(:new.child_class, :old.child_class), 'REPORTLAYER', TRUE);
     ecdp_viewlayer_utils.set_dirty_ind(nvl(:new.child_class, :old.child_class), 'DAC', TRUE);
   END IF;
-
-  ecdp_viewlayer_utils.set_dirty_ind('CLASS_DEPENDENCY', 'MATVIEW', TRUE);
 END;

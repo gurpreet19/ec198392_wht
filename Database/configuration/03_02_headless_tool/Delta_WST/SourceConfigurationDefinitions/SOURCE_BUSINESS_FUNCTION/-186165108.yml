@@ -8,5 +8,6 @@ properties:
   BF_CODE: SD.0050
   NAME: Daily Sales Renomination
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/daily_renomination/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0050/CLASS/SLNP_DAY_RENOM_LIST/CLASS_SUB/SLNP_DAY_RENOMINATION
 related: {}

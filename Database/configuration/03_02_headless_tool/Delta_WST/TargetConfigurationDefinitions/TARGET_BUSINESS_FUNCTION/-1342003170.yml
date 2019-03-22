@@ -8,5 +8,6 @@ properties:
   BF_CODE: PP.0013
   NAME: Field Forecast
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pp.screens/prod_object_forecast/GROUPMODEL/FIELD/TARGET/FIELD/DATA_CLASS/PROD_FIELD_FORECAST
 related: {}

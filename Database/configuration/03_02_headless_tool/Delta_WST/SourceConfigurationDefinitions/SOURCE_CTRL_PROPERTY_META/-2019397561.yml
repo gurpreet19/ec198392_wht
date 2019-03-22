@@ -10,7 +10,7 @@ properties:
   DEFAULT_VALUE_DATE: null
   DEFAULT_VALUE_NUMBER: null
   DEFAULT_VALUE_STRING: null
-  DESCRIPTION: Mandatory level in Operational group model navigator for Deferment (PD.0020), Equipment Downtime (PD.0022) and Deferment Day (PD.0023) screen. Options:PRODUCTIONUNIT|SUB_UNIT|AREA|SUB_AREA|FCTY_CLASS_2|FCTY_CLASS_1
+  DESCRIPTION: Mandatory level in Operational group model navigator for Deferment (PD.0020), Equipment Downtime (PD.0022), Deferment Day (PD.0023) and Forecast Event (PP.0047) screen. Options:PRODUCTIONUNIT|SUB_UNIT|AREA|SUB_AREA|FCTY_CLASS_2|FCTY_CLASS_1
   KEY: CUSTOM_TARGET_MANDATORY_OP
   LABEL: Deferment:Custom Mandatory Navigation-Operational
   LIST_OF_VALUES: null

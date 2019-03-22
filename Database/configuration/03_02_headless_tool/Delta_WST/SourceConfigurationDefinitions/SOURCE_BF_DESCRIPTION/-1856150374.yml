@@ -9,6 +9,14 @@ properties:
   BF_DESCRIPTION_NO: WR.0067
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.wr.screens/webo_pressure_test' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |
-    <p>This Business Function is used to enter well bore pressure tests. The main purpose for this BF is to calculate the datum pressure based on the pressure test.</p>
+  DESCRIPTION: '<p>This Business Function is used to enter well bore pressure tests.
+    The main purpose for this BF is to calculate the datum pressure based on the pressure
+    test.In the above screenshot, we want to calculate pressure in tubing measurement
+    (2100), up to communicating reservoir (2000) and down to datum (2500) we have
+    to enter Well Bore Name, Daytime , Pressure Type and Observed Pressure and EC
+    will calculate the pressure at the depth in second data section.</p><p>Calculation
+    Formula :-</p><p><ol><li> When Depth to  is 2000, calculated pressure is  Pressure
+    at Depth from +( ( Depth to - Depth from) * Gradient pressure). That means 200
+    + (-100*0.175) = 182.5 barg.</li><li> When Depth To is 2500, calculated pressure
+    is : 207.6 + (200 * 0.1) = 227.6 barg.</li></ol></p>'
 related: {}

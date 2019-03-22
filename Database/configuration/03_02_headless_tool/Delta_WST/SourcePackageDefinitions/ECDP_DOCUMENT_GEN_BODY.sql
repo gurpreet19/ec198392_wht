@@ -643,40 +643,42 @@ BEGIN
     v_financial_code := ec_contract_version.financial_code(l_ifac_rec.contract_id,
                                                            l_ifac_rec.period_start_date,
                                                            '<=');
+    IF l_ifac_rec.calc_run_no IS NOT NULL THEN
 
-    IF l_ifac_rec.contract_account_class IN
-       ('SCTR_ACC_MTH_STATUS', 'SCTR_ACC_YR_STATUS') THEN
-      ecdp_dataset_flow.insertifactodoc(l_ifac_rec.calc_run_no,
-                                        l_ifac_rec.contract_account_class,
-                                        l_ifac_rec.contract_account,
-                                        l_ifac_rec.line_item_key,
-                                        ecdp_fin_period.getCurrOpenPeriodByObject(l_ifac_rec.contract_id,
-                                                                                  l_ifac_rec.period_start_date,
-                                                                                  v_financial_code,
-                                                                                  'REPORTING'));
-    ELSIF l_ifac_rec.contract_account_class IN
-          ('SCTR_ACC_MTH_PC_STATUS', 'SCTR_ACC_YR_PC_STATUS') THEN
-      ecdp_dataset_flow.insertifactodoc(l_ifac_rec.calc_run_no,
-                                        l_ifac_rec.contract_account_class,
-                                        l_ifac_rec.contract_account,
-                                        l_ifac_rec.line_item_key || '$' ||
-                                        l_ifac_rec.profit_center_id,
-                                        ecdp_fin_period.getCurrOpenPeriodByObject(l_ifac_rec.contract_id,
-                                                                                  l_ifac_rec.period_start_date,
-                                                                                  v_financial_code,
-                                                                                  'REPORTING'));
-    ELSIF l_ifac_rec.contract_account_class IN
-          ('SCTR_ACC_MTH_PC_CPY', 'SCTR_ACC_YR_PC_CPY') THEN
-      ecdp_dataset_flow.insertifactodoc(l_ifac_rec.calc_run_no,
-                                        l_ifac_rec.contract_account_class,
-                                        l_ifac_rec.contract_account,
-                                        l_ifac_rec.line_item_key || '$' ||
-                                        l_ifac_rec.profit_center_id || '$' ||
-                                        l_ifac_rec.vendor_id,
-                                        ecdp_fin_period.getCurrOpenPeriodByObject(l_ifac_rec.contract_id,
-                                                                                  l_ifac_rec.period_start_date,
-                                                                                  v_financial_code,
-                                                                                  'REPORTING'));
+      IF l_ifac_rec.contract_account_class IN
+         ('SCTR_ACC_MTH_STATUS', 'SCTR_ACC_YR_STATUS') THEN
+        ecdp_dataset_flow.insertifactodoc(l_ifac_rec.calc_run_no,
+                                          l_ifac_rec.contract_account_class,
+                                          l_ifac_rec.contract_account,
+                                          l_ifac_rec.line_item_key,
+                                          ecdp_fin_period.getCurrOpenPeriodByObject(l_ifac_rec.contract_id,
+                                                                                    l_ifac_rec.period_start_date,
+                                                                                    v_financial_code,
+                                                                                    'REPORTING'));
+      ELSIF l_ifac_rec.contract_account_class IN
+            ('SCTR_ACC_MTH_PC_STATUS', 'SCTR_ACC_YR_PC_STATUS') THEN
+        ecdp_dataset_flow.insertifactodoc(l_ifac_rec.calc_run_no,
+                                          l_ifac_rec.contract_account_class,
+                                          l_ifac_rec.contract_account,
+                                          l_ifac_rec.line_item_key || '$' ||
+                                          l_ifac_rec.profit_center_id,
+                                          ecdp_fin_period.getCurrOpenPeriodByObject(l_ifac_rec.contract_id,
+                                                                                    l_ifac_rec.period_start_date,
+                                                                                    v_financial_code,
+                                                                                    'REPORTING'));
+      ELSIF l_ifac_rec.contract_account_class IN
+            ('SCTR_ACC_MTH_PC_CPY', 'SCTR_ACC_YR_PC_CPY') THEN
+        ecdp_dataset_flow.insertifactodoc(l_ifac_rec.calc_run_no,
+                                          l_ifac_rec.contract_account_class,
+                                          l_ifac_rec.contract_account,
+                                          l_ifac_rec.line_item_key || '$' ||
+                                          l_ifac_rec.profit_center_id || '$' ||
+                                          l_ifac_rec.vendor_id,
+                                          ecdp_fin_period.getCurrOpenPeriodByObject(l_ifac_rec.contract_id,
+                                                                                    l_ifac_rec.period_start_date,
+                                                                                    v_financial_code,
+                                                                                    'REPORTING'));
+      END IF;
     END IF;
 
        IF l_ifac_rec.calc_run_no IS NOT NULL THEN
@@ -1512,6 +1514,7 @@ BEGIN
                      l_logger.info('Created transaction [' || lv2_transaction_key || ']');
                  end if;
              END LOOP;
+             EcDp_Document.UpdDocumentVat(lv2_NewDocKey, ec_cont_document.daytime(lv2_NewDocKey), NULL);
         END IF;
 
                l_logger.info('Processed ' || ln_TranCounter || ' of ' || ln_RecordCounter
@@ -2491,8 +2494,7 @@ BEGIN
                                l_logger.info( 'Created transaction [' || lv2_transaction_key || ']');
                            end if;
                        END LOOP;
-
-
+                       EcDp_Document.UpdDocumentVat(lv2_NewDocKey, ec_cont_document.daytime(lv2_NewDocKey), NULL);
                 END IF;
 
                 -- Updating quantities/prices on all non-reversal transactions in current document.
@@ -3005,9 +3007,9 @@ END CleanupStimRecords;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
--- Function       : aggregateLevelQty
--- Description    : Function to aggregate qty from company to field level or from field level to line item level
---
+-- Procedure      : aggregateLevelQty
+-- Description    : Function to aggregate qty's from Company level to Profit Centre level
+--                  or from Profit Centre level to Line Item level.
 -- Preconditions  :
 -- Postconditions :
 --
@@ -3023,12 +3025,12 @@ END CleanupStimRecords;
 ---------------------------------------------------------------------------------------------------
 PROCEDURE aggregateLevelQty(p_transaction_key VARCHAR2,
                             p_dist_id         VARCHAR2,
-                            p_from_level      VARCHAR2, -- COMPANY or FIELD
+                            p_from_level      VARCHAR2, -- COMPANY or PROFIT_CENTRE
                             p_user_id         VARCHAR2
                             )
 IS
-
-CURSOR cDistSum(cp_trans_key VARCHAR2) IS
+  -- Get the sum of Profit Centre level qty's
+  CURSOR cDistSum(cp_trans_key VARCHAR2) IS
     SELECT SUM(clid.qty1) Qty1,
            SUM(clid.qty2) Qty2,
            SUM(clid.qty3) Qty3,
@@ -3041,7 +3043,7 @@ CURSOR cDistSum(cp_trans_key VARCHAR2) IS
                        WHERE cli.transaction_key = clid.transaction_key
                          AND cli.line_item_based_type = 'QTY');
 
-  -- Get the sum of company level qtys
+  -- Get the sum of Company level qty's
   CURSOR cCompSum(cp_trans_key VARCHAR2, cp_dist_id VARCHAR2) IS
     SELECT SUM(clidc.qty1) Qty1,
            SUM(clidc.qty2) Qty2,
@@ -3056,7 +3058,7 @@ CURSOR cDistSum(cp_trans_key VARCHAR2) IS
                              WHERE cli.transaction_key = clidc.transaction_key
                                AND cli.line_item_based_type = 'QTY');
 
-  -- Loop over fields and calculate split share based on new qtys
+  -- Loop over Profit Centre and calculate split share based on new qty's
   CURSOR cDist(cp_trans_key VARCHAR2) IS
     SELECT clid.qty1,
            clid.qty2,
@@ -3071,87 +3073,71 @@ CURSOR cDistSum(cp_trans_key VARCHAR2) IS
                        WHERE cli.transaction_key = clid.transaction_key
                          AND cli.line_item_based_type = 'QTY');
 
-
   ln_field_sum_1 NUMBER;
   ln_field_sum_2 NUMBER;
   ln_field_sum_3 NUMBER;
   ln_field_sum_4 NUMBER;
+  invalid_level_error EXCEPTION;
 
 BEGIN
+  -- Validate the specified level
+  IF (nvl(p_from_level, 'NULL') NOT IN ('COMPANY', 'PROFIT_CENTRE')) THEN
+    RAISE invalid_level_error;
+  END IF;
 
-
-
-  IF p_from_level = 'FIELD' THEN
-    -- Write sum of all fields to trans level
-    FOR rsT IN cDistSum(p_transaction_key) LOOP
-
-        UPDATE cont_transaction_qty ctq SET
-           ctq.net_qty1 = rsT.Qty1,
-           ctq.net_qty2 = rsT.Qty2,
-           ctq.net_qty3 = rsT.Qty3,
-           ctq.net_qty4 = rsT.Qty4,
-           ctq.last_updated_date = ctq.last_updated_date
-     WHERE ctq.transaction_key = p_transaction_key;
-
-
-    END LOOP;
-
-  ELSIF p_from_level = 'COMPANY' THEN
-
-    -- Write sum of all companies first to field level
+  IF p_from_level = 'COMPANY' THEN
+    -- Get the qty sum on Company level
     FOR rsT IN cCompSum(p_transaction_key, p_dist_id) LOOP
+      -- Recalculate the vendor_share on Company level. This because the Qty's have just been updated.
+      UPDATE cont_li_dist_company clidc
+         SET clidc.vendor_share = CASE WHEN nvl(rsT.Qty1, 0) <> 0 THEN (nvl(clidc.Qty1, 0) / rsT.Qty1) ELSE 0 END
+       WHERE clidc.transaction_key = p_transaction_key
+         AND clidc.dist_id = p_dist_id;
 
-     UPDATE cont_line_item_dist clid
-        SET clid.qty1              = rsT.Qty1,
-            clid.qty2              = rsT.Qty2,
-            clid.qty3              = rsT.Qty3,
-            clid.qty4              = rsT.Qty4,
-            clid.last_updated_date = clid.last_updated_date
-      WHERE clid.transaction_key = p_transaction_key
-        AND clid.dist_id = p_dist_id;
-
-
+      -- Update the Qty's on Profit Centre level
+      UPDATE cont_line_item_dist clid
+         SET clid.qty1 = rsT.Qty1,
+             clid.qty2 = rsT.Qty2,
+             clid.qty3 = rsT.Qty3,
+             clid.qty4 = rsT.Qty4
+       WHERE clid.transaction_key = p_transaction_key
+         AND clid.dist_id = p_dist_id;
     END LOOP;
+  END IF;
 
+  -- Get sum of all Profit Centre
+  FOR rsT IN cDistSum(p_transaction_key) LOOP
+      ln_field_sum_1 := rsT.Qty1;
+      ln_field_sum_2 := rsT.Qty2;
+      ln_field_sum_3 := rsT.Qty3;
+      ln_field_sum_4 := rsT.Qty4;
+  END LOOP;
 
-    -- Get sum of all fields
-    FOR rsT IN cDistSum(p_TRANSACTION_KEY) LOOP
+  -- Loop over Profit Centre and calculate split share based on new qty's
+  FOR rsD IN cDist(p_transaction_key) LOOP
+    UPDATE cont_line_item_dist clid
+       SET clid.split_share       = (CASE WHEN ln_field_sum_1 <> 0 THEN (NVL(rsD.Qty1,0) / ln_field_sum_1) ELSE 0 END),
+           clid.split_share_qty2  = (CASE WHEN ln_field_sum_2 <> 0 THEN (NVL(rsD.Qty2,0) / ln_field_sum_2) ELSE (CASE WHEN clid.uom2_code IS NOT NULL THEN 0 ELSE NULL END) END),
+           clid.split_share_qty3  = (CASE WHEN ln_field_sum_3 <> 0 THEN (NVL(rsD.Qty3,0) / ln_field_sum_3) ELSE (CASE WHEN clid.uom3_code IS NOT NULL THEN 0 ELSE NULL END) END),
+           clid.split_share_qty4  = (CASE WHEN ln_field_sum_4 <> 0 THEN (NVL(rsD.Qty4,0) / ln_field_sum_4) ELSE (CASE WHEN clid.uom4_code IS NOT NULL THEN 0 ELSE NULL END) END)
+     WHERE clid.transaction_key = p_transaction_key
+       AND clid.dist_id = rsD.Dist_Id;
+  END LOOP;
 
-        ln_field_sum_1 := rsT.Qty1;
-        ln_field_sum_2 := rsT.Qty2;
-        ln_field_sum_3 := rsT.Qty3;
-        ln_field_sum_4 := rsT.Qty4;
+  -- Write sum of all Profit Centre to Transaction level
+  UPDATE cont_transaction_qty ctq
+     SET ctq.net_qty1 = ln_field_sum_1,
+         ctq.net_qty2 = ln_field_sum_2,
+         ctq.net_qty3 = ln_field_sum_3,
+         ctq.net_qty4 = ln_field_sum_4
+   WHERE ctq.transaction_key = p_transaction_key;
 
-        END LOOP;
+  -- This is a force update to LAST_UPDATED_BY on Transaction level and all levels below.
+  ecdp_transaction.triggerIULogic(ec_cont_transaction.document_key(p_transaction_key),p_user_id,'NA');
 
-    -- Loop over fields and calculate split share based on new qtys
-    FOR rsD IN cDist(p_TRANSACTION_KEY) LOOP
-
-      UPDATE cont_line_item_dist clid SET
-             clid.split_share =      (CASE WHEN ln_field_sum_1 <> 0 THEN (NVL(rsD.Qty1,0) / ln_field_sum_1) ELSE 0 END),
-             clid.split_share_qty2 = (CASE WHEN ln_field_sum_2 <> 0 THEN (NVL(rsD.Qty2,0) / ln_field_sum_2) ELSE (CASE WHEN clid.uom2_code IS NOT NULL THEN 0 ELSE NULL END) END),
-             clid.split_share_qty3 = (CASE WHEN ln_field_sum_3 <> 0 THEN (NVL(rsD.Qty3,0) / ln_field_sum_3) ELSE (CASE WHEN clid.uom3_code IS NOT NULL THEN 0 ELSE NULL END) END),
-             clid.split_share_qty4 = (CASE WHEN ln_field_sum_4 <> 0 THEN (NVL(rsD.Qty4,0) / ln_field_sum_4) ELSE (CASE WHEN clid.uom4_code IS NOT NULL THEN 0 ELSE NULL END) END),
-             clid.last_updated_date = clid.last_updated_date
-       WHERE clid.transaction_key = p_TRANSACTION_KEY
-         AND clid.dist_id = rsD.Dist_Id;
-
-    END LOOP;
-
-    -- Write sum of all fields to trans level
-    UPDATE cont_transaction_qty ctq SET
-           ctq.net_qty1 = ln_field_sum_1,
-           ctq.net_qty2 = ln_field_sum_2,
-           ctq.net_qty3 = ln_field_sum_3,
-           ctq.net_qty4 = ln_field_sum_4,
-           ctq.last_updated_date = ctq.last_updated_date
-     WHERE ctq.transaction_key = p_transaction_key;
-
-        END IF;
-
-
-ecdp_transaction.triggerIULogic(ec_cont_transaction.document_key(p_transaction_key),p_user_id,'NA');
-
+EXCEPTION
+  WHEN invalid_level_error THEN
+    RAISE_APPLICATION_ERROR(-20000, 'Failed to execute action. The specified level (' || nvl(p_from_level, 'NULL') || ') is not valid.\n\n');
 END aggregateLevelQty;
 
 
@@ -3193,6 +3179,7 @@ IS
   ld_daytime           DATE;
   l_context            t_revn_doc_op_context;
   l_document_info      t_revn_ft_doc_info;
+  lv2_message          VARCHAR2(1032);
 
   lrec_doc cont_document%ROWTYPE := ec_cont_document.row_by_pk(p_document_key);
 
@@ -3348,7 +3335,7 @@ BEGIN
 
         FOR rsT IN gc_DocumentTransactions(p_document_key) LOOP
 
-            EcDp_Transaction.UpdTransExRate(rsT.Transaction_Key, lv2_user);
+            lv2_message:= EcDp_Transaction.UpdTransExRate(rsT.Transaction_Key, lv2_user);
 
        END LOOP;
 

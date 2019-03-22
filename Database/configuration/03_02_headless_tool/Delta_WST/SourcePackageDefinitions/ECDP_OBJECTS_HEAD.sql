@@ -41,6 +41,11 @@ CREATE OR REPLACE PACKAGE EcDp_Objects IS
 **  01.09.17 RuneJ  Add function getObjDaytime
 *****************************************************************/
 
+TYPE object_version_pk_rec IS RECORD (
+    object_id   VARCHAR2(32),
+    daytime     DATE
+);
+
 type update_column is  RECORD(
     column_name         VARCHAR2(30),
     column_type         VARCHAR2(30),
@@ -55,7 +60,7 @@ PROCEDURE AddUpdateList(
     p_update_list     IN OUT  ecdp_objects.update_list,
     p_count           IN OUT  NUMBER ,
     p_column_name             VARCHAR2 ,
-    p_data_type		      	VARCHAR2 ,
+    p_data_type             VARCHAR2 ,
     p_column_data             ANYDATA,
     p_table_name              VARCHAR2 DEFAULT NULL,
     p_column_attr_name        VARCHAR2 DEFAULT NULL
@@ -132,8 +137,8 @@ FUNCTION IsValidObjEndDate(
 RETURN VARCHAR2;
 
 FUNCTION GetFirstClassDaytimeRef(
-   p_class_name 	VARCHAR2,
-   p_object_id  	VARCHAR2,
+   p_class_name     VARCHAR2,
+   p_object_id      VARCHAR2,
    p_recursive BOOLEAN DEFAULT FALSE,
    p_min_date DATE DEFAULT NULL
 
@@ -151,7 +156,7 @@ RETURN DATE;
 
 
 PROCEDURE DelObj(
-   p_object_id 				VARCHAR2
+   p_object_id              VARCHAR2
 );
 
 FUNCTION isValidOwnerReference(
@@ -167,53 +172,90 @@ FUNCTION isValidClassReference(
 RETURN VARCHAR2;
 
 FUNCTION GetInsertedDaytime(
-		p_object_start_date DATE,
-		p_daytime DATE,
-		p_object_end_date DATE)
+        p_object_start_date DATE,
+        p_daytime DATE,
+        p_object_end_date DATE)
 RETURN DATE;
 
 FUNCTION GetInsertedRelationID(
-		p_role_name VARCHAR2,
-		p_rel_class_name VARCHAR2,
-		p_new_rel_object_id VARCHAR2,
-		p_new_object_code VARCHAR2,
-		p_daytime				DATE)
+        p_role_name VARCHAR2,
+        p_rel_class_name VARCHAR2,
+        p_new_rel_object_id VARCHAR2,
+        p_new_object_code VARCHAR2,
+        p_daytime               DATE)
 RETURN VARCHAR2;
 
 FUNCTION  GetUpdatedRelationID(
-		p_upd_id 					BOOLEAN,
-		p_upd_code 					BOOLEAN,
-		p_role_name 				VARCHAR2,
-		p_rel_class_name 			VARCHAR2,
-		p_new_rel_object_id 		VARCHAR2,
-		p_new_object_code 		VARCHAR2,
-		p_daytime 					DATE)
+        p_upd_id                    BOOLEAN,
+        p_upd_code                  BOOLEAN,
+        p_role_name                 VARCHAR2,
+        p_rel_class_name            VARCHAR2,
+        p_new_rel_object_id         VARCHAR2,
+        p_new_object_code       VARCHAR2,
+        p_daytime                   DATE)
 RETURN VARCHAR2;
 
 FUNCTION  GetInsertedObjectID(
-		p_new_rel_object_id VARCHAR2)
+        p_new_rel_object_id VARCHAR2)
 RETURN VARCHAR2;
 
 FUNCTION  IfDollarStr(p_condition VARCHAR2,p1 VARCHAR2, p2 VARCHAR2)
 RETURN VARCHAR2;
 
 FUNCTION GetNonValidRelation(
-   p_class_name 				VARCHAR2,
-   p_object_id  				VARCHAR2,
-   p_daytime					DATE
+   p_class_name                 VARCHAR2,
+   p_object_id                  VARCHAR2,
+   p_daytime                    DATE
 )
 RETURN VARCHAR2;
 
 FUNCTION GetNonValidRelationEndDate(
-   p_class_name 				VARCHAR2,
-   p_object_id  				VARCHAR2,
-   p_end_date					DATE
+   p_class_name                 VARCHAR2,
+   p_object_id                  VARCHAR2,
+   p_end_date                   DATE
 )
 RETURN VARCHAR2;
 
 FUNCTION CheckObjectAccess(
    p_object_id VARCHAR2,
    p_object_class_name VARCHAR2 DEFAULT NULL
+)
+RETURN VARCHAR2;
+
+FUNCTION resolveCascadedObject(
+	p_cascaded_class_name IN VARCHAR2,
+	p_class_name          IN VARCHAR2,
+	p_object_id           IN VARCHAR2,
+	p_daytime             IN DATE)
+RETURN object_version_pk_rec;
+
+/**
+ * Cascades the production day offset in hours and the time zone for the given object to its descendants.
+ */
+PROCEDURE runCascade(
+   p_class_name IN VARCHAR2,
+   p_object_id  IN VARCHAR2,
+   p_daytime    IN DATE
+);
+
+/**
+ * Resolves and returns the production day ID for the input object.
+ */
+FUNCTION resolveProductionDayId(
+   p_class_name IN VARCHAR2,
+   p_object_id  IN VARCHAR2,
+   p_daytime    IN DATE
+)
+RETURN VARCHAR2;
+
+/**
+ * Resolves and returns the time zone name for the input object.
+ */
+FUNCTION resolveDomainObjectName(
+   p_domain_class_name IN VARCHAR2,
+   p_class_name IN VARCHAR2,
+   p_object_id  IN VARCHAR2,
+   p_daytime    IN DATE
 )
 RETURN VARCHAR2;
 

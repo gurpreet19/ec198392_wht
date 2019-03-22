@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0110
   NAME: Control and Safety System
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CTRL_SAFETY_SYSTEM/TARGET/CTRL_SAFETY_SYSTEM/CLASS_NAME/CTRL_SAFETY_SYSTEM
 related: {}

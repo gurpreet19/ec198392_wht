@@ -8,5 +8,6 @@ properties:
   BF_CODE: IN.0004
   NAME: Inventory Un-Booked
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.in/validation/LEVEL/UNBOOKED/MODE/SET_TO_PREV
 related: {}

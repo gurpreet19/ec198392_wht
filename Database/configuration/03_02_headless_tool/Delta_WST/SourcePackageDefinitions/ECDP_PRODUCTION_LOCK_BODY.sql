@@ -23,6 +23,7 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Production_Lock IS
 ** 21.04.2009   leongsei ECPD-6067: Modified function checkConstantStdLock to pass in object_id
 ** 20.05.2009   oonnnng  ECPD-11852: Add new CheckDirectLock() procedure with different arguments pass in.
 ** 12.07.2017   jainnraj ECPD-45048: Added new procedure CheckOfficialScenarioDataLock to enable local and global monthly locking for official scenarios.
+** 26.07.2018   kashisag ECPD-56795: Changed objectid to scenario id, UPDATED CheckOfficialScenarioDataLock procedure
 *************************************************************************************************/
 
 --<EC-DOC>
@@ -815,10 +816,8 @@ END checkConstantStdLock;
 --
 --
 -- Preconditions  : If the class does not have DAYTIME column it needs to be handled separately.
---                  Any Forecast class in which scenario_id details are stored in object_id column it should be listed below either in Case1 or Case2 with their
---                  respective class names.
---                  Any Forecast class in which scenario details are stored in scenario id column and object details in object id column it will be handled
---                  automatically in Case3.
+--                  Any Forecast class in which scenario_id details are stored in scenario_id and object_id stored in other column it should be listed below in Case1 with their respective class names.
+--                  Any Forecast class in which scenario details are stored in scenario id column and object details in object id column it will be handled automatically in Case2.
 -- Postconditions :
 --
 -- Using tables   :
@@ -854,55 +853,20 @@ BEGIN
   ld_o_actual_dt := p_old_lock_columns('DAYTIME').column_data.AccessDate;
   lv2_o_class_name := p_old_lock_columns('CLASS_NAME').column_name;
 
-   /*Case1: If section is to handle classes where Scenario_id details are stored in Object_id and there is no other id column*/
-   IF lv2_o_class_name IN ('FCST_CONSUMPTION_LOSS','FCST_QUALITY_FACTORS','FCST_QUOTA_NOM','FCST_CONSTRAINTS')
-   THEN
-       IF p_old_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_o_scenario_id := p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
-       END IF;
+   /*Case1: This section is to handle classes where Scenario_id details are stored in scenario_id and Object_id is stored in other object column */
 
-       IF p_new_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_n_scenario_id := p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
-       END IF;
-   /*Case2: Elseif section is to handle classes where Scenario_id details are stored in Object_id and object column is stored in some other id column*/
-   ELSIF lv2_o_class_name = 'FCST_COMPENSATION_EVENTS' THEN
-       IF p_old_lock_columns.EXISTS('OBJECT_COMP_ID')  THEN
-           lv2_o_obj_id := p_old_lock_columns('OBJECT_COMP_ID').column_data.AccessVarchar2;
-       END IF;
-       IF p_new_lock_columns.EXISTS('OBJECT_COMP_ID')  THEN
-           lv2_n_obj_id := p_new_lock_columns('OBJECT_COMP_ID').column_data.AccessVarchar2;
-       END IF;
-       IF p_old_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_o_scenario_id := p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
-       END IF;
-       IF p_new_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_n_scenario_id := p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
-       END IF;
-   ELSIF lv2_o_class_name IN ('FCST_WELL_EVENT','FCST_WELL_EVENT_CHILD') THEN
+    IF lv2_o_class_name IN ('FCST_WELL_EVENT','FCST_WELL_EVENT_CHILD') THEN
        IF p_old_lock_columns.EXISTS('EVENT_ID')  THEN
            lv2_o_obj_id := p_old_lock_columns('EVENT_ID').column_data.AccessVarchar2;
        END IF;
        IF p_new_lock_columns.EXISTS('EVENT_ID')  THEN
            lv2_n_obj_id := p_new_lock_columns('EVENT_ID').column_data.AccessVarchar2;
        END IF;
-       IF p_old_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_o_scenario_id := p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
+       IF p_old_lock_columns.EXISTS('SCENARIO_ID') THEN
+           lv2_o_scenario_id := p_old_lock_columns('SCENARIO_ID').column_data.AccessVarchar2;
        END IF;
-       IF p_new_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_n_scenario_id := p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
-       END IF;
-   ELSIF lv2_o_class_name = 'FCST_SHORTFALL_OVERRIDES' THEN
-       IF p_old_lock_columns.EXISTS('WELL_ID')  THEN
-           lv2_o_obj_id := p_old_lock_columns('WELL_ID').column_data.AccessVarchar2;
-       END IF;
-       IF p_new_lock_columns.EXISTS('WELL_ID')  THEN
-           lv2_n_obj_id := p_new_lock_columns('WELL_ID').column_data.AccessVarchar2;
-       END IF;
-       IF p_old_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_o_scenario_id := p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
-       END IF;
-       IF p_new_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_n_scenario_id := p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
+       IF p_new_lock_columns.EXISTS('SCENARIO_ID') THEN
+           lv2_n_scenario_id := p_new_lock_columns('SCENARIO_ID').column_data.AccessVarchar2;
        END IF;
    ELSIF lv2_o_class_name = 'FCST_OBJ_CONSTRAINTS' THEN
        IF p_old_lock_columns.EXISTS('CONSTRAINTS_ID')  THEN
@@ -911,11 +875,11 @@ BEGIN
        IF p_new_lock_columns.EXISTS('CONSTRAINTS_ID')  THEN
            lv2_n_obj_id := p_new_lock_columns('CONSTRAINTS_ID').column_data.AccessVarchar2;
        END IF;
-       IF p_old_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_o_scenario_id := p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
+         IF p_old_lock_columns.EXISTS('SCENARIO_ID') THEN
+           lv2_o_scenario_id := p_old_lock_columns('SCENARIO_ID').column_data.AccessVarchar2;
        END IF;
-       IF p_new_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_n_scenario_id := p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
+       IF p_new_lock_columns.EXISTS('SCENARIO_ID') THEN
+           lv2_n_scenario_id := p_new_lock_columns('SCENARIO_ID').column_data.AccessVarchar2;
        END IF;
    ELSIF lv2_o_class_name = 'FCST_SHORTFALL_FACTORS' THEN
        IF p_old_lock_columns.EXISTS('FACTOR_ID')  THEN
@@ -924,13 +888,13 @@ BEGIN
        IF p_new_lock_columns.EXISTS('FACTOR_ID')  THEN
            lv2_n_obj_id := p_new_lock_columns('FACTOR_ID').column_data.AccessVarchar2;
        END IF;
-       IF p_old_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_o_scenario_id := p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
+       IF p_old_lock_columns.EXISTS('SCENARIO_ID') THEN
+           lv2_o_scenario_id := p_old_lock_columns('SCENARIO_ID').column_data.AccessVarchar2;
        END IF;
-       IF p_new_lock_columns.EXISTS('OBJECT_ID') THEN
-           lv2_n_scenario_id := p_new_lock_columns('OBJECT_ID').column_data.AccessVarchar2;
+       IF p_new_lock_columns.EXISTS('SCENARIO_ID') THEN
+           lv2_n_scenario_id := p_new_lock_columns('SCENARIO_ID').column_data.AccessVarchar2;
        END IF;
-   /*Case3: Else section is to handle classes where Scenario_id is stored in scenario_id and object column is stored in object_id*/
+   /*Case2: Else section is to handle classes where Scenario_id is stored in scenario_id and object column is stored in object_id*/
    ELSE
       IF p_old_lock_columns.EXISTS('OBJECT_ID')  THEN
          lv2_o_obj_id := p_old_lock_columns('OBJECT_ID').column_data.AccessVarchar2;

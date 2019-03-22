@@ -700,6 +700,15 @@ SESSIONS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   properties: {}
   related: {}
   status: ADDED
+STRM_VALUES: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1657646693'
+  keys:
+    T: CTRL_DASHBOARD
+    WIDGET_CODE: STRM_VALUES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 TRAN_FCST_LIST: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-238522293'
   keys:

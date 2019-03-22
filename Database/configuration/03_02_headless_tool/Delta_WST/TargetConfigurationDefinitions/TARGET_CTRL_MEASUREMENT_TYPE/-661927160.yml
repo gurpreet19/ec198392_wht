@@ -5,6 +5,7 @@ keys:
   T: CTRL_MEASUREMENT_TYPE
 parentKeys: {}
 properties:
+  DB_UNIT: null
   DESCRIPTION: Power consumption
   FORMAT_MASK: null
   MEASUREMENT_TYPE: POWER_CON

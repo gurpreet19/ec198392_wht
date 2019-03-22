@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0114
   NAME: Payment Scheme Setup
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/payment_scheme_setup
 related: {}

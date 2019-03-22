@@ -3,7 +3,7 @@ name: JBPM_CASEFILEDATALOG
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008740
+  name: PK_JBPM_CASEFILEDATALOG
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

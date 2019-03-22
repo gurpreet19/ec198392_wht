@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0182
   NAME: Water Treatment Unit
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/WATER_TREATMENT_UNIT/TARGET/WATER_TREATMENT_UNIT/CLASS_NAME/WATER_TREATMENT_UNIT
 related: {}

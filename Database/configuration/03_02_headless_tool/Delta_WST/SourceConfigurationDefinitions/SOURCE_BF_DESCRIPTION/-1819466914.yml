@@ -9,8 +9,5 @@ properties:
   BF_DESCRIPTION_NO: RP.0008
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/xls_rept_object_type' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |
-    <p>Excel Report Objects determines which EC Objects and attributes will be used to select data in a Context.</p>
-
-    <p>EC Object, Interface or Table Class types can only be used here, but these provide the values needed for the keys of other object types.</p>
+  DESCRIPTION: <p>The purpose of the Excel Report Objects screen is to determine which EC Objects and attributes will be used to select data in a Context. One can create a report object to use a filter with the parameter on the report template which are then used as a input to the Report Sets. </p><p><br></p><p>Note that EC Object, Interface or Table Class types can only be used in this screen.  </p>
 related: {}

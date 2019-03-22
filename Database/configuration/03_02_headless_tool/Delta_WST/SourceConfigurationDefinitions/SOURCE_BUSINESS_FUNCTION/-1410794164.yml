@@ -8,5 +8,6 @@ properties:
   BF_CODE: VO.0006
   NAME: Daily Split Key Stream Item Categories
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.vo/split_key/DAILY/TRUE/SPLIT_TYPE/STREAM_ITEM_CATEGORY
 related: {}

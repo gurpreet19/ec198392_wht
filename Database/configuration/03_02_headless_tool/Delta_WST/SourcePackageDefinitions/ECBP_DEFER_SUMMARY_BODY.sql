@@ -24,6 +24,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Defer_Summary IS
 ** 27-02-2017 leongwen ECPD-32871: Modified getPlannedVolumes to work with renamed columns but subject to further change on ECPD-43662 later
 ** 12-05-2017 jainnraj ECPD-42563: Renamed function call getProdForecastId to getProdScenarioId.
 ** 28-12-2017 jainnraj ECPD-31884: Removing all the calls where potential_method is Ecdp_Calc_Method.FORECAST and modified getPlannedVolumes to remove call of Ecbp_Productionforecast.getRecentProdForecastNo
+** 02.11.2018 khatrnit ECPD-58811: Added function getTotalDailyEventLoss to retrieve total event loss for a particular deferment event, date and phase
 *****************************************************************/
 
 --<EC-DOC>
@@ -497,5 +498,83 @@ BEGIN
   RETURN ln_actual_energy;
 
 END getActualEnergy;
+
+--<EC-DOC>
+-----------------------------------------------------------------------------------------------------
+-- Function       : getTotalDailyEventLoss                                                               --
+-- Description    : Returns total event loss for a particular deferment event, date and phase                          --
+-- Preconditions  :
+-- Postconditions :                                                                                --
+--                                                                                                 --
+-- Using tables   : v_def_summ_events, well_day_defer_alloc
+--                                                                                                 --
+-- Using functions:
+--
+--                                                                                                 --
+-- Configuration                                                                                   --
+-- required       :                                                                                --
+--                                                                                                 --
+-- Behaviour      :                                                                                --
+--                                                                                                 --
+-----------------------------------------------------------------------------------------------------
+FUNCTION getTotalDailyEventLoss(
+  p_phase VARCHAR2,
+  p_event_no NUMBER,
+  p_daytime DATE
+)
+RETURN NUMBER
+--</EC-DOC>
+IS
+  ln_return_val NUMBER;
+  lr_deferment_type VARCHAR2(32);
+
+BEGIN
+
+  lr_deferment_type := ec_deferment_event.deferment_type(p_event_no);
+
+  IF lr_deferment_type = 'GROUP' THEN
+    IF p_phase = 'OIL' THEN
+     SELECT oil_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'GAS' THEN
+     SELECT gas_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'WATER' THEN
+     SELECT water_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'COND' THEN
+     SELECT cond_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'GAS_LIFT' THEN
+     SELECT gl_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'DILUENT' THEN
+     SELECT diluent_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'STEAM_INJ' THEN
+     SELECT steam_inj_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'GAS_INJ' THEN
+     SELECT gas_inj_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'WATER_INJ' THEN
+     SELECT water_inj_vol INTO ln_return_val from v_def_summ_events where parent_event_no = p_event_no and daytime = trunc(p_daytime);
+    END IF;
+  ELSE
+    IF p_phase = 'OIL' THEN
+     SELECT deferred_net_oil_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'GAS' THEN
+     SELECT deferred_gas_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'WATER' THEN
+     SELECT deferred_water_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'COND' THEN
+     SELECT deferred_cond_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'GAS_LIFT' THEN
+     SELECT deferred_gl_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'DILUENT' THEN
+     SELECT deferred_diluent_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'STEAM_INJ' THEN
+     SELECT deferred_steam_inj_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'GAS_INJ' THEN
+     SELECT deferred_gas_inj_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    ELSIF  p_phase = 'WATER_INJ' THEN
+     SELECT deferred_water_inj_vol INTO ln_return_val from well_day_defer_alloc where event_no = p_event_no and daytime = trunc(p_daytime);
+    END IF;
+  END IF;
+
+  RETURN ln_return_val;
+END getTotalDailyEventLoss;
 
 END EcBp_Defer_Summary;

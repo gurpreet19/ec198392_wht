@@ -3,7 +3,7 @@ name: JBPM_ERRORINFO
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008651
+  name: PK_JBPM_ERRORINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

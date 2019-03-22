@@ -3,7 +3,7 @@ name: JBPM_CASEROLEASSIGNMENTLOG
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008738
+  name: PK_JBPM_CASEROLEASSIGNLOG
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

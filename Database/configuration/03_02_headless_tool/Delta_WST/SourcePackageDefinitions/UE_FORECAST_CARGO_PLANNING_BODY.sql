@@ -21,6 +21,7 @@ CREATE OR REPLACE PACKAGE BODY ue_Forecast_Cargo_Planning IS
 ** 07/04/2017   sharawan    ECPD-44803: Modified deleteForecastFM to delete child records query in FCST_STOR_LIFT_CPY_SPLIT
 ** 15/08/2017   sharawan    ECPD-47293: Added procedure validateDate to validate End Date when creating Forecast in Forecast Manager screen.
 ** 17/08/2017   sharawan    ECPD-47293: Modified copyFromForecastFcstMngr to get the reference forecast end_date if the End Date field is empty.
+** 15/11/2018   thotesan    ECPD-59863: Added function includeInCopy to get cargo status for Copy to orgional plan.
 ********************************************************************/
 
 --<EC-DOC>
@@ -403,5 +404,33 @@ BEGIN
 		Raise_Application_Error(-20587,'End Date should be later than Date in navigator.');
 	END IF;
 END validateDate;
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Procedure      : includeInCopy
+-- Description    : Function to return Y for the cargo status mentioned in lv_cargo_status variable
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   :
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+---------------------------------------------------------------------------------------------------
+FUNCTION includeInCopy(p_forecast_id VARCHAR2, p_cargo_no NUMBER, p_parcel_no NUMBER,p_cargo_status VARCHAR2,p_fcst_cargo_status VARCHAR2) RETURN VARCHAR2
+--</EC-DOC>
+ IS
+ lv_cargo_status VARCHAR2(32):= 'T,O';
+BEGIN
+  IF INSTR(lv_cargo_status,p_fcst_cargo_status,1)>=1 AND INSTR(lv_cargo_status,NVL(p_cargo_status,lv_cargo_status),1)>=1 THEN
+    RETURN 'Y';
+  ELSE
+    RETURN 'N';
+  END IF;
+
+  END includeInCopy;
 
 END ue_Forecast_Cargo_Planning;

@@ -96,6 +96,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_TestDevice IS
 ** 07.02.2017 shindani ECPD-35761: Modified procedure calcSingleWellTestResult to update rate source and removed procedure updateRateSource.
 ** 20.07.2017 dhavaalo ECPD-46111: Modified findRefShrinkageFactor to support user exit.
 ** 11.09.2017 kaushaak ECPD-48603: Modified findRefShrinkageFactor to support multiple user exit.
+** 05.10.2018 kaushaak ECPD-57454: Modified getMeterText to handle more than one version on test device.
 
 *****************************************************************/
 
@@ -4063,9 +4064,9 @@ BEGIN
       v_return_val := '';
 
       IF p_object_id IS NOT NULL THEN
-        SELECT COUNT(TD.INSTRUMENTATION_TYPE) INTO v_data_class FROM OV_TEST_DEVICE TD WHERE TD.OBJECT_ID = p_object_id AND DAYTIME <= p_date AND (END_DATE >= p_date OR END_DATE IS NULL);
+        SELECT COUNT(TD.INSTRUMENTATION_TYPE) INTO v_data_class FROM OV_TEST_DEVICE TD WHERE TD.OBJECT_ID = p_object_id AND DAYTIME < p_date AND (END_DATE >= p_date OR END_DATE IS NULL);
         IF v_data_class > 0 THEN
-          SELECT 'TDEV_SAMPLE_' || to_char(TD.INSTRUMENTATION_TYPE) INTO v_data_class FROM OV_TEST_DEVICE TD WHERE TD.OBJECT_ID = p_object_id AND DAYTIME <= p_date AND (END_DATE >= p_date OR END_DATE IS NULL);
+          SELECT 'TDEV_SAMPLE_' || to_char(TD.INSTRUMENTATION_TYPE) INTO v_data_class FROM OV_TEST_DEVICE TD WHERE TD.OBJECT_ID = p_object_id AND DAYTIME < p_date AND (END_DATE >= p_date OR END_DATE IS NULL);
 
           IF p_code_type = 'TDEV_OIL_METER' THEN
 			       v_return_val := getOilMeterText(p_code, v_data_class, p_object_id);

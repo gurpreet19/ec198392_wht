@@ -3,7 +3,7 @@ name: JBPM_BPM_NODE_INSTANCE_STATE
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008828
+  name: PK_JBPM_BPM_NODE_INST_STATE
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

@@ -3,7 +3,7 @@ name: JBPM_SESSIONINFO
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008703
+  name: PK_JBPM_SESSIONINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: IN.0031
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/CONFIG_VARIABLE' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/CONFIG_VARIABLE' )
   DATA_LEVEL: 0.0
   DESCRIPTION: <p>    <strong>Config Variable screen</strong>    allows the system to identify a calculation variable to run using configuration and in combination with the Configuration Variable Parameter to know how to    identify values for each of the parameter.</p><p>    Calculation Variables do not have object ID so there is a connection between Configuration Variable and Calculation Variable based on the calculation    context chosen on both and the Calculation Variable Signature.</p><p>    When changing the Calculation Signature on the Configuration Variable, the system will automatically create Config Variable Params for each of the    Parameters on the Calculation variable. See Configuration Variable Parameter screen (BF IN.0032) for more detail.</p>
 related: {}

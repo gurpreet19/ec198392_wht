@@ -259,10 +259,10 @@ PROCEDURE ValidateUOMs (
     p_daytime               DATE    -- Point of sale date (transaction_date)
 );
 
-PROCEDURE DelTransaction(
-   p_object_id VARCHAR2,
-   p_transaction_key VARCHAR2
-);
+FUNCTION DelTransaction(
+   p_transaction_key VARCHAR2,
+   p_child_only VARCHAR2 DEFAULT 'N'
+) RETURN VARCHAR2;
 
 PROCEDURE DelEmptyTransactions (
    p_document_key VARCHAR2);
@@ -275,22 +275,37 @@ PROCEDURE DelNewTransactions(
    p_document_key VARCHAR2
    );
 
-PROCEDURE UpdTransExRate
- (p_transaction_key VARCHAR2,
+FUNCTION UpdTransExRate(
+   p_transaction_key VARCHAR2,
+   p_user VARCHAR2,
+   p_pick_ex_rates_from_trans VARCHAR2 DEFAULT 'N'
+   )RETURN VARCHAR2;
+
+FUNCTION UpdTransAllExRate(
+  p_doc_key VARCHAR2,
   p_user VARCHAR2,
   p_pick_ex_rates_from_trans VARCHAR2 DEFAULT 'N'
-  );
+  ) RETURN VARCHAR2;
 
-PROCEDURE UpdSelectedTransExRate
- (p_transaction_key VARCHAR2,
+FUNCTION UpdSelectedTransExRate(
+  p_transaction_key VARCHAR2,
+  p_curr_from_to VARCHAR2,
   p_user VARCHAR2,
-  p_pb_ind VARCHAR2, --pricing booking indicator
-  p_pm_ind VARCHAR2, --pricing memo indicator
-  p_bl_ind VARCHAR2, --booking local indicator
-  p_bg_ind VARCHAR2, --pricing group indicator
-  p_pick_ex_rates_from_trans VARCHAR2 DEFAULT 'N',
-  p_copy_selection VARCHAR2 DEFAULT 'Y'
-);
+  p_pick_ex_rates_from_trans VARCHAR2 DEFAULT 'N'
+  ) RETURN VARCHAR2;
+
+FUNCTION CopyTransExRate(
+  p_transaction_key VARCHAR2,
+  p_user VARCHAR2
+  )RETURN VARCHAR2;
+
+FUNCTION CopyRateOtherTrans (
+    p_transaction_key VARCHAR2,
+    p_curr_from_to VARCHAR2,
+    p_user VARCHAR2
+    )
+   RETURN VARCHAR2;
+
 
 PROCEDURE UpdFromPrecedingTrans(p_preceding_trans_id VARCHAR2,
                                 p_target_trans_id    VARCHAR2,
@@ -490,7 +505,14 @@ PROCEDURE resetLineItemShares(p_transaction_key VARCHAR2);
 
 FUNCTION isTransactionEditable(
         p_transaction_key VARCHAR2,
-         p_level VARCHAR2 DEFAULT 'TRANS') -- Alternatively FIELD or COMPANY
+        p_level VARCHAR2 DEFAULT 'TRANS',   -- Alternatively FIELD or COMPANY
+        p_msg_ind VARCHAR2 DEFAULT 'N')     -- When 'Y' => Returns user friendly message instead of 'N' when result is false ('N')
+RETURN VARCHAR2;
+
+FUNCTION isTransactionDeletable(
+        p_transaction_key VARCHAR2,
+        p_level VARCHAR2 DEFAULT 'TRANS',   -- Alternatively FIELD or COMPANY
+        p_msg_ind VARCHAR2 DEFAULT 'N')     -- When 'Y' => Returns user friendly message instead of 'N' when result is false ('N')
 RETURN VARCHAR2;
 
 PROCEDURE AggregateLineItemValues (
@@ -503,21 +525,6 @@ PROCEDURE populateOtherTrans (
 
 FUNCTION isEmptyTrans(p_transaction_key VARCHAR2)
 RETURN VARCHAR2;
-
-
-PROCEDURE CopyTransExRate
- (p_transaction_key VARCHAR2,
-  p_user VARCHAR2);
-
-PROCEDURE CopySelectedTransExRate
- (p_transaction_key VARCHAR2,
-  p_user VARCHAR2,
-  p_pb_ind VARCHAR2, -- pricing booking indicator
-  p_pm_ind VARCHAR2, -- pricing memo indicator
-  p_bl_ind VARCHAR2, -- booking local indicator
-  p_bg_ind VARCHAR2,  -- pricing group indicator
-  p_copy_selection VARCHAR2 DEFAULT 'Y'
-  );
 
 
 ------------------------+-----------------------------------+------------------------------------+---------------------------
@@ -601,13 +608,15 @@ FUNCTION IsReducedConfig(p_contract_id     VARCHAR2 DEFAULT NULL,
                          p_contract_doc_id VARCHAR2 DEFAULT NULL,
                          p_trans_temp_id   VARCHAR2 DEFAULT NULL,
                          p_transaction_key VARCHAR2 DEFAULT NULL,
-                         p_daytime         DATE
+                         p_daytime         DATE,
+                         p_dist_only       BOOLEAN DEFAULT FALSE
 ) RETURN BOOLEAN;
 
 FUNCTION IsReducedConfig(p_contract_id     VARCHAR2,
                          p_contract_doc_id VARCHAR2,
                          p_trans_temp_id   VARCHAR2,
-                         p_daytime         DATE
+                         p_daytime         DATE,
+                         p_dist_only       BOOLEAN DEFAULT FALSE
 ) RETURN VARCHAR2;
 
 
@@ -763,6 +772,11 @@ FUNCTION GetDistObjectName(p_transaction_key VARCHAR2)
 RETURN VARCHAR2;
 ------------------------+-----------------------------------+------------------------------------+---------------------------
 ------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetDistObjectTypeName(
+                         p_transaction_key                  VARCHAR2 DEFAULT NULL)
+RETURN VARCHAR2;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+------------------------+-----------------------------------+------------------------------------+---------------------------
 FUNCTION FindPrecedingTransKeys(
                          p_document_key                     VARCHAR2
                         ,p_document_concept                 VARCHAR2
@@ -851,6 +865,37 @@ FUNCTION TransactionLevelVatRate(p_transaction_key VARCHAR2) RETURN NUMBER;
 
 
 ------------------------+-----------------------------------+------------------------------------+---------------------------
+------------------------+-----------------------------------+------------------------------------+---------------------------
+
+FUNCTION GetPricingBookingLabel(p_document_key      VARCHAR2,
+                                p_daytime           DATE,
+                                p_trans_template_id VARCHAR2)
+  RETURN VARCHAR2;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetPricingMemoLabel(p_document_key      VARCHAR2,
+                             p_daytime           DATE,
+                             p_trans_template_id VARCHAR2) RETURN VARCHAR2;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetBookingLocalLabel(p_document_key VARCHAR2, p_daytime DATE)
+  RETURN VARCHAR2;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetBookingGroupLabel(p_document_key VARCHAR2, p_daytime DATE)
+  RETURN VARCHAR2;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetPricingBookingCode(p_document_key      VARCHAR2,
+                               p_daytime           DATE,
+                               p_trans_template_id VARCHAR2)
+  RETURN VARCHAR2;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetPricingMemoCode(p_document_key      VARCHAR2,
+                            p_daytime           DATE,
+                            p_trans_template_id VARCHAR2) RETURN VARCHAR2;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetBookingLocalCode(p_document_key VARCHAR2, p_daytime DATE)
+  RETURN VARCHAR2;
+------------------------+-----------------------------------+------------------------------------+---------------------------
+FUNCTION GetBookingGroupCode(p_document_key VARCHAR2, p_daytime DATE)
+  RETURN VARCHAR2;
 ------------------------+-----------------------------------+------------------------------------+---------------------------
 
 END Ecdp_Transaction;

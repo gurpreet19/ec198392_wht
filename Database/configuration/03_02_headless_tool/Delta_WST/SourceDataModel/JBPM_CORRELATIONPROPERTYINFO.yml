@@ -3,7 +3,7 @@ name: JBPM_CORRELATIONPROPERTYINFO
 cnstPrimaryKey:
   columns:
   - PROPERTYID
-  name: SYS_C008642
+  name: PK_JBPM_CORREL_PROP_INFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

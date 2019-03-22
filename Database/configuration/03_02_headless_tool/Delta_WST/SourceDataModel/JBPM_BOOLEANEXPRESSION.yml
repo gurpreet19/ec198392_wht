@@ -3,7 +3,7 @@ name: JBPM_BOOLEANEXPRESSION
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008631
+  name: PK_JBPM_BOOLEANEXPRESSION
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

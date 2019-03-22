@@ -8,5 +8,6 @@ properties:
   BF_CODE: PD.0011
   NAME: Low and Off - set end date
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pd.screens/low_off_deferments
 related: {}

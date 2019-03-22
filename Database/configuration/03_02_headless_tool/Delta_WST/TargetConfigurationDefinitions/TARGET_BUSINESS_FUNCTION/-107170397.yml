@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.2062
   NAME: 'Company Document Instructions Template '
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.co.screens/company_doc_instruction_templ
 related: {}

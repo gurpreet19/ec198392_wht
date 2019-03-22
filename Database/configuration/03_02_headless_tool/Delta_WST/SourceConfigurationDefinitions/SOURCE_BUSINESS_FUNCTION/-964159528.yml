@@ -8,5 +8,6 @@ properties:
   BF_CODE: SA.0014
   NAME: Monthly Expenditure
   PROFILE_CLASS_NAME: CONTRACT
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sa.screens/monthly_expenditure
 related: {}

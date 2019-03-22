@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0229
   NAME: External Location Reference Value
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.co.screens/ext_loc_reference_value
 related: {}

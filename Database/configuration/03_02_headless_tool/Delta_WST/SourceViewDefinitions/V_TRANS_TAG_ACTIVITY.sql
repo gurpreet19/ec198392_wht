@@ -25,5 +25,6 @@ SELECT DISTINCT
       , NULL AS REV_TEXT
 FROM  trans_target_time tt, trans_mapping m
 WHERE tt.target_tagid = m.tag_id
+AND tt.target_sourceid = m.source_id
 ORDER BY tt.last_updated_date DESC nulls last)
 WHERE ROWNUM < 100

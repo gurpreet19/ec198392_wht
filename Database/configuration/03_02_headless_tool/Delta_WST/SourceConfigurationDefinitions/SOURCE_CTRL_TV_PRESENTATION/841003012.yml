@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY?screentemplate=/com.ec.prod.pp.screens/daily_well_forecast_compensation
+  COMPONENT_EXT_NAME: /com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY?screentemplate=/com.ec.prod.pp.screens/daily_well_forecast_compensation
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: FCST_WELL_SHORTFALL_COMP
   COMPONENT_LABEL: Forecast Well Shortfalls and Compensations

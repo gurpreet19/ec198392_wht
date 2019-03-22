@@ -5,6 +5,7 @@ keys:
   T: CTRL_MEASUREMENT_TYPE
 parentKeys: {}
 properties:
+  DB_UNIT: null
   DESCRIPTION: Special handling of Liquid Rate to Liquid Volume
   FORMAT_MASK: '###,###,##0.0'
   MEASUREMENT_TYPE: LIQ_RATE_VOL

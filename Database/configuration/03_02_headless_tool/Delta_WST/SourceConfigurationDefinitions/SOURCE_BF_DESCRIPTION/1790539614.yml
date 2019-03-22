@@ -9,6 +9,5 @@ properties:
   BF_DESCRIPTION_NO: MHM.0011
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.mhm.screens/message_workflow_overview' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |
-    <p>This business function gives the user the possibility to get an overview of which actors have sent or received messages from EC. Who these actors are, are defined by the implementation project.</p>
+  DESCRIPTION: <p>The <strong>Message Workflow Overview</strong> business function gives the user the possibility to get an overview of which actors have sent or received messages from EC. The identity of the Actors are defined by the implementation project.</p>
 related: {}

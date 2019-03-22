@@ -660,6 +660,94 @@ END IsDocLevelLocked;
 
 
 --<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isInsertingTransAllowed
+-- Description    : Instead-of-type user exit, REPLACING the product code
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   :
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+---------------------------------------------------------------------------------------------------
+FUNCTION isInsertingTransAllowed(
+         p_document_key VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+BEGIN
+
+  RETURN NULL;
+
+END isInsertingTransAllowed;
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isInsertingTransAllowedPre
+-- Description    : Pre-type user exit, BEFORE the product code executes
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   :
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+---------------------------------------------------------------------------------------------------
+FUNCTION isInsertingTransAllowedPre(
+         p_document_key VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+BEGIN
+
+  RETURN NULL;
+
+END isInsertingTransAllowedPre;
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isInsertingTransAllowedPost
+-- Description    : Post-type user exit, AFTER the product code has been executed
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   :
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+---------------------------------------------------------------------------------------------------
+FUNCTION isInsertingTransAllowedPost(
+         p_document_key VARCHAR2,
+         p_status VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+BEGIN
+
+  RETURN NULL;
+
+END isInsertingTransAllowedPost;
+
+--<EC-DOC>
 -------------------------------------------------------------------------------------------------
 -- Procedure      :  GetRepURL
 -- Description    :  Called from EcDp_Document.GetRepURL() and performs In_Stead_Of user exit to

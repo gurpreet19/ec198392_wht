@@ -97,7 +97,7 @@ END GetName;
 --
 -- Using tables   :
 --
--- Using functions: ec_class.label
+-- Using functions: ecdp_classmeta_cnfg.getLabel
 --
 -- Configuration
 -- required       :

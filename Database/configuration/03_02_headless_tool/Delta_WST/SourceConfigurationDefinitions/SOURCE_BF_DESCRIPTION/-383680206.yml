@@ -9,21 +9,22 @@ properties:
   BF_DESCRIPTION_NO: CD.0098
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/hcblist_management' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p>    <strong>HCB System Items screen</strong>    is used to determine
-    what Stream Items to be included to the selected HCB    System.<br>    Stream
-    Items are used in the HCB Calculations and to create HCB reports    holding monthly
-    and daily values.</p><p><span style="color: rgb(0, 0, 153);">    The HCB (Hydrocarbon
-    Balance) is a feature for giving an overview of the    whole value chain in terms
-    of hydrocarbons taking into account production,    inventory, fuel/flare, injection,
-    sales and purchases values.<br>    HCB is a key component of EC Revenue functionality.
-    It is the means by    which quantities collected through each of the modules and
-    are compared for    consistency, on a daily, monthly, or other period basis.<br>    Although
-    the quantities may be registered through any of the transactional    modules,
-    the HCB functionality belongs to QTY, since this is where all    Stream Item Values
-    ultimately reside.</span></p><p>    <u>The screen is divided into two sections:</u></p><p><strong><em>HCB
-    Systems Section</em></strong><br>    The section lists existing HCB Systems</p><p><strong><em>Stream
-    Items Section</em></strong><br>    The section contains all Stream Items for the
-    selected HCB System.<br>    <em>Use System </em>    column gives options to determine
-    the calculation method for the final    balance counting:<br>    - Input,<br>    -
-    Throughput,<br>    - Output.</p>'
+  DESCRIPTION: '<p>  <em style="color: rgb(0, 102, 204);">The HCB (Hydrocarbon Balance)
+    is a feature for giving an overview of the whole value chain in terms of hydrocarbons
+    taking into account production, inventory, fuel/flare, injection, sales and purchases
+    values.</em>  </p>  <p>  <em style="color: rgb(0, 102, 204);">HCB is a key component
+    of EC Revenue functionality. It is the means by which quantities collected through
+    each of the modules and are compared for consistency, on a daily, monthly, or
+    other period basis. Although the quantities may be registered through any of the
+    transactional modules, the HCB functionality belongs to QTY, since this is where
+    all Stream Item Values ultimately reside.</em> </p><p><strong>HCB System Items
+    screen</strong> is used to determine what Stream Items to be included to the selected
+    HCB System.</p><p>Stream Items are used in the HCB Calculations and to create
+    HCB reports holding monthly and daily values.</p><p>The screen is divided into
+    these sections:</p><p><strong style="color: rgb(0, 102, 204);">HCB Systems Section</strong></p><p>
+    The section lists existing HCB Systems</p><p><strong style="color: rgb(0, 102,
+    204);">Stream Items Section</strong></p><p> The section contains all Stream Items
+    for the selected HCB System.</p><p> <em>Use System </em> column gives options
+    to determine the calculation method for the final balance counting:<br> - Input,<br>
+    - Throughput,<br> - Output.</p>'
 related: {}

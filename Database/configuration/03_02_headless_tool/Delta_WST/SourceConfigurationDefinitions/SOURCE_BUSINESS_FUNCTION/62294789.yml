@@ -8,5 +8,6 @@ properties:
   BF_CODE: WR.0072
   NAME: Well Product Yield Factors
   PROFILE_CLASS_NAME: WELL
+  TARGET_CONDITION: null
   URL: /com.ec.prod.wr.screens/well_product_analysis
 related: {}

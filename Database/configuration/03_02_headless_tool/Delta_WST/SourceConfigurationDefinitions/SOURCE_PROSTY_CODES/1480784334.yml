@@ -6,7 +6,7 @@ keys:
   T: PROSTY_CODES
 parentKeys: {}
 properties:
-  ALT_CODE: /com.ec.revn.sp/doc_detail_popup
+  ALT_CODE: /com.ec.revn.sp/fin_documents_simple
   CODE: CONT_DOCUMENT
   CODE_TEXT: Financial Documents
   CODE_TYPE: TRACING_CLASS

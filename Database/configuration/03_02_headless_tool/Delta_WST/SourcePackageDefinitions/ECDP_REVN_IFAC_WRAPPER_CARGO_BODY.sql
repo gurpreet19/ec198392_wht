@@ -994,8 +994,7 @@ IS
               ) IS
       SELECT sm.*
         FROM ifac_cargo_value sm
-       WHERE sm.trans_key_set_ind = 'N'
-            AND sm.alloc_no_max_ind = 'Y'
+       WHERE sm.alloc_no_max_ind = 'Y'
             AND sm.ignore_ind = 'N'
             AND sm.contract_id = cp_contract_id
             AND NVL(sm.customer_id, '$NULL$') = NVL(cp_customer_id, '$NULL$')

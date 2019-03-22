@@ -8,5 +8,6 @@ properties:
   BF_CODE: FI.0001
   NAME: Financial Item Definition
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.fi/financial_item_definition
 related: {}

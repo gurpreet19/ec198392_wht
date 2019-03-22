@@ -2,7 +2,7 @@
 name: FCST_QUALITY_FACTORS
 cnstPrimaryKey:
   columns:
-  - OBJECT_ID
+  - SCENARIO_ID
   - DAYTIME
   name: PK_FCST_QUALITY_FACTORS
   type: PRIMARYKEY
@@ -144,14 +144,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '223'
-  OBJECT_ID:
-    columnName: OBJECT_ID
-    typeName: VARCHAR2(32)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '3'
   OIL_API_FACTOR:
     columnName: OIL_API_FACTOR
     typeName: NUMBER
@@ -200,6 +192,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '225'
+  SCENARIO_ID:
+    columnName: SCENARIO_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(240)
@@ -1855,7 +1855,7 @@ cnstForeignKeys:
     deleteAction: NOACTION
     primaryTable: FORECAST
     columns:
-      OBJECT_ID: OBJECT_ID
+      SCENARIO_ID: OBJECT_ID
     name: FK_FCST_QUALITY_FACTORS_2
     type: FOREIGNKEY
     status: UNDEFINED

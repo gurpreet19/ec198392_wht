@@ -79,11 +79,19 @@ CREATE OR REPLACE PACKAGE EcDp_Financial_Item IS
                                    p_value     NUMBER) RETURN VARCHAR;
 
   FUNCTION GetLastGeneratedTemplate(p_user_id VARCHAR2) RETURN VARCHAR2;
+
   FUNCTION GetValueByPriority(value_calculated     NUMBER,
                               value_interfaced     NUMBER,
                               value_override       NUMBER,
-							                data_fallback_method VARCHAR2)
+                              P_Fin_Item_ID        VARCHAR2,
+                              P_Daytime            DATE)
                               RETURN NUMBER ;
+
+  PROCEDURE UpdateValuePriority(P_Fin_Item_ID        VARCHAR2,
+                                 P_Daytime            DATE);
+
+  PROCEDURE UpdateFormatMask(P_Fin_Item_ID        VARCHAR2,
+                             P_Daytime            DATE);
 
   FUNCTION monthValue(p_time_span VARCHAR2,
                       p_nav_date    DATE) RETURN varchar2;

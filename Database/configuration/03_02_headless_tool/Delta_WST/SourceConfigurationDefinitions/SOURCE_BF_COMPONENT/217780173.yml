@@ -9,7 +9,7 @@ keys:
 parentKeys: {}
 properties:
   BF_CODE: CD.0099
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_UOP_DEPR_KEY' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIN_UOP_DEPR_KEY' )
   CLASS_NAME: FIN_UOP_DEPR_KEY
   COMP_CODE: updateAttributes
   NAME: Update Attributes

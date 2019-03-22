@@ -12,7 +12,7 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
   CLASS_NAME: FIN_PERIOD_TRANS_SIMPLE
   COMP_CODE: transactions
-  NAME: Transaction
+  NAME: Navigator (form) > Documents (tab) > Document (table) > Transactions (tab) > Transaction (table)
   SIGNING_REQ_IND: null
   URL: /transactions
 related: {}

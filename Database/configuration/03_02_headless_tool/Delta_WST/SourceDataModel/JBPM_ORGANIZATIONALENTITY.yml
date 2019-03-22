@@ -3,7 +3,7 @@ name: JBPM_ORGANIZATIONALENTITY
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008675
+  name: PK_JBPM_ORGANIZATIONALENTITY
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

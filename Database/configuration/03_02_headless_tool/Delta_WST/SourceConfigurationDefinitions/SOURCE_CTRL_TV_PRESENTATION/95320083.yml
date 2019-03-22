@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_DATE_TERM?screentemplate=/com.ec.frmw.co.screens/manage_object
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_DATE_TERM?screentemplate=/com.ec.frmw.co.screens/manage_object_nav
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: DOC_DATE_TERM
   COMPONENT_LABEL: Document Date Term

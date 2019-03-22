@@ -1463,6 +1463,15 @@
     DESCRIPTION: Navigation Model to be applied in most business functions where contract is target
   related: {}
   status: MODIFIED
+/com/ec/eccommon/navigator/model/top_non_mandatory: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-630266483'
+  keys:
+    KEY: /com/ec/eccommon/navigator/model/top_non_mandatory
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com/ec/eccore/classicMode: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1387538743'
   keys:
@@ -1483,6 +1492,27 @@
   properties: {}
   related: {}
   status: ADDED
+/com/ec/eccore/locale/country: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '454666687'
+  keys:
+    KEY: /com/ec/eccore/locale/country
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties:
+    LIST_OF_VALUES: PopupURL=/FrontController/com.ec.frmw.co.screens/object_popup?CLASS_NAME=COUNTRY;PopupReturnColumn=CODE;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.CODE
+  related: {}
+  status: MODIFIED
+/com/ec/eccore/locale/language: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-31816113'
+  keys:
+    KEY: /com/ec/eccore/locale/language
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties:
+    DEFAULT_VALUE_STRING: EN
+    LIST_OF_VALUES: PopupQueryURL=/com.ec.frmw.co.screens/query/language_popup.xml;PopupLayout=/com.ec.frmw.co.screens/layout/language_popup.xml;PopupReturnColumn=LANGUAGE;PopupDependency=Screen.this.currentRow.VALUE=ReturnField.LANGUAGE
+  related: {}
+  status: MODIFIED
 /com/ec/frmw/bs/calc/export/check_exist: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-353695130'
   keys:
@@ -1582,6 +1612,15 @@
   properties: {}
   related: {}
   status: ADDED
+/com/ec/frmw/jsf/manageobjectattrviewwidth: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-77194603'
+  keys:
+    KEY: /com/ec/frmw/jsf/manageobjectattrviewwidth
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 /com/ec/frmw/mhm/screens/commucation_status/REFRESH_RATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1663587187'
   keys:
@@ -1624,6 +1663,56 @@
   properties:
     DESCRIPTION: Set number of seconds between outgoing messages page refresh
     LABEL: Refresh rate for outgoing messages
+  related: {}
+  status: MODIFIED
+/com/ec/frmw/report/jasper/font_name: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-485484029'
+  keys:
+    KEY: /com/ec/frmw/report/jasper/font_name
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties:
+    DEFAULT_VALUE_STRING: DejaVu Serif
+  related: {}
+  status: MODIFIED
+/com/ec/frmw/report/jasper/pdf_font_name: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-969950474'
+  keys:
+    KEY: /com/ec/frmw/report/jasper/pdf_font_name
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties:
+    DEFAULT_VALUE_STRING: DejaVuSerif
+  related: {}
+  status: MODIFIED
+/com/ec/frmw/report/jasper/pdf_font_name_bold: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-842685906'
+  keys:
+    KEY: /com/ec/frmw/report/jasper/pdf_font_name_bold
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties:
+    DEFAULT_VALUE_STRING: DejaVuSerif-Bold
+  related: {}
+  status: MODIFIED
+/com/ec/frmw/report/jasper/pdf_font_name_bold_italic: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1633458847'
+  keys:
+    KEY: /com/ec/frmw/report/jasper/pdf_font_name_bold_italic
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties:
+    DEFAULT_VALUE_STRING: DejaVuSerif-BoldItalic
+  related: {}
+  status: MODIFIED
+/com/ec/frmw/report/jasper/pdf_font_name_italic: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2132368281'
+  keys:
+    KEY: /com/ec/frmw/report/jasper/pdf_font_name_italic
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties:
+    DEFAULT_VALUE_STRING: DejaVuSerif-Italic
   related: {}
   status: MODIFIED
 /com/ec/frmw/report/screens/report_publishing/ALLOWED_FILE_EXTENSIONS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -1823,6 +1912,24 @@
   fileName: '-163165774'
   keys:
     KEY: /com/ec/sale/ds/instantiate/SLFA_NOM_COMMENT
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com/ec/tran/cargo/delete_liftings/clean_lonesome_cargo: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1540198467'
+  keys:
+    KEY: /com/ec/tran/cargo/delete_liftings/clean_lonesome_cargo
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+/com/ec/tran/cargo/storage_level/include_day_end_not_lifted: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1075532166'
+  keys:
+    KEY: /com/ec/tran/cargo/storage_level/include_day_end_not_lifted
     T: CTRL_PROPERTY_META
   parentKeys: {}
   properties: {}
@@ -2058,6 +2165,24 @@ DEFERMENT_OVERLAP: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtende
   fileName: '258311832'
   keys:
     KEY: DEFERMENT_OVERLAP
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+DEFERMENT_STATUS_RUNNING: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1502653759'
+  keys:
+    KEY: DEFERMENT_STATUS_RUNNING
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+DEFERMENT_STATUS_STOPPED: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-642789681'
+  keys:
+    KEY: DEFERMENT_STATUS_STOPPED
     T: CTRL_PROPERTY_META
   parentKeys: {}
   properties: {}
@@ -2370,6 +2495,33 @@ WEEKLY_ANALYSIS_START_DAY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGrou
   fileName: '1764205786'
   keys:
     KEY: WEEKLY_ANALYSIS_START_DAY
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WELLS_ON_TEST_DELIMITER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1876317088'
+  keys:
+    KEY: WELLS_ON_TEST_DELIMITER
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WELL_TEST_AUTO_GEN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1327139836'
+  keys:
+    KEY: WELL_TEST_AUTO_GEN
+    T: CTRL_PROPERTY_META
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WELL_TEST_LOG_FLUSH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-299931091'
+  keys:
+    KEY: WELL_TEST_LOG_FLUSH
     T: CTRL_PROPERTY_META
   parentKeys: {}
   properties: {}

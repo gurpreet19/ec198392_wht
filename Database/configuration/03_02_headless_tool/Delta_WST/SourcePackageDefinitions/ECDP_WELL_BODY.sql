@@ -159,6 +159,8 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Well IS
 ** 17-01-2018 singishi ECPD-47302: Rename table well_deferment to deferment_event
 ** 02-04-2018 kaushaak ECPD-53796: Modified getDailyWellDownHrs
 ** 19-04-2018 abdulmaw ECPD-55145: Modified getDailyWellDownHrs to support 2 injection type well
+** 19-09-2018 abdulmaw ECPD-57617: Modified getDailyWellDownHrs to support both producer injector and injector injector
+** 10.09.2018 solibhar ECPD-58838: Added new function IsPlannedWell()
 *****************************************************************/
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
@@ -3835,39 +3837,51 @@ FUNCTION getDailyWellDownHrs(
 RETURN NUMBER
 --</EC-DOC>
 IS
-CURSOR c_wellDownTime(cp_object_id VARCHAR2, cp_daytime DATE, cp_end_day DATE, cp_period_prev_daytime DATE, cp_inj_type VARCHAR2) IS
-SELECT wd.daytime, NVL(wd.end_date, cp_daytime+1) end_date
-FROM  deferment_event wd
-WHERE wd.daytime < cp_daytime + 1
-AND NVL(wd.end_date, cp_daytime + 1) > cp_daytime
-AND wd.object_type = 'WELL'
-AND wd.object_id = cp_object_id
-AND wd.event_type ='DOWN'
-AND wd.class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD')
-UNION
-SELECT daytime , NVL((SELECT MIN(daytime) FROM pwel_period_status p2 WHERE p2.object_id=pwel_period_status.object_id
+CURSOR c_prodWellDownTime(cp_object_id VARCHAR2, cp_daytime DATE, cp_end_day DATE, cp_period_prev_daytime DATE) IS
+  SELECT wd.daytime, NVL(wd.end_date, cp_daytime+1) end_date
+  FROM  deferment_event wd
+  WHERE wd.daytime < cp_daytime + 1
+    AND NVL(wd.end_date, cp_daytime + 1) > cp_daytime
+    AND wd.object_type = 'WELL'
+    AND wd.object_id = cp_object_id
+    AND wd.event_type ='DOWN'
+    AND wd.class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD')
+  UNION
+  SELECT daytime , NVL((SELECT MIN(daytime) FROM pwel_period_status p2 WHERE p2.object_id=pwel_period_status.object_id
                                AND p2.daytime > pwel_period_status.daytime
                                AND p2.daytime <= cp_end_day
                                AND p2.time_span='EVENT')
                                ,cp_end_day)
-FROM pwel_period_status
-WHERE object_id = cp_object_id
-AND daytime BETWEEN NVL(cp_period_prev_daytime, cp_daytime) AND cp_end_day
-AND active_well_status <> 'OPEN'
-AND time_span='EVENT'
-UNION
-SELECT daytime , NVL((SELECT MIN(daytime) FROM iwel_period_status p2 WHERE p2.object_id=iwel_period_status.object_id
+  FROM pwel_period_status
+  WHERE object_id = cp_object_id
+    AND daytime BETWEEN NVL(cp_period_prev_daytime, cp_daytime) AND cp_end_day
+    AND active_well_status <> 'OPEN'
+    AND time_span='EVENT'
+  ORDER BY 1;
+
+CURSOR c_injWellDownTime(cp_object_id VARCHAR2, cp_daytime DATE, cp_end_day DATE, cp_period_prev_daytime DATE, cp_inj_type VARCHAR2) IS
+  SELECT wd.daytime, NVL(wd.end_date, cp_daytime+1) end_date
+  FROM  deferment_event wd
+  WHERE wd.daytime < cp_daytime + 1
+    AND NVL(wd.end_date, cp_daytime + 1) > cp_daytime
+    AND wd.object_type = 'WELL'
+    AND wd.object_id = cp_object_id
+    AND wd.event_type ='DOWN'
+    AND wd.class_name IN ('WELL_DEFERMENT','WELL_DEFERMENT_CHILD')
+  UNION
+  SELECT daytime , NVL((SELECT MIN(daytime) FROM iwel_period_status p2 WHERE p2.object_id=iwel_period_status.object_id
                                AND p2.daytime > iwel_period_status.daytime
                                AND p2.daytime <= cp_end_day
-                               AND p2.time_span='EVENT')
+                               AND p2.time_span='EVENT'
+                               AND p2.inj_type=cp_inj_type)
                                ,cp_end_day)
- FROM iwel_period_status
- WHERE object_id = cp_object_id
- AND daytime BETWEEN NVL(cp_period_prev_daytime, cp_daytime) AND cp_end_day
- AND active_well_status <> 'OPEN'
- AND time_span='EVENT'
- AND inj_type=cp_inj_type
-ORDER BY 1;
+  FROM iwel_period_status
+  WHERE object_id = cp_object_id
+    AND daytime BETWEEN NVL(cp_period_prev_daytime, cp_daytime) AND cp_end_day
+    AND active_well_status <> 'OPEN'
+    AND time_span='EVENT'
+    AND inj_type=cp_inj_type
+  ORDER BY 1;
 
 ln_return             NUMBER;
 ld_daytime            DATE;
@@ -3888,37 +3902,64 @@ BEGIN
   -- Calculate start time of production day
   ld_daytime := p_daytime + (EcDp_ProductionDay.getProductionDayOffset('FCTY_CLASS_1',lv2_fcty_id, p_daytime)/24); -- this is also true if 23 or 25 hours a day.
   ld_end_day := ld_daytime + 1;
-  lv2_well_class := getWellClass(p_object_id, p_daytime);
-  IF lv2_well_class = 'I' THEN
+
+  IF p_inj_type is not null then
     ld_period_prev_daytime := ec_iwel_period_status.prev_equal_daytime(p_object_id, ld_daytime, p_inj_type, 'EVENT');
+
+    OPEN c_injWellDownTime(p_object_id, ld_daytime, ld_end_day, ld_period_prev_daytime, p_inj_type);
+    LOOP
+      FETCH c_injWellDownTime INTO ld_curr_daytime, ld_curr_end_date;
+      EXIT WHEN c_injWellDownTime%NOTFOUND;
+      IF ld_prev_daytime IS NULL THEN -- First Row
+        ld_prev_daytime := ld_curr_daytime;
+        ld_prev_end_date := ld_curr_end_date;
+        ln_durationfrac := Least(ld_curr_end_date, ld_daytime+1) - Greatest(ld_curr_daytime, ld_daytime);
+        ln_tot_durationfrac := ln_tot_durationfrac + ln_durationfrac;
+      ELSIF ld_prev_daytime IS NOT NULL AND
+        ld_curr_daytime >= ld_prev_daytime AND
+        ld_curr_end_date > ld_prev_end_date THEN -- second Row onwards
+        IF ld_curr_end_date > ld_daytime+1 THEN
+          ln_durationfrac := (ld_daytime+1) - Greatest(ld_prev_end_date, ld_curr_daytime);
+        ELSE
+          ln_durationfrac := Least(ld_curr_end_date, ld_daytime+1) - Greatest(ld_prev_end_date, ld_curr_daytime, ld_daytime);
+        END IF;
+        ln_tot_durationfrac := ln_tot_durationfrac + ln_durationfrac;
+        ld_prev_daytime     := ld_curr_daytime;
+        ld_prev_end_date    := ld_curr_end_date;
+      END IF;
+    END LOOP;
+    CLOSE c_injWellDownTime;
+    ln_return := ln_return + nvl(ln_tot_durationfrac,0);
+
   ELSE
     ld_period_prev_daytime := ec_pwel_period_status.prev_equal_daytime(p_object_id, ld_daytime, 'EVENT');
+
+    OPEN c_prodWellDownTime(p_object_id, ld_daytime, ld_end_day, ld_period_prev_daytime);
+    LOOP
+      FETCH c_prodWellDownTime INTO ld_curr_daytime, ld_curr_end_date;
+      EXIT WHEN c_prodWellDownTime%NOTFOUND;
+      IF ld_prev_daytime IS NULL THEN -- First Row
+        ld_prev_daytime := ld_curr_daytime;
+        ld_prev_end_date := ld_curr_end_date;
+        ln_durationfrac := Least(ld_curr_end_date, ld_daytime+1) - Greatest(ld_curr_daytime, ld_daytime);
+        ln_tot_durationfrac := ln_tot_durationfrac + ln_durationfrac;
+      ELSIF ld_prev_daytime IS NOT NULL AND
+        ld_curr_daytime >= ld_prev_daytime AND
+        ld_curr_end_date > ld_prev_end_date THEN -- second Row onwards
+        IF ld_curr_end_date > ld_daytime+1 THEN
+          ln_durationfrac := (ld_daytime+1) - Greatest(ld_prev_end_date, ld_curr_daytime);
+        ELSE
+          ln_durationfrac := Least(ld_curr_end_date, ld_daytime+1) - Greatest(ld_prev_end_date, ld_curr_daytime, ld_daytime);
+        END IF;
+        ln_tot_durationfrac := ln_tot_durationfrac + ln_durationfrac;
+        ld_prev_daytime := ld_curr_daytime;
+        ld_prev_end_date    := ld_curr_end_date;
+      END IF;
+    END LOOP;
+    CLOSE c_prodWellDownTime;
+    ln_return := ln_return + nvl(ln_tot_durationfrac,0);
   END IF;
 
-  OPEN c_WellDownTime(p_object_id, ld_daytime, ld_end_day, ld_period_prev_daytime, p_inj_type);
-  LOOP
-    FETCH c_WellDownTime INTO ld_curr_daytime, ld_curr_end_date;
-    EXIT WHEN c_WellDownTime%NOTFOUND;
-    IF ld_prev_daytime IS NULL THEN -- First Row
-      ld_prev_daytime := ld_curr_daytime;
-      ld_prev_end_date := ld_curr_end_date;
-      ln_durationfrac := Least(ld_curr_end_date, ld_daytime+1) - Greatest(ld_curr_daytime, ld_daytime);
-      ln_tot_durationfrac := ln_tot_durationfrac + ln_durationfrac;
-    ELSIF ld_prev_daytime IS NOT NULL AND
-      ld_curr_daytime >= ld_prev_daytime AND
-      ld_curr_end_date > ld_prev_end_date THEN -- second Row onwards
-      IF ld_curr_end_date > ld_daytime+1 THEN
-        ln_durationfrac := (ld_daytime+1) - Greatest(ld_prev_end_date, ld_curr_daytime);
-      ELSE
-        ln_durationfrac := Least(ld_curr_end_date, ld_daytime+1) - Greatest(ld_prev_end_date, ld_curr_daytime, ld_daytime);
-      END IF;
-      ln_tot_durationfrac := ln_tot_durationfrac + ln_durationfrac;
-      ld_prev_daytime := ld_curr_daytime;
-      ld_prev_end_date    := ld_curr_end_date;
-    END IF;
-  END LOOP;
-  CLOSE c_WellDownTime;
-  ln_return := ln_return + nvl(ln_tot_durationfrac,0);
   RETURN ln_return * ecdp_timestamp.getNumHours(ecdp_objects.GetObjClassName(p_object_id), p_object_id, p_daytime);
 END getDailyWellDownHrs;
 
@@ -4155,5 +4196,60 @@ BEGIN
        END LOOP;
 RETURN 'N';
 END wellOnTest;
+
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Procedure      : IsPlannedWell
+-- Description    : Checks for well status whether it is planned or not.
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   : PWEL_PERIOD_STATUS,IWEL_PERIOD_STATUS
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+---------------------------------------------------------------------------------------------------
+FUNCTION IsPlannedWell(p_object_id VARCHAR2, p_daytime DATE)
+RETURN VARCHAR2
+IS
+
+    lv2_planned_flag NUMBER := 0;
+
+BEGIN
+
+    SELECT count(*)
+    INTO lv2_planned_flag
+    FROM pwel_period_status
+    WHERE active_well_status ='PLANNED'
+    AND object_id = p_object_id
+    AND daytime <= p_daytime
+    AND TIME_SPAN='EVENT';
+
+    IF lv2_planned_flag > 0 THEN
+      RETURN 'Y';
+    ELSE
+
+      SELECT count(*)
+      INTO lv2_planned_flag
+      FROM iwel_period_status
+      WHERE object_id = p_object_id
+      AND daytime <= p_daytime
+      AND active_well_status ='PLANNED'
+      AND TIME_SPAN='EVENT';
+
+      IF lv2_planned_flag > 0 THEN
+        RETURN 'Y';
+      END IF;
+
+    END IF;
+    RETURN 'N';
+
+END IsPlannedWell;
 
 END EcDp_Well;

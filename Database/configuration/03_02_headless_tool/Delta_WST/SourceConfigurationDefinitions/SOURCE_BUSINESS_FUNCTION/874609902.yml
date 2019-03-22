@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0074
   NAME: Payment Term Usage
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/PAYMENT_TERM/FROM_CLASS_NAME/PAYMENT_TERM/TO_CLASS_NAME/PAYMENT_TERM
 related: {}

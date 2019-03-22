@@ -20,11 +20,6 @@ CREATE OR REPLACE PACKAGE EcDp_ProductionDay IS
 *****************************************************************/
 
 /*
-* Flush the internal cache of the production day
-*/
-PROCEDURE flush_buffer;
-
-/*
 * findProductionDayDefinition accepts class name, object_id and daytime, returning production day definition
 * class name is optional, p_object_id may be null, p_daytime is mandatory
 * first test: if p_object_id is null then use default production day definition, then exit

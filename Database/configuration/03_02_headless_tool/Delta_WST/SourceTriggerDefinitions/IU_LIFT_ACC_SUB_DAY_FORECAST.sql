@@ -6,11 +6,11 @@ DECLARE
 BEGIN
     -- $Revision: 1.1 $
     -- Common
+    lv_storage_id := ec_lifting_account.storage_id(:NEW.object_id);
     IF Inserting THEN
-        lv_storage_id := ec_lifting_account.storage_id(:NEW.object_id);
 
-        EcDp_Timestamp_Utils.syncUtcDate('STORAGE', lv_storage_id, :NEW.utc_daytime, :NEW.time_zone, :NEW.daytime, :NEW.summer_time);
-        EcDp_Timestamp_Utils.setProductionDay('STORAGE', lv_storage_id, :NEW.utc_daytime, :NEW.production_day);
+        EcDp_Timestamp_Utils.syncUtcDate(lv_storage_id, :NEW.utc_daytime, :NEW.daytime, :NEW.summer_time);
+        EcDp_Timestamp_Utils.setProductionDay(lv_storage_id, :NEW.utc_daytime, :NEW.production_day);
 
         :NEW.record_status := NVL(:NEW.record_status, 'P');
         IF :new.created_by IS NULL THEN
@@ -21,6 +21,9 @@ BEGIN
         END IF;
         :new.rev_no := 0;
     ELSE
+        EcDp_Timestamp_Utils.updateUtcAndDaytime(lv_storage_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime, :OLD.summer_time, :NEW.summer_time);
+        EcDp_Timestamp_Utils.updateProductionDay(lv_storage_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.production_day, :NEW.production_day);
+
         IF Nvl(:new.record_status, 'P') = Nvl(:old.record_status, 'P') THEN
             IF NOT UPDATING('LAST_UPDATED_BY') THEN
                 :new.last_updated_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);

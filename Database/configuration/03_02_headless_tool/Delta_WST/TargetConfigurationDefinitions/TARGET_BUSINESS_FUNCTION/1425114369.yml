@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0209
   NAME: Processing Unit
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/PROCESSING_UNIT/TARGET/PROCESSING_UNIT/CLASS_NAME/PROCESSING_UNIT
 related: {}

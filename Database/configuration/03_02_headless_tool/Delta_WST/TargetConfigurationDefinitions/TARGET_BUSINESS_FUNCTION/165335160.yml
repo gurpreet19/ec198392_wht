@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0060
   NAME: Maintain Equipments
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_copy_equipment
 related: {}

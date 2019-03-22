@@ -8,5 +8,6 @@ properties:
   BF_CODE: FC.1011
   NAME: Forecast Gas Sales Revenues
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.fc/fcst_revn_value_gsales/FUNCTIONAL_AREA_CODE/REVENUE_FORECAST/PRODUCT_COLLECTION_TYPE/GAS_SALES
 related: {}

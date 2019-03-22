@@ -3,7 +3,7 @@ name: JBPM_TASKEVENT
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008719
+  name: PK_JBPM_TASKEVENT
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

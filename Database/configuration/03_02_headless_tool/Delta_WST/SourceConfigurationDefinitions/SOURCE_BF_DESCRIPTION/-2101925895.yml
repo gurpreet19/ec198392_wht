@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0017
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/SPLIT_ITEM_OTHER' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/SPLIT_ITEM_OTHER' )
   DATA_LEVEL: 0.0
   DESCRIPTION: '<p>    The Data Mapping objects are using Split Key objects for the
     cases where    only a share of the amount/quantity is to be included in the Data

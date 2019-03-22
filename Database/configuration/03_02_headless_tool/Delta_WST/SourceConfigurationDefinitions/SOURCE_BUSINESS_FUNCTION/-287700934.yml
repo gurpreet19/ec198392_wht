@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0152
   NAME: Daily Path Nomination Matrix
   PROFILE_CLASS_NAME: NOMINATION_POINT
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/daily_path_nomination_matrix/CLASS/TRNP_DAY_NOM_PATH_MATRIX
 related: {}

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.2079
   NAME: Pilot
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/STORAGE/TARGET/STORAGE/CLASS_NAME/PILOT
 related: {}

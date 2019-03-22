@@ -103,6 +103,51 @@ PO.0123_T: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   properties: {}
   related: {}
   status: ADDED
+PO.0126: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '291514004'
+  keys:
+    STREAM_SET: PO.0126
+    T: STRM_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+PO.0128: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '291514006'
+  keys:
+    STREAM_SET: PO.0128
+    T: STRM_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+PO.0128_02: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '69973067'
+  keys:
+    STREAM_SET: PO.0128_02
+    T: STRM_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+PO.0129: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '291514007'
+  keys:
+    STREAM_SET: PO.0129
+    T: STRM_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+PO.0129_02: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '70002858'
+  keys:
+    STREAM_SET: PO.0129_02
+    T: STRM_SET
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 PP.0016: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '320142163'
   keys:

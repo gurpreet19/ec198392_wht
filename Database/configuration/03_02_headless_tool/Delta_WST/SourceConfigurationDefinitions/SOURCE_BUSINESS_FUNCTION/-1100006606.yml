@@ -8,5 +8,6 @@ properties:
   BF_CODE: SD.0052
   NAME: Forecast - Nomination Location Delivery Events
   PROFILE_CLASS_NAME: NOMINATION_LOCATION
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sd.screens/fcst_nomloc_delivery_events/CLASS1/FCST_SLNL_PRD_DEL_EVT/CLASS2/FCST_SLNP_PRD_DEL_EVT_NL/CLASS_SUB/FCST_SLNP_SUB_DEL_EVT_NL/NAV_MODEL/SALE_COMMERCIAL/BF_PROFILE/SD.0052
 related: {}

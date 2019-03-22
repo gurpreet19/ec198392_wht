@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0013
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/DOC_TEMPLATE' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/DOC_TEMPLATE' )
   DATA_LEVEL: 0.0
   DESCRIPTION: <p>    <strong>Document Template screen</strong>    is used to define and maintain Document Template objects.</p><p>    <strong>Document Template</strong>    objects are used within the Financial Transactions module in EC Revenue to    format the invoices / credit notes / payment requests / etc.</p>
 related: {}

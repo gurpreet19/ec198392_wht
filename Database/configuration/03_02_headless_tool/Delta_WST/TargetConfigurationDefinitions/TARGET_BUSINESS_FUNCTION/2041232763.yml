@@ -8,5 +8,6 @@ properties:
   BF_CODE: TO.0009.02
   NAME: Cargo Document - Other
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.to.screens/cargo_document_other
 related: {}

@@ -160,6 +160,49 @@ CODE_TYPE=ACTIVE_PERF_STATUS CODE=OPEN: !!com.ec.upgrade.ecconfig.model.Configur
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=ACTIVE_WELL_STATUS CODE=CLOSED: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1765446985'
+  keys:
+    CODE: CLOSED
+    CODE_TYPE: ACTIVE_WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 30.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=ACTIVE_WELL_STATUS CODE=CLOSED_LT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1738470416'
+  keys:
+    CODE: CLOSED_LT
+    CODE_TYPE: ACTIVE_WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 40.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=ACTIVE_WELL_STATUS CODE=OPEN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '342657621'
+  keys:
+    CODE: OPEN
+    CODE_TYPE: ACTIVE_WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 20.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=ACTIVE_WELL_STATUS CODE=PLANNED: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-254705223'
+  keys:
+    CODE: PLANNED
+    CODE_TYPE: ACTIVE_WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=ACTUAL_ACCRUAL_CODE CODE=ACCRUAL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-738577342'
   keys:
@@ -175,6 +218,26 @@ CODE_TYPE=ACTUAL_ACCRUAL_CODE CODE=ACTUAL: !!com.ec.upgrade.ecconfig.model.Confi
   keys:
     CODE: ACTUAL
     CODE_TYPE: ACTUAL_ACCRUAL_CODE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=ADJUSTMENT_TYPE CODE=BUY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '606021563'
+  keys:
+    CODE: BUY
+    CODE_TYPE: ADJUSTMENT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=ADJUSTMENT_TYPE CODE=SELL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1607290013'
+  keys:
+    CODE: SELL
+    CODE_TYPE: ADJUSTMENT_TYPE
     T: PROSTY_CODES
   parentKeys: {}
   properties: {}
@@ -986,10 +1049,41 @@ CODE_TYPE=CALC_COND_METHOD CODE=EXTERNAL_5: !!com.ec.upgrade.ecconfig.model.Conf
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=CALC_COND_METHOD CODE=MPM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1341080651'
+  keys:
+    CODE: MPM
+    CODE_TYPE: CALC_COND_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 41.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=CALC_COND_METHOD CODE=MPM2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1376172829'
+  keys:
+    CODE: MPM2
+    CODE_TYPE: CALC_COND_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_COND_METHOD CODE=MPM2_CORR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1389170574'
   keys:
     CODE: MPM2_CORR
+    CODE_TYPE: CALC_COND_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_COND_METHOD CODE=MPM2_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '737558875'
+  keys:
+    CODE: MPM2_NET
     CODE_TYPE: CALC_COND_METHOD
     T: PROSTY_CODES
   parentKeys: {}
@@ -1032,6 +1126,16 @@ CODE_TYPE=CALC_COND_METHOD CODE=POTENTIAL_DEFERED: !!com.ec.upgrade.ecconfig.mod
       Note that only parts of deferments with well active status OPEN is included within the calculation of daily deferred volume
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_COND_METHOD CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1214633222'
+  keys:
+    CODE: VFM_NET
+    CODE_TYPE: CALC_COND_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_COND_METHOD CODE=WELL_EST_DETAIL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-220072570'
   keys:
@@ -1160,10 +1264,41 @@ CODE_TYPE=CALC_GAS_METHOD CODE=MEASURED_NET: !!com.ec.upgrade.ecconfig.model.Con
     DESCRIPTION: Theoretical flow rates set to measured or entered. Values taken directly from the well status record itself without any adjustments.
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_GAS_METHOD CODE=MPM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1922453638'
+  keys:
+    CODE: MPM
+    CODE_TYPE: CALC_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 81.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=CALC_GAS_METHOD CODE=MPM2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '533479416'
+  keys:
+    CODE: MPM2
+    CODE_TYPE: CALC_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_GAS_METHOD CODE=MPM2_CORR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '227498899'
   keys:
     CODE: MPM2_CORR
+    CODE_TYPE: CALC_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_GAS_METHOD CODE=MPM2_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-546840394'
+  keys:
+    CODE: MPM2_NET
     CODE_TYPE: CALC_GAS_METHOD
     T: PROSTY_CODES
   parentKeys: {}
@@ -1228,6 +1363,26 @@ CODE_TYPE=CALC_GAS_METHOD CODE=TOTALIZER_EVENT_EXTRAPOLATE: !!com.ec.upgrade.ecc
     DESCRIPTION: Calculate net volume, daily rate and daily theoretical volume based on the period volume. If no volume for that period, previous period daily rates will be used to extrapolate for the period.
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_GAS_METHOD CODE=VFM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1922445299'
+  keys:
+    CODE: VFM
+    CODE_TYPE: CALC_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_GAS_METHOD CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '619011659'
+  keys:
+    CODE: VFM_NET
+    CODE_TYPE: CALC_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_GAS_METHOD CODE=WELLTEST_FWS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-108115757'
   keys:
@@ -1421,6 +1576,16 @@ CODE_TYPE=CALC_INJ_METHOD CODE=TOTALIZER_EVENT_EXTRAPOLATE: !!com.ec.upgrade.ecc
     DESCRIPTION: Calculate net volume, daily rate and daily theoretical volume based on the period volume. If no volume for that period, previous period daily rates will be used to extrapolate for the period.
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_LOG_STATUS CODE=NO_CALC: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '151344125'
+  keys:
+    CODE: NO_CALC
+    CODE_TYPE: CALC_LOG_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_METHOD CODE=CHOKE_QUADRATIC_CURVE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1883587101'
   keys:
@@ -1483,10 +1648,41 @@ CODE_TYPE=CALC_METHOD CODE=MEASURED: !!com.ec.upgrade.ecconfig.model.Configurati
     DESCRIPTION: Theoretical flow rates set to measured or entered.  Values taken directly from the well status record itself.
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_METHOD CODE=MPM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '672052352'
+  keys:
+    CODE: MPM
+    CODE_TYPE: CALC_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 81.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=CALC_METHOD CODE=MPM2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-641213518'
+  keys:
+    CODE: MPM2
+    CODE_TYPE: CALC_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_METHOD CODE=MPM2_CORR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '352453657'
   keys:
     CODE: MPM2_CORR
+    CODE_TYPE: CALC_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_METHOD CODE=MPM2_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1235546256'
+  keys:
+    CODE: MPM2_NET
     CODE_TYPE: CALC_METHOD
     T: PROSTY_CODES
   parentKeys: {}
@@ -1542,6 +1738,26 @@ CODE_TYPE=CALC_METHOD CODE=USER_EXIT: !!com.ec.upgrade.ecconfig.model.Configurat
     SORT_ORDER: 300.0
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_METHOD CODE=VFM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '672060691'
+  keys:
+    CODE: VFM
+    CODE_TYPE: CALC_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_METHOD CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '735342673'
+  keys:
+    CODE: VFM_NET
+    CODE_TYPE: CALC_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_METHOD CODE=WELL_EST_DETAIL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1737627089'
   keys:
@@ -1650,6 +1866,16 @@ CODE_TYPE=CALC_METHOD_MASS CODE=USER_EXIT: !!com.ec.upgrade.ecconfig.model.Confi
     SORT_ORDER: 120.0
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_METHOD_MASS CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '428612242'
+  keys:
+    CODE: VFM_NET
+    CODE_TYPE: CALC_METHOD_MASS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_OBJECT_TYPE CODE=CALENDAR_COLLECTION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1297191730'
   keys:
@@ -2205,10 +2431,40 @@ CODE_TYPE=CALC_SUB_DAY_COND_METHOD CODE=EXTERNAL_5: !!com.ec.upgrade.ecconfig.mo
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=CALC_SUB_DAY_COND_METHOD CODE=MPM2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '664730171'
+  keys:
+    CODE: MPM2
+    CODE_TYPE: CALC_SUB_DAY_COND_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_COND_METHOD CODE=MPM2_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-285359751'
+  keys:
+    CODE: MPM2_NET
+    CODE_TYPE: CALC_SUB_DAY_COND_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_SUB_DAY_COND_METHOD CODE=MPM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1116259819'
   keys:
     CODE: MPM_NET
+    CODE_TYPE: CALC_SUB_DAY_COND_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_COND_METHOD CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2004952792'
+  keys:
+    CODE: VFM_NET
     CODE_TYPE: CALC_SUB_DAY_COND_METHOD
     T: PROSTY_CODES
   parentKeys: {}
@@ -2225,10 +2481,50 @@ CODE_TYPE=CALC_SUB_DAY_GAS_METHOD CODE=EXTERNAL_5: !!com.ec.upgrade.ecconfig.mod
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=CALC_SUB_DAY_GAS_METHOD CODE=MPM2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1757455642'
+  keys:
+    CODE: MPM2
+    CODE_TYPE: CALC_SUB_DAY_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_GAS_METHOD CODE=MPM2_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '528540888'
+  keys:
+    CODE: MPM2_NET
+    CODE_TYPE: CALC_SUB_DAY_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_SUB_DAY_GAS_METHOD CODE=MPM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '711110358'
   keys:
     CODE: MPM_NET
+    CODE_TYPE: CALC_SUB_DAY_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_GAS_METHOD CODE=VFM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '195247787'
+  keys:
+    CODE: VFM
+    CODE_TYPE: CALC_SUB_DAY_GAS_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_GAS_METHOD CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-177582615'
+  keys:
+    CODE: VFM_NET
     CODE_TYPE: CALC_SUB_DAY_GAS_METHOD
     T: PROSTY_CODES
   parentKeys: {}
@@ -2245,10 +2541,50 @@ CODE_TYPE=CALC_SUB_DAY_METHOD CODE=EXTERNAL_5: !!com.ec.upgrade.ecconfig.model.C
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=CALC_SUB_DAY_METHOD CODE=MPM2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-630185516'
+  keys:
+    CODE: MPM2
+    CODE_TYPE: CALC_SUB_DAY_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_METHOD CODE=MPM2_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-11570030'
+  keys:
+    CODE: MPM2_NET
+    CODE_TYPE: CALC_SUB_DAY_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_SUB_DAY_METHOD CODE=MPM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-553238564'
   keys:
     CODE: MPM_NET
+    CODE_TYPE: CALC_SUB_DAY_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_METHOD CODE=VFM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '672416433'
+  keys:
+    CODE: VFM
+    CODE_TYPE: CALC_SUB_DAY_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_METHOD CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1441931537'
+  keys:
+    CODE: VFM_NET
     CODE_TYPE: CALC_SUB_DAY_METHOD
     T: PROSTY_CODES
   parentKeys: {}
@@ -2275,10 +2611,50 @@ CODE_TYPE=CALC_SUB_DAY_WAT_METHOD CODE=GAS_WGR: !!com.ec.upgrade.ecconfig.model.
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=CALC_SUB_DAY_WAT_METHOD CODE=MPM2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1485837015'
+  keys:
+    CODE: MPM2
+    CODE_TYPE: CALC_SUB_DAY_WAT_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_WAT_METHOD CODE=MPM2_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1713343847'
+  keys:
+    CODE: MPM2_NET
+    CODE_TYPE: CALC_SUB_DAY_WAT_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_SUB_DAY_WAT_METHOD CODE=MPM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-636143513'
   keys:
     CODE: MPM_NET
+    CODE_TYPE: CALC_SUB_DAY_WAT_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_WAT_METHOD CODE=VFM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '921909436'
+  keys:
+    CODE: VFM
+    CODE_TYPE: CALC_SUB_DAY_WAT_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_SUB_DAY_WAT_METHOD CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1524836486'
+  keys:
+    CODE: VFM_NET
     CODE_TYPE: CALC_SUB_DAY_WAT_METHOD
     T: PROSTY_CODES
   parentKeys: {}
@@ -2426,10 +2802,41 @@ CODE_TYPE=CALC_WATER_METHOD CODE=MEASURED: !!com.ec.upgrade.ecconfig.model.Confi
     DESCRIPTION: Theoretical flow rates set to measured or entered. Values taken directly from the well status record itself.
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_WATER_METHOD CODE=MPM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1766746104'
+  keys:
+    CODE: MPM
+    CODE_TYPE: CALC_WATER_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 71.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=CALC_WATER_METHOD CODE=MPM2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1065445574'
+  keys:
+    CODE: MPM2
+    CODE_TYPE: CALC_WATER_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_WATER_METHOD CODE=MPM2_CORR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-228901487'
   keys:
     CODE: MPM2_CORR
+    CODE_TYPE: CALC_WATER_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_WATER_METHOD CODE=MPM2_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1531394312'
+  keys:
+    CODE: MPM2_NET
     CODE_TYPE: CALC_WATER_METHOD
     T: PROSTY_CODES
   parentKeys: {}
@@ -2472,6 +2879,26 @@ CODE_TYPE=CALC_WATER_METHOD CODE=POTENTIAL_DEFERED: !!com.ec.upgrade.ecconfig.mo
       Note that only parts of deferments with well active status OPEN is included within the calculation of daily deferred volume
   related: {}
   status: MODIFIED
+CODE_TYPE=CALC_WATER_METHOD CODE=VFM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1766754443'
+  keys:
+    CODE: VFM
+    CODE_TYPE: CALC_WATER_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CALC_WATER_METHOD CODE=VFM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1768052791'
+  keys:
+    CODE: VFM_NET
+    CODE_TYPE: CALC_WATER_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CALC_WATER_METHOD CODE=WELL_EST_DETAIL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '759715145'
   keys:
@@ -2752,6 +3179,26 @@ CODE_TYPE=CAL_RECUR_HOLIDAY_FUNC CODE=GETWHITSUNDAY: !!com.ec.upgrade.ecconfig.m
   fileName: '-1108230957'
   keys:
     CODE: GETWHITSUNDAY
+    CODE_TYPE: CAL_RECUR_HOLIDAY_FUNC
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CAL_RECUR_HOLIDAY_FUNC CODE=UK_EARLY_MAY_BANK_HOLIDAY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1622201787'
+  keys:
+    CODE: UK_EARLY_MAY_BANK_HOLIDAY
+    CODE_TYPE: CAL_RECUR_HOLIDAY_FUNC
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CAL_RECUR_HOLIDAY_FUNC CODE=UK_SPRING_BANK_HOLIDAY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-344389235'
+  keys:
+    CODE: UK_SPRING_BANK_HOLIDAY
     CODE_TYPE: CAL_RECUR_HOLIDAY_FUNC
     T: PROSTY_CODES
   parentKeys: {}
@@ -3113,6 +3560,286 @@ CODE_TYPE=CHOKE_UOM CODE=DEG: !!com.ec.upgrade.ecconfig.model.ConfigurationItemG
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=CHOKE_UOM_TARGET CODE=1/64-INCH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1562264994'
+  keys:
+    CODE: 1/64-INCH
+    CODE_TYPE: CHOKE_UOM_TARGET
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CHOKE_UOM_TARGET CODE=CV: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2131224884'
+  keys:
+    CODE: CV
+    CODE_TYPE: CHOKE_UOM_TARGET
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CHOKE_UOM_TARGET CODE=DEG: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1643461459'
+  keys:
+    CODE: DEG
+    CODE_TYPE: CHOKE_UOM_TARGET
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CHOKE_UOM_TARGET CODE=MM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2131224583'
+  keys:
+    CODE: MM
+    CODE_TYPE: CHOKE_UOM_TARGET
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CHOKE_UOM_TARGET CODE=PCT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1643449976'
+  keys:
+    CODE: PCT
+    CODE_TYPE: CHOKE_UOM_TARGET
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_ATTRIBUTE_DATA_TYPE CODE=DATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1772415118'
+  keys:
+    CODE: DATE
+    CODE_TYPE: CLASS_ATTRIBUTE_DATA_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_ATTRIBUTE_DATA_TYPE CODE=NUMBER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2115640845'
+  keys:
+    CODE: NUMBER
+    CODE_TYPE: CLASS_ATTRIBUTE_DATA_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_ATTRIBUTE_DATA_TYPE CODE=STRING: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2036948267'
+  keys:
+    CODE: STRING
+    CODE_TYPE: CLASS_ATTRIBUTE_DATA_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_DEPENDENCY_TYPE CODE=ACCESS_CONTROLLED_BY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1498910893'
+  keys:
+    CODE: ACCESS_CONTROLLED_BY
+    CODE_TYPE: CLASS_DEPENDENCY_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_DEPENDENCY_TYPE CODE=IMPLEMENTS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '751807350'
+  keys:
+    CODE: IMPLEMENTS
+    CODE_TYPE: CLASS_DEPENDENCY_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_DEPENDENCY_TYPE CODE=REPORT_MEMBER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2015783551'
+  keys:
+    CODE: REPORT_MEMBER
+    CODE_TYPE: CLASS_DEPENDENCY_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=1HR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '694876017'
+  keys:
+    CODE: 1HR
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=2HR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '694876978'
+  keys:
+    CODE: 2HR
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=DAY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '694894066'
+  keys:
+    CODE: DAY
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=EVENT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2074798960'
+  keys:
+    CODE: EVENT
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=MTH: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '694903287'
+  keys:
+    CODE: MTH
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=QTR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '694907141'
+  keys:
+    CODE: QTR
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=SAMPLE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '275912564'
+  keys:
+    CODE: SAMPLE
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=VERSIONED: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '918710605'
+  keys:
+    CODE: VERSIONED
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=WEEK: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '67448894'
+  keys:
+    CODE: WEEK
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TIME_SCOPE CODE=YR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '299511267'
+  keys:
+    CODE: YR
+    CODE_TYPE: CLASS_TIME_SCOPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TYPE CODE=DATA: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '729101548'
+  keys:
+    CODE: DATA
+    CODE_TYPE: CLASS_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TYPE CODE=INTERFACE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1000352023'
+  keys:
+    CODE: INTERFACE
+    CODE_TYPE: CLASS_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TYPE CODE=META: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '729373511'
+  keys:
+    CODE: META
+    CODE_TYPE: CLASS_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TYPE CODE=OBJECT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '902470657'
+  keys:
+    CODE: OBJECT
+    CODE_TYPE: CLASS_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TYPE CODE=REPORT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '991317494'
+  keys:
+    CODE: REPORT
+    CODE_TYPE: CLASS_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TYPE CODE=SUB_CLASS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1355934327'
+  keys:
+    CODE: SUB_CLASS
+    CODE_TYPE: CLASS_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CLASS_TYPE CODE=TABLE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1142070956'
+  keys:
+    CODE: TABLE
+    CODE_TYPE: CLASS_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CM_SRC_OPERATOR CODE=EQUALS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1568994802'
   keys:
@@ -3173,10 +3900,30 @@ CODE_TYPE=CM_SRC_OPERATOR CODE=NOT_LIKE: !!com.ec.upgrade.ecconfig.model.Configu
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=CM_SRC_OPERATOR_OBJECTLIST CODE=EXISTS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1037042203'
+  keys:
+    CODE: EXISTS
+    CODE_TYPE: CM_SRC_OPERATOR_OBJECTLIST
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=CM_SRC_OPERATOR_OBJECTLIST CODE=IN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-2123805906'
   keys:
     CODE: IN
+    CODE_TYPE: CM_SRC_OPERATOR_OBJECTLIST
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=CM_SRC_OPERATOR_OBJECTLIST CODE=NOT_EXISTS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1157202033'
+  keys:
+    CODE: NOT_EXISTS
     CODE_TYPE: CM_SRC_OPERATOR_OBJECTLIST
     T: PROSTY_CODES
   parentKeys: {}
@@ -5013,16 +5760,6 @@ CODE_TYPE=COST_MAPPING_JE_SOURCE CODE=IFAC: !!com.ec.upgrade.ecconfig.model.Conf
   properties: {}
   related: {}
   status: ADDED
-CODE_TYPE=COST_MAPPING_JE_SOURCE CODE=MANUAL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-909384157'
-  keys:
-    CODE: MANUAL
-    CODE_TYPE: COST_MAPPING_JE_SOURCE
-    T: PROSTY_CODES
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 CODE_TYPE=COST_MAPPING_SOURCE_TYPE CODE=FIN_ACCOUNT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '679517597'
   keys:
@@ -6063,6 +6800,46 @@ CODE_TYPE=DATE_FILTER_TYPE CODE=WITHPPA: !!com.ec.upgrade.ecconfig.model.Configu
   keys:
     CODE: WITHPPA
     CODE_TYPE: DATE_FILTER_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=DB_MAPPING_TYPE CODE=ATTRIBUTE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2139051887'
+  keys:
+    CODE: ATTRIBUTE
+    CODE_TYPE: DB_MAPPING_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=DB_MAPPING_TYPE CODE=COLUMN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1637050015'
+  keys:
+    CODE: COLUMN
+    CODE_TYPE: DB_MAPPING_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=DB_MAPPING_TYPE CODE=FUNCTION: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '757325603'
+  keys:
+    CODE: FUNCTION
+    CODE_TYPE: DB_MAPPING_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=DB_MAPPING_TYPE CODE=SUB_SELECT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1005251450'
+  keys:
+    CODE: SUB_SELECT
+    CODE_TYPE: DB_MAPPING_TYPE
     T: PROSTY_CODES
   parentKeys: {}
   properties: {}
@@ -8867,6 +9644,16 @@ CODE_TYPE=DT_ANALYSIS_STATUS CODE=ANALYSIS_STATUS: !!com.ec.upgrade.ecconfig.mod
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=DT_CLASS_MAPPING CODE=DT_DEF_STATUS_LOG_WELL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1384350394'
+  keys:
+    CODE: DT_DEF_STATUS_LOG_WELL
+    CODE_TYPE: DT_CLASS_MAPPING
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=DT_CLASS_MAPPING CODE=DT_FCTY_PLAN_BUDGET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-354198092'
   keys:
@@ -8941,6 +9728,16 @@ CODE_TYPE=DT_CLASS_MAPPING CODE=DT_WBI_SAMPLE: !!com.ec.upgrade.ecconfig.model.C
   fileName: '456763393'
   keys:
     CODE: DT_WBI_SAMPLE
+    CODE_TYPE: DT_CLASS_MAPPING
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=DT_CLASS_MAPPING CODE=DT_WELL_TEST_RAW_DATA: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '94682291'
+  keys:
+    CODE: DT_WELL_TEST_RAW_DATA
     CODE_TYPE: DT_CLASS_MAPPING
     T: PROSTY_CODES
   parentKeys: {}
@@ -9882,6 +10679,66 @@ CODE_TYPE=EQPM_CONN CODE=WELL_HOOKUP: !!com.ec.upgrade.ecconfig.model.Configurat
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=EQPM_DT_GRP_TYPE CODE=collection_point: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1611801885'
+  keys:
+    CODE: collection_point
+    CODE_TYPE: EQPM_DT_GRP_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=EQPM_DT_GRP_TYPE CODE=operational: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '92072612'
+  keys:
+    CODE: operational
+    CODE_TYPE: EQPM_DT_GRP_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=EQPM_DT_OBJ_TYPE CODE=COLLECTION_POINT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1921647019'
+  keys:
+    CODE: COLLECTION_POINT
+    CODE_TYPE: EQPM_DT_OBJ_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=EQPM_DT_OBJ_TYPE CODE=FCTY_CLASS_1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1321314025'
+  keys:
+    CODE: FCTY_CLASS_1
+    CODE_TYPE: EQPM_DT_OBJ_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=EQPM_DT_OBJ_TYPE CODE=FCTY_CLASS_2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1321314026'
+  keys:
+    CODE: FCTY_CLASS_2
+    CODE_TYPE: EQPM_DT_OBJ_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=EQPM_DT_OBJ_TYPE CODE=OPERATOR_ROUTE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '872437482'
+  keys:
+    CODE: OPERATOR_ROUTE
+    CODE_TYPE: EQPM_DT_OBJ_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=EQPM_ON_TIME_METHOD CODE=EQUIP_DOWNTIME: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '2043138566'
   keys:
@@ -10249,6 +11106,49 @@ CODE_TYPE=EVENT_REASON_GROUP CODE=EVENT_REASON_GROUP_2: !!com.ec.upgrade.ecconfi
   keys:
     CODE: EVENT_REASON_GROUP_2
     CODE_TYPE: EVENT_REASON_GROUP
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=EVENT_TYPE CODE=H2S: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '331168969'
+  keys:
+    CODE: H2S
+    CODE_TYPE: EVENT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related:
+    CTRL_CODE_DEPENDENCY:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CODE1: H2S
+        CODE2: MBAR
+        CODE3: null
+        CODE_TYPE1: EVENT_TYPE
+        CODE_TYPE2: EVENT_UNIT
+        CODE_TYPE3: null
+        DEPENDENCY_TYPE: WHATEVER
+        T: CTRL_CODE_DEPENDENCY
+      parentKeys:
+        PROSTY_CODES.CODE: H2S
+        PROSTY_CODES.CODE_TYPE: EVENT_TYPE
+      properties:
+        CODE1: H2S
+        CODE2: MBAR
+        CODE3: null
+        CODE_TYPE1: EVENT_TYPE
+        CODE_TYPE2: EVENT_UNIT
+        CODE_TYPE3: null
+        DEPENDENCY_TYPE: WHATEVER
+      status: ADDED
+  status: UNDEFINED
+CODE_TYPE=EVENT_UNIT CODE=MBAR: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1984671184'
+  keys:
+    CODE: MBAR
+    CODE_TYPE: EVENT_UNIT
     T: PROSTY_CODES
   parentKeys: {}
   properties: {}
@@ -11133,6 +12033,16 @@ CODE_TYPE=FCST_OBJECT_TYPES CODE=FCTY_CLASS_1: !!com.ec.upgrade.ecconfig.model.C
   fileName: '-191726042'
   keys:
     CODE: FCTY_CLASS_1
+    CODE_TYPE: FCST_OBJECT_TYPES
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=FCST_OBJECT_TYPES CODE=PLANNED_WELL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1963140322'
+  keys:
+    CODE: PLANNED_WELL
     CODE_TYPE: FCST_OBJECT_TYPES
     T: PROSTY_CODES
   parentKeys: {}
@@ -12526,6 +13436,16 @@ CODE_TYPE=FLWL_CALC_GAS_MTD CODE=MPM: !!com.ec.upgrade.ecconfig.model.Configurat
   fileName: '-5260326'
   keys:
     CODE: MPM
+    CODE_TYPE: FLWL_CALC_GAS_MTD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=FLWL_CALC_GAS_MTD CODE=MPM_NET: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-410608744'
+  keys:
+    CODE: MPM_NET
     CODE_TYPE: FLWL_CALC_GAS_MTD
     T: PROSTY_CODES
   parentKeys: {}
@@ -14598,6 +15518,26 @@ CODE_TYPE=INITIATE_DAY CODE=UE_BS_NEW_DAY_END: !!com.ec.upgrade.ecconfig.model.C
     DESCRIPTION: User Exit
   related: {}
   status: MODIFIED
+CODE_TYPE=INJ_EVENT_TYPE CODE=COMMENT1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '242935916'
+  keys:
+    CODE: COMMENT1
+    CODE_TYPE: INJ_EVENT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=INJ_EVENT_TYPE CODE=COMMENT2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '242935917'
+  keys:
+    CODE: COMMENT2
+    CODE_TYPE: INJ_EVENT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=INT_BASE_AMOUNT_SRC_CODE CODE=CORRECTION_INV_INTEREST: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-767594617'
   keys:
@@ -16471,6 +17411,36 @@ CODE_TYPE=OPP_TYPE CODE=FOB: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGr
   keys:
     CODE: FOB
     CODE_TYPE: OPP_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=PARTITIONING_OPERATOR CODE=ALL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1351958391'
+  keys:
+    CODE: ALL
+    CODE_TYPE: PARTITIONING_OPERATOR
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=PARTITIONING_OPERATOR CODE=IN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1618956177'
+  keys:
+    CODE: IN
+    CODE_TYPE: PARTITIONING_OPERATOR
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=PARTITIONING_OPERATOR CODE=NOT IN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1635654660'
+  keys:
+    CODE: NOT IN
+    CODE_TYPE: PARTITIONING_OPERATOR
     T: PROSTY_CODES
   parentKeys: {}
   properties: {}
@@ -21770,6 +22740,16 @@ CODE_TYPE=TANK_BF_USAGE CODE=PO.0005.04: !!com.ec.upgrade.ecconfig.model.Configu
   properties: {}
   related: {}
   status: DELETED
+CODE_TYPE=TANK_BF_USAGE CODE=PO.0132: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-508551307'
+  keys:
+    CODE: PO.0132
+    CODE_TYPE: TANK_BF_USAGE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=TANK_BSW_VOL_METHOD CODE=WELL_TRUCK: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1853226008'
   keys:
@@ -21835,6 +22815,28 @@ CODE_TYPE=TANK_METER_FREQ CODE=DAY: !!com.ec.upgrade.ecconfig.model.Configuratio
         PROSTY_CODES.CODE_TYPE: TANK_METER_FREQ
       properties: {}
       status: DELETED
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CODE1: DAY
+        CODE2: PO.0132
+        CODE3: null
+        CODE_TYPE1: TANK_METER_FREQ
+        CODE_TYPE2: TANK_BF_USAGE
+        CODE_TYPE3: null
+        DEPENDENCY_TYPE: WHATEVER
+        T: CTRL_CODE_DEPENDENCY
+      parentKeys:
+        PROSTY_CODES.CODE: DAY
+        PROSTY_CODES.CODE_TYPE: TANK_METER_FREQ
+      properties:
+        CODE1: DAY
+        CODE2: PO.0132
+        CODE3: null
+        CODE_TYPE1: TANK_METER_FREQ
+        CODE_TYPE2: TANK_BF_USAGE
+        CODE_TYPE3: null
+        DEPENDENCY_TYPE: WHATEVER
+      status: ADDED
   status: UNDEFINED
 CODE_TYPE=TANK_METER_FREQ CODE=EVENT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '2062919928'
@@ -21861,6 +22863,28 @@ CODE_TYPE=TANK_METER_FREQ CODE=EVENT: !!com.ec.upgrade.ecconfig.model.Configurat
         PROSTY_CODES.CODE_TYPE: TANK_METER_FREQ
       properties: {}
       status: DELETED
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CODE1: EVENT
+        CODE2: PO.0132
+        CODE3: null
+        CODE_TYPE1: TANK_METER_FREQ
+        CODE_TYPE2: TANK_BF_USAGE
+        CODE_TYPE3: null
+        DEPENDENCY_TYPE: WHATEVER
+        T: CTRL_CODE_DEPENDENCY
+      parentKeys:
+        PROSTY_CODES.CODE: EVENT
+        PROSTY_CODES.CODE_TYPE: TANK_METER_FREQ
+      properties:
+        CODE1: EVENT
+        CODE2: PO.0132
+        CODE3: null
+        CODE_TYPE1: TANK_METER_FREQ
+        CODE_TYPE2: TANK_BF_USAGE
+        CODE_TYPE3: null
+        DEPENDENCY_TYPE: WHATEVER
+      status: ADDED
   status: UNDEFINED
 CODE_TYPE=TANK_NET_VOL_METHOD CODE=USER_EXIT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1785200625'
@@ -21914,6 +22938,39 @@ CODE_TYPE=TDEV_EVENT_TYPE CODE=EMULSION_BREAKER: !!com.ec.upgrade.ecconfig.model
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=TDEV_EVENT_TYPE CODE=H2S: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-67868115'
+  keys:
+    CODE: H2S
+    CODE_TYPE: TDEV_EVENT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related:
+    CTRL_CODE_DEPENDENCY:
+    - !!com.ec.upgrade.ecconfig.model.ConfigurationItemExtended
+      keys:
+        CODE1: H2S
+        CODE2: MBAR
+        CODE3: null
+        CODE_TYPE1: TDEV_EVENT_TYPE
+        CODE_TYPE2: EVENT_UNIT
+        CODE_TYPE3: null
+        DEPENDENCY_TYPE: WHATEVER
+        T: CTRL_CODE_DEPENDENCY
+      parentKeys:
+        PROSTY_CODES.CODE: H2S
+        PROSTY_CODES.CODE_TYPE: TDEV_EVENT_TYPE
+      properties:
+        CODE1: H2S
+        CODE2: MBAR
+        CODE3: null
+        CODE_TYPE1: TDEV_EVENT_TYPE
+        CODE_TYPE2: EVENT_UNIT
+        CODE_TYPE3: null
+        DEPENDENCY_TYPE: WHATEVER
+      status: ADDED
+  status: UNDEFINED
 CODE_TYPE=TDEV_EVENT_TYPE CODE=PROD_WATER_DENSITY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-730634092'
   keys:
@@ -21944,10 +23001,70 @@ CODE_TYPE=TDEV_EVENT_TYPE CODE=TDEV_IN_BSW: !!com.ec.upgrade.ecconfig.model.Conf
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=TDEV_INJ_EVENT_TYPE CODE=COMMENT1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-910783608'
+  keys:
+    CODE: COMMENT1
+    CODE_TYPE: TDEV_INJ_EVENT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=TDEV_INJ_EVENT_TYPE CODE=COMMENT2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-910783607'
+  keys:
+    CODE: COMMENT2
+    CODE_TYPE: TDEV_INJ_EVENT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=TDEV_INJ_METER CODE=INJ_METER_1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1758571599'
+  keys:
+    CODE: INJ_METER_1
+    CODE_TYPE: TDEV_INJ_METER
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=TDEV_INJ_METER CODE=INJ_METER_2: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1758571600'
+  keys:
+    CODE: INJ_METER_2
+    CODE_TYPE: TDEV_INJ_METER
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=TDEV_INJ_METER CODE=INJ_METER_3: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1758571601'
+  keys:
+    CODE: INJ_METER_3
+    CODE_TYPE: TDEV_INJ_METER
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=TDEV_METER CODE=TDEV_GAS_METER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '344996753'
   keys:
     CODE: TDEV_GAS_METER
+    CODE_TYPE: TDEV_METER
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=TDEV_METER CODE=TDEV_INJ_METER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1485812835'
+  keys:
+    CODE: TDEV_INJ_METER
     CODE_TYPE: TDEV_METER
     T: PROSTY_CODES
   parentKeys: {}
@@ -23804,6 +24921,46 @@ CODE_TYPE=TZ_NAME CODE=Europe/Oslo: !!com.ec.upgrade.ecconfig.model.Configuratio
   properties: {}
   related: {}
   status: ADDED
+CODE_TYPE=T_BASIS_OBJECT_TYPE CODE=BUTTON: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '705402591'
+  keys:
+    CODE: BUTTON
+    CODE_TYPE: T_BASIS_OBJECT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=T_BASIS_OBJECT_TYPE CODE=CLASS: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-807891957'
+  keys:
+    CODE: CLASS
+    CODE_TYPE: T_BASIS_OBJECT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=T_BASIS_OBJECT_TYPE CODE=PROFILE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-158134404'
+  keys:
+    CODE: PROFILE
+    CODE_TYPE: T_BASIS_OBJECT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=T_BASIS_OBJECT_TYPE CODE=URL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1194117950'
+  keys:
+    CODE: URL
+    CODE_TYPE: T_BASIS_OBJECT_TYPE
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE_TYPE=UNMAPPED_JOURNAL_MOVE_CODE CODE=TO_COST_MAPPING: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '163836191'
   keys:
@@ -23979,6 +25136,16 @@ CODE_TYPE=UOM_GROUP CODE=V: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGro
   keys:
     CODE: V
     CODE_TYPE: UOM_GROUP
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=USER_DOC_ACTION CODE=CALC_DOC: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '634747038'
+  keys:
+    CODE: CALC_DOC
+    CODE_TYPE: USER_DOC_ACTION
     T: PROSTY_CODES
   parentKeys: {}
   properties: {}
@@ -26134,6 +27301,153 @@ CODE_TYPE=WELL_POT_WI_METHOD CODE=FORECAST_PROD: !!com.ec.upgrade.ecconfig.model
   keys:
     CODE: FORECAST_PROD
     CODE_TYPE: WELL_POT_WI_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=WELL_STATUS CODE=LT_CLOSED: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1296921727'
+  keys:
+    CODE: LT_CLOSED
+    CODE_TYPE: WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 7.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=WELL_STATUS CODE=NORMAL: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1505393111'
+  keys:
+    CODE: NORMAL
+    CODE_TYPE: WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 3.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=WELL_STATUS CODE=PLANNED: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2044051294'
+  keys:
+    CODE: PLANNED
+    CODE_TYPE: WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=WELL_STATUS CODE=REDUCED: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-466479460'
+  keys:
+    CODE: REDUCED
+    CODE_TYPE: WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 2.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=WELL_STATUS CODE=SHUT_IN: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '522608782'
+  keys:
+    CODE: SHUT_IN
+    CODE_TYPE: WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 6.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=WELL_STATUS CODE=SUSPENDED: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1015830215'
+  keys:
+    CODE: SUSPENDED
+    CODE_TYPE: WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 4.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=WELL_STATUS CODE=WORK_OVER: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1765735616'
+  keys:
+    CODE: WORK_OVER
+    CODE_TYPE: WELL_STATUS
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 5.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=WELL_STD_GAS_DENSITY_METHOD CODE=ANALYSIS_QUALITY_STRM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '197449589'
+  keys:
+    CODE: ANALYSIS_QUALITY_STRM
+    CODE_TYPE: WELL_STD_GAS_DENSITY_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=WELL_STD_GAS_DENSITY_METHOD CODE=USER_EXIT: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-543344312'
+  keys:
+    CODE: USER_EXIT
+    CODE_TYPE: WELL_STD_GAS_DENSITY_METHOD
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties:
+    SORT_ORDER: 50.0
+  related: {}
+  status: MODIFIED
+CODE_TYPE=WELL_TEST_AUTO_GEN CODE=OFF: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '470335730'
+  keys:
+    CODE: 'OFF'
+    CODE_TYPE: WELL_TEST_AUTO_GEN
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=WELL_TEST_AUTO_GEN CODE=ON: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2093382108'
+  keys:
+    CODE: 'ON'
+    CODE_TYPE: WELL_TEST_AUTO_GEN
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=WELL_TEST_LOG_FLUSH CODE=10: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1440827659'
+  keys:
+    CODE: '10'
+    CODE_TYPE: WELL_TEST_LOG_FLUSH
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=WELL_TEST_LOG_FLUSH CODE=15: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1440827664'
+  keys:
+    CODE: '15'
+    CODE_TYPE: WELL_TEST_LOG_FLUSH
+    T: PROSTY_CODES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE_TYPE=WELL_TEST_LOG_FLUSH CODE=30: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1440827721'
+  keys:
+    CODE: '30'
+    CODE_TYPE: WELL_TEST_LOG_FLUSH
     T: PROSTY_CODES
   parentKeys: {}
   properties: {}

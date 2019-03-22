@@ -14,16 +14,16 @@ properties:
     Mass and Volume).</p><p>    <u> The conversion can be done on three different
     levels: </u> <br> <strong> - Country </strong> as the    highest level, <br> <strong>
     - Node  </strong> and <br> <strong> - Field </strong> as the lowest level.<br>    Lower
-    levels will always override higher level.</p><p><span style="color: rgb(0, 0,
-    153);">    When entering the Master quantity for a Stream Item in the EC Revenue    Quantity
-    module, the system can automatically calculate the quantity in    other UOMs defined
-    for the Stream Item.<br>   <u> For instance,</u> the Stream Item may have Volume
-    as Master quantity and also    have an Energy UOM defined.<br>    By defining
-    a Conversion Factor between Volume and Energy - a GCV factor,    the system can
-    calculate the energy quantity based on the volume quantity.</span></p><p>    <u>The
-    following conversions are available:</u><br>    <strong>Density:</strong>    For
-    converting between Volume and Mass, and vice versa<br>    <strong>GCV:</strong>    For
-    converting between Volume and Energy, and vice versa<br>    <strong>MCV:</strong>    For
+    levels will always override higher level.</p><p><em><span style="color: rgb(0,
+    102, 204);"> When entering the Master quantity for a Stream Item in the EC Revenue    Quantity
+    module, the system can automatically calculate the quantity in  other UOMs defined
+    for the Stream Item.<br><u> For instance,</u> the Stream Item may have Volume
+    as Master quantity and also    have an Energy UOM defined.<br> By defining a Conversion
+    Factor between Volume and Energy - a GCV factor,    the system can calculate the
+    energy quantity based on the volume quantity.</span></em></p><p>    <u>The following
+    conversions are available:</u><br>    <strong>Density:</strong>    For converting
+    between Volume and Mass, and vice versa<br>    <strong>GCV:</strong>    For converting
+    between Volume and Energy, and vice versa<br>    <strong>MCV:</strong>    For
     converting between Mass and Energy, and vice versa</p><p>Each Stream Item has
     a configuration attribute -    <strong><em>the Conversion Method attribute</em></strong>
     - telling how to    do conversion between the different UOM Groups (Energy, Mass
@@ -33,26 +33,26 @@ properties:
     of the Stream Items    pick up conversion objects - either at Node, Field, or
     Country and refer to    these objects at the instantiated records, both monthly
     and daily.</p><p>    <u>The Conversion Factors</u>    are objects with normal
-    versioning, but the screen is in a way treating    them as data which gives behavior
+    versioning, but the screen is in a way treating them as data which gives behavior
     for the screen as follows:<br>    - The screen has a Master-Detail type of layout
-    where the master level    shows the latest version of the object for the selected
+    where the master level shows the latest version of the object for the selected
     year.<br>    If there is no version starting in the year given by the Year set
     in the    navigator then the newest version having a version start date prior
-    to this    year is listed.<br>    - The detail section shows all versions having
-    a version start date after    the 1st of January of the Year set in the navigator.</p><p>    <strong>Master
-    section of the screen:</strong><br>    The Master section is read-only for all
-    data elements except the End Date,    so for changing the actual conversion factors
-    and UOMs the user has to set    the year selector such that the version in question
-    is listed in the Detail    section.<br>    <u>Note:</u>    a side-effect of this
-    is that the user will not be able to change the Code    / Name / Product / (Country/Field/Node)
-    once it has been set.</p><p>    <u>Also note:</u>    It is NOT allowed to add
-    a New Version for a Daytime where there is already    one, i.e. when adding a
-    New Version of the object the version Daytime hasto be AFTER the latest existing
-    one. If the user needs to add a New Version    <em>in between</em> then the user
-    has to delete the versions having Version    Date after the one you want to add,
-    and then add the New Version. Then add    back the ones just deleted.<br>    <u>Also
-    note:</u>    if the user set an end-date to the object then it is not allowed
-    to add new    versions.</p><p>    <strong>ConversionFactorSetup scheduler job</strong>    has
-    to be enabled in order to be able to save data for this BF when the    system
-    attribute CASCADE_BOE_FACT_CHANGE = MANUAL | AUTO.</p>'
+    to this year is listed.<br>- The detail section shows all versions having a version
+    start date after    the 1st of January of the Year set in the navigator.</p><p><strong
+    style="color: rgb(0, 102, 204);">Master Section</strong></p><p>The Master section
+    is read-only for all data elements except the End Date,    so for changing the
+    actual conversion factors and UOMs the user has to set    the year selector such
+    that the version in question is listed in the Detail    section.<br>    <u>Note:</u>    a
+    side-effect of this is that the user will not be able to change the Code    /
+    Name / Product / (Country/Field/Node) once it has been set.</p><p>    <u>Also
+    note:</u>    It is NOT allowed to add a New Version for a Daytime where there
+    is already    one, i.e. when adding a New Version of the object the version Daytime
+    hasto be AFTER the latest existing one. If the user needs to add a New Version    <em>in
+    between</em> then the user has to delete the versions having Version    Date after
+    the one you want to add, and then add the New Version. Then add    back the ones
+    just deleted.<br>    <u>Also note:</u>    if the user set an end-date to the object
+    then it is not allowed to add new    versions.</p><p>    <strong>ConversionFactorSetup
+    scheduler job</strong>    has to be enabled in order to be able to save data for
+    this BF when the    system attribute CASCADE_BOE_FACT_CHANGE = MANUAL | AUTO.</p>'
 related: {}

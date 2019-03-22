@@ -561,6 +561,24 @@ CREATE OR REPLACE TYPE BODY T_REVN_DOC_OP_CONTEXT AS
                     ecdp_revn_common.gv2_true
                 END,
             document_key = l_ifac_item.document_key,
+            preceding_li_key = CASE
+                WHEN preceding_li_key=l_ifac_item.line_item_key THEN
+                    null
+                ELSE
+                    preceding_li_key
+                END,
+            preceding_doc_key= CASE
+                WHEN preceding_doc_key=l_ifac_item.document_key THEN
+                    null
+                ELSE
+                    preceding_doc_key
+                END,
+            preceding_trans_key= CASE
+                WHEN preceding_trans_key=l_ifac_item.transaction_key THEN
+                    null
+                ELSE
+                    preceding_trans_key
+                END,
             last_updated_by = ECDP_REVN_COMMON.gv2_user_system
         WHERE source_entry_no = l_ifac_item.source_entry_no;
     END;
@@ -655,6 +673,24 @@ CREATE OR REPLACE TYPE BODY T_REVN_DOC_OP_CONTEXT AS
                     ecdp_revn_common.gv2_true
                 END,
             document_key = l_ifac_item.document_key,
+            preceding_li_key = CASE
+                WHEN preceding_li_key=l_ifac_item.line_item_key THEN
+                    null
+                ELSE
+                    preceding_li_key
+                END,
+            preceding_doc_key= CASE
+                WHEN preceding_doc_key=l_ifac_item.document_key THEN
+                    null
+                ELSE
+                    preceding_doc_key
+                END,
+            preceding_trans_key= CASE
+                WHEN preceding_trans_key=l_ifac_item.transaction_key THEN
+                    null
+                ELSE
+                    preceding_trans_key
+                END,
             last_updated_by = ECDP_REVN_COMMON.gv2_user_system
         WHERE source_entry_no = l_ifac_item.source_entry_no;
     END;

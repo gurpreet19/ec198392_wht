@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: PP.0059
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_well_forecast_compensation/GROUPMODEL/WELL/CLASS_NAME/FCST_WELL_SUMMARY_DAY' )
   DATA_LEVEL: 0.0
   DESCRIPTION: |-
     <p>This business function is used to show daily, calculated shortfall and compensation volumes for the wells.</p>

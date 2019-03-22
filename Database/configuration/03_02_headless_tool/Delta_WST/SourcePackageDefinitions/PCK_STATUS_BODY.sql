@@ -62,6 +62,7 @@ CREATE OR REPLACE PACKAGE BODY pck_status IS
 ** 18.07.2017 kashisag ECPD-45817: Replaced sysdate with Ecdp_Timestamp.getCurrentSysdate
 ** 13.07.2017 leongwen ECPD-46335: Modified PROCEDURE run_tasks to support status process for well and flowline performance curve records
 ** 18.12.2017 singishi ECPD-51137: removed proc set_deferment_record_status
+** 13.07.2017 mehtajig ECPD-58409: Modified PROCEDURE run_tasks to support status process for TV_WELL_DEFERMENT and DV_WELL_DEFERMENT_CHILD
 **************************************************************************************************************/
 --
 --------------------------------------------------------------------------------------------------------------
@@ -210,34 +211,34 @@ CURSOR cur_tasks(pid VARCHAR2) IS
 	SELECT task_id, table_id, where_clause
 	FROM stat_process_task
 	WHERE process_id = pid
-	AND table_id NOT IN ('CTRL_CHECK_LOG','WEATHER','PROD_TEST_RESULT','PROD_TEST_RESULT_SINGLE', 'PERFORMANCE_CURVE', 'PERF_CURVE_THIRD_AXIS', 'CURVE_POINT', 'PERF_CURVE_COEFFS'); -- these classes have special handling
+	AND table_id NOT IN ('CTRL_CHECK_LOG','WEATHER','PROD_TEST_RESULT','PROD_TEST_RESULT_SINGLE', 'PERFORMANCE_CURVE', 'PERF_CURVE_THIRD_AXIS', 'CURVE_POINT', 'PERF_CURVE_COEFFS',  'WELL_DEFERMENT'); -- these classes have special handling
 
 CURSOR cur_sub_daily(c_class_name VARCHAR2) IS
   SELECT class_name
-  FROM   CLASS_ATTRIBUTE
+  FROM   class_attribute_cnfg
   WHERE  class_name                 = c_class_name
   AND    attribute_name             = 'PRODUCTION_DAY'
-  AND    nvl(disabled_ind, 'N')    <> 'Y'
-  AND    nvl(report_only_ind, 'N') <> 'Y';
+  AND    ecdp_classmeta_cnfg.isDisabled(class_name, attribute_name) <> 'Y'
+  AND    ecdp_classmeta_cnfg.isReportOnly(class_name, attribute_name) <> 'Y';
 
 CURSOR cur_daily(c_class_name VARCHAR2) IS
   SELECT class_name
-  FROM   CLASS
+  FROM   class_cnfg
   WHERE  class_name = c_class_name
   MINUS
   SELECT class_name
-  FROM   CLASS_ATTRIBUTE
+  FROM   class_attribute_cnfg
   WHERE  class_name                 = c_class_name
   AND    attribute_name             = 'PRODUCTION_DAY'
-  and    nvl(disabled_ind, 'N')    <> 'Y'
-  and    nvl(report_only_ind, 'N') <> 'Y';
+  AND    ecdp_classmeta_cnfg.isDisabled(class_name, attribute_name) <> 'Y'
+  AND    ecdp_classmeta_cnfg.isReportOnly(class_name, attribute_name) <> 'Y';
 
 CURSOR cur_owner_class(c_class_name VARCHAR2) IS
   SELECT class_name, class_type
-  FROM CLASS
+  FROM class_cnfg
   WHERE class_name =
   (SELECT owner_class_name
-  FROM class
+  FROM class_cnfg
   WHERE class_name=c_class_name);
 
 CURSOR cur_tasks_data_class(pid VARCHAR2, p_dataclass VARCHAR2) IS
@@ -257,6 +258,12 @@ CURSOR cur_perf_curve_table_class(pid VARCHAR2) IS
 	FROM stat_process_task
 	WHERE process_id = pid
 	AND table_id in ('PERFORMANCE_CURVE', 'PERF_CURVE_THIRD_AXIS', 'CURVE_POINT', 'PERF_CURVE_COEFFS');
+
+CURSOR cur_deferment(pid VARCHAR2) IS
+	SELECT task_id, table_id, where_clause
+	FROM stat_process_task
+	WHERE process_id = pid
+	AND table_id in ('WELL_DEFERMENT' );
 
 CURSOR cur_system_days IS
 SELECT daytime
@@ -509,6 +516,34 @@ BEGIN
 		ln_rows_updated := ln_rows_updated + li_return;
 
 	END LOOP;
+
+   -- special handling of Well_Deferment
+    FOR mycur IN cur_deferment(p_process_id) LOOP
+
+        mysql := 'UPDATE TV_' || mycur.table_id || ' d SET d.record_status = '||chr(39)||p_to_rs_level||chr(39);
+        IF ecdp_classmeta.IsRevTextMandatory(mycur.table_id) = 'Y' THEN
+            mysql := mysql||', d.rev_text = '''|| 'Updated by status process at '||to_char(Ecdp_Timestamp.getCurrentSysdate,'yyyy-mm-dd hh24:mi:ss')||'''';
+        END IF;
+        mysql := mysql||' WHERE ec_ctrl_record_status_level.level_id(d.record_status)' || lv2_default_operator || ln_to_level_id;
+        IF ln_from_level_id IS NOT NULL THEN
+            mysql := mysql||' AND ec_ctrl_record_status_level.level_id(d.record_status) = '||ln_from_level_id;
+        END IF;
+        mysql := mysql||' AND d.day BETWEEN to_date('||chr(39)||to_char(p_from_daytime,'DD.MM.YYYY HH24:MI')||chr(39)|| ','||chr(39)||'DD.MM.YYYY HH24:MI'||chr(39)||')'||' AND to_date('||chr(39)||to_char(p_to_daytime+1-(1/1440),'DD.MM.YYYY HH24:MI')||chr(39)|| ','||chr(39)||'DD.MM.YYYY HH24:MI'||chr(39)||')';
+        IF mycur.where_clause IS NOT NULL THEN
+            mysql := mysql||' AND '||mycur.where_clause;
+        END IF;
+
+        -- EcDp_DynSql.WriteTempText('PCK_STATUS',mysql);
+
+        li_cursor := Dbms_sql.open_cursor;
+        Dbms_sql.parse(li_cursor,mysql,dbms_sql.v7);
+        li_return := Dbms_sql.execute(li_cursor);
+        Dbms_Sql.Close_Cursor(li_cursor);
+
+        ln_rows_updated := ln_rows_updated + li_return;
+
+    END LOOP;
+
 
 	p_rows_updated := p_rows_updated + nvl(ln_rows_updated,0);
 	-- Update the table stat_process_status

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0144
   NAME: Account Mapping Assistance
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/account_mapping_popup/SHOW_CLOSE_BUTTON/false
 related: {}

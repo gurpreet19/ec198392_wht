@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0174
   NAME: Condensate Surge Drum
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/CONDENSATE_SURGE_DRUM/TARGET/CONDENSATE_SURGE_DRUM/CLASS_NAME/CONDENSATE_SURGE_DRUM
 related: {}

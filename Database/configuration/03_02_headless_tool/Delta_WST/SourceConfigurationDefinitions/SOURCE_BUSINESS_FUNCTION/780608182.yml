@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.2072
   NAME: Nomination Point - Code Connection
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.co.screens/nompnt_code_connection
 related: {}

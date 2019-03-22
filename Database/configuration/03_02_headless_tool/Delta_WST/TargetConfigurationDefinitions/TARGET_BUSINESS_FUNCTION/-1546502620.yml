@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.0063
   NAME: Generator
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object_groupmodel_nav/GROUPMODEL/GENERATOR/TARGET/GENERATOR/CLASS_NAME/GENERATOR
 related: {}

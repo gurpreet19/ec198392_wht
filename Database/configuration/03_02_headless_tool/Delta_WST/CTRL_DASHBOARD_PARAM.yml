@@ -8928,6 +8928,66 @@ WIDGET_CODE=SESSIONS NAME=autoRefreshStopCount: !!com.ec.upgrade.ecconfig.model.
   properties: {}
   related: {}
   status: ADDED
+WIDGET_CODE=STRM_VALUES NAME=FROMDATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2117665702'
+  keys:
+    NAME: FROMDATE
+    T: CTRL_DASHBOARD_PARAM
+    WIDGET_CODE: STRM_VALUES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WIDGET_CODE=STRM_VALUES NAME=QUERY: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '901858790'
+  keys:
+    NAME: QUERY
+    T: CTRL_DASHBOARD_PARAM
+    WIDGET_CODE: STRM_VALUES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WIDGET_CODE=STRM_VALUES NAME=STREAM: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2050439678'
+  keys:
+    NAME: STREAM
+    T: CTRL_DASHBOARD_PARAM
+    WIDGET_CODE: STRM_VALUES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WIDGET_CODE=STRM_VALUES NAME=TODATE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2026848469'
+  keys:
+    NAME: TODATE
+    T: CTRL_DASHBOARD_PARAM
+    WIDGET_CODE: STRM_VALUES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WIDGET_CODE=STRM_VALUES NAME=header: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1433049841'
+  keys:
+    NAME: header
+    T: CTRL_DASHBOARD_PARAM
+    WIDGET_CODE: STRM_VALUES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+WIDGET_CODE=STRM_VALUES NAME=text: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1216774097'
+  keys:
+    NAME: text
+    T: CTRL_DASHBOARD_PARAM
+    WIDGET_CODE: STRM_VALUES
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 WIDGET_CODE=TRAN_FCST_LIST NAME=FCST_PERIOD_TYPE: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-2126179127'
   keys:

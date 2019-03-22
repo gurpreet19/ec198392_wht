@@ -27,37 +27,28 @@ CREATE OR REPLACE PACKAGE EcBp_Forecast_Prod IS
 **                            for BF Forecast Compare Scenario - Direct (PP.0053)
 ** 27-02-2017 jainnraj  ECPD-40350: Added new functions setFcstAnalysisVariables for BF Forecast Scenarios Analysis (PP.0061).
 ** 12-05-2017 jainnraj  ECPD-42563: Renamed getProdForecastId and dynCursorGetForecastId to getProdScenarioId and dynCursorGetScenarioId respectively.
-
+** 26.07.2018  kashisag ECPD-56795: Added global variable declaration
+** 17.10.2018  abdulmaw ECPD-58328: removed t_var_data_rec,t_var_data_tab,t_var_data_rec_mth,t_var_data_tab_mth,t_phase_data_rec,t_phase_data_tab,t_phase_data_rec_mth,
+                                    t_phase_data_tab_mth,t_event_data_rec,t_event_data_tab,t_event_data_rec_mth,t_event_data_tab_mth and place it in config create_types file
+** 17.12.2018  abdulmaw ECPD-62507: fix naming convention
 ********************************************************************/
+
+-- global variable declaration
+
+gd_forecast_id_1 VARCHAR2(32) := NULL;
+gd_forecast_id_2 VARCHAR2(32) := NULL;
+gd_scenario_id_1 VARCHAR2(32) := NULL;
+gd_scenario_id_2 VARCHAR2(32) := NULL;
+gd_start_date_1  DATE         := NULL;
+gd_start_date_2  DATE         := NULL;
+gd_end_date_1    DATE         := NULL;
+gd_end_date_2    DATE         := NULL;
+gd_offset_2      NUMBER       := NULL;
+
 
 TYPE rc_fcst_data IS REF CURSOR;
 TYPE t_object_id  IS TABLE OF FCST_SHORTFALL_FACTORS.FACTOR_ID%TYPE;
 TYPE t_factor     IS TABLE OF FCST_SHORTFALL_FACTORS.OIL_S1P_FACTOR%TYPE;
-
-TYPE t_var_data_rec IS RECORD (FORECAST_ID VARCHAR2(32), OBJECT_ID VARCHAR2(32), FROM_MONTH DATE, TO_MONTH DATE, VARIABLE_CODE VARCHAR2(32), VARIABLE_NAME VARCHAR2(32), SORT_ORDER NUMBER,
-                               OIL NUMBER, GAS NUMBER, WAT NUMBER, COND NUMBER, GL NUMBER, DL NUMBER, WI NUMBER, GI NUMBER, SI NUMBER, CI NUMBER);
-TYPE t_var_data_tab IS TABLE OF t_var_data_rec;
-
-TYPE t_var_data_rec_mth IS RECORD (FORECAST_ID VARCHAR2(32), OBJECT_ID VARCHAR2(32), MONTH DATE, VARIABLE_CODE VARCHAR2(32), VARIABLE_NAME VARCHAR2(32), SORT_ORDER NUMBER,
-                                   OIL NUMBER, GAS NUMBER, WAT NUMBER, COND NUMBER, GL NUMBER, DL NUMBER, WI NUMBER, GI NUMBER, SI NUMBER, CI NUMBER);
-TYPE t_var_data_tab_mth IS TABLE OF t_var_data_rec_mth;
-
-TYPE t_phase_data_rec IS RECORD (FORECAST_ID VARCHAR2(32), OBJECT_ID VARCHAR2(32), FROM_MONTH DATE, TO_MONTH DATE, PHASE_CODE VARCHAR2(32), PHASE_NAME VARCHAR2(32), SORT_ORDER NUMBER,
-                                 POT_UNCONSTR NUMBER, CONSTR NUMBER, POT_CONSTR NUMBER, S1P_SHORTFALL NUMBER, S1U_SHORTFALL NUMBER, S2_SHORTFALL NUMBER, INT_CONSUMPT NUMBER, LOSSES NUMBER, COMPENSATION NUMBER, AVAIL_EXPORT NUMBER, INJ NUMBER);
-TYPE t_phase_data_tab IS TABLE OF t_phase_data_rec;
-
-TYPE t_phase_data_rec_mth IS RECORD (FORECAST_ID VARCHAR2(32), OBJECT_ID VARCHAR2(32), MONTH DATE, PHASE_CODE VARCHAR2(32), PHASE_NAME VARCHAR2(32), SORT_ORDER NUMBER,
-                                     POT_UNCONSTR NUMBER, CONSTR NUMBER, POT_CONSTR NUMBER, S1P_SHORTFALL NUMBER, S1U_SHORTFALL NUMBER, S2_SHORTFALL NUMBER, INT_CONSUMPT NUMBER, LOSSES NUMBER, COMPENSATION NUMBER, AVAIL_EXPORT NUMBER, INJ NUMBER);
-TYPE t_phase_data_tab_mth IS TABLE OF t_phase_data_rec_mth;
-
-TYPE t_event_data_rec IS RECORD (FORECAST_ID VARCHAR2(32), OBJECT_ID VARCHAR2(32), FROM_MONTH DATE, TO_MONTH DATE, REASON_CODE_1 VARCHAR2(32),OIL_LOSS_VOLUME  NUMBER,GAS_LOSS_VOLUME  NUMBER,COND_LOSS_VOLUME  NUMBER,WATER_LOSS_VOLUME  NUMBER,
-                                 WATER_INJ_LOSS_VOLUME  NUMBER,STEAM_INJ_LOSS_VOLUME  NUMBER,GAS_INJ_LOSS_VOLUME  NUMBER,DILUENT_LOSS_VOLUME  NUMBER,GAS_LIFT_LOSS_VOLUME  NUMBER,CO2_INJ_LOSS_VOLUME  NUMBER);
-TYPE t_event_data_tab IS TABLE OF t_event_data_rec;
-
-TYPE t_event_data_rec_mth IS RECORD (FORECAST_ID VARCHAR2(32), OBJECT_ID VARCHAR2(32), MONTH DATE, REASON_CODE_1 VARCHAR2(32),OIL_LOSS_VOLUME  NUMBER,GAS_LOSS_VOLUME  NUMBER,COND_LOSS_VOLUME  NUMBER,WATER_LOSS_VOLUME  NUMBER,WATER_INJ_LOSS_VOLUME  NUMBER,
-                                     STEAM_INJ_LOSS_VOLUME  NUMBER,GAS_INJ_LOSS_VOLUME  NUMBER,DILUENT_LOSS_VOLUME  NUMBER,GAS_LIFT_LOSS_VOLUME  NUMBER,CO2_INJ_LOSS_VOLUME  NUMBER);
-TYPE t_event_data_tab_mth IS TABLE OF t_event_data_rec_mth;
-
 
 FUNCTION getProdScenarioId(p_object_id        VARCHAR2,
                                  p_daytime          DATE)
@@ -122,32 +113,33 @@ RETURN VARCHAR2;
 
 FUNCTION setFcstCompVariables(p_forecast_id_1 VARCHAR2,p_forecast_id_2 VARCHAR2,p_scenario_id_1 VARCHAR2,p_scenario_id_2 VARCHAR2,p_from_date DATE,p_to_date DATE,p_offset_2 NUMBER) return VARCHAR2;
 
+-- t_prodfcst_var_tab,t_prodfcst_var_tab_mth,t_prodfcst_phase_tab,t_prodfcst_phase_tab_mth,t_prodfcst_event_tab,t_prodfcst_event_tab_mth created in config/create_types.sql to avoid implicit type due to PIPELINED oracle bug
 FUNCTION getGrpFcstVarDataGroup(p_scenario VARCHAR2)
-RETURN t_var_data_tab PIPELINED;
+RETURN t_prodfcst_var_tab PIPELINED;
 
 FUNCTION getGrpFcstVarDataMonth(p_scenario VARCHAR2)
-RETURN t_var_data_tab_mth PIPELINED;
+RETURN t_prodfcst_var_tab_mth PIPELINED;
 
 FUNCTION getGrpFcstVarDataDay(p_scenario VARCHAR2)
-RETURN t_var_data_tab_mth PIPELINED;
+RETURN t_prodfcst_var_tab_mth PIPELINED;
 
 FUNCTION getGrpFcstPhaseDataGroup(p_scenario VARCHAR2 )
-RETURN t_phase_data_tab PIPELINED;
+RETURN t_prodfcst_phase_tab PIPELINED;
 
 FUNCTION getGrpFcstPhaseDataMonth(p_scenario VARCHAR2 )
-RETURN t_phase_data_tab_mth PIPELINED;
+RETURN t_prodfcst_phase_tab_mth PIPELINED;
 
 FUNCTION getGrpFcstPhaseDataDay(p_scenario VARCHAR2 )
-RETURN t_phase_data_tab_mth PIPELINED;
+RETURN t_prodfcst_phase_tab_mth PIPELINED;
 
 FUNCTION getGrpFcstEventDataGroup(p_scenario VARCHAR2)
-RETURN t_event_data_tab PIPELINED;
+RETURN t_prodfcst_event_tab PIPELINED;
 
 FUNCTION getGrpFcstEventDataMonth(p_scenario VARCHAR2)
-RETURN t_event_data_tab_mth PIPELINED;
+RETURN t_prodfcst_event_tab_mth PIPELINED;
 
 FUNCTION getGrpFcstEventDataDay(p_scenario VARCHAR2)
-RETURN t_event_data_tab_mth PIPELINED;
+RETURN t_prodfcst_event_tab_mth PIPELINED;
 
 FUNCTION setFcstAnalysisVariables(p_comparison_code VARCHAR2)
 RETURN VARCHAR2;

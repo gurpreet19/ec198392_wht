@@ -65,6 +65,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '31'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
   DESCRIPTION:
     columnName: DESCRIPTION
     typeName: VARCHAR2(2000)
@@ -201,14 +209,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '12'
-  START_DATE:
-    columnName: START_DATE
-    typeName: DATE
-    nullable: 'YES'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '7'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(16)

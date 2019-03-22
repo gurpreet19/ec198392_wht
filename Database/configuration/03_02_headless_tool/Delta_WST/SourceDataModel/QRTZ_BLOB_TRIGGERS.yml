@@ -2,6 +2,7 @@
 name: QRTZ_BLOB_TRIGGERS
 cnstPrimaryKey:
   columns:
+  - SCHED_NAME
   - TRIGGER_NAME
   - TRIGGER_GROUP
   name: PK_QRTZ_BLOB_TRIGGERS
@@ -15,7 +16,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '12'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -23,7 +24,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '13'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -31,7 +32,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '14'
   BLOB_DATA:
     columnName: BLOB_DATA
     typeName: BLOB
@@ -39,7 +40,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '3'
+    sequence: !!float '4'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -47,7 +48,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '5'
+    sequence: !!float '6'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -55,7 +56,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '6'
+    sequence: !!float '7'
   LAST_UPDATED_BY:
     columnName: LAST_UPDATED_BY
     typeName: VARCHAR2(30)
@@ -63,7 +64,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '7'
+    sequence: !!float '8'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -71,7 +72,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '8'
+    sequence: !!float '9'
   RECORD_STATUS:
     columnName: RECORD_STATUS
     typeName: VARCHAR2(1)
@@ -79,7 +80,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '4'
+    sequence: !!float '5'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -87,7 +88,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '15'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -95,7 +96,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '10'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -103,15 +104,23 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
-  TRIGGER_GROUP:
-    columnName: TRIGGER_GROUP
-    typeName: VARCHAR2(80)
+    sequence: !!float '11'
+  SCHED_NAME:
+    columnName: SCHED_NAME
+    typeName: VARCHAR2(120)
     nullable: 'NO'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '2'
+    sequence: !!float '1'
+  TRIGGER_GROUP:
+    columnName: TRIGGER_GROUP
+    typeName: VARCHAR2(200)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
   TRIGGER_NAME:
     columnName: TRIGGER_NAME
     typeName: VARCHAR2(512)
@@ -119,7 +128,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '1'
+    sequence: !!float '2'
 cnstForeignKeys:
   FK_QRTZ_BLOB_TRIGGERS_1:
     updateAction: UNKNOWN
@@ -127,6 +136,7 @@ cnstForeignKeys:
     primaryTable: QRTZ_TRIGGERS
     columns:
       TRIGGER_NAME: TRIGGER_NAME
+      SCHED_NAME: SCHED_NAME
       TRIGGER_GROUP: TRIGGER_GROUP
     name: FK_QRTZ_BLOB_TRIGGERS_1
     type: FOREIGNKEY

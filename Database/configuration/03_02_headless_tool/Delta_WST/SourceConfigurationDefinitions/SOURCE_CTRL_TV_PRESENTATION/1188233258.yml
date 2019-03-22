@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3?screentemplate=/com.ec.prod.wr.screens/period_production_well_status&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('3')
+  COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3?screentemplate=/com.ec.prod.wr.screens/period_production_well_status
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: PERIOD_PROD_WELL_STATUS_3
   COMPONENT_LABEL: Daily Prod Well Status 3, by Well

@@ -17,6 +17,13 @@ FUNCTION GenerateYear (p_object_id VARCHAR2,
                         p_user     VARCHAR2
                       ) RETURN VARCHAR2;
 
+FUNCTION GenerateCalCollYear(p_object_id   VARCHAR2,
+                              p_calendar_id VARCHAR2,
+                              p_daytime     DATE,
+                              p_cal_year    DATE,
+                              p_user        VARCHAR2
+                            ) RETURN VARCHAR2;
+
 FUNCTION IsHoliday (p_object_id VARCHAR2,
                         p_daytime DATE,
                         p_weekday VARCHAR2
@@ -165,9 +172,6 @@ RETURN DATE;
 FUNCTION IsLeapYear(p_year IN NUMBER)
 RETURN VARCHAR2;
 
-FUNCTION GetFunctionHolidayDate(p_date_function VARCHAR2, p_year NUMBER)
-RETURN DATE;
-
 FUNCTION SetToBusinessDay(p_object_id     VARCHAR2,
                           p_daytime       DATE,
                           p_selected_date DATE,
@@ -200,5 +204,25 @@ FUNCTION getCurrentYearDaytime(p_object_id VARCHAR2,
 FUNCTION CreateComment(p_object_id VARCHAR2,
                        p_daytime   VARCHAR2,
                        p_comment   VARCHAR2) RETURN VARCHAR2;
+
+FUNCTION getCollCurrentYearDaytime(p_cal_coll_id   VARCHAR2,
+                                   p_daytime       DATE,
+                                   p_task          VARCHAR2,
+                                   p_calendar_id   VARCHAR2,
+                                   p_calendar_code VARCHAR2) RETURN VARCHAR2;
+
+FUNCTION getCalOrCalCollId(p_calendar_coll_id VARCHAR2,
+                           p_calendar_id VARCHAR2,
+                           p_calendar_name VARCHAR2) RETURN VARCHAR2;
+
+FUNCTION GetRecurringHoliday(p_recurring_holiday_code VARCHAR2,
+                             p_year                   NUMBER) RETURN DATE;
+
+FUNCTION GetNthDayofMonth(p_month       DATE,
+                          p_day_of_week VARCHAR2,
+                          p_nth         NUMBER) RETURN DATE DETERMINISTIC;
+
+FUNCTION GetLastDayofMonth(p_month       DATE,
+                           p_day_of_week VARCHAR2) RETURN DATE DETERMINISTIC;
 
 END EcDp_Calendar;

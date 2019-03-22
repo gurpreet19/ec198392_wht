@@ -3,7 +3,7 @@ name: JBPM_DEADLINE
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008644
+  name: PK_JBPM_DEADLINE
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

@@ -9,14 +9,5 @@ properties:
   BF_DESCRIPTION_NO: CO.1000
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/maintain_access_users' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |-
-    <p>Before a user can access the system, he or she must be registered in the system with specific roles. The User Maintenance screen allows to add users and assign them exisiting roles.</p>
-    <p>Note that:</p>
-    <p>
-    <ul>
-    <li>The same user should be created in Keycloak server. We are simply adding a user in the screen to give some EC roles to it.</li>
-    <li>The roles must be already defined in the Role Maintenance screen.</li>
-    <li>This screen can be used to active and deactivate users</li>
-    </ul>
-    </p>
+  DESCRIPTION: <p>Before a user can access the system, he or she must be registered in the system with specific roles. The User Maintenance screen provides a way to add and remove EC users and assign roles to them.</p><p>Note that:</p><ul><li>A user with the same user id should be created in Keycloak. The Keycloak user is used for authentication. The corresponding EC user is used for assigning EC roles to the user.</li><li>Roles must be defined in the Role Maintenance screen prior to assignment.</li><li>This screen can also be used to activate and deactivate users.</li></ul><p><br></p>
 related: {}

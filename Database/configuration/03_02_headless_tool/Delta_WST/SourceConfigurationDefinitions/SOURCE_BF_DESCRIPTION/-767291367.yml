@@ -10,8 +10,8 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.report.screens/report_administration' )
   DATA_LEVEL: 0.0
   DESCRIPTION: '<h2>Introduction</h2><p>The Report Administration screen provides
-    the following functionality:</p><ul><li>Create report (instances of a report defintion
-    that can be generated)</li><li>Configure distribution of reports</li><li>Generate
+    the following functionality:</p><ul><li>* Create report (instances of a report
+    defintion that can be generated)</li><li>Configure distribution of reports</li><li>Generate
     reports</li><li>View/download, send and publish generated reports</li><li>Search
     for generated reports based on report parameter values</li><li>Send (using messaging
     system)</li></ul><p>In the navigator for the screen, a date and optionally a functional
@@ -79,10 +79,10 @@ properties:
     are different distribution lists for different Report Statuses. A distribution
     list is assigned based on the Report Status.</li><li>The subject of the message
     is determined by the subject specified in the Message Type (Create Message Type
-    and Maintain Message Type). Replacement of the subject string is done as:<ul><li
+    and Maintain Message Type). Replacement of the subject string is done as:</li></ol><ul><li
     class="ql-indent-1">$REPORT_NAME$ - This will be replaced by the report name.</li><li
     class="ql-indent-1">$PARAM_NAME$ - This will be replaced by the value of the parameter
-    named</li></ul></li></ol><p>The <em>Send Log</em> tab will show all messages sent.</p><h3>Publish</h3><p>If
+    named</li></ul><p>The <em>Send Log</em> tab will show all messages sent.</p><h3>Publish</h3><p>If
     Display Published Reports BF is used to give users access to a limited number
     of generated reports, the Publish Report tab will allow for publication period
     and other information to be entered. When inserting a new record in this section,

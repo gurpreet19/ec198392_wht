@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: PP.0060
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/TARGET/WELL/CLASS_NAME/FCST_IWEL_POTENTIAL/INJ_TYPE/Y' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.pp.screens/daily_injection_forecast/GROUPMODEL/WELL/CLASS_NAME/FCST_IWEL_POTENTIAL/INJ_TYPE/Y' )
   DATA_LEVEL: 0.0
   DESCRIPTION: |-
     <p>This business function is used to capture Injection Well Potentials for a Scenario.  </p>

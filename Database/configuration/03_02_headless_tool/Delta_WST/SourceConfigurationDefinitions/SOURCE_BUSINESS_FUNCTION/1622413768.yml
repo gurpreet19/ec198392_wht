@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0122
   NAME: Daily Test Device Status
   PROFILE_CLASS_NAME: TEST_DEVICE
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/daily_test_device_status
 related: {}

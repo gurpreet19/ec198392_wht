@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: SP.0043
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/SUMMARY_SETUP' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/SUMMARY_SETUP' )
   DATA_LEVEL: 0.0
   DESCRIPTION: '<p>    <strong>Data Extract Setup screen</strong> is used to create
     Data Extract objects that are to be used in cost reporting.<br>- Data Extract

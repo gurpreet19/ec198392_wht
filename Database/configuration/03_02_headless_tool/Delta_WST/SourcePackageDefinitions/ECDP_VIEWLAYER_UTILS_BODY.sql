@@ -289,11 +289,11 @@ BEGIN
 
   IF ln_count > 0 THEN
     UPDATE viewlayer_dirty_log
-	SET    dirty_ind = lv2_dirty_ind
-	WHERE  object_name = nvl(p_object_name, object_name)
-	AND    dirty_type = nvl(p_dirty_type, dirty_type)
-	AND    nvl(dirty_ind, 'N') != lv2_dirty_ind;
-  ELSE
+    SET    dirty_ind = lv2_dirty_ind
+    WHERE  object_name = nvl(p_object_name, object_name)
+    AND    dirty_type = nvl(p_dirty_type, dirty_type)
+    AND    nvl(dirty_ind, 'N') != lv2_dirty_ind;
+  ELSIF p_object_name IS NOT NULL THEN
     INSERT INTO viewlayer_dirty_log (object_name, dirty_type, dirty_ind) VALUES (p_object_name, p_dirty_type, lv2_dirty_ind);
   END IF;
 END set_dirty_ind;
@@ -321,5 +321,139 @@ BEGIN
     RETURN 'Y';
   END IF;
 END hasAppSpaceFootprint;
+
+FUNCTION resolvePriority(p_from_class_name IN VARCHAR2, p_to_class_name IN VARCHAR2, p_role_name IN VARCHAR2, p_root_class_name IN VARCHAR2, p_property_code IN VARCHAR2)
+RETURN VARCHAR2
+RESULT_CACHE
+IS
+  CURSOR c_priority IS
+      SELECT from_class_name, to_class_name, role_name, min(priority) AS priority FROM (
+        SELECT LEVEL AS priority, r.from_class_name, r.to_class_name, r.role_name
+        FROM   class_relation_cnfg r
+        INNER JOIN v_class_rel_property_cnfg p ON p.property_code = p_property_code AND p.property_value = 'Y' AND p.from_class_name = r.from_class_name AND p.to_class_name = r.to_class_name AND p.role_name = r.role_name
+        WHERE  ec_class_cnfg.class_type(r.to_class_name) = 'OBJECT' AND ecdp_classmeta_cnfg.isDisabled(r.from_class_name, r.to_class_name, r.role_name) = 'N'
+        START WITH r.from_class_name = p_root_class_name
+        CONNECT BY NOCYCLE r.from_class_name = PRIOR r.to_class_name
+      )
+      WHERE from_class_name = p_from_class_name AND to_class_name = p_to_class_name AND role_name = p_role_name
+      GROUP BY from_class_name, to_class_name, role_name
+      ORDER BY priority;
+BEGIN
+  FOR cur IN c_priority LOOP
+    RETURN cur.priority;
+  END LOOP;
+  RETURN 0;
+END;
+
+FUNCTION objectRelCascadeSanityCheck(p_property_code IN VARCHAR2, p_error_message IN VARCHAR2)
+RETURN VARCHAR2
+IS
+  CURSOR invalidObjectRel(p_property_code IN VARCHAR2) IS
+    select to_class_name
+    from v_class_rel_property_cnfg
+    where property_code = p_property_code
+    and from_class_name not in ('PRODUCTION_DAY', 'TIME_ZONE_REGION', 'UNIT_CONTEXT', 'CONVERSION_CONTEXT')
+    and property_value = 'Y'
+    group by to_class_name
+    having count(to_class_name) > 1;
+
+  lv2_invalid_class_name VARCHAR2(2000) := '';
+  lv2_error_message VARCHAR2(2000) := '';
+BEGIN
+  FOR cur IN invalidObjectRel(p_property_code) LOOP
+    lv2_invalid_class_name:= lv2_invalid_class_name || cur.to_class_name || ' ';
+  END LOOP;
+
+  IF lv2_invalid_class_name IS NOT NULL THEN
+    lv2_error_message := '>> Invalid class_rel_property_cnfg records for to_class_name: '|| '[' || lv2_invalid_class_name  || '], property_code = ' || p_property_code || '.' || CHR(10) ||
+                         'For the same to_class_name where property_code = ' || p_property_code || ',' || CHR(10) ||
+                         'it is only allowed to have one class relation property configuration record with property_value = Y.' || CHR(10) || CHR(10);
+  END IF;
+
+  IF lv2_error_message IS NOT NULL THEN
+     lv2_error_message := p_error_message || lv2_error_message;
+
+	 return lv2_error_message;
+  END IF;
+
+  return p_error_message;
+END;
+
+PROCEDURE buildObjectRelCascadeView
+IS
+  CURSOR c_cascade_view_syntax(p_cascaded_class IN VARCHAR2, p_property_code IN VARCHAR2) IS
+    SELECT 'SELECT '''||p_cascaded_class||''' AS cascaded_class, '''||from_class_name||''' AS from_class_name, '''||to_class_name||''' AS to_class_name, '''||role_name||''' AS role_name, '||
+           syntax||' AS from_object_id, v.daytime AS from_daytime, v.end_date AS from_end_date, '||
+           'oa.object_id, oa.daytime, oa.end_date, '||
+           resolvePriority(from_class_name, to_class_name, role_name, p_cascaded_class, p_property_code)||' AS priority FROM '||
+           lower(tc_db_object_attribute)||' oa '||
+           'INNER JOIN '||lower(tc_db_object_name)||' o ON o.object_id = oa.object_id '||
+           'INNER JOIN '||lower(fc_db_object_attribute)||' v ON v.object_id = '||syntax||' AND oa.daytime BETWEEN v.daytime AND nvl(v.end_date, oa.daytime) '||
+           'WHERE '||syntax||' IS NOT NULL '||decode(tc_db_where_condition, null, '', ' AND '|| tc_db_where_condition) AS view_syntax
+    FROM (
+      SELECT CASE WHEN r.db_mapping_type='COLUMN' THEN lower('ec_'||tc.db_object_name||'.'||r.db_sql_syntax||'(oa.object_id)')
+                  WHEN r.db_mapping_type='ATTRIBUTE' THEN 'oa.'||lower(r.db_sql_syntax)
+                  WHEN r.db_mapping_type='FUNCTION' THEN r.db_sql_syntax
+             END AS syntax,
+             r.from_class_name, r.to_class_name, r.role_name,
+             fc.db_object_attribute AS fc_db_object_attribute,
+             tc.db_where_condition AS tc_db_where_condition, tc.db_object_attribute AS tc_db_object_attribute, tc.db_object_name AS tc_db_object_name
+      FROM v_class_rel_property_cnfg p
+      INNER JOIN class_relation_cnfg r ON r.from_class_name = p.from_class_name AND r.to_class_name = p.to_class_name AND r.role_name = p.role_name
+      INNER JOIN class_cnfg tc ON tc.class_name = r.to_class_name AND tc.class_type = 'OBJECT'
+      INNER JOIN class_cnfg fc ON fc.class_name = r.from_class_name
+      WHERE p.property_code = p_property_code AND p.property_value = 'Y'
+    );
+
+  lv_buffer DBMS_SQL.varchar2a;
+  lv2_union_all VARCHAR2(32) := '';
+  ln_count NUMBER := 0;
+  lv2_sanity_check_error_message VARCHAR2(5000) := '';
+BEGIN
+  lv2_sanity_check_error_message := objectRelCascadeSanityCheck('CASCADE_PRODUCTION_DAY_IND', lv2_sanity_check_error_message);
+  lv2_sanity_check_error_message := objectRelCascadeSanityCheck('CASCADE_TIMEZONE_IND', lv2_sanity_check_error_message);
+  lv2_sanity_check_error_message := objectRelCascadeSanityCheck('CASCADE_UNIT_CONTEXT_IND', lv2_sanity_check_error_message);
+  lv2_sanity_check_error_message := objectRelCascadeSanityCheck('CASCADE_CONVERSION_CONTEXT_IND', lv2_sanity_check_error_message);
+
+  IF lv2_sanity_check_error_message IS NOT NULL THEN
+     Raise_Application_Error (-20002, lv2_sanity_check_error_message);
+  END IF;
+
+  Ecdp_Dynsql.AddSqlLineNoWrap(lv_buffer, 'CREATE OR REPLACE VIEW gv_object_rel_cascade AS '||CHR(10));
+
+  FOR cur IN c_cascade_view_syntax('PRODUCTION_DAY', 'CASCADE_PRODUCTION_DAY_IND') LOOP
+    Ecdp_Dynsql.AddSqlLineNoWrap(lv_buffer, lv2_union_all||cur.view_syntax||CHR(10));
+    lv2_union_all := 'UNION ALL'||CHR(10);
+    ln_count := ln_count + 1;
+  END LOOP;
+
+  FOR cur IN c_cascade_view_syntax('TIME_ZONE_REGION', 'CASCADE_TIMEZONE_IND') LOOP
+    Ecdp_Dynsql.AddSqlLineNoWrap(lv_buffer, lv2_union_all||cur.view_syntax||CHR(10));
+    lv2_union_all := 'UNION ALL'||CHR(10);
+    ln_count := ln_count + 1;
+  END LOOP;
+
+  FOR cur IN c_cascade_view_syntax('UNIT_CONTEXT', 'CASCADE_UNIT_CONTEXT_IND') LOOP
+    Ecdp_Dynsql.AddSqlLineNoWrap(lv_buffer, lv2_union_all||cur.view_syntax||CHR(10));
+    lv2_union_all := 'UNION ALL'||CHR(10);
+    ln_count := ln_count + 1;
+  END LOOP;
+
+  FOR cur IN c_cascade_view_syntax('CONVERSION_CONTEXT', 'CASCADE_CONVERSION_CONTEXT_IND') LOOP
+    Ecdp_Dynsql.AddSqlLineNoWrap(lv_buffer, lv2_union_all||cur.view_syntax||CHR(10));
+    lv2_union_all := 'UNION ALL'||CHR(10);
+    ln_count := ln_count + 1;
+  END LOOP;
+
+  IF ln_count = 0 THEN
+    Ecdp_Dynsql.AddSqlLineNoWrap(lv_buffer, q'[
+  SELECT null AS cascaded_class, r.from_class_name, r.to_class_name, r.role_name, null from_object_id, null from_daytime, null from_end_date, ov.object_id, ov.daytime, ov.end_date, 1 AS priority
+  FROM class_relation_cnfg r
+  INNER JOIN objects_version_table ov ON 0 = 1
+  WHERE 0 = 1
+    ]');
+  END IF;
+  EcDp_Dynsql.SafeBuild('GV_OBJECT_REL_CASCADE', 'VIEW', lv_buffer);
+END buildObjectRelCascadeView;
 
 END ecdp_viewlayer_utils;

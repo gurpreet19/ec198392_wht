@@ -120,7 +120,7 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Object_List IS
         ln_share_total                     NUMBER := 0;
     BEGIN
         FOR obs_share IN object_list_setup_share(p_object_id, p_daytime) LOOP
-            ln_share_total := ln_share_total + obs_share.split_share;
+            ln_share_total := ln_share_total + nvl(obs_share.split_share, 0);
         END LOOP;
 
         IF ln_share_total = 100 THEN

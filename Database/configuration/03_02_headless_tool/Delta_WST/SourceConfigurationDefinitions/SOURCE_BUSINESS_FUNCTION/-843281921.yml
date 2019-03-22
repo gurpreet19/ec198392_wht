@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0085
   NAME: Period Component Recovery Factors
   PROFILE_CLASS_NAME: NOMINATION_LOCATION
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/TRNP_EVENT_CP_TRAN_FAC/BF_PROFILE/GD.0085/CLASS_DAY/TRNL_EVENT_TRAN_FAC_DAY
 related: {}

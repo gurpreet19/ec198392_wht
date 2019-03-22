@@ -113,6 +113,9 @@ CREATE OR REPLACE PACKAGE EcDp_Calc_Method IS
 **          02-01-2017  singishi  ECPD-38497: Added function SAMPLE_ANALYSIS_SPOT,SAMPLE_ANALYSIS_DAY,SAMPLE_ANALYSIS_MTH.
 **          03-03-2017  aaaaasho  ECPD-36107: Added function PREALLOC_MEAS_GL.
 **          14-03-2018  abdulmaw  ECPD-52711: Added function VFM_PRIORITIZED
+**          01-10-2018  abdulmaw  ECPD-50441: Added function VFM and VFM_NET
+**          22-10-2018  solibhar  ECPD-49510: Added function MPM2 and MPM2_NET
+**          01-11-2018  abdulmaw  ECPD-51659: Added function ANALYSIS_QUALITY_STRM
 *****************************************************************/
 
 FUNCTION INTERMEDIATE
@@ -886,6 +889,16 @@ RETURN VARCHAR2;
 
 --
 
+FUNCTION MPM2
+RETURN VARCHAR2;
+
+--
+
+FUNCTION MPM2_NET
+RETURN VARCHAR2;
+
+--
+
 FUNCTION MPM2_CORR
 RETURN VARCHAR2;
 
@@ -902,6 +915,21 @@ RETURN VARCHAR2;
 --
 
 FUNCTION VFM_PRIORITIZED
+RETURN VARCHAR2;
+
+--
+
+FUNCTION VFM
+RETURN VARCHAR2;
+
+--
+
+FUNCTION VFM_NET
+RETURN VARCHAR2;
+
+--
+
+FUNCTION ANALYSIS_QUALITY_STRM
 RETURN VARCHAR2;
 
 END EcDp_Calc_Method;

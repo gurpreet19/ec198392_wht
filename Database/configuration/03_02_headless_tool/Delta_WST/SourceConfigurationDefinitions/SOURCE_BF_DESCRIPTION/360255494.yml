@@ -9,6 +9,27 @@ properties:
   BF_DESCRIPTION_NO: CO.0130
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/create_and_maintain_schedules' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |
-    <p>This screen allows the scheduling of business actions. You can specify different schedule types such as Weekly, Monthly, and Daily etc. It also allows you to modify or delete existing schedules. You are able to specify the input parameters for the business action which is called by this schedule. The inputs can also have macros performed on them. The navigator lists all schedules defined in the system. The user can define new schedule (add to the list) or change any predefined schedule.</p>
+  DESCRIPTION: '<p>The <strong>Schedules</strong> screen allows the scheduling of
+    business actions. In this screen, the user can define new schedule (add to the
+    list) or change any previously defined schedule. You can specify different schedule
+    types such as Weekly, Monthly, and Daily etc. It also allows modifying or deleting
+    of existing schedules. You are able to specify the input parameters for the business
+    action which is called by this schedule. The inputs can also have macros performed
+    on them.</p><p>The screen has four tabs to help user configure and monitor the
+    schedule. These tabs are briefly described below:</p><ul><li><strong>Details</strong>:
+    It contains information about the user who runs the task, notification level and
+    role, log level and enabling the schedule. By default, the RUN AS user is the
+    same as the one who creates the task. But can be changed by providing correct
+    credential of another user. Enabling the schedule is the last step in setting
+    up a schedule.</li><li><strong>Business Action</strong>: allows defining which
+    business action/s is executed by the scheduler. You are able to specify the input
+    parameters for the business action which is called by this schedule. The inputs
+    can also have macros performed on them<strong>.</strong></li><li><strong>Schedule</strong>:
+    it allows to specify the executing interval. You can specify different schedule
+    intervals, such as Once, sub daily daily, weekly, monthly, yearly and cron. The
+    cron type makes to use cron job settings possible.</li><li><strong>Monitor Tab</strong>:
+    lists the history of all executed schedules in the defined interval. Click the
+    Go button to refresh the schedule list. The GET DETAILED LOG button downloads/displays
+    the detailed schedules log in a new window. Click the RERUN button to execute
+    the schedule again and view the result.</li></ul>'
 related: {}

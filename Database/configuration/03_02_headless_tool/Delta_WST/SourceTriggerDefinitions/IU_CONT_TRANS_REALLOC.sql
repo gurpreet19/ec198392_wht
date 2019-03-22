@@ -14,7 +14,7 @@ BEGIN
          :new.created_date := EcDp_Timestamp.getCurrentSysdate;
       END IF;
       :new.rev_no := 0;
-    ELSE
+    ELSE 
       IF Nvl(:new.record_status,'P') = Nvl(:old.record_status,'P') THEN
          IF NOT UPDATING('LAST_UPDATED_BY') THEN
             :new.last_updated_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);

@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: RC.0051
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/ROYALTY_OWNER' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/ROYALTY_OWNER' )
   DATA_LEVEL: 0.0
   DESCRIPTION: <p>    <strong>Royalty Owner screen</strong>    defines the legal entities - corporations or persons - that are entitled to royalty revenue.</p><p>    The Royalty Owner object is in use both with the Division Order object and the Royalty Contract object.</p>
 related: {}

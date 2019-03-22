@@ -9,5 +9,36 @@ properties:
   BF_DESCRIPTION_NO: SP.0013
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/contract_document_information' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>    <strong>Document Text Setup screen</strong>    defines textual objects to use when processing the Contract. The text objects defined here are copied to the Document when processing. The information is    copied and not referenced because the user can add and delete text at the Document level when processing. More details on how this information is used at    the Document level is in Document Text screen (BF SP.0020).</p><p>    The BF is divided into following sections:<br>    <strong><em>- Filter Navigator:</em></strong><br>    The Filter Navigator lists all the contracts being valid at the date selected in the Filter Navigator. By clicking a contract object in the Filter    Navigator all the documents defined for the contract will be listed in the Document List section.<br>    <strong><em>- Document List:</em></strong><br>    The Document List lists all the documents defined for the selected contract. By clicking a Document the Document Text objects for the selected Document    will be listed.<br>    <strong><em>- Header Section, Multi Column:</em></strong><br>    The text objects defined will be part of the header section of the document.<br>    In this section the user can add text objects that are divided into three columns. There is no limit to the number of characters in each column, but please    note that if there are too many characters in a column the text might flow into the next column or wrap when printed on the document hardcopy.<br>    <strong><em>- Header Section, Single Column:</em></strong><br>    These text objects will also be part of the header section of the document. The text will be in one single column. There is no limit to the number of    characters for the column, but please note that if there are too many characters the text might wrap when printed on the document. The text is left    aligned.<br>    <strong><em>- Footer Section, Multi Column:</em></strong><br>    The text objects defined will be part of the footer section of the document.<br>    In this section the user can add text objects that are divided into three columns. There is no limit to the number of characters in each column, but please    note that if there are too many characters in a column the text might flow into the next column or wrap when printed on the document hardcopy.<br>    <strong><em>- Footer Section, Single Column:</em></strong><br>    These text objects will also be part of the footer section of the document. The text will be in one single column. There is no limit to the number of    characters for the column, but please note that if there are too many characters the text might wrap when printed on the document. The text is left    aligned.</p><p>    Within the header section text objects there is sort order support. The header section multi column text objects are sorted together with the header    section single column text objects. The same concept applies for the footer text objects as well.</p><p>    The user can add and delete text objects from all of the four sections. Text objects can be left blank, either to be filled in during document processing    or to stay blank even after document processing. Each text object will have a sort number.</p>
+  DESCRIPTION: '<p><strong>Document Text Setup screen</strong> is used to define textual
+    objects to be used when processing the Contract. The text objects defined here
+    are copied to the Document when processing. The information is copied and not
+    referenced because the user can add and delete text at the Document level when
+    processing.</p><p><strong style="color: rgb(0, 102, 204);">Navigator</strong></p><p>The
+    Navigator lists all the contracts being valid at the date selected in the Navigator.
+    By clicking a contract object in the Navigator all the documents defined for the
+    contract will be listed in the Document List section.</p><p><strong style="color:
+    rgb(0, 102, 204);">Document List Section</strong></p><p>    The section lists
+    all the documents defined for the selected contract. By clicking a Document the
+    Document Text objects for the selected Document will be listed.</p><p><strong
+    style="color: rgb(0, 102, 204);">Header Section, Multi Column:</strong><br>    The
+    text objects defined will be part of the header section of the document. In this
+    section the user can add text objects that are divided into three columns. </p><p><strong
+    style="color: rgb(0, 102, 204);">Header Section, Single Column:</strong><br>    These
+    text objects will also be part of the header section of the document. The text
+    will be in one single column and left aligned.</p><p><strong style="color: rgb(0,
+    102, 204);">Footer Section, Multi Column:</strong><br>    The text objects defined
+    will be part of the footer section of the document. In this section the user can
+    add text objects that are divided into three columns.</p><p><strong style="color:
+    rgb(0, 102, 204);">Footer Section, Single Column:</strong><br>    These text objects
+    will also be part of the footer section of the document. The text will be in one
+    single column and left aligned.</p><p>    Within the header section text objects
+    there is sort order support. The header section multi column text objects are
+    sorted together with the header section single column text objects. The same concept
+    applies for the footer text objects as well.</p><p>    The user can add and delete
+    text objects from all of the four sections. Text objects can be left blank, either
+    to be filled in during document processing or to stay blank even after document
+    processing. Each text object will have a sort number.</p><p>There is no limit
+    to the number of characters in each column, but <strong>NOTE</strong>, if there
+    are too many characters in a column, the text might flow into the next column
+    or wrap when printed on the document hardcopy.</p>'
 related: {}

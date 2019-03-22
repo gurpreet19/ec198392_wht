@@ -23,6 +23,7 @@ CREATE OR REPLACE PACKAGE EcBp_Comp_Analysis IS
 **          18.10.2016 johamlei	Added function createCompMth
 **          20.10.2016 keskaash  ECPD-36865: Modified createCompOrfGas and getStreamCompWtPct, added parameter p_fluid_state
 **          29.08.2017 kashisag  ECPD-36104: Added new function findWellHCLiqPhase
+**          23.10.2018 kaushaak  ECPD-51659: Added new function calcTheorDens
 ********************************************************************/
 
 FUNCTION calcTotMolFrac(p_analysis_no NUMBER)
@@ -136,5 +137,12 @@ PROCEDURE createCompMth(
 -------------------------------------------------------------------
 FUNCTION findWellHCLiqPhase(p_well_id VARCHAR2, p_daytime DATE)
 RETURN VARCHAR2;
+
+FUNCTION calcTheorDens(p_object_id       VARCHAR2,   --could be both WELL and STREAM
+                       p_daytime         DATE,
+                       p_standard_id     VARCHAR2 DEFAULT NULL,
+                       p_sampling_method VARCHAR2 DEFAULT NULL,
+                       p_fluid_state     VARCHAR2 DEFAULT NULL)
+RETURN NUMBER;
 
 END EcBp_Comp_Analysis;

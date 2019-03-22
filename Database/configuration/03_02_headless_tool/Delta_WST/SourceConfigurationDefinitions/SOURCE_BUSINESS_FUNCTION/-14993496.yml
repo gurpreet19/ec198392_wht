@@ -8,5 +8,6 @@ properties:
   BF_CODE: PA.0010
   NAME: Viewer Tag
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.bpm.ext.ec.web/viewer_tag
 related: {}

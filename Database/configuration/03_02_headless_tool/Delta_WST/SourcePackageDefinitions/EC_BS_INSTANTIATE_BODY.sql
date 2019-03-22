@@ -149,6 +149,7 @@ CREATE OR REPLACE PACKAGE BODY Ec_Bs_Instantiate IS
 ** 17.11.2017 dhavaalo ECPD-45043: Remove reference of well_equip_Downtime.
 ** 17-01-2018 singishi ECPD-47302: Rename table well_deferment to deferment_event
 ** 08-02-2018 khatrnit ECPD-51428: Modified procedures i_object_item_comment,i_object_item_mth_comment to ensure copy forward works for all object types
+** 20-09-2018 solibhar ECPD-58838: Modified procedures i_pwel_day_status,i_iwel_day_status,i_pwel_mth_status,i_iwel_mth_status,i_wbi_day_status to exclude PLANNED wells from Initiate Day process
 ************************************************************************************************************************************/
  --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
@@ -1249,11 +1250,11 @@ END executeStatement;
        FROM PWEL_DAY_STATUS x
        WHERE w.object_id = x.object_id AND p_daytime = x.daytime
        UNION
-       SELECT 1 -- remove wells that have active_well_status='CLOSED_LT' at the beginning of the new production_day.
+       SELECT 1 -- remove wells that have active_well_status='CLOSED_LT' or PLANNED at the beginning of the new production_day.
        FROM PWEL_PERIOD_STATUS pps
        WHERE w.object_id = pps.object_id
        AND pps.time_span='EVENT'
-       AND pps.active_well_status='CLOSED_LT'
+       AND pps.active_well_status IN ('CLOSED_LT','PLANNED')
        AND pps.daytime=
           (SELECT MAX(daytime) from pwel_period_status pps2
           WHERE pps2.object_id=pps.object_id
@@ -1380,13 +1381,13 @@ END executeStatement;
          AND ids.inj_type = 'GI'
          AND ids.daytime = p_daytime
          UNION
-         -- remove wells that have active_well_status='CLOSED_LT' at the beginning of the new production_day.
+         -- remove wells that have active_well_status='CLOSED_LT' or PLANNED at the beginning of the new production_day.
          SELECT 1
         FROM IWEL_PERIOD_STATUS ips
         WHERE w.object_id = ips.object_id
         AND ips.time_span = 'EVENT'
         AND ips.inj_type = 'GI'
-        AND ips.active_well_status = 'CLOSED_LT'
+        AND ips.active_well_status IN ('CLOSED_LT','PLANNED')
         AND ips.daytime =
            (SELECT MAX(daytime) from iwel_period_status ips2
            WHERE ips2.object_id = ips.object_id
@@ -1410,13 +1411,13 @@ END executeStatement;
          AND ids.inj_type = 'WI'
          AND ids.daytime = p_daytime
          UNION
-         -- remove wells that have active_well_status='CLOSED_LT' at the beginning of the new production_day.
+         -- remove wells that have active_well_status='CLOSED_LT' or PLANNED at the beginning of the new production_day.
          SELECT 1
         FROM IWEL_PERIOD_STATUS ips
         WHERE w.object_id = ips.object_id
         AND ips.time_span = 'EVENT'
         AND ips.inj_type = 'WI'
-        AND ips.active_well_status = 'CLOSED_LT'
+        AND ips.active_well_status IN ('CLOSED_LT','PLANNED')
         AND ips.daytime =
            (SELECT MAX(daytime) from iwel_period_status ips2
            WHERE ips2.object_id = ips.object_id
@@ -1440,13 +1441,13 @@ END executeStatement;
          AND ids.inj_type = 'SI'
          AND ids.daytime = p_daytime
          UNION
-         -- remove wells that have active_well_status='CLOSED_LT' at the beginning of the new production_day.
+         -- remove wells that have active_well_status='CLOSED_LT' or PLANNED at the beginning of the new production_day.
          SELECT 1
         FROM IWEL_PERIOD_STATUS ips
         WHERE w.object_id = ips.object_id
         AND ips.time_span = 'EVENT'
         AND ips.inj_type = 'SI'
-        AND ips.active_well_status = 'CLOSED_LT'
+        AND ips.active_well_status IN ('CLOSED_LT','PLANNED')
         AND ips.daytime =
            (SELECT MAX(daytime) from iwel_period_status ips2
            WHERE ips2.object_id = ips.object_id
@@ -1470,13 +1471,13 @@ END executeStatement;
          AND ids.inj_type = 'AI'
          AND ids.daytime = p_daytime
          UNION
-         -- remove wells that have active_well_status='CLOSED_LT' at the beginning of the new production_day.
+         -- remove wells that have active_well_status='CLOSED_LT' or PLANNED at the beginning of the new production_day.
          SELECT 1
         FROM IWEL_PERIOD_STATUS ips
         WHERE w.object_id = ips.object_id
         AND ips.time_span = 'EVENT'
         AND ips.inj_type = 'AI'
-        AND ips.active_well_status = 'CLOSED_LT'
+        AND ips.active_well_status IN ('CLOSED_LT','PLANNED')
         AND ips.daytime =
            (SELECT MAX(daytime) from iwel_period_status ips2
            WHERE ips2.object_id = ips.object_id
@@ -1500,13 +1501,13 @@ END executeStatement;
          AND ids.inj_type = 'CI'
          AND ids.daytime = p_daytime
          UNION
-         -- remove wells that have active_well_status='CLOSED_LT' at the beginning of the new production_day.
+         -- remove wells that have active_well_status='CLOSED_LT' or PLANNED at the beginning of the new production_day.
          SELECT 1
         FROM IWEL_PERIOD_STATUS ips
         WHERE w.object_id = ips.object_id
         AND ips.time_span = 'EVENT'
         AND ips.inj_type = 'CI'
-        AND ips.active_well_status = 'CLOSED_LT'
+        AND ips.active_well_status IN ('CLOSED_LT','PLANNED')
         AND ips.daytime =
            (SELECT MAX(daytime) from iwel_period_status ips2
            WHERE ips2.object_id = ips.object_id
@@ -1684,7 +1685,8 @@ END executeStatement;
       IF EcDp_Month_lock.localWithinLockedMonth(p_local_lock, lv_parent_object_id, p_daytime) IS NULL THEN
 
         IF ( substr(mycur.bf_usage, 1, 7) = 'PO.0005' OR
-              substr(mycur.bf_usage, 1, 7) = 'WR.0060' OR
+             substr(mycur.bf_usage, 1, 7) = 'PO.0132' OR
+             substr(mycur.bf_usage, 1, 7) = 'WR.0060' OR
              (mycur.bf_usage = 'PO.0006' AND p_daytime = LAST_DAY(p_daytime)) OR
              substr(mycur.bf_usage, 1, 7) = 'PO.0109' OR
              (mycur.bf_usage = 'PO.0110' AND p_daytime = LAST_DAY(p_daytime))
@@ -1762,7 +1764,7 @@ END executeStatement;
                          wbv2.object_id = wbi.object_id
                          and wbv2.daytime <= p_daytime)
       AND wbv.interval_type='DIACS'
-      AND NVL(ec_pwel_period_status.active_well_status(w.object_id, p_daytime,'EVENT', '<='), 'OPEN') <> 'CLOSED_LT'
+      AND NVL(ec_pwel_period_status.active_well_status(w.object_id, p_daytime,'EVENT', '<='), 'OPEN') NOT IN ('CLOSED_LT','PLANNED')
       AND w.object_id = wv.object_id
       AND wv.daytime = (select max(daytime) from well_version wv2 where
                          wv2.object_id = wv.object_id
@@ -2018,7 +2020,7 @@ END executeStatement;
        FROM PWEL_PERIOD_STATUS pps
        WHERE w.object_id = pps.object_id
        AND pps.time_span='EVENT'
-       AND pps.active_well_status='CLOSED_LT'
+       AND pps.active_well_status IN ('CLOSED_LT','PLANNED')
        AND pps.daytime=
           (SELECT MAX(daytime) from pwel_period_status pps2
           WHERE pps2.object_id=pps.object_id
@@ -2065,7 +2067,7 @@ END executeStatement;
        AND p_daytime < Nvl(wv.end_date, p_daytime + 1)
        AND w.object_id = wv.object_id
        AND p_daytime < Nvl(w.end_date, p_daytime + 1)
-       AND NVL(ec_iwel_period_status.active_well_status(W.OBJECT_ID, P_DAYTIME,'GI','EVENT','<='), 'OPEN') <> 'CLOSED_LT'
+       AND NVL(ec_iwel_period_status.active_well_status(W.OBJECT_ID, P_DAYTIME,'GI','EVENT','<='), 'OPEN') NOT IN ('CLOSED_LT','PLANNED')
        AND wv.calc_inj_method IN ('MEASURED_MTH','MEASURED_MTH_XTPL_DAY')
        AND NOT EXISTS
             (SELECT 1
@@ -2082,7 +2084,7 @@ END executeStatement;
        AND p_daytime < Nvl(wv.end_date, p_daytime + 1)
        AND w.object_id = wv.object_id
        AND p_daytime < Nvl(w.end_date, p_daytime + 1)
-       AND NVL(ec_iwel_period_status.active_well_status(W.OBJECT_ID, P_DAYTIME,'WI','EVENT','<='), 'OPEN') <> 'CLOSED_LT'
+       AND NVL(ec_iwel_period_status.active_well_status(W.OBJECT_ID, P_DAYTIME,'WI','EVENT','<='), 'OPEN') NOT IN ('CLOSED_LT','PLANNED')
        AND wv.calc_water_inj_method IN ('MEASURED_MTH','MEASURED_MTH_XTPL_DAY')
        AND NOT EXISTS
          (SELECT 1
@@ -2099,7 +2101,7 @@ END executeStatement;
        AND p_daytime < Nvl(wv.end_date, p_daytime + 1)
        AND w.object_id = wv.object_id
        AND p_daytime < Nvl(w.end_date, p_daytime + 1)
-       AND NVL(ec_iwel_period_status.active_well_status(W.OBJECT_ID, P_DAYTIME,'SI','EVENT','<='), 'OPEN') <> 'CLOSED_LT'
+       AND NVL(ec_iwel_period_status.active_well_status(W.OBJECT_ID, P_DAYTIME,'SI','EVENT','<='), 'OPEN') NOT IN ('CLOSED_LT','PLANNED')
        AND (wv.calc_steam_inj_method IN ('MEASURED_MTH','MEASURED_MTH_XTPL_DAY') OR wv.calc_steam_inj_mth_mtd IS NOT NULL)
        AND NOT EXISTS
          (SELECT 1

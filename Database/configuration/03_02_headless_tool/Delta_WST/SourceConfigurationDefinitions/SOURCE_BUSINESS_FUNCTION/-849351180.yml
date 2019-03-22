@@ -8,5 +8,6 @@ properties:
   BF_CODE: PP.0062
   NAME: Daily Field Forecast
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pp.screens/daily_field_forecast/CLASS_NAME/FCST_FIELD_DAY_STATUS
 related: {}

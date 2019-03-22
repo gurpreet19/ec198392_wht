@@ -24,6 +24,33 @@ CREATE OR REPLACE PACKAGE ue_reconciliation IS
                             p_compare_type VARCHAR2)
   RETURN VARCHAR2;
 
+  PROCEDURE VarianceTable (p_PERIOD VARCHAR2,
+                        p_GROUP_BY_CODE VARCHAR2 default null,
+                        p_RECON_TYPE VARCHAR2 default null,
+                        p_CONTRACT_PS VARCHAR2 default null,
+                        p_CONTRACT_INT VARCHAR2,
+                        p_DOC_TYPE VARCHAR2 default null,
+                        p_FIN_WBS VARCHAR2 default null,
+                        p_FIN_COST_CENTER_CODE VARCHAR2 default null,
+                        p_FIN_ACCOUNT_CODE VARCHAR2 default null,
+                        p_DATASET VARCHAR2 default null,
+                        p_DOCUMENT_KEY VARCHAR2,
+                        p_CONTRACT_HLD VARCHAR2,
+                        p_AMOUNT VARCHAR2 default null,
+                        p_QTY VARCHAR2 default null,
+                        p_SHOW_ZERO_VARIANCE VARCHAR2 default null,
+                        p_table IN OUT T_TABLE_MAPPING_VARIANCE);
+
+  PROCEDURE variance_detail (p_PERIOD VARCHAR2,
+                        p_GROUP_BY_CODE VARCHAR2 default null,
+                        p_CONTRACT_INT VARCHAR2,
+                        p_DOCUMENT_KEY VARCHAR2,
+                        p_CONTRACT_HLD VARCHAR2,
+                        p_GROUP_BY_VALUE VARCHAR2,
+                        p_table IN OUT T_TABLE_MAPPING_VARIANCE) ;
+
 UseUEReconcileCode BOOLEAN := FALSE;
+UseUECMVarianceHandling BOOLEAN := FALSE;
+UseUECMVarianceDetail BOOLEAN := FALSE;
 
 END ue_reconciliation;

@@ -8,5 +8,6 @@ properties:
   BF_CODE: PR.0005
   NAME: Yearly Price Index
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.sale.pr.screens/price_index_yearly/CLASS/PRICE_INDEX_YR_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self
 related: {}

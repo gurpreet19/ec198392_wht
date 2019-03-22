@@ -82,8 +82,64 @@ T_JOURNAL_ENTRY_REF_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: T_JOURNAL_ENTRY_REF_INFO
   status: ADDED
   type: USER_DECLARED
+T_MAPPING_VARIANCE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_MAPPING_VARIANCE
+  status: ADDED
+  type: USER_DECLARED
 T_MIXED_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: T_MIXED_DATA
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_EVENT_REC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_EVENT_REC
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_EVENT_REC_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_EVENT_REC_MTH
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_EVENT_TAB: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_EVENT_TAB
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_EVENT_TAB_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_EVENT_TAB_MTH
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_ID: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_ID
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_PHASE_REC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_PHASE_REC
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_PHASE_REC_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_PHASE_REC_MTH
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_PHASE_TAB: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_PHASE_TAB
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_PHASE_TAB_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_PHASE_TAB_MTH
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_VAR_REC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_VAR_REC
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_VAR_REC_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_VAR_REC_MTH
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_VAR_TAB: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_VAR_TAB
+  status: ADDED
+  type: USER_DECLARED
+T_PRODFCST_VAR_TAB_MTH: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_PRODFCST_VAR_TAB_MTH
   status: ADDED
   type: USER_DECLARED
 T_REVN_DATA_EXT_PARAM_VAL: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -128,6 +184,10 @@ T_TABLE_IFAC_SALES_QTY: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: USER_DECLARED
 T_TABLE_JOURNAL_ENTRY_REF_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: T_TABLE_JOURNAL_ENTRY_REF_INFO
+  status: ADDED
+  type: USER_DECLARED
+T_TABLE_MAPPING_VARIANCE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: T_TABLE_MAPPING_VARIANCE
   status: ADDED
   type: USER_DECLARED
 T_TABLE_MIXED_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO

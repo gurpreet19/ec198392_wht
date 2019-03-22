@@ -15,7 +15,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '103'
+    sequence: !!float '105'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -23,7 +23,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '104'
+    sequence: !!float '106'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -31,7 +31,23 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '105'
+    sequence: !!float '107'
+  AVG_SS_PRESS:
+    columnName: AVG_SS_PRESS
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '81'
+  AVG_SS_TEMP:
+    columnName: AVG_SS_TEMP
+    typeName: NUMBER
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '82'
   CHOKE_SIZE:
     columnName: CHOKE_SIZE
     typeName: NUMBER
@@ -63,7 +79,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '81'
+    sequence: !!float '83'
   CORROSION_RATE:
     columnName: CORROSION_RATE
     typeName: NUMBER
@@ -79,7 +95,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '97'
+    sequence: !!float '99'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -87,7 +103,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '98'
+    sequence: !!float '100'
   DATA_CLASS_NAME:
     columnName: DATA_CLASS_NAME
     typeName: VARCHAR2(24)
@@ -263,7 +279,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '99'
+    sequence: !!float '101'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -271,7 +287,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '100'
+    sequence: !!float '102'
   MPM_CONDUCT:
     columnName: MPM_CONDUCT
     typeName: NUMBER
@@ -679,7 +695,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '96'
+    sequence: !!float '98'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -687,7 +703,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '106'
+    sequence: !!float '108'
   RESULT_NO:
     columnName: RESULT_NO
     typeName: NUMBER
@@ -703,7 +719,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '101'
+    sequence: !!float '103'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -711,7 +727,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '102'
+    sequence: !!float '104'
   SAND_RATE:
     columnName: SAND_RATE
     typeName: NUMBER
@@ -727,7 +743,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '92'
+    sequence: !!float '94'
   TEXT_2:
     columnName: TEXT_2
     typeName: VARCHAR2(32)
@@ -735,7 +751,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '93'
+    sequence: !!float '95'
   TEXT_3:
     columnName: TEXT_3
     typeName: VARCHAR2(240)
@@ -743,7 +759,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '94'
+    sequence: !!float '96'
   TEXT_4:
     columnName: TEXT_4
     typeName: VARCHAR2(2000)
@@ -751,7 +767,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '95'
+    sequence: !!float '97'
   TOT_WATER_DENSITY_ADJ:
     columnName: TOT_WATER_DENSITY_ADJ
     typeName: NUMBER
@@ -783,7 +799,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '82'
+    sequence: !!float '84'
   VALUE_10:
     columnName: VALUE_10
     typeName: NUMBER
@@ -791,7 +807,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '91'
+    sequence: !!float '93'
   VALUE_2:
     columnName: VALUE_2
     typeName: NUMBER
@@ -799,7 +815,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '83'
+    sequence: !!float '85'
   VALUE_3:
     columnName: VALUE_3
     typeName: NUMBER
@@ -807,7 +823,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '84'
+    sequence: !!float '86'
   VALUE_4:
     columnName: VALUE_4
     typeName: NUMBER
@@ -815,7 +831,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '85'
+    sequence: !!float '87'
   VALUE_5:
     columnName: VALUE_5
     typeName: NUMBER
@@ -823,7 +839,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '86'
+    sequence: !!float '88'
   VALUE_6:
     columnName: VALUE_6
     typeName: NUMBER
@@ -831,7 +847,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '87'
+    sequence: !!float '89'
   VALUE_7:
     columnName: VALUE_7
     typeName: NUMBER
@@ -839,7 +855,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '88'
+    sequence: !!float '90'
   VALUE_8:
     columnName: VALUE_8
     typeName: NUMBER
@@ -847,7 +863,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '89'
+    sequence: !!float '91'
   VALUE_9:
     columnName: VALUE_9
     typeName: NUMBER
@@ -855,7 +871,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '90'
+    sequence: !!float '92'
 cnstForeignKeys:
   FK_PFLW_RESULT_1:
     updateAction: UNKNOWN

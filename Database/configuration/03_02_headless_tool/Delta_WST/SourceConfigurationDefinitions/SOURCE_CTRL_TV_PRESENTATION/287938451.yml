@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/FIN_UOP_DEPR_KEY?screentemplate=/com.ec.frmw.co.screens/manage_object
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/FIN_UOP_DEPR_KEY?screentemplate=/com.ec.frmw.co.screens/manage_object_nav
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: UOP_KEY
   COMPONENT_LABEL: UOP Key

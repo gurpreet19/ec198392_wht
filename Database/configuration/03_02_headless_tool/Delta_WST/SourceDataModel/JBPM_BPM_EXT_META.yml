@@ -4,7 +4,7 @@ cnstPrimaryKey:
   columns:
   - NAME
   - VERSION
-  name: SYS_C008865
+  name: PK_JBPM_BPM_EXT_META
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

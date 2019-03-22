@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.1013
   NAME: Class
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/create_and_maintain_class
 related: {}

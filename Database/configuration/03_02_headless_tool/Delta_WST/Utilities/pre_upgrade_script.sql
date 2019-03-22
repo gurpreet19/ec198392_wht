@@ -210,6 +210,14 @@ BEGIN
     p_insert_table('NOMPNT_NP_DAY_NOMINATION','NOMINATION_SEQ');
     p_insert_table('STORAGE_LIFT_NOM_SPLIT','SPLIT_NO'); 
     p_insert_table('FCST_STOR_LIFT_CPY_SPLIT','SPLIT_NO');
+    p_insert_table('CNTR_DAY_CAP_TRADE','TRANSFER_NO');
+    p_insert_table('CONT_JOURNAL_ENTRY','JOURNAL_ENTRY_NO');
+    p_insert_table('ITST_RESULT','RESULT_NO');
+    p_insert_table('JBPM_BPM_PI_EVENT_QUEUE','ID');
+    p_insert_table('NOMPNT_NP_DAY_DELIVERY','NOMINATION_SEQ');
+    p_insert_table('OBJLOC_DAY_CNTR_NOM','NOMINATION_SEQ');
+    p_insert_table('OBJLOC_DAY_NP_NOM','NOMINATION_SEQ');
+    p_insert_table('SUMMARY_SETUP_LIST','LIST_ITEM_KEY');	
  
 
   FOR i IN c_gtcur LOOP

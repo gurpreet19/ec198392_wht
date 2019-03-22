@@ -9,5 +9,13 @@ properties:
   BF_DESCRIPTION_NO: CD.0066
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/COMPANY/FROM_CLASS_NAME/COMPANY/TO_CLASS_NAME/COMPANY' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>    <strong>Company Usage screen</strong>    is used to give an overview of the various relations from the Company class to    other classes</p><p>    The screen is divided into these sections:</p><p>    <strong><em>Filter Navigator</em></strong><br>    It lists all the Companies valid for the given date.</p><p>    <strong><em>Relations List section:</em></strong><br>    The section lists the various relations for the Company class.</p><p>    <strong><em>Relation Details:</em></strong><br>    The section lists the objects that the Company class has relation to for the    relation selected in the Relations List section.</p>
+  DESCRIPTION: '<p><strong>Company Usage screen</strong> is used to give an overview
+    of the various relations from the Company class to other classes.</p><p>The screen
+    is divided into these sections:</p><p><strong style="color: rgb(0, 102, 204);">Navigator</strong></p><p>
+    It lists all the Companies valid for the given date.</p><p><strong style="color:
+    rgb(0, 102, 204);">Relations List Section</strong></p><p> The section lists the
+    various relations for the Company class.</p><p><strong style="color: rgb(0, 102,
+    204);">Relation Details Section</strong></p><p> The section lists the objects
+    that the Company class has relation to for the relation selected in the Relations
+    List section.</p>'
 related: {}

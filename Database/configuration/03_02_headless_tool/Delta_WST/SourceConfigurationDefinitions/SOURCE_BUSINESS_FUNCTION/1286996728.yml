@@ -8,5 +8,6 @@ properties:
   BF_CODE: CP.0009
   NAME: Monthly Storage Profit Centre Forecast
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.cp.screens/monthly_stor_pc_forecast
 related: {}

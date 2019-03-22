@@ -446,6 +446,16 @@
     COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/asset_unit_conversion
   related: {}
   status: MODIFIED
+' COMPONENT_ID=AUTOMATIC_TEST_DEFINE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-980854159'
+  keys:
+    COMPONENT_ID: AUTOMATIC_TEST_DEFINE
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=AUTO_DEFERMENT_RAW WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-857082426'
   keys:
@@ -1000,9 +1010,10 @@
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
-  properties: {}
+  properties:
+    COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_table/CLASS_NAME/CARGO_ACCOUNT?screentemplate=/com.ec.frmw.co.screens/manage_table
   related: {}
-  status: DELETED
+  status: MODIFIED
 ' COMPONENT_ID=CARGO_ACTIVITY WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '561366383'
   keys:
@@ -1010,9 +1021,10 @@
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
-  properties: {}
+  properties:
+    COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_table/CLASS_NAME/CARGO_ACTIVITY?screentemplate=/com.ec.frmw.co.screens/manage_table
   related: {}
-  status: DELETED
+  status: MODIFIED
 ' COMPONENT_ID=CARGO_ADM WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1326113980'
   keys:
@@ -1020,9 +1032,10 @@
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
-  properties: {}
+  properties:
+    COMPONENT_EXT_NAME: /com.ec.prod.ca.screens/cargo
   related: {}
-  status: DELETED
+  status: MODIFIED
 ' COMPONENT_ID=CARGO_DOC WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1039376302'
   keys:
@@ -1074,19 +1087,10 @@
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
-  properties: {}
+  properties:
+    COMPONENT_EXT_NAME: /com.ec.prod.ca.screens/cargo_load
   related: {}
-  status: DELETED
-' COMPONENT_ID=CARGO_OBJECTS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1955582638'
-  keys:
-    COMPONENT_ID: CARGO_OBJECTS
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: DELETED
+  status: MODIFIED
 ' COMPONENT_ID=CARGO_PRICE_DS_LIST WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1024651314'
   keys:
@@ -1149,9 +1153,10 @@
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
-  properties: {}
+  properties:
+    COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/CARRIER?screentemplate=/com.ec.frmw.co.screens/manage_object
   related: {}
-  status: DELETED
+  status: MODIFIED
 ' COMPONENT_ID=CARRIER_MAINTAIN_TRAN WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-780788779'
   keys:
@@ -2089,7 +2094,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE?screentemplate=/com.ec.tran.co.screens/contract_attribute&TARGET_CONDITION=SALE_IND='Y'
+    COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/SALE_CODE?screentemplate=/com.ec.tran.co.screens/contract_attribute
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=CONTRACT_SEASONALITY WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -2122,7 +2127,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/TRAN_CODE?screentemplate=/com.ec.tran.co.screens/contract_attribute&TARGET_CONDITION=TRAN_IND='Y'
+    COMPONENT_EXT_NAME: /com.ec.tran.co.screens/contract_attribute/ACCESS_COLUMN/TRAN_CODE?screentemplate=/com.ec.tran.co.screens/contract_attribute
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=CONTRACT_TRAN_ATTR_MATRIX WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -2368,16 +2373,6 @@
   fileName: '1433641247'
   keys:
     COMPONENT_ID: COST_OBJECT_MAPPING_ASS
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-' COMPONENT_ID=COST_REVN WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '853187002'
-  keys:
-    COMPONENT_ID: COST_REVN
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
@@ -2856,6 +2851,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.ha.screens/daily_data_status_process
   related: {}
   status: MODIFIED
+' COMPONENT_ID=DAILY_DATA_STATUS_FACILITY WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1057616798'
+  keys:
+    COMPONENT_ID: DAILY_DATA_STATUS_FACILITY
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=DAILY_DATA_STATUS_SINGLE_DATE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1523963076'
   keys:
@@ -2900,6 +2905,16 @@
     COMPONENT_EXT_NAME: /com.ec.tran.cp.screens/daily_entitlement_single_la
   related: {}
   status: MODIFIED
+' COMPONENT_ID=DAILY_PERF_INTERVAL_DATA WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-139503439'
+  keys:
+    COMPONENT_ID: DAILY_PERF_INTERVAL_DATA
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=DAILY_STREAM_STATUS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-477873496'
   keys:
@@ -2919,7 +2934,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status&TARGETCONDITION=INSTRUMENTATION_TYPE in ('1')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=DAILY_WELL_STATUS_2 WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -2930,7 +2945,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status&TARGETCONDITION=INSTRUMENTATION_TYPE in ('2')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=DAILY_WELL_STATUS_3 WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -2941,7 +2956,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status&TARGETCONDITION=INSTRUMENTATION_TYPE in ('3')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3?screentemplate=/com.ec.prod.wr.screens/daily_production_well_status
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=DAILY_WELL_STATUS_CP WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -3007,6 +3022,16 @@
   properties: {}
   related: {}
   status: ADDED
+' COMPONENT_ID=DAY_CAP_TRD WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '516364755'
+  keys:
+    COMPONENT_ID: DAY_CAP_TRD
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=DAY_DEFERMENT_MASTER WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1722971345'
   keys:
@@ -3061,6 +3086,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.pd.screens/daily_field_loss_accounting
   related: {}
   status: MODIFIED
+' COMPONENT_ID=DAY_PIPELINE_SEG_CONTRACT_NOM WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '76143008'
+  keys:
+    COMPONENT_ID: DAY_PIPELINE_SEG_CONTRACT_NOM
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=DAY_PIPE_PC_STATUS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-63758547'
   keys:
@@ -3160,6 +3195,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.po.screens/daily_tank_status_1
   related: {}
   status: MODIFIED
+' COMPONENT_ID=DAY_TANK_STATUS_2 WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1676072652'
+  keys:
+    COMPONENT_ID: DAY_TANK_STATUS_2
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=DEFERMENT_CORRECTIVE_ACTION WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1757819957'
   keys:
@@ -3248,6 +3293,16 @@
     COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_navmodel_nav/NAVMODEL/OPERATIONAL/TARGET/DELIVERY_POINT/CLASS_NAME/DELIVERY_POINT?screentemplate=/com.ec.frmw.co.screens/manage_object_navmodel_nav
   related: {}
   status: MODIFIED
+' COMPONENT_ID=DEVELOP WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1667722906'
+  keys:
+    COMPONENT_ID: DEVELOP
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=DISPOSITION_TYPE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1125060609'
   keys:
@@ -3282,6 +3337,16 @@
     COMPONENT_EXT_NAME: /com.ec.frmw.mhm.screens/distribution_list?screentemplate=/com.ec.frmw.mhm.screens/distribution_list
   related: {}
   status: MODIFIED
+' COMPONENT_ID=DLY_WAT_OVERBOARD_BY_STRM WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '335984625'
+  keys:
+    COMPONENT_ID: DLY_WAT_OVERBOARD_BY_STRM
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=DOC_DATE_TERM WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '95320083'
   keys:
@@ -3398,6 +3463,16 @@
   fileName: '648231959'
   keys:
     COMPONENT_ID: ECBPM_PROCESS_OVERVIEW_CONFIG
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' COMPONENT_ID=ECBPM_PROCESS_OVERVIEW_LEGACY WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '944519390'
+  keys:
+    COMPONENT_ID: ECBPM_PROCESS_OVERVIEW_LEGACY
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
@@ -4427,6 +4502,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.co.screens/fcty_ext_location_conn
   related: {}
   status: MODIFIED
+' COMPONENT_ID=FCTY_REF_VALUE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '275971621'
+  keys:
+    COMPONENT_ID: FCTY_REF_VALUE
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=FC_MO_FC_QQ WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1138680028'
   keys:
@@ -4866,9 +4951,10 @@
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
-  properties: {}
+  properties:
+    SORT_NO: 6.0
   related: {}
-  status: DELETED
+  status: MODIFIED
 ' COMPONENT_ID=FLD_COL_POINT WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-402519891'
   keys:
@@ -4924,6 +5010,16 @@
   fileName: '2145641921'
   keys:
     COMPONENT_ID: FLD_EVENT_FCST
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' COMPONENT_ID=FLD_GRP_BY_FLOWLINE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1124714092'
+  keys:
+    COMPONENT_ID: FLD_GRP_BY_FLOWLINE
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
@@ -5031,13 +5127,23 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE?screentemplate=/com.ec.prod.wr.screens/water_ion_analysis&TARGETCONDITION=FLOWLINE_TYPE in ('OP')&PROD=FLWL_PROD_ION_ANALYSIS&FORM=FLWL_FORM_ION_ANALYSIS&INJ=FLWL_INJ_ION_ANALYSIS
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE?screentemplate=/com.ec.prod.wr.screens/water_ion_analysis&PROD=FLWL_PROD_ION_ANALYSIS&FORM=FLWL_FORM_ION_ANALYSIS&INJ=FLWL_INJ_ION_ANALYSIS
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=FORECAST_COMPARISON WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1781180118'
   keys:
     COMPONENT_ID: FORECAST_COMPARISON
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' COMPONENT_ID=FORMDEV WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1339864050'
+  keys:
+    COMPONENT_ID: FORMDEV
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
@@ -5255,90 +5361,10 @@
   properties: {}
   related: {}
   status: ADDED
-' COMPONENT_ID=FT_PR_BD WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '2131134219'
-  keys:
-    COMPONENT_ID: FT_PR_BD
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 ' COMPONENT_ID=FT_PR_CL WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-738497678'
   keys:
     COMPONENT_ID: FT_PR_CL
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-' COMPONENT_ID=FT_PR_DG WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1219929844'
-  keys:
-    COMPONENT_ID: FT_PR_DG
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-' COMPONENT_ID=FT_PR_DI WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1386093710'
-  keys:
-    COMPONENT_ID: FT_PR_DI
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-' COMPONENT_ID=FT_PR_RE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-959557956'
-  keys:
-    COMPONENT_ID: FT_PR_RE
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-' COMPONENT_ID=FT_PR_REVN WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1129689164'
-  keys:
-    COMPONENT_ID: FT_PR_REVN
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-' COMPONENT_ID=FT_PR_TG WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '828817148'
-  keys:
-    COMPONENT_ID: FT_PR_TG
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-' COMPONENT_ID=FT_PR_TQ WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '974033030'
-  keys:
-    COMPONENT_ID: FT_PR_TQ
-    T: CTRL_TV_PRESENTATION
-    WINDOW_ID: ENERGYX
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-' COMPONENT_ID=FT_PR_TV WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1046640971'
-  keys:
-    COMPONENT_ID: FT_PR_TV
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
@@ -5556,6 +5582,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_gas_injection_well_status
   related: {}
   status: MODIFIED
+' COMPONENT_ID=GAS_WELL_STATUS_BY_FLOWLINE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1700700315'
+  keys:
+    COMPONENT_ID: GAS_WELL_STATUS_BY_FLOWLINE
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=GD_CAP_VALIDATION WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '700615269'
   keys:
@@ -5622,6 +5658,16 @@
     COMPONENT_EXT_NAME: /com.ec.tran.gd.screens/component_recovery_factors/TARGET/NOMINATION_LOCATION/CLASS/TRNP_EVENT_CP_TRAN_FAC/BF_PROFILE/GD.0085/CLASS_DAY/TRNL_EVENT_TRAN_FAC_DAY?screentemplate=/com.ec.tran.gd.screens/component_recovery_factors
   related: {}
   status: MODIFIED
+' COMPONENT_ID=GD_DAILY_PATH_DELIVERY WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1331393731'
+  keys:
+    COMPONENT_ID: GD_DAILY_PATH_DELIVERY
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=GD_DAY_AVAIL WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-807929721'
   keys:
@@ -6145,6 +6191,16 @@
     COMPONENT_EXT_NAME: /com.ec.tran.gd.screens/period_output_nomination/CLASS/TRNP_DAY_NOM_OUTPUT/TARGET/NOMINATION_POINT/NOMINATION_CYCLE/false?screentemplate=/com.ec.tran.gd.screens/period_output_nomination
   related: {}
   status: MODIFIED
+' COMPONENT_ID=GD_PERIOD_PATH_NOM WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1629992715'
+  keys:
+    COMPONENT_ID: GD_PERIOD_PATH_NOM
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=GD_PERIOD_TZ_FACTOR WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1034882583'
   keys:
@@ -6471,6 +6527,36 @@
     COMPONENT_EXT_NAME: /com.ec.frmw.mhm.screens/incoming_messages
   related: {}
   status: MODIFIED
+' COMPONENT_ID=INJECTION_STABLE_PERIOD WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-2031848934'
+  keys:
+    COMPONENT_ID: INJECTION_STABLE_PERIOD
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' COMPONENT_ID=INJECTION_TEST_DEFINE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1225354269'
+  keys:
+    COMPONENT_ID: INJECTION_TEST_DEFINE
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+' COMPONENT_ID=INJECTION_TEST_EVENTS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1746298885'
+  keys:
+    COMPONENT_ID: INJECTION_TEST_EVENTS
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=INJ_GAS_FLW_SUB_DAY_STATUS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-901934753'
   keys:
@@ -6493,6 +6579,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_gas_injection_well_status
   related: {}
   status: MODIFIED
+' COMPONENT_ID=INJ_TEST_RESULT WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '925682829'
+  keys:
+    COMPONENT_ID: INJ_TEST_RESULT
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=INJ_WELL_ACTIVE_STATUS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1121665807'
   keys:
@@ -7560,6 +7656,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.po.screens/monthly_stream_status/CLASS_NAME/STRM_MTH_LNG/CLASS_NAME_DETAIL/STRM_MTH_STREAM_DER_LNG?screentemplate=/com.ec.prod.po.screens/monthly_stream_status
   related: {}
   status: MODIFIED
+' COMPONENT_ID=MONTH_NGL_STREAM WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '219957160'
+  keys:
+    COMPONENT_ID: MONTH_NGL_STREAM
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=MONTH_OPERATIONAL_COMMENTS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '2114528765'
   keys:
@@ -7731,9 +7837,10 @@
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
-  properties: {}
+  properties:
+    COMPONENT_EXT_NAME: /com.ec.prod.ca.screens/mth_account_balance
   related: {}
-  status: DELETED
+  status: MODIFIED
 ' COMPONENT_ID=MTH_GAS_WELL_STATUS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-748081380'
   keys:
@@ -7779,6 +7886,16 @@
     COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/navigation_model
   related: {}
   status: MODIFIED
+' COMPONENT_ID=NGL_STREAM_STATUS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1207835234'
+  keys:
+    COMPONENT_ID: NGL_STREAM_STATUS
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=NODE_MAINTAIN WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1448309445'
   keys:
@@ -8065,7 +8182,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('1')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=OIL_WELL_SUB_DAY_STATUS_2 WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -8076,7 +8193,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('2')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=OIL_WELL_SUB_DAY_STATUS_2_PRD WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -8087,7 +8204,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('2')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS_2/DAILY_CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=OIL_WELL_SUB_DAY_STATUS_PRD WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -8098,7 +8215,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('1')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period/CLASS_NAME/PWEL_SUB_DAY_STATUS/DAILY_CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/sub_daily_oil_production_well_status_by_period
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=OIL_WELL_SUB_DAY_VALID WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -8347,7 +8464,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/period_production_well_status&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('1')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS?screentemplate=/com.ec.prod.wr.screens/period_production_well_status
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=PERIOD_PROD_WELL_STATUS_2 WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -8358,7 +8475,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/period_production_well_status&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('2')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_2?screentemplate=/com.ec.prod.wr.screens/period_production_well_status
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=PERIOD_PROD_WELL_STATUS_3 WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -8369,7 +8486,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3?screentemplate=/com.ec.prod.wr.screens/period_production_well_status&TARGETCONDITION=ISPRODUCER in ('Y') and INSTRUMENTATION_TYPE in ('3')
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/period_production_well_status/CLASS_NAME/PWEL_DAY_STATUS_3?screentemplate=/com.ec.prod.wr.screens/period_production_well_status
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=PERIOD_STEAM_STREAM_STATUS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
@@ -8578,6 +8695,16 @@
     COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/pki_signature_verification
   related: {}
   status: MODIFIED
+' COMPONENT_ID=PLANNED_WELL_MAINTAIN WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1657687586'
+  keys:
+    COMPONENT_ID: PLANNED_WELL_MAINTAIN
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=POB WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-785699584'
   keys:
@@ -8596,9 +8723,10 @@
     T: CTRL_TV_PRESENTATION
     WINDOW_ID: ENERGYX
   parentKeys: {}
-  properties: {}
+  properties:
+    COMPONENT_EXT_NAME: /com.ec.prod.ca.screens/port_log
   related: {}
-  status: DELETED
+  status: MODIFIED
 ' COMPONENT_ID=PORT_MAINTAIN WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-557649690'
   keys:
@@ -9605,6 +9733,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/maintain_production_well_status
   related: {}
   status: MODIFIED
+' COMPONENT_ID=PROD_WELL_STATUS_BY_FLOWLINE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1493652861'
+  keys:
+    COMPONENT_ID: PROD_WELL_STATUS_BY_FLOWLINE
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=PUMP_MAINTAIN WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1358652063'
   keys:
@@ -14072,6 +14210,16 @@
     COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/daily_water_injection_well_status
   related: {}
   status: MODIFIED
+' COMPONENT_ID=WATER_WELL_STATUS_BY_FLOWLINE WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1637454813'
+  keys:
+    COMPONENT_ID: WATER_WELL_STATUS_BY_FLOWLINE
+    T: CTRL_TV_PRESENTATION
+    WINDOW_ID: ENERGYX
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 ' COMPONENT_ID=WATER_WELL_SUB_DAY_STATUS WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1007938106'
   keys:
@@ -14493,7 +14641,7 @@
     WINDOW_ID: ENERGYX
   parentKeys: {}
   properties:
-    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/WELL/TARGET/WELL/OWNER/WELL?screentemplate=/com.ec.prod.wr.screens/water_ion_analysis&TARGETCONDITION=ISPRODUCER in ('Y')&PROD=WELL_PROD_ION_ANALYSIS&FORM=WELL_FORM_ION_ANALYSIS&INJ=WELL_INJ_ION_ANALYSIS
+    COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/WELL/TARGET/WELL/OWNER/WELL?screentemplate=/com.ec.prod.wr.screens/water_ion_analysis&PROD=WELL_PROD_ION_ANALYSIS&FORM=WELL_FORM_ION_ANALYSIS&INJ=WELL_INJ_ION_ANALYSIS
   related: {}
   status: MODIFIED
 ' COMPONENT_ID=WELL_HOLE_MAINTAIN WINDOW_ID=ENERGYX': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended

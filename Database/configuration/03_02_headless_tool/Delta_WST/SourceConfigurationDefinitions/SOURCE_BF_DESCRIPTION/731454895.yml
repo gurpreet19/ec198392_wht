@@ -698,42 +698,41 @@ properties:
     There is a scrollbar to the right that enables fast access to the entire data
     set.&nbsp; Individual data elements are both editable and protected.&nbsp; The
     protected elements are typically those that are populated by the various processes
-    (Step 1 and 2 in paragraph 1.1.2) triggered by pressing the [Calculate] -button
-    in Data Section 1.&nbsp; Trending is activated for the data elements in Data Section
-    3.</span></span></p><p class="MsoNormal" style="font-style: normal; font-variant-ligatures:
-    normal; font-variant-caps: normal; font-weight: normal; box-sizing: border-box;
-    background-color: rgb(255, 255, 255);"><span style="font-family: Arial; font-size:
-    small;"><b style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
-    border-box;">Data section 4</span></b><span lang="EN-GB" style="box-sizing: border-box;">&nbsp;lists
-    all&nbsp;<i style="box-sizing: border-box;">Flowlines</i>&nbsp;participating in
-    the production test result record selected in Data Section 1<i style="box-sizing:
-    border-box;">.&nbsp;&nbsp;</i>Setting focus to one of these flowlines will list
-    all result data for that specific flowline in Data Section 5.&nbsp; Initial selection
-    is the top row in the data section.&nbsp; When inserting a new test result, the
-    flowline can be selected from a dropdown showing all available flowlines (code
-    and name).&nbsp; Only flowlines connected to the same facility as the selected
-    test device will be listed.&nbsp; If the test device is undefined, only flowlines
-    connected to the same facility as the navigated well is connected to, will be
-    shown.&nbsp;</span></span></p><p class="MsoNormal" style="font-style: normal;
-    font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal;
-    box-sizing: border-box; background-color: rgb(255, 255, 255);"><span style="font-family:
+    (Step 1 and 2) triggered by pressing the [Calculate] -button in Data Section 1.&nbsp;
+    Trending is activated for the data elements in Data Section 3.</span></span></p><p
+    class="MsoNormal" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps:
+    normal; font-weight: normal; box-sizing: border-box; background-color: rgb(255,
+    255, 255);"><span style="font-family: Arial; font-size: small;"><b style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box;">Data section 4</span></b><span
+    lang="EN-GB" style="box-sizing: border-box;">&nbsp;lists all&nbsp;<i style="box-sizing:
+    border-box;">Flowlines</i>&nbsp;participating in the production test result record
+    selected in Data Section 1<i style="box-sizing: border-box;">.&nbsp;&nbsp;</i>Setting
+    focus to one of these flowlines will list all result data for that specific flowline
+    in Data Section 5.&nbsp; Initial selection is the top row in the data section.&nbsp;
+    When inserting a new test result, the flowline can be selected from a dropdown
+    showing all available flowlines (code and name).&nbsp; Only flowlines connected
+    to the same facility as the selected test device will be listed.&nbsp; If the
+    test device is undefined, only flowlines connected to the same facility as the
+    navigated well is connected to, will be shown.&nbsp;</span></span></p><p class="MsoNormal"
+    style="font-style: normal; font-variant-ligatures: normal; font-variant-caps:
+    normal; font-weight: normal; box-sizing: border-box; background-color: rgb(255,
+    255, 255);"><span style="font-family: Arial; font-size: small;"><b style="box-sizing:
+    border-box;"><span lang="EN-GB" style="box-sizing: border-box;">Data section 5</span></b><span
+    lang="EN-GB" style="box-sizing: border-box;">&nbsp;lists all available test result
+    data for the&nbsp;<i style="box-sizing: border-box;">Flowline</i>&nbsp;focused
+    in Data Section 4.&nbsp; The data class associated with that specific flowline
+    defines the set of data elements shown.&nbsp; There is a scrollbar to the right
+    that enables fast access to the entire data set.&nbsp; Individual data elements
+    are both editable and protected.&nbsp; The protected elements are typically those
+    that are populated by the various processes (Step 1 and 2) triggered by pressing
+    the [Calculate] -button in Data Section 1.&nbsp; Trending is activated for the
+    data elements in Data Section 5.&nbsp;</span></span></p><p class="MsoNormal" style="font-style:
+    normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight:
+    normal; box-sizing: border-box; background-color: rgb(255, 255, 255);"><span style="font-family:
     Arial; font-size: small;"><b style="box-sizing: border-box;"><span lang="EN-GB"
-    style="box-sizing: border-box;">Data section 5</span></b><span lang="EN-GB" style="box-sizing:
-    border-box;">&nbsp;lists all available test result data for the&nbsp;<i style="box-sizing:
-    border-box;">Flowline</i>&nbsp;focused in Data Section 4.&nbsp; The data class
-    associated with that specific flowline defines the set of data elements shown.&nbsp;
-    There is a scrollbar to the right that enables fast access to the entire data
-    set.&nbsp; Individual data elements are both editable and protected.&nbsp; The
-    protected elements are typically those that are populated by the various processes
-    (Step 1 and 2 in paragraph 1.1.2) triggered by pressing the [Calculate] -button
-    in Data Section 1.&nbsp; Trending is activated for the data elements in Data Section
-    5.&nbsp;</span></span></p><p class="MsoNormal" style="font-style: normal; font-variant-ligatures:
-    normal; font-variant-caps: normal; font-weight: normal; box-sizing: border-box;
-    background-color: rgb(255, 255, 255);"><span style="font-family: Arial; font-size:
-    small;"><b style="box-sizing: border-box;"><span lang="EN-GB" style="box-sizing:
-    border-box;">Data section 6</span></b><span lang="EN-GB" style="box-sizing: border-box;">&nbsp;lists
-    all&nbsp;<i style="box-sizing: border-box;">Wells</i>&nbsp;participating in the
-    production test result record selected in Data Section 1<i style="box-sizing:
+    style="box-sizing: border-box;">Data section 6</span></b><span lang="EN-GB" style="box-sizing:
+    border-box;">&nbsp;lists all&nbsp;<i style="box-sizing: border-box;">Wells</i>&nbsp;participating
+    in the production test result record selected in Data Section 1<i style="box-sizing:
     border-box;">.&nbsp;&nbsp;</i>Setting focus to one of these wells will list all
     measurement data for that specific well in Data Section 7.&nbsp; Initial selection
     is the top row in the data section.&nbsp; When inserting a new test result, the
@@ -753,11 +752,11 @@ properties:
     the set of data elements shown.&nbsp; There is a scrollbar to the right that enables
     fast access to the entire data set.&nbsp; Individual data elements are both editable
     and protected.&nbsp; The protected elements are typically those that are populated
-    by the various processes (Step 1 and 2 in paragraph 1.1.2) triggered by pressing
-    the [Calculate] -button in Data Section 1.&nbsp; Trending is activated for the
-    data elements in Data Section 7.</span></span></p><p class="MsoNormal" style="font-style:
-    normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight:
-    normal; box-sizing: border-box; background-color: rgb(255, 255, 255);"><span style="font-family:
+    by the various processes (Step 1 and 2) triggered by pressing the [Calculate]
+    -button in Data Section 1.&nbsp; Trending is activated for the data elements in
+    Data Section 7.</span></span></p><p class="MsoNormal" style="font-style: normal;
+    font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal;
+    box-sizing: border-box; background-color: rgb(255, 255, 255);"><span style="font-family:
     Arial; font-size: small;"><b style="box-sizing: border-box;"><span lang="EN-GB"
     style="box-sizing: border-box;">Data section 8</span></b><span lang="EN-GB" style="box-sizing:
     border-box;">&nbsp;lists all&nbsp;<i style="box-sizing: border-box;">Well Bore
@@ -776,25 +775,25 @@ properties:
     data elements shown.&nbsp; There is a scrollbar to the right that enables fast
     access to the entire data set.&nbsp; Individual data elements are both editable
     and protected.&nbsp; The protected elements are typically those that are populated
-    by the various processes (Step 1 and 2 in paragraph 1.1.2) triggered by pressing
-    the [Calculate] -button in Data Section 1.&nbsp; Trending is activated for the
-    data elements in Data Section 7.</span></span></p><p style="font-style: normal;
-    font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal;
-    box-sizing: border-box; background-color: rgb(255, 255, 255);"><span lang="EN-GB"
-    style="box-sizing: border-box; font-family: Arial; font-size: small;">Due to the
-    inherent relationships between test device, flowline and well, the process of
-    defining a new test result must be carried out in a specific sequence:&nbsp; Data
-    Section 1 =&gt; save =&gt; Data Section 2 =&gt; save =&gt; Data Section 4 =&gt;
-    save =&gt; Data Section 6 =&gt; save.&nbsp; Any one of these sections can be omitted
-    as long as the sequence is correct.&nbsp; The reason for this is that dropdowns
-    are populated and filtered based on information from the previous step with a
-    proper set of constraints being applied.&nbsp; Working backwards in the sequence
-    could lead to inconsistencies in the assignment of e.g. flowlines and wells, and
-    should therefore be avoided.&nbsp; After saving the participating object information,
-    blank data elements will appear in sections 3,5,7 for test result data entry.</span></p><p
-    style="box-sizing: border-box; background-color: rgb(255, 255, 255);"><span style="font-size:
-    small; font-family: Arial;">DV_PTST_PWEL_RESULT_DATA and V_PTST_PWEL_RESULT_DATA
-    have been introduced to accomplish unified reporting from tables&nbsp;</span><span
+    by the various processes (Step 1 and 2) triggered by pressing the [Calculate]
+    -button in Data Section 1.&nbsp; Trending is activated for the data elements in
+    Data Section 7.</span></span></p><p style="font-style: normal; font-variant-ligatures:
+    normal; font-variant-caps: normal; font-weight: normal; box-sizing: border-box;
+    background-color: rgb(255, 255, 255);"><span lang="EN-GB" style="box-sizing: border-box;
+    font-family: Arial; font-size: small;">Due to the inherent relationships between
+    test device, flowline and well, the process of defining a new test result must
+    be carried out in a specific sequence:&nbsp; Data Section 1 =&gt; save =&gt; Data
+    Section 2 =&gt; save =&gt; Data Section 4 =&gt; save =&gt; Data Section 6 =&gt;
+    save.&nbsp; Any one of these sections can be omitted as long as the sequence is
+    correct.&nbsp; The reason for this is that dropdowns are populated and filtered
+    based on information from the previous step with a proper set of constraints being
+    applied.&nbsp; Working backwards in the sequence could lead to inconsistencies
+    in the assignment of e.g. flowlines and wells, and should therefore be avoided.&nbsp;
+    After saving the participating object information, blank data elements will appear
+    in sections 3,5,7 for test result data entry.</span></p><p style="box-sizing:
+    border-box; background-color: rgb(255, 255, 255);"><span style="font-size: small;
+    font-family: Arial;">DV_PTST_PWEL_RESULT_DATA and V_PTST_PWEL_RESULT_DATA have
+    been introduced to accomplish unified reporting from tables&nbsp;</span><span
     style="font-family: Arial; font-size: small;">pwel_result,</span><span style="font-family:
     Arial; font-size: small;"> eqpm_result</span><span style="font-family: Arial;
     font-size: small;"> and ptst_result.&nbsp;</span></p><p>&quot;CalculatePVTAction&quot;

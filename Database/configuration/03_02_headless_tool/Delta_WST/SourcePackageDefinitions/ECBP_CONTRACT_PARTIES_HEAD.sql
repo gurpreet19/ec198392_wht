@@ -21,7 +21,7 @@ PROCEDURE createNewShare(p_contract_id VARCHAR2, p_party_role VARCHAR2, p_daytim
 
 PROCEDURE updateNewShareEndDate(p_contract_id VARCHAR2, p_party_role VARCHAR2, p_daytime DATE, p_user VARCHAR2 DEFAULT NULL);
 
-PROCEDURE validateShare(p_contract_id VARCHAR2, p_daytime DATE, p_party_role VARCHAR2);
+PROCEDURE validateShare(p_contract_id VARCHAR2, p_daytime DATE, p_party_role VARCHAR2, p_class_name VARCHAR2);
 
 PROCEDURE updateDelShareEndDate(p_contract_id VARCHAR2, p_party_role VARCHAR2, p_daytime DATE, p_user VARCHAR2 DEFAULT NULL);
 

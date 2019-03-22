@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.2074
   NAME: Transport Contract Attributes Dimension Matrix
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: TRAN_IND='Y'
   URL: /com.ec.tran.co.screens/contract_attribute_dim_matrix/ACCESS_COLUMN/TRAN_CODE
 related: {}

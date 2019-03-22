@@ -1687,6 +1687,7 @@ BEGIN
     -- Remove document reference in period interface table
     UPDATE ifac_sales_qty x
        SET x.transaction_key = NULL,
+           x.line_item_key = NULL,
            x.trans_key_set_ind = 'N',
            x.last_updated_by = 'SYSTEM',
            x.document_key = NULL
@@ -1702,6 +1703,8 @@ BEGIN
     -- trying to create a dependent document WITHOUT a preceding document.
     UPDATE ifac_sales_qty x
        SET x.preceding_doc_key = NULL,
+           x.preceding_li_key = NULL,
+           x.preceding_trans_key = NULL,
            x.last_updated_by = 'SYSTEM'
      WHERE x.preceding_doc_key = p_document_id;
 
@@ -1709,8 +1712,10 @@ BEGIN
     -- Remove document reference in cargo interface table
     UPDATE ifac_cargo_value x
        SET x.transaction_key = NULL,
+           x.line_item_key = NULL,
            x.trans_key_set_ind = 'N',
-           x.last_updated_by = 'SYSTEM'
+           x.last_updated_by = 'SYSTEM',
+           x.document_key = NULL
      WHERE x.transaction_key IN
            (SELECT t.transaction_key
               FROM cont_transaction t
@@ -1722,6 +1727,8 @@ BEGIN
     -- trying to create a dependent document WITHOUT a preceding document.
     UPDATE ifac_cargo_value x
        SET x.preceding_doc_key = NULL,
+           x.preceding_li_key = NULL,
+           x.preceding_trans_key = NULL,
            x.last_updated_by = 'SYSTEM'
      WHERE x.preceding_doc_key = p_document_id;
 
@@ -5831,6 +5838,152 @@ BEGIN
 END isDocumentEditable;
 
 
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isReversed
+-- Description    : Function to return whether a document is reversed or not (Y or N)
+--
+-- Preconditions  : Document key must be provided.
+-- Postconditions :
+--
+-- Using tables   : cont_document
+--
+-- Using functions: ec_cont_document.actual_reversal_date
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+---------------------------------------------------------------------------------------------------
+FUNCTION isReversed(
+         p_document_key VARCHAR2)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+BEGIN
+
+    IF ec_cont_document.actual_reversal_date(p_document_key) IS NOT NULL THEN
+        RETURN 'Y';
+    ELSE
+        RETURN 'N';
+    END IF;
+
+END isReversed;
+
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isInsertingTransactionAllowed
+-- Description    : Function to return whether a transaction can be inserted on the document or not (Y or N)
+--
+-- Preconditions  : Document key must be provided.
+-- Postconditions :
+--
+-- Using tables   : cont_document
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+---------------------------------------------------------------------------------------------------
+FUNCTION isInsertingTransactionAllowed(
+        p_document_key  VARCHAR2,
+        p_msg_ind       VARCHAR2 DEFAULT 'N')    -- When 'Y' => Returns user friendly message instead of 'N' when result is false ('N'))
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+    lv2_flag        VARCHAR2(1)     := 'Y';
+    lv2_op_txt      VARCHAR2(10)    := 'inserted';
+    lrec_cd         cont_document%ROWTYPE := ec_cont_document.row_by_pk(p_document_key);
+    lv2_msg         VARCHAR2(200);
+    lv2_msg_ue      VARCHAR2(200);
+    lv2_msg_ue_pre  VARCHAR2(200);
+    lv2_msg_main    VARCHAR2(200);
+    lv2_msg_ue_post VARCHAR2(200);
+    lv2_retval      VARCHAR2(200);
+BEGIN
+    IF ue_cont_document.isIsInsTransAllowedUEE = 'TRUE' THEN
+        -- Run insteadOf-UserExit
+        lv2_flag := ue_cont_document.isInsertingTransAllowed(p_document_key, lv2_msg_ue);
+        -- Set default or custom message
+        IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+            lv2_msg := NVL(lv2_msg_ue,'This document is evaluated by an InsteadOf User-exit and the result is that a transaction new cannot be ' || lv2_op_txt || '. ');
+        END IF;
+    ELSE
+        IF ue_cont_document.isIsInsTransAllowedPreUEE = 'TRUE' THEN
+            -- Run PRE-processing-UserExit
+            lv2_flag := ue_cont_document.isInsertingTransAllowedPre(p_document_key, lv2_msg_ue_pre);
+            -- Set default or custom message
+            IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+                lv2_msg := NVL(lv2_msg_ue_pre,'This document is evaluated by a Preprocessing User-exit and the result is that a new transaction cannot be ' || lv2_op_txt || '. ');
+            END IF;
+        END IF;
+        --
+        -- RULES HIERARCHY PROCESSING -> Trying to oppose inserting-transaction-allowed:
+        IF lv2_flag = 'Y' THEN
+            -- Preprocessing User-exit has returned TRUE - continue...
+            IF ecdp_document.isDocumentEditable(p_document_key) = 'N' THEN
+                -- If the document is not editable (i.e. NOT OPEN) then no new transaction can be inserted
+                lv2_flag := 'N';
+                lv2_msg := 'The document is not open hence a new transaction cannot be ' || lv2_op_txt || '.';
+
+            ELSIF   lrec_cd.reversal_ind = 'Y'
+                AND (lrec_cd.preceding_document_key IS NOT NULL) THEN
+                -- Document is a reversal => No new transaction
+                lv2_flag := 'N';
+                lv2_msg  := 'This document is a Reversal and a new transaction cannot be ' || lv2_op_txt || '.';
+
+            ELSIF isReversed(p_document_key) = 'Y' THEN
+                -- Document is reversed => No new transaction
+                lv2_flag := 'N';
+                lv2_msg  := 'This document is Reversed by another document and a new transaction cannot be ' || lv2_op_txt || '.';
+
+            ELSIF isDocumentInterfaced(p_document_key) = 'Y' THEN
+                -- If the document is based on interfaced data then Transaction insert is prohibited
+                lv2_flag := 'N';
+                lv2_msg  := 'This is an interfaced document and a new transaction cannot be ' || lv2_op_txt || '.';
+
+            ELSIF ec_contract_doc_version.doc_concept_code(lrec_cd.contract_doc_id, lrec_cd.daytime,'<=') = 'REALLOCATION' THEN
+                -- Reallocation documents cannot be modified with additional transactions
+                lv2_flag := 'N';
+                lv2_msg  := 'This is a Realloction document and a new transaction cannot be ' || lv2_op_txt || '.';
+
+            ELSIF ec_contract_doc_version.doc_concept_code(lrec_cd.contract_doc_id, lrec_cd.daytime,'<=') = 'MULTI_PERIOD' THEN
+                -- Multiperiod documents cannot be modified with additional transactions
+                lv2_flag := 'N';
+                lv2_msg  := 'This is a Multiperiod document and a new transaction cannot be ' || lv2_op_txt || '.';
+
+            ELSE
+                NULL; -- lv2_flag is already initialized to Y
+            END IF;
+        END IF;
+        --
+        IF ue_cont_document.isIsInsTransAllowedPostUEE = 'TRUE' THEN
+            -- Run POST-processing-UserExit
+            lv2_flag := ue_cont_document.isInsertingTransAllowedPost(p_document_key, lv2_flag, lv2_msg_ue_post);
+            -- Set default or custom message
+            IF p_msg_ind = 'Y' AND lv2_flag = 'N' THEN
+                lv2_msg := NVL(lv2_msg_ue_pre,'This document is evaluated by a Postprocessing User-exit and the result is that a new transaction cannot be ' || lv2_op_txt || '. ');
+            END IF;
+        END IF;
+    END IF;
+
+    -- Evaluate and set the return value
+    lv2_retval :=
+        CASE
+            WHEN lv2_flag = 'Y' AND p_msg_ind <> 'Y' THEN lv2_flag
+            WHEN lv2_flag = 'Y'                      THEN ''
+            WHEN lv2_flag = 'N' AND p_msg_ind <> 'Y' THEN lv2_flag
+            ELSE                                          '[ErrMsg]' || lv2_msg
+        END;
+    RETURN lv2_retval;
+END isInsertingTransactionAllowed;
+
+
 ------------------------+-----------------------------------+------------------------------------+---------------------------
 -- (See header)
 ------------------------+-----------------------------------+------------------------------------+---------------------------
@@ -6048,14 +6201,21 @@ IS
   ln_customer_count NUMBER;
   lv2_preceding_document VARCHAR2(32);
 
-CURSOR c_split(cp_contract_id VARCHAR2, cp_class_name VARCHAR2, cp_daytime DATE) IS
+CURSOR c_split_customer(cp_contract_id VARCHAR2, cp_daytime DATE) IS
 SELECT cps.company_id id
   FROM contract_party_share cps
  WHERE cps.object_id = cp_contract_id
-   AND cps.party_role = cp_class_name
+   AND cps.party_role = 'CUSTOMER'
    AND cp_daytime >= Nvl(daytime, cp_daytime - 1)
    AND cp_daytime < Nvl(end_date, cp_daytime + 1);
 
+CURSOR c_split_vendor(cp_contract_doc_id VARCHAR2, cp_daytime DATE) IS
+SELECT cdc.company_id id
+  FROM contract_doc_company cdc
+ WHERE cdc.object_id = cp_contract_doc_id
+   AND cdc.party_role = 'VENDOR'
+   AND cp_daytime >= Nvl(daytime, cp_daytime - 1)
+   AND cp_daytime < Nvl(end_date, cp_daytime + 1);
 
 CURSOR c_preceding_doc_customers(cp_document_key VARCHAR2,
                                  cp_daytime date)
@@ -6083,7 +6243,7 @@ BEGIN
   lv2_contract_doc_id := ec_cont_document.contract_doc_id(p_document_key);
   lv2_preceding_document := ec_cont_document.preceding_document_key(p_document_key);
 
-  FOR VendSplitCur IN c_split(lv2_object_id, 'VENDOR',p_daytime) LOOP
+  FOR VendSplitCur IN c_split_vendor(lv2_contract_doc_id,p_daytime) LOOP
      InsNewDocumentVendor(lv2_object_id, lv2_contract_doc_id, p_document_key, VendSplitCur.id, p_user_id);
   END LOOP;
 
@@ -6101,7 +6261,7 @@ BEGIN
       END LOOP;
   END IF;
   IF lb_customer_sat = FALSE THEN
-      FOR CustSplitCur IN c_split(lv2_object_id, 'CUSTOMER',p_daytime)
+      FOR CustSplitCur IN c_split_customer(lv2_object_id,p_daytime)
       LOOP
           lv2_customer_id := CustSplitCur.id;
           ln_customer_count := ln_customer_count + 1;
@@ -6456,7 +6616,35 @@ FUNCTION getMPDPrecDoc(p_document_key VARCHAR2) RETURN VARCHAR2
 
   END getMPDPrecDoc;
 
+---------------------------------------------------------------------------------------------------
+-- Function       : GetDocumentScopeName
+-- Description    : To get the name of the documents DOC_SCOPE.
+--
+-- Parameters     : p_document_key - Unique key on document.
+---------------------------------------------------------------------------------------------------
+FUNCTION GetDocumentScopeName(p_document_key VARCHAR2)
+RETURN VARCHAR2
+IS
+    lv_scope_name PROSTY_CODES.CODE_TEXT%TYPE;
+BEGIN
+    lv_scope_name := ec_prosty_codes.code_text(ec_cont_document.doc_scope(p_document_key), 'DOCUMENT_SCOPE');
+    RETURN lv_scope_name;
+END GetDocumentScopeName;
 
+---------------------------------------------------------------------------------------------------
+-- Function       : GetDocumentType
+-- Description    : To get the document type (PERIOD / CARGO).
+--
+-- Parameters     : p_document_key - Unique key on document.
+---------------------------------------------------------------------------------------------------
+FUNCTION GetDocumentType(p_document_key VARCHAR2)
+RETURN VARCHAR2
+IS
+    lv_type VARCHAR2(32);
+BEGIN
+    lv_type := replace(ec_cont_document.doc_scope(p_document_key), '_BASED');
+    RETURN lv_type;
+END GetDocumentType;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
@@ -6487,13 +6675,17 @@ IS
        SELECT ps.company_id FROM contract_party_share ps
        WHERE ps.party_role = 'VENDOR'
        AND ps.object_id = cp_contract_id
-       AND ps.company_id = cp_co_vend_cust_id;
+       AND ps.company_id = cp_co_vend_cust_id
+       AND p_daytime >= Nvl(daytime,p_daytime-1)
+       AND p_daytime < nvl(end_date, p_daytime+1);
 
     -- Get Contract Vendors
     CURSOR c_vend (cp_contract_id VARCHAR2) IS
        SELECT ps.company_id FROM contract_party_share ps
        WHERE ps.party_role = 'VENDOR'
-       AND ps.object_id = cp_contract_id;
+       AND ps.object_id = cp_contract_id
+       AND p_daytime >= Nvl(daytime,p_daytime-1)
+       AND p_daytime < nvl(end_date, p_daytime+1);
 
     lv2_fin_code VARCHAR2(32) := NVL(p_d_document_fin_code, ec_contract_version.financial_code(p_object_id, p_daytime, '<='));
     lv2_co_vend_cust_id VARCHAR2(32);
@@ -7079,9 +7271,14 @@ BEGIN
     --Construct a feedback to the end user.
     IF p_status = 'GENERATED' THEN
         NULL; --No action. All good.
+    ELSIF (nvl(p_status, 'null') = 'null') THEN
+        lv_user_feedback :=
+            '[ErrMsg]' ||
+            'It is not possible to view the report, because the report is not generated.' || chr(10) ||
+            'Please refresh to update the status.';
     ELSIF p_status = 'NEW' THEN
         lv_user_feedback :=
-            'Error!' || chr(10) ||
+            '[ErrMsg]' ||
             'It is not possible to view the report, because the report is still generating.' || chr(10) ||
             'Please refresh to update the status.';
     ELSIF p_status = 'ERROR' THEN
@@ -7182,5 +7379,72 @@ EXCEPTION
     WHEN OTHERS THEN
         Raise_Application_Error(-20000, SQLERRM || '\n\n' || 'Technical:\n');
 END GetLastGeneratedDocumentKey;
+
+--<EC-DOC>
+-------------------------------------------------------------------------------------------------
+-- Function       : GetContractOwnerTotal
+-- Description    : Used by the "Period Document" / "Cargo Document" screen
+--                  to get the total amount receivable/payable by Contract Owner Company
+--                  under Banking Details tab.
+--
+-- Preconditions  :
+--
+-- Postconditions :
+--
+-- Using tables   : cont_li_dist_company, company
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      : Will return the total amount receivable/payable by Contract Owner Company.
+-------------------------------------------------------------------------------------------------
+FUNCTION GetContractOwnerTotal(p_document_key VARCHAR2)
+RETURN NUMBER
+--</EC-DOC>
+IS
+    CURSOR c_vend_amount (cp_document_key VARCHAR2) IS
+      SELECT
+        sum(x.booking_total) AS CONTRACT_OWNER_TOTAL
+      FROM cont_li_dist_company x, company c
+      WHERE c.object_id = x.vendor_id
+        AND x.document_key = cp_document_key
+        AND c.company_id = ec_cont_document.owner_company_id(cp_document_key);
+
+    CURSOR c_cust_amount (cp_document_key VARCHAR2) IS
+      SELECT
+        sum(x.booking_total) AS CONTRACT_OWNER_TOTAL
+      FROM cont_li_dist_company x, company c
+      WHERE c.object_id = x.customer_id
+        AND x.document_key = cp_document_key
+        AND c.company_id = ec_cont_document.owner_company_id(cp_document_key);
+
+    lv_fin_code       VARCHAR2(240);
+    ln_return_amount  NUMBER;
+
+  BEGIN
+
+    ln_return_amount := 0;
+    --Find Financial Code:
+    lv_fin_code := ec_cont_document.financial_code(p_document_key);
+
+    IF lv_fin_code IN ('SALE', 'TA_INCOME', 'JOU_ENT') THEN
+      FOR x IN c_vend_amount(p_document_key) LOOP
+        ln_return_amount := x.CONTRACT_OWNER_TOTAL;
+        EXIT;
+      END LOOP;
+    ELSIF lv_fin_code IN ('PURCHASE', 'TA_COST') THEN
+      FOR x IN c_cust_amount(p_document_key) LOOP
+        ln_return_amount := x.CONTRACT_OWNER_TOTAL;
+        EXIT;
+      END LOOP;
+    ELSE
+      ln_return_amount := NULL;
+    END IF;
+
+  RETURN ln_return_amount;
+
+END GetContractOwnerTotal;
 
 END EcDp_Document;

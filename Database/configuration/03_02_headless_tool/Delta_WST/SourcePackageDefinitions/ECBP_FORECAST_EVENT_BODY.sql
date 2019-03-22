@@ -13,13 +13,18 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Forecast_Event IS
 **
 ** Modification history:
 **
-** Date       Whom     Change description:
-** ------     -------- --------------------------------------
-** 19-05-16    kumarsur    Initial Version
-** 26-09-16    jainnraj    ECPD-39068 Modified getEventLossVolume,getPotentialRate to add support for Co2 Injection
-** 18-10-16    abdulmaw    ECPD-34304: Added function isAssociatedWithGroup to check which reason group associated with the selected reason code
-** 07.08.2017  jainnraj    ECPD-46835: Modified procedure checkIfEventOverlaps,checkValidChildPeriod,getEventLossVolume,getPotentialRate to correct the error message.
+** Date        Whom      Change description:
+** ------      --------  --------------------------------------
+** 19-05-2016  kumarsur  Initial Version
+** 26-09-2016  jainnraj  ECPD-39068 Modified getEventLossVolume,getPotentialRate to add support for Co2 Injection
+** 18-10-2016  abdulmaw  ECPD-34304: Added function isAssociatedWithGroup to check which reason group associated with the selected reason code
+** 07.08.2017  jainnraj  ECPD-46835: Modified procedure checkIfEventOverlaps,checkValidChildPeriod,getEventLossVolume,getPotentialRate to correct the error message.
 ** 08-12-2017  kashisag  ECPD-40487: Corrected local variables naming convention.
+** 05.07.2018  kashisag  ECPD-56795: Changed objectid to scenario id
+** 21-12-2018  leongwen  ECPD-56158: Implement the similar Deferment Calculation Logic from PD.0020 to Forecast Event PP.0047
+**                                   Modified procedure checkIfEventOverlaps
+**                                   Modified Function getEventLossVolume, getPotentialRate, getParentEventLossRate
+**                                   Added FUNCTION getEventLossRate, getEventLossNoChildEvent and getParentEventLossVolume
 *****************************************************************/
 
 --<EC-DOC>
@@ -42,44 +47,77 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Forecast_Event IS
 -- Behavior       :
 --
 ---------------------------------------------------------------------------------------------------
-PROCEDURE  checkIfEventOverlaps(p_object_id VARCHAR2, p_daytime DATE, p_end_date DATE, p_event_type VARCHAR2, p_event_no NUMBER)
+PROCEDURE checkIfEventOverlaps(p_object_id VARCHAR2, p_daytime DATE, p_end_date DATE, p_event_type VARCHAR2, p_event_no NUMBER, p_parent_event_no NUMBER DEFAULT 1)
 --</EC-DOC>
 IS
   -- overlapping period can't exist in well downtime and eqpm downtime
-    ln_count NUMBER;
-    lv2_default_value VARCHAR2(2000);
-
+  ln_count NUMBER;
+  lv2_default_value VARCHAR2(2000);
+  p_parent_event_type VARCHAR2(10);
 BEGIN
 
+  IF p_event_type IS NULL THEN
+    p_parent_event_type:= ec_fcst_well_event.event_type(p_parent_event_no);
+  END IF;
+
+  BEGIN
     SELECT default_value
     INTO   lv2_default_value
-    FROM  (select default_value
-            from (select default_value_string default_value, to_date('01-01-1900', 'DD-MM-YYYY') daytime
+    FROM  (SELECT default_value
+           FROM ( SELECT default_value_string default_value, TO_DATE('01-01-1900', 'DD-MM-YYYY') daytime
                   FROM ctrl_property_meta
-                  where key = 'DEFERMENT_OVERLAP'
+                  WHERE KEY = 'DEFERMENT_OVERLAP'
                   UNION ALL
-                  select value_string, daytime
-                  from ctrl_property
-                  where key = 'DEFERMENT_OVERLAP')
-           order by daytime desc)
-   where rownum < 2;
+                  SELECT value_string, daytime
+                  FROM ctrl_property
+                  WHERE KEY = 'DEFERMENT_OVERLAP')
+           ORDER BY daytime DESC)
+    WHERE ROWNUM < 2;
+  EXCEPTION
+    WHEN OTHERS THEN
+      NULL;
+  END;
 
-
-  IF lv2_default_value = 'N' THEN
-
-  SELECT count(*) into ln_count
-    FROM FCST_WELL_EVENT fwe
-    WHERE fwe.EVENT_ID = p_object_id
-    AND fwe.event_no <> p_event_no
-    AND  fwe.event_type IN ('DOWN')
-    AND  fwe.event_type = p_event_type
-    AND (fwe.end_date > p_daytime OR fwe.end_date is null)
-    AND  (fwe.daytime < p_end_date OR p_end_date IS NULL);
-
-    IF(ln_count>0) THEN
-           RAISE_APPLICATION_ERROR(-20226, 'An event must not overlap with the existing event period.');
+  IF lv2_default_value = 'CONSTRAINT' THEN
+    IF NVL(p_event_type,p_parent_event_type) = 'CONSTRAINT' THEN
+      SELECT COUNT(*) INTO ln_count
+      FROM FCST_WELL_EVENT fwe
+      WHERE fwe.event_id = p_object_id
+      AND fwe.event_no <> p_event_no
+      AND fwe.event_type ='DOWN'
+      AND (fwe.end_date > p_daytime  OR fwe.end_date IS null)
+      AND (fwe.daytime  < p_end_date OR p_end_date   IS NULL);
+    ELSIF NVL(p_event_type,p_parent_event_type) = 'DOWN' THEN
+      SELECT COUNT(*) INTO ln_count
+      FROM FCST_WELL_EVENT fwe
+      WHERE fwe.event_id = p_object_id
+      AND fwe.event_no <> p_event_no
+      AND fwe.event_type IN ('DOWN','CONSTRAINT')
+      AND (fwe.end_date > p_daytime  OR fwe.end_date IS NULL)
+      AND (fwe.daytime  < p_end_date OR p_end_date   IS NULL);
     END IF;
+  ELSIF(lv2_default_value = 'DOWN_CONSTRAINT') THEN
+    IF NVL(p_event_type,p_parent_event_type) = 'DOWN' THEN
+      SELECT COUNT(*) INTO ln_count
+      FROM FCST_WELL_EVENT fwe
+      WHERE fwe.event_id = p_object_id
+      AND fwe.event_no <> p_event_no
+      AND fwe.event_type ='DOWN'
+      AND (fwe.end_date > p_daytime  OR fwe.end_date IS NULL)
+      AND (fwe.daytime  < p_end_date OR p_end_date   IS NULL);
+    END IF;
+  ELSIF(lv2_default_value = 'N') THEN
+    SELECT COUNT(*) INTO ln_count
+    FROM FCST_WELL_EVENT fwe
+    WHERE fwe.event_id = p_object_id
+    AND fwe.event_no <> p_event_no
+    AND fwe.event_type IN ('DOWN','CONSTRAINT')
+    AND (fwe.end_date > p_daytime  OR fwe.end_date IS NULL)
+    AND (fwe.daytime  < p_end_date OR p_end_date   IS NULL);
+  END IF;
 
+  IF(ln_count>0) THEN
+    RAISE_APPLICATION_ERROR(-20226, 'An event must not overlap with the existing event period.');
   END IF;
 
 END checkIfEventOverlaps;
@@ -145,13 +183,15 @@ END  checkValidChildPeriod;
 FUNCTION getEventLossVolume (
   p_event_no      NUMBER,
   p_phase         VARCHAR2,
-  p_object_id     VARCHAR2 DEFAULT NULL)
+  p_object_id     VARCHAR2 DEFAULT NULL,
+  p_child_count   NUMBER DEFAULT 1)
 
 RETURN NUMBER
 --</EC-DOC>
 IS
 
   ln_return_val NUMBER;
+  ln_loss_volume NUMBER;
   lv2_object_id VARCHAR2(32);
 
   CURSOR c_deferred (cp_object_id VARCHAR2) IS
@@ -175,7 +215,7 @@ BEGIN
   lv2_object_id := p_object_id;
 
   IF ln_return_val IS NULL THEN
-   IF p_object_id IS NULL THEN
+    IF p_object_id IS NULL THEN
       BEGIN
         SELECT fwe.EVENT_ID
         INTO lv2_object_id
@@ -185,15 +225,38 @@ BEGIN
         WHEN OTHERS THEN
           RAISE_APPLICATION_ERROR(-20226, 'An error occurred while fetching data for event no- '||p_event_no);
       END;
-   END IF;
+    END IF;
 
-       FOR mycur IN c_deferred(lv2_object_id) LOOP
-            ln_return_val := mycur.sum_vol;
-       END LOOP;
+    FOR mycur IN c_deferred(lv2_object_id) LOOP
+      ln_return_val := mycur.sum_vol;
+    END LOOP;
 
+    BEGIN
+      SELECT DECODE(p_phase,
+            'OIL',OIL_LOSS_VOLUME,
+            'GAS',GAS_LOSS_VOLUME,
+            'COND',COND_LOSS_VOLUME,
+            'WATER',WATER_LOSS_VOLUME,
+            'WAT_INJ',WATER_INJ_LOSS_VOLUME,
+            'STEAM_INJ',STEAM_INJ_LOSS_VOLUME,
+            'GAS_INJ',GAS_INJ_LOSS_VOLUME,
+            'DILUENT',DILUENT_LOSS_VOLUME,
+            'GAS_LIFT',GAS_LIFT_LOSS_VOLUME,
+            'CO2_INJ', CO2_INJ_LOSS_VOLUME) LOSS_VOLUME
+      INTO ln_loss_volume
+      FROM FCST_WELL_EVENT
+      WHERE event_no  = p_event_no;
+    EXCEPTION
+      WHEN OTHERS THEN
+        ln_loss_volume:=NULL;
+    END;
+
+    IF (ln_loss_volume IS NULL AND p_child_count = 0) THEN
+      ln_return_val:=getEventLossNoChildEvent(p_event_no,p_phase);
+    END IF;
   END IF;
 
-  RETURN ln_return_val;
+  RETURN NVL(ln_loss_volume,ln_return_val);
 END getEventLossVolume;
 
 --<EC-DOC>
@@ -221,24 +284,24 @@ FUNCTION getPotentialRate (
 RETURN NUMBER
 --</EC-DOC>
 IS
-
   ln_return_val NUMBER;
-
   CURSOR c_group_potential_rate IS
     SELECT sum(DECODE(p_potential_attribute,
-    'OIL',decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,null,'OPEN',wed.daytime), 'Y', ecbp_well_potential.findOilProductionPotential(wed.object_id, wed.daytime), null),
-    'GAS',decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,null,'OPEN',wed.daytime), 'Y', ecbp_well_potential.findGasProductionPotential(wed.object_id, wed.daytime), null),
-    'COND',decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,null,'OPEN',wed.daytime), 'Y', ecbp_well_potential.findConProductionPotential(wed.object_id, wed.daytime), null),
-    'WATER',decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,null,'OPEN',wed.daytime), 'Y', ecbp_well_potential.findWatProductionPotential(wed.object_id, wed.daytime), null),
-    'WAT_INJ', decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,'WI','OPEN',wed.daytime), 'Y', ecbp_well_potential.findWatInjectionPotential(wed.object_id, wed.daytime), null),
-    'STEAM_INJ', decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,'SI','OPEN',wed.daytime), 'Y', ecbp_well_potential.findSteamInjectionPotential(wed.object_id, wed.daytime), null),
-    'GAS_INJ', decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,'GI','OPEN',wed.daytime), 'Y', ecbp_well_potential.findGasInjectionPotential(wed.object_id, wed.daytime), null),
-    'DILUENT',decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,null,'OPEN',wed.daytime), 'Y', ecbp_well_potential.findDiluentPotential(wed.object_id, wed.daytime), null),
-    'GAS_LIFT',decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,null,'OPEN',wed.daytime), 'Y', ecbp_well_potential.findGasLiftPotential(wed.object_id, wed.daytime), null),
-    'CO2_INJ',decode(ecdp_well.isWellPhaseActiveStatus(wed.object_id,'CI','OPEN',wed.daytime), 'Y', ecbp_well_potential.findCo2InjectionPotential(wed.object_id, wed.daytime), null))) sum_vol
-    FROM fcst_well_event wed
-    WHERE wed.parent_event_no = p_event_no
-    AND wed.deferment_type = 'GROUP_CHILD';
+    'OIL',       ecbp_well_potential.findOilProductionPotential(fwe.event_id, fwe.parent_daytime),
+    'GAS',       ecbp_well_potential.findGasProductionPotential(fwe.event_id, fwe.parent_daytime),
+    'COND',      ecbp_well_potential.findConProductionPotential(fwe.event_id, fwe.parent_daytime),
+    'WATER',     ecbp_well_potential.findWatProductionPotential(fwe.event_id, fwe.parent_daytime),
+    'WAT_INJ',   ecbp_well_potential.findWatInjectionPotential(fwe.event_id, fwe.parent_daytime),
+    'STEAM_INJ', ecbp_well_potential.findSteamInjectionPotential(fwe.event_id, fwe.parent_daytime),
+    'GAS_INJ',   ecbp_well_potential.findGasInjectionPotential(fwe.event_id, fwe.parent_daytime),
+    'DILUENT',   ecbp_well_potential.findDiluentPotential(fwe.event_id, fwe.parent_daytime),
+    'GAS_LIFT',  ecbp_well_potential.findGasLiftPotential(fwe.event_id, fwe.parent_daytime),
+    'CO2_INJ',   ecbp_well_potential.findCo2InjectionPotential(fwe.event_id, fwe.parent_daytime))) sum_vol
+    FROM (SELECT DISTINCT(event_id),parent_daytime
+      FROM fcst_well_event fwe2
+      WHERE fwe2.parent_event_no = p_event_no
+      AND fwe2.deferment_type = 'GROUP_CHILD'
+    )fwe;
 
   lv2_deferment_type VARCHAR2(32);
   lv2_parent_object_id VARCHAR2(32);
@@ -248,68 +311,45 @@ IS
 
 BEGIN
 
-    BEGIN
-      SELECT wed_1.EVENT_ID, wed_1.daytime, wed_1.deferment_type, wed_1.parent_object_id, wed_1.parent_daytime
-      INTO lv2_object_id,ld_daytime,lv2_deferment_type,lv2_parent_object_id,ld_parent_daytime
-      FROM FCST_WELL_EVENT wed_1
-      WHERE event_no  = p_event_no;
-    EXCEPTION
-      WHEN OTHERS THEN
-           RAISE_APPLICATION_ERROR(-20226, 'An error occurred while fetching data for event no- '||p_event_no);
-    END;
+  BEGIN
+    SELECT fwe_1.event_id, fwe_1.day, fwe_1.deferment_type, fwe_1.parent_object_id, fwe_1.parent_daytime
+    INTO lv2_object_id,ld_daytime,lv2_deferment_type,lv2_parent_object_id,ld_parent_daytime
+    FROM FCST_WELL_EVENT fwe_1
+    WHERE fwe_1.event_no = p_event_no;
+  EXCEPTION
+    WHEN OTHERS THEN
+    RAISE_APPLICATION_ERROR(-20226, 'An error occurred while fetching data for event no- '||p_event_no);
+  END;
 
   IF lv2_deferment_type ='SINGLE' or lv2_deferment_type ='GROUP_CHILD' THEN
     IF p_potential_attribute = 'OIL' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,null,'OPEN', ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findOilProductionPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findOilProductionPotential(lv2_object_id,ld_daytime);
     ELSIF  p_potential_attribute = 'GAS' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,null,'OPEN', ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findGasProductionPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findGasProductionPotential(lv2_object_id,ld_daytime);
     ELSIF p_potential_attribute = 'WAT_INJ' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,'WI','OPEN',ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findWatInjectionPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findWatInjectionPotential(lv2_object_id,ld_daytime);
     ELSIF p_potential_attribute = 'STEAM_INJ' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,'SI','OPEN',ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findSteamInjectionPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findSteamInjectionPotential(lv2_object_id,ld_daytime);
     ELSIF  p_potential_attribute = 'COND' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,null,'OPEN',ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findConProductionPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findConProductionPotential(lv2_object_id,ld_daytime);
     ELSIF p_potential_attribute = 'GAS_INJ' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,'GI','OPEN',ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findGasInjectionPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findGasInjectionPotential(lv2_object_id,ld_daytime);
     ELSIF  p_potential_attribute = 'WATER' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,null,'OPEN', ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findWatProductionPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findWatProductionPotential(lv2_object_id,ld_daytime);
     ELSIF  p_potential_attribute = 'DILUENT' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,null,'OPEN', ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findDiluentPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findDiluentPotential(lv2_object_id,ld_daytime);
     ELSIF  p_potential_attribute = 'GAS_LIFT' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,null,'OPEN', ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findGasLiftPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findGasLiftPotential(lv2_object_id,ld_daytime);
     ELSIF  p_potential_attribute = 'CO2_INJ' then
-      IF ecdp_well.isWellPhaseActiveStatus(lv2_object_id,'CI','OPEN', ld_daytime) = 'Y' THEN
-        ln_return_val := ecbp_well_potential.findCo2InjectionPotential(lv2_object_id,ld_daytime);
-      END IF;
+      ln_return_val := ecbp_well_potential.findCo2InjectionPotential(lv2_object_id,ld_daytime);
     END IF;
-  ELSIF  lv2_deferment_type  ='GROUP' THEN
-
+  ELSIF lv2_deferment_type  ='GROUP' THEN
     ln_return_val := Ue_Forecast_Event.getPotentialRate(p_event_no, p_potential_attribute);
-
     IF ln_return_val is NULL THEN
       FOR cur_group_potential_rate in c_group_potential_rate LOOP
         ln_return_val := cur_group_potential_rate.sum_vol;
       END LOOP;
     END IF;
-
   END IF;
 
   RETURN ln_return_val;
@@ -334,9 +374,9 @@ END getPotentialRate;
 --                                                                                                 --
 -----------------------------------------------------------------------------------------------------
 FUNCTION getParentEventLossRate (
-  p_event_no NUMBER,
+  p_event_no          NUMBER,
   p_event_attribute   VARCHAR2,
-  p_deferment_type     VARCHAR2)
+  p_deferment_type    VARCHAR2)
 
 RETURN NUMBER
 --</EC-DOC>
@@ -348,17 +388,16 @@ IS
   ln_TotEventLossRate   NUMBER;
 
   CURSOR c_fcst_event  IS
-    SELECT fwe.EVENT_ID, fwe.daytime, fwe.event_no
-    FROM FCST_WELL_EVENT fwe
-    WHERE fwe.parent_event_no = p_event_no;
+  SELECT fwe.EVENT_ID, fwe.daytime, fwe.event_no
+  FROM FCST_WELL_EVENT fwe
+  WHERE fwe.parent_event_no = p_event_no;
 
 BEGIN
-
   ln_child_count := countChildEvent(p_event_no);
   IF  p_deferment_type  = 'GROUP' THEN
     --not with child
     IF ln_child_count = 0 THEN
-        ln_RateOrVol       := getEventLossVolume(p_event_no, p_event_attribute);
+        ln_RateOrVol       := getEventLossRate(p_event_no, p_event_attribute);
         IF ln_RateOrVol IS NOT NULL THEN
           ln_TotEventLossRate := nvl(ln_TotEventLossRate,0) + ln_RateOrVol;
         END IF;
@@ -367,7 +406,7 @@ BEGIN
     --with child
     IF ln_child_count > 0 THEN
       FOR r_child_event IN c_fcst_event  LOOP
-        ln_RateOrVol       := getEventLossVolume(r_child_event.event_no, p_event_attribute);
+        ln_RateOrVol       := getEventLossRate(r_child_event.event_no, p_event_attribute);
         IF ln_RateOrVol IS NOT NULL THEN
           ln_TotEventLossRate := nvl(ln_TotEventLossRate,0) + ln_RateOrVol;
         END IF;
@@ -375,11 +414,292 @@ BEGIN
     END IF;
     ln_return_val := ln_TotEventLossRate;
   ELSE
-    ln_return_val := getEventLossVolume(p_event_no, p_event_attribute);
+    ln_return_val := getEventLossRate(p_event_no, p_event_attribute);
   END IF;
 
   RETURN ln_return_val;
 END getParentEventLossRate;
+
+--<EC-DOC>
+-----------------------------------------------------------------------------------------------------
+-- Function       : getEventLossRate                                                   --
+-- Description    : Returns Event Loss Rate
+-- Preconditions  :
+-- Postconditions :                                                                                --
+--                                                                                                 --
+-- Using tables   : FCST_WELL_EVENT
+--                                                                                                 --
+-- Using functions:
+--
+--                                                                                                 --
+-- Configuration                                                                           --
+-- required       :                                                                                --
+--                                                                                                 --
+-- Behaviour      :                                                                                --
+--                                                                                                 --
+-----------------------------------------------------------------------------------------------------
+FUNCTION getEventLossRate (
+  p_event_no        NUMBER,
+  p_event_attribute VARCHAR2)
+
+RETURN NUMBER
+--</EC-DOC>
+IS
+
+  ln_diff       NUMBER := 0;
+  ln_return_val NUMBER;
+
+  CURSOR c_fcst_deferment_event (cp_event_no NUMBER)  IS
+  SELECT fwe.daytime, fwe.end_date, fwe.oil_loss_rate, fwe.gas_loss_rate, fwe.cond_loss_rate, fwe.water_loss_rate, fwe.diluent_loss_rate, fwe.gas_lift_loss_Rate,
+  fwe.water_inj_loss_rate, fwe.gas_inj_loss_rate, fwe.steam_inj_loss_rate, fwe.co2_inj_loss_rate,
+  fwe.oil_loss_volume, fwe.gas_loss_volume, fwe.cond_loss_volume, fwe.water_loss_volume, fwe.diluent_loss_volume, fwe.gas_lift_loss_volume,
+  fwe.water_inj_loss_volume, fwe.gas_inj_loss_volume, fwe.steam_inj_loss_volume, fwe.co2_inj_loss_volume
+  FROM fcst_well_event fwe
+  WHERE fwe.event_no = cp_event_no;
+
+BEGIN
+  ln_diff := NULL;
+  ln_return_val := Ue_Deferment.getEventLossRate(p_event_no,p_event_attribute);
+  IF ln_return_val IS NULL THEN
+    FOR r_fcst_event_loss_rate IN c_fcst_deferment_event(p_event_no) LOOP
+      IF r_fcst_event_loss_rate.end_date IS NOT NULL then
+        ln_diff := abs(r_fcst_event_loss_rate.end_date- r_fcst_event_loss_rate.daytime);
+        IF p_event_attribute = 'OIL' and r_fcst_event_loss_rate.oil_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.oil_loss_volume;
+        ELSIF p_event_attribute = 'OIL' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.oil_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF p_event_attribute = 'GAS' and r_fcst_event_loss_rate.gas_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.gas_loss_volume;
+        ELSIF p_event_attribute = 'GAS' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.gas_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF  p_event_attribute = 'COND' and r_fcst_event_loss_rate.cond_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.cond_loss_volume;
+        ELSIF  p_event_attribute = 'COND' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.cond_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF p_event_attribute = 'WATER' and r_fcst_event_loss_rate.water_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.water_loss_volume;
+        ELSIF p_event_attribute = 'WATER' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.water_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF  p_event_attribute = 'DILUENT' and r_fcst_event_loss_rate.diluent_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.diluent_loss_volume;
+        ELSIF  p_event_attribute = 'DILUENT' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.diluent_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF  p_event_attribute = 'GAS_LIFT' and r_fcst_event_loss_rate.gas_lift_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.gas_lift_loss_volume;
+        ELSIF  p_event_attribute = 'GAS_LIFT' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.gas_lift_loss_Rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF p_event_attribute = 'WAT_INJ' and r_fcst_event_loss_rate.water_inj_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.water_inj_loss_volume;
+        ELSIF  p_event_attribute = 'WAT_INJ' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.water_inj_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF  p_event_attribute = 'GAS_INJ' and r_fcst_event_loss_rate.gas_inj_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.gas_inj_loss_volume;
+        ELSIF  p_event_attribute = 'GAS_INJ' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.gas_inj_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF p_event_attribute = 'STEAM_INJ' and r_fcst_event_loss_rate.steam_inj_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.steam_inj_loss_volume;
+        ELSIF  p_event_attribute = 'STEAM_INJ' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.steam_inj_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+        IF p_event_attribute = 'CO2_INJ' and r_fcst_event_loss_rate.co2_inj_loss_volume IS NOT NULL THEN
+          ln_return_val := r_fcst_event_loss_rate.co2_inj_loss_volume;
+        ELSIF  p_event_attribute = 'CO2_INJ' THEN
+          ln_return_val := ln_diff *  nvl(r_fcst_event_loss_rate.co2_inj_loss_rate, getPotentialRate(p_event_no, p_event_attribute));
+        END IF;
+      END IF;
+    END LOOP;
+  END IF;
+  RETURN ln_return_val;
+END getEventLossRate;
+
+
+--<EC-DOC>
+-----------------------------------------------------------------------------------------------------
+-- Function       : getEventLossNoChildEvent                                                       --
+-- Description    : Returns Event Loss Volume for without Child records.
+-- Preconditions  :
+-- Postconditions :                                                                                --
+--                                                                                                 --
+-- Using tables   : fcst_well_event
+--                                                                                                 --
+-- Using functions:
+--
+--                                                                                                 --
+-- Configuration                                                                                   --
+-- required       :                                                                                --
+--                                                                                                 --
+-- Behaviour      :                                                                                --
+--                                                                                                 --
+-----------------------------------------------------------------------------------------------------
+FUNCTION getEventLossNoChildEvent (
+  p_event_no        NUMBER,
+  p_event_attribute VARCHAR2)
+
+RETURN NUMBER
+--</EC-DOC>
+IS
+
+  ln_diff     NUMBER := 0;
+  ln_return_val NUMBER;
+
+  CURSOR c_fcst_well_event (cp_event_no NUMBER)  IS
+    SELECT fwe.daytime, fwe.end_date, fwe.oil_loss_rate, fwe.gas_loss_rate, fwe.cond_loss_rate, fwe.water_inj_loss_rate,
+    fwe.gas_inj_loss_rate, fwe.steam_inj_loss_rate,
+    fwe.water_loss_rate,fwe.diluent_loss_rate,fwe.gas_lift_loss_Rate, fwe.co2_inj_loss_rate, fwe.object_type, fwe.event_id
+    FROM fcst_well_event fwe
+    WHERE event_no = cp_event_no;
+
+  lv2_open_end_event  VARCHAR2(1);
+  ld_day_light_start_date DATE;
+  ld_day_light_end_date DATE;
+  ln_COUNT NUMBER;
+  ln_diff_hours NUMBER :=0;
+  ln_MaxOnHrs NUMBER;
+  ln_daylight_present NUMBER;
+  ld_trunc_daytime DATE;
+  ld_nvl_end_date DATE;
+
+BEGIN
+
+  lv2_open_end_event:=COALESCE(ecdp_ctrl_property.getSystemProperty('DEFERMENT_OPEN_EVENT_CALC',TRUNC(Ecdp_Timestamp.getCurrentSysdate())),'Y');
+
+  FOR r_fcst_event_loss_rate IN c_fcst_well_event(p_event_no) LOOP
+
+    ld_trunc_daytime:= TRUNC(r_fcst_event_loss_rate.daytime);
+    ld_nvl_end_date := COALESCE(r_fcst_event_loss_rate.end_date,
+                                Ecdp_Productionday.getProductionDayStart(r_fcst_event_loss_rate.object_type,
+                                                                         r_fcst_event_loss_rate.event_id,
+                                                                         TRUNC(Ecdp_Timestamp.getCurrentSysdate,'DD') - 1));
+    --Check daylight saving is available for deferment event date.
+    SELECT COUNT(*) INTO ln_daylight_present
+    FROM pday_dst
+    WHERE daytime BETWEEN ld_trunc_daytime AND TRUNC(ld_nvl_end_date);
+
+    IF lv2_open_end_event='Y' THEN--A
+      --if daylight data is present in pday_dst for deferment event , then calculate maximum hrs for deferment event daytime.
+      IF ln_daylight_present<>0 THEN--D
+        BEGIN
+
+          SELECT Daytime,MaxOnHrs INTO ld_day_light_start_date,ln_MaxOnHrs
+          FROM (
+                SELECT Ecdp_Timestamp.getNumHours(r_fcst_event_loss_rate.object_type,r_fcst_event_loss_rate.event_id, ld_trunc_daytime+LEVEL-1) MaxOnHrs,
+                      ld_trunc_daytime+LEVEL-1 Daytime
+                FROM CTRL_DB_VERSION WHERE DB_VERSION=1
+                CONNECT BY LEVEL <=TRUNC(ld_nvl_end_date) - ld_trunc_daytime +1
+               )
+          WHERE MaxOnHrs<>24;
+
+        EXCEPTION
+          WHEN OTHERS THEN
+            ld_day_light_start_date:=NULL;
+        END;
+
+        IF (ld_day_light_start_date IS NOT NULL) THEN--C
+          ld_day_light_start_date := ld_day_light_start_date + (ecdp_productionday.getproductiondayoffset(r_fcst_event_loss_rate.object_type,r_fcst_event_loss_rate.event_id,ld_day_light_start_date))/24;
+          ld_day_light_end_date := ld_day_light_start_date+1;
+
+          SELECT COUNT(*) INTO ln_COUNT
+          FROM CTRL_DB_VERSION
+          WHERE DB_VERSION=1 AND ld_day_light_start_date BETWEEN r_fcst_event_loss_rate.daytime AND ld_nvl_end_date
+          AND ld_day_light_end_date BETWEEN r_fcst_event_loss_rate.daytime AND ld_nvl_end_date ;
+
+          IF ln_COUNT=1 THEN--B
+            ln_diff_hours:=(24-ln_MaxOnHrs)/24;
+          END IF;--B
+        END IF;--C
+      END IF;--D
+      ln_diff := ABS(ld_nvl_end_date- r_fcst_event_loss_rate.daytime)-ln_diff_hours;
+
+    ELSE--A
+      IF ln_daylight_present<>0 THEN--D
+        BEGIN
+
+          SELECT Daytime,MaxOnHrs INTO ld_day_light_start_date,ln_MaxOnHrs
+          FROM (
+                SELECT Ecdp_Timestamp.getNumHours(r_fcst_event_loss_rate.object_type,r_fcst_event_loss_rate.event_id, ld_trunc_daytime+LEVEL-1) MaxOnHrs,
+                     ld_trunc_daytime+LEVEL-1 Daytime
+                FROM CTRL_DB_VERSION WHERE DB_VERSION=1
+                CONNECT BY LEVEL <= TRUNC(r_fcst_event_loss_rate.end_date) - ld_trunc_daytime +1
+                )
+          WHERE MaxOnHrs<>24;
+
+        EXCEPTION
+          WHEN OTHERS THEN
+            ld_day_light_start_date:=NULL;
+        END;
+
+        IF (ld_day_light_start_date IS NOT NULL) THEN--C
+          ld_day_light_start_date := ld_day_light_start_date+(ecdp_productionday.getproductiondayoffset(r_fcst_event_loss_rate.object_type,r_fcst_event_loss_rate.event_id,ld_day_light_start_date))/24;
+          ld_day_light_end_date := ld_day_light_start_date+1;
+
+          SELECT COUNT(*) INTO ln_COUNT
+          FROM CTRL_DB_VERSION
+          WHERE DB_VERSION=1 AND ld_day_light_start_date BETWEEN r_fcst_event_loss_rate.daytime AND r_fcst_event_loss_rate.end_date
+          AND ld_day_light_end_date BETWEEN r_fcst_event_loss_rate.daytime AND r_fcst_event_loss_rate.end_date ;
+
+          IF ln_COUNT=1 THEN--B
+            ln_diff_hours:=(24-ln_MaxOnHrs)/24;
+          END IF;--B
+
+        END IF;--C
+      END IF;--D
+
+        ln_diff := ABS(r_fcst_event_loss_rate.end_date- r_fcst_event_loss_rate.daytime)-ln_diff_hours;
+
+    END IF;--A
+
+    IF p_event_attribute = 'OIL' THEN
+      ln_return_val := ln_diff *  r_fcst_event_loss_rate.oil_loss_rate;
+    END IF;
+
+    IF p_event_attribute = 'GAS' THEN
+      ln_return_val := ln_diff *  r_fcst_event_loss_rate.gas_loss_rate;
+    END IF;
+
+    IF p_event_attribute = 'WAT_INJ' THEN
+      ln_return_val := ln_diff * r_fcst_event_loss_rate.water_inj_loss_rate;
+    END IF;
+
+    IF p_event_attribute = 'STEAM_INJ' THEN
+      ln_return_val := ln_diff *  r_fcst_event_loss_rate.steam_inj_loss_rate;
+    END IF;
+
+    IF  p_event_attribute = 'COND' THEN
+      ln_return_val := ln_diff * r_fcst_event_loss_rate.cond_loss_rate;
+    END IF;
+
+    IF  p_event_attribute = 'GAS_INJ' THEN
+      ln_return_val := ln_diff *  r_fcst_event_loss_rate.gas_inj_loss_rate;
+    END IF;
+
+    IF p_event_attribute = 'WATER' THEN
+      ln_return_val := ln_diff * r_fcst_event_loss_rate.water_loss_rate;
+    END IF;
+
+    IF  p_event_attribute = 'DILUENT' THEN
+      ln_return_val := ln_diff * r_fcst_event_loss_rate.diluent_loss_rate;
+    END IF;
+
+    IF  p_event_attribute = 'GAS_LIFT' THEN
+      ln_return_val := ln_diff * r_fcst_event_loss_rate.gas_lift_loss_Rate;
+    END IF;
+
+    IF  p_event_attribute = 'CO2_INJ' THEN
+      ln_return_val := ln_diff * r_fcst_event_loss_rate.co2_inj_loss_rate;
+    END IF;
+
+  END LOOP;
+
+  RETURN ln_return_val;
+END getEventLossNoChildEvent;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------
@@ -540,5 +860,71 @@ BEGIN
   RETURN lv2_return_val;
 
 END isAssociatedWithGroup;
+
+--<EC-DOC>
+-----------------------------------------------------------------------------------------------------
+-- Function       : getParentEventLossVolume                                                   --
+-- Description    : Returns Parent Event Loss Volume
+-- Preconditions  :
+-- Postconditions :                                                                                --
+--                                                                                                 --
+-- Using tables   : FCST_WELL_EVENT
+--                                                                                                 --
+-- Using functions:
+--
+--                                                                                                 --
+-- Configuration                                                                           --
+-- required       :                                                                                --
+--                                                                                                 --
+-- Behaviour      :                                                                                --
+--                                                                                                 --
+-----------------------------------------------------------------------------------------------------
+FUNCTION getParentEventLossVolume (
+  p_event_no          NUMBER,
+  p_event_attribute   VARCHAR2,
+  p_deferment_type    VARCHAR2)
+
+RETURN NUMBER
+--</EC-DOC>
+IS
+
+  ln_return_val           NUMBER;
+  ln_child_count          NUMBER;
+  ln_Loss_Vol             NUMBER;
+  ln_TotEventLossVolume   NUMBER;
+
+  CURSOR c_fcst_well_event  IS
+  SELECT fwe.event_id, fwe.event_no
+  FROM FCST_WELL_EVENT fwe
+  WHERE fwe.parent_event_no = p_event_no;
+
+BEGIN
+
+  ln_child_count := countChildEvent(p_event_no);
+  IF  p_deferment_type  = 'GROUP' THEN
+    --not with child
+    IF ln_child_count = 0 THEN
+      ln_Loss_Vol   := getEventLossVolume(p_event_no, p_event_attribute, NULL, ln_child_count);
+      IF ln_Loss_Vol IS NOT NULL THEN
+        ln_TotEventLossVolume := nvl(ln_TotEventLossVolume,0) + ln_Loss_Vol;
+      END IF;
+    END IF;
+
+    --with child
+    IF ln_child_count > 0 THEN
+      FOR r_fwe_child_event IN c_fcst_well_event  LOOP
+        ln_Loss_Vol := getEventLossVolume(r_fwe_child_event.event_no, p_event_attribute, NULL, 1);
+        IF ln_Loss_Vol IS NOT NULL THEN
+          ln_TotEventLossVolume := nvl(ln_TotEventLossVolume,0) + ln_Loss_Vol;
+        END IF;
+      END LOOP;
+    END IF;
+    ln_return_val := ln_TotEventLossVolume;
+  ELSE
+    ln_return_val := getEventLossVolume(p_event_no, p_event_attribute,NULL, 1);
+  END IF;
+
+  RETURN ln_return_val;
+END getParentEventLossVolume;
 
 END EcBp_Forecast_Event;

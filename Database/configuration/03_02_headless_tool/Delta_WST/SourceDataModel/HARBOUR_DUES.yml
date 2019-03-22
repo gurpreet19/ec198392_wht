@@ -3,6 +3,7 @@ name: HARBOUR_DUES
 cnstPrimaryKey:
   columns:
   - DUE_CODE
+  - DAYTIME
   name: PK_HARBOUR_DUES
   type: PRIMARYKEY
   status: UNDEFINED
@@ -71,6 +72,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '25'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: DATE
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
   DESCRIPTION:
     columnName: DESCRIPTION
     typeName: VARCHAR2(2000)
@@ -159,14 +168,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '6'
-  START_DATE:
-    columnName: START_DATE
-    typeName: DATE
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '1'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(16)
@@ -295,14 +296,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '14'
-cnstUniqueKeys:
-  UK_HARBOUR_DUES_1:
-    columns:
-    - DUE_CODE
-    - START_DATE
-    name: UK_HARBOUR_DUES_1
-    type: UNIQUEKEY
-    status: UNDEFINED
 cnstChecks:
   CHK_HARBOUR_DUES_1:
     searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')

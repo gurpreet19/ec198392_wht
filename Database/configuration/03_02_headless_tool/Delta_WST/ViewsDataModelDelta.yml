@@ -14,6 +14,10 @@ DAO_META: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: DAO_META
   status: MODIFIED
   type: VIEW
+GV_OBJECT_REL_CASCADE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: GV_OBJECT_REL_CASCADE
+  status: ADDED
+  type: VIEW
 RV_BANK_ACCOUNT_INFO: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: RV_BANK_ACCOUNT_INFO
   status: ADDED
@@ -226,6 +230,22 @@ V_CALC_VAR_INHERITED: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_CALC_VAR_INHERITED
   status: MODIFIED
   type: VIEW
+V_CALENDAR_COLL_DAY_COMMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALENDAR_COLL_DAY_COMMENT
+  status: ADDED
+  type: VIEW
+V_CALENDAR_COLL_LIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALENDAR_COLL_LIST
+  status: ADDED
+  type: VIEW
+V_CALENDAR_COLL_WIDGET: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALENDAR_COLL_WIDGET
+  status: ADDED
+  type: VIEW
+V_CALENDAR_COLL_YEAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CALENDAR_COLL_YEAR
+  status: ADDED
+  type: VIEW
 V_CALENDAR_SETUP: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_CALENDAR_SETUP
   status: ADDED
@@ -249,6 +269,10 @@ V_CARGO_BERTH_CHART: !!com.ec.upgrade.schema.dto.DbObjectDTO
 V_CARGO_CALENDAR: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_CARGO_CALENDAR
   status: ADDED
+  type: VIEW
+V_CARGO_DOCUMENT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_CARGO_DOCUMENT
+  status: MODIFIED
   type: VIEW
 V_CARGO_DOCUMENT_PROCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_CARGO_DOCUMENT_PROCESS
@@ -654,9 +678,37 @@ V_DEFER_SUM_GRAPH: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_DEFER_SUM_GRAPH
   status: ADDED
   type: VIEW
+V_DEF_EVENT_BY_WELL: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_EVENT_BY_WELL
+  status: ADDED
+  type: VIEW
 V_DEF_MASTER_ASSET_TYPES: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_DEF_MASTER_ASSET_TYPES
   status: MODIFIED
+  type: VIEW
+V_DEF_SUMM_AREA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_SUMM_AREA
+  status: ADDED
+  type: VIEW
+V_DEF_SUMM_EVENTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_SUMM_EVENTS
+  status: ADDED
+  type: VIEW
+V_DEF_SUMM_FCTY_2: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_SUMM_FCTY_2
+  status: ADDED
+  type: VIEW
+V_DEF_SUMM_PROD_UNIT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_SUMM_PROD_UNIT
+  status: ADDED
+  type: VIEW
+V_DEF_SUMM_SUB_AREA: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_SUMM_SUB_AREA
+  status: ADDED
+  type: VIEW
+V_DEF_SUMM_SUB_PROD_UNIT: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_DEF_SUMM_SUB_PROD_UNIT
+  status: ADDED
   type: VIEW
 V_DEF_WELL_DEF_SUM_VIEW: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_DEF_WELL_DEF_SUM_VIEW
@@ -788,6 +840,10 @@ V_EQPM_TYPE: !!com.ec.upgrade.schema.dto.DbObjectDTO
   type: VIEW
 V_EQUIPMENT_FINDER_OBJECTS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_EQUIPMENT_FINDER_OBJECTS
+  status: ADDED
+  type: VIEW
+V_EXCHANGE_RATES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_EXCHANGE_RATES
   status: ADDED
   type: VIEW
 V_FCST_CARGO_BERTH_CHART: !!com.ec.upgrade.schema.dto.DbObjectDTO
@@ -1090,6 +1146,10 @@ V_FCTY_VERSION_HIST: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_FCTY_VERSION_HIST
   status: ADDED
   type: VIEW
+V_FIN_DOC_EX_RATE_MAINTAIN: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_FIN_DOC_EX_RATE_MAINTAIN
+  status: ADDED
+  type: VIEW
 V_FIN_ITEM_DATASET_MATRIX: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_FIN_ITEM_DATASET_MATRIX
   status: ADDED
@@ -1390,6 +1450,58 @@ V_PVT_SIM: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_PVT_SIM
   status: MODIFIED
   type: VIEW
+V_QRTZ_BLOB_TRIGGERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_BLOB_TRIGGERS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_CALENDARS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_CALENDARS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_CRON_TRIGGERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_CRON_TRIGGERS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_FIRED_TRIGGERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_FIRED_TRIGGERS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_JOB_DETAILS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_JOB_DETAILS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_JOB_LISTENERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_JOB_LISTENERS
+  status: DELETED
+  type: VIEW
+V_QRTZ_LOCKS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_LOCKS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_PAUSED_TRIGGER_GRPS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_PAUSED_TRIGGER_GRPS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_SCHEDULER_STATE: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_SCHEDULER_STATE
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_SIMPLE_TRIGGERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_SIMPLE_TRIGGERS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_SIMPROP_TRIGGERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_SIMPROP_TRIGGERS
+  status: ADDED
+  type: VIEW
+V_QRTZ_TRIGGERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_TRIGGERS
+  status: MODIFIED
+  type: VIEW
+V_QRTZ_TRIGGER_LISTENERS: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_QRTZ_TRIGGER_LISTENERS
+  status: DELETED
+  type: VIEW
 V_REVN_PROD_STREAM_HISTORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_REVN_PROD_STREAM_HISTORY
   status: ADDED
@@ -1553,6 +1665,10 @@ V_STRM_BAL_CATEGORY: !!com.ec.upgrade.schema.dto.DbObjectDTO
 V_STRM_COMP_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_STRM_COMP_ANALYSIS
   status: MODIFIED
+  type: VIEW
+V_STRM_DASHBRD_VALUES: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_STRM_DASHBRD_VALUES
+  status: ADDED
   type: VIEW
 V_STRM_DAY_DATA: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_STRM_DAY_DATA
@@ -1897,6 +2013,10 @@ V_WELL_ACCESS: !!com.ec.upgrade.schema.dto.DbObjectDTO
 V_WELL_COMP_ANALYSIS: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_WELL_COMP_ANALYSIS
   status: MODIFIED
+  type: VIEW
+V_WELL_DAY_ALLOC: !!com.ec.upgrade.schema.dto.DbObjectDTO
+  name: V_WELL_DAY_ALLOC
+  status: ADDED
   type: VIEW
 V_WELL_DAY_COENT_COMBINATION: !!com.ec.upgrade.schema.dto.DbObjectDTO
   name: V_WELL_DAY_COENT_COMBINATION

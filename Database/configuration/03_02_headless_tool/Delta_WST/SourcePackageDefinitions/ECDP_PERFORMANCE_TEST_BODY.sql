@@ -139,6 +139,8 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Performance_Test IS
 ** 10.01.2018  jainnraj  ECPD-50992: Modified procedure setRecordStatusByStatus to skip updation of Record Status for tables(PTST_DEFINITION, PTST_OBJECT, PTST_EVENT)
 ** 05.03.2018  khatrnit  ECPD-50409: Renamed function showDefinedTestDevices to showDefinedTestDevice and also changing return of OBJECT_ID instead of OBJECT_NAME
 ** 18.04.2018  khatrnit  ECPD-52664: New procedure-[addWellToProductionTestResult] added to insert well while inserting production test result.
+** 10.09.2018  chaudgau  ECPD-52897: New procedure setFlwlWellTestDefine and removeFlwlWellTestDefine has been added to initiate or remove flowline test based on
+**                                    flowline well connection
 *************************************************************************************************/
 
 
@@ -156,6 +158,19 @@ CURSOR c_trend_curve(cp_object_id VARCHAR2, cp_daytime DATE, cp_trend_parameter 
     AND tc.daytime = cp_daytime
     AND tc.trend_parameter = cp_trend_parameter
     AND tc.trend_method = cp_trend_method;
+
+-- Find Flowline connection which are active for given date
+ CURSOR c_FlwlConn(cp_object_id VARCHAR2, cp_start_date DATE, cp_end_date DATE) IS
+ SELECT flowline_sub_well_conn.object_id flowline_object_id
+   FROM flowline_sub_well_conn
+  INNER JOIN flwl_version oa
+     ON oa.object_id = flowline_sub_well_conn.object_id
+    AND flowline_sub_well_conn.daytime >= oa.daytime
+    AND (oa.end_date IS NULL OR flowline_sub_well_conn.daytime < oa.end_date)
+  WHERE well_id = cp_object_id
+    AND NVL(cp_end_date, flowline_sub_well_conn.daytime + 1) >= flowline_sub_well_conn.daytime
+    AND cp_start_date <= NVL(flowline_sub_well_conn.end_date, cp_start_date + 1);
+
 	--<EC-DOC>
 ---------------------------------------------------------------------------------------------------
 -- Function       : executeStatement                                                          --
@@ -6140,6 +6155,135 @@ BEGIN
 
 END setWbiTestResult;
 
+---------------------------------------------------------------------------------------------------
+-- Procedure      : setFlwlWellTestDefine
+-- Description    : instantiate Flowline test define for the given well if
+--                  the well has a connection to flowline
+-- Preconditions  :
+-- Postconditions : ptst_object will have empty rows for given flowline
+--
+-- Using tables   : PTST_OBJECT, FLOWLINE_SUB_WELL_CONN, FLWL_VERSION, PTST_DEFINITION
+--
+--
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+---------------------------------------------------------------------------------------------------
+PROCEDURE setFlwlWellTestDefine (p_object_id VARCHAR2 -- WELL OBJECT ID
+                            ,p_test_no       NUMBER
+                            ,p_created_by    VARCHAR2 DEFAULT NULL)
+IS
+
+  lv2_created_by VARCHAR2(32);
+  ld_start_date  DATE; -- PERFORMANCE TEST START DATE
+  ld_end_date    DATE; -- PERFORMANCE TEST END DATE
+BEGIN
+
+  IF p_created_by IS NULL THEN
+    lv2_created_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);
+  ELSE
+    lv2_created_by := p_created_by;
+  END IF;
+
+  SELECT daytime, end_date INTO ld_start_date, ld_end_date
+    FROM ptst_definition
+   WHERE test_no = p_test_no;
+
+  FOR curFlwl IN c_FlwlConn(p_object_id, ld_start_date, ld_end_date)
+  LOOP
+    BEGIN
+      INSERT INTO ptst_object (object_id, test_no, class_name, created_by, created_date)
+      VALUES (curFlwl.flowline_object_id, p_test_no, 'FLOWLINE', lv2_created_by, Ecdp_Timestamp.getCurrentSysdate);
+
+      --createGraphDefParameters(curFlwl.object_id, p_test_no, lv2_created_by);
+    EXCEPTION
+      WHEN dup_val_on_index THEN CONTINUE;
+    END;
+  END LOOP;
+
+END setFlwlWellTestDefine;
+
+---------------------------------------------------------------------------------------------------
+-- Procedure      : removeFlwlWellTestDefine
+-- Description    : It removes the Flowline Test configuration if connected Well data is removed
+--                : The program unit is called by trigger of class well_test_def
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   : PTST_OBJECT, FLOWLINE_SUB_WELL_CONN, FLWL_VERSION, PTST_DEFINITION
+--
+--
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      : It will remove the flowline test configuration if connected well test is removed
+--                  However it will not do so if same flowline is linked to another well in same test
+---------------------------------------------------------------------------------------------------
+PROCEDURE removeFlwlWellTestDefine
+(
+    p_object_id VARCHAR2 -- WELL OBJECT_ID
+   ,p_test_no   NUMBER
+) IS
+
+  ld_start_date  DATE; -- PERFORMANCE TEST START DATE
+  ld_end_date    DATE; -- PERFORMANCE TEST END DATE
+  lv2_flwlConnToOtherWell VARCHAR2(1);
+
+-- This cursor will check if given flowline is connected to other well
+-- 1. Check for those well only which are in same Production test
+-- 2. Connection with well is verified for same date range as that of test
+CURSOR c_ChkFlwlConnToWell(cp_test_no NUMBER, cp_well_object_id VARCHAR2, cp_Flwl_object_id VARCHAR2, cp_start_date DATE, cp_end_date DATE) IS
+SELECT flowline_sub_well_conn.object_id flowline_object_id
+  FROM flowline_sub_well_conn
+INNER JOIN flwl_version oa
+    ON oa.object_id = flowline_sub_well_conn.object_id
+   AND flowline_sub_well_conn.daytime >= oa.daytime
+   AND (oa.end_date IS NULL OR flowline_sub_well_conn.daytime < oa.end_date)
+ WHERE well_id IN (SELECT object_id -- list of well associated to give test
+                     FROM ptst_object
+                    WHERE test_no = cp_test_no
+                      AND class_name = 'WELL'
+                      AND object_id <> cp_well_object_id
+                   )
+   AND flowline_sub_well_conn.object_id = cp_Flwl_object_id
+   AND NVL(cp_end_date, flowline_sub_well_conn.daytime + 1) >= flowline_sub_well_conn.daytime
+   AND cp_start_date <= NVL(flowline_sub_well_conn.end_date, cp_start_date + 1);
+
+BEGIN
+
+  SELECT daytime, end_date INTO ld_start_date, ld_end_date
+    FROM ptst_definition
+   WHERE test_no = p_test_no;
+
+    FOR curFlwl IN c_FlwlConn(p_object_id, ld_start_date, ld_end_date)
+    LOOP
+      lv2_flwlConnToOtherWell := 'N';
+
+      FOR curFlwlExists In c_ChkFlwlConnToWell(p_test_no, p_object_id, curFlwl.flowline_object_id, ld_start_date, ld_end_date)
+      LOOP
+          lv2_flwlConnToOtherWell := 'Y';
+          EXIT;
+      END LOOP;
+
+      IF lv2_flwlConnToOtherWell = 'Y' THEN
+        CONTINUE;
+      ELSE
+        DELETE FROM ptst_object
+         WHERE class_name = 'FLOWLINE'
+           AND object_id = curFlwl.flowline_object_id
+           AND test_no = p_test_no;
+      END IF;
+    END LOOP;
+
+END removeFlwlWellTestDefine;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------

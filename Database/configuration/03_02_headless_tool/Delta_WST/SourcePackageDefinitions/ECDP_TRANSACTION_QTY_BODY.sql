@@ -693,17 +693,15 @@ END SourceEntryNoExists;
                 sum(qty4) as vend_qty4
             FROM
             (
-                SELECT DISTINCT sum(clidc.qty1) as qty1, sum(clidc.qty2) as qty2, sum(clidc.qty3) as qty3, sum(clidc.qty4) as qty4
+                SELECT DISTINCT clidc.qty1, clidc.qty2, clidc.qty3, clidc.qty4, clidc.dist_id, clidc.vendor_id
                 FROM cont_li_dist_company clidc
                 WHERE clidc.transaction_key = cp_transaction_key
                 AND clidc.line_item_based_type != 'QTY'
-                GROUP BY clidc.line_item_key
                 UNION
-                SELECT DISTINCT sum(clidc.qty1), sum(clidc.qty2), sum(clidc.qty3), sum(clidc.qty4)
+                SELECT DISTINCT clidc.qty1, clidc.qty2, clidc.qty3, clidc.qty4, clidc.dist_id, clidc.vendor_id
                 FROM cont_li_dist_company clidc
                 WHERE clidc.transaction_key = cp_transaction_key
                 AND clidc.line_item_based_type = 'QTY'
-                GROUP BY clidc.line_item_key
             );
 
         CURSOR c_sum_pc_level(
@@ -714,12 +712,12 @@ END SourceEntryNoExists;
                 sum(qty3) as pc_qty3,
                 sum(qty4) as pc_qty4
             FROM (
-                SELECT DISTINCT clid.qty1, clid.qty2, clid.qty3, clid.qty4
+                SELECT DISTINCT clid.qty1, clid.qty2, clid.qty3, clid.qty4, clid.dist_id
                 FROM cont_line_item_dist clid
                 WHERE clid.transaction_key = cp_transaction_key
                 AND clid.line_item_based_type != 'QTY'
                 UNION ALL
-                SELECT DISTINCT clid.qty1, clid.qty2, clid.qty3, clid.qty4
+                SELECT DISTINCT clid.qty1, clid.qty2, clid.qty3, clid.qty4, clid.dist_id
                 FROM cont_line_item_dist clid
                 WHERE clid.transaction_key = cp_transaction_key
                 AND clid.line_item_based_type = 'QTY'
@@ -747,6 +745,9 @@ END SourceEntryNoExists;
         sum_qty2_vend_level                NUMBER := 0;
         sum_qty3_vend_level                NUMBER := 0;
         sum_qty4_vend_level                NUMBER := 0;
+
+        ln_DefaultRounding number default nvl(ec_ctrl_system_attribute.attribute_value(ec_cont_transaction.daytime(p_transaction_key),'DOC_PROC_VALID_RND_DEC','<='),-99);
+
     BEGIN
         -- checks if the values at profit centre and transaction and vendor level match
         FOR c_vend IN c_sum_vend_level(p_transaction_key) LOOP
@@ -770,17 +771,33 @@ END SourceEntryNoExists;
             sum_qty4_tran_level := c_tran.tran_qty4;
         END LOOP;
 
-        IF ((sum_qty1_vend_level != sum_qty1_pc_level)
-            OR (sum_qty2_vend_level != sum_qty2_pc_level)
-            OR (sum_qty3_vend_level != sum_qty3_pc_level)
-            OR (sum_qty4_vend_level != sum_qty4_pc_level)) THEN
+        IF ((ln_DefaultRounding = -99
+             AND (   sum_qty1_vend_level != sum_qty1_pc_level
+                  OR sum_qty2_vend_level != sum_qty2_pc_level
+                  OR sum_qty3_vend_level != sum_qty3_pc_level
+                  OR sum_qty4_vend_level != sum_qty4_pc_level))
+        OR  (ln_DefaultRounding != -99
+             AND (   round(sum_qty1_vend_level,ln_DefaultRounding) != round(sum_qty1_pc_level,ln_DefaultRounding)
+                  OR round(sum_qty2_vend_level,ln_DefaultRounding) != round(sum_qty2_pc_level,ln_DefaultRounding)
+                  OR round(sum_qty3_vend_level,ln_DefaultRounding) != round(sum_qty3_pc_level,ln_DefaultRounding)
+                  OR round(sum_qty4_vend_level,ln_DefaultRounding) != round(sum_qty4_pc_level,ln_DefaultRounding)))
+        )
+        THEN
             RAISE ECDP_REVN_FT_ERROR.invalid_ifac_vendor_not_add_up;
         END IF;
 
-        IF((sum_qty1_tran_level != sum_qty1_pc_level)
-            OR (sum_qty2_tran_level != sum_qty2_pc_level)
-            OR (sum_qty3_tran_level != sum_qty3_pc_level)
-            OR (sum_qty4_tran_level != sum_qty4_pc_level)) THEN
+        IF ((ln_DefaultRounding = -99
+             AND (   sum_qty1_tran_level != sum_qty1_pc_level
+                  OR sum_qty2_tran_level != sum_qty2_pc_level
+                  OR sum_qty3_tran_level != sum_qty3_pc_level
+                  OR sum_qty4_tran_level != sum_qty4_pc_level))
+        OR  (ln_DefaultRounding != -99
+             AND (   round(sum_qty1_tran_level,ln_DefaultRounding) != round(sum_qty1_pc_level,ln_DefaultRounding)
+                  OR round(sum_qty2_tran_level,ln_DefaultRounding) != round(sum_qty2_pc_level,ln_DefaultRounding)
+                  OR round(sum_qty3_tran_level,ln_DefaultRounding) != round(sum_qty3_pc_level,ln_DefaultRounding)
+                  OR round(sum_qty4_tran_level,ln_DefaultRounding) != round(sum_qty4_pc_level,ln_DefaultRounding)))
+        )
+        THEN
             RAISE ECDP_REVN_FT_ERROR.invalid_ifac_pc_not_add_up;
         END IF;
     END;

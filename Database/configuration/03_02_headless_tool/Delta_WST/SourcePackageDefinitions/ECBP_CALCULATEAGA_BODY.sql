@@ -13,6 +13,8 @@ CREATE OR REPLACE PACKAGE BODY EcBp_CalculateAGA IS
 ** 21-07-2017  shindani  ECPD-43011: Modified procedure calcAga3,calculateStdDensity,calculateFlowDensity to provide support for AGA8 having calculation Method 1.
 ** 18-01-2018  shindani  ECPD-48685: Added error handling functionality to calcAga3 procedure for missing and out of range attributes.
 ** 09-03-2018  shindani  ECPD-51471: Added error handling to calcAga3_TestDevice procedure.
+** 06-12-2018  kaushaak  ECPD-61990: Modified function calcAga3 to use the aga_ref_analysis_id at first for calculation, if aga_ref_analysis_id is null then to use the p_object_id.
+
 *****************************************************************/
 
   --AGA8 Detail global variable
@@ -1402,11 +1404,12 @@ IS
    ln_spec_grav NUMBER;
    lv2_Aga3Type  VARCHAR2(32);
    lv2_Aga8Method  VARCHAR2(32);
+   lv2_stream_id STRM_VERSION.OBJECT_ID%TYPE;
 
-   CURSOR c_object_aga_analysis IS
+   CURSOR c_object_aga_analysis(lv2_stream_id varchar2) IS
      SELECT *
      FROM object_aga_analysis oaa
-     WHERE oaa.object_id = p_object_id
+     WHERE oaa.object_id = lv2_stream_id
        AND (oaa.analysis_status = 'APPROVED' OR oaa.analysis_status IS NULL)
        AND oaa.valid_from_date = (
            SELECT MAX(oaab.valid_from_date)
@@ -1446,9 +1449,10 @@ BEGIN
       RAISE ex_flowing_temp;
     END IF;
    ln_hours          := (ec_strm_event.end_date(p_object_id,'PERIOD_GAS_STREAM_DATA_AGA',p_daytime,'<=') - p_daytime) * 24;
+   lv2_stream_id := nvl(ec_strm_version.aga_ref_analysis_id(p_object_id, p_daytime, '<='), p_object_id);
 
    -- setting from strm aga analysis
-   FOR cur_object_aga_analysis IN c_object_aga_analysis LOOP
+   FOR cur_object_aga_analysis IN c_object_aga_analysis(lv2_stream_id) LOOP
       ln_aga3Rhotp   := cur_object_aga_analysis.rhotp; -- Density of fluid at flowing conditions (TF and PF)
       ln_aga3Rhos    := cur_object_aga_analysis.rhos; -- Density of fluid at standard conditions (TS and PS)
       ln_aga3VISC    := cur_object_aga_analysis.Visc; -- Absolute viscosity of fluid flowing/isentropic exponent

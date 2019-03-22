@@ -102,7 +102,7 @@ UNION ALL
 SELECT class_name, source_name, property_name, alias_property, rel_class_name, role_name,
        access_control_method, access_control_ind, data_type, is_key, is_mandatory, is_report_only,
        db_mapping_type, db_sql_syntax,
-       'dataunit=' || ecdp_unit.getunitfromlogical(nvl(uom_code,'')) || decode(INSTR(static_presentation_syntax,'viewunit'),0,decode(uom_code, null, '', ';viewlabeluom=' || ecdp_unit.GetUnitLabel(ecdp_unit.getviewunitfromlogical(nvl(uom_code,''))) || ';viewunit=' || ecdp_unit.getviewunitfromlogical(nvl(uom_code,''))),'') || ';viewlabel=' || nvl(label,'') || ';datarequired=' || decode(nvl(is_mandatory,'N'),'Y','true','false') || ';viewhidden=' || ecdp_classmeta_cnfg.getStaticViewhidden(class_name, property_name) || decode(db_mapping_type, 'FUNCTION', ';vieweditable=false', '') || ';' || EcDp_Unit.GetViewFormatMask(uom_code,static_presentation_syntax) || static_presentation_syntax attributes,
+       'dataunit=' || ecdp_unit.getunitfromlogical(nvl(uom_code,'')) || decode(INSTR(static_presentation_syntax,'viewunit'),0,decode(uom_code, null, '', ';viewlabeluom=' || ecdp_unit.GetUnitLabel(ecdp_unit.getviewunitfromlogical(nvl(uom_code,''))) || ';viewunit=' || ecdp_unit.getviewunitfromlogical(nvl(uom_code,''))),'') || ';viewlabel=' || nvl(label,'') || ';datarequired=' || decode(nvl(is_mandatory,'N'),'Y','true','false') || decode(nvl(db_pres_syntax, 'N'), 'N', '', ';viewhidden=true') || decode(db_mapping_type, 'FUNCTION', ';vieweditable=false', '') || ';' || EcDp_Unit.GetViewFormatMask(uom_code,static_presentation_syntax) || static_presentation_syntax attributes,
        presentation, date_handeling, is_popup, is_relation, is_relation_code, is_read_only, group_type, sort_order
 FROM (
 SELECT
@@ -131,7 +131,8 @@ SELECT
   EcDp_ClassMeta_Cnfg.getScreenSortOrder(ca.class_name, ca.attribute_name) sort_order,
   EcDp_ClassMeta_Cnfg.getLabel(ca.class_name, ca.attribute_name) label,
   EcDp_ClassMeta_Cnfg.getUomCode(ca.class_name, ca.attribute_name) AS uom_code,
-  EcDp_ClassMeta_Cnfg.getStaticPresentationSyntax(ca.class_name, ca.attribute_name) AS static_presentation_syntax
+  EcDp_ClassMeta_Cnfg.getStaticPresentationSyntax(ca.class_name, ca.attribute_name) AS static_presentation_syntax,
+  Ecdp_Classmeta_Cnfg.getDbPresSyntax(ca.class_name, ca.attribute_name) AS db_pres_syntax
 FROM class_attribute_cnfg ca, class_cnfg c
 WHERE c.class_name = ca.class_name
   AND Ecdp_Classmeta_Cnfg.isDisabled(ca.class_name, ca.attribute_name) = 'N'
@@ -140,7 +141,7 @@ WHERE c.class_name = ca.class_name
 UNION ALL
 -- select to get attribute alias/popup
 SELECT class_name, source_name, property_name, alias_property, rel_class_name, role_name,
-       access_control_method, access_control_ind, data_type, is_key, is_mandatory, is_report_only,
+       access_control_method, access_control_ind, data_type, is_key, 'N' AS is_mandatory, is_report_only,
        db_mapping_type, db_sql_syntax,
        'dataunit=' || ecdp_unit.getunitfromlogical(nvl(uom_code,'')) || decode(INSTR(static_presentation_syntax,'viewunit'),0,decode(uom_code, null, '', ';viewlabeluom=' || ecdp_unit.GetUnitLabel(ecdp_unit.getviewunitfromlogical(nvl(uom_code,''))) || ';viewunit=' || ecdp_unit.getviewunitfromlogical(nvl(uom_code,''))),'') || ';viewlabel=' || nvl(label,'') || ';datarequired=' || decode(nvl(is_mandatory,'N'),'Y','true','false') || decode(attr_db_mapping_type, 'FUNCTION', ';vieweditable=false', '') || ';' || EcDp_Unit.GetViewFormatMask(uom_code,static_presentation_syntax) || static_presentation_syntax attributes,
        presentation, date_handeling, is_popup, is_relation, is_relation_code, is_read_only, group_type, sort_order
@@ -156,7 +157,7 @@ SELECT
   Ecdp_Classmeta_Cnfg.getAccessControlInd(c.class_name) AS access_control_ind,
   'STRING' data_type,
   'N' is_key,
-  'N' is_mandatory,
+  Ecdp_Classmeta_Cnfg.isMandatory(ca.class_name, ca.attribute_name) is_mandatory,
   Ecdp_Classmeta_Cnfg.isReportOnly(ca.class_name, ca.attribute_name) is_report_only,
   NULL db_mapping_type,
   ca.db_mapping_type attr_db_mapping_type,
@@ -183,7 +184,7 @@ UNION ALL
 SELECT class_name, source_name, property_name, alias_property, rel_class_name, role_name,
        access_control_method, access_control_ind, data_type, is_key, is_mandatory, is_report_only,
        db_mapping_type, db_sql_syntax,
-       'viewlabel='||label ||';' || 'datarequired=' ||  decode(nvl(is_mandatory,'N'),'Y','true','false') || decode(nvl(presentation, 'N'), 'N', '', ';viewhidden=true')||';' || static_presentation_syntax attributes,
+       'viewlabel='||label ||';' || 'datarequired=' ||  decode(nvl(is_mandatory,'N'),'Y','true','false') || decode(nvl(db_pres_syntax, 'N'), 'N', '', ';viewhidden=true')||';' || static_presentation_syntax attributes,
        presentation, date_handeling, is_popup, is_relation, is_relation_code, is_read_only, group_type, sort_order
 FROM (
 SELECT
@@ -211,7 +212,8 @@ SELECT
   cr.group_type,
   Ecdp_Classmeta_Cnfg.getDbSortOrder(cr.from_class_name, cr.to_class_name, cr.role_name) sort_order,
   EcDp_ClassMeta_Cnfg.getLabel(cr.from_class_name, cr.to_class_name, cr.role_name) label,
-  EcDp_ClassMeta_Cnfg.getStaticPresentationSyntax(cr.from_class_name, cr.to_class_name, cr.role_name) AS static_presentation_syntax
+  EcDp_ClassMeta_Cnfg.getStaticPresentationSyntax(cr.from_class_name, cr.to_class_name, cr.role_name) AS static_presentation_syntax,
+  Ecdp_Classmeta_Cnfg.getDbPresSyntax(cr.from_class_name, cr.to_class_name, cr.role_name) AS db_pres_syntax
 FROM class_relation_cnfg cr, class_cnfg c
 WHERE c.class_name = cr.to_class_name
   AND cr.multiplicity IN ('1:1', '1:N')
@@ -292,6 +294,10 @@ WHERE c.class_name = cr.to_class_name
   AND cr.group_type IS NULL
 UNION ALL
 -- get group relation ID
+SELECT class_name, source_name, attribute_name, alias_property, rel_class_name, role_name, access_control_method, access_control_ind, data_type, is_key, is_mandatory, is_report_only, db_mapping_type, db_sql_syntax,
+       ';viewlabel='||label ||';' || 'datarequired=' ||  decode(nvl(is_mandatory,'N'),'Y','true','false') || decode(nvl(db_pres_syntax, 'N'), 'N', '', ';viewhidden=true')||';' || static_presentation_syntax attributes,
+	   presentation, date_handeling, is_popup, is_relation, is_relation_code, is_read_only, group_type, sort_order
+FROM (
 SELECT
   gl.class_name,
   ecdp_classmeta.getClassViewName(gl.class_name) source_name,
@@ -307,9 +313,6 @@ SELECT
   Ecdp_Classmeta_Cnfg.isReportOnly(cr.from_class_name, cr.to_class_name, cr.role_name) is_report_only,
   cr.db_mapping_type,
   cr.db_sql_syntax,
-  -- TODO
-  -- ';viewlabel='||p.label ||';' || 'datarequired=' ||  decode(nvl(cr.is_mandatory,'N'),'Y','true','false') || decode(nvl(p.db_pres_syntax, 'N'), 'N', '', ';viewhidden=true')||';' || p.static_presentation_syntax attributes,
-  --
   NULL attributes,
   Ecdp_Classmeta_Cnfg.getDynamicPresentationSyntax(cr.from_class_name, cr.to_class_name, cr.role_name) presentation,
   'OBJECT' date_handeling,
@@ -318,7 +321,10 @@ SELECT
   'N' is_relation_code,
   DECODE(EcDp_ClassMeta.IsParentRelation(gl.class_name,cr.from_class_name,cr.role_name),'Y','N','N','Y') is_read_only,
   cr.group_type,
-  Ecdp_Classmeta_Cnfg.getDbSortOrder(cr.from_class_name, cr.to_class_name, cr.role_name) sort_order
+  Ecdp_Classmeta_Cnfg.getDbSortOrder(cr.from_class_name, cr.to_class_name, cr.role_name) sort_order,
+  EcDp_ClassMeta_Cnfg.getLabel(cr.from_class_name, cr.to_class_name, cr.role_name) label,
+  EcDp_ClassMeta_Cnfg.getDbPresSyntax(cr.from_class_name, cr.to_class_name, cr.role_name) db_pres_syntax,
+  Ecdp_Classmeta_Cnfg.getStaticPresentationSyntax(cr.from_class_name, cr.to_class_name, cr.role_name) static_presentation_syntax
 FROM class_relation_cnfg cr, v_group_level gl, class_cnfg c
 WHERE  cr.from_class_name = gl.from_class_name
    AND cr.to_class_name = gl.to_class_name
@@ -332,6 +338,7 @@ WHERE  cr.from_class_name = gl.from_class_name
                           AND from_class_name = gl.from_class_name
                           AND role_name = gl.role_name)
    AND c.class_name=gl.class_name
+)
 UNION ALL
 -- get group relation POPUP
 SELECT class_name, source_name, property_name, alias_property, rel_class_name, role_name,

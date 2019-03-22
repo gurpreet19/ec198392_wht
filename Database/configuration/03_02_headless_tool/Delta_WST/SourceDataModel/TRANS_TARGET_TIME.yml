@@ -3,6 +3,7 @@ name: TRANS_TARGET_TIME
 cnstPrimaryKey:
   columns:
   - TARGET_TAGID
+  - TARGET_SOURCEID
   name: PK_TRANS_TARGET_TIME
   type: PRIMARYKEY
   status: UNDEFINED
@@ -14,7 +15,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '14'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -22,7 +23,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '15'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -30,7 +31,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '16'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -38,7 +39,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '7'
+    sequence: !!float '8'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -46,7 +47,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '8'
+    sequence: !!float '9'
   DESCRIPTION:
     columnName: DESCRIPTION
     typeName: VARCHAR2(240)
@@ -54,7 +55,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '4'
+    sequence: !!float '5'
   FORCE_READ:
     columnName: FORCE_READ
     typeName: VARCHAR2(1)
@@ -62,7 +63,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '5'
+    sequence: !!float '6'
   LAST_TRANSFER:
     columnName: LAST_TRANSFER
     typeName: DATE
@@ -70,7 +71,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '2'
+    sequence: !!float '3'
   LAST_TRANSFER_WRITE:
     columnName: LAST_TRANSFER_WRITE
     typeName: DATE
@@ -78,7 +79,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '3'
+    sequence: !!float '4'
   LAST_UPDATED_BY:
     columnName: LAST_UPDATED_BY
     typeName: VARCHAR2(30)
@@ -86,7 +87,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '10'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -94,7 +95,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '11'
   RECORD_STATUS:
     columnName: RECORD_STATUS
     typeName: VARCHAR2(1)
@@ -102,7 +103,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '6'
+    sequence: !!float '7'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -110,7 +111,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '17'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -118,7 +119,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '12'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -126,7 +127,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '13'
+  TARGET_SOURCEID:
+    columnName: TARGET_SOURCEID
+    typeName: VARCHAR2(30)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '2'
   TARGET_TAGID:
     columnName: TARGET_TAGID
     typeName: VARCHAR2(100)

@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0076
   NAME: Monthly Meter Composition Matrix - Approved
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/monthly_meter_composition_matrix/CLASS/METER_MTH_COMP_APPROVED
 related: {}

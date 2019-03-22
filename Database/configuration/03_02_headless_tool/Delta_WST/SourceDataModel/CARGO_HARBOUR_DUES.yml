@@ -14,7 +14,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '40'
+    sequence: !!float '41'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -22,7 +22,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '41'
+    sequence: !!float '42'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -30,7 +30,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '39'
+    sequence: !!float '40'
   CARGO_HARBOUR_DUES_NO:
     columnName: CARGO_HARBOUR_DUES_NO
     typeName: NUMBER
@@ -54,7 +54,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '33'
+    sequence: !!float '34'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -62,7 +62,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '34'
+    sequence: !!float '35'
   DATE_1:
     columnName: DATE_1
     typeName: DATE
@@ -119,6 +119,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '26'
+  DAYTIME:
+    columnName: DAYTIME
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '32'
   DESCRIPTION:
     columnName: DESCRIPTION
     typeName: VARCHAR2(2000)
@@ -142,7 +150,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '35'
+    sequence: !!float '36'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -150,7 +158,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '36'
+    sequence: !!float '37'
   QTY:
     columnName: QTY
     typeName: NUMBER
@@ -166,7 +174,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '32'
+    sequence: !!float '33'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -174,7 +182,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '42'
+    sequence: !!float '43'
   REF_OBJECT_ID_1:
     columnName: REF_OBJECT_ID_1
     typeName: VARCHAR2(32)
@@ -222,7 +230,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '37'
+    sequence: !!float '38'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -230,7 +238,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '38'
+    sequence: !!float '39'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(16)
@@ -367,6 +375,7 @@ cnstForeignKeys:
     primaryTable: HARBOUR_DUES
     columns:
       DUE_CODE: DUE_CODE
+      DAYTIME: DAYTIME
     name: FK_CARGO_HARBOUR_DUES_2
     type: FOREIGNKEY
     status: UNDEFINED
@@ -383,6 +392,7 @@ indexes:
     indexName: IFK_CARGO_HARBOUR_DUES_2
     columns:
     - DUE_CODE
+    - DAYTIME
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536

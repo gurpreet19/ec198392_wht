@@ -8,5 +8,6 @@ properties:
   BF_CODE: PR.0035
   NAME: Monthly Price Rate
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.sale.pr.screens/price_index_monthly/CLASS/PRICE_RATE_MTH_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_RATE/TARGET_TYPE/self
 related: {}

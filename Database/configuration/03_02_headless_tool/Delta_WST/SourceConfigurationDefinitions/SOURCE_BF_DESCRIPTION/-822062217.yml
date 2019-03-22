@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0015
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_CATEGORY' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_CATEGORY' )
   DATA_LEVEL: 0.0
   DESCRIPTION: '<p>    <strong>Revenue Stream Category screen</strong>    is used
     to define and maintain Revenue Stream Category objects.</p><p>    <strong>Stream

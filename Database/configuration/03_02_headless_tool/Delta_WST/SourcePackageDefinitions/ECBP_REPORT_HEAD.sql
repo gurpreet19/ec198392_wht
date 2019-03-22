@@ -127,8 +127,11 @@ CREATE OR REPLACE PACKAGE EcBp_Report IS
    /* Check if the user has access to see the generated report */
    FUNCTION hasAccessToGeneratedReport( p_report_no NUMBER ) RETURN VARCHAR2;
 
-   /* Check if the user has access to see the report runable*/
+   /* Check if the user has access to see the report runable */
    FUNCTION hasAccessToReportRunable( p_report_runable_no NUMBER, p_rep_group_code VARCHAR2, p_report_area_id VARCHAR2, p_nav_date DATE) RETURN VARCHAR2;
+
+   /* Check if the user has access to see the report definition */
+   FUNCTION hasAccessToReportDefinition(p_rep_group_code VARCHAR2, p_report_area_id VARCHAR2) RETURN VARCHAR2;
 
    /* Check if the user has access to see the published report */
    FUNCTION hasAccessToPublishedReport( p_report_published_no NUMBER, p_report_no NUMBER ) RETURN VARCHAR2;

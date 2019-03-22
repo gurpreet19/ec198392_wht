@@ -8,5 +8,6 @@ properties:
   BF_CODE: PA.0008
   NAME: Process Monitor Config
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.jbpm/jbpm_monitor_config
 related: {}

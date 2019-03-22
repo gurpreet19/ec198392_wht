@@ -1,8 +1,7 @@
-CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_FIN_ITEM_DATASET_MATRIX" ("SORT_ORDER", "DAYTIME", "FIN_ITEM_ID", "FIN_ITEM_NAME", "UNIT", "OBJECT_LINK_TYPE", "OBJECT_LINK_ID", "COMPANY_ID", "TEMPLATE_CODE", "CONTRACT_AREA_ID", "TIME_SPAN", "FORMAT_MASK", "DATASET_VALUE_1", "DATASET_VALUE_2", "DATASET_VALUE_3", "DATASET_VALUE_4", "DATASET_VALUE_5", "DATASET_VALUE_6", "DATASET_VALUE_7", "DATASET_VALUE_8", "DATASET_VALUE_9", "DATASET_VALUE_10", "RECORD_STATUS", "CREATED_BY", "CREATED_DATE", "LAST_UPDATED_BY", "LAST_UPDATED_DATE", "REV_NO", "REV_TEXT") AS 
+CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_FIN_ITEM_DATASET_MATRIX" ("SORT_ORDER", "DAYTIME", "FIN_ITEM_ID", "UNIT", "OBJECT_LINK_TYPE", "OBJECT_LINK_ID", "COMPANY_ID", "TEMPLATE_CODE", "CONTRACT_AREA_ID", "TIME_SPAN", "FORMAT_MASK", "DATASET_VALUE_1", "DATASET_VALUE_2", "DATASET_VALUE_3", "DATASET_VALUE_4", "DATASET_VALUE_5", "DATASET_VALUE_6", "DATASET_VALUE_7", "DATASET_VALUE_8", "DATASET_VALUE_9", "DATASET_VALUE_10", "RECORD_STATUS", "CREATED_BY", "CREATED_DATE", "LAST_UPDATED_BY", "LAST_UPDATED_DATE", "REV_NO", "REV_TEXT") AS 
   SELECT rownum * 10 sort_order,
        daytime,
        fin_item_id,
-       fin_item_name,
        unit,
        object_link_type,
        object_link_id,
@@ -30,7 +29,6 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_FIN_ITEM_DATASET_MATRIX" ("SORT_ORDE
        NULL rev_text
 FROM ( SELECT fi_entry.daytime,
               fi_entry.fin_item_id,
-              ec_financial_item_version.name(fin_item_id, daytime, '<=') as fin_item_name,
               ec_code.dataset_value,
               fi_entry.value_result,
               fi_entry.unit,
@@ -62,4 +60,4 @@ FROM ( SELECT fi_entry.daytime,
                              'DATASET_VALUE_9'  AS DATASET_VALUE_9,
                              'DATASET_VALUE_10' AS DATASET_VALUE_10)
      )
-ORDER BY DAYTIME, TIME_SPAN, FIN_ITEM_NAME
+ORDER BY daytime, time_span, ec_financial_item_version.name(fin_item_id, daytime, '<=')

@@ -48,4 +48,30 @@ CREATE OR REPLACE PACKAGE ecdp_reconciliation IS
   RETURN varchar2;
   FUNCTION IsSummary(p_inventory_id VARCHAR2) RETURN VARCHAR2;
 
+  FUNCTION VarianceTable (p_PERIOD VARCHAR2,
+                        p_GROUP_BY_CODE VARCHAR2 default null,
+                        p_RECON_TYPE VARCHAR2 default null,
+                        p_CONTRACT_PS VARCHAR2 default null,
+                        p_CONTRACT_INT VARCHAR2,
+                        p_DOC_TYPE VARCHAR2 default null,
+                        p_FIN_WBS VARCHAR2 default null,
+                        p_FIN_COST_CENTER_CODE VARCHAR2 default null,
+                        p_FIN_ACCOUNT_CODE VARCHAR2 default null,
+                        p_DATASET VARCHAR2 default null,
+                        p_DOCUMENT_KEY VARCHAR2,
+                        p_CONTRACT_HLD VARCHAR2,
+                        p_AMOUNT VARCHAR2 default null,
+                        p_QTY VARCHAR2 default null,
+                        p_SHOW_ZERO_VARIANCE VARCHAR2 default null)
+  RETURN T_TABLE_MAPPING_VARIANCE;
+
+  FUNCTION variance_detail (p_PERIOD VARCHAR2,
+                        p_GROUP_BY_CODE VARCHAR2,
+                        p_CONTRACT_INT VARCHAR2,
+                        p_DOCUMENT_KEY VARCHAR2,
+                        p_CONTRACT_HLD VARCHAR2,
+                        p_GROUP_BY_VALUE VARCHAR2)
+
+  RETURN T_TABLE_MAPPING_VARIANCE;
+
 END ecdp_reconciliation;

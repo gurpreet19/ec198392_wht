@@ -59,7 +59,7 @@ SELECT
      cjs.period mapping_date,
        'N/A' PARAMETERS,
        dfdc.mapping_type,
-       substr(dfdc.mapping_id,1,decode(instr(dfdc.mapping_id,'|'),0,length(dfdc.mapping_id),instr(dfdc.mapping_id,'|')-1)) mapping_id,
+       mapping_id,
        tO_ID||'$' ID,
      doc.process_date DAYTIME,
        doc_conn.from_type other_type,

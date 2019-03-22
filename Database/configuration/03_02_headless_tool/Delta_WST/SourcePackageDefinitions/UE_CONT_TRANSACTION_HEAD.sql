@@ -36,9 +36,12 @@ isFillTransPostUEEnabled VARCHAR2(32) := 'FALSE';
 isFillTransQtyPostUEEnabled VARCHAR2(32) := 'FALSE';
 isFillTransLIPostUEEnabled VARCHAR2(32) := 'FALSE';
 isFillTransPricePostUEEnabled VARCHAR2(32) := 'FALSE';
-isisTransactionEditableUEE VARCHAR2(32) := 'FALSE';
-isisTransactionEditablePreUEE VARCHAR2(32) := 'FALSE';
-isisTransactionEditablePostUEE VARCHAR2(32) := 'FALSE';
+isIsTransEditableUEE VARCHAR2(32) := 'FALSE';
+isIsTransEditablePreUEE VARCHAR2(32) := 'FALSE';
+isIsTransEditablePostUEE VARCHAR2(32) := 'FALSE';
+isIsTransDeletableUEE VARCHAR2(32) := 'FALSE';
+isIsTransDeletablePreUEE VARCHAR2(32) := 'FALSE';
+isIsTransDeletablePostUEE VARCHAR2(32) := 'FALSE';
 isValidateDocVATUEE VARCHAR2(32) := 'FALSE';
 isValidateDocVATPreUEE VARCHAR2(32) := 'FALSE';
 isValidateDocVATPostUEE VARCHAR2(32) := 'FALSE';
@@ -104,19 +107,41 @@ RETURN VARCHAR2;
 
 FUNCTION isTransactionEditable(
          p_transaction_key VARCHAR2,
-         p_level VARCHAR2 DEFAULT 'TRANS')
+         p_level VARCHAR2,
+         p_msg OUT VARCHAR2)
 RETURN VARCHAR2;
 
 FUNCTION isTransactionEditablePre(
          p_transaction_key VARCHAR2,
-         p_level VARCHAR2 DEFAULT 'TRANS')
+         p_level VARCHAR2,
+         p_msg OUT VARCHAR2)
 RETURN VARCHAR2;
 
 FUNCTION isTransactionEditablePost(
          p_transaction_key VARCHAR2,
-         p_level VARCHAR2 DEFAULT 'TRANS')
+         p_level VARCHAR2,
+         p_status VARCHAR2,
+         p_msg OUT VARCHAR2)
 RETURN VARCHAR2;
 
+FUNCTION isTransactionDeletable(
+         p_transaction_key VARCHAR2,
+         p_level VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2;
+
+FUNCTION isTransactionDeletablePre(
+         p_transaction_key VARCHAR2,
+         p_level VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2;
+
+FUNCTION isTransactionDeletablePost(
+         p_transaction_key VARCHAR2,
+         p_level VARCHAR2,
+         p_status VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2;
 
 PROCEDURE SetAllTransSortOrder(p_document_key VARCHAR2);
 

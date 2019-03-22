@@ -3,7 +3,7 @@ name: JBPM_TASK_COMMENT
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008732
+  name: PK_JBPM_TASK_COMMENT
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

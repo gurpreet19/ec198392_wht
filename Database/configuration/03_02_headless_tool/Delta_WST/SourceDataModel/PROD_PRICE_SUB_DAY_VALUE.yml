@@ -19,7 +19,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '9'
   APPROVAL_BY:
     columnName: APPROVAL_BY
     typeName: VARCHAR2(30)
@@ -27,7 +27,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '35'
+    sequence: !!float '34'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -35,7 +35,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '36'
+    sequence: !!float '35'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -43,7 +43,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '37'
+    sequence: !!float '36'
   CALC_PRICE_VALUE:
     columnName: CALC_PRICE_VALUE
     typeName: NUMBER
@@ -51,7 +51,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '8'
   COMMENTS:
     columnName: COMMENTS
     typeName: VARCHAR2(2000)
@@ -59,7 +59,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '11'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -67,7 +67,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '29'
+    sequence: !!float '28'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -75,7 +75,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '30'
+    sequence: !!float '29'
   DAYTIME:
     columnName: DAYTIME
     typeName: DATE
@@ -91,7 +91,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '31'
+    sequence: !!float '30'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -99,7 +99,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '32'
+    sequence: !!float '31'
   OBJECT_ID:
     columnName: OBJECT_ID
     typeName: VARCHAR2(32)
@@ -115,7 +115,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '10'
   PRICE_CATEGORY:
     columnName: PRICE_CATEGORY
     typeName: VARCHAR2(32)
@@ -123,7 +123,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '27'
+    sequence: !!float '26'
   PRICE_CONCEPT_CODE:
     columnName: PRICE_CONCEPT_CODE
     typeName: VARCHAR2(32)
@@ -131,7 +131,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '6'
+    sequence: !!float '5'
   PRICE_ELEMENT_CODE:
     columnName: PRICE_ELEMENT_CODE
     typeName: VARCHAR2(32)
@@ -139,7 +139,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '7'
+    sequence: !!float '6'
   PRODUCTION_DAY:
     columnName: PRODUCTION_DAY
     typeName: DATE
@@ -147,7 +147,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '8'
+    sequence: !!float '7'
   RECORD_STATUS:
     columnName: RECORD_STATUS
     typeName: VARCHAR2(1)
@@ -155,7 +155,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '28'
+    sequence: !!float '27'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -163,7 +163,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '38'
+    sequence: !!float '37'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -171,7 +171,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '33'
+    sequence: !!float '32'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -179,7 +179,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '34'
+    sequence: !!float '33'
   SUMMER_TIME:
     columnName: SUMMER_TIME
     typeName: VARCHAR2(1)
@@ -196,7 +196,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '23'
+    sequence: !!float '22'
   TEXT_2:
     columnName: TEXT_2
     typeName: VARCHAR2(32)
@@ -204,7 +204,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '24'
+    sequence: !!float '23'
   TEXT_3:
     columnName: TEXT_3
     typeName: VARCHAR2(240)
@@ -212,7 +212,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '25'
+    sequence: !!float '24'
   TEXT_4:
     columnName: TEXT_4
     typeName: VARCHAR2(2000)
@@ -220,15 +220,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '26'
-  TIME_ZONE:
-    columnName: TIME_ZONE
-    typeName: VARCHAR2(65)
-    nullable: 'YES'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '4'
+    sequence: !!float '25'
   UTC_DAYTIME:
     columnName: UTC_DAYTIME
     typeName: DATE
@@ -236,7 +228,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '5'
+    sequence: !!float '4'
   VALUE_1:
     columnName: VALUE_1
     typeName: NUMBER
@@ -244,7 +236,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '12'
   VALUE_10:
     columnName: VALUE_10
     typeName: NUMBER
@@ -252,7 +244,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '22'
+    sequence: !!float '21'
   VALUE_2:
     columnName: VALUE_2
     typeName: NUMBER
@@ -260,7 +252,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '13'
   VALUE_3:
     columnName: VALUE_3
     typeName: NUMBER
@@ -268,7 +260,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '14'
   VALUE_4:
     columnName: VALUE_4
     typeName: NUMBER
@@ -276,7 +268,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '15'
   VALUE_5:
     columnName: VALUE_5
     typeName: NUMBER
@@ -284,7 +276,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '17'
+    sequence: !!float '16'
   VALUE_6:
     columnName: VALUE_6
     typeName: NUMBER
@@ -292,7 +284,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '18'
+    sequence: !!float '17'
   VALUE_7:
     columnName: VALUE_7
     typeName: NUMBER
@@ -300,7 +292,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '19'
+    sequence: !!float '18'
   VALUE_8:
     columnName: VALUE_8
     typeName: NUMBER
@@ -308,7 +300,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '20'
+    sequence: !!float '19'
   VALUE_9:
     columnName: VALUE_9
     typeName: NUMBER
@@ -316,7 +308,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '21'
+    sequence: !!float '20'
 cnstForeignKeys:
   FK_PROD_PRICE_SUB_DAY_VALUE_1:
     updateAction: UNKNOWN

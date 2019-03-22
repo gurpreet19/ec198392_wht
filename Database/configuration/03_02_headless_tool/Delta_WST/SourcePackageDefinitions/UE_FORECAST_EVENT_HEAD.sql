@@ -17,6 +17,10 @@ CREATE OR REPLACE PACKAGE Ue_Forecast_Event IS
 ** 19-05-16    kumarsur    Initial Version
 ** 18-07-16    abdulmaw    ECPD-37247: Added procedure calcDeferments
 ** 18-10-16    abdulmaw    ECPD-34304: Added function isAssociatedWithGroup
+** 25-06-18    kashisag    ECPD-56997: Added user exit for recalcdeferment
+** 28-06-18    kashisag    ECPD-56997: Added parameter to user exit for recalcdeferment
+** 21-12-18    leongwen    ECPD-56158: Implement the similar Deferment Calculation Logic from PD.0020 to Forecast Event PP.0047
+**                                     Added procedure allocateGroupRateToWells.
 ********************************************************************/
 
 PROCEDURE sumFromWells(
@@ -56,5 +60,12 @@ PROCEDURE calcDeferments(
    p_from_date DATE DEFAULT NULL,
    p_to_date DATE DEFAULT NULL,
    ue_flag OUT CHAR);
+
+PROCEDURE reCalcDeferments(
+  p_scenario_id  VARCHAR2 ,
+  p_custom_param VARCHAR2 DEFAULT NULL,
+  ue_flag OUT CHAR);
+
+PROCEDURE allocateGroupRateToWells(p_event_no NUMBER, p_user_name VARCHAR2 ,ue_flag OUT CHAR);
 
 END Ue_Forecast_Event;

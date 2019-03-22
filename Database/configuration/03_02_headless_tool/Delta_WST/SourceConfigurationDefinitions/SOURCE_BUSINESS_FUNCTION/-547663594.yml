@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0120
   NAME: Test Device Finder
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/test_device_finder
 related: {}

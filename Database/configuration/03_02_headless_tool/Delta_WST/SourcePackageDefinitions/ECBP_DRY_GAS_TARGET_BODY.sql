@@ -184,7 +184,7 @@ END createWithinDayTarget;
 -- Using Tables   :
 --
 --
--- Using functions: ec_class_attr_presentation.uom_code
+-- Using functions: ecdp_classmeta_cnfg.getUomCode
 --				  : ecdp_contract_attribute.getAttributeString
 --                : ecdp_Contract_availability.getCalculatedQty
 -- Configuration
@@ -290,7 +290,7 @@ END getWithinTargetQty;
 -- Using Tables   :
 --
 --
--- Using functions: ec_class_attr_presentation.uom_code ecdp_Contract_availability.getCalculatedQty
+-- Using functions: ecdp_classmeta_cnfg.getUomCode ecdp_Contract_availability.getCalculatedQty
 --				  :
 --                :
 -- Configuration

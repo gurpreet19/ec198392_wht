@@ -9,5 +9,18 @@ properties:
   BF_DESCRIPTION_NO: CD.0124
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_RECEIVED_TERM/FROM_CLASS_NAME/DOC_RECEIVED_TERM/TO_CLASS_NAME/DOC_RECEIVED_TERM' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>    <strong>Document Received Term Usage screen</strong>    is used to give an overview of the various relations from the Document Received Term  class to other classes.</p><p>    The screen is divided into these sections:</p><p>    <strong><em>Filter Navigator</em></strong><br>    It lists all the Document Received Terms valid for the given date.</p><p>    <strong><em>Relations List section:</em></strong><br>    The section lists the various relations for the Document Received Term class.<br>    It will list 1:N type of relations where the Document Received Term class is at the    single side. It will also list all the N:M type of relations where the    selected class is either at the N-side or the M-side of the relation. <br> For    each relation in the Relation List the user can see which objects the    selected Document Received Term has relations to.</p><p>    <strong><em>Relation Details:</em></strong><br>    The section lists the objects that the Document Received Term class has    relation to for the relation selected in the Relations List section.</p>
+  DESCRIPTION: '<p><strong>Document Received Term Usage screen</strong> is used to
+    give an overview of the various relations from the Document Received Term class
+    to other classes.</p><p>The screen is divided into these sections:</p><p><strong
+    style="color: rgb(0, 102, 204);">Navigator</strong>  </p>  <p> It lists all the
+    Document Received Terms valid for the given date.</p><p><strong style="color:
+    rgb(0, 102, 204);">Relations List Section</strong></p>  <p> The section lists
+    the various relations for the Document Received Term class.<br> It will list 1:N
+    type of relations where the Document Received Term class is at the single side.
+    It will also list all the N:M type of relations where the selected class is either
+    at the N-side or the M-side of the relation. <br> For each relation in the Relation
+    List the user can see which objects the selected Document Received Term has relations
+    to.</p><p><strong style="color: rgb(0, 102, 204);">Relation Details Section</strong></p><p>
+    The section lists the objects that the Document Received Term class has relation
+    to for the relation selected in the Relations List section.</p>'
 related: {}

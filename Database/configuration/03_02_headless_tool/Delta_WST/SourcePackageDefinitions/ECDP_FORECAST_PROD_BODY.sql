@@ -43,6 +43,9 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Forecast_Prod IS
 ** 20-02-18   jainnraj  ECPD-52692: Modified procedure deleteForecast and deleteScenario to delete data from table FCST_AREA_MTH upon deleting a forecast or scenario.
 ** 08-03-18   jainnraj  ECPD-52689,ECPD-52690,ECPD-52694,ECPD-52693: Modified procedure deleteForecast and deleteScenario to delete data from table FCST_SUB_PRODUNIT_DAY,FCST_SUB_PRODUNIT_MTH,FCST_SUB_AREA_DAY,FCST_SUB_AREA_MTH upon deleting a forecast or scenario.
 ** 23-03-18   jainnraj  ECPD-52687,ECPD-52688: Modified procedure deleteForecast and deleteScenario to delete data from table FCST_PRODUNIT_DAY,FCST_PRODUNIT_MTH upon deleting a forecast or scenario.
+** 26-07-18   kashisag  ECPD-56795: Added user exit for navForecastGroupFilter and Changed objectid to scenario id
+** 30.10.18   abdulmaw  ECPD-60600: Modified ecdp_forecast_prod.navForecastGroupFilter to fix the correct else statement to support ue package
+** 17.12.18   abdulmaw  ECPD-62507: fix naming convention
 **************************************************************************************************/
 
 pv_error_diff_period_type VARCHAR2(80) NOT NULL DEFAULT 'FROM and TO Forecast must be of same TYPE! (e.g. Short, Medium or Long)';
@@ -1378,7 +1381,7 @@ FUNCTION navForecastGroupFilter(p_group_type VARCHAR2,
 								object_id_4 VARCHAR2 DEFAULT NULL,
 								object_id_5 VARCHAR2 DEFAULT NULL,
 								object_id_6 VARCHAR2 DEFAULT NULL)
-RETURN t_forecast_id PIPELINED
+RETURN t_prodfcst_id PIPELINED
 IS
 
 CURSOR c_nav_class (cp_group_type VARCHAR2) IS
@@ -1398,28 +1401,47 @@ lv2_object_id   VARCHAR2(32);
 lv2_sql			VARCHAR2(32000);
 la_object_id    lv_object_id_array;
 
+
+TYPE lt_prodfcst_id IS TABLE OF VARCHAR2(32) INDEX BY BINARY_INTEGER;
+lcol_fcst_ids  lt_prodfcst_id;
+
 BEGIN
 
-	lv2_sql := 'SELECT OBJECT_ID FROM FORECAST_GROUP_VERSION WHERE';
-	ln_count := 1;
-	la_object_id := lv_object_id_array(object_id_1,object_id_2,object_id_3,object_id_4,object_id_5,object_id_6);
+ -- To avoid Compilation error PLS-00653: aggregate/table functions are not allowed in PL/SQL scope, following code added
+ SELECT *
+ BULK COLLECT INTO lcol_fcst_ids
+ FROM TABLE(Ue_Forecast_Prod.navForecastGroupFilter(p_group_type,object_id_1,object_id_2,object_id_3,object_id_4,object_id_5,object_id_6));
 
-	FOR curNavClass IN c_nav_class(p_group_type) LOOP
-		IF ln_count = 1 THEN
-			lv2_sql := lv2_sql||' '||curNavClass.db_sql_syntax||' = '''||la_object_id(ln_count)||'''';
-		ELSE
-			lv2_sql := lv2_sql||' AND nvl('||curNavClass.db_sql_syntax||',''EMPTY'') in ('''||la_object_id(ln_count)||''',''EMPTY'')';
-		END IF;
-		ln_count := ln_count + 1;
-	END LOOP;
+ FOR i IN 1..lcol_fcst_ids.count
+ LOOP
 
-  OPEN cv FOR lv2_sql;
-	LOOP
-    FETCH cv INTO lv2_object_id;
-		EXIT WHEN cv%NOTFOUND;
-       PIPE ROW(lv2_object_id);
-	END LOOP;
-	CLOSE cv;
+   IF i=1 AND lcol_fcst_ids(i) IS NULL THEN
+
+      lv2_sql := 'SELECT OBJECT_ID FROM FORECAST_GROUP_VERSION WHERE';
+      ln_count := 1;
+      la_object_id := lv_object_id_array(object_id_1,object_id_2,object_id_3,object_id_4,object_id_5,object_id_6);
+
+      FOR curNavClass IN c_nav_class(p_group_type) LOOP
+        IF ln_count = 1 THEN
+            lv2_sql := lv2_sql||' '||curNavClass.db_sql_syntax||' = '''||la_object_id(ln_count)||'''';
+        ELSE
+            lv2_sql := lv2_sql||' AND nvl('||curNavClass.db_sql_syntax||',''EMPTY'') in ('''||la_object_id(ln_count)||''',''EMPTY'')';
+        END IF;
+        ln_count := ln_count + 1;
+      END LOOP;
+
+      OPEN cv FOR lv2_sql;
+      LOOP
+      FETCH cv INTO lv2_object_id;
+        EXIT WHEN cv%NOTFOUND;
+        PIPE ROW(lv2_object_id);
+      END LOOP;
+      CLOSE cv;
+   ELSE
+      PIPE ROW(lcol_fcst_ids(i));
+   END IF;
+
+ END LOOP;
 
 END navForecastGroupFilter;
 
@@ -1574,15 +1596,15 @@ PROCEDURE  deleteScenario(p_scenario_id VARCHAR2) IS
 
           DELETE FROM FCST_AREA_DAY WHERE scenario_id = p_scenario_id;
 
-          DELETE FROM fcst_compensation_events WHERE object_id = p_scenario_id;
+          DELETE FROM fcst_compensation_events WHERE scenario_id = p_scenario_id;
 
-          DELETE FROM fcst_well_event WHERE object_id = p_scenario_id;
+          DELETE FROM fcst_well_event WHERE scenario_id = p_scenario_id;
 
-          DELETE FROM fcst_obj_constraints  WHERE object_id = p_scenario_id;
+          DELETE FROM fcst_obj_constraints  WHERE scenario_id = p_scenario_id;
 
-          DELETE FROM fcst_shortfall_overrides WHERE object_id = p_scenario_id;
+          DELETE FROM fcst_shortfall_overrides WHERE scenario_id = p_scenario_id;
 
-          DELETE FROM fcst_shortfall_factors WHERE object_id = p_scenario_id;
+          DELETE FROM fcst_shortfall_factors WHERE scenario_id = p_scenario_id;
 
           DELETE FROM forecast_documents WHERE document_type='SCENARIO' AND scenario_id = p_scenario_id;
 

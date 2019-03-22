@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0133
   NAME: Revenue Detailed Log
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/revn_log
 related: {}

@@ -1861,7 +1861,7 @@ BEGIN
     END LOOP;
 
     -- ** 4-eyes approval stuff ** �
-    IF NVL(Ec_Class.approval_ind('SPLIT_KEY'),'N') = 'Y' THEN
+    IF NVL(ecdp_classmeta_cnfg.getApprovalInd('SPLIT_KEY'),'N') = 'Y' THEN
 
         -- Generate rec_id for the new record
          lv2_4e_recid := SYS_GUID();

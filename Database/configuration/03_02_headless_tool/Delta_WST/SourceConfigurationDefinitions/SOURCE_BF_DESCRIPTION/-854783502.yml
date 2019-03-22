@@ -9,5 +9,15 @@ properties:
   BF_DESCRIPTION_NO: IN.0014
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.in/rate_objects_selection/STREAM_CATEGORY_CODE/INV' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>    <strong>Inventory Rate Selection screen</strong>    is used to configure production rates used as a basis for inventory valuation for underlift, overlift and physical stock. This is done by applying a Rate    Object (Price Object) to a specific field configured for the selected Inventory Object. The rate itself is configured (or calculated) on the selected Rate    Object.</p><p>    <u>The screen is divided into these sections:</u></p><p>    <strong><em>- Static Navigator</em></strong><br>    Defines the search criteria for the Inventory.</p><p>    <strong><em>- Inventory List</em></strong><br>    Lists all the Inventories valid for the Month selected in the Month column of the Filter Navigator. The default value of the Month selector is the current    booking period.</p><p>    <strong><em>- Price Object List</em></strong><br>    Lists all the Price Objects taking part in the selected Inventory.</p>
+  DESCRIPTION: '<p><strong>Inventory Rate Selection screen</strong> is used to configure
+    production rates used as a basis for inventory valuation for underlift, overlift
+    and physical stock. This is done by applying a Rate Object (Price Object) to a
+    specific field configured for the selected Inventory Object. The rate itself is
+    configured (or calculated) on the selected Rate Object.</p><p><strong style="color:
+    rgb(0, 102, 204);">Navigator</strong></p><p>It defines the search criteria for
+    the Inventory.</p><p><strong style="color: rgb(0, 102, 204);">Inventory List Section</strong></p><p>The
+    section lists all the Inventories valid for the Month selected in the Month column
+    of the Navigator. The default value of the Month selector is the current booking
+    period.</p>   <p><strong style="color: rgb(0, 102, 204);">Price Object List Section</strong></p><p>The
+    section lists all the Price Objects taking part in the selected Inventory.</p>'
 related: {}

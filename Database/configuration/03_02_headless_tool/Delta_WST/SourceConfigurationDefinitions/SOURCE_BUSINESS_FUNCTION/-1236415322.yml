@@ -8,5 +8,6 @@ properties:
   BF_CODE: IS.0009
   NAME: Agent Configuration
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.ecdm.co.screens/imp_agent_config
 related: {}

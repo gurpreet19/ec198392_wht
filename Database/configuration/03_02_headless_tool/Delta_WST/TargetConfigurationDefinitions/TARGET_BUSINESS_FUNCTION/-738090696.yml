@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0081
   NAME: Daily Steam Stream Status, by Stream
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/period_steam_stream_status
 related: {}

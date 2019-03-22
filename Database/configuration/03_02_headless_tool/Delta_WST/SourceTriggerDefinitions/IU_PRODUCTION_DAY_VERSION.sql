@@ -1,55 +1,22 @@
 CREATE OR REPLACE EDITIONABLE TRIGGER "IU_PRODUCTION_DAY_VERSION" 
 BEFORE INSERT OR UPDATE ON PRODUCTION_DAY_VERSION
 FOR EACH ROW
-
 DECLARE
-  lv2_offset VARCHAR2(10);
   ln_offset  NUMBER;
-
 BEGIN
-
-
     -- Common
     -- $Revision: 1.2 $
     IF not Deleting THEN  -- validate Offset
 
       -- Expect an offset on the format '06:00' or '-02:00
 
-      lv2_offset := :NEW.offset;
+      ln_offset := ecdp_timestamp_utils.timeOffsetToHrs(:NEW.offset);
 
-
-      IF(SUBSTR(lv2_offset,1,1)= '-') THEN
-
-          lv2_offset := SUBSTR(lv2_offset,2);
-
+      IF ln_offset IS NULL THEN
+        RAISE_APPLICATION_ERROR(-20000,'ProductionDay offset must be a valid timestamp on the format ''hh:mi'' or ''-hh:mi''.');
       END IF;
 
-      IF SUBSTR(lv2_offset,3,1) = ':' THEN
-
-        ln_offset  := TO_NUMBER(SUBSTR(lv2_offset,1,2));
-        IF ln_offset > 23 OR ln_offset < 0 THEN
-
-            RAISE_APPLICATION_ERROR(-20000,'ProductionDay offset hours must be between 0 and 23.');
-
-        END IF;
-
-        ln_offset  := TO_NUMBER(SUBSTR(lv2_offset,4,2));
-        IF ln_offset > 59 OR ln_offset < 0 THEN
-
-            RAISE_APPLICATION_ERROR(-20000,'ProductionDay offset minutes must be between 0 and 59.');
-
-        END IF;
-
-
-      ELSE
-
-        RAISE_APPLICATION_ERROR(-20000,'ProductionDay offset must be on the format ''hh:mi'' or ''-hh:mi'' .');
-
-
-      END IF;
-
-
-
+      :NEW.production_day_offset_hrs := ln_offset;
     END IF;
 
     IF Inserting THEN

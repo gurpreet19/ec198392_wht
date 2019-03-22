@@ -3,7 +3,7 @@ name: JBPM_AUDITTASKIMPL
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008625
+  name: PK_JBPM_AUDITTASKIMPL
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

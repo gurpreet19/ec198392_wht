@@ -3,7 +3,7 @@ name: JBPM_WORKITEMINFO
 cnstPrimaryKey:
   columns:
   - WORKITEMID
-  name: SYS_C008728
+  name: PK_JBPM_WORKITEMINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

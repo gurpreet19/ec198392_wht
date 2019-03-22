@@ -9,5 +9,5 @@ properties:
   BF_DESCRIPTION_NO: RP.0017
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/REPORT_AREA' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: <p>Report area can be used to group reports into areas, in addition to functional area. A report definition can be connected to one report area. Reports connected to the report definition will then also be connected to that report area.</p><p>Because this class is an object class, it is possible to use report area to provide additional access rules on reports. This is done by adding object partition on the class. This will only apply when the class is updated to provide access control.</p>
+  DESCRIPTION: <p>The purpose of the Report Area business function is to logically group reports in addition to functional area. A report definition can be connected to one report area. Reports connected to the report definition will then be connected to that report area. Since this class is an object class, it is possible to provide additional access rules on reports based on Report Area. This can be done by adding new access level entry on the Report Area class in the object partition screen. This will only apply when the class is updated to provide access control through the Class Configuration screen.</p>
 related: {}

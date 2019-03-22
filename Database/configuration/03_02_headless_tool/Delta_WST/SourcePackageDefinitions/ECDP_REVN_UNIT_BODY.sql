@@ -295,5 +295,158 @@ BEGIN
 
 END GetUOMSetQty;
 
+-------------------------------------------------------------------------------------------------
+-- Function       : getUnitLabel
+-- Description    : Returns the name of the currency or the label of the unit. If name/label is NULL then it returns the p_unit input parameter.
+--                  NB! Currency units MUST be given with the currency OBJECT_ID. E.g: ec_currency.object_id_by_uk(PRICING_CURR_CODE).
+--                  Default value for daytime is CurrentSysdate.
+-------------------------------------------------------------------------------------------------
+FUNCTION getUnitLabel(
+    p_unit      VARCHAR2,
+    p_daytime   DATE DEFAULT NULL)
+RETURN VARCHAR2
+IS
+    CURSOR c_curr_unit(c_curr_unit_id VARCHAR2, c_daytime DATE) IS
+    SELECT *
+      FROM v_curr_unit
+     WHERE curr_unit_id = c_curr_unit_id
+       AND c_daytime >= daytime
+       AND c_daytime < nvl(end_date, c_daytime + 1);
+
+    lv_daytime      DATE;
+    lv_unit_name    VARCHAR2(240);
+BEGIN
+    lv_daytime := NVL(p_daytime, ecdp_timestamp.getCurrentSysdate);
+    FOR c_rec IN c_curr_unit(p_unit, lv_daytime) LOOP
+      lv_unit_name := NVL(c_rec.name, c_rec.code);
+    END LOOP;
+
+    RETURN NVL(lv_unit_name, p_unit); -- The NVL is handling FREE_UNIT situations.
+END getUnitLabel;
+
+-------------------------------------------------------------------------------------------------
+-- Function       : getCombinedUnitCodes/Labels
+-- Description    : Returns a combined string of UOM and Currency codes with a divider e.g: EUR/Kg
+--                  NB! Currency units MUST be given with the currency OBJECT_ID. E.g: ec_currency.object_id_by_uk(PRICING_CURR_CODE)
+--                  Both p_unit1, p_operator must be non-NULL else NULL will be returned.
+--                  One of p_unit2 or p_unit2_alternative must be non-NULL else NULL will be returned.
+--                  Check2 must be TRUE to use p_unit2, if not p_unit2_alternative will be used.
+--                  Valid operators: '=' | '<>'
+--                  Turn of the checking by setting the operator to NULL.
+--                  For FREE_UNITs the code will be used if no name/label are found for the given code.
+-------------------------------------------------------------------------------------------------
+FUNCTION getCombinedUnitLabels(
+    p_unit1             VARCHAR2,
+    p_unit2             VARCHAR2,
+    p_divider           VARCHAR2,
+    p_prefix            VARCHAR2 DEFAULT NULL,
+    p_postfix           VARCHAR2 DEFAULT NULL,
+    p_check2_value1     VARCHAR2 DEFAULT NULL,
+    p_check2_value2     VARCHAR2 DEFAULT NULL,
+    p_check2_operator   VARCHAR2 DEFAULT NULL,
+    p_unit2_alternative VARCHAR2 DEFAULT NULL)
+RETURN VARCHAR2
+IS
+    lv_unit1_lbl        VARCHAR2(100);
+    lv_unit2_lbl        VARCHAR2(100);
+    lv_unit2_lbl_alt    VARCHAR2(100);
+    lv_combined         VARCHAR2(240);
+BEGIN
+    lv_unit1_lbl     := getUnitLabel(p_unit1);
+    lv_unit2_lbl     := getUnitLabel(p_unit2);
+    lv_unit2_lbl_alt := getUnitLabel(p_unit2_alternative);
+    lv_combined      := getCombinedUnitCodes(lv_unit1_lbl, lv_unit2_lbl, p_divider, p_prefix, p_postfix, p_check2_value1, p_check2_value2, p_check2_operator, lv_unit2_lbl_alt);
+
+    RETURN lv_combined;
+END getCombinedUnitLabels;
+-------------------------------------------------------------------------------------------------
+FUNCTION getCombinedUnitCodes(
+    p_unit1             VARCHAR2,
+    p_unit2             VARCHAR2,
+    p_divider           VARCHAR2,
+    p_prefix            VARCHAR2 DEFAULT NULL,
+    p_postfix           VARCHAR2 DEFAULT NULL,
+    p_check2_value1     VARCHAR2 DEFAULT NULL,
+    p_check2_value2     VARCHAR2 DEFAULT NULL,
+    p_check2_operator   VARCHAR2 DEFAULT NULL,
+    p_unit2_alternative VARCHAR2 DEFAULT NULL)
+RETURN VARCHAR2
+IS
+    lv_combined         VARCHAR(240);
+    lv_unit2            VARCHAR(100);
+    invalid_operator    EXCEPTION;
+BEGIN
+    -- Qualify fixed input parameters
+    IF (p_unit1 IS NULL OR p_divider IS NULL) THEN
+        RETURN NULL;
+    END IF;
+
+    -- Perform checking and processing of unit2
+    IF (p_check2_operator = '=') THEN
+        IF (p_check2_value1 = p_check2_value2) THEN
+            lv_unit2 := p_unit2;
+        ELSE
+            lv_unit2 := p_unit2_alternative;
+        END IF;
+    ELSIF (p_check2_operator = '<>') THEN
+        IF (p_check2_value1 <> p_check2_value2) THEN
+            lv_unit2 := p_unit2;
+        ELSE
+            lv_unit2 := p_unit2_alternative;
+        END IF;
+    ELSIF (p_check2_operator IS NOT NULL) THEN
+        RAISE invalid_operator;
+    ELSE
+        lv_unit2 := p_unit2;
+    END IF;
+
+    -- Build - return blank if unit2 is NULL
+    IF (lv_unit2 IS NOT NULL) THEN
+        lv_combined := p_prefix || p_unit1 || p_divider || lv_unit2 || p_postfix;
+    END IF;
+
+    RETURN lv_combined;
+EXCEPTION
+    WHEN invalid_operator THEN
+        Raise_Application_Error(-20000,'Invalid operator: ' || p_check2_operator);
+END getCombinedUnitCodes;
+
+-------------------------------------------------------------------------------------------------
+-- Function       : getPricingCurrencyIdIfUnique
+-- Description    : Returns the currency id for Pricing Currency at Document level.
+--                  It will return the id ONLY if there is a single/common Pricing Currency within
+--                  the Document. If several different Pricing Currencies are in use NULL will
+--                  be returned.
+-- References     : The logic used is the same as in EcDp_Transaction.GetSumTransPricingValue
+-------------------------------------------------------------------------------------------------
+FUNCTION getPricingCurrencyIdIfUnique(
+    p_document_key  VARCHAR2)
+RETURN VARCHAR2
+IS
+
+CURSOR c_count(cp_document_key VARCHAR2) IS
+SELECT count(*) AS NUM
+FROM (SELECT distinct ct.pricing_currency_id, ct.document_key
+        FROM cont_transaction ct
+       WHERE ct.document_key = p_document_key
+);
+
+CURSOR c_id(cp_document_key VARCHAR2) IS
+SELECT DISTINCT(pricing_currency_id) currency_id
+  FROM cont_transaction ct
+ WHERE ct.document_key = p_document_key
+;
+
+BEGIN
+    FOR rec IN c_count(p_document_key) LOOP
+        IF rec.NUM = 1 THEN
+            FOR rec2 IN c_id(p_document_key) LOOP
+                RETURN rec2.currency_id;
+            END LOOP;
+        ELSE
+            RETURN NULL;
+        END IF;
+    END LOOP;
+END getPricingCurrencyIdIfUnique;
 
 END EcDp_Revn_Unit;

@@ -8,7 +8,7 @@ parentKeys: {}
 properties:
   ALT_CODE: null
   CODE: VESSEL
-  CODE_TEXT: Missing Vessel
+  CODE_TEXT: Missing Carrier
   CODE_TYPE: COMPLETE_DOC_ACTION
   DESCRIPTION: null
   IS_ACTIVE: Y

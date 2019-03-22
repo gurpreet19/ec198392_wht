@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0035
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/STREAM_ITEM_COLLECTION' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/STREAM_ITEM_COLLECTION' )
   DATA_LEVEL: 0.0
   DESCRIPTION: '<p>    <strong style="font-style: normal;">Input List screen</strong>    is
     used to set up Lists to use in the List screens in the Volume module for    EC

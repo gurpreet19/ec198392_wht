@@ -3467,7 +3467,7 @@ RETURN VARCHAR2 IS
 lv_valuation_method       VARCHAR2(100);
 
 BEGIN
-  ecdp_dynsql.WriteTempText('Deepika',p_inventory_id);
+
    SELECT VALUATION_METHOD INTO lv_valuation_method
         FROM OV_TRANS_INVENTORY v
        WHERE v.object_id = p_inventory_id;
@@ -3478,5 +3478,622 @@ BEGIN
     END IF;
 
 END IsSummary;
+
+FUNCTION VarianceTable (p_PERIOD VARCHAR2,
+                        p_GROUP_BY_CODE VARCHAR2 default null,
+                        p_RECON_TYPE VARCHAR2 default null,
+                        p_CONTRACT_PS VARCHAR2 default null,
+                        p_CONTRACT_INT VARCHAR2,
+                        p_DOC_TYPE VARCHAR2 default null,
+                        p_FIN_WBS VARCHAR2 default null,
+                        p_FIN_COST_CENTER_CODE VARCHAR2 default null,
+                        p_FIN_ACCOUNT_CODE VARCHAR2 default null,
+                        p_DATASET VARCHAR2 default null,
+                        p_DOCUMENT_KEY VARCHAR2,
+                        p_CONTRACT_HLD VARCHAR2,
+                        p_AMOUNT VARCHAR2 default null,
+                        p_QTY VARCHAR2 default null,
+                        p_SHOW_ZERO_VARIANCE VARCHAR2 default null)
+  RETURN T_TABLE_MAPPING_VARIANCE
+  IS
+   t_table T_TABLE_MAPPING_VARIANCE;
+   t_table_tmp T_MAPPING_VARIANCE;
+  CURSOR c_sql is
+     SELECT interfaced.contract_code target_contract_code,
+             nvl(ec_contract_version.name(EC_CONTRACT.OBJECT_ID_BY_UK(interfaced.contract_code),
+                                          to_date(p_period,
+                                                  'YYYY-MM-DD"T"HH24:MI:SS'),
+                                          '<='),
+                 'No Contract') target_contract_name,
+             interfaced.source_group_value,
+             nvl(interfaced__amount, 0) as total_interfaced_amount,
+             nvl(mapped_amount, 0) as total_mapped_amount,
+             nvl(excluded_amount, 0) as total_excluded_amount,
+             nvl(mapped_amount, 0) + nvl(excluded_amount, 0) as total_amount,
+             nvl(interfaced__amount, 0) - nvl(mapped_amount, 0) -
+             nvl(excluded_amount, 0) variance_amount,
+             NVL(DECODE(other_je.SOURCE_GROUP_VALUE,
+                        interfaced.source_group_value,
+                        other_amount,
+                        0),
+                 0) as total_other_amount,
+             nvl(interfaced__qty, 0) as total_interfaced_qty,
+             nvl(mapped_qty, 0) as total_mapped_qty,
+             nvl(excluded_qty, 0) as total_excluded_qty,
+             nvl(mapped_qty, 0) + nvl(excluded_qty, 0) total_qty,
+             nvl(interfaced__qty, 0) - nvl(mapped_qty, 0) -
+             nvl(excluded_qty, 0) variance_qty,
+             NVL(DECODE(other_je.SOURCE_GROUP_VALUE,
+                        interfaced.source_group_value,
+                        other_qty,
+                        0),
+                 0) as total_other_qty
+        FROM (select mm.*,
+                     NVL(cont.contract_code, 'No Project/Contract') contract_code
+                from (SELECT decode(p_group_by_code,
+                                    'FIN_WBS_CODE',
+                                    JE.FIN_WBS_CODE,
+                                    'FIN_COST_CENTER_CODE',
+                                    JE.FIN_COST_CENTER_CODE,
+                                    'FIN_ACCOUNT_CODE',
+                                    je.fin_account_code,
+                                    je.fin_revenue_order_code) SOURCE_GROUP_VALUE,
+                             SUM(NVL(je.AMOUNT, 0)) interfaced__AMOUNT,
+                             SUM(NVL(je.QTY_1, 0)) interfaced__QTY
+                        FROM IFAC_JOURNAL_ENTRY je
+                       WHERE (decode(DECODE(p_RECON_TYPE,
+                                            'PROD_STREAM',
+                                            p_CONTRACT_PS,
+                                            p_CONTRACT_INT),
+                                     'null',
+                                     NULL,
+                                     DECODE(p_RECON_TYPE,
+                                            'PROD_STREAM',
+                                            p_CONTRACT_PS,
+                                            p_CONTRACT_INT)) IS NULL OR
+                             je.CONTRACT_CODE =
+                             DECODE(p_RECON_TYPE,
+                                     'PROD_STREAM',
+                                     p_CONTRACT_PS,
+                                     p_CONTRACT_INT))
+                         AND (decode(p_DOC_TYPE, '', NULL, p_DOC_TYPE) IS NULL OR
+                             p_DOC_TYPE = je.DOCUMENT_TYPE)
+                         AND (decode(p_FIN_WBS, '', NULL, p_FIN_WBS) IS NULL OR
+                             p_FIN_WBS = je.FIN_WBS_CODE)
+                         AND (decode(p_FIN_COST_CENTER_CODE,
+                                     '',
+                                     NULL,
+                                     p_FIN_COST_CENTER_CODE) IS NULL OR
+                             p_FIN_COST_CENTER_CODE =
+                             je.fin_cost_center_code)
+                         AND (decode(p_FIN_ACCOUNT_CODE,
+                                     '',
+                                     NULL,
+                                     p_FIN_ACCOUNT_CODE) IS NULL OR
+                             p_FIN_ACCOUNT_CODE = je.FIN_ACCOUNT_CODE)
+                         AND (decode(p_dataset, '', NULL, p_dataset) IS NULL OR
+                             p_dataset = je.DATASET)
+                         AND is_max_source_doc_ver_ind = 'Y'
+                         AND PERIOD =
+                             to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+                       GROUP BY decode(p_group_by_code,
+                                       'FIN_WBS_CODE',
+                                       JE.FIN_WBS_CODE,
+                                       'FIN_COST_CENTER_CODE',
+                                       JE.FIN_COST_CENTER_CODE,
+                                       'FIN_ACCOUNT_CODE',
+                                       je.fin_account_code,
+                                       je.fin_revenue_order_code)) mm,
+                     (SELECT DISTINCT CONTRACT_CODE
+                        FROM CONT_JOURNAL_ENTRY
+                       WHERE DOCUMENT_KEY = p_DOCUMENT_KEY) cont) interfaced,
+             --Mapped_je AS
+             (SELECT SOURCE_GROUP_VALUE,
+                     NVL(mapped.contract_code, 'No Project/Contract') target_contract_code,
+                     SUM(NVL(mapped.AMOUNT, 0)) MAPPED_AMOUNT,
+                     SUM(NVL(mapped.QTY_1, 0)) MAPPED_QTY
+                FROM (SELECT /*+ INDEX(X I_CONT_JOURNAL_ENTRY_13) */
+                       AMOUNT,
+                       QTY_1,
+                       DECODE(ref_journal_entry_src,
+                              'CONT',
+                              ec_cont_journal_entry.ref_journal_entry_NO(X.REF_JOURNAL_ENTRY_NO),
+                              'EXCL',
+                              ec_cont_journal_entry_excl.ref_journal_entry_NO(X.REF_JOURNAL_ENTRY_NO),
+                              REF_JOURNAL_ENTRY_NO) REF_JOURNAL_ENTRY_NO,
+                       contract_code,
+                       decode(p_group_by_code,
+                              'FIN_WBS_CODE',
+                              FIN_WBS_CODE,
+                              'FIN_COST_CENTER_CODE',
+                              FIN_COST_CENTER_CODE,
+                              'FIN_ACCOUNT_CODE',
+                              fin_account_code,
+                              fin_revenue_order_code) SOURCE_GROUP_VALUE,
+                       MANUAL_IND,
+                       REF_JOURNAL_ENTRY_SRC
+                        FROM CONT_JOURNAL_ENTRY X
+                       WHERE (decode(p_CONTRACT_INT, '', NULL, p_CONTRACT_INT) IS NULL OR
+                             p_CONTRACT_INT = contract_code)
+                         AND PERIOD =
+                             to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+                         AND ((ref_journal_entry_src = 'IFAC') OR
+                             (ref_journal_entry_src IN ('EXCL', 'CONT') AND
+                             NVL(MANUAL_IND, 'N') = 'Y' AND
+                             REF_JOURNAL_ENTRY_NO IS NOT NULL))
+                         AND REVERSAL_DATE IS NULL
+                         AND DOCUMENT_KEY = p_DOCUMENT_KEY
+                         AND (decode(DECODE(p_RECON_TYPE,
+                                            'PROD_STREAM',
+                                            p_CONTRACT_PS,
+                                            p_CONTRACT_INT),
+                                     '',
+                                     NULL,
+                                     DECODE(p_RECON_TYPE,
+                                            'PROD_STREAM',
+                                            p_CONTRACT_PS,
+                                            p_CONTRACT_INT)) IS NULL OR
+                             DECODE(p_RECON_TYPE,
+                                     'PROD_STREAM',
+                                     p_CONTRACT_PS,
+                                     p_CONTRACT_INT) = CONTRACT_CODE)
+                         AND (decode(p_DOC_TYPE, '', NULL, p_DOC_TYPE) IS NULL OR
+                             p_DOC_TYPE = DOCUMENT_TYPE)
+                         AND (decode(p_FIN_WBS, '', NULL, p_FIN_WBS) IS NULL OR
+                             p_FIN_WBS = FIN_WBS_CODE)
+                         AND (decode(p_FIN_COST_CENTER_CODE,
+                                     '',
+                                     NULL,
+                                     p_FIN_COST_CENTER_CODE) IS NULL OR
+                             p_FIN_COST_CENTER_CODE = fin_cost_center_code)
+                         AND (decode(p_FIN_ACCOUNT_CODE,
+                                     '',
+                                     NULL,
+                                     p_FIN_ACCOUNT_CODE) IS NULL OR
+                             p_FIN_ACCOUNT_CODE = FIN_ACCOUNT_CODE)
+                         AND EXISTS
+                       (SELECT JOURNAL_ENTRY_NO
+                                FROM IFAC_JOURNAL_ENTRY
+                               WHERE PERIOD =
+                                     to_date(p_PERIOD,
+                                             'YYYY-MM-DD"T"HH24:MI:SS')
+                                 AND DECODE(ref_journal_entry_src,
+                                    'CONT',
+                                    ec_cont_journal_entry.ref_journal_entry_NO(X.REF_JOURNAL_ENTRY_NO),
+                                    'EXCL',
+                                    ec_cont_journal_entry_excl.ref_journal_entry_NO(X.REF_JOURNAL_ENTRY_NO),
+                                    REF_JOURNAL_ENTRY_NO)  = JOURNAL_ENTRY_NO)) mapped
+               GROUP BY SOURCE_GROUP_VALUE,
+                        NVL(mapped.contract_code, 'No Project/Contract')) Mapped_je,
+             (SELECT decode(p_group_by_code,
+                            'FIN_WBS_CODE',
+                            JE.FIN_WBS_CODE,
+                            'FIN_COST_CENTER_CODE',
+                            JE.FIN_COST_CENTER_CODE,
+                            'FIN_ACCOUNT_CODE',
+                            je.fin_account_code,
+                            je.fin_revenue_order_code) SOURCE_GROUP_VALUE,
+                     SUM(NVL(je.QTY_1, 0)) other_qty,
+                     SUM(NVL(je.AMOUNT, 0)) OTHER_AMOUNT,
+                     NVL(je.contract_code, 'No Project/Contract') target_contract_code
+                FROM CONT_JOURNAL_ENTRY je
+               WHERE NVL(je.MANUAL_IND, 'N') = 'Y'
+                 AND je.REVERSAL_DATE IS NULL
+                 AND (decode(p_CONTRACT_INT, 'null', NULL, p_CONTRACT_INT) IS NULL OR
+                      p_CONTRACT_INT = je.CONTRACT_CODE)
+                 AND je.DOCUMENT_KEY = p_DOCUMENT_KEY
+                 AND PERIOD = to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+                 AND REF_JOURNAL_ENTRY_NO IS NULL
+               GROUP BY je.contract_code,
+                        decode(p_group_by_code,
+                               'FIN_WBS_CODE',
+                               JE.FIN_WBS_CODE,
+                               'FIN_COST_CENTER_CODE',
+                               JE.FIN_COST_CENTER_CODE,
+                               'FIN_ACCOUNT_CODE',
+                               je.fin_account_code,
+                               je.fin_revenue_order_code)) Other_je,
+             --Excl_je AS
+             (SELECT /*+ ordered use_nl(cm_for_mapped)  */
+                     decode(p_group_by_code,
+                            'FIN_WBS_CODE',
+                            IFAC.FIN_WBS_CODE,
+                            'FIN_COST_CENTER_CODE',
+                            IFAC.FIN_COST_CENTER_CODE,
+                            'FIN_ACCOUNT_CODE',
+                            IFAC.fin_account_code,
+                            IFAC.fin_revenue_order_code) SOURCE_GROUP_VALUE,
+                     NVL(excl.CONTRACT_CODE, 'No Project/Contract') target_contract_code,
+                     SUM(NVL(excl.QTY_1, 0)) EXCLUDED_QTY,
+                     SUM(NVL(excl.AMOUNT, 0)) excluded_amount
+                FROM (select CONTRACT_CODE,
+                             qty_1,
+                             amount,
+                             period,
+                             decode(REF_JOURNAL_ENTRY_SRC,
+                                    'IFAC',
+                                    COST_MAPPING_ID,
+                                    'CONT',
+                                    ec_cont_journal_entry.cost_mapping_id(REF_JOURNAL_ENTRY_NO),
+                                    'EXCL',
+                                    ec_cont_journal_entry_excl.cost_mapping_id(REF_JOURNAL_ENTRY_NO)) cost_mapping_id,
+                             decode(REF_JOURNAL_ENTRY_SRC,
+                                    'IFAC',
+                                    REF_JOURNAL_ENTRY_NO,
+                                    'CONT',
+                                    ec_cont_journal_entry.REF_JOURNAL_ENTRY_NO(REF_JOURNAL_ENTRY_NO),
+                                    'EXCL',
+                                    ec_cont_journal_entry_excl.REF_JOURNAL_ENTRY_NO(REF_JOURNAL_ENTRY_NO)) JOURNAL_ENTRY_NO
+                        from CONT_JOURNAL_ENTRY_EXCL
+                       where DOCUMENT_KEY = p_DOCUMENT_KEY) excl,
+                     COST_MAPPING_VERSION cm_for_mapped,
+                     contract,
+                     IFAC_JOURNAL_ENTRY ifac
+               WHERE (decode(DECODE(p_RECON_TYPE,
+                                    'PROD_STREAM',
+                                    p_CONTRACT_PS,
+                                    p_CONTRACT_INT),
+                             '',
+                             NULL,
+                             DECODE(p_RECON_TYPE,
+                                    'PROD_STREAM',
+                                    p_CONTRACT_PS,
+                                    p_CONTRACT_INT)) IS NULL OR
+                     DECODE(p_RECON_TYPE,
+                             'PROD_STREAM',
+                             p_CONTRACT_PS,
+                             p_CONTRACT_INT) = ifac.CONTRACT_CODE)
+                 AND (decode(p_CONTRACT_INT, '', NULL, p_CONTRACT_INT) IS NULL OR
+                     p_CONTRACT_INT = excl.CONTRACT_CODE)
+                 AND (decode(p_DOC_TYPE, '', NULL, p_DOC_TYPE) IS NULL OR
+                     p_DOC_TYPE = ifac.DOCUMENT_TYPE)
+                 AND (decode(p_FIN_WBS, '', NULL, p_FIN_WBS) IS NULL OR
+                     p_FIN_WBS = ifac.FIN_WBS_CODE)
+                 AND (decode(p_FIN_COST_CENTER_CODE,
+                             '',
+                             NULL,
+                             p_FIN_COST_CENTER_CODE) IS NULL OR
+                     p_FIN_COST_CENTER_CODE = ifac.fin_cost_center_code)
+                 AND (decode(p_FIN_ACCOUNT_CODE,
+                             '',
+                             NULL,
+                             p_FIN_ACCOUNT_CODE) IS NULL OR
+                     p_FIN_ACCOUNT_CODE = ifac.FIN_ACCOUNT_CODE)
+                 AND cm_for_mapped.object_id = excl.cost_mapping_id
+                 AND excl.JOURNAL_ENTRY_NO = IFAC.JOURNAL_ENTRY_NO
+                 AND cm_for_mapped.DAYTIME <= excl.PERIOD
+                 AND NVL(cm_for_mapped.END_DATE, excl.PERIOD + 1) >
+                     excl.PERIOD
+                 AND contract.object_id = cm_for_mapped.trg_contract_id
+                 AND ifac.PERIOD =
+                     to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+                 AND excl.PERIOD =
+                     to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+               GROUP BY decode(p_group_by_code,
+                               'FIN_WBS_CODE',
+                               IFAC.FIN_WBS_CODE,
+                               'FIN_COST_CENTER_CODE',
+                               IFAC.FIN_COST_CENTER_CODE,
+                               'FIN_ACCOUNT_CODE',
+                               IFAC.fin_account_code,
+                               IFAC.fin_revenue_order_code),
+                        excl.CONTRACT_CODE) Excl_je
+       WHERE interfaced.SOURCE_GROUP_VALUE =
+             Mapped_je.SOURCE_GROUP_VALUE(+)
+         AND interfaced.contract_code = Mapped_je.target_contract_code(+)
+         AND interfaced.SOURCE_GROUP_VALUE = Other_je.SOURCE_GROUP_VALUE(+)
+         AND interfaced.contract_code = Other_je.target_contract_code(+)
+         AND interfaced.contract_code = Excl_je.target_contract_code(+)
+         AND interfaced.SOURCE_GROUP_VALUE = Excl_je.SOURCE_GROUP_VALUE(+)
+         AND (p_AMOUNT = 'Y' AND
+             (((nvl(interfaced__amount, 0) - nvl(mapped_amount, 0) -
+             nvl(excluded_amount, 0) =
+             DECODE(p_SHOW_ZERO_VARIANCE, 'Y', 0)) OR
+             nvl(interfaced__amount, 0) - nvl(mapped_amount, 0) -
+             nvl(excluded_amount, 0) <> 0)) OR
+             (p_QTY = 'Y' AND
+             ((nvl(interfaced__qty, 0) - nvl(mapped_qty, 0) -
+             nvl(excluded_qty, 0) =
+             DECODE(p_SHOW_ZERO_VARIANCE, 'Y', 0)) OR
+             nvl(interfaced__qty, 0) - nvl(mapped_qty, 0) -
+             nvl(excluded_qty, 0) <> 0)));
+  BEGIN
+  t_table := T_TABLE_MAPPING_VARIANCE();
+  IF ue_reconciliation.UseUECMVarianceHandling = TRUE THEN
+      ue_reconciliation.VarianceTable(p_PERIOD ,
+
+                        p_GROUP_BY_CODE ,
+                        p_RECON_TYPE,
+                        p_CONTRACT_PS  ,
+                        p_CONTRACT_INT ,
+                        p_DOC_TYPE ,
+                        p_FIN_WBS ,
+                        p_FIN_COST_CENTER_CODE ,
+                        p_FIN_ACCOUNT_CODE ,
+                        p_DATASET ,
+                        p_DOCUMENT_KEY ,
+                        p_CONTRACT_HLD ,
+                        p_AMOUNT,
+                        p_QTY,
+                        p_SHOW_ZERO_VARIANCE,
+                        t_table);
+
+  ELSE
+  t_table_tmp :=  T_MAPPING_VARIANCE(
+                                    NULL,NULL,NULL,NULL,NULL,
+                                    NULL,NULL,NULL,NULL,NULL,
+                                    NULL,NULL,NULL,NULL,NULL,
+                                    NULL,NULL,NULL,NULL,NULL
+                                    );
+
+   for item in c_sql LOOP
+     --raise_application_error(-20001,'dataset' || p_PERIOD|| 'x');
+     t_table.EXTEND(1);
+     t_table_tmp :=  T_MAPPING_VARIANCE(
+                             item.target_contract_name            ,
+	                           item.target_contract_code            ,
+	                           to_char(item.source_group_value)            	,
+	                           item.total_interfaced_amount			,
+	                           item.total_mapped_amount				,
+	                           item.total_excluded_amount			,
+	                           item.variance_amount					,
+	                           item.total_interfaced_qty			,
+	                           item.total_mapped_qty				,
+	                           item.total_excluded_qty				,
+	                           item.variance_qty					,
+                             item.total_amount ,
+                             item.total_qty,
+                             null,null,null,null,null,
+                             item.total_other_amount,
+                             item.total_other_qty
+                                    );
+        t_table(t_table.LAST) := t_table_tmp;
+
+
+   END LOOP;
+   END IF;
+    return t_table;
+END VarianceTable;
+
+FUNCTION variance_detail (p_PERIOD VARCHAR2,
+                        p_GROUP_BY_CODE VARCHAR2,
+                        p_CONTRACT_INT VARCHAR2,
+                        p_DOCUMENT_KEY VARCHAR2,
+                        p_CONTRACT_HLD VARCHAR2,
+                        p_GROUP_BY_VALUE VARCHAR2)
+
+  RETURN T_TABLE_MAPPING_VARIANCE
+  IS
+    t_table T_TABLE_MAPPING_VARIANCE;
+   t_table_tmp T_MAPPING_VARIANCE;
+  CURSOR c_sql is
+    Select nvl(ec_contract_version.name(EC_CONTRACT.OBJECT_ID_BY_UK(interfaced.contract_code),
+                                        to_date(p_PERIOD,
+                                                'YYYY-MM-DD"T"HH24:MI:SS'),
+                                        '<='),
+               'No Project/Contract') contract_name,
+           nvl(interfaced.contract_code, 'No Project/Contract') contract_code,
+           interfaced.journal_entry_no INTERFACE_JOURNAL_ENTRY_NO,
+           nvl(interfaced__amount, 0) as total_interfaced_amount,
+           nvl(mapped_amount, 0) as total_mapped_amount,
+           nvl(excluded_amount, 0) as total_excluded_amount,
+           nvl(interfaced__amount, 0) - nvl(mapped_amount, 0) -
+           nvl(excluded_amount, 0) variance_amount,
+           DECODE(nvl(interfaced__amount, 0),
+                  0,
+                  DECODE((nvl(interfaced__amount, 0) - nvl(mapped_amount, 0) -
+                         nvl(excluded_amount, 0)),
+                         0,
+                         0,
+                         100),
+                  (nvl(interfaced__amount, 0) - nvl(mapped_amount, 0) -
+                  nvl(excluded_amount, 0)) / nvl(interfaced__amount, 0)) * 100 VARIANCE_AMOUNT_PERCENTAGE,
+           nvl(interfaced__qty, 0) as total_interfaced_qty,
+           nvl(mapped_qty, 0) as total_mapped_qty,
+           nvl(excluded_qty, 0) as total_excluded_qty,
+           nvl(interfaced__qty, 0) - nvl(mapped_qty, 0) -
+           nvl(excluded_qty, 0) variance_qty,
+           DECODE(nvl(interfaced__qty, 0),
+                  0,
+                  DECODE((nvl(interfaced__qty, 0) - nvl(mapped_qty, 0) -
+                         nvl(excluded_qty, 0)),
+                         0,
+                         0,
+                         100),
+                  (nvl(interfaced__qty, 0) - nvl(mapped_qty, 0) -
+                  nvl(excluded_qty, 0)) / nvl(interfaced__qty, 0)) * 100 as VARIANCE_QTY_PERCENTAGE,
+           interfaced.document_type,
+           interfaced.fin_account_code,
+           interfaced.fin_cost_center_code,
+           interfaced.fin_wbs_code,
+           interfaced.fin_revenue_order_code
+      FROM (select mm.*,
+                   NVL(cont.contract_code, 'No Project/Contract') contract_code
+              FROM (SELECT je.journal_entry_no,
+                           (NVL(je.AMOUNT, 0)) interfaced__AMOUNT,
+                           (NVL(je.QTY_1, 0)) interfaced__QTY,
+                           je.fin_cost_center_code,
+                           je.fin_revenue_order_code,
+                           je.fin_wbs_code,
+                           je.document_type,
+                           je.fin_account_code,
+                           JE.CONTRACT_CODE JE_CONTRACT_CODE
+                      FROM IFAC_JOURNAL_ENTRY je
+                     WHERE (decode(p_contract_int,
+                                   '',
+                                   NULL,
+                                   p_contract_int) IS NULL OR
+                           je.CONTRACT_CODE = p_contract_int)
+                       AND is_max_source_doc_ver_ind = 'Y'
+                       AND PERIOD =
+                           to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+                       AND decode(p_group_by_code,
+                                  'FIN_WBS_CODE',
+                                  JE.FIN_WBS_CODE,
+                                  'FIN_COST_CENTER_CODE',
+                                  JE.FIN_COST_CENTER_CODE,
+                                  'FIN_ACCOUNT_CODE',
+                                  je.fin_account_code,
+                                  je.fin_revenue_order_code) =
+                           p_GROUP_BY_VALUE) MM,
+                   (SELECT DISTINCT CONTRACT_CODE
+                      FROM CONT_JOURNAL_ENTRY
+                     WHERE DOCUMENT_KEY = p_document_key) cont) interfaced,
+           (SELECT REF_JOURNAL_ENTRY_NO journal_entry_no,
+                   NVL(mapped.contract_code, 'No Project/Contract') target_contract_code,
+                   sum(NVL(mapped.AMOUNT, 0)) MAPPED_AMOUNT,
+                   SUM(NVL(mapped.QTY_1, 0)) MAPPED_QTY
+              FROM (SELECT /*+ INDEX(X I_CONT_JOURNAL_ENTRY_13) */
+                     AMOUNT,
+                     QTY_1,
+                     DECODE(ref_journal_entry_src,
+                            'CONT',
+                            ec_cont_journal_entry.ref_journal_entry_NO(X.REF_JOURNAL_ENTRY_NO),
+                            'EXCL',
+                            ec_cont_journal_entry_excl.ref_journal_entry_NO(X.REF_JOURNAL_ENTRY_NO),
+                            REF_JOURNAL_ENTRY_NO) REF_JOURNAL_ENTRY_NO,
+                     contract_code,
+                     MANUAL_IND,
+                     REF_JOURNAL_ENTRY_SRC
+                      FROM CONT_JOURNAL_ENTRY X
+                     WHERE (decode(p_CONTRACT_HLD,
+                                   '',
+                                   NULL,
+                                   p_CONTRACT_HLD) IS NULL OR
+                           p_CONTRACT_HLD = contract_code)
+                       AND PERIOD =
+                           to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+                       AND ((ref_journal_entry_src = 'IFAC') OR
+                           (ref_journal_entry_src IN ('EXCL', 'CONT') AND
+                           NVL(MANUAL_IND, 'N') = 'Y' AND
+                           REF_JOURNAL_ENTRY_NO IS NOT NULL))
+                       AND REVERSAL_DATE IS NULL
+                       AND DOCUMENT_KEY = p_document_key
+                       AND (decode(p_contract_int,'',NULL,p_contract_int) IS NULL OR p_contract_int = CONTRACT_CODE)
+                       AND EXISTS
+                     (SELECT JOURNAL_ENTRY_NO
+                              FROM IFAC_JOURNAL_ENTRY
+                             WHERE PERIOD =
+                                   to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+                               AND DECODE(ref_journal_entry_src,
+                              'CONT',
+                              ec_cont_journal_entry.ref_journal_entry_NO(X.REF_JOURNAL_ENTRY_NO),
+                              'EXCL',
+                              ec_cont_journal_entry_excl.ref_journal_entry_NO(X.REF_JOURNAL_ENTRY_NO),
+                              REF_JOURNAL_ENTRY_NO)  = JOURNAL_ENTRY_NO)) mapped
+             GROUP BY NVL(mapped.contract_code, 'No Project/Contract'),
+                      REF_JOURNAL_ENTRY_NO) Mapped_je,
+           (SELECT /*+ ordered use_nl(cm_for_mapped)  */
+                   IFAC.JOURNAL_ENTRY_NO journal_entry_no,
+                   NVL(contract.object_code, 'No Project/Contract') target_contract_code,
+                   SUM(NVL(excl.QTY_1, 0)) EXCLUDED_QTY,
+                   SUM(NVL(excl.AMOUNT, 0)) excluded_amount
+              FROM (select CONTRACT_CODE,
+                           qty_1,
+                           amount,
+                           period,
+                           decode(REF_JOURNAL_ENTRY_SRC,
+                                  'IFAC',
+                                  COST_MAPPING_ID,
+                                  'CONT',
+                                  ec_cont_journal_entry.cost_mapping_id(REF_JOURNAL_ENTRY_NO),
+                                  'EXCL',
+                                  ec_cont_journal_entry_excl.cost_mapping_id(REF_JOURNAL_ENTRY_NO)) cost_mapping_id,
+                           decode(REF_JOURNAL_ENTRY_SRC,
+                                  'IFAC',
+                                  REF_JOURNAL_ENTRY_NO,
+                                  'CONT',
+                                  ec_cont_journal_entry.REF_JOURNAL_ENTRY_NO(REF_JOURNAL_ENTRY_NO),
+                                  'EXCL',
+                                  ec_cont_journal_entry_excl.REF_JOURNAL_ENTRY_NO(REF_JOURNAL_ENTRY_NO)) JOURNAL_ENTRY_NO
+                      from CONT_JOURNAL_ENTRY_EXCL
+                     where DOCUMENT_KEY = p_document_key) excl,
+                   COST_MAPPING_VERSION cm_for_mapped,
+                   contract,
+                   IFAC_JOURNAL_ENTRY ifac
+             WHERE (decode(p_contract_int, '', NULL, p_contract_int) IS NULL OR
+                   p_contract_int = ifac.CONTRACT_CODE)
+               AND (decode(p_CONTRACT_HLD, '', NULL, p_CONTRACT_HLD) IS NULL OR
+                   p_CONTRACT_HLD = contract.object_code)
+               AND cm_for_mapped.object_id = excl.cost_mapping_id
+               AND excl.JOURNAL_ENTRY_NO = IFAC.JOURNAL_ENTRY_NO
+               AND cm_for_mapped.DAYTIME <= excl.PERIOD
+               AND NVL(cm_for_mapped.END_DATE, excl.PERIOD + 1) >
+                   excl.PERIOD
+               AND contract.object_id = cm_for_mapped.trg_contract_id
+               AND ifac.PERIOD =
+                   to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+               AND excl.PERIOD =
+                   to_date(p_PERIOD, 'YYYY-MM-DD"T"HH24:MI:SS')
+               AND decode(p_group_by_code,
+                             'FIN_WBS_CODE',
+                             IFAC.FIN_WBS_CODE,
+                             'FIN_COST_CENTER_CODE',
+                             IFAC.FIN_COST_CENTER_CODE,
+                             'FIN_ACCOUNT_CODE',
+                             IFAC.fin_account_code,
+                             IFAC.fin_revenue_order_code) = p_GROUP_BY_VALUE
+             GROUP BY decode(p_group_by_code,
+                             'FIN_WBS_CODE',
+                             IFAC.FIN_WBS_CODE,
+                             'FIN_COST_CENTER_CODE',
+                             IFAC.FIN_COST_CENTER_CODE,
+                             'FIN_ACCOUNT_CODE',
+                             IFAC.fin_account_code,
+                             IFAC.fin_revenue_order_code),
+                      contract.object_code,
+                      IFAC.JOURNAL_ENTRY_NO) Excl_je
+     WHERE interfaced.contract_code = Mapped_je.target_contract_code(+)
+       AND interfaced.contract_code = Excl_je.target_contract_code(+)
+       AND interfaced.journal_entry_no = Excl_je.journal_entry_no(+)
+       AND interfaced.journal_entry_no = Mapped_je.journal_entry_no(+);
+  BEGIN
+  t_table := T_TABLE_MAPPING_VARIANCE();
+  IF ue_reconciliation.UseUECMVarianceDetail = TRUE THEN
+     ue_reconciliation.Variance_Detail(p_PERIOD ,
+                        p_GROUP_BY_CODE ,
+                        p_CONTRACT_INT ,
+                        p_DOCUMENT_KEY ,
+                        p_CONTRACT_HLD ,
+                        p_GROUP_BY_VALUE,
+                        t_table);
+  ELSE
+          t_table_tmp :=  T_MAPPING_VARIANCE(
+                                            NULL,NULL,NULL,NULL,NULL,
+                                            NULL,NULL,NULL,NULL,NULL,
+                                            NULL,NULL,NULL,NULL,NULL,
+                                            NULL,NULL,NULL,NULL,NULL
+                                            );
+
+           for item in c_sql LOOP
+             t_table.EXTEND(1);
+             t_table_tmp :=  T_MAPPING_VARIANCE(
+                                     item.contract_name            ,
+                                     item.contract_code            ,
+                                     to_char(item.INTERFACE_JOURNAL_ENTRY_NO)            	,
+                                     item.total_interfaced_amount			,
+                                     item.total_mapped_amount				,
+                                     item.total_excluded_amount			,
+                                     item.variance_amount					,
+                                     item.total_interfaced_qty			,
+                                     item.total_mapped_qty				,
+                                     item.total_excluded_qty				,
+                                     item.variance_qty					,
+                                     item.VARIANCE_AMOUNT_PERCENTAGE ,
+                                     item.VARIANCE_QTY_PERCENTAGE,
+                                     item.document_type            		  ,
+                                     item.fin_account_code           	 	  ,
+                                     item.fin_wbs_code            		  ,
+                                     item.fin_cost_center_code              ,
+                                     item.fin_revenue_order_code,
+                                     null,
+                                     null);
+                t_table(t_table.LAST) := t_table_tmp;
+           END LOOP;
+    END IF;
+
+    return t_table;
+
+END variance_detail;
 
 End ecdp_reconciliation;

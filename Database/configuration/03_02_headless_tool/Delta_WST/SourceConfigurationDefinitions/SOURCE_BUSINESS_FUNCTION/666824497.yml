@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0136
   NAME: Report Reference
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/manage_report_ref/CLASS_NAME/REPORT_REFERENCE
 related: {}

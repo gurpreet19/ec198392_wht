@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0104
   NAME: Daily Delivery Stream Nomination
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/daily_location_nomination/TARGET/DELIVERY_STREAM/CLASS/DELSTRM_DAY_NOMINATION
 related: {}

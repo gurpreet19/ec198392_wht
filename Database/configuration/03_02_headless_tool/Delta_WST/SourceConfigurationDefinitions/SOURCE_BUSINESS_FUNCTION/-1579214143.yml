@@ -8,5 +8,6 @@ properties:
   BF_CODE: CO.1074
   NAME: Application Server Performance
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /xhtml/pages/app-server-perf
 related: {}

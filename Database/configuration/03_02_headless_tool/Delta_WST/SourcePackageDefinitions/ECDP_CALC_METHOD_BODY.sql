@@ -112,6 +112,9 @@ CREATE OR REPLACE PACKAGE BODY EcDp_Calc_Method IS
 **          27-09-2016  keskaash  ECPD-35756: Added Function SUBWELL.
 **          03-03-2017  aaaaasho  ECPD-36107: Added function PREALLOC_MEAS_GL.
 **          14-03-2018  abdulmaw  ECPD-52711: Added function VFM_PRIORITIZED
+**          01-10-2018  abdulmaw  ECPD-50441: Added function VFM and VFM_NET
+**          22-10-2018  solibhar  ECPD-49510: Added function MPM2 and MPM2_NET
+**          01-11-2018  abdulmaw  ECPD-51659: Added function ANALYSIS_QUALITY_STRM
 *****************************************************************/
 
 FUNCTION INTERMEDIATE
@@ -1733,6 +1736,28 @@ END MPM_CORR;
 
 --
 
+FUNCTION MPM2
+RETURN VARCHAR2 IS
+
+BEGIN
+
+   RETURN 'MPM2';
+
+END MPM2;
+
+--
+
+FUNCTION MPM2_NET
+RETURN VARCHAR2 IS
+
+BEGIN
+
+   RETURN 'MPM2_NET';
+
+END MPM2_NET;
+
+--
+
 FUNCTION MPM2_CORR
 RETURN VARCHAR2 IS
 
@@ -1774,5 +1799,38 @@ BEGIN
    RETURN 'VFM_PRIORITIZED';
 
 END VFM_PRIORITIZED;
+
+--
+
+FUNCTION VFM
+RETURN VARCHAR2 IS
+
+BEGIN
+
+   RETURN 'VFM';
+
+END VFM;
+
+--
+
+FUNCTION VFM_NET
+RETURN VARCHAR2 IS
+
+BEGIN
+
+   RETURN 'VFM_NET';
+
+END VFM_NET;
+
+--
+
+FUNCTION ANALYSIS_QUALITY_STRM
+RETURN VARCHAR2 IS
+
+BEGIN
+
+   RETURN 'ANALYSIS_QUALITY_STRM';
+
+END ANALYSIS_QUALITY_STRM;
 
 END EcDp_Calc_Method;

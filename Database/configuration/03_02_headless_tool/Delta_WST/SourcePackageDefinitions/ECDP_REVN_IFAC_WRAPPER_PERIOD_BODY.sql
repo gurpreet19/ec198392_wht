@@ -897,9 +897,7 @@ IS
     IS
     SELECT *
       FROM ifac_sales_qty pmc
-     WHERE
-           pmc.trans_key_set_ind = 'N'
-       AND pmc.alloc_no_max_ind = 'Y'
+     WHERE pmc.alloc_no_max_ind = 'Y'
        AND pmc.ignore_ind = 'N'
        AND pmc.contract_id = cp_contract_id
        AND pmc.period_start_date = cp_period_start_date

@@ -2578,6 +2578,26 @@ BF_DESCRIPTION_NO=CO.0246 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   properties: {}
   related: {}
   status: ADDED
+BF_DESCRIPTION_NO=CO.0247 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1129008211'
+  keys:
+    BF_DESCRIPTION_NO: CO.0247
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=CO.0248 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '378543598'
+  keys:
+    BF_DESCRIPTION_NO: CO.0248
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 BF_DESCRIPTION_NO=CO.1000 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-458524025'
   keys:
@@ -3172,6 +3192,16 @@ BF_DESCRIPTION_NO=CO.1075 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   fileName: '-789471515'
   keys:
     BF_DESCRIPTION_NO: CO.1075
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=CO.1076 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '718080294'
+  keys:
+    BF_DESCRIPTION_NO: CO.1076
     DATA_LEVEL: 0.0
     T: BF_DESCRIPTION
   parentKeys: {}
@@ -6128,6 +6158,46 @@ BF_DESCRIPTION_NO=GD.0152 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   properties: {}
   related: {}
   status: ADDED
+BF_DESCRIPTION_NO=GD.0153 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '614378102'
+  keys:
+    BF_DESCRIPTION_NO: GD.0153
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=GD.0154 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '2121929911'
+  keys:
+    BF_DESCRIPTION_NO: GD.0154
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=GD.0155 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-665485576'
+  keys:
+    BF_DESCRIPTION_NO: GD.0155
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=GD.0156 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '842066233'
+  keys:
+    BF_DESCRIPTION_NO: GD.0156
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 BF_DESCRIPTION_NO=HA.0001 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '236459260'
   keys:
@@ -6222,6 +6292,16 @@ BF_DESCRIPTION_NO=HA.0012 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   fileName: '1233476892'
   keys:
     BF_DESCRIPTION_NO: HA.0012
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=HA.0013 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1553938595'
+  keys:
+    BF_DESCRIPTION_NO: HA.0013
     DATA_LEVEL: 0.0
     T: BF_DESCRIPTION
   parentKeys: {}
@@ -6772,6 +6852,16 @@ BF_DESCRIPTION_NO=MHM.0015 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Config
   fileName: '-769187742'
   keys:
     BF_DESCRIPTION_NO: MHM.0015
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PA.0001 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1927266564'
+  keys:
+    BF_DESCRIPTION_NO: PA.0001
     DATA_LEVEL: 0.0
     T: BF_DESCRIPTION
   parentKeys: {}
@@ -8288,6 +8378,46 @@ BF_DESCRIPTION_NO=PO.0125 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   properties: {}
   related: {}
   status: ADDED
+BF_DESCRIPTION_NO=PO.0126 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-221239494'
+  keys:
+    BF_DESCRIPTION_NO: PO.0126
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PO.0128 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1501103172'
+  keys:
+    BF_DESCRIPTION_NO: PO.0128
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PO.0129 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '6448637'
+  keys:
+    BF_DESCRIPTION_NO: PO.0129
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PO.0132 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1827953685'
+  keys:
+    BF_DESCRIPTION_NO: PO.0132
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 BF_DESCRIPTION_NO=PP.0024 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-703509738'
   keys:
@@ -9282,6 +9412,56 @@ BF_DESCRIPTION_NO=PT.0018 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   fileName: '-93032521'
   keys:
     BF_DESCRIPTION_NO: PT.0018
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PT.0019 DATA_LEVEL =1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1414519289'
+  keys:
+    BF_DESCRIPTION_NO: PT.0019
+    DATA_LEVEL: 1.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PT.0020 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '220920718'
+  keys:
+    BF_DESCRIPTION_NO: PT.0020
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PT.0021 DATA_LEVEL =1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1728472528'
+  keys:
+    BF_DESCRIPTION_NO: PT.0021
+    DATA_LEVEL: 1.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PT.0022 DATA_LEVEL =1: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1058942959'
+  keys:
+    BF_DESCRIPTION_NO: PT.0022
+    DATA_LEVEL: 1.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=PT.0023 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '448608849'
+  keys:
+    BF_DESCRIPTION_NO: PT.0023
     DATA_LEVEL: 0.0
     T: BF_DESCRIPTION
   parentKeys: {}
@@ -10458,66 +10638,6 @@ BF_DESCRIPTION_NO=SP.0015 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   properties: {}
   related: {}
   status: ADDED
-BF_DESCRIPTION_NO=SP.0016 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-838786500'
-  keys:
-    BF_DESCRIPTION_NO: SP.0016
-    DATA_LEVEL: 0.0
-    T: BF_DESCRIPTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-BF_DESCRIPTION_NO=SP.0017 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '668765309'
-  keys:
-    BF_DESCRIPTION_NO: SP.0017
-    DATA_LEVEL: 0.0
-    T: BF_DESCRIPTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-BF_DESCRIPTION_NO=SP.0018 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-2118650178'
-  keys:
-    BF_DESCRIPTION_NO: SP.0018
-    DATA_LEVEL: 0.0
-    T: BF_DESCRIPTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-BF_DESCRIPTION_NO=SP.0019 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-611098369'
-  keys:
-    BF_DESCRIPTION_NO: SP.0019
-    DATA_LEVEL: 0.0
-    T: BF_DESCRIPTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-BF_DESCRIPTION_NO=SP.0020 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1804696939'
-  keys:
-    BF_DESCRIPTION_NO: SP.0020
-    DATA_LEVEL: 0.0
-    T: BF_DESCRIPTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-BF_DESCRIPTION_NO=SP.0021 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-297145130'
-  keys:
-    BF_DESCRIPTION_NO: SP.0021
-    DATA_LEVEL: 0.0
-    T: BF_DESCRIPTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 BF_DESCRIPTION_NO=SP.0022 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1210406679'
   keys:
@@ -10532,16 +10652,6 @@ BF_DESCRIPTION_NO=SP.0026 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   fileName: '-1349320677'
   keys:
     BF_DESCRIPTION_NO: SP.0026
-    DATA_LEVEL: 0.0
-    T: BF_DESCRIPTION
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-BF_DESCRIPTION_NO=SP.0027 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '158231132'
-  keys:
-    BF_DESCRIPTION_NO: SP.0027
     DATA_LEVEL: 0.0
     T: BF_DESCRIPTION
   parentKeys: {}
@@ -12312,6 +12422,46 @@ BF_DESCRIPTION_NO=WR.0080 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.Configu
   fileName: '-545179503'
   keys:
     BF_DESCRIPTION_NO: WR.0080
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=WR.0081 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '962372306'
+  keys:
+    BF_DESCRIPTION_NO: WR.0081
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=WR.0082 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1825043181'
+  keys:
+    BF_DESCRIPTION_NO: WR.0082
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=WR.0083 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-317491372'
+  keys:
+    BF_DESCRIPTION_NO: WR.0083
+    DATA_LEVEL: 0.0
+    T: BF_DESCRIPTION
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+BF_DESCRIPTION_NO=WR.0084 DATA_LEVEL =0: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1190060437'
+  keys:
+    BF_DESCRIPTION_NO: WR.0084
     DATA_LEVEL: 0.0
     T: BF_DESCRIPTION
   parentKeys: {}

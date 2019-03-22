@@ -3,7 +3,7 @@ name: JBPM_REQUESTINFO
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008701
+  name: PK_JBPM_REQUESTINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

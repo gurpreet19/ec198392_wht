@@ -2,7 +2,7 @@
 name: FCST_SHORTFALL_OVERRIDES
 cnstPrimaryKey:
   columns:
-  - WELL_ID
+  - SCENARIO_ID
   - OBJECT_ID
   - DAYTIME
   name: PK_FCST_SHORTFALL_OVERRIDES
@@ -280,7 +280,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '5'
+    sequence: !!float '2'
   OIL_S1P_FACTOR:
     columnName: OIL_S1P_FACTOR
     typeName: NUMBER
@@ -337,6 +337,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '253'
+  SCENARIO_ID:
+    columnName: SCENARIO_ID
+    typeName: VARCHAR2(32)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '5'
   SI_S1P_FACTOR:
     columnName: SI_S1P_FACTOR
     typeName: NUMBER
@@ -2033,14 +2041,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '13'
-  WELL_ID:
-    columnName: WELL_ID
-    typeName: VARCHAR2(32)
-    nullable: 'NO'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '2'
   WI_S1P_FACTOR:
     columnName: WI_S1P_FACTOR
     typeName: NUMBER
@@ -2080,7 +2080,7 @@ cnstForeignKeys:
     deleteAction: NOACTION
     primaryTable: FORECAST
     columns:
-      OBJECT_ID: OBJECT_ID
+      SCENARIO_ID: OBJECT_ID
     name: FK_FCST_SHORTFALL_OVERRIDES_2
     type: FOREIGNKEY
     status: UNDEFINED
@@ -2089,7 +2089,7 @@ cnstForeignKeys:
     deleteAction: NOACTION
     primaryTable: WELL
     columns:
-      WELL_ID: OBJECT_ID
+      OBJECT_ID: OBJECT_ID
     name: FK_FCST_SHORTFALL_OVERRIDES_3
     type: FOREIGNKEY
     status: UNDEFINED
@@ -2123,7 +2123,7 @@ indexes:
   IFK_FCST_SHORTFALL_OVERRIDES_2:
     indexName: IFK_FCST_SHORTFALL_OVERRIDES_2
     columns:
-    - OBJECT_ID
+    - SCENARIO_ID
     isUnique: NONUNIQUE
     isCompressed: DISABLED
     initialExtent: 65536

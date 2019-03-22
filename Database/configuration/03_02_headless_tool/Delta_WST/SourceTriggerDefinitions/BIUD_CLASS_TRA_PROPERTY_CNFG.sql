@@ -9,10 +9,4 @@ BEGIN
     ecdp_viewlayer_utils.set_dirty_ind(nvl(:new.class_name, :old.class_name), 'REPORTLAYER', TRUE);
 
   END IF;
-
-  IF nvl(:new.property_code, :old.property_code)IN ('DESCRIPTION', 'DISABLED_IND') THEN
-
-    ecdp_viewlayer_utils.set_dirty_ind('CLASS_TRIGGER_ACTION', 'MATVIEW', TRUE);
-
-  END IF;
 END;

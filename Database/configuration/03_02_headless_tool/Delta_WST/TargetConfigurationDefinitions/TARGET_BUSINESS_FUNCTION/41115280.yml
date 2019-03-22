@@ -8,5 +8,6 @@ properties:
   BF_CODE: GD.0058
   NAME: Capacity Release - Internal
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.gd.screens/capacity_release_internal
 related: {}

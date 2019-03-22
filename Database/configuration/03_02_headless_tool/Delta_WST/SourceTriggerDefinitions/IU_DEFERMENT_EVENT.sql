@@ -4,18 +4,18 @@ FOR EACH ROW
 DECLARE
   ld_prod_offset     DATE;
 BEGIN
-    -- Basis
+    -- Common
     IF Inserting THEN
 
       :new.record_status := nvl(:new.record_status, 'P');
 
-      EcDp_Timestamp_Utils.syncUtcDate(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.time_zone, :NEW.daytime, :NEW.summer_time);
-      EcDp_Timestamp_Utils.setProductionDay(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.day);
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, :NEW.daytime, :NEW.summer_time);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_daytime, :NEW.day);
 
       IF :NEW.end_day IS NULL AND :NEW.end_date IS NOT NULL THEN
-         EcDp_Timestamp_Utils.syncUtcDate(NULL, :NEW.object_id, :NEW.utc_end_date, :NEW.end_time_zone, :NEW.end_date, :NEW.end_summer_time);
-         EcDp_Timestamp_Utils.setProductionDay(NULL, :NEW.object_id, :NEW.utc_end_date, :NEW.end_day);
-         ld_prod_offset := :NEW.end_day + Ecdp_Productionday.getProductionDayOffset(null, :NEW.object_id, :NEW.end_date, :NEW.end_summer_time) / 24;
+         EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_end_date, :NEW.end_date, :NEW.end_summer_time);
+         EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_end_date, :NEW.end_day);
+         ld_prod_offset := :NEW.end_day + Ecdp_Productionday.getProductionDayOffset(null, :NEW.object_id, :NEW.end_date) / 24;
          IF :NEW.end_date = ld_prod_offset THEN
             :NEW.end_day := :NEW.end_day - 1;
          END IF;
@@ -36,25 +36,21 @@ BEGIN
       :new.rev_no := 0;
     ELSE
 
-      IF UPDATING('DAYTIME') OR UPDATING('SUMMER_TIME') THEN
-         EcDp_Timestamp_Utils.updateUtcDate(NULL, :NEW.object_id, :NEW.daytime, :NEW.summer_time, :NEW.utc_daytime);
-         EcDp_Timestamp_Utils.updateProductionDay(NULL, :NEW.object_id, :NEW.utc_daytime, :NEW.day);
-      END IF;
+      EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime, :OLD.summer_time, :NEW.summer_time);
+      EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.day, :NEW.day);
 
       IF UPDATING('END_DATE') THEN
          IF :NEW.end_date IS NOT NULL THEN
             -- TODO check if utc date is null
-            :NEW.utc_end_date := NULL;
-            EcDp_Timestamp_Utils.updateUtcDate(NULL, :NEW.object_id, :NEW.end_date, :NEW.end_summer_time, :NEW.utc_end_date);
-            EcDp_Timestamp_Utils.updateProductionDay(NULL, :NEW.object_id, :NEW.utc_end_date, :NEW.end_day);
-            ld_prod_offset := :NEW.end_day + Ecdp_Productionday.getProductionDayOffset(null, :NEW.object_id, :NEW.end_date, :NEW.end_summer_time) / 24;
+            EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_end_date, :NEW.utc_end_date, :OLD.end_date, :NEW.end_date, :OLD.end_summer_time, :NEW.end_summer_time);
+            EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_end_date, :NEW.utc_end_date, :OLD.end_day, :NEW.end_day);
+            ld_prod_offset := :NEW.end_day + Ecdp_Productionday.getProductionDayOffset(null, :NEW.object_id, :NEW.end_date) / 24;
             IF :NEW.end_date = ld_prod_offset THEN
                :NEW.end_day := :NEW.end_day - 1;
             END IF;
          ELSE
             :NEW.end_day := NULL;
             :NEW.utc_end_date := NULL;
-            :NEW.end_time_zone := NULL;
          END IF;
       END IF;
 

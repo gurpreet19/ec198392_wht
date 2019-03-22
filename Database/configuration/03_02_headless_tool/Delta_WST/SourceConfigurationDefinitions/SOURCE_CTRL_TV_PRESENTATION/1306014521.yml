@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE?screentemplate=/com.ec.prod.wr.screens/water_ion_analysis&TARGETCONDITION=FLOWLINE_TYPE in ('OP')&PROD=FLWL_PROD_ION_ANALYSIS&FORM=FLWL_FORM_ION_ANALYSIS&INJ=FLWL_INJ_ION_ANALYSIS
+  COMPONENT_EXT_NAME: /com.ec.prod.wr.screens/water_ion_analysis/GROUPMODEL/FLOWLINE/TARGET/FLOWLINE/OWNER/FLOWLINE?screentemplate=/com.ec.prod.wr.screens/water_ion_analysis&PROD=FLWL_PROD_ION_ANALYSIS&FORM=FLWL_FORM_ION_ANALYSIS&INJ=FLWL_INJ_ION_ANALYSIS
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: FLW_GAS_WAT_ION_ANALYSIS
   COMPONENT_LABEL: Flowline Water Ion Analysis

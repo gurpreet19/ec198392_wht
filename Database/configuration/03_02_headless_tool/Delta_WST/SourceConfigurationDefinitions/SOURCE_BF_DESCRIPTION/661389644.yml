@@ -21,12 +21,11 @@ properties:
     \n<p>In relation to stream object, there is a new gross volume method &ldquo;Seasonal\
     \ Volume&rdquo; and a new attribute &ldquo;Ref. Seasonal Stream&rdquo; being introduced\
     \ in stream object configuration screen.</p>\n\n<p>For seasonal gross volume calculation,\
-    \ there are two ways you can configure it. (Note: Refer to the diagram below)</p>\n\
-    \n<p>1.\tYou can directly configure a stream object with seasonal gross volume,\
-    \ and this stream object must be configured in Stream Seasonal Values screen with\
-    \ factor. (Note: the &ldquo;Ref. Seasonal Stream&rdquo; must be empty)</p>\n\n\
-    <p>2.\tYou can indirectly configure a stream object with seasonal gross volume\
-    \ and with a referenced stream object set on &ldquo;Ref. Seasonal Stream&rdquo;\
-    \ attribute whereby this referenced stream object must be configured in Stream\
-    \ Seasonal Values screen with factor.</p>\n"
+    \ there are two ways you can configure it.</p>\n\n<p>1.\tYou can directly configure\
+    \ a stream object with seasonal gross volume, and this stream object must be configured\
+    \ in Stream Seasonal Values screen with factor. (Note: the &ldquo;Ref. Seasonal\
+    \ Stream&rdquo; must be empty)</p>\n\n<p>2.\tYou can indirectly configure a stream\
+    \ object with seasonal gross volume and with a referenced stream object set on\
+    \ &ldquo;Ref. Seasonal Stream&rdquo; attribute whereby this referenced stream\
+    \ object must be configured in Stream Seasonal Values screen with factor.</p>\n"
 related: {}

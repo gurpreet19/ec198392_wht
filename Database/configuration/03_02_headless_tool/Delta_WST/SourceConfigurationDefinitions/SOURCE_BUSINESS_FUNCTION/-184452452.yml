@@ -8,5 +8,6 @@ properties:
   BF_CODE: SA.0001.01
   NAME: Daily Contract Calculation - by Contract
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sa.screens/sale_calc_day_contract
 related: {}

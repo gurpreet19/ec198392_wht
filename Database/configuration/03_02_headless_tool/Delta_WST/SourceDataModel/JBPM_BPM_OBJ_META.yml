@@ -4,7 +4,7 @@ cnstPrimaryKey:
   columns:
   - OWNER_GLOBAL_ID
   - NAME
-  name: SYS_C008821
+  name: PK_JBPM_BPM_OBJ_META
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

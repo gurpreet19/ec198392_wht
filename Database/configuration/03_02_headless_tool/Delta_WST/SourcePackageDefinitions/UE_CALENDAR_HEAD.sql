@@ -31,6 +31,8 @@ isGetCollActualDateUEE     VARCHAR2(32) := 'FALSE'; -- Instead of
 isGetCollActualDatePreUEE  VARCHAR2(32) := 'FALSE'; -- Pre
 isGetCollActualDatePostUEE VARCHAR2(32) := 'FALSE'; -- Post
 
+isGetRecurringHolidayPostUEE  VARCHAR2(32) := 'TRUE'; -- Post
+
 -----------------------------------------------------------------------------------------------------------------------------
 -- User Exit Set for EcDp_Inbound_Interface.TransferQuantitiesRecord
 
@@ -52,6 +54,10 @@ FUNCTION GetCollActualDatePost(p_object_id VARCHAR2,
                                p_method VARCHAR2,
                                p_tentative_ret_val DATE
                                ) RETURN DATE;
+
+FUNCTION GetRecurringHoliday(p_recurring_holiday_code VARCHAR2,
+                             p_year                    NUMBER
+                             ) RETURN DATE;
 -----------------------------------------------------------------------------------------------------------------------------
 
 END ue_Calendar;

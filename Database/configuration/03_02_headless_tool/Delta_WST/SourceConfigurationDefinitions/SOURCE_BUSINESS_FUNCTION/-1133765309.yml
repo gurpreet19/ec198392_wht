@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0006
   NAME: Node
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/NODE
 related: {}

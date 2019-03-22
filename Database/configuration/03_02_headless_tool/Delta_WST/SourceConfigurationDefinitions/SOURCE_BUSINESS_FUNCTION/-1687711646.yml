@@ -8,5 +8,6 @@ properties:
   BF_CODE: PA.0012
   NAME: Task Management
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.bpm.ext.ec.web/task_management
 related: {}

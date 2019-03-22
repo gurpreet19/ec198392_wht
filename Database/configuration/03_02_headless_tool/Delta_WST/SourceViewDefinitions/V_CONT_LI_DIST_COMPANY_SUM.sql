@@ -10,10 +10,10 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_CONT_LI_DIST_COMPANY_SUM" ("OBJECT_I
        ec_stream_item_version.NAME(ctlidc.company_stream_item_id,
                                    ctlidc.daytime,
                                    '<=') AS comp_stream_item_name,
-       ecdp_line_item.split_share_rebalance(1,ctlidc.line_item_key,ctlidc.dist_id,vendor_share,ctlidc.vendor_id) AS vendor_share,
-       ecdp_line_item.split_share_rebalance(2,ctlidc.line_item_key,ctlidc.dist_id,vendor_share_qty2,ctlidc.vendor_id) vendor_share_qty2,
-       ecdp_line_item.split_share_rebalance(3,ctlidc.line_item_key,ctlidc.dist_id,vendor_share_qty3,ctlidc.vendor_id) vendor_share_qty3,
-       ecdp_line_item.split_share_rebalance(4,ctlidc.line_item_key,ctlidc.dist_id,vendor_share_qty4,ctlidc.vendor_id) vendor_share_qty4,
+       ecdp_line_item.split_share_rebalance(1, ctlidc.line_item_key, ctlidc.dist_id, vendor_share,      ctlidc.vendor_id, ctlidc.stream_item_id) AS vendor_share,
+       ecdp_line_item.split_share_rebalance(2, ctlidc.line_item_key, ctlidc.dist_id, vendor_share_qty2, ctlidc.vendor_id, ctlidc.stream_item_id) AS vendor_share_qty2,
+       ecdp_line_item.split_share_rebalance(3, ctlidc.line_item_key, ctlidc.dist_id, vendor_share_qty3, ctlidc.vendor_id, ctlidc.stream_item_id) AS vendor_share_qty3,
+       ecdp_line_item.split_share_rebalance(4, ctlidc.line_item_key, ctlidc.dist_id, vendor_share_qty4, ctlidc.vendor_id, ctlidc.stream_item_id) AS vendor_share_qty4,
        ctlidc.split_value AS split_value,
        ctlidc.customer_share AS customer_share,
        ctlidc.report_category_code AS report_category_code,
@@ -106,8 +106,13 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "V_CONT_LI_DIST_COMPANY_SUM" ("OBJECT_I
   FROM (SELECT *
           FROM cont_li_dist_company c0
          WHERE c0.line_item_key =
-               (SELECT c1.line_item_key
-                  FROM cont_line_item c1
-                 WHERE c1.transaction_key = c0.transaction_key
-                 AND c1.line_item_based_type = DECODE(EcDp_Transaction.GetQtyLICount(c1.transaction_key), 0, c1.line_item_based_type, 'QTY')
-                 AND ROWNUM = 1)) ctlidc
+               (SELECT line_item_key FROM
+                   (SELECT c1.line_item_key
+                      FROM cont_line_item c1
+                     WHERE c1.transaction_key = c0.transaction_key
+                       AND c1.line_item_based_type = DECODE(EcDp_Transaction.GetQtyLICount(c1.transaction_key), 0, c1.line_item_based_type, 'QTY')
+                     ORDER BY c1.sort_order
+                   )
+                 WHERE ROWNUM = 1
+               )
+       ) ctlidc

@@ -3,7 +3,7 @@ BEFORE INSERT OR UPDATE ON well_event
 FOR EACH ROW
 BEGIN
     -- $Revision: 1.5 $
-    -- Basis
+    -- Common
     IF Inserting THEN
       :NEW.record_status := NVL(:NEW.record_status,'P');
       IF :new.created_by IS NULL THEN
@@ -15,8 +15,8 @@ BEGIN
       END IF;
       :new.rev_no := 0;
 
-      EcDp_Timestamp_Utils.syncUtcDate('WELL', :NEW.object_id, :NEW.utc_daytime, :NEW.time_zone, :NEW.daytime, :NEW.summer_time);
-      EcDp_Timestamp_Utils.setProductionDay('WELL', :NEW.object_id, :NEW.utc_daytime, :NEW.event_day);
+      EcDp_Timestamp_Utils.syncUtcDate(:NEW.object_id, :NEW.utc_daytime, :NEW.daytime, :NEW.summer_time);
+      EcDp_Timestamp_Utils.setProductionDay(:NEW.object_id, :NEW.utc_daytime, :NEW.event_day);
 
     --setting rate_source for selected classes
       If :new.avg_inj_rate IS NOT NULL AND :new.event_type = 'IWEL_EVENT_GAS' THEN
@@ -34,6 +34,11 @@ BEGIN
 
 
     ELSE
+      IF UPDATING THEN
+         EcDp_Timestamp_Utils.updateUtcAndDaytime(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.daytime, :NEW.daytime, :OLD.summer_time, :NEW.summer_time);
+         EcDp_Timestamp_Utils.updateProductionDay(:NEW.object_id, :OLD.utc_daytime, :NEW.utc_daytime, :OLD.event_day, :NEW.event_day);
+      END IF;
+
       IF Nvl(:new.record_status,'P') = Nvl(:old.record_status,'P') THEN
          IF NOT UPDATING('LAST_UPDATED_BY') THEN
             :new.last_updated_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);

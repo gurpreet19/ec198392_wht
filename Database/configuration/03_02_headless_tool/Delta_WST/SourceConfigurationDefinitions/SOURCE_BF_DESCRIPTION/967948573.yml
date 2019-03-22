@@ -9,9 +9,11 @@ properties:
   BF_DESCRIPTION_NO: RP.0007
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/REPT_CONTEXT' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: '<p>An Excel Report Context is a name given to an overall set of data
-    to be used by a report. An Excel report can be switched between similar contexts,
-    allowing for a high level filtering on the data (although not very flexible).</p><p>For
-    example: You can create an individual Context for each Contract, or one Context
-    with all Contracts limited by another Parameter.</p>'
+  DESCRIPTION: '<p>The purpose of the Excel Report Context is to represent a set of
+    data to be used by a report. An Excel report can be switched between similar contexts,
+    allowing for a high level filtering on the data (although not very flexible).
+    The report context is used in either Excel Report Objects or Excel report Sets
+    business functions. </p><p><br></p><p>For example: You can create an individual
+    Context for each Contract, or one Context with all Contracts filtered by another
+    Parameter.</p>'
 related: {}

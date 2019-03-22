@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0025
   NAME: Account
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/manage_object_object_list/CLASS_NAME/FIN_ACCOUNT
 related: {}

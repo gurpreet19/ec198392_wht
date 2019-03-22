@@ -554,6 +554,51 @@
   properties: {}
   related: {}
   status: ADDED
+'110076.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1456588033'
+  keys:
+    SOURCE_ID: 110076.0
+    T: T_BASIS_LANGUAGE_SOURCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'110077.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1456588994'
+  keys:
+    SOURCE_ID: 110077.0
+    T: T_BASIS_LANGUAGE_SOURCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'110078.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1456589955'
+  keys:
+    SOURCE_ID: 110078.0
+    T: T_BASIS_LANGUAGE_SOURCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'110079.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1456590916'
+  keys:
+    SOURCE_ID: 110079.0
+    T: T_BASIS_LANGUAGE_SOURCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'110080.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1456612058'
+  keys:
+    SOURCE_ID: 110080.0
+    T: T_BASIS_LANGUAGE_SOURCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 '20283.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '-1447362127'
   keys:
@@ -1234,6 +1279,24 @@
   fileName: '1535448834'
   keys:
     SOURCE_ID: 4103.0
+    T: T_BASIS_LANGUAGE_SOURCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'4104.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1535449795'
+  keys:
+    SOURCE_ID: 4104.0
+    T: T_BASIS_LANGUAGE_SOURCE
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+'4105.0': !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1535450756'
+  keys:
+    SOURCE_ID: 4105.0
     T: T_BASIS_LANGUAGE_SOURCE
   parentKeys: {}
   properties: {}

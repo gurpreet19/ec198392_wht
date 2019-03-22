@@ -40,6 +40,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Stream IS
 **  17.02.2009  leongsei  ECPD-6067: Modified function setDefaultTicketVol for new parameter p_local_lock
 **  10.04.2009  oonnnng   ECPD-6067: Update local lock checking function in setDefaultTicketVol() function with the new design.
 **  27.01.2012  kumarsur  ECPD-19809: added getRateUom.
+**  23.08.2018  abdulmaw  ECPD-49811: added getUom.
 *****************************************************************/
 --<EC-DOC>
 -----------------------------------------------------------------
@@ -368,5 +369,84 @@ END IF;
 
 RETURN lv2_uom;
 END getRateUom;
+
+---------------------------------------------------------------------------------------------------
+-- Function       : getUom
+-- Description    : Returns the UOM of a stream based on phase of the stream.
+--
+-- Preconditions  :
+--
+-- Postconditions :
+-- Using tables   :
+--
+-- Using functions:
+--
+--
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+--
+--
+---------------------------------------------------------------------------------------------------
+--</EC-DOC>
+FUNCTION getUom(p_object_id VARCHAR2,
+                p_daytime DATE,
+                p_type VARCHAR2 DEFAULT NULL) RETURN VARCHAR2
+--</EC-DOC>
+IS
+   lv2_phase     VARCHAR(32);
+   lv2_uom       ctrl_uom_setup.unit%TYPE;
+   lv2_unitLabel ctrl_unit.label%TYPE;
+
+   CURSOR cur_view_unit(c_uom_meas_type VARCHAR2) IS
+   SELECT unit
+   FROM ctrl_uom_setup cus
+   WHERE cus.measurement_type = c_uom_meas_type
+   AND cus.view_unit_ind = 'Y';
+
+BEGIN
+
+  lv2_phase := ec_strm_version.stream_phase(p_object_id,p_daytime,'<=');
+  IF p_type = 'VOLUME' THEN
+    IF lv2_phase = 'OIL' THEN
+      lv2_uom := 'STD_OIL_VOL';
+    ELSIF lv2_phase = 'WAT' THEN
+      lv2_uom := 'WATER_VOL';
+    ELSIF lv2_phase = 'GAS' THEN
+      lv2_uom := 'STD_GAS_VOL';
+    ELSIF lv2_phase = 'LNG' THEN
+      lv2_uom := 'STD_LNG_VOL';
+    ELSIF lv2_phase = 'STEAM' THEN
+      lv2_uom := 'STEAM_VOL_CWE';
+    ELSE
+      lv2_uom := 'STD_LIQ_VOL';
+    END IF;
+
+  ELSIF p_type = 'MASS' THEN
+    IF lv2_phase = 'OIL' THEN
+      lv2_uom := 'OIL_MASS';
+    ELSIF lv2_phase = 'WAT' THEN
+      lv2_uom := 'WATER_MASS';
+    ELSIF lv2_phase = 'GAS' THEN
+      lv2_uom := 'GAS_MASS';
+    ELSIF lv2_phase = 'LNG' THEN
+      lv2_uom := 'LNG_MASS';
+    ELSIF lv2_phase = 'STEAM' THEN
+      lv2_uom := 'STEAM_MASS';
+    ELSE
+      lv2_uom := 'LIQ_MASS';
+    END IF;
+  END IF;
+
+  FOR c_view_unit IN cur_view_unit(lv2_uom) LOOP
+    lv2_uom := c_view_unit.unit;
+  END LOOP;
+
+  lv2_unitLabel:= ECDP_UNIT.GetUnitLabel(lv2_uom);
+
+RETURN lv2_unitLabel;
+END getUom;
 
 END;

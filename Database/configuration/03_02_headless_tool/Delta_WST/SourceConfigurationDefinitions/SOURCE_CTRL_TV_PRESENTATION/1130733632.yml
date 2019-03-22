@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   COMPONENT_ATTR: null
-  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object/CLASS_NAME/VAT_CODE?screentemplate=/com.ec.frmw.co.screens/manage_object
+  COMPONENT_EXT_NAME: /com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/VAT_CODE?screentemplate=/com.ec.frmw.co.screens/manage_object_nav
   COMPONENT_EXT_NAV_NAME: null
   COMPONENT_ID: VAT_CODE
   COMPONENT_LABEL: VAT Code

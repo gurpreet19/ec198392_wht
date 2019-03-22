@@ -9,875 +9,986 @@ properties:
   BF_DESCRIPTION_NO: SP.0054
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/CARGO' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: "<p>\t<strong>Cargo Document screen</strong>    is used to make processing\
-    \ of Financial Documents more efficient and less time consuming. This screen is\
-    \ also known as the CDG screen (Cargo Document Generation). The manual creation\
-    \ of invoices/documents is already present in Document General screen (BF SP.0016).<br>\
-    \    - The main difference is that this screen will automatically create documents,transactions\
-    \ and line items and populate these with quantities and monetary values based\
-    \ on the cargo quantity data fetched from the interface table (IFAC_CARGO_VALUE).\
-    \ This table can be populated with EC Transport Cargo data or from external sources.<br>\
-    \    - When cargo quantity data is put into the interface table it is at the same\
-    \ time made available for processing/invoicing by EC Revenue using this BF.<br>\
-    \    - Most of the operations needed for the generated Documents can be performed\
-    \ from this BF, including updates of Quantities,Prices,Dates,Exchange Rates,etc.(as\
-    \ well as the detail popups that allow working with more detail for the documents\
-    \ and transactions as well as being able to handle the distributions between assets\
-    \ and companies).Still there are some operations that are not available from this\
-    \ screen - for these operations please use the Business Functions listed under\
-    \ the EC Revenue -> Financial Transactions -> Process.</p>\t\t\t\t\t<h2>\t\t\t\
-    \t\t\t<strong style=\"color: rgb(0, 0, 153);\">Navigator</strong>\t\t\t\t\t</h2>\
-    \    The purpose of the navigator of this screen is to filter out the Documents\
-    \ to display in the screen.<br>    Also note the values of the navigator will\
-    \ be used when executing the 'Process' button which will process any interfaced\
-    \ data. For more details on this    please see separate section below.<p/>\t\t\
-    \t\t\t\t<p>\t\t\t\t\t\t\t<u>The navigator of this screen has the following elements:</u>\t\
-    \t\t\t\t\t\t<br>\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t<em>- From Date:</em>\t\
-    \t\t\t\t\t\t\t</strong>    Any document having a Document Date equal to or greater\
-    \ than this date will be listed.<br>\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\
-    \t\t<em>- To Date:</em>\t\t\t\t\t\t\t\t\t</strong>    Any documents having a Document\
-    \ Date less that this date will be listed. Note that any documents having Document\
-    \ Date equal to this date will NOT be    listed.<br>\t\t\t\t\t\t\t\t\t\t<strong>\t\
-    \t\t\t\t\t\t\t\t\t\t<em>- Business Unit:</em>\t\t\t\t\t\t\t\t\t\t</strong>   \
-    \ Any documents belonging to a Contract where the Contract Area of the Contract\
-    \ is linked to the selected Business Unit will be listed. This filter is    mandatory.<br>\t\
-    \t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t<em>- Contract Area:</em>\t\
-    \t\t\t\t\t\t\t\t\t\t</strong>    Any documents belonging to a Contract linked\
-    \ to the selected Contract Area will be listed. This filter is optional.<br>\t\
-    \t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t<em>- Contract:</em>\t\
-    \t\t\t\t\t\t\t\t\t\t\t</strong>    Any documents belonging to the selected Contract\
-    \ will be listed. This filter is optional.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t<em>- Document List:</em>\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    </strong>    Any documents where the Document Setup matches the Document Setups\
-    \ defined in the selected Document List will be listed. This filter is optional.<br>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>- Financial\
-    \ Code:</em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>    Any documents belonging to\
-    \ a Contract where the Financial Code of the Contract matches the selected Financial\
-    \ Code will be listed. This filter is optional.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>- Contract:</em>\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t</strong>    Any documents having Document Level matching the selected\
-    \ Document Level will be listed. This filter is optional.</p>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t<h2>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\"\
-    >Tab Documents</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h2>\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t<p>    The Documents Tab is the most important part of this BF. This tab\
-    \ has functionality as follows:</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h3>\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\">Current Periods Data\
-    \ section</strong></h3>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>    - The Booking and\
-    \ Reporting periods in EC are per area, i.e. Financial Code like Product Sales,\
-    \ Product Purchases, Tariff Income, Tariff Cost, and Journal    Entry.<br>   \
-    \ - In addition there are Booking and Reporting periods for the EC Revenue Quantity\
-    \ module and the Inventory module.<br>    - The current periods section at the\
-    \ top of the 'Documents' tab will list the current open Booking and Reporting\
-    \ periods for the EC Revenue Quantity module    and the area corresponding to\
-    \ the Financial Code of the selected contract.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span style=\"color:\
-    \ rgb(0, 153, 0);\">Process</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    The Process button will read the selected\
-    \ process from the data field to the left of the button and execute as follows:<br>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t<em>- Selected process is Standard:</em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    The Standard\
-    \ process is to look into the interface table (IFAC_CARGO_VALUE) and process (i.e.\
-    \ generate new documents or updating existing ones) any    un-processed records\
-    \ found that match the settings for Business Area / Contract Area / Contract /\
-    \ Financial Code in the filter navigator.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>- Selected process is PPA Price:</em>\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t<br>    The PPA Price process will generate correction documents for\
-    \ contracts filtered by the navigator values where there are new prices in the\
-    \ price lists    compared to the prices used in the existing documents.</p>\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t<strong>Button <span style=\"color: rgb(0, 153, 0);\">Analyse</span>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t<br>    Whenever the CDG screen is loaded the system performs\
-    \ the <em>Analyse</em> to each of the Documents displayed in the screen. This\
-    \ function is also    available in the screen at the <em>Analyse</em> button.<br>\
-    \    Based on the analysis the system will suggest a \"Recommended Action\". This\
-    \ action is displayed in the \"Analysis\" column in the table listing the documents.</p>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t<u>The \"Analyse\" function performs these checks and sets\
-    \ a corresponding \"Analysis\" value if the check fails:</u>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    - Checks that all dates are set<br>  \
-    \  - Checks that all QUANTITY Line Items have quantities set<br>    - Checks if\
-    \ any updated or new quantities have arrived through the interface that is different\
-    \ from the current quantities used by the Transactions / Line    Items<br>   \
-    \ - Checks that Line Items requiring a Unit Price has this set<br>    - Checks\
-    \ if the Unit Price used for a Line Item is the same as the Unit Price sitting\
-    \ in the Price table for the given Price Date (if a price has been    changed\
-    \ and the new price is not in the document yet)<br>    - Checks that all Line\
-    \ Items have the Pricing Value set<br>    - Checks that all Transactions have\
-    \ Exchange Rates set as needed according to the various currencies used by the\
-    \ Document.<br>    - Checks that the Document Status has be set (to either Final\
-    \ or Accrual)<br>    - If all the checks listed above are passed the system sets\
-    \ the \"Recommended Action\" to \"Set to VALID1\" - which means that the Document\
-    \ is ready to be    validated to the VALID1 level.<br>    - Note that the \"Analyze\
-    \ Documents\" function is User-Exit enabled for the projects to add their own\
-    \ validation and checks to the Document.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span style=\"color: rgb(0, 153, 0);\"\
-    >Calculate</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t<br>    The Calculate button will recalculate any Calculated Line Items\
-    \ for the selected document by re-running the calculation associated with the\
-    \ Line Item.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t<strong>Button <span style=\"color: rgb(0, 153, 0);\">Rec Action</span>\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>   \
-    \ - The result of the Analysis is a Recommended Action shown in the Analysis column\
-    \ of the list of documents.<br>    Some of these actions can be performed by the\
-    \ system, i.e. no user input is required, for instance updating prices and quantities\
-    \ in the Document.<br>    - The Rec Action button will execute the Recommended\
-    \ Action for ALL the documents listed in the screen. After the action has been\
-    \ performed to the    individual Documents the system also runs the \"Analyse\"\
-    \ function again in order to update the \"Recommended Action\" / \"Analysis\"\
-    \ for each Document.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span style=\"color: rgb(0, 153, 0);\"\
-    >Document Detail</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    The Document Detail button will open a popup\
-    \ window for the selected Document. The popup will list more details for the selected\
-    \ document as well as the    Transactions belonging to the Document.<br>    The\
-    \ popup will also have some of the buttons available in the CDG screen: Analyse\
-    \ / Calculate / Rec Action / Transaction Detail. The functionality is the    same\
-    \ as described here, but for the selected document only.</p>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button\
-    \ <span style=\"color: rgb(0, 153, 0);\">Transaction Detail</span>\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<br>    The Transaction Detail button will open a popup window for the selected\
-    \ Transaction of the selected Document. The popup will list more details for the\
-    \    selected Transaction.<br>    In addition there is a range of features available\
-    \ in this popup. <u> The popup has 8 different tabs for managing the selected\
-    \ Transaction: </u><p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1. Tab Transaction\
-    \ Distribution\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    This tab manages the distribution\
-    \ of quantities and monetary values to Profit Centre and Profit Centre / Company.\
-    \ For manually created Documents this tab    allows for updating the quantities.<br>\
-    \    - For Documents based on interfaced data the quantities will be read-only\
-    \ as in this case the quantities are controlled by other sources - either EC Sales\
-    \    Contract Account data or uploaded data from external systems. In both cases\
-    \ the Comments field is open for edit.<br>    - When entering/changing quantities\
-    \ at any of the three levels the system will calculate up to the levels above\
-    \ and down to the ls below such that the total    quantities are always in sync.\
-    \ For transactions based on templates with reduced configuration (not distribution\
-    \ level is given) there is no split percentage to base the splitting    downward\
-    \ on, and therefore the quantities MUST be entered at the lowest (company) level\
-    \ and they will be summed upward to the transaction level. <u> Note </u> that\
-    \ there is room for up to 4 quantity numbers in different units at each level.\
-    \ If for instance Qty3 and Qty4 are never used for any Contract these    columns\
-    \ can be hidden from the screen in order to save space.<br>\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p><p><strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t2. Tab Line Item Overview\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t<br>    The Line Item Overview tab gives an overview of all the Line Items\
-    \ for the selected Transaction. It will show quantities as well as monetary values\
-    \ for    Pricing / Memo / Booking / Local currencies.<br>    - This tab also lists\
-    \ the exchange rates being used for converting between the various currencies\
-    \ in use for the Transaction.<br>    - The 'Update Price' button will pull the\
-    \ prices from the Price List(s) and re-populate the Line Items with the current\
-    \ prices.<br>  -  This tab also provides functionality for managing 'Comments\
-    \ Before Transaction' and 'Comments After Transaction' which will typically be\
-    \ printed on the    Invoice Hardcopy. Such comments can be added / deleted using\
-    \ the Insert / Delete icons on the EC Toolbar.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    </p><p><strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t3. Tab Quantity Line Items\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    This tab provides\
-    \ more details for the Quantity type of Line Items of the Transactions. It allows\
-    \ for editing the Line Item Description - this is typically    printed on the\
-    \ Invoice Hardcopy.<br>    - It also allows for changing the VAT Code (and thus\
-    \ VAT Rate) for the Line Item.<br>    - The 'Update Price' button will pull the\
-    \ prices from the Price List(s) and re-populate the Line Items with the current\
-    \ prices.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p><p><strong>\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t4. Tab Fixed Value Line Items\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    This tab is for managing\
-    \ the 'Fixed Value' type of Line Items. The user can modify/delete existing Line\
-    \ Items as well as adding new.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p><p><strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t5. Tab Free Unit Line Items\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>\
-    \    This tab is for managing the 'Quantity Based - Free Unit' and 'Free Unit\
-    \ Price Object' type of Line Items. The user can modify/delete existing Line Items\
-    \    as well as adding new.<br>    - The 'Update Price' button will pull the prices\
-    \ from the Price List(s) and re-populate the Line Items with the current prices.<br>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p><p><strong>\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t6. Tab Percentage Line Items\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    <br>    This tab is for managing the 'Percentage All', 'Percentage Quantity',\
-    \ and 'Percentage Manual' type of Line Items. The user can modify/delete existing\
-    \ Line    Items as well as adding new.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t</p><p><strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t7. Tab Interest Line Items\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    </strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    This tab is\
-    \ for managing the 'Interest' type of Line Items. The user can modify/delete existing\
-    \ Line Items as well as adding new.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t<u> Note </u> that when the period of the interest calculation given\
-    \ by the 'From Date' and the 'To Date' is greater than the Compounding Period\
-    \ EC will add    additional Interest Line Items to cater for the compounding.<br>\
-    \    - The 'Update Interest Line Items' button will recalculate the Interest Line\
-    \ Item in terms of updating the Base Amount, retrieving Base Rate from Price Index\
-    \    (if configured) and recalculate the full value of the Line Item.<br>\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p><p><strong>\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t8. Tab Calculated Line Items\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    This is for handling any Calculated\
+  DESCRIPTION: "<p class=\"MsoNormal\" style=\"margin-bottom: 0.0001pt; line-height:\
+    \ normal;\"><span style=\"font-family: Arial, Verdana; font-size: 13.3333px;\"\
+    >The Cargo Document Generation screen is used for processing of Financial Documents\
+    \ more efficient and less time consuming. The screen is also known as the CDG\
+    \ screen (Cargo Document Generation).</span></p><p class=\"MsoNormal\" style=\"\
+    margin-bottom: 0.0001pt; line-height: normal;\"><span style=\"font-family: Arial,\
+    \ Verdana; font-size: 13.3333px;\">This screen allows both manual and automated\
+    \ creation of the documents, transactions, line items and population of these\
+    \ with quantities and monetary values based on the cargo quantity data fetched\
+    \ from the interface table (IFAC_CARGO_VALUE). This table can be populated with\
+    \ data from EC Transport / Cargo module, or from external sources. When cargo\
+    \ quantity data is put into the interface table it is at the same time made available\
+    \ for processing/invoicing by EC Revenue using this BF. The BF also allows for\
+    \ creating Financial Documents manually.</span></p><p class=\"MsoNormal\" style=\"\
+    margin-bottom: 0.0001pt; line-height: normal;\"><span style=\"font-family: Arial,\
+    \ Verdana; font-size: 13.3333px;\">Most of the operations needed for the generated\
+    \ Documents can be performed from this BF, including updates of Quantities, Prices,\
+    \ Dates, Exchange Rates, etc.</span><span style=\"font-family: Arial, Verdana;\
+    \ font-size: 10pt;\">.</span><span style=\"font-family: Arial, Verdana; font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-family: Arial, Verdana; font-size:\
+    \ 10pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps:\
+    \ normal; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\
+    \" normal;\"=\"\" style=\"font-family: Arial, Verdana; font-size: 10pt; font-style:\
+    \ normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight:\
+    \ normal;\"><strong style=\"color: rgb(0, 112, 192); font-size: medium; font-size:\
+    \ medium;\">Navigator</strong><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >The purpose of the navigator of this screen is to filter out the Documents to\
+    \ display in the screen.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >The 'From Date' and 'To Date' are used for filtering Documents having Document\
+    \ Date within these two dates.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >Note: The values of the navigator will be used when executing the 'Process' button\
+    \ which will process any interfaced data. For more details on this, please, see\
+    \ separate section below.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium; font-size: medium;\">Documents\
+    \ Tab</strong><p style=\"font-size: 10pt; font-weight: normal;\">The Tab lists\
+    \ all the documents matching Navigator settings.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\">This Tab is the most important part of the BF and contains\
+    \ additional subtabs, sections and collapsible rows.&nbsp;</p><style=\"font-size:\
+    \ 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><span style=\"font-size: medium;\"\
+    ><strong style=\"color: windowtext;\">Documents Tab &gt; </strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium; font-size: medium;\">Booking Period\
+    \ Section</strong></span><p style=\"font-size: 10pt; font-weight: normal;\"><span\
+    \ style=\"color: red;\">Data class: This section is currently not using a class,\
+    \ but is using hard-coded query-file and layout-file.</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The section contains two rows. The first row shows\
+    \ the Type of the Contract, Company, Country, Booking and Reporting periods of\
+    \ the selected Financial Document. The second row shows the same characteristics\
+    \ for the Quantity module. By default, the section is in collapsed state.&nbsp;</p><style=\"\
+    font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><span style=\"font-size:\
+    \ medium;\"><strong style=\"color: windowtext;\">Documents Tab &gt; </strong><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium; font-size: medium;\">Documents\
+    \ Section</strong></span><p style=\"font-size: 10pt; font-weight: normal;\"><span\
+    \ style=\"color: red;\">Data class: FIN_CARGO_SIMPLE (CONT_DOCUMENT table)</span>&nbsp;</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The section lists the Financial\
+    \ Documents per the Navigator settings. From this section the user can create\
+    \ new Documents by the 'Insert a New Document' selection from the EC Toolbar.\
+    \ This will add a new record to the Documents section where the user can select\
+    \ Contract and Document Setup for the new Document. The data is contained in a\
+    \ Collapsible/Expandable screen component that by default is in expanded state.<span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong style=\"color: rgb(0, 176, 80);\">Process </strong><strong>Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The button will read the selected\
+    \ process from the data field to the left of the button and execute as follows:</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Selected process\
+    \ is Standard:</em></strong></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >The Standard process is to consider the interface table (IFAC_SALES_QTY) and\
+    \ process (i.e. generate new documents or update existing ones) any un-processed\
+    \ records found that match the settings for Business Area / Contract Area / Contract\
+    \ / Financial Code in the filter navigator.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">Please note that if the newly created documents don't show in the\
+    \ list of documents it might be because the newly created documents have a Document\
+    \ Date that is outside of the date range of the navigator.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><strong><em>- Selected process is PPA Price:</em></strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The PPA Price process will generate\
+    \ correction documents for contracts filtered by the navigator values where there\
+    \ are new prices in the price lists compared to the prices used in the existing\
+    \ documents. This feature allows for generating a Financial Document with corrections\
+    \ for multiple periods, i.e. if there are price changes for documents spanning\
+    \ a full year then the corresponding corrections will be handled by a single Financial\
+    \ Document.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><strong style=\"color: rgb(0, 176, 80);\">Analyse</strong><strong>\
+    \ </strong><strong style=\"color: rgb(0, 176, 80);\">Documents</strong><strong>\
+    \ Button</strong></p><p style=\"font-size: 10pt; font-weight: normal;\">The button\
+    \ will do the analysis of each of the Documents listed in the screen and generate\
+    \ a \"recommended action\" in the Analysis column. The Analyse Documents function\
+    \ performs these checks:</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >- Checks that all dates are set.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">- Checks that all Quantity Line Items have quantities set.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">- Checks if any updated or new quantities\
+    \ have arrived through the interface that is different from the quantities currently\
+    \ used by the Transactions / Line Items.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">- Checks that Line Items requiring a Unit Price has this set.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">- Checks if the Unit Price used\
+    \ for a Line Item is the same as the Unit Price sitting in the Price table for\
+    \ the given Price Date (if a price has been changed and the new price is not in\
+    \ the document yet).</p><p style=\"font-size: 10pt; font-weight: normal;\">- Checks\
+    \ that all Line Items have the Pricing Value set.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\">- Checks that all Transactions have Exchange Rates set\
+    \ as needed according to the various currencies used by the Document.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">- Checks that the Document Status has\
+    \ be set (to either Final or Accrual).</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">- If all the checks listed above are passed the system sets the \"\
+    Analysis\" to \"Set to VALID1\" - which means that the Document is ready to be\
+    \ validated to the VALID1 level.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong style=\"color: rgb(0,\
+    \ 176, 80);\">Execute Recommended Action </strong><strong>Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The button will execute the\
+    \ 'Recommended Action' shown in the Analysis column for ALL the Documents listed\
+    \ in the screen. After the 'Recommended Action' has been performed to the individual\
+    \ Documents the system also runs the \"analyse\" function again in order to update\
+    \ the \"recommended action\" for each Document.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><strong>Note:</strong> Only actions where user input\
+    \ is not required can be performed by the system and this button's functionality.<span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong>User Action</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">For each Document listed in the screen there is a User Action drop-down.\
+    \ By selecting an action item and saving, EC will perform the selected action.\
+    \ The list of actions is configurable, but <u>the standard actions are:</u></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Recommended Action:</em></strong>\
+    \ The action will execute the action proposed by EC as a result of the Analyse\
+    \ function (see above).</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><strong><em>- Set to Valid 1:</em></strong> The action will move the selected\
+    \ document from 'Open' state to the 'Valid 1' state. EC will generate all the\
+    \ posting information per Line Item when moving a Document to Valid 1 state.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Set back to Open:</em></strong>\
+    \ The action will move the selected document from the 'Valid 1' state back to\
+    \ the 'Open' state. EC will delete all the posting information per Line Item when\
+    \ moving a Document back to the Open state.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong><em>- Update Prices:</em></strong> The action will repopulate\
+    \ all the Line Items of the selected Document with the current values of the prices\
+    \ found in the Price Lists and then recalculate the corresponding monetary values.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Update from I/F:</em></strong>\
+    \ The action will repopulate all the Transactions and Line Items of the selected\
+    \ Document with data from the Interface tables if there is a new data.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><strong><em>- Update Prices and from I/F:</em></strong>\
+    \ The action is a combination of 'Update Prices' and 'Update from I/F' - see above.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Delete (no recreate):</em></strong>\
+    \ The action will delete the selected Document and if the Document was based on\
+    \ an interfaced data the corresponding interfaced data will have the 'Ignore'\
+    \ flag set. When running the Process button (see above) any interfaced records\
+    \ set to Ignore will not be part of the document processing.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><strong><em>- Delete (and recreate):</em></strong>\
+    \ The action will delete the selected Document and if the Document was based on\
+    \ interfaced data the corresponding interfaced data will be released for re-processing.\
+    \ When running the Process button (see above) the interfaced records will be part\
+    \ of the document processing. This variant is useful when generated document had\
+    \ some errors and the reason for the errors can be corrected before generating\
+    \ the document again. Please note that this function is not applicable to any\
+    \ Documents that have been generated manually.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><strong><em>- Delete Empty Transactions:</em></strong>\
+    \ The action will delete all transactions considered as empty. A Transaction is\
+    \ empty if there are no quantities set for the Quantity-type of line items, or\
+    \ there are no Pricing Values for the non-Quantity-type of line items. This action\
+    \ will still leave at least one Transaction in case all Transactions are empty.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Delete Empty Line\
+    \ Items:</em></strong> The action will delete all empty Line Items from the Transactions\
+    \ of the selected Document. This action will at least leave one Line Item for\
+    \ the Transaction even if it is empty.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong><em>- Reverse:</em></strong> The action will create a Reversal\
+    \ Document of the selected Document. The Document to reverse must have status\
+    \ BOOKED in order to be reversed.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong><em>- Re-calculate Source Split:</em></strong> The action\
+    \ will re-calculate the Source Split in case the allocation of quantities to Profit\
+    \ Centers are based on a Source Split. Source Split is a dynamical split using\
+    \ one set of Stream Item numbers (i.e. Production quantities) to generate a split\
+    \ and then apply this split to the Transaction.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><strong><em>- Update Exchange Rates:</em></strong> The\
+    \ action will read Exchange Rates from the Exchange Rate tables and repopulate\
+    \ all the exchange rates in use by the Document. All monetary values will be re-calculated.&nbsp;</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Calculate Document:</em></strong>\
+    \ The action will loop through all transactions of the selected document and re-run\
+    \ all the Due Date Calculations and Line Item Calculations.<span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><strong style=\"color: rgb(0, 176, 80);\">Trace Document </strong><strong>Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The button will open a popup\
+    \ window showing the trace information for the selected Document. For more details\
+    \ on how the Tracing works, please see online help for Document Tracing screen\
+    \ (BF CD.0151).&nbsp;</p><p style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"\
+    font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><span style=\"font-size:\
+    \ medium;\"><strong style=\"color: windowtext;\">Documents Tab &gt; Transactions\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Transactions Section</strong></span><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\">Data class: FIN_CARGO_TRANS_SIMPLE (CONT_TRANSACTION\
+    \ table)</span><span style=\"color: red; font-size: 10pt;\">   </span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">This section lists all Transactions for\
+    \ the selected Financial Document.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The section allows for setting various attributes for the Transactions,\
+    \ such as quantities and dates. This section also allows for inserting additional\
+    \ Transactions into the Document manually if the Document itself was created manually.\
+    \ The data is contained in a Collapsible/Expandable screen component that by default\
+    \ is in expanded state.&nbsp;</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><span\
+    \ style=\"font-size: medium;\"><strong style=\"color: windowtext;\">Documents\
+    \ Tab &gt; Transactions Tab &gt; Line Items Tab &gt; </strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\">Transaction Line Items Overview\
+    \ Section</strong></span><p style=\"font-size: 10pt; font-weight: normal;\"><span\
+    \ style=\"color: red;\">Data class: TRANS_VALUE_OVERVIEW (CONT_LINE_ITEM table)</span><span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The section gives an overview of all the Line Items for the selected\
+    \ Transaction. It will show quantities as well as monetary values for Pricing\
+    \ / Memo / Booking / Local currencies. The data in this section is all read-only.\
+    \ The data is provided through a view - V_TRANSACTION_VALUE_OVERVIEW - and the\
+    \ content of this section has limited customization possibilities due to this.<span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong style=\"color: rgb(0, 176, 80);\">Show / Hide Line Items Details</strong><strong>\
+    \ Button</strong></p><p style=\"font-size: 10pt; font-weight: normal;\">The button\
+    \ will open / close the Line Item Details section of the screen for managing the\
+    \ various types of Line Items of the selected Transaction.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">&nbsp;</p><p style=\"font-weight: normal;\"><strong\
+    \ style=\"font-size: medium;\">Transaction Line Items Overview Section &gt; </strong><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium;\">Quantity Line Items Tab</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\"\
+    >Data class: TRANS_DETAIL_QUANTITY (CONT_LINE_ITEM table)</span><span style=\"\
+    color: red; font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The Tab provides more details for the Quantity type of Line Items\
+    \ for the selected Transactions. It allows for editing the Line Item Description\
+    \ - this is typically printed on the Invoice Hardcopy. It also allows for changing\
+    \ the VAT Code (and thus VAT Rate) and the Sort Order for the Line Item.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong style=\"color: rgb(0,\
+    \ 176, 80);\">Update Price </strong><strong>Button</strong></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The button will pull the prices from the Price\
+    \ List(s) and re-populate the Line Items with the current prices.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><strong>&nbsp;</strong></p><p style=\"\
+    font-weight: normal;\"><strong style=\"font-size: medium;\">Transaction Line Items\
+    \ Overview Section &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size:\
+    \ medium;\">Fixed Value Line Items Tab</strong></p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><span style=\"color: red;\">Data class: TRANS_DETAIL_FIXEDVALUE\
+    \ (CONT_LINE_ITEM table)</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><span style=\"font-size: 10pt;\">The Tab is for managing the Fixed Value type\
+    \ of Line Items. The user can modify/delete existing Line Items as well as adding\
+    \ new Line Items.</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >&nbsp;</p><p style=\"font-weight: normal;\"><strong style=\"font-size: medium;\"\
+    >Transaction Line Items Overview Section &gt; </strong><strong style=\"color:\
+    \ rgb(0, 112, 192); font-size: medium;\">Free Unit Line Items Tab</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\"\
+    >Data class: TRANS_DETAIL_FREEUNIT (CONT_LINE_ITEM table)</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">The Tab is for managing the Free Unit\
+    \ type of Line Items. The user can modify/delete existing Line Items as well as\
+    \ adding new.</p><p style=\"font-size: 10pt; font-weight: normal;\">There are\
+    \ 2 types of Free Unit Line Items:</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong>1.&nbsp;&nbsp;&nbsp;&nbsp;</strong>Quantity Based - Free Unit</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"white-space:pre\"\
+    >\t\t</span>For this type the user can freely add the Unit, Quantity and Unit\
+    \ Price of the line item</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><strong>2.&nbsp;&nbsp;&nbsp;&nbsp;</strong>Free Unit Price Object</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><span style=\"white-space:pre\">\t\t</span>For\
+    \ this type the user selects a Price Object and based on the Price Object the\
+    \ Unit and Unit Price will be set. The user can add the Quantity number.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><br></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><strong style=\"color: rgb(0, 176, 80);\">Update\
+    \ Price </strong><strong>Button</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The button will pull the prices from the Price List(s) and re-populate\
+    \ the Line Items with the current prices.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">&nbsp;</p><p style=\"font-weight: normal;\"><strong style=\"font-size:\
+    \ medium;\">Transaction Line Items Overview Section &gt; </strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\">Percentage Line Items Tab</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\"\
+    >Data class: TRANS_DETAIL_PERCENTAGE (CONT_LINE_ITEM table)</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">The Tab provides is for managing the Percentage\
+    \ type of Line Items. The user can modify/delete existing Line Items as well as\
+    \ adding new Line Items. The percentage value to be applied to the Base Amount\
+    \ is given in % and stored as a fraction, i.e. 10% is stored as 0.1.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">Note that the percentage can be positive,\
+    \ zero, or negative.</p><p style=\"font-size: 10pt; font-weight: normal;\">There\
+    \ are 3 types of Percentage Line Items:</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">1.&nbsp;&nbsp;&nbsp;&nbsp;Percentage All<br><span style=\"font-size:\
+    \ 10pt;\"><span style=\"white-space:pre\">  <span style=\"white-space:pre\">\t\
+    </span></span>For this type the Base Amount will be automatically set to the sum\
+    \ of Pricing Values of all the other Line Items of the selected Transaction. In\
+    \ this case the Base Amount will be read-only.</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">2.&nbsp;&nbsp;&nbsp;&nbsp;Percentage Quantity<br><span\
+    \ style=\"font-size: 10pt;\"><span style=\"white-space:pre\">  <span style=\"\
+    white-space:pre\">\t</span></span>For this type the Base Amount will be automatically\
+    \ set to the sum of Pricing Values of the Quantity type of Line Items of the selected\
+    \ Transaction. In this case the Base Amount will be read-only</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">3.&nbsp;&nbsp;&nbsp;&nbsp;Percentage Manual<br><span\
+    \ style=\"font-size: 10pt;\"><span style=\"white-space:pre\">  <span style=\"\
+    white-space:pre\">\t</span></span>For this type the Base Amount can be added by\
+    \ the user.</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">&nbsp;</p><p style=\"font-weight: normal;\"\
+    ><strong style=\"font-size: medium;\">Transaction Line Items Overview Section\
+    \ &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Interest Line Items Tab</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\">Data class: TRANS_DETAIL_INTEREST (CONT_LINE_ITEM\
+    \ table)</span></p><p style=\"font-size: 10pt; font-weight: normal;\">The Tab\
+    \ provides is for managing the Interest Line Items. The user can modify/delete\
+    \ existing Line Items as well as adding new.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">When the period of the interest calculation given by the 'From Date'\
+    \ and the 'To Date' is greater than the Compounding Period, EC will add additional\
+    \ Interest Line Items to cater for the compounding.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\">When the Interest Base Rate is stored as a Daily Price\
+    \ Index value, this value will be picked up from the Daily Price Index table when\
+    \ the document is generated if the Interest Line Item has been configured as a\
+    \ Line Item Template. After the Document has been generated the Base Rate can\
+    \ be re-loaded from the Daily Price Index table by clearing out the Base Rate\
+    \ value for the Interest Line Item followed by a Save operation.<span style=\"\
+    font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><strong style=\"color: rgb(0, 176, 80);\">Update Interest Line Items </strong><strong>Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The button pick up the Interest\
+    \ Base Amount per the configuration of the Document Setup and then recalculate\
+    \ the Interest Line Item.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><br></p><p style=\"font-weight: normal;\"><strong style=\"font-size: medium;\"\
+    >Transaction Line Items Overview Section &gt; </strong><strong style=\"color:\
+    \ rgb(0, 112, 192); font-size: medium;\">Calculated Line Items Tab</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\"\
+    >Data class: TRANS_DETAIL_CALCULATED (CONT_LINE_ITEM table)</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">The Tab is for handling any Calculated\
     \ Line Items. From this tab the Calculation can be kicked off for the Calculated\
-    \ Line Items in the selected Transaction.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<u> Note </u> that this screen doesn't allow for adding\
-    \ or deleting any Calculated Line Items to the selected Transaction.</p>\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span style=\"color: rgb(0,\
-    \ 153, 0);\">Trace Document</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br> \
-    \   The Trace Document button will open a popup window showing the trace information\
-    \ for the selected Document. For more details on how the Tracing works,    please\
-    \ see online help for Business Function 'Document Tracing'.</p>\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><strong>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1. Document List Data Section\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    This section\
-    \ of the screen is in many aspects most important part of the CDG screen. It lists\
-    \ all the Documents available according to the Navigator    settings. Key data\
-    \ elements for each Document are listed.<br>    Each Document in the list can\
-    \ be selected and various operations can be performed for the selected Document.<br>\
-    \    Please use the 'Document Detail' button for more details for the selected\
-    \ Transaction.  \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t</p><p><strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t2. Transaction List Data Section\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    This section lists\
-    \ all the Transactions for the selected Document. Key data elements for each Transaction\
-    \ are listed.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t<u> Note </u> that for each Transaction this screen will show\
-    \ the quantity associated with the Transaction and the sum of all monetary values\
-    \ for the    Transaction - both the monetary values related to the Quantity Line\
-    \ Item AND any other Line Items attached to the Transaction.<br>    Please use\
-    \ the 'Transaction Detail' button for more details for the selected Document.</p>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h3>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    <strong style=\"color: rgb(0, 0, 153);\">Other features</strong>\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h3>\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Create\
-    \ Document Manually</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    Documents can be created manually by using\
-    \ the Insert icon in the EC Toolbar. A new record will be inserted into the Document\
-    \ List and the user will then    select Contract / Document Setup / Document Date\
-    \ / Document Status / Preceding Document (optional).<br>    By saving the Document\
-    \ will be generated.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Insert additional Transactions into\
-    \ the Document</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    If there for some reason is necessary to add\
-    \ additional Transactions to a Document this can easily be done by selecting \"\
-    Transaction\" from the Insert    button.<br>    The user can then select among\
-    \ the Transaction Templates defined for the Document Setup in use and insert a\
-    \ new, clean Transaction.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Delete Transactions /\
-    \ Line Items from the Document</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    When creating a new Document\
-    \ the system will automatically create Transactions according to the Transaction\
-    \ Templates defined for the Document Setup used    in combination with the actual\
-    \ data interfaced from the external system. For a given Document all of these\
-    \ Transactions may not be needed, for instance if    there are no quantities delivered\
-    \ for one or more of them. In this case the screen has a function to automatically\
-    \ delete all \"Empty Transactions\". A    Transaction is considered \"Empty\"\
-    \ when all the Line Items of the Transaction are \"Empty\". <u>Line Items are\
-    \ \"Empty\" according to these rules: </u>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p>\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>    - Line\
-    \ Item Type = \"Quantity\" Empty if there is no quantity<br>    - Line Item Type\
-    \ = \"Quantity Based - Free Unit\" Empty if there is no quantity<br>    - Line\
-    \ Item Type = \"Calculate Qty and Pricing Value\" Empty if there is no quantity<br>\
-    \    - Line Item Type = \"Fixed Value\" Empty if there is no Pricing Value (monetary\
-    \ value)<br>    - Line Item Type = \"Free Unit Price Object\" Empty if there is\
-    \ no Pricing Value (monetary value)<br>    - Line Item Type = \"Interest\" Empty\
-    \ if there is no Pricing Value (monetary value)<br>    - Line Item Type = \"Percentage\
-    \ All\" Empty if there is no Pricing Value (monetary value)<br>    - Line Item\
-    \ Type = \"Percentage Quantity\" Empty if there is no Pricing Value (monetary\
-    \ value)<br>    - Line Item Type = \"Percentage Manual\" Empty if there is no\
-    \ Pricing Value (monetary value)<br>    - Line Item Type = \"Calculate Pricing\
-    \ Value\" Empty if there is no Pricing Value (monetary value)<br>\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<u> Note </u> that when EC creates Documents automatically the\
-    \ \"Delete Empty Transactions\" is performed as part of the process in order to\
-    \ have the document ready    for validation.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    <p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>User Action</strong>\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t<br>    For each Document listed in the screen there is a 'User\
-    \ Action' drop-down. By selecting an action item and saving EC will perform the\
-    \ selected action.  </p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>The    list of actions\
-    \ is configurable, but <u>the standard actions are:</u>\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<em> - Recommended Action: </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t</strong> This action will execute the action proposed by EC as a result\
-    \ of the Analyse function (see above).<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em> - Set to Valid 1: </em>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> This will move the selected document\
-    \ from 'Open' state to the 'Valid 1' state. EC will generate all the posting information\
-    \ per Line Item    when moving a Document to Valid 1 state.<br>\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>\
-    \ - Set back to Open: </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> This\
-    \ will move the selected document from the 'Valid 1' state back to the 'Open'\
-    \ state. EC will delete all the posting information per    Line Item when moving\
-    \ a Document back to the Open state.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em> - Update Prices:\
-    \ </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> This will repopulate\
-    \ all the Transactions and Line Items of the selected Document with the current\
-    \ values of the prices found in the Price    Lists and then recalculate the corresponding\
-    \ monetary values.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em> - Update from I/F: </em>\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> This will repopulate all the Transactions\
-    \ and Line Items of the selected Document with data from the Interface tables\
-    \ if there are any    such new data.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em> - Update\
-    \ Prices and from I/F: </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\
-    \ Combination of 'Update Prices' and 'Update from I/F' - see above.<br>\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t<em> - Delete (no recreate): </em>\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t</strong> Will delete the selected Document and if the\
-    \ Document was based on interfaced data the corresponding interfaced data will\
-    \ have the    'Ignore' flag set. When running the Process (see above) any interfaced\
-    \ records set to Ignore will not be part of the document processing.<br>\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t<em> - Delete (and recreate): </em>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> Will delete the selected Document and\
-    \ if the Document was based on interfaced data the corresponding interfaced data\
-    \ will be    released for re-processing. When running the Process (see above)\
-    \ the interfaced records will be part of the document processing. This variant\
-    \ is useful    when generated document had some errors and the reason for the\
-    \ errors can be corrected before generating the document again.<br>\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t<em> - Delete Empty Transactions: </em>\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> This action will delete all transactions\
-    \ considered as 'empty'. Please see section above for more details.<br>\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em> - Delete Empty Line Items: </em>\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> Will delete all empty Line\
-    \ Items from the Transactions of the selected Document. This action will at least\
-    \ leave one Line Item    for the Transaction even if it is 'empty'. Please see\
-    \ section above for more details.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<em>- Reverse: </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    </strong> Will create a Reversal Document of the selected Document. The Document\
-    \ to reverse must have status BOOKED in order to be reversed.<br>\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em> - Re-calculate Source Split: </em>\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> Allocation of quantities\
-    \ to Profit Centers can be based on a Source Split. This is a dynamical split\
-    \ using one set of numbers    (Production quantities) to generate a split and\
-    \ then apply this split to the Transaction.<br>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t<em> - Update Exchange Rates: </em>\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong> This action will read Exchange Rates\
-    \ from the Exchange Rate tables and repopulate all the exchange rates in use by\
-    \ the Document.    All monetary values will be re-calculated.</p>\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Number of decimals for Quantity numbers </strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    The number of\
-    \ decimals for the Quantity 1 - 4 is by default set to 3 decimals. This can be\
-    \ overridden for each individual quantity by setting the \"Print    UOM Decimals\"\
-    \ attributes at the Transaction Template. Note that these attributes are also\
-    \ used by the standard Invoice Hardcopy reports coming with the EC    product.</p>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Transaction Origin Country\
-    \ and Destination Country</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<br>    The origin country and destination country on a transaction\
-    \ come from transaction template. They are also changed when updating the delivery\
-    \ point on a    transaction. The new value will be the country of new delivery\
-    \ point. This logic can be overwritten using user exits    ue_cont_transaction.GetOriginCountryForTrans\
-    \ and ue_cont_transaction .GetDestinationCountryForTrans.</p>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Alternate customer on a document</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    By default,\
-    \ it is not allowed to choose a different customer on a document than that chosen\
-    \ for on company split for the template (alternate customer). To    turn on this\
-    \ feature, tick the checkbox on contract attribute \"Allow Alternative Customer\"\
-    , and enable the class relation FIN_CARGO_DOCUMENTS.CUSTOMER in    screen Configuration\
-    \ - System - Class Relations.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<p>    Manually changing is only allowed on standalone and manually\
-    \ created documents (Although it can be changed for MPD documents processed using\
-    \ the IFAC    tables).</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t<h2>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t<strong style=\"color: rgb(0, 0, 153);\">Tab Reports</strong>\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h2>\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>This tab shows the generated reports\
-    \ for current document, and contains sections for:  </p>\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>1. Document List Data Section</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>   This is\
-    \ the list of documents available according to the Navigator settings. The list\
-    \ is read only.    </p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<strong>2. Reports Data Section</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>   This section allows creating various reports\
-    \ for the selected document. Which report to run is selected in the 'Reports'\
-    \ drop-down. The content of this drop-down is controlled by the configuration\
-    \ in Business Function 'Report Document Setup.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span style=\"color: rgb(0, 153,\
-    \ 0);\">Generate Report</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t<br> Generate Report button will generate the report\
-    \ and store it in the EC database.\t</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>3. Reports List Data Section</strong>\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>  The section\
-    \ contains produced report(s). Here the report can be viewed as well as verified\
-    \ and sent.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t<strong>Button <span style=\"color: rgb(0, 153, 0);\">Regenerate Selected\
-    \ Report</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t<br> This button will delete the selected report and regenerate\
-    \ it. Provisional reports will be deleted only.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span style=\"color:\
-    \ rgb(0, 153, 0);\">Regenerate All Reports</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br> This button will delete\
-    \ all reports and regenerate them. Provisional reports will be deleted only.\t\
-    </p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t<strong>Button <span style=\"color: rgb(0, 153, 0);\">View</span>\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>\
-    \ This button will download and view selected report.\t</p>\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span\
-    \ style=\"color: rgb(0, 153, 0);\">Send</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br> This button will\
-    \ open a pop up to send the selected report.\t</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>Button <span\
-    \ style=\"color: rgb(0, 153, 0);\">Refresh</span>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br> This button\
-    \ will refresh the report list table.\t\t\t\t\t\t</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h3>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong style=\"\
-    color: rgb(0, 0, 153);\">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTab Parameter Values\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong></h3>\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>  This\
-    \ tab shows the list of parameters used when the report was created.\t\t</p>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<h3>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\">\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTab Distribution Configuration\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t</strong></h3>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t<p>   This tab is used to maintain the distribution list\
-    \ for the selected report name, which is to be used for the Send button. When\
-    \ a distribution is set for one report name, all reports with this report name\
-    \ will have the same distribution. Then <u>all documents</u> which have reports\
-    \ with this report name, will have the same distribution.</p>\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\
-    \   The report will need at least one list per Report Status:</p>\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<ul>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<li>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<u>Provisional:</u> To be able to send Provisional\
-    \ reports, at least one Distribution List is needed.</li>\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t<u>Verified:</u> To be able to send Verified reports, at least one Distribution\
-    \ List is needed.</li>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<u>Approved:</u> To be able\
-    \ to send Approved reports, at least one Distribution List is needed.</li>\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t</ul>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<h3>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\">\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\tTab Send Log\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong></h3>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>  This tab shows a log\
-    \ of dates when the report was sent. It also shows a list of recipients for each\
-    \ send date. More details are available in Business Function 'RP.0003'.</p>\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t<h3>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\">\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTab\
-    \ Publish Report\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong></h3>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>  This tab is used to\
-    \ give users access to a limited number of generated reports. More details are\
-    \ available in Business Function 'RP.0003'.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t<h2>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\">Tab Pending</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t</h2>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>    This tab shows interfaced data (from IFAC_CARGO_VALUE\
-    \ table) waiting to be processed in \"Documents\" tab. When processed, all data\
-    \ will disappear from this    tab.  \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<u> The tab is divided into 6 tables:\
-    \ </u></p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<strong>1. Documents To Process\
-    \ </strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    Documents waiting to be processed.</p>\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<p><strong>Transactions to Process: </strong>\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t<br>    All transactions which go into highlighted document in \"Documents\
-    \ To Process\". This table shows one record per transaction. User is allowed to\
-    \ override    default transaction template for the records being interfaced. It\
-    \ has a drop down which lists all possible transaction templates for the contract\
-    \ being    interfaced. There is a possibility to switch back to default transaction\
-    \ template provided by system, by selecting \"Default template\" option from \
-    \   drop-down.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><strong>2. Lines to Process:</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t<br>    List of the Line Items for the selected Transaction</p>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><strong>3. Records To Process </strong>\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t<br>    All records which goes into the highlighted Line\
-    \ Item in \"Lines To Process\".</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><strong>5.\
-    \ Processed Interface Records</strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br> \
-    \   Reference to the set of data in the Interface table</p>\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t<p><strong>6. Interface Process Log</strong>\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t<br>    Interface status for the highlighted row in \"Records\
-    \ To Process\". This is the log of the processing of the records when the data\
-    \ is interfaced to the    IFAC_CARGO_VALUE table.</p>\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t<p/>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t<strong style=\"color: rgb(0, 0, 153);\">Tab Process Log</strong>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</h2>    When using the \"Process\" function\
-    \ the system will process any interfaced data and generate documents according\
-    \ to the data being interfaced. EC generates a    Log for this process and this\
-    \ Log can be viewed at the Process Log Tab.<br>    - The level of detail is controlled\
-    \ by system attribute 'DOC_GEN_LOG_LEVEL'. This can be set to either 'INFO' or\
-    \ 'DEBUG' The Log will tell if there are any    records in the interface had errors\
-    \ or mismatches compared to the contract configuration which lead to Documents\
-    \ NOT being generated.<br>    - The top section refers to a given 'run' - i.e.\
-    \ there is a new 'run' each time the user has pressed the 'Process' button.For\
-    \ each row in the top section there is a list of processing log details below.<p/>\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t<strong>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<em>NOTE: Screen\
-    \ Customization </em>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</strong>\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br>    The default \"Out of the Box\" version\
-    \ of the CDG screen contains quite a lot of columns in the various sections. To\
-    \ make the screen more fit for purpose    each project should consider making\
-    \ changes to the various sections by hiding/showing columns as well as changing\
-    \ the sort order of the various columns.</p>"
+    \ Line Items in the selected Transaction.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong>Note:</strong> It is not allowed to add or delete any Calculated\
+    \ Line Items for the selected Transaction.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong style=\"color: rgb(0, 176, 80);\">Run Calculation </strong><strong>Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The button will recalculate,\
+    \ i.e. run the EC Calculation, for the selected Calculated Line Item.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">&nbsp;</p><style=\"font-size: 10pt;=\"\
+    \" font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext; font-size:\
+    \ medium;\">Documents Tab &gt; Transactions Tab &gt; Line Items Tab &gt; </strong><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium;\">Transaction Exchange Rates\
+    \ Section</strong><p style=\"font-size: 10pt; font-weight: normal;\"><span style=\"\
+    color: red;\">Data class: FIN_DOC_EXCHANGE_RATE</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The Tab shows the exchange rates for the selected\
+    \ Transaction. Data is read-only.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">If the Group currency isn't defined, i.e. System Attribute GROUP_CURRENCY_CODE\
+    \ is null, then the Booking-to-Group exchange rate will be left out of the list\
+    \ of exchange rates.</p><p style=\"font-size: 10pt; font-weight: normal;\">If\
+    \ the Local currency isn't defined, i.e. the Local Currency of the Contract Owner\
+    \ Company is null, then the Booking-to-Local exchange rate will be left out of\
+    \ the list of exchange rates.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >If the Document has no Memo currency defined, then the Pricing-to-Memo exchange\
+    \ rate will be left out of the list of exchange rates.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">Please note that the data in this class is based\
+    \ on a view - V_EXCHANGE_RATES.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >Due to this the content of this section can be customized to a lesser degree</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size:\
+    \ 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext;\
+    \ font-size: medium;\">Documents Tab &gt; Transactions Tab &gt; Transaction Information\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Transaction Details Section</strong><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\">Data class: FIN_CARGO_TRANS_DETAIL (CONT_TRANSACTION\
+    \ table)</span></p><p style=\"font-size: 10pt; font-weight: normal;\">The section\
+    \ is for managing additional attributes of the selected Transaction that is typically\
+    \ not managed by the Transaction Section (see above).&nbsp;</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\
+    \" normal;\"=\"\"><strong style=\"color: windowtext; font-size: medium;\">Documents\
+    \ Tab &gt; Transactions Tab &gt; Transaction Information Tab &gt; </strong><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium;\">Transaction Header / Footer\
+    \ Section</strong><p style=\"font-size: 10pt; font-weight: normal;\"><span style=\"\
+    color: red;\">Data class: CONT_TRANS_COMMENTS (CONT_TRANS_COMMENTS table)</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The section manages comments\
+    \ to appear in front of the Transaction details (Header section) and after the\
+    \ Transaction details (Footer section) on the Document Invoice Hardcopy. When\
+    \ creating the Document / Transaction the system copies the Transaction Comments\
+    \ from the Transaction Template to the Transaction. The user can add, delete (icons\
+    \ on the EC Toolbar) and modify the comments for each Transaction.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\"\
+    \ font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext; font-size:\
+    \ medium;\">Documents Tab &gt; Transactions Tab &gt; </strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\">Transaction Share Distribution Tab</strong><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The Tab manages the share distribution\
+    \ for Profit Centre and Company in the appropriate sections:</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">Profit Centre section and Company section.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">For Documents based on interfaced\
+    \ data the Shares will be read-only as in this case the quantities are controlled\
+    \ by other sources - either EC Sales Contract Account data or uploaded data from\
+    \ external systems.</p><p style=\"font-size: 10pt; font-weight: normal;\">In both\
+    \ cases the Comments field is open for edit.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"\
+    =\"\"><strong style=\"color: windowtext; font-size: medium;\">Documents Tab &gt;\
+    \ Transactions Tab &gt; Transaction Share Distribution Tab &gt;</strong><span\
+    \ style=\"color: rgb(127, 127, 127);\"> </span><strong style=\"color: rgb(0, 112,\
+    \ 192); font-size: medium;\">Profit Centre Section</strong><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><span style=\"color: red;\">Data class:</span>\
+    \ <span style=\"color: red;\">CONT_LINE_ITEM_DIST_SUM (CONT_LINE_ITEM_DIST table)</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">If the Share (%) is changed,\
+    \ quantity fields will dynamically recalculate new data.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The Share (%) can also be calculated based on the\
+    \ Share Value entries, i.e.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"font-size: 10pt;\"\
+    ><br></span></p><p style=\"font-size: 10pt; font-weight: normal;\"><strong>Profit\
+    \ Centre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share\
+    \ Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share\
+    \ %</strong></p><p style=\"font-size: 10pt; font-weight: normal;\">Profit Centre\
+    \ A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gives&nbsp;&nbsp;&nbsp;<span\
+    \ style=\"white-space:pre\">  </span>60%</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">Profit Centre B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gives&nbsp;&nbsp;&nbsp;<span\
+    \ style=\"white-space:pre\">  </span>40%</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">&nbsp;</p><p style=\"font-size: 10pt; font-weight: normal;\">The data\
+    \ in this section is read-only when the data has been interfaced through the IFAC\
+    \ table.</p><p style=\"font-size: 10pt; font-weight: normal;\"><strong style=\"\
+    font-size: 10pt;\">Note:</strong><span style=\"font-size: 10pt;\"> If using Stream\
+    \ Items and there are no Allocation Stream Items defined, then the attributes\
+    \ Allocation SI Code and Allocation Basis SI Name are hidden.</span></p><p style=\"\
+    font-size: 10pt;\"><span style=\"font-weight: bold;\"><span style=\"font-size:\
+    \ 10pt;\">N</span><span style=\"font-size: 10pt;\">ote</span></span><strong style=\"\
+    font-weight: normal; font-size: 10pt;\">:</strong><span style=\"font-weight: normal;\
+    \ font-size: 10pt;\"> A Transaction may have up to 4 UOMs. Only those UOM's that\
+    \ are in use will be visible in the screen.</span><span style=\"color: rgb(127,\
+    \ 127, 127); font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"\
+    =\"\"><strong style=\"color: windowtext; font-size: medium;\">Documents Tab &gt;\
+    \ Transactions Tab &gt; Transaction Share Distribution Tab &gt;</strong><span\
+    \ style=\"color: rgb(127, 127, 127);\"> </span><strong style=\"color: rgb(0, 112,\
+    \ 192); font-size: medium;\">Company Section</strong><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><span style=\"color: red;\">Data class:</span> <span\
+    \ style=\"color: red;\">CONT_LI_DIST_COMP_SUM (CONT_LI_DIST_COMPANY table)</span><span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">If the Share (%) is changed, quantity fields will dynamically recalculate\
+    \ new data.</p><p style=\"font-size: 10pt; font-weight: normal;\">If there are\
+    \ numbers for the Share Values, the Share (%) will be calculated based on these\
+    \ numbers.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The data in this section is read-only when the\
+    \ data has been interfaced through the IFAC table.<span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"><strong>Note:</strong>\
+    \ A Transaction may have up to 4 UOMs. Only those UOM's that are in use will be\
+    \ visible in the screen.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\"\
+    \ font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext; font-size:\
+    \ medium;\">Documents Tab &gt; Transactions Tab &gt; </strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\">Transaction Quantity Distribution\
+    \ Tab</strong><p style=\"font-size: 10pt; font-weight: normal;\"><span style=\"\
+    font-size: 10pt;\">The Tab displays quantity distribution details of the selected\
+    \ Transaction.</span></p><p style=\"font-size: 10pt; font-weight: normal;\">For\
+    \ manually created Documents this tab allows for updating the quantities.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">For Documents based on interfaced\
+    \ data the quantities will be read-only as in this case the quantities are controlled\
+    \ by other sources - either EC Sales Contract Account data or uploaded data from\
+    \ external systems. In all cases the Comments field is open for edit.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\"\
+    \ font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext; font-size:\
+    \ medium;\">Documents Tab &gt; Transactions Tab &gt; Transaction Quantity Distribution\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Profit Centre Section</strong><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><span style=\"color: red;\">Data class:</span> <span style=\"color: red;\">FIN_DOC_PROFIT_CENTER\
+    \ (CONT_LINE_ITEM_DIST table)</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"font-size: 10pt;\">The section will display Profit Centre\
+    \ distribution details for the selected Transaction. There will be different layout\
+    \ depending on whether Stream Items are in use or not. This section expanded by\
+    \ default.</span></p><p style=\"font-size: 10pt; font-weight: normal;\">When changing\
+    \ the quantities in this section and saving, EC will recalculate the quantities\
+    \ at the Transaction level (upwards) as well as the quantities at the Company\
+    \ level (downwards). The share percentages for the Profit Centre level will be\
+    \ updated per the new quantities.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">&nbsp;</p><p style=\"font-size: 10pt; font-weight: normal;\"><strong>Note:</strong>\
+    \ A Transaction may have up to 4 UOMs. Only those UOM's that are in use will be\
+    \ visible in the scren.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\"\
+    \ font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext; font-size:\
+    \ medium;\">Documents Tab &gt; Transactions Tab &gt; Transaction Quantity Distribution\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Company Section</strong><p style=\"font-size: 10pt; font-weight: normal;\"><span\
+    \ style=\"color: red;\">Data class:</span> <span style=\"color: red;\">FIN_DOC_COMPANY\
+    \ (CONT_LI_DIST_COMPANY table)</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The section will display Company distribution details for the selected\
+    \ Transaction. There will be different layout depending on whether Stream Items\
+    \ are in use or not. This section expanded by default.<span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >When changing the quantities in this section and saving, EC will recalculate\
+    \ the quantities at the Profit Centre level and Transaction level. The share percentages\
+    \ for the company level will be updated per the new quantities.<span style=\"\
+    font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><strong>Note:</strong> A Transaction may have up to 4 UOMs. Only those UOM's\
+    \ that are in use will be visible in the screen.<span style=\"color: red; font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong\
+    \ style=\"color: windowtext; font-size: medium;\">Documents Tab &gt; Transactions\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Transaction Net / Gross Quantity Tab</strong><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\">Data class: N/A. This section is currently\
+    \ not using a class, but is using static query-file and layout-file.</span><span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The tab handles the hydrocarbon Quantities for each Transaction of\
+    \ a Document. These quantities will be used by the Quantity-based Line Items where\
+    \ the financial value is calculated by Quantity times a Unit Price.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">Each transaction can hold four sets of\
+    \ quantities:<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">1.&nbsp;&nbsp;&nbsp;&nbsp;Net Quantities for the\
+    \ current transaction.</p><p style=\"font-size: 10pt; font-weight: normal;\">2.&nbsp;&nbsp;&nbsp;&nbsp;Gross\
+    \ Quantities for the current transaction.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">3.&nbsp;&nbsp;&nbsp;&nbsp;Preceding Net Quantities copied from a corresponding\
+    \ transaction from a preceding document / transaction.<br><span style=\"font-size:\
+    \ 10pt; white-space: pre;\">  <span style=\"white-space:pre\">\t</span></span><span\
+    \ style=\"font-size: 10pt;\">These quantities will be NULL if there is no preceding\
+    \ document for the selected financial Document. Preceding document / transaction\
+    \ quantities are typically used together with two-step invoicing where the sales\
+    \ quantity&nbsp;<br></span><span style=\"font-size: 10pt; white-space: pre;\"\
+    >  <span style=\"white-space:pre\">\t</span></span><span style=\"font-size: 10pt;\"\
+    >changes from the first step (Provisional Invoice) to the second step (Final Invoice)\
+    \ and the Final Invoice needs to show both the initial quantity and the final\
+    \ quantity.</span></p><p style=\"font-size: 10pt; font-weight: normal;\">4.&nbsp;&nbsp;&nbsp;&nbsp;Preceding\
+    \ Gross Quantities copied from a corresponding transaction from a preceding document\
+    \ / transaction.<br><span style=\"font-size: 10pt;\"><span style=\"white-space:pre\"\
+    >  <span style=\"white-space:pre\">\t</span></span>These quantities will be NULL\
+    \ if there is no preceding document for the selected financial Document. Normally\
+    \ only the Net quantities are in use as the Gross quantities are mainly for handling\
+    \ Crude quantities where the <br><span style=\"white-space:pre\">  <span style=\"\
+    white-space:pre\">\t</span></span>Gross quantity includes the water in the oil\
+    \ and the Net quantities are without water. Each set of quantities can hold up\
+    \ to 4 Units of Measure (UOM) as defined by the Contract.</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><u>The rules for enabling / disabling\
+    \ the various quantity entry fields are as follows:</u><span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All quantity entry fields are read-only\
+    \ if the Document Level of the Document is set to VALID1, VALID2, TRANSFER, or\
+    \ BOOKED.</p><p style=\"font-size: 10pt; font-weight: normal;\">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All\
+    \ the Preceding quantity fields are always read-only.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Net quantity\
+    \ entry fields are read-only if the data has been interfaced.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Gross\
+    \ quantity entry fields are read-only if the data has been interfaced.<span style=\"\
+    font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><strong>Note:</strong> A Transaction may have up to 4 UOMs. Only those UOM's\
+    \ that are in use will be visible in the screen.<span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"\
+    font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color:\
+    \ windowtext; font-size: medium;\">Documents Tab &gt; Document Information Tab\
+    \ &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Document Details Section</strong><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><span style=\"color: red;\">Data class: FIN_DOC_DETAIL (CONT_DOCUMENT table).</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"font-size: 10pt;\"\
+    >The section is for managing Document attributes that are typically not listed\
+    \ in the Document section (see above).</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"\
+    =\"\"><strong style=\"color: windowtext; font-size: medium;\">Documents Tab &gt;\
+    \ Document Information Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192);\
+    \ font-size: medium;\">Customer Details Section</strong><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><span style=\"color: red;\">Data class: CONT_DOC_CUST_DETAIL\
+    \ (CONT_DOCUMENT_COMPANY table)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The section defines the detailed\
+    \ information of the Customer for the selected financial Document.<span style=\"\
+    font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong\
+    \ style=\"color: windowtext; font-size: medium;\">Documents Tab &gt; Document\
+    \ Information Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size:\
+    \ medium;\">Vendor Details Section</strong><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\">Data class: CONT_DOC_VEND_DETAIL (CONT_DOCUMENT_COMPANY\
+    \ table)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The section defines the detailed information of\
+    \ the Vendor(s) for the selected financial Document.<span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"\
+    font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color:\
+    \ windowtext; font-size: medium;\">Documents Tab &gt; Document Information Tab\
+    \ &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Document Header / Footer Section</strong><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\">Data class: CONT_DOCUMENT_TEXT_ITEM (CONT_DOCUMENT_TEXT_ITEM\
+    \ table)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The section defines Header and Footer text objects\
+    \ for a Document.</p><p style=\"font-size: 10pt; font-weight: normal;\">All data\
+    \ elements of this section are disabled when the Document is not OPEN, i.e. Document\
+    \ Level = VALID1 | VALID2 | TRANSFER | BOOKED.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><strong>&nbsp;</strong></p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><strong>Document Header Sub-Section</strong><strong style=\"\
+    font-size: 10pt;\">&nbsp;</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong><em>- Header Section, Multi Column:</em></strong></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">The text objects defined will be part\
+    \ of the header section of the document. In this section the user can add text\
+    \ objects that are divided into three columns. There is no limit to the number\
+    \ of characters in each column, but please note that if there are too many characters\
+    \ in a column the text might flow into the next column or wrap when printed on\
+    \ the document hard copy.<strong style=\"font-size: 10pt;\"><em>&nbsp;</em></strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Header Section,\
+    \ Single Column:</em></strong></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >These text objects will also be part of the header section of the document. The\
+    \ text will be in one single column. There is no limit to the number of characters\
+    \ for the column, but please note that if there are too many characters the text\
+    \ might wrap when printed on the document. The text is left aligned.<strong style=\"\
+    font-size: 10pt;\">&nbsp;</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong>Document Footer Sub-Section</strong><strong style=\"font-size:\
+    \ 10pt;\"><em>&nbsp;</em></strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong><em>- Footer Section, Multi Column:</em></strong></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">The text objects defined will be part\
+    \ of the footer section of the document. In this section the user can add text\
+    \ objects that are divided into three columns. There is no limit to the number\
+    \ of characters in each column, but please note that if there are too many characters\
+    \ in a column the text might flow into the next column or wrap when printed on\
+    \ the document hard copy.<strong style=\"font-size: 10pt;\"><em>&nbsp;</em></strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong><em>- Footer Section,\
+    \ Single Column:</em></strong></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >These text objects will also be part of the footer section of the document. The\
+    \ text will be in one single column. There is no limit to the number of characters\
+    \ for the column, but please note that if there are too many characters the text\
+    \ might wrap when printed on the document. The text is left aligned.<span style=\"\
+    font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >Within all sections, there is a sort order support. Each text object will have\
+    \ a sort number. The header section multi column text objects are sorted together\
+    \ with the header section single column text objects. The same concept applies\
+    \ for the footer text objects as well.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The user can add and delete\
+    \ text objects from all the four sections. Text objects can be left blank to cater\
+    \ for line spacing or supporting data elements that will be filled in manually\
+    \ on the Invoice Hardcopy PDF, such as a signature.<span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"\
+    font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color:\
+    \ windowtext; font-size: medium;\">Documents Tab &gt; </strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\">Exchange Rate Tab</strong><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\">Data class:\
+    \ FIN_DOC_EXCHANGE_RATE</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><span style=\"color: red;\"> </span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\"> </span></p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\">The Tab shows exchange rates for ALL transactions of\
+    \ the selected Financial Document. The data is read-only in the top section. There\
+    \ are 4 variants of rates listed for each transaction:<span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pricing-to-Booking</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pricing-to-Memo</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Booking-to-Local</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Booking-to-Group</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">&nbsp;</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">If the Group currency isn't defined, i.e. System\
+    \ Attribute GROUP_CURRENCY_CODE is null, then the Booking-to-Group exchange rate\
+    \ will be left out of the list of exchange rates.<span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\">If the Local\
+    \ currency isn't defined, i.e. the Local Currency of the Contract Owner Company\
+    \ is null, then the Booking-to-Local exchange rate will be left out of the list\
+    \ of exchange rates.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">If the Document has no Memo currency defined,\
+    \ then the Pricing-to-Memo exchange rate will be left out of the list of exchange\
+    \ rates.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><strong style=\"color: rgb(0, 176, 80);\">Update\
+    \ All Rates for This Transaction </strong><strong>Button</strong></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">The button&nbsp;will read the exchange\
+    \ rates from the Exchange Rate table in EC for all four exchange rate variants\
+    \ (Pricing-to-Booking / Pricing-to-Memo / Booking-to-Local / Booking-to-Group)\
+    \ and apply them to this transaction.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong style=\"font-size: 10pt; color: rgb(0, 176, 80);\">Update\
+    \ All Rates for All Transactions </strong><strong style=\"font-size: 10pt;\">Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The button will read the exchange\
+    \ rates from the Exchange Rate table in EC for all four exchange rate variants\
+    \ (Pricing-to-Booking / Pricing-to-Memo / Booking-to-Local / Booking-to-Group)\
+    \ and apply them to all transactions of the selected Document.<strong style=\"\
+    font-size: 10pt; color: rgb(0, 176, 80);\">&nbsp;</strong></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><strong style=\"color: rgb(0, 176, 80);\">Copy\
+    \ All Rates of Selected Transaction to All Other Transactions </strong><strong>Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The button&nbsp;will&nbsp;<strong>copy</strong>&nbsp;the\
+    \ four exchange rate variants (Pricing-to-Booking / Pricing-to-Memo / Booking-to-Local\
+    \ / Booking-to-Group) of the selected transaction and apply them to all other\
+    \ transactions of the selected Document having the same from/to currencies.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">&nbsp;</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">Please note that the data in this class is based\
+    \ on a view - V_EXCHANGE_RATES.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >Due to this the content of this section can be customized to a lesser degree.<span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"\
+    =\"\"><strong style=\"color: windowtext; font-size: medium;\">Documents Tab &gt;\
+    \ Exchange Rate Tab &gt;</strong><strong style=\"color: rgb(0, 112, 192); font-size:\
+    \ medium;\"> Exchange Rate for Selected Transaction Section</strong><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\">Data class:\
+    \ FIN_DOC_EX_RATE_MAINTAIN&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\"> </span></p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><span style=\"color: red;\"> </span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The section shows the exchange rate of the Transaction\
+    \ selected in the upper table.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">If the two currencies of the\
+    \ exchange rate variant are the same, then the record is read-only and the exchange\
+    \ rate is set to 1.0000 by the system.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This section allows for updating\
+    \ the Forex Date, Forex Rate, and Inverted Forex Rate. Please note that it is\
+    \ not allowed to update the Forex Rate and Inverted Forex Rate at the same time.<strong\
+    \ style=\"font-size: 10pt; color: rgb(0, 176, 80);\">&nbsp;</strong></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><strong style=\"color: rgb(0, 176, 80);\"\
+    >Update Rate for This Transaction </strong><strong>Button</strong></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">The button will&nbsp;read the exchange\
+    \ rate from the Exchange Rate table in EC and apply it to the selected Transaction.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong style=\"color: rgb(0,\
+    \ 176, 80);\">&nbsp;</strong><strong style=\"font-size: 10pt; color: rgb(0, 176,\
+    \ 80);\">Copy Rate to All Other Transactions </strong><strong style=\"font-size:\
+    \ 10pt;\">Button</strong></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >The button will copy the exchange rate of this Transaction and apply them to\
+    \ the same exchange rate variant to all other Transactions within the Document\
+    \ having the same from/to currencies.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong style=\"color: red;\">&nbsp;</strong></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">Please note that the data in this class is based\
+    \ on a view - V_FIN_DOC_EX_RATE_MAINTAIN.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">Due to this the content of this section can't be customized.<strong\
+    \ style=\"font-size: 10pt;\">&nbsp;</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"\
+    =\"\"><strong style=\"color: windowtext; font-size: medium;\">Documents Tab &gt;\
+    \ </strong><strong>Banking Details Tab </strong><strong style=\"color: windowtext;\"\
+    >&gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\">Vendor\
+    \ section</strong><p style=\"font-size: 10pt; font-weight: normal;\"><span style=\"\
+    color: red;\">Data class: CONT_DOCUMENT_VENDOR (CONT_DOCUMENT_COMPANY table)</span><span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The section shows the banking details for the Vendor(s) of the financial\
+    \ Document. It also includes the payment terms for each vendor. This section allows\
+    \ for updating the VAT Reg No, Payment Base Date, and Payment Date for each Vendor.<span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">When updating the Payment Base Date and saving, EC will recalculate\
+    \ the Payment Date per the Payment Terms. When updating <u>both</u> the Payment\
+    \ Base Date and the Payment Date at the same time, EC will <u>not</u> calculate\
+    \ the Payment Date per the Payment Terms.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size:\
+    \ 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext;\
+    \ font-size: medium;\">Documents Tab &gt; </strong><strong>Banking Details Tab\
+    \ </strong><strong style=\"color: windowtext;\">&gt; </strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\">Customer section</strong><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\">Data class:\
+    \ CONT_DOCUMENT_CUSTOMER (CONT_DOCUMENT_COMPANY table)</span><span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >The section shows the banking details for the Customer of the Financial Document.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This section allows for updating\
+    \ the VAT Reg No of the Customer.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">&nbsp;</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><strong>Documents Tab &gt; Banking Details Tab\
+    \ &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Totals section</strong></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><span style=\"color: red;\">Data class: N/A</span><span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\">At the bottom\
+    \ of the tab there are two additional data entries:<span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total\
+    \ amount in words</p><p style=\"font-size: 10pt; font-weight: normal;\"><span\
+    \ style=\"white-space:pre\">    <span style=\"white-space:pre\">\t\t</span></span>This\
+    \ is the total booking value of the Financial Document expressed in words.</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"font-size: 10pt;\"\
+    ><span style=\"white-space:pre\">    <span style=\"white-space:pre\">\t\t</span></span>This\
+    \ is generated by EC if the \"Amount in Words\" attribute of the Document Setup\
+    \ has been set to 'Yes'</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total amount receivable/payable\
+    \ by Contract Owner Company<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">Please note that this section\
+    \ is currently not using a data class directly - it is using a static query file\
+    \ together with a static layout file.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size:\
+    \ 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color: rgb(0, 112,\
+    \ 192); font-size: medium;\">Reports Tab</strong><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The Tab shows the generated reports for current document, and contains\
+    \ sections for:</p><p style=\"font-size: 10pt; font-weight: normal;\"><strong>&nbsp;</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal; font-size: medium;\"><strong>Reports\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Document List Data Section</strong><strong> </strong></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><span style=\"color: red;\">Data class: FIN_CARGO_SIMPLE\
+    \ (CONT_DOCUMENT table)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This is the list of documents\
+    \ available per the Navigator settings. The list is read only.</p><p style=\"\
+    font-size: 10pt; font-weight: normal;\">&nbsp;</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal; font-size: medium;\"><strong>Reports Tab &gt; </strong><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium;\">Reports Data Section</strong><strong>\
+    \ </strong></p><p style=\"font-size: 10pt; font-weight: normal;\"><span style=\"\
+    color: red;\">Table class: REPORT (REPORT table)</span><span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >The section allows creating various reports for the selected document. Which\
+    \ report to run is selected in the 'Reports' drop-down. The content of this drop-down\
+    \ is controlled by the configuration in Business Function 'Report Document Setup'.<strong\
+    \ style=\"font-size: 10pt; color: rgb(0, 176, 80);\">&nbsp;</strong></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><strong style=\"color: rgb(0, 176, 80);\"\
+    >Generate Report </strong><strong>Button</strong></p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\">The button will generate the report and store it in the\
+    \ EC database.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">Produced reports can be viewed as well as verified\
+    \ and sent.<strong style=\"font-size: 10pt; color: rgb(0, 176, 80);\">&nbsp;</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong style=\"color: rgb(0,\
+    \ 176, 80);\">Regenerate Selected Report</strong><strong> Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The button will delete the selected\
+    \ report and regenerate it. Provisional reports will be deleted only.<strong style=\"\
+    font-size: 10pt; color: rgb(0, 176, 80);\">&nbsp;</strong></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><strong style=\"color: rgb(0, 176, 80);\">Regenerate\
+    \ All Reports</strong><strong> Button</strong></p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\">The button will delete all reports and regenerate them.\
+    \ Provisional reports will be deleted only.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong style=\"color: rgb(0, 176, 80);\">View</strong><strong> Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This button will download and\
+    \ view selected report.<strong style=\"font-size: 10pt; color: rgb(0, 176, 80);\"\
+    >&nbsp;</strong></p><p style=\"font-size: 10pt; font-weight: normal;\"><strong\
+    \ style=\"color: rgb(0, 176, 80);\">Send</strong><strong> Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This button will open a pop\
+    \ up to send the selected report.<strong style=\"font-size: 10pt; color: rgb(0,\
+    \ 176, 80);\">&nbsp;</strong></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><strong style=\"color: rgb(0, 176, 80);\">Refresh</strong><strong> Button</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This button will refresh the\
+    \ report list table.<strong style=\"font-size: 10pt;\">&nbsp;</strong></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\"\
+    \ font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext; font-size:\
+    \ medium;\">Reports Tab &gt;</strong><span style=\"color: windowtext; font-size:\
+    \ medium;\"> </span><strong style=\"color: windowtext; font-size: medium;\">Parameter\
+    \ Values Tab</strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    > </strong><strong style=\"color: windowtext;\">&gt;</strong><span style=\"color:\
+    \ windowtext; font-size: medium;\"> </span><strong style=\"color: rgb(0, 112,\
+    \ 192); font-size: medium;\">Parameters Values Section </strong><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><span style=\"color: red;\">Table class: REPORT_PARAM\
+    \ (REPORT_PARAM table)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The Tab shows the list of parameters\
+    \ used when the report was created.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size:\
+    \ 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext;\
+    \ font-size: medium;\">Reports Tab &gt; </strong><strong style=\"color: rgb(0,\
+    \ 112, 192);\">Distribution Configuration Tab</strong><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\">The Tab is used to maintain the distribution list for\
+    \ the selected report name, which is to be used for the Send button. When a distribution\
+    \ is set for one report name, all reports with this report name will have the\
+    \ same distribution. Then <u>all documents</u> which have reports with this report\
+    \ name, will have the same distribution.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">This tab has these sections:<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size:\
+    \ 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext;\
+    \ font-size: medium;\">Reports Tab &gt; Distribution Configuration Tab &gt; </strong><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium;\">Report Status Section</strong><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\"\
+    >Table class: EC_CODES_POPUP (PROSTY_CODES table)</span><span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >The report will need at least one list per Report Status:</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">- <u>Provisional:</u> To be able to send Provisional\
+    \ reports, at least one Distribution List is needed.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">- <u>Verified:</u> To be able to send Verified\
+    \ reports, at least one Distribution List is needed.</p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">- <u>Approved:</u> To be able to send Approved\
+    \ reports, at least one Distribution List is needed.<span style=\"color: red;\
+    \ font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"\
+    =\"\"><strong style=\"color: windowtext; font-size: medium;\">Reports Tab &gt;\
+    \ Distribution Configuration Tab &gt; </strong><strong style=\"color: rgb(0, 112,\
+    \ 192); font-size: medium;\">Distributions Section</strong><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><span style=\"color: red;\">Data class: DATASET_FLOW_REPORT_DIST\
+    \ (MESSAGE_DISTRIBUTION table)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This section lists the distribution\
+    \ details of the selected report.<span style=\"color: red; font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"\
+    font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color:\
+    \ windowtext; font-size: medium;\">Reports Tab &gt; Distribution Configuration\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Distribution List Section</strong><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><span style=\"color: red;\">Data class: REP_DISTR_CONN (MESSAGE_DISTR_CONN table)</span><span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">This section lists the parties of the distribution of the selected\
+    \ report.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\
+    \" normal;\"=\"\"><strong style=\"color: windowtext; font-size: medium;\">Reports\
+    \ Tab &gt;</strong><span style=\"color: windowtext; font-size: medium;\"> </span><strong\
+    \ style=\"color: rgb(0, 112, 192);\">Send Log Tab</strong><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">The Tab shows a log of dates when the report was\
+    \ sent. It also shows a list of recipients for each send date. More details are\
+    \ available in Business Function 'RP.0003'.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">This tab has these sections:<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size:\
+    \ 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext;\
+    \ font-size: medium;\">Reports Tab &gt;</strong><span style=\"color: windowtext;\
+    \ font-size: medium;\"> </span><strong>Send Log Tab </strong><strong style=\"\
+    color: windowtext; font-size: medium;\">&gt;</strong><strong style=\"color: rgb(0,\
+    \ 112, 192); font-size: medium;\"> Send Log Section</strong><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><span style=\"color: red;\">Table class: REPORT_SEND_LOG\
+    \ (REPORT_SEND_LOG table)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This section shows the result\
+    \ of the distribution of the selected report.<span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"\
+    font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color:\
+    \ windowtext; font-size: medium;\">Reports Tab &gt;</strong><span style=\"color:\
+    \ windowtext; font-size: medium;\"> </span><strong>Send Log Tab </strong><strong\
+    \ style=\"color: windowtext; font-size: medium;\">&gt;</strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\"> Send Log Recipients Section</strong><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\"\
+    >Data class: RECIPIENT (RECIPIENT table)</span><span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\">This section\
+    \ lists the parties that has received the selected report.<span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong\
+    \ style=\"color: windowtext; font-size: medium;\">Reports Tab &gt; </strong><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium;\">Publish Report Tab</strong><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">The Tab is used to give users\
+    \ access to a limited number of generated reports. More details are available\
+    \ in Business Function 'RP.0003'.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">This tab has these sections:<span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"font-size:\
+    \ 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color: windowtext;\
+    \ font-size: medium;\">Reports Tab &gt;</strong><span style=\"color: windowtext;\
+    \ font-size: medium;\"> </span><strong>Publish Report Tab </strong><strong style=\"\
+    color: windowtext; font-size: medium;\">&gt;</strong><strong style=\"color: rgb(0,\
+    \ 112, 192); font-size: medium;\"> Publish Report Section</strong><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\">Data class:\
+    \ REPORT_ADM_PUB (REPORT_PUBLISHED table)</span><span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\">This section\
+    \ shows the publishing of the selected report.<span style=\"font-size: 10pt;\"\
+    >&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"><br></p><style=\"\
+    font-size: 10pt;=\"\" font-weight:=\"\" normal;\"=\"\"><strong style=\"color:\
+    \ windowtext; font-size: medium;\">Reports Tab &gt;</strong><span style=\"color:\
+    \ windowtext; font-size: medium;\"> </span><strong>Publish Report Tab </strong><strong\
+    \ style=\"color: windowtext; font-size: medium;\">&gt;</strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\"> Access Check Parameters Section</strong><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\"\
+    >Data class: REPORT_PUBLISHED_PARAM (REPORT_PUBLISHED_PARAM table)</span><span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">This section shows the access parameters of publishing of the selected\
+    \ report.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\
+    \" normal;\"=\"\"><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Process Log Tab</strong><p style=\"font-size: 10pt; font-weight: normal;\">When\
+    \ using the \"Process\" function, the system will process any interfaced data\
+    \ and generate documents according to the data being interfaced. EC generates\
+    \ a Log for this process and this Log can be viewed at the Process Log Tab.<span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">The level of detail for the Log is controlled by system attribute\
+    \ 'DOC_GEN_LOG_LEVEL'. This can be set to either 'INFO' or 'DEBUG'. The Log will\
+    \ tell if there are any records in the interface had errors or mismatches compared\
+    \ to the contract configuration which leads to Documents NOT being generated.<span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">For each row in the top section, there is a list of processing log\
+    \ details below.</p><p style=\"font-size: 10pt; font-weight: normal;\">&nbsp;</p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong>Process Log Tab &gt;\
+    \ </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\">Process\
+    \ Log Section</strong></p><p style=\"font-size: 10pt; font-weight: normal;\"><span\
+    \ style=\"color: red;\">Table class: REVN_CARGO_DG_LOG (REVN_LOG table)</span><span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">This section refers to a given 'run' - i.e. there is a new 'run' each\
+    \ time the user has pressed the 'Process' button.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><strong>&nbsp;</strong></p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><strong>Process Log Tab &gt; </strong><strong style=\"\
+    color: rgb(0, 112, 192); font-size: medium;\">Process Log Details Section</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\"\
+    >Table class: REVN_CARGO_DG_LOG_ITEM (REVN_LOG_ITEM table)</span><span style=\"\
+    font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >This section lists the Log Details for the selected record in the Process Log\
+    \ Section.<span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><br></p><style=\"font-size: 10pt;=\"\" font-weight:=\"\
+    \" normal;\"=\"\"><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Pending Tab</strong><p style=\"font-size: 10pt; font-weight: normal;\">The Tab\
+    \ shows interfaced data (from IFAC_SALES_QTY table) waiting to be processed in\
+    \ Documents Tab. When the records in the IFAC_SALES_QTY table have been processed,\
+    \ the corresponding data will disappear from this tab.<span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><u>The tab is divided into 6 sections: </u></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">&nbsp;</p><p style=\"font-size: 10pt; font-weight: normal;\"><strong>Pending\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Documents to Process Section</strong><strong> </strong></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\"><span style=\"color: red;\">Table class: INTERFACE_PENDING_CARGO\
+    \ (V_CARGO_DOCUMENT_PROCESS view)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This section lists the Documents\
+    \ waiting to be processed.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >&nbsp;</p><p style=\"font-size: 10pt; font-weight: normal;\"><strong>Pending\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Transactions to Process Section</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\">Table class: CARGO_TRANSACTION_LEVEL (V_CARGO_TRANSACTION_LEVEL\
+    \ view)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">This section lists all transactions which go into\
+    \ the highlighted document in \"Documents to Process\". This table shows one record\
+    \ per transaction. User can override default transaction template for the records\
+    \ being interfaced. It has a drop down which lists all possible transaction templates\
+    \ for the contract being interfaced. There is a possibility to switch back to\
+    \ default transaction template provided by system, by selecting \"Default template\"\
+    \ option from the drop-down.</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >&nbsp;</p><p style=\"font-size: 10pt; font-weight: normal;\"><strong>Pending\
+    \ Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size: medium;\"\
+    >Lines to Process Section</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><span style=\"color: red;\">Table class: CARGO_LINE_ITEM_LEVEL (V_CARGO_LINE_ITEM_LEVEL\
+    \ view)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size:\
+    \ 10pt; font-weight: normal;\">This section lists all Line Items which go into\
+    \ the selected Transaction in the section above.</p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\">&nbsp;</p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    ><strong>Pending Tab &gt; </strong><strong style=\"color: rgb(0, 112, 192); font-size:\
+    \ medium;\">Records to Process Section</strong></p><p style=\"font-size: 10pt;\
+    \ font-weight: normal;\"><span style=\"color: red;\">Table class: GEN_CARGO_DOCUMENT\
+    \ (V_CARGO_QTY_CONTRACT view)</span><span style=\"font-size: 10pt;\">&nbsp;</span></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\">This section lists all the records\
+    \ in the IFAC_SALES_QTY table which go into the highlighted Line Item in \"Lines\
+    \ to Process\".</p><p style=\"font-size: 10pt; font-weight: normal;\"><strong>&nbsp;</strong></p><p\
+    \ style=\"font-size: 10pt; font-weight: normal;\"><strong>Pending Tab &gt; </strong><strong\
+    \ style=\"color: rgb(0, 112, 192); font-size: medium;\">Processed Interface Records\
+    \ Section</strong></p><p style=\"font-size: 10pt; font-weight: normal;\"><span\
+    \ style=\"color: red;\">Table class: REVN_INTERFACE_LOG (REVN_LOG table)</span><span\
+    \ style=\"font-size: 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\">This section lists all the records in the IFAC_SALES_QTY table that\
+    \ have been processed.</p><p style=\"font-size: 10pt; font-weight: normal;\">Please\
+    \ note that normally this section will be empty because this section shows processed\
+    \ interface records - and before processing there are no such records. The same\
+    \ data is available at the Process Log Tab.</p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong>&nbsp;</strong></p><p style=\"font-size: 10pt; font-weight:\
+    \ normal;\"><strong>Pending Tab &gt; </strong><strong style=\"color: rgb(0, 112,\
+    \ 192); font-size: medium;\">Interface Process Log Section</strong></p><p style=\"\
+    font-size: 10pt; font-weight: normal;\"><span style=\"color: red;\">Table class:\
+    \ REVN_INTERFACE_LOG_ITEM (REVN_LOG_ITEM table)</span><span style=\"font-size:\
+    \ 10pt;\">&nbsp;</span></p><p style=\"font-size: 10pt; font-weight: normal;\"\
+    >This section lists the Log Details for the selected record in the Processed Interface\
+    \ Records Section.</p><p style=\"font-size: 10pt; font-weight: normal;\">Please\
+    \ note that normally this section will be empty because this section shows processed\
+    \ interface records - and before processing there are no such records. The same\
+    \ data is available at the Process Log Tab.</p></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:></style=\"font-size:></style=\"font-size:></style=\"font-size:></style=\"\
+    font-size:>"
 related: {}

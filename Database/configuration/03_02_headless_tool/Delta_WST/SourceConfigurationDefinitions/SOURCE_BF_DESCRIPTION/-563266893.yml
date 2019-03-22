@@ -7,7 +7,7 @@ keys:
 parentKeys: {}
 properties:
   BF_DESCRIPTION_NO: CD.0033
-  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object/CLASS_NAME/PRODUCT_SALES_ORDER' )
+  BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.frmw.co.screens/manage_object_nav/CLASS_NAME/PRODUCT_SALES_ORDER' )
   DATA_LEVEL: 0.0
   DESCRIPTION: <p>    <strong>Sales Order screen</strong>    is used to manage the Sales Order object.    The Sales Order objects can be used in the Financial Transaction module of    EC Revenue.</p><p>    The purpose of the Sales Order is to have a link to a corresponding Sales    Order in the Financial system.</p><p>    <em>- To avoid Sales Orders to be reused</em>    within other Documents / Transactions one can set the Restrict Use    attribute which will then prevent that the Sales Order will be reused.<br>    <em>- The Sales Order objects are specific</em>    to a given Company and Field.</p><p>    <u>Note</u>    that the attribute at Transaction table holding Sales Order is NOT a    relation to the Sales Order object, but the popup will list the available    Sales Orders and it is the Code of the selected Sales Order that will be    stored at the Transaction level. <br> The reason for this is that one can run the EC    Revenue application with Sales Order but at the same time without Sales    Order object - the popup in question is editable/selectable at the same    time.</p><p>    The class used for this BF is PRODUCT_SALES_ORDER</p>
 related: {}

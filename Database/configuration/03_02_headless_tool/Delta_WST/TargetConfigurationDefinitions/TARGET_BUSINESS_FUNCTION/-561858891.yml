@@ -8,5 +8,6 @@ properties:
   BF_CODE: PT.0006
   NAME: Production Test Samples
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.prod.pt.screens/prod_test_samples
 related: {}

@@ -8,5 +8,6 @@ properties:
   BF_CODE: CD.0125
   NAME: Document Sequence Usage
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.revn.cd/create_object_relations_basic/CLASS_NAME/DOC_SEQUENCE/FROM_CLASS_NAME/DOC_SEQUENCE/TO_CLASS_NAME/DOC_SEQUENCE
 related: {}

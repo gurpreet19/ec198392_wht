@@ -62,7 +62,7 @@ SELECT recurring_holiday_name
         ((fixed_holiday_day || '-' || fixed_holiday_month || '-' || EXTRACT(YEAR FROM p_daytime) = p_daytime AND date_function_holiday IS NULL) AND
             ((fixed_holiday_day || fixed_holiday_month != '29FEB') OR ((fixed_holiday_day || fixed_holiday_month = '29FEB') AND ECDP_CALENDAR.IsLeapYear(p_year) = 'TRUE')))
         OR
-        (GetFunctionHolidayDate(date_function_holiday, p_year) = p_daytime AND date_function_holiday IS NOT NULL)
+        (GetRecurringHoliday(date_function_holiday, p_year) = p_daytime AND date_function_holiday IS NOT NULL)
         );
 
 lv_recurring_holiday_name calendar_recurring_holidays.recurring_holiday_name%TYPE;
@@ -159,9 +159,13 @@ BEGIN
         ld_current := ld_start_date + ln_iterator;
         lv2_weekday := ltrim(rtrim(to_char(ld_current,'DAY','NLS_DATE_LANGUAGE = English'),' '),' ');
 
-        OPEN c_recur_holiday(p_object_id, ld_current, p_year);
-        FETCH c_recur_holiday INTO lv_recurring_holiday_name;
-        CLOSE c_recur_holiday;
+        FOR cur_rec IN c_recur_holiday(p_object_id, ld_current, p_year) LOOP
+          IF lv_recurring_holiday_name IS NULL THEN
+            lv_recurring_holiday_name := cur_rec.recurring_holiday_name;
+          ELSE
+            lv_recurring_holiday_name := lv_recurring_holiday_name || ' / ' || cur_rec.recurring_holiday_name;
+          END IF;
+        END LOOP;
 
         IF  (IsHoliday(p_object_id, ld_current, lv2_weekday) = TRUE
            OR lv_recurring_holiday_name IS NOT NULL) THEN
@@ -230,34 +234,60 @@ BEGIN
         lv_recurring_holiday_name := '';
      END LOOP;
 
-    p_message := 'Success!' || chr(10) || 'Calendar generated for year ' || p_year;
+    p_message := 'Success!' || chr(10) ||
+                 ec_calendar_version.name(p_object_id, p_daytime, '<=') ||
+                 ' generated for year ' || p_year;
 
 EXCEPTION
 
   WHEN already_added THEN
 
-    lv_end_user_message := 'Error!' || chr(10) || 'Year ' || p_year || ' is already added to calendar ' || ec_calendar_version.name(p_object_id, p_daytime, '<=') || '.';
+    lv_end_user_message := 'Error!' || chr(10) ||
+                             ec_calendar_version.name(p_object_id,
+                                                      p_daytime,
+                                                      '<=') ||
+                             ' is already generated for year ' || p_year;
     p_message := lv_end_user_message;
 
   WHEN too_early_year THEN
 
-    lv_end_user_message := 'Error!' || chr(10) || ec_calendar_version.name(p_object_id, p_daytime, '<=') || ' is not valid before ' || TO_CHAR(ld_cal_start_date, 'yyyy-mm-dd') || '.';
+    lv_end_user_message := 'Error!' || chr(10) ||
+                             ec_calendar_version.name(p_object_id,
+                                                      p_daytime,
+                                                      '<=') ||
+                             ' is not valid before ' ||
+                             TO_CHAR(ld_cal_start_date, 'yyyy-mm-dd') || '.';
     p_message := lv_end_user_message;
 
   WHEN mid_year_start THEN
 
-    lv_end_user_message := 'Error!' || chr(10) || ec_calendar_version.name(p_object_id, p_daytime, '<=') || ' is not valid for year ' || p_year || ' as it is starting from ' ||  TO_CHAR(ld_cal_start_date, 'yyyy-mm-dd')
-                                               || '. To generate Calendar for year ' || p_year || ' it must be effective on ' ||  TO_CHAR(TRUNC(ld_cal_start_date, 'YEAR'), 'yyyy-mm-dd') || '.';
+    lv_end_user_message := 'Error!' || chr(10) ||
+                             ec_calendar_version.name(p_object_id,
+                                                      p_daytime,
+                                                      '<=') ||
+                             ' is not valid for year ' || p_year ||
+                             ' as it is starting from ' ||
+                             TO_CHAR(ld_cal_start_date, 'yyyy-mm-dd') ||
+                             '. To generate Calendar for year ' || p_year ||
+                             ' it must be effective on ' ||
+                             TO_CHAR(TRUNC(ld_cal_start_date, 'YEAR'),
+                                     'yyyy-mm-dd') || '.';
     p_message := lv_end_user_message;
 
   WHEN too_late_year THEN
 
-    lv_end_user_message := 'Error!' || chr(10) || ec_calendar_version.name(p_object_id, p_daytime, '<=') || ' is not valid after ' || TO_CHAR(ld_cal_end_date, 'yyyy-mm-dd') || '.';
+    lv_end_user_message := 'Error!' || chr(10) ||
+                             ec_calendar_version.name(p_object_id,
+                                                      p_daytime,
+                                                      '<=') ||
+                             ' is not valid after ' ||
+                             TO_CHAR(ld_cal_end_date, 'yyyy-mm-dd') || '.';
     p_message := lv_end_user_message;
 
   WHEN not_valid_year THEN
 
-    lv_end_user_message := 'Error!' || chr(10) || p_year || ' is not a valid year.';
+    lv_end_user_message := 'Error!' || chr(10) || p_year ||
+                             ' is not a valid year.';
     p_message := lv_end_user_message;
 END AddYear;
 
@@ -301,6 +331,99 @@ EXCEPTION
     RETURN lv_message;
 
 END GenerateYear;
+
+-------------------------------------------------------------------------------------------------
+  -- Function       : GenerateCalCollYear
+  -- Description    : Instantiates a calendar year for the given calendar object.
+-------------------------------------------------------------------------------------------------
+
+FUNCTION GenerateCalCollYear(p_object_id   VARCHAR2,
+                              p_calendar_id VARCHAR2,
+                              p_daytime     DATE,
+                              p_cal_year    DATE,
+                              p_user        VARCHAR2
+                            ) RETURN VARCHAR2 IS
+
+    ln_counter         NUMBER;
+    ln_year            NUMBER;
+    lv_message         VARCHAR2(1024);
+    lv_msg_success_all VARCHAR2(1024);
+    lv_msg_fail_all    VARCHAR2(1024);
+    lv_return_message  VARCHAR2(1024);
+
+    CURSOR cur_get_calendar_id(p_calendar_id VARCHAR2) IS
+      SELECT calendar_id
+        FROM v_calendar_coll_list
+       WHERE calendar_collection_id = p_object_id
+         AND calendar_code != 'ALL'
+    ORDER BY calendar_code;
+BEGIN
+
+    ln_year := EXTRACT(YEAR FROM p_cal_year);
+
+    IF p_calendar_id = 'ALL_CALENDARS' THEN
+    -- If 'ALL' is selected from calendar list
+      FOR cur_rec IN cur_get_calendar_id(p_object_id) LOOP
+
+        SELECT COUNT(1)
+          INTO ln_counter
+          FROM calendar_day
+         WHERE object_id = cur_rec.calendar_id
+           AND EXTRACT(YEAR FROM TO_DATE(p_cal_year)) = year;
+
+        -- If Calendar is not generated
+        IF ln_counter = 0 THEN
+          lv_message := GenerateYear(cur_rec.calendar_id,
+                                     p_daytime,
+                                     p_cal_year,
+                                     p_user);
+          -- If there is an Error or Calendar already generated
+          IF substr(lv_message, 1, 5) = 'Error' THEN
+            RETURN lv_message;
+          ELSE
+            lv_msg_success_all := lv_msg_success_all || ec_calendar_version.name(cur_rec.calendar_id,
+                                                           p_daytime,
+                                                           '<=') || ', ';
+          END IF;
+        ELSE
+          lv_msg_fail_all := lv_msg_fail_all || ec_calendar_version.name(cur_rec.calendar_id,
+                                                      p_daytime,
+                                                      '<=') || ', ';
+        END IF;
+
+      END LOOP;
+
+      lv_msg_success_all := RTRIM(lv_msg_success_all, ', ');
+      lv_msg_fail_all    := RTRIM(lv_msg_fail_all, ', ');
+
+      IF lv_msg_success_all IS NOT NULL AND lv_msg_fail_all IS NOT NULL THEN
+        lv_return_message := 'Success!' || CHR(10) || lv_msg_success_all ||
+                             ' generated for year ' || ln_year || chr(10) ||
+                             lv_msg_fail_all ||
+                             ' already generated for year ' || ln_year;
+      ELSIF lv_msg_success_all IS NOT NULL AND lv_msg_fail_all IS NULL THEN
+        lv_return_message := 'Success!' || CHR(10) || lv_msg_success_all ||
+                             ' generated for year ' || ln_year;
+      ELSIF lv_msg_fail_all IS NOT NULL AND lv_msg_success_all IS NULL THEN
+        lv_return_message := 'Error!' || CHR(10) || lv_msg_fail_all ||
+                             ' already generated for year ' || ln_year;
+      ELSE
+        lv_return_message := 'ERROR!' || CHR(10) ||
+                             'In generating calendar';
+      END IF;
+
+    ELSE
+       -- If a specific calendar is selected from calendar list
+      lv_return_message := GenerateYear(p_calendar_id,
+                                        p_daytime,
+                                        p_cal_year,
+                                        p_user);
+
+    END IF;
+
+    RETURN lv_return_message;
+
+END GenerateCalCollYear;
 
 --<EC-DOC>
 -------------------------------------------------------------------------------------------------
@@ -1703,22 +1826,6 @@ BEGIN
 END IsLeapYear;
 
 -------------------------------------------------------------------------------------------------
--- Function      : GetFunctionHolidayDate
--- Description   : Retrieves the date of a specified Date Function holiday for the Calendar year
--------------------------------------------------------------------------------------------------
-FUNCTION GetFunctionHolidayDate(p_date_function VARCHAR2, p_year NUMBER)
-RETURN DATE
-IS
-  d_holiday_date  DATE;
-  v_sql_statement VARCHAR2(500);
-BEGIN
-  v_sql_statement := 'SELECT '|| 'EcDp_Calendar.' ||p_date_function|| '(''' || p_year ||''') FROM DUAL' ;
-
-  EXECUTE IMMEDIATE v_sql_statement INTO d_holiday_date;
-  RETURN d_holiday_date;
-
-END GetFunctionHolidayDate;
--------------------------------------------------------------------------------------------------
 
 FUNCTION SetToBusinessDay(p_object_id     VARCHAR2,
                           p_daytime       DATE,
@@ -1866,14 +1973,22 @@ PROCEDURE ValidateCommentDate(p_object_id      VARCHAR2,
 IS
   lv_message         VARCHAR2(1000);
   not_calendar_year  EXCEPTION;
+  delete_not_allowed EXCEPTION;
 
 BEGIN
+
+  IF p_object_id = 'ALL_CALENDARS' THEN
+    RAISE delete_not_allowed;
+  END IF;
 
   IF EXTRACT(YEAR FROM p_selected_date) != EXTRACT(YEAR FROM p_comment_date) THEN
     RAISE not_calendar_year;
   END IF;
 
 EXCEPTION
+  WHEN delete_not_allowed THEN
+    lv_message := 'Delete not allowed when ALL is selected from the calendar list.' || CHR(10);
+    Raise_Application_Error(-20001, lv_message);
   WHEN not_calendar_year THEN
     lv_message := 'Please select a date within year ' || EXTRACT(YEAR FROM p_selected_date);
     Raise_Application_Error(-20000, lv_message);
@@ -1975,6 +2090,152 @@ BEGIN
 
     RETURN lv_return_value;
 END;
+
+-------------------------------------------------------------------------------------------------
+
+  FUNCTION getCollCurrentYearDaytime(p_cal_coll_id   VARCHAR2,
+                                     p_daytime       DATE,
+                                     p_task          VARCHAR2,
+                                     p_calendar_id   VARCHAR2,
+                                     p_calendar_code VARCHAR2)
+    RETURN VARCHAR2 IS
+    CURSOR c_current(cp_cal_coll_id   VARCHAR2,
+                     cp_daytime       DATE,
+                     cp_calendar_id   VARCHAR2,
+                     cp_calendar_code VARCHAR2) IS
+      SELECT *
+        FROM (SELECT year, daytime
+                FROM v_calendar_year
+               WHERE ((cp_calendar_code = 'ALL' AND
+                     object_id in
+                     (SELECT calendar_id
+                          FROM v_calendar_coll_list
+                         WHERE calendar_collection_id = cp_cal_coll_id
+                           AND calendar_id != 'ALL_CALENDARS')) OR
+                     (cp_calendar_code != 'ALL' AND
+                     object_id = cp_calendar_id))
+                 AND daytime <= cp_daytime
+               ORDER BY daytime DESC)
+       WHERE rownum <= 1;
+
+    CURSOR c_first(cp_cal_coll_id   VARCHAR2,
+                   cp_calendar_id   VARCHAR2,
+                   cp_calendar_code VARCHAR2) IS
+      SELECT *
+        FROM (SELECT year, daytime
+                FROM v_calendar_year
+               WHERE ((cp_calendar_code = 'ALL' AND
+                     object_id in
+                     (SELECT calendar_id
+                          FROM v_calendar_coll_list
+                         WHERE calendar_collection_id = cp_cal_coll_id
+                           AND calendar_id != 'ALL_CALENDARS')) OR
+                     (cp_calendar_code != 'ALL' AND
+                     object_id = cp_calendar_id))
+               ORDER BY daytime DESC)
+       WHERE rownum <= 1;
+
+    lv_ReturnValue VARCHAR2(30) := '';
+  BEGIN
+    -- Step 1/2: Get current year and daytime.
+    FOR cRow IN c_current(p_cal_coll_id,
+                          p_daytime,
+                          p_calendar_id,
+                          p_calendar_code) LOOP
+      IF p_task = 'YEAR' THEN
+        lv_ReturnValue := cRow.Year;
+      ELSIF p_task = 'DAYTIME' THEN
+        lv_ReturnValue := to_char(cRow.DayTime, 'YYYY-MM-DD"T"HH24:MI:SS');
+      END IF;
+    END LOOP;
+
+    -- Step 2/2: If no hit, get the first year and daytime.
+    IF (nvl(lv_ReturnValue, 'NULL') = 'NULL') THEN
+      FOR cRow IN c_first(p_cal_coll_id,
+                          p_calendar_id,
+                          p_calendar_code) LOOP
+        IF p_task = 'YEAR' THEN
+          lv_ReturnValue := cRow.Year;
+        ELSIF p_task = 'DAYTIME' THEN
+          lv_ReturnValue := to_char(cRow.DayTime, 'YYYY-MM-DD"T"HH24:MI:SS');
+        END IF;
+      END LOOP;
+    END IF;
+
+    RETURN lv_ReturnValue;
+  END getCollCurrentYearDaytime;
+
+-------------------------------------------------------------------------------------------------
+
+FUNCTION getCalOrCalCollId(p_calendar_coll_id VARCHAR2,
+                           p_calendar_id      VARCHAR2,
+                           p_calendar_name    VARCHAR2)
+RETURN VARCHAR2
+IS
+lv_ReturnObjectId VARCHAR2(100);
+BEGIN
+  IF p_calendar_name = 'All' THEN
+    lv_ReturnObjectId := p_calendar_coll_id;
+  ELSE
+    lv_ReturnObjectId := p_calendar_id;
+  END IF;
+
+  RETURN lv_ReturnObjectId;
+END getCalOrCalCollId;
+
+-------------------------------------------------------------------------------------------------
+
+FUNCTION GetRecurringHoliday(p_recurring_holiday_code VARCHAR2,
+                             p_year                   NUMBER)
+  RETURN DATE
+IS
+  ld_retval DATE;
+
+BEGIN
+  ld_retval := null;
+  CASE
+    WHEN p_recurring_holiday_code = 'GETMAUNDYTHURSDAY' THEN
+      ld_retval := GetMaundyThursday(p_year);
+    WHEN p_recurring_holiday_code = 'GETGOODFRIDAY' THEN
+      ld_retval := GetGoodFriday(p_year);
+    WHEN p_recurring_holiday_code = 'GETEASTERSUNDAY' THEN
+      ld_retval := GetEasterSunday(p_year);
+    WHEN p_recurring_holiday_code = 'GETEASTERMONDAY' THEN
+      ld_retval := GetEasterMonday(p_year);
+    WHEN p_recurring_holiday_code = 'GETWHITSUNDAY' THEN
+      ld_retval := GetWhitSunday(p_year);
+    WHEN p_recurring_holiday_code = 'GETWHITMONDAY' THEN
+      ld_retval := GetWhitMonday(p_year);
+    WHEN p_recurring_holiday_code = 'GETASCENSIONDAY' THEN
+      ld_retval := GetAscensionDay(p_year);
+    ELSE
+      IF ue_calendar.isGetRecurringHolidayPostUEE = 'TRUE' THEN
+        ld_retval := ue_calendar.GetRecurringHoliday(p_recurring_holiday_code, p_year);
+      END IF;
+  END CASE;
+  RETURN ld_retval;
+END GetRecurringHoliday;
+
+-------------------------------------------------------------------------------------------------
+
+FUNCTION GetNthDayofMonth(p_month       DATE,     --The Month of the date we are looking for - format is the first date of the month
+                          p_day_of_week VARCHAR2, --The weekday we are looking for, i.e. 'Monday'
+                          p_nth         NUMBER)   --The n'th occurrence of the given weekday in the given month, i.e. 2 of second Monday
+RETURN DATE DETERMINISTIC
+IS
+BEGIN
+  RETURN NEXT_DAY(TRUNC( p_month, 'mm' ) - INTERVAL '1' DAY, p_day_of_week ) + (p_nth - 1) * 7;
+END GetNthDayofMonth;
+
+-------------------------------------------------------------------------------------------------
+
+FUNCTION GetLastDayofMonth(p_month       DATE,     --The Month of the date we are looking for - format is the first date of the month
+                           p_day_of_week VARCHAR2) --The weekday we are looking for, i.e. 'Monday'
+RETURN DATE DETERMINISTIC
+IS
+BEGIN
+  RETURN NEXT_DAY(LAST_DAY(TRUNC( p_month, 'mm' )) - 7, p_day_of_week);
+END GetLastDayofMonth;
 
 -------------------------------------------------------------------------------------------------
 

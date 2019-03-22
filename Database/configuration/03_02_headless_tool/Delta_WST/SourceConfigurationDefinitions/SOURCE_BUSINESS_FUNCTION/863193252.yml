@@ -8,5 +8,6 @@ properties:
   BF_CODE: SD.0053
   NAME: Daily Nomination Location Target
   PROFILE_CLASS_NAME: NOMINATION_LOCATION
+  TARGET_CONDITION: null
   URL: /com.ec.sale.sd.screens/daily_nomloc_target
 related: {}

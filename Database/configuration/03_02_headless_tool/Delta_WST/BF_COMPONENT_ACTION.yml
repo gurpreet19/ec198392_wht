@@ -78,20 +78,20 @@ CODE=CD.0011 URL=/updateAttributes COMP_CODE=updateAttributes CLASS_NAME=PRICE_O
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0024 URL=/add_year COMP_CODE=add_year CLASS_NAME=CALENDAR_SETUP ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1250530130'
+CODE=CD.0024 URL=/add_year_button COMP_CODE=addYearButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '809255562'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/add_year' AND COMP_CODE ='add_year' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_SETUP')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/add_year_button' AND COMP_CODE ='addYearButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0024 URL=/calendar_day_comment COMP_CODE=calendar_day_comment CLASS_NAME=CALENDAR_SETUP ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '41963566'
+CODE=CD.0024 URL=/calendar_day_comment COMP_CODE=calendar_day_comment CLASS_NAME=CALENDAR_DAY_COMMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1759914129'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/calendar_day_comment' AND COMP_CODE ='calendar_day_comment' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_SETUP')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/calendar_day_comment' AND COMP_CODE ='calendar_day_comment' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_DAY_COMMENT')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
@@ -108,20 +108,30 @@ CODE=CD.0024 URL=/copy_buttons COMP_CODE=copyButton CLASS_NAME=IS_NULL ACTION_UR
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0024 URL=/daytimes COMP_CODE=daytimes CLASS_NAME=CALENDAR ACTION_URL=/daytimes: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1309581337'
+CODE=CD.0024 URL=/create_comment_button COMP_CODE=createCommentButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-402815698'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/daytimes' AND COMP_CODE ='daytimes' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/create_comment_button' AND COMP_CODE ='createCommentButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=CD.0024 URL=/daytimes COMP_CODE=daytimes CLASS_NAME=IS_NULL ACTION_URL=/daytimes: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1395149073'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/daytimes' AND COMP_CODE ='daytimes' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /daytimes
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0024 URL=/insert COMP_CODE=objectForm CLASS_NAME=CALENDAR ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-152322462'
+CODE=CD.0024 URL=/insert COMP_CODE=tab2 CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1290107528'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/insert' AND COMP_CODE ='objectForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/insert' AND COMP_CODE ='tab2' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
@@ -148,30 +158,40 @@ CODE=CD.0024 URL=/objectdates COMP_CODE=objectdates CLASS_NAME=CALENDAR ACTION_U
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0024 URL=/set_to_business_day COMP_CODE=setToBusinessDayButton CLASS_NAME=CALENDAR_SETUP ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '804164129'
+CODE=CD.0024 URL=/recurringHolidays COMP_CODE=recurring_holidays CLASS_NAME=CALENDAR_RECUR_HOLIDAYS ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1073094569'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/set_to_business_day' AND COMP_CODE ='setToBusinessDayButton' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_SETUP')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/recurringHolidays' AND COMP_CODE ='recurring_holidays' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_RECUR_HOLIDAYS')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0024 URL=/set_to_holiday COMP_CODE=setToHolidayButton CLASS_NAME=CALENDAR_SETUP ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-99564014'
+CODE=CD.0024 URL=/set_to_business_day COMP_CODE=setToBusinessDayButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '348141361'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/set_to_holiday' AND COMP_CODE ='setToHolidayButton' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_SETUP')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/set_to_business_day' AND COMP_CODE ='setToBusinessDayButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0024 URL=/updateAttributes COMP_CODE=updateAttributes CLASS_NAME=CALENDAR ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-60702804'
+CODE=CD.0024 URL=/set_to_holiday COMP_CODE=setToHolidayButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1498226784'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/updateAttributes' AND COMP_CODE ='updateAttributes' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/set_to_holiday' AND COMP_CODE ='setToHolidayButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=CD.0024 URL=/show_calendar_year COMP_CODE=showYearButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '843641460'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0024' AND NVL(URL,'IS_NULL') = '/show_calendar_year' AND COMP_CODE ='showYearButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
@@ -658,6 +678,36 @@ CODE=CD.0104 URL=/tableSetup COMP_CODE=StreamCategoryItemSetup CLASS_NAME=STREAM
   properties: {}
   related: {}
   status: ADDED
+CODE=CD.0105 URL=/add_year_button COMP_CODE=addYearButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1475696518'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/add_year_button' AND COMP_CODE ='addYearButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=CD.0105 URL=/calendar_collection_member COMP_CODE=calendar_coll_member CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-700004846'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/calendar_collection_member' AND COMP_CODE ='calendar_coll_member' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=CD.0105 URL=/calendar_day_comment COMP_CODE=calendar_day_comment CLASS_NAME=CAL_COLL_DAY_COMMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1226227532'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/calendar_day_comment' AND COMP_CODE ='calendar_day_comment' AND NVL(CLASS_NAME,'IS_NULL') = 'CAL_COLL_DAY_COMMENT')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
 CODE=CD.0105 URL=/copy_buttons COMP_CODE=copyButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1178174928'
   keys:
@@ -668,40 +718,30 @@ CODE=CD.0105 URL=/copy_buttons COMP_CODE=copyButton CLASS_NAME=IS_NULL ACTION_UR
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0105 URL=/createRelationMainTables COMP_CODE=createRelationsTable1 CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1856939004'
+CODE=CD.0105 URL=/create_comment_button COMP_CODE=createCommentButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1202913322'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/createRelationMainTables' AND COMP_CODE ='createRelationsTable1' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/create_comment_button' AND COMP_CODE ='createCommentButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0105 URL=/create_relation_main_tables COMP_CODE=createRelationsTable2 CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1190526218'
+CODE=CD.0105 URL=/daytimes COMP_CODE=daytimes CLASS_NAME=IS_NULL ACTION_URL=/daytimes: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1213471245'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/create_relation_main_tables' AND COMP_CODE ='createRelationsTable2' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=CD.0105 URL=/daytimes COMP_CODE=daytimes CLASS_NAME=CALENDAR_COLLECTION ACTION_URL=/daytimes: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '737854634'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/daytimes' AND COMP_CODE ='daytimes' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_COLLECTION')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/daytimes' AND COMP_CODE ='daytimes' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /daytimes
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=CD.0105 URL=/insert COMP_CODE=objectForm CLASS_NAME=CALENDAR_COLLECTION ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '739502279'
+CODE=CD.0105 URL=/insert COMP_CODE=tab2 CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1711860092'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/insert' AND COMP_CODE ='objectForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_COLLECTION')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/insert' AND COMP_CODE ='tab2' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
@@ -724,6 +764,36 @@ CODE=CD.0105 URL=/objectdates COMP_CODE=objectdates CLASS_NAME=CALENDAR_COLLECTI
     BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/objectdates' AND COMP_CODE ='objectdates' AND NVL(CLASS_NAME,'IS_NULL') = 'CALENDAR_COLLECTION')
     T: BF_COMPONENT_ACTION
     URL: /objectdates
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=CD.0105 URL=/set_to_business_day COMP_CODE=setToBusinessDayButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1413866571'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/set_to_business_day' AND COMP_CODE ='setToBusinessDayButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=CD.0105 URL=/set_to_holiday COMP_CODE=setToHolidayButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '607868764'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/set_to_holiday' AND COMP_CODE ='setToHolidayButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=CD.0105 URL=/show_calendar_year COMP_CODE=showYearButton CLASS_NAME=IS_NULL ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-46716560'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='CD.0105' AND NVL(URL,'IS_NULL') = '/show_calendar_year' AND COMP_CODE ='showYearButton' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
+    T: BF_COMPONENT_ACTION
+    URL: /save
   parentKeys: {}
   properties: {}
   related: {}
@@ -1681,80 +1751,80 @@ CODE=RC.0062 URL=/unreconcilejeqty COMP_CODE=unreconcilejeqty CLASS_NAME=RECONCI
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0003 URL=/table COMP_CODE=DocumentValidationTable CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-608659941'
+CODE=SP.0003 URL=/documents COMP_CODE=documents CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1120182557'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0003' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='DocumentValidationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0003' AND NVL(URL,'IS_NULL') = '/documents' AND COMP_CODE ='documents' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0003 URL=/table COMP_CODE=DocumentValidationTable CLASS_NAME=CONT_DOCUMENT ACTION_URL=/transfer: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1258556809'
+CODE=SP.0003 URL=/documents COMP_CODE=documents CLASS_NAME=CONT_DOCUMENT ACTION_URL=/transfer: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1461374383'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0003' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='DocumentValidationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0003' AND NVL(URL,'IS_NULL') = '/documents' AND COMP_CODE ='documents' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
     T: BF_COMPONENT_ACTION
     URL: /transfer
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0004 URL=/table COMP_CODE=DocumentValidationTable CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1041476858'
+CODE=SP.0004 URL=/documents COMP_CODE=documents CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-700665726'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0004' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='DocumentValidationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0004' AND NVL(URL,'IS_NULL') = '/documents' AND COMP_CODE ='documents' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0004 URL=/table COMP_CODE=DocumentValidationTable CLASS_NAME=CONT_DOCUMENT ACTION_URL=/transfer: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1244306664'
+CODE=SP.0004 URL=/documents COMP_CODE=documents CLASS_NAME=CONT_DOCUMENT ACTION_URL=/transfer: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-677995408'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0004' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='DocumentValidationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0004' AND NVL(URL,'IS_NULL') = '/documents' AND COMP_CODE ='documents' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
     T: BF_COMPONENT_ACTION
     URL: /transfer
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0005 URL=/table COMP_CODE=DocumentValidationTable CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1603353639'
+CODE=SP.0005 URL=/documents COMP_CODE=documents CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-281148895'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0005' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='DocumentValidationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0005' AND NVL(URL,'IS_NULL') = '/documents' AND COMP_CODE ='documents' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0005 URL=/table COMP_CODE=DocumentValidationTable CLASS_NAME=CONT_DOCUMENT ACTION_URL=/transfer: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1230056519'
+CODE=SP.0005 URL=/documents COMP_CODE=documents CLASS_NAME=CONT_DOCUMENT ACTION_URL=/transfer: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '105383567'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0005' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='DocumentValidationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0005' AND NVL(URL,'IS_NULL') = '/documents' AND COMP_CODE ='documents' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
     T: BF_COMPONENT_ACTION
     URL: /transfer
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0006 URL=/table COMP_CODE=DocumentValidationTable CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '46783160'
+CODE=SP.0006 URL=/documents COMP_CODE=documents CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '138367936'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0006' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='DocumentValidationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0006' AND NVL(URL,'IS_NULL') = '/documents' AND COMP_CODE ='documents' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
     T: BF_COMPONENT_ACTION
     URL: /save
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0006 URL=/table COMP_CODE=DocumentValidationTable CLASS_NAME=CONT_DOCUMENT ACTION_URL=/transfer: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1215806374'
+CODE=SP.0006 URL=/documents COMP_CODE=documents CLASS_NAME=CONT_DOCUMENT ACTION_URL=/transfer: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '888762542'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0006' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='DocumentValidationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0006' AND NVL(URL,'IS_NULL') = '/documents' AND COMP_CODE ='documents' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
     T: BF_COMPONENT_ACTION
     URL: /transfer
   parentKeys: {}
@@ -2054,357 +2124,6 @@ CODE=SP.0015 URL=/line_item_table COMP_CODE=TransactionTemplateLineItem CLASS_NA
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0016 URL=/docGenCustAttr COMP_CODE=DocGenCustAttr CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-334885199'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = '/docGenCustAttr' AND COMP_CODE ='DocGenCustAttr' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0016 URL=/form COMP_CODE=DocGenDetails CLASS_NAME=CONT_DOCUMENT ACTION_URL=/execute: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '211157797'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = '/form' AND COMP_CODE ='DocGenDetails' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
-    T: BF_COMPONENT_ACTION
-    URL: /execute
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0016 URL=/form COMP_CODE=DocGenDetails CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1517562931'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = '/form' AND COMP_CODE ='DocGenDetails' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0016 URL=/reportselector COMP_CODE=reportselector CLASS_NAME=IS_NULL ACTION_URL=/execute: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1146734347'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = '/reportselector' AND COMP_CODE ='reportselector' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /execute
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0016 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/delete_document: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-2026829645'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /delete_document
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0016 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/new_document: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '633937878'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /new_document
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0016 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/reverse_document: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1458561748'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /reverse_document
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0016 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/update_rates: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '782197657'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0016' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /update_rates
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0017 URL=/TransactionFormCustAttr COMP_CODE=TransactionFormCustAttr CLASS_NAME=CONT_TRANSACTION ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1564130315'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0017' AND NVL(URL,'IS_NULL') = '/TransactionFormCustAttr' AND COMP_CODE ='TransactionFormCustAttr' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0017 URL=/table COMP_CODE=TransactionGeneralMaster CLASS_NAME=CONT_TRANSACTION ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-557661773'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0017' AND NVL(URL,'IS_NULL') = '/table' AND COMP_CODE ='TransactionGeneralMaster' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0017 URL=/transactionform COMP_CODE=transactionform CLASS_NAME=CONT_TRANSACTION ACTION_URL=/execute: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1857699083'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0017' AND NVL(URL,'IS_NULL') = '/transactionform' AND COMP_CODE ='transactionform' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
-    T: BF_COMPONENT_ACTION
-    URL: /execute
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0017 URL=/transactionform COMP_CODE=transactionform CLASS_NAME=CONT_TRANSACTION ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '854107645'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0017' AND NVL(URL,'IS_NULL') = '/transactionform' AND COMP_CODE ='transactionform' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-? CODE=SP.0017 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/com.ec.pf.screenlet.button/button/deleteEmptyContTrans
-: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-2045988219'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0017' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /com.ec.pf.screenlet.button/button/deleteEmptyContTrans
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0017 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/updatetransexrate: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1970361163'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0017' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /updatetransexrate
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0018 URL=/form COMP_CODE=TransactionForm CLASS_NAME=CONT_TRANSACTION_QTY ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1868366195'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0018' AND NVL(URL,'IS_NULL') = '/form' AND COMP_CODE ='TransactionForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION_QTY')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/commentsafter COMP_CODE=commentsafter CLASS_NAME=CONT_TRANS_COMMENTS ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1966718322'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/commentsafter' AND COMP_CODE ='commentsafter' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANS_COMMENTS')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/commentsbefore COMP_CODE=commentsbefore CLASS_NAME=CONT_TRANS_COMMENTS ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-766376610'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/commentsbefore' AND COMP_CODE ='commentsbefore' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANS_COMMENTS')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/lineiteminterest COMP_CODE=lineiteminterest CLASS_NAME=CONT_LINE_ITEM ACTION_URL=/execute: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '2086623311'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/lineiteminterest' AND COMP_CODE ='lineiteminterest' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /execute
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/lineiteminterest COMP_CODE=lineiteminterest CLASS_NAME=CONT_LINE_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '85237475'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/lineiteminterest' AND COMP_CODE ='lineiteminterest' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/lineitemnonqty COMP_CODE=lineitemnonqty CLASS_NAME=CONT_LINE_ITEM ACTION_URL=/execute: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1355068433'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/lineitemnonqty' AND COMP_CODE ='lineitemnonqty' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /execute
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/lineitemnonqty COMP_CODE=lineitemnonqty CLASS_NAME=CONT_LINE_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1194963133'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/lineitemnonqty' AND COMP_CODE ='lineitemnonqty' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/lineitemqty COMP_CODE=lineitemqty CLASS_NAME=CONT_LINE_ITEM ACTION_URL=/execute: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1400145805'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/lineitemqty' AND COMP_CODE ='lineitemqty' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /execute
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/lineitemqty COMP_CODE=lineitemqty CLASS_NAME=CONT_LINE_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '659155045'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/lineitemqty' AND COMP_CODE ='lineitemqty' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/pctlineitem COMP_CODE=pctlineitem CLASS_NAME=CONT_LINE_ITEM ACTION_URL=/execute: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-2007932801'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/pctlineitem' AND COMP_CODE ='pctlineitem' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /execute
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/pctlineitem COMP_CODE=pctlineitem CLASS_NAME=CONT_LINE_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '397083827'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/pctlineitem' AND COMP_CODE ='pctlineitem' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=/totalform COMP_CODE=TransactionTotalForm CLASS_NAME=CONT_TRANSACTION ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-747516499'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = '/totalform' AND COMP_CODE ='TransactionTotalForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANSACTION')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/updPrice: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-691750817'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /updPrice
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0019 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/updliinterest: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1215103537'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0019' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /updliinterest
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0020 URL=/table1 COMP_CODE=table1 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '841197778'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0020' AND NVL(URL,'IS_NULL') = '/table1' AND COMP_CODE ='table1' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0020 URL=/table2 COMP_CODE=table2 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-130106638'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0020' AND NVL(URL,'IS_NULL') = '/table2' AND COMP_CODE ='table2' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0020 URL=/table3 COMP_CODE=table3 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1101411054'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0020' AND NVL(URL,'IS_NULL') = '/table3' AND COMP_CODE ='table3' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0020 URL=/table4 COMP_CODE=table4 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-2072715470'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0020' AND NVL(URL,'IS_NULL') = '/table4' AND COMP_CODE ='table4' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0021 URL=/BankingDetailsForm COMP_CODE=BankingDetailsForm CLASS_NAME=CONT_DOCUMENT ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '889852599'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/BankingDetailsForm' AND COMP_CODE ='BankingDetailsForm' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0021 URL=/customertable COMP_CODE=BankingDetailsCustomerTable CLASS_NAME=CONT_DOCUMENT_CUSTOMER ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1476953518'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/customertable' AND COMP_CODE ='BankingDetailsCustomerTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_CUSTOMER')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0021 URL=/vendortable COMP_CODE=BankingDetailsVendorTable CLASS_NAME=CONT_DOCUMENT_VENDOR ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1048710972'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0021' AND NVL(URL,'IS_NULL') = '/vendortable' AND COMP_CODE ='BankingDetailsVendorTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_VENDOR')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 CODE=SP.0022 URL=/pay_tracking_items COMP_CODE=payment_tracking_items CLASS_NAME=CONT_PAY_TRACKING_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '737121139'
   keys:
@@ -2465,36 +2184,6 @@ CODE=SP.0026 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/PasteF
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0027 URL=/ReallocationDetails COMP_CODE=ReallocationDetails CLASS_NAME=CONT_LINE_ITEM_DIST_SUM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1599233545'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0027' AND NVL(URL,'IS_NULL') = '/ReallocationDetails' AND COMP_CODE ='ReallocationDetails' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_LINE_ITEM_DIST_SUM')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0027 URL=/ReallocationTable COMP_CODE=ReallocationTable CLASS_NAME=CONT_TRANS_REALLOC ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1457895427'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0027' AND NVL(URL,'IS_NULL') = '/ReallocationTable' AND COMP_CODE ='ReallocationTable' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_TRANS_REALLOC')
-    T: BF_COMPONENT_ACTION
-    URL: /save
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
-CODE=SP.0027 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/DelRealloc: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '906771603'
-  keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0027' AND NVL(URL,'IS_NULL') = 'IS_NULL' AND COMP_CODE ='Default' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
-    T: BF_COMPONENT_ACTION
-    URL: /DelRealloc
-  parentKeys: {}
-  properties: {}
-  related: {}
-  status: ADDED
 CODE=SP.0029 URL=/table COMP_CODE=general_price_usage_table CLASS_NAME=CNTR_GENERAL_PRICE_SETUP ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
   fileName: '1794051368'
   keys:
@@ -2545,22 +2234,102 @@ CODE=SP.0033 URL=IS_NULL COMP_CODE=Default CLASS_NAME=IS_NULL ACTION_URL=/create
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0051 URL=/processinput COMP_CODE=processinput CLASS_NAME=FIN_PERIOD_DOC_SIMPLE ACTION_URL=/process_documents: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '-1798853882'
+CODE=SP.0051 URL=/processinput COMP_CODE=processinput CLASS_NAME=IS_NULL ACTION_URL=/process_documents: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-143947425'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0051' AND NVL(URL,'IS_NULL') = '/processinput' AND COMP_CODE ='processinput' AND NVL(CLASS_NAME,'IS_NULL') = 'FIN_PERIOD_DOC_SIMPLE')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0051' AND NVL(URL,'IS_NULL') = '/processinput' AND COMP_CODE ='processinput' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /process_documents
   parentKeys: {}
   properties: {}
   related: {}
   status: ADDED
-CODE=SP.0054 URL=/processinput COMP_CODE=processinput CLASS_NAME=FIN_CARGO_DOC_SIMPLE ACTION_URL=/process_documents: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
-  fileName: '1483611018'
+CODE=SP.0051 URL=/table1 COMP_CODE=table1 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1464377396'
   keys:
-    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/processinput' AND COMP_CODE ='processinput' AND NVL(CLASS_NAME,'IS_NULL') = 'FIN_CARGO_DOC_SIMPLE')
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0051' AND NVL(URL,'IS_NULL') = '/table1' AND COMP_CODE ='table1' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SP.0051 URL=/table2 COMP_CODE=table2 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '493072980'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0051' AND NVL(URL,'IS_NULL') = '/table2' AND COMP_CODE ='table2' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SP.0051 URL=/table3 COMP_CODE=table3 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-478231436'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0051' AND NVL(URL,'IS_NULL') = '/table3' AND COMP_CODE ='table3' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SP.0051 URL=/table4 COMP_CODE=table4 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1449535852'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0051' AND NVL(URL,'IS_NULL') = '/table4' AND COMP_CODE ='table4' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SP.0054 URL=/processinput COMP_CODE=processinput CLASS_NAME=IS_NULL ACTION_URL=/process_documents: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1240146850'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/processinput' AND COMP_CODE ='processinput' AND NVL(CLASS_NAME,'IS_NULL') = 'IS_NULL')
     T: BF_COMPONENT_ACTION
     URL: /process_documents
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SP.0054 URL=/table1 COMP_CODE=table1 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-480452975'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/table1' AND COMP_CODE ='table1' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SP.0054 URL=/table2 COMP_CODE=table2 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '-1451757391'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/table2' AND COMP_CODE ='table2' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SP.0054 URL=/table3 COMP_CODE=table3 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '1871905489'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/table3' AND COMP_CODE ='table3' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
+    T: BF_COMPONENT_ACTION
+    URL: /save
+  parentKeys: {}
+  properties: {}
+  related: {}
+  status: ADDED
+CODE=SP.0054 URL=/table4 COMP_CODE=table4 CLASS_NAME=CONT_DOCUMENT_TEXT_ITEM ACTION_URL=/save: !!com.ec.upgrade.ecconfig.model.ConfigurationItemGroupExtended
+  fileName: '900601073'
+  keys:
+    BF_COMPONENT_NO: (SELECT BF_COMPONENT_NO FROM BF_COMPONENT WHERE BF_CODE ='SP.0054' AND NVL(URL,'IS_NULL') = '/table4' AND COMP_CODE ='table4' AND NVL(CLASS_NAME,'IS_NULL') = 'CONT_DOCUMENT_TEXT_ITEM')
+    T: BF_COMPONENT_ACTION
+    URL: /save
   parentKeys: {}
   properties: {}
   related: {}

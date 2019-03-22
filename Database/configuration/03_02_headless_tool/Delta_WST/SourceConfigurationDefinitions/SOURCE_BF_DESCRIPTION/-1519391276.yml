@@ -9,12 +9,5 @@ properties:
   BF_DESCRIPTION_NO: PO.0010
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.prod.po.screens/daily_personnel_on_board' )
   DATA_LEVEL: 0.0
-  DESCRIPTION: |
-    <p>This BF is used to keep track of personnel onboard. Available beds can be calculated as total available beds for the facility minus sum of head count for all staff categories.</p>
-
-    <p>A list of available attributes is found in Section 1.1.5.2. The column &ldquo;Disabled&rdquo; indicates whether they are activated in the initial product setup or not. Non activated attributes can be activated from configuration screen Class Attributes (CO.1014).</p>
-
-    <p>New personnel categories can be configured in EC codes, code type &lsquo;PERSONNEL_CATEG&rsquo;.</p>
-
-    <p>Additional custom attributes can be made in data section 2 for viewing.</p>
+  DESCRIPTION: <p>This BF is used to keep track of personnel onboard. Available beds can be calculated as total available beds for the facility minus sum of head count for all staff categories.</p><p>New personnel categories can be configured in EC codes, code type &lsquo;PERSONNEL_CATEG&rsquo;. The total available beds can be set at Facility level.</p>
 related: {}

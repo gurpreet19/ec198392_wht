@@ -11,10 +11,10 @@ properties:
   CODE_TEXT: Facility Class 2
   CODE_TYPE: DEFER_OBJECT_TYPES
   DESCRIPTION: null
-  IS_ACTIVE: Y
+  IS_ACTIVE: N
   IS_DEFAULT: null
   IS_SYSTEM_CODE: N
-  SORT_ORDER: 80.0
+  SORT_ORDER: 30.0
   TEXT_1: null
   TEXT_10: null
   TEXT_2: null

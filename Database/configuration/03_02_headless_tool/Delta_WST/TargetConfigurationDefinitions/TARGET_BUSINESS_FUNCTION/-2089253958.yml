@@ -8,5 +8,6 @@ properties:
   BF_CODE: CP.0014
   NAME: Document Receivers
   PROFILE_CLASS_NAME: null
+  TARGET_CONDITION: null
   URL: /com.ec.tran.cp.screens/document_receivers
 related: {}

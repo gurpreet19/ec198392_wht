@@ -12,7 +12,7 @@ properties:
   BUSINESS_FUNCTION_NO: (SELECT BUSINESS_FUNCTION_NO FROM BUSINESS_FUNCTION WHERE URL ='/com.ec.revn.sp/fin_documents_simple/TYPE/PERIOD' )
   CLASS_NAME: REVN_PERIOD_DG_LOG_ITEM
   COMP_CODE: log_detail
-  NAME: Log Detail
+  NAME: Navigator (form) > Process Log (tab) > Process Log (table) > Log Detail (table)
   SIGNING_REQ_IND: null
   URL: /log_detail
 related: {}

@@ -3,7 +3,7 @@ name: JBPM_NODEINSTANCELOG
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008660
+  name: PK_JBPM_NODEINSTANCELOG
   type: PRIMARYKEY
   status: UNDEFINED
 columns:
@@ -46,7 +46,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '15'
   NODEID:
     columnName: NODEID
     typeName: VARCHAR2(255 CHAR)
@@ -102,7 +102,23 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '16'
+  SLACOMPLIANCE:
+    columnName: SLACOMPLIANCE
+    typeName: NUMBER(10,0)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '12'
+  SLA_DUE_DATE:
+    columnName: SLA_DUE_DATE
+    typeName: TIMESTAMP(6)
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '11'
   TYPE:
     columnName: TYPE
     typeName: NUMBER(10,0)
@@ -110,7 +126,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '13'
   WORKITEMID:
     columnName: WORKITEMID
     typeName: NUMBER(19,0)
@@ -118,7 +134,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '14'
 indexes:
   IDX_NINSTLOG_NODETYPE:
     indexName: IDX_NINSTLOG_NODETYPE

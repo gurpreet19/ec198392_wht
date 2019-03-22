@@ -5,6 +5,7 @@ BEGIN
     -- $Revision: 1.6 $
     -- Common
     IF Inserting THEN
+
       :NEW.record_status := NVL(:NEW.record_status,'P');
       IF :new.created_by IS NULL THEN
          :new.created_by := COALESCE(SYS_CONTEXT('USERENV', 'CLIENT_IDENTIFIER'),USER);

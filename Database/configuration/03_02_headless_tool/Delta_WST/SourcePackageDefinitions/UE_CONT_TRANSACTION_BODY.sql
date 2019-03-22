@@ -408,7 +408,8 @@ END ResolveTransNamePH;
 ---------------------------------------------------------------------------------------------------
 FUNCTION isTransactionEditable(
          p_transaction_key VARCHAR2,
-         p_level VARCHAR2 DEFAULT 'TRANS') -- Alternatively FIELD or COMPANY
+         p_level VARCHAR2, -- Alternatives: TRANS, FIELD or COMPANY
+         p_msg OUT VARCHAR2)
 RETURN VARCHAR2
 --</EC-DOC>
 IS
@@ -437,7 +438,8 @@ END isTransactionEditable;
 ---------------------------------------------------------------------------------------------------
 FUNCTION isTransactionEditablePre(
          p_transaction_key VARCHAR2,
-         p_level VARCHAR2 DEFAULT 'TRANS') -- Alternatively FIELD or COMPANY
+         p_level VARCHAR2, -- Alternatives: TRANS, FIELD or COMPANY
+         p_msg OUT VARCHAR2)
 RETURN VARCHAR2
 --</EC-DOC>
 IS
@@ -466,7 +468,9 @@ END isTransactionEditablePre;
 ---------------------------------------------------------------------------------------------------
 FUNCTION isTransactionEditablePost(
          p_transaction_key VARCHAR2,
-         p_level VARCHAR2 DEFAULT 'TRANS') -- Alternatively FIELD or COMPANY
+         p_level VARCHAR2, -- Alternatives: TRANS, FIELD or COMPANY
+         p_status VARCHAR2,
+         p_msg OUT VARCHAR2)
 RETURN VARCHAR2
 --</EC-DOC>
 IS
@@ -476,6 +480,96 @@ BEGIN
 
 END isTransactionEditablePost;
 
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isTransactionDeletable
+-- Description    : Instead-of-type user exit, REPLACING the product code
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   :
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+---------------------------------------------------------------------------------------------------
+FUNCTION isTransactionDeletable(
+         p_transaction_key VARCHAR2,
+         p_level VARCHAR2, -- Alternatives: TRANS, FIELD or COMPANY
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+BEGIN
+
+  RETURN NULL;
+
+END isTransactionDeletable;
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isTransactionDeletablePre
+-- Description    : Pre-type user exit, BEFORE the product code executes
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   :
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+---------------------------------------------------------------------------------------------------
+FUNCTION isTransactionDeletablePre(
+         p_transaction_key VARCHAR2,
+         p_level VARCHAR2, -- Alternatives: TRANS, FIELD or COMPANY
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+BEGIN
+
+  RETURN NULL;
+
+END isTransactionDeletablePre;
+
+--<EC-DOC>
+---------------------------------------------------------------------------------------------------
+-- Function       : isTransactionDeletablePost
+-- Description    : Post-type user exit, AFTER the product code has been executed
+--
+-- Preconditions  :
+-- Postconditions :
+--
+-- Using tables   :
+--
+-- Using functions:
+--
+-- Configuration
+-- required       :
+--
+-- Behaviour      :
+---------------------------------------------------------------------------------------------------
+FUNCTION isTransactionDeletablePost(
+         p_transaction_key VARCHAR2,
+         p_level VARCHAR2, -- Alternatives: TRANS, FIELD or COMPANY
+         p_status VARCHAR2,
+         p_msg OUT VARCHAR2)
+RETURN VARCHAR2
+--</EC-DOC>
+IS
+BEGIN
+
+  RETURN NULL;
+
+END isTransactionDeletablePost;
 
 --<EC-DOC>
 ---------------------------------------------------------------------------------------------------

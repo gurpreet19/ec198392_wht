@@ -24,6 +24,7 @@ CREATE OR REPLACE PACKAGE BODY EcBp_Cargo_Fcst_Transport IS
             25.05.2017 xxwaghmp  ECPD-45663: Added new forecast_id in CleanLonesomeCargoes.
 **          03.07.2017 asareswi  ECPD-45818: Replaced sysdate with Ecdp_Timestamp.getCurrentSysdate
 **		    18.07.2017 baratmah  ECPD-45870 Modified getCargoNameByBerth to Fix filtering on cargo status.
+**       	01.10.2018 sharawan  ECPD-59763: Updated procedure cleanLonesomeCargoes to check for system property setting before delete lonesome cargoes
 ********************************************************************/
 
 --<EC-DOC>
@@ -265,15 +266,22 @@ PROCEDURE cleanLonesomeCargoes (p_forecast_id varchar2)
 IS
 CURSOR c_lonesome_cargo
 IS
-SELECT cargo_no
-FROM cargo_fcst_transport c
-WHERE  c.forecast_id= p_forecast_id and not exists (SELECT 'X' FROM stor_fcst_lift_nom s
-                  WHERE s.cargo_no = c.cargo_no AND s.forecast_id = p_forecast_id);
+  SELECT cargo_no
+  FROM cargo_fcst_transport c
+  WHERE  c.forecast_id= p_forecast_id and not exists (SELECT 'X' FROM stor_fcst_lift_nom s
+                    WHERE s.cargo_no = c.cargo_no AND s.forecast_id = p_forecast_id);
+
+  lv_clean_lonesome VARCHAR2(1);
+
 BEGIN
-	FOR curLonesomeCargo IN c_lonesome_cargo LOOP
-		DELETE FROM cargo_fcst_transport
-		WHERE cargo_no = curLonesomeCargo.cargo_no AND forecast_id = p_forecast_id;
-	END LOOP;
+  lv_clean_lonesome := ecdp_ctrl_property.getSystemProperty('/com/ec/tran/cargo/delete_liftings/clean_lonesome_cargo');
+
+  IF nvl(lv_clean_lonesome, 'Y') = 'Y' THEN
+    FOR curLonesomeCargo IN c_lonesome_cargo LOOP
+      DELETE FROM cargo_fcst_transport
+      WHERE cargo_no = curLonesomeCargo.cargo_no AND forecast_id = p_forecast_id;
+    END LOOP;
+  END IF;
 
 END cleanLonesomeCargoes;
 

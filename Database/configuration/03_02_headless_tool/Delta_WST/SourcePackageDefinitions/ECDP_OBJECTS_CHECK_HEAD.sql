@@ -17,7 +17,11 @@ CREATE OR REPLACE PACKAGE EcDp_Objects_Check IS
 ** -------- ------ ------ --------------------------------------
 **
 *****************************************************************/
+FUNCTION getOwnerJoinStartDateColumn(p_data_class_name VARCHAR2)
+RETURN VARCHAR2;
 
+FUNCTION getOwnerJoinEndDateColumn(p_data_class_name VARCHAR2)
+RETURN VARCHAR2;
 
 PROCEDURE AddChildEndDateCursor(p_body_lines in out DBMS_SQL.varchar2a,
                                 p_class_name VARCHAR2,

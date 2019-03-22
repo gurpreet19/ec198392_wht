@@ -2,6 +2,7 @@
 name: QRTZ_SCHEDULER_STATE
 cnstPrimaryKey:
   columns:
+  - SCHED_NAME
   - INSTANCE_NAME
   name: PK_QRTZ_SCHEDULER_STATE
   type: PRIMARYKEY
@@ -38,7 +39,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '3'
+    sequence: !!float '4'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -57,12 +58,12 @@ columns:
     sequence: !!float '7'
   INSTANCE_NAME:
     columnName: INSTANCE_NAME
-    typeName: VARCHAR2(80)
+    typeName: VARCHAR2(200)
     nullable: 'NO'
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '1'
+    sequence: !!float '2'
   LAST_CHECKIN_TIME:
     columnName: LAST_CHECKIN_TIME
     typeName: NUMBER
@@ -70,7 +71,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '2'
+    sequence: !!float '3'
   LAST_UPDATED_BY:
     columnName: LAST_UPDATED_BY
     typeName: VARCHAR2(30)
@@ -95,14 +96,6 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '5'
-  RECOVERER:
-    columnName: RECOVERER
-    typeName: VARCHAR2(80)
-    nullable: 'YES'
-    isGenerated: UNKNOWN
-    isAutoIncrement: UNKNOWN
-    status: UNDEFINED
-    sequence: !!float '4'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -127,6 +120,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '11'
+  SCHED_NAME:
+    columnName: SCHED_NAME
+    typeName: VARCHAR2(120)
+    nullable: 'NO'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '1'
 cnstChecks:
   CHK_QRTZ_SCHEDULER_STATE_1:
     searchCondition: APPROVAL_STATE IS NULL OR APPROVAL_STATE IN ('N','O','U','D')

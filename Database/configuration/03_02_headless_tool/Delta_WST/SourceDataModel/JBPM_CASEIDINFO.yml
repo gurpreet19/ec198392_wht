@@ -3,7 +3,7 @@ name: JBPM_CASEIDINFO
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008734
+  name: PK_JBPM_CASEIDINFO
   type: PRIMARYKEY
   status: UNDEFINED
 columns:

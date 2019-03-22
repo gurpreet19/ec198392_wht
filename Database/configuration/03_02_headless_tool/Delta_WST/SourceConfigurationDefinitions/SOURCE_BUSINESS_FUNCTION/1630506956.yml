@@ -8,5 +8,6 @@ properties:
   BF_CODE: PO.0119
   NAME: Test Device Analysis
   PROFILE_CLASS_NAME: TEST_DEVICE
+  TARGET_CONDITION: null
   URL: /com.ec.prod.po.screens/test_device_analysis
 related: {}

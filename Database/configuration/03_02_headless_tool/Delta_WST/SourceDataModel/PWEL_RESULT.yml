@@ -15,7 +15,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '22'
+    sequence: !!float '28'
   ANNULUS_TEMP:
     columnName: ANNULUS_TEMP
     typeName: NUMBER
@@ -23,7 +23,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '23'
+    sequence: !!float '29'
   API:
     columnName: API
     typeName: NUMBER
@@ -31,7 +31,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '136'
+    sequence: !!float '142'
   APPROVAL_BY:
     columnName: APPROVAL_BY
     typeName: VARCHAR2(30)
@@ -39,7 +39,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '248'
+    sequence: !!float '254'
   APPROVAL_DATE:
     columnName: APPROVAL_DATE
     typeName: DATE
@@ -47,7 +47,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '249'
+    sequence: !!float '255'
   APPROVAL_STATE:
     columnName: APPROVAL_STATE
     typeName: VARCHAR2(1)
@@ -55,7 +55,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '250'
+    sequence: !!float '256'
   AVG_CHOKE_SIZE_2:
     columnName: AVG_CHOKE_SIZE_2
     typeName: NUMBER
@@ -63,7 +63,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '138'
+    sequence: !!float '144'
   AVG_FLOW_LINE_PRESS:
     columnName: AVG_FLOW_LINE_PRESS
     typeName: NUMBER
@@ -71,7 +71,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '139'
+    sequence: !!float '145'
   AVG_FLOW_MASS:
     columnName: AVG_FLOW_MASS
     typeName: NUMBER
@@ -79,7 +79,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '13'
+    sequence: !!float '19'
   AVG_INTAKE_PRESS:
     columnName: AVG_INTAKE_PRESS
     typeName: NUMBER
@@ -87,7 +87,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '140'
+    sequence: !!float '146'
   AVG_INTAKE_TEMP:
     columnName: AVG_INTAKE_TEMP
     typeName: NUMBER
@@ -95,7 +95,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '141'
+    sequence: !!float '147'
   BH_PRESS:
     columnName: BH_PRESS
     typeName: NUMBER
@@ -103,7 +103,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '20'
+    sequence: !!float '26'
   BH_PRESS_2:
     columnName: BH_PRESS_2
     typeName: NUMBER
@@ -111,7 +111,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '163'
+    sequence: !!float '169'
   BH_TEMP:
     columnName: BH_TEMP
     typeName: NUMBER
@@ -119,7 +119,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '21'
+    sequence: !!float '27'
   BH_TEMP_2:
     columnName: BH_TEMP_2
     typeName: NUMBER
@@ -127,7 +127,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '164'
+    sequence: !!float '170'
   CGR:
     columnName: CGR
     typeName: NUMBER
@@ -135,7 +135,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '102'
+    sequence: !!float '108'
   CHECK_UNIQUE:
     columnName: CHECK_UNIQUE
     typeName: VARCHAR2(1000)
@@ -143,7 +143,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '6'
+    sequence: !!float '12'
   CHLORIDE:
     columnName: CHLORIDE
     typeName: NUMBER
@@ -151,7 +151,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '98'
+    sequence: !!float '104'
   CHOKE_SIZE:
     columnName: CHOKE_SIZE
     typeName: NUMBER
@@ -159,7 +159,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '11'
+    sequence: !!float '17'
   CO2_FRACTION:
     columnName: CO2_FRACTION
     typeName: NUMBER
@@ -167,7 +167,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '135'
+    sequence: !!float '141'
   COMMENTS:
     columnName: COMMENTS
     typeName: VARCHAR2(2000)
@@ -175,7 +175,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '190'
+    sequence: !!float '196'
   CREATED_BY:
     columnName: CREATED_BY
     typeName: VARCHAR2(30)
@@ -183,7 +183,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '242'
+    sequence: !!float '248'
   CREATED_DATE:
     columnName: CREATED_DATE
     typeName: DATE
@@ -191,7 +191,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '243'
+    sequence: !!float '249'
   CURRENT_UNBALANCE:
     columnName: CURRENT_UNBALANCE
     typeName: NUMBER
@@ -199,7 +199,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '142'
+    sequence: !!float '148'
   DATA_CLASS_NAME:
     columnName: DATA_CLASS_NAME
     typeName: VARCHAR2(24)
@@ -207,7 +207,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '7'
+    sequence: !!float '13'
   DATE_1:
     columnName: DATE_1
     typeName: DATE
@@ -215,7 +215,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '236'
+    sequence: !!float '242'
   DATE_2:
     columnName: DATE_2
     typeName: DATE
@@ -223,7 +223,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '237'
+    sequence: !!float '243'
   DATE_3:
     columnName: DATE_3
     typeName: DATE
@@ -231,7 +231,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '238'
+    sequence: !!float '244'
   DATE_4:
     columnName: DATE_4
     typeName: DATE
@@ -239,7 +239,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '239'
+    sequence: !!float '245'
   DATE_5:
     columnName: DATE_5
     typeName: DATE
@@ -247,7 +247,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '240'
+    sequence: !!float '246'
   DAYTIME:
     columnName: DAYTIME
     typeName: DATE
@@ -263,7 +263,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '93'
+    sequence: !!float '99'
   DILUENT_PRESS:
     columnName: DILUENT_PRESS
     typeName: NUMBER
@@ -271,7 +271,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '179'
+    sequence: !!float '185'
   DILUENT_RATE:
     columnName: DILUENT_RATE
     typeName: NUMBER
@@ -279,7 +279,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '82'
+    sequence: !!float '88'
   DP_TUBING:
     columnName: DP_TUBING
     typeName: NUMBER
@@ -287,7 +287,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '183'
+    sequence: !!float '189'
   DP_VENTURI:
     columnName: DP_VENTURI
     typeName: NUMBER
@@ -295,7 +295,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '162'
+    sequence: !!float '168'
   DRIVE_CURRENT:
     columnName: DRIVE_CURRENT
     typeName: NUMBER
@@ -303,7 +303,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '78'
+    sequence: !!float '84'
   DRIVE_FREQUENCY:
     columnName: DRIVE_FREQUENCY
     typeName: NUMBER
@@ -311,7 +311,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '81'
+    sequence: !!float '87'
   DRIVE_VOLTAGE:
     columnName: DRIVE_VOLTAGE
     typeName: NUMBER
@@ -319,7 +319,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '79'
+    sequence: !!float '85'
   DRY_WET_GAS_RATIO:
     columnName: DRY_WET_GAS_RATIO
     typeName: NUMBER
@@ -327,7 +327,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '152'
+    sequence: !!float '158'
   DURATION:
     columnName: DURATION
     typeName: NUMBER
@@ -335,7 +335,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '12'
+    sequence: !!float '18'
   EMULSION:
     columnName: EMULSION
     typeName: NUMBER
@@ -343,7 +343,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '99'
+    sequence: !!float '105'
   END_DATE:
     columnName: END_DATE
     typeName: DATE
@@ -351,7 +351,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '4'
+    sequence: !!float '8'
+  END_DAY:
+    columnName: END_DAY
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '10'
   EROSION_RATE:
     columnName: EROSION_RATE
     typeName: NUMBER
@@ -359,7 +367,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '25'
+    sequence: !!float '31'
   EROSION_UOM:
     columnName: EROSION_UOM
     typeName: VARCHAR2(32)
@@ -367,7 +375,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '188'
+    sequence: !!float '194'
   EST_DILUENT_RATE:
     columnName: EST_DILUENT_RATE
     typeName: NUMBER
@@ -375,7 +383,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '92'
+    sequence: !!float '98'
   EST_GAS_RATE:
     columnName: EST_GAS_RATE
     typeName: NUMBER
@@ -383,7 +391,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '112'
+    sequence: !!float '118'
   EST_GL_RATE:
     columnName: EST_GL_RATE
     typeName: NUMBER
@@ -391,7 +399,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '91'
+    sequence: !!float '97'
   EST_NET_COND_RATE:
     columnName: EST_NET_COND_RATE
     typeName: NUMBER
@@ -399,7 +407,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '113'
+    sequence: !!float '119'
   EST_NET_OIL_RATE:
     columnName: EST_NET_OIL_RATE
     typeName: NUMBER
@@ -407,7 +415,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '111'
+    sequence: !!float '117'
   EST_POWERWATER_RATE:
     columnName: EST_POWERWATER_RATE
     typeName: NUMBER
@@ -415,7 +423,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '127'
+    sequence: !!float '133'
   EST_WATER_RATE:
     columnName: EST_WATER_RATE
     typeName: NUMBER
@@ -423,7 +431,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '114'
+    sequence: !!float '120'
   FLOWING_IND:
     columnName: FLOWING_IND
     typeName: VARCHAR2(1)
@@ -431,7 +439,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '10'
+    sequence: !!float '16'
   FORMATION_GLR:
     columnName: FORMATION_GLR
     typeName: NUMBER
@@ -439,7 +447,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '100'
+    sequence: !!float '106'
   FWS_RATE:
     columnName: FWS_RATE
     typeName: NUMBER
@@ -447,7 +455,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '128'
+    sequence: !!float '134'
   GAS_DENSITY_ADJ:
     columnName: GAS_DENSITY_ADJ
     typeName: NUMBER
@@ -455,7 +463,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '31'
+    sequence: !!float '37'
   GAS_MASS_RATE_ADJ:
     columnName: GAS_MASS_RATE_ADJ
     typeName: NUMBER
@@ -463,7 +471,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '116'
+    sequence: !!float '122'
   GAS_OUT_RATE:
     columnName: GAS_OUT_RATE
     typeName: NUMBER
@@ -471,7 +479,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '106'
+    sequence: !!float '112'
   GAS_RATE:
     columnName: GAS_RATE
     typeName: NUMBER
@@ -479,7 +487,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '110'
+    sequence: !!float '116'
   GAS_RATE_ADJ:
     columnName: GAS_RATE_ADJ
     typeName: NUMBER
@@ -487,7 +495,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '27'
+    sequence: !!float '33'
   GAS_SP_GRAV:
     columnName: GAS_SP_GRAV
     typeName: NUMBER
@@ -495,7 +503,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '97'
+    sequence: !!float '103'
   GLR:
     columnName: GLR
     typeName: NUMBER
@@ -503,7 +511,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '103'
+    sequence: !!float '109'
   GL_CHOKE_SIZE:
     columnName: GL_CHOKE_SIZE
     typeName: NUMBER
@@ -511,7 +519,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '83'
+    sequence: !!float '89'
   GL_DENSITY:
     columnName: GL_DENSITY
     typeName: NUMBER
@@ -519,7 +527,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '87'
+    sequence: !!float '93'
   GL_DIFF_PRESS:
     columnName: GL_DIFF_PRESS
     typeName: NUMBER
@@ -527,7 +535,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '88'
+    sequence: !!float '94'
   GL_PRESS:
     columnName: GL_PRESS
     typeName: NUMBER
@@ -535,7 +543,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '84'
+    sequence: !!float '90'
   GL_RATE:
     columnName: GL_RATE
     typeName: NUMBER
@@ -543,7 +551,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '86'
+    sequence: !!float '92'
   GL_TEMP:
     columnName: GL_TEMP
     typeName: NUMBER
@@ -551,7 +559,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '85'
+    sequence: !!float '91'
   GL_USC_PRESS:
     columnName: GL_USC_PRESS
     typeName: NUMBER
@@ -559,7 +567,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '89'
+    sequence: !!float '95'
   GL_USC_TEMP:
     columnName: GL_USC_TEMP
     typeName: NUMBER
@@ -567,7 +575,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '90'
+    sequence: !!float '96'
   GOR:
     columnName: GOR
     typeName: NUMBER
@@ -575,7 +583,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '101'
+    sequence: !!float '107'
   INTAKE_PRESS:
     columnName: INTAKE_PRESS
     typeName: NUMBER
@@ -583,7 +591,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '155'
+    sequence: !!float '161'
   INTAKE_TEMP:
     columnName: INTAKE_TEMP
     typeName: NUMBER
@@ -591,7 +599,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '156'
+    sequence: !!float '162'
   LAST_UPDATED_BY:
     columnName: LAST_UPDATED_BY
     typeName: VARCHAR2(30)
@@ -599,7 +607,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '244'
+    sequence: !!float '250'
   LAST_UPDATED_DATE:
     columnName: LAST_UPDATED_DATE
     typeName: DATE
@@ -607,7 +615,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '245'
+    sequence: !!float '251'
   LENGTH:
     columnName: LENGTH
     typeName: NUMBER
@@ -615,7 +623,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '143'
+    sequence: !!float '149'
   LIQUID_LEVEL:
     columnName: LIQUID_LEVEL
     typeName: NUMBER
@@ -623,7 +631,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '80'
+    sequence: !!float '86'
   LIQUID_RATE_ADJ:
     columnName: LIQUID_RATE_ADJ
     typeName: NUMBER
@@ -631,7 +639,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '119'
+    sequence: !!float '125'
   METER1_FACTOR_GAS:
     columnName: METER1_FACTOR_GAS
     typeName: NUMBER
@@ -639,7 +647,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '168'
+    sequence: !!float '174'
   METER1_FACTOR_GL:
     columnName: METER1_FACTOR_GL
     typeName: NUMBER
@@ -647,7 +655,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '182'
+    sequence: !!float '188'
   METER1_FACTOR_HC:
     columnName: METER1_FACTOR_HC
     typeName: NUMBER
@@ -655,7 +663,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '167'
+    sequence: !!float '173'
   METER1_FACTOR_HCLIQ:
     columnName: METER1_FACTOR_HCLIQ
     typeName: NUMBER
@@ -663,7 +671,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '169'
+    sequence: !!float '175'
   METER1_FACTOR_HCMASS:
     columnName: METER1_FACTOR_HCMASS
     typeName: NUMBER
@@ -671,7 +679,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '181'
+    sequence: !!float '187'
   METER1_FACTOR_WAT:
     columnName: METER1_FACTOR_WAT
     typeName: NUMBER
@@ -679,7 +687,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '170'
+    sequence: !!float '176'
   METER2_FACTOR_GAS:
     columnName: METER2_FACTOR_GAS
     typeName: NUMBER
@@ -687,7 +695,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '171'
+    sequence: !!float '177'
   METER2_FACTOR_HCLIQ:
     columnName: METER2_FACTOR_HCLIQ
     typeName: NUMBER
@@ -695,7 +703,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '172'
+    sequence: !!float '178'
   METER2_FACTOR_WAT:
     columnName: METER2_FACTOR_WAT
     typeName: NUMBER
@@ -703,7 +711,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '173'
+    sequence: !!float '179'
   MOTOR_TEMP:
     columnName: MOTOR_TEMP
     typeName: NUMBER
@@ -711,7 +719,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '144'
+    sequence: !!float '150'
   MPM2_COND_RATE:
     columnName: MPM2_COND_RATE
     typeName: NUMBER
@@ -719,7 +727,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '174'
+    sequence: !!float '180'
   MPM2_GAS_RATE:
     columnName: MPM2_GAS_RATE
     typeName: NUMBER
@@ -727,7 +735,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '175'
+    sequence: !!float '181'
   MPM2_OIL_RATE:
     columnName: MPM2_OIL_RATE
     typeName: NUMBER
@@ -735,7 +743,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '177'
+    sequence: !!float '183'
   MPM2_WATER_RATE:
     columnName: MPM2_WATER_RATE
     typeName: NUMBER
@@ -743,7 +751,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '176'
+    sequence: !!float '182'
   MPM_CONDUCT:
     columnName: MPM_CONDUCT
     typeName: NUMBER
@@ -751,7 +759,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '62'
+    sequence: !!float '68'
   MPM_CONDUCT_TEMP:
     columnName: MPM_CONDUCT_TEMP
     typeName: NUMBER
@@ -759,7 +767,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '63'
+    sequence: !!float '69'
   MPM_COND_DENSITY:
     columnName: MPM_COND_DENSITY
     typeName: NUMBER
@@ -767,7 +775,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '50'
+    sequence: !!float '56'
   MPM_COND_DENSITY_FLC:
     columnName: MPM_COND_DENSITY_FLC
     typeName: NUMBER
@@ -775,7 +783,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '59'
+    sequence: !!float '65'
   MPM_COND_MASS_RATE:
     columnName: MPM_COND_MASS_RATE
     typeName: NUMBER
@@ -783,7 +791,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '48'
+    sequence: !!float '54'
   MPM_COND_MASS_RATE_FLC:
     columnName: MPM_COND_MASS_RATE_FLC
     typeName: NUMBER
@@ -791,7 +799,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '55'
+    sequence: !!float '61'
   MPM_COND_RATE:
     columnName: MPM_COND_RATE
     typeName: NUMBER
@@ -799,7 +807,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '45'
+    sequence: !!float '51'
   MPM_COND_RATE_FLC:
     columnName: MPM_COND_RATE_FLC
     typeName: NUMBER
@@ -807,7 +815,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '52'
+    sequence: !!float '58'
   MPM_DIFF_PRESS:
     columnName: MPM_DIFF_PRESS
     typeName: NUMBER
@@ -815,7 +823,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '180'
+    sequence: !!float '186'
   MPM_GAS_DENSITY:
     columnName: MPM_GAS_DENSITY
     typeName: NUMBER
@@ -823,7 +831,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '39'
+    sequence: !!float '45'
   MPM_GAS_DENSITY_FLC:
     columnName: MPM_GAS_DENSITY_FLC
     typeName: NUMBER
@@ -831,7 +839,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '58'
+    sequence: !!float '64'
   MPM_GAS_DENSITY_RAW:
     columnName: MPM_GAS_DENSITY_RAW
     typeName: NUMBER
@@ -839,7 +847,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '71'
+    sequence: !!float '77'
   MPM_GAS_MASS_RATE:
     columnName: MPM_GAS_MASS_RATE
     typeName: NUMBER
@@ -847,7 +855,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '47'
+    sequence: !!float '53'
   MPM_GAS_MASS_RATE_FLC:
     columnName: MPM_GAS_MASS_RATE_FLC
     typeName: NUMBER
@@ -855,7 +863,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '54'
+    sequence: !!float '60'
   MPM_GAS_MASS_RATE_RAW:
     columnName: MPM_GAS_MASS_RATE_RAW
     typeName: NUMBER
@@ -863,7 +871,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '68'
+    sequence: !!float '74'
   MPM_GAS_RATE:
     columnName: MPM_GAS_RATE
     typeName: NUMBER
@@ -871,7 +879,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '38'
+    sequence: !!float '44'
   MPM_GAS_RATE_FLC:
     columnName: MPM_GAS_RATE_FLC
     typeName: NUMBER
@@ -879,7 +887,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '37'
+    sequence: !!float '43'
   MPM_GAS_RATE_RAW:
     columnName: MPM_GAS_RATE_RAW
     typeName: NUMBER
@@ -887,7 +895,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '65'
+    sequence: !!float '71'
   MPM_HC_MASS_RATE:
     columnName: MPM_HC_MASS_RATE
     typeName: NUMBER
@@ -895,7 +903,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '159'
+    sequence: !!float '165'
   MPM_MIX_DENSITY:
     columnName: MPM_MIX_DENSITY
     typeName: NUMBER
@@ -903,7 +911,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '42'
+    sequence: !!float '48'
   MPM_MIX_DENSITY_FLC:
     columnName: MPM_MIX_DENSITY_FLC
     typeName: NUMBER
@@ -911,7 +919,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '61'
+    sequence: !!float '67'
   MPM_MIX_DENSITY_RAW:
     columnName: MPM_MIX_DENSITY_RAW
     typeName: NUMBER
@@ -919,7 +927,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '73'
+    sequence: !!float '79'
   MPM_OIL_DENSITY:
     columnName: MPM_OIL_DENSITY
     typeName: NUMBER
@@ -927,7 +935,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '36'
+    sequence: !!float '42'
   MPM_OIL_DENSITY_FLC:
     columnName: MPM_OIL_DENSITY_FLC
     typeName: NUMBER
@@ -935,7 +943,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '57'
+    sequence: !!float '63'
   MPM_OIL_DENSITY_RAW:
     columnName: MPM_OIL_DENSITY_RAW
     typeName: NUMBER
@@ -943,7 +951,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '70'
+    sequence: !!float '76'
   MPM_OIL_MASS_RATE:
     columnName: MPM_OIL_MASS_RATE
     typeName: NUMBER
@@ -951,7 +959,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '46'
+    sequence: !!float '52'
   MPM_OIL_MASS_RATE_FLC:
     columnName: MPM_OIL_MASS_RATE_FLC
     typeName: NUMBER
@@ -959,7 +967,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '53'
+    sequence: !!float '59'
   MPM_OIL_MASS_RATE_RAW:
     columnName: MPM_OIL_MASS_RATE_RAW
     typeName: NUMBER
@@ -967,7 +975,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '67'
+    sequence: !!float '73'
   MPM_OIL_RATE:
     columnName: MPM_OIL_RATE
     typeName: NUMBER
@@ -975,7 +983,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '35'
+    sequence: !!float '41'
   MPM_OIL_RATE_FLC:
     columnName: MPM_OIL_RATE_FLC
     typeName: NUMBER
@@ -983,7 +991,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '34'
+    sequence: !!float '40'
   MPM_OIL_RATE_RAW:
     columnName: MPM_OIL_RATE_RAW
     typeName: NUMBER
@@ -991,7 +999,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '64'
+    sequence: !!float '70'
   MPM_PRESS:
     columnName: MPM_PRESS
     typeName: NUMBER
@@ -999,7 +1007,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '43'
+    sequence: !!float '49'
   MPM_TEMP:
     columnName: MPM_TEMP
     typeName: NUMBER
@@ -1007,7 +1015,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '44'
+    sequence: !!float '50'
   MPM_TOT_MASS_RATE:
     columnName: MPM_TOT_MASS_RATE
     typeName: NUMBER
@@ -1015,7 +1023,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '160'
+    sequence: !!float '166'
   MPM_WATER_DENSITY:
     columnName: MPM_WATER_DENSITY
     typeName: NUMBER
@@ -1023,7 +1031,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '51'
+    sequence: !!float '57'
   MPM_WATER_DENSITY_FLC:
     columnName: MPM_WATER_DENSITY_FLC
     typeName: NUMBER
@@ -1031,7 +1039,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '60'
+    sequence: !!float '66'
   MPM_WATER_DENSITY_RAW:
     columnName: MPM_WATER_DENSITY_RAW
     typeName: NUMBER
@@ -1039,7 +1047,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '72'
+    sequence: !!float '78'
   MPM_WATER_MASS_RATE:
     columnName: MPM_WATER_MASS_RATE
     typeName: NUMBER
@@ -1047,7 +1055,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '49'
+    sequence: !!float '55'
   MPM_WATER_MASS_RATE_FLC:
     columnName: MPM_WATER_MASS_RATE_FLC
     typeName: NUMBER
@@ -1055,7 +1063,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '56'
+    sequence: !!float '62'
   MPM_WATER_MASS_RATE_RAW:
     columnName: MPM_WATER_MASS_RATE_RAW
     typeName: NUMBER
@@ -1063,7 +1071,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '69'
+    sequence: !!float '75'
   MPM_WATER_RATE:
     columnName: MPM_WATER_RATE
     typeName: NUMBER
@@ -1071,7 +1079,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '41'
+    sequence: !!float '47'
   MPM_WATER_RATE_FLC:
     columnName: MPM_WATER_RATE_FLC
     typeName: NUMBER
@@ -1079,7 +1087,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '40'
+    sequence: !!float '46'
   MPM_WATER_RATE_RAW:
     columnName: MPM_WATER_RATE_RAW
     typeName: NUMBER
@@ -1087,7 +1095,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '66'
+    sequence: !!float '72'
   NET_COND_DENSITY_ADJ:
     columnName: NET_COND_DENSITY_ADJ
     typeName: NUMBER
@@ -1095,7 +1103,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '32'
+    sequence: !!float '38'
   NET_COND_MASS_RATE_ADJ:
     columnName: NET_COND_MASS_RATE_ADJ
     typeName: NUMBER
@@ -1103,7 +1111,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '117'
+    sequence: !!float '123'
   NET_COND_RATE_ADJ:
     columnName: NET_COND_RATE_ADJ
     typeName: NUMBER
@@ -1111,7 +1119,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '28'
+    sequence: !!float '34'
   NET_OIL_DENSITY_ADJ:
     columnName: NET_OIL_DENSITY_ADJ
     typeName: NUMBER
@@ -1119,7 +1127,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '30'
+    sequence: !!float '36'
   NET_OIL_MASS_RATE_ADJ:
     columnName: NET_OIL_MASS_RATE_ADJ
     typeName: NUMBER
@@ -1127,7 +1135,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '115'
+    sequence: !!float '121'
   NET_OIL_RATE_ADJ:
     columnName: NET_OIL_RATE_ADJ
     typeName: NUMBER
@@ -1135,7 +1143,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '26'
+    sequence: !!float '32'
   OBJECT_ID:
     columnName: OBJECT_ID
     typeName: VARCHAR2(32)
@@ -1151,7 +1159,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '107'
+    sequence: !!float '113'
   OIL_SG:
     columnName: OIL_SG
     typeName: NUMBER
@@ -1159,7 +1167,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '145'
+    sequence: !!float '151'
   OIL_SHRINKAGE:
     columnName: OIL_SHRINKAGE
     typeName: NUMBER
@@ -1167,7 +1175,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '95'
+    sequence: !!float '101'
   OUTLET_PRESS:
     columnName: OUTLET_PRESS
     typeName: NUMBER
@@ -1175,7 +1183,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '157'
+    sequence: !!float '163'
   OUTLET_TEMP:
     columnName: OUTLET_TEMP
     typeName: NUMBER
@@ -1183,7 +1191,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '158'
+    sequence: !!float '164'
   PLUNGER_CYCLE_RATE:
     columnName: PLUNGER_CYCLE_RATE
     typeName: NUMBER
@@ -1191,7 +1199,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '146'
+    sequence: !!float '152'
   POWERWATER_RATE:
     columnName: POWERWATER_RATE
     typeName: NUMBER
@@ -1199,7 +1207,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '126'
+    sequence: !!float '132'
   PRIMARY_IND:
     columnName: PRIMARY_IND
     typeName: VARCHAR2(1)
@@ -1207,7 +1215,15 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '9'
+    sequence: !!float '15'
+  PRODUCTION_DAY:
+    columnName: PRODUCTION_DAY
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '4'
   PROD_INDEX:
     columnName: PROD_INDEX
     typeName: NUMBER
@@ -1215,7 +1231,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '165'
+    sequence: !!float '171'
   PUMP_DISCHARGE_PRESS:
     columnName: PUMP_DISCHARGE_PRESS
     typeName: NUMBER
@@ -1223,7 +1239,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '147'
+    sequence: !!float '153'
   PUMP_POWER:
     columnName: PUMP_POWER
     typeName: NUMBER
@@ -1231,7 +1247,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '75'
+    sequence: !!float '81'
   PUMP_PRESSURE:
     columnName: PUMP_PRESSURE
     typeName: NUMBER
@@ -1239,7 +1255,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '148'
+    sequence: !!float '154'
   PUMP_RUNTIME:
     columnName: PUMP_RUNTIME
     typeName: NUMBER
@@ -1247,7 +1263,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '94'
+    sequence: !!float '100'
   PUMP_SPEED:
     columnName: PUMP_SPEED
     typeName: NUMBER
@@ -1255,7 +1271,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '74'
+    sequence: !!float '80'
   PUMP_STROKE:
     columnName: PUMP_STROKE
     typeName: NUMBER
@@ -1263,7 +1279,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '76'
+    sequence: !!float '82'
   PUMP_STROKE_SPEED:
     columnName: PUMP_STROKE_SPEED
     typeName: NUMBER
@@ -1271,7 +1287,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '149'
+    sequence: !!float '155'
   PUMP_TIMER:
     columnName: PUMP_TIMER
     typeName: NUMBER
@@ -1279,7 +1295,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '77'
+    sequence: !!float '83'
   RATE_SOURCE:
     columnName: RATE_SOURCE
     typeName: VARCHAR2(32)
@@ -1287,7 +1303,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '133'
+    sequence: !!float '139'
   RECALC_RATIOS:
     columnName: RECALC_RATIOS
     typeName: VARCHAR2(1)
@@ -1295,7 +1311,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '178'
+    sequence: !!float '184'
   RECORD_STATUS:
     columnName: RECORD_STATUS
     typeName: VARCHAR2(1)
@@ -1303,7 +1319,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '241'
+    sequence: !!float '247'
   REC_ID:
     columnName: REC_ID
     typeName: VARCHAR2(32)
@@ -1311,7 +1327,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '251'
+    sequence: !!float '257'
   RESERVOIR_PRESS:
     columnName: RESERVOIR_PRESS
     typeName: NUMBER
@@ -1319,7 +1335,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '166'
+    sequence: !!float '172'
   RESULT_NO:
     columnName: RESULT_NO
     typeName: NUMBER
@@ -1327,7 +1343,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '5'
+    sequence: !!float '11'
   RESULT_NO_COMB:
     columnName: RESULT_NO_COMB
     typeName: NUMBER
@@ -1335,7 +1351,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '8'
+    sequence: !!float '14'
   REV_NO:
     columnName: REV_NO
     typeName: NUMBER
@@ -1343,7 +1359,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '246'
+    sequence: !!float '252'
   REV_TEXT:
     columnName: REV_TEXT
     typeName: VARCHAR2(2000)
@@ -1351,7 +1367,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '247'
+    sequence: !!float '253'
   SALES_PRESS:
     columnName: SALES_PRESS
     typeName: NUMBER
@@ -1359,7 +1375,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '137'
+    sequence: !!float '143'
   SAND_2_UOM:
     columnName: SAND_2_UOM
     typeName: VARCHAR2(32)
@@ -1367,7 +1383,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '187'
+    sequence: !!float '193'
   SAND_CONTENT:
     columnName: SAND_CONTENT
     typeName: NUMBER
@@ -1375,7 +1391,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '105'
+    sequence: !!float '111'
   SAND_RATE:
     columnName: SAND_RATE
     typeName: NUMBER
@@ -1383,7 +1399,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '24'
+    sequence: !!float '30'
   SAND_RATE_2:
     columnName: SAND_RATE_2
     typeName: NUMBER
@@ -1391,7 +1407,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '189'
+    sequence: !!float '195'
   SAND_UOM:
     columnName: SAND_UOM
     typeName: VARCHAR2(32)
@@ -1399,7 +1415,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '186'
+    sequence: !!float '192'
   SI_BHP:
     columnName: SI_BHP
     typeName: NUMBER
@@ -1407,7 +1423,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '153'
+    sequence: !!float '159'
   SI_WHP:
     columnName: SI_WHP
     typeName: NUMBER
@@ -1415,7 +1431,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '154'
+    sequence: !!float '160'
   SOLUTION_GAS_FACTOR:
     columnName: SOLUTION_GAS_FACTOR
     typeName: NUMBER
@@ -1423,7 +1439,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '96'
+    sequence: !!float '102'
   STATUS:
     columnName: STATUS
     typeName: VARCHAR2(32)
@@ -1431,7 +1447,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '130'
+    sequence: !!float '136'
   TDEV_PRESS:
     columnName: TDEV_PRESS
     typeName: NUMBER
@@ -1439,7 +1455,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '108'
+    sequence: !!float '114'
   TDEV_TEMP:
     columnName: TDEV_TEMP
     typeName: NUMBER
@@ -1447,7 +1463,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '109'
+    sequence: !!float '115'
   TEST_DEVICE:
     columnName: TEST_DEVICE
     typeName: VARCHAR2(32)
@@ -1455,7 +1471,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '131'
+    sequence: !!float '137'
   TEXT_1:
     columnName: TEXT_1
     typeName: VARCHAR2(16)
@@ -1463,7 +1479,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '221'
+    sequence: !!float '227'
   TEXT_10:
     columnName: TEXT_10
     typeName: VARCHAR2(240)
@@ -1471,7 +1487,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '230'
+    sequence: !!float '236'
   TEXT_11:
     columnName: TEXT_11
     typeName: VARCHAR2(240)
@@ -1479,7 +1495,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '231'
+    sequence: !!float '237'
   TEXT_12:
     columnName: TEXT_12
     typeName: VARCHAR2(240)
@@ -1487,7 +1503,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '232'
+    sequence: !!float '238'
   TEXT_13:
     columnName: TEXT_13
     typeName: VARCHAR2(240)
@@ -1495,7 +1511,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '233'
+    sequence: !!float '239'
   TEXT_14:
     columnName: TEXT_14
     typeName: VARCHAR2(240)
@@ -1503,7 +1519,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '234'
+    sequence: !!float '240'
   TEXT_15:
     columnName: TEXT_15
     typeName: VARCHAR2(240)
@@ -1511,7 +1527,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '235'
+    sequence: !!float '241'
   TEXT_2:
     columnName: TEXT_2
     typeName: VARCHAR2(32)
@@ -1519,7 +1535,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '222'
+    sequence: !!float '228'
   TEXT_3:
     columnName: TEXT_3
     typeName: VARCHAR2(240)
@@ -1527,7 +1543,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '223'
+    sequence: !!float '229'
   TEXT_4:
     columnName: TEXT_4
     typeName: VARCHAR2(2000)
@@ -1535,7 +1551,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '224'
+    sequence: !!float '230'
   TEXT_5:
     columnName: TEXT_5
     typeName: VARCHAR2(240)
@@ -1543,7 +1559,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '225'
+    sequence: !!float '231'
   TEXT_6:
     columnName: TEXT_6
     typeName: VARCHAR2(240)
@@ -1551,7 +1567,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '226'
+    sequence: !!float '232'
   TEXT_7:
     columnName: TEXT_7
     typeName: VARCHAR2(240)
@@ -1559,7 +1575,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '227'
+    sequence: !!float '233'
   TEXT_8:
     columnName: TEXT_8
     typeName: VARCHAR2(240)
@@ -1567,7 +1583,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '228'
+    sequence: !!float '234'
   TEXT_9:
     columnName: TEXT_9
     typeName: VARCHAR2(240)
@@ -1575,7 +1591,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '229'
+    sequence: !!float '235'
   TOT_WATER_DENSITY_ADJ:
     columnName: TOT_WATER_DENSITY_ADJ
     typeName: NUMBER
@@ -1583,7 +1599,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '33'
+    sequence: !!float '39'
   TOT_WATER_MASS_RATE_ADJ:
     columnName: TOT_WATER_MASS_RATE_ADJ
     typeName: NUMBER
@@ -1591,7 +1607,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '118'
+    sequence: !!float '124'
   TOT_WATER_RATE_ADJ:
     columnName: TOT_WATER_RATE_ADJ
     typeName: NUMBER
@@ -1599,7 +1615,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '29'
+    sequence: !!float '35'
   TREND_ANALYSIS_IND:
     columnName: TREND_ANALYSIS_IND
     typeName: VARCHAR2(1)
@@ -1607,7 +1623,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '124'
+    sequence: !!float '130'
   TREND_RESET_IND:
     columnName: TREND_RESET_IND
     typeName: VARCHAR2(1)
@@ -1615,7 +1631,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '125'
+    sequence: !!float '131'
   TSEP_PRESS:
     columnName: TSEP_PRESS
     typeName: NUMBER
@@ -1623,7 +1639,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '184'
+    sequence: !!float '190'
   TSEP_TEMP:
     columnName: TSEP_TEMP
     typeName: NUMBER
@@ -1631,7 +1647,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '185'
+    sequence: !!float '191'
   USE_CALC:
     columnName: USE_CALC
     typeName: VARCHAR2(1)
@@ -1639,7 +1655,23 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '134'
+    sequence: !!float '140'
+  UTC_DAYTIME:
+    columnName: UTC_DAYTIME
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '3'
+  UTC_END_DATE:
+    columnName: UTC_END_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '9'
   VALID_FROM_DATE:
     columnName: VALID_FROM_DATE
     typeName: DATE
@@ -1647,7 +1679,23 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '3'
+    sequence: !!float '5'
+  VALID_FROM_DAY:
+    columnName: VALID_FROM_DAY
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '7'
+  VALID_FROM_UTC_DATE:
+    columnName: VALID_FROM_UTC_DATE
+    typeName: DATE
+    nullable: 'YES'
+    isGenerated: UNKNOWN
+    isAutoIncrement: UNKNOWN
+    status: UNDEFINED
+    sequence: !!float '6'
   VALUE_1:
     columnName: VALUE_1
     typeName: NUMBER
@@ -1655,7 +1703,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '191'
+    sequence: !!float '197'
   VALUE_10:
     columnName: VALUE_10
     typeName: NUMBER
@@ -1663,7 +1711,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '200'
+    sequence: !!float '206'
   VALUE_11:
     columnName: VALUE_11
     typeName: NUMBER
@@ -1671,7 +1719,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '201'
+    sequence: !!float '207'
   VALUE_12:
     columnName: VALUE_12
     typeName: NUMBER
@@ -1679,7 +1727,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '202'
+    sequence: !!float '208'
   VALUE_13:
     columnName: VALUE_13
     typeName: NUMBER
@@ -1687,7 +1735,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '203'
+    sequence: !!float '209'
   VALUE_14:
     columnName: VALUE_14
     typeName: NUMBER
@@ -1695,7 +1743,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '204'
+    sequence: !!float '210'
   VALUE_15:
     columnName: VALUE_15
     typeName: NUMBER
@@ -1703,7 +1751,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '205'
+    sequence: !!float '211'
   VALUE_16:
     columnName: VALUE_16
     typeName: NUMBER
@@ -1711,7 +1759,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '206'
+    sequence: !!float '212'
   VALUE_17:
     columnName: VALUE_17
     typeName: NUMBER
@@ -1719,7 +1767,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '207'
+    sequence: !!float '213'
   VALUE_18:
     columnName: VALUE_18
     typeName: NUMBER
@@ -1727,7 +1775,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '208'
+    sequence: !!float '214'
   VALUE_19:
     columnName: VALUE_19
     typeName: NUMBER
@@ -1735,7 +1783,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '209'
+    sequence: !!float '215'
   VALUE_2:
     columnName: VALUE_2
     typeName: NUMBER
@@ -1743,7 +1791,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '192'
+    sequence: !!float '198'
   VALUE_20:
     columnName: VALUE_20
     typeName: NUMBER
@@ -1751,7 +1799,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '210'
+    sequence: !!float '216'
   VALUE_21:
     columnName: VALUE_21
     typeName: NUMBER
@@ -1759,7 +1807,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '211'
+    sequence: !!float '217'
   VALUE_22:
     columnName: VALUE_22
     typeName: NUMBER
@@ -1767,7 +1815,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '212'
+    sequence: !!float '218'
   VALUE_23:
     columnName: VALUE_23
     typeName: NUMBER
@@ -1775,7 +1823,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '213'
+    sequence: !!float '219'
   VALUE_24:
     columnName: VALUE_24
     typeName: NUMBER
@@ -1783,7 +1831,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '214'
+    sequence: !!float '220'
   VALUE_25:
     columnName: VALUE_25
     typeName: NUMBER
@@ -1791,7 +1839,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '215'
+    sequence: !!float '221'
   VALUE_26:
     columnName: VALUE_26
     typeName: NUMBER
@@ -1799,7 +1847,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '216'
+    sequence: !!float '222'
   VALUE_27:
     columnName: VALUE_27
     typeName: NUMBER
@@ -1807,7 +1855,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '217'
+    sequence: !!float '223'
   VALUE_28:
     columnName: VALUE_28
     typeName: NUMBER
@@ -1815,7 +1863,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '218'
+    sequence: !!float '224'
   VALUE_29:
     columnName: VALUE_29
     typeName: NUMBER
@@ -1823,7 +1871,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '219'
+    sequence: !!float '225'
   VALUE_3:
     columnName: VALUE_3
     typeName: NUMBER
@@ -1831,7 +1879,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '193'
+    sequence: !!float '199'
   VALUE_30:
     columnName: VALUE_30
     typeName: NUMBER
@@ -1839,7 +1887,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '220'
+    sequence: !!float '226'
   VALUE_4:
     columnName: VALUE_4
     typeName: NUMBER
@@ -1847,7 +1895,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '194'
+    sequence: !!float '200'
   VALUE_5:
     columnName: VALUE_5
     typeName: NUMBER
@@ -1855,7 +1903,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '195'
+    sequence: !!float '201'
   VALUE_6:
     columnName: VALUE_6
     typeName: NUMBER
@@ -1863,7 +1911,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '196'
+    sequence: !!float '202'
   VALUE_7:
     columnName: VALUE_7
     typeName: NUMBER
@@ -1871,7 +1919,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '197'
+    sequence: !!float '203'
   VALUE_8:
     columnName: VALUE_8
     typeName: NUMBER
@@ -1879,7 +1927,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '198'
+    sequence: !!float '204'
   VALUE_9:
     columnName: VALUE_9
     typeName: NUMBER
@@ -1887,7 +1935,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '199'
+    sequence: !!float '205'
   VIBRATION:
     columnName: VIBRATION
     typeName: NUMBER
@@ -1895,7 +1943,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '150'
+    sequence: !!float '156'
   VOLTAGE_UNBALANCE:
     columnName: VOLTAGE_UNBALANCE
     typeName: NUMBER
@@ -1903,7 +1951,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '151'
+    sequence: !!float '157'
   WATERCUT_PCT:
     columnName: WATERCUT_PCT
     typeName: NUMBER
@@ -1911,7 +1959,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '104'
+    sequence: !!float '110'
   WELL_METER_FACTOR:
     columnName: WELL_METER_FACTOR
     typeName: NUMBER
@@ -1919,7 +1967,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '129'
+    sequence: !!float '135'
   WELL_TEST_REASON:
     columnName: WELL_TEST_REASON
     typeName: VARCHAR2(32)
@@ -1927,7 +1975,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '161'
+    sequence: !!float '167'
   WET_DRY_GAS_RATIO:
     columnName: WET_DRY_GAS_RATIO
     typeName: NUMBER
@@ -1935,7 +1983,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '120'
+    sequence: !!float '126'
   WET_GAS_GRAVITY:
     columnName: WET_GAS_GRAVITY
     typeName: NUMBER
@@ -1943,7 +1991,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '121'
+    sequence: !!float '127'
   WGR:
     columnName: WGR
     typeName: NUMBER
@@ -1951,7 +1999,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '122'
+    sequence: !!float '128'
   WH_DSC_PRESS:
     columnName: WH_DSC_PRESS
     typeName: NUMBER
@@ -1959,7 +2007,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '16'
+    sequence: !!float '22'
   WH_DSC_TEMP:
     columnName: WH_DSC_TEMP
     typeName: NUMBER
@@ -1967,7 +2015,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '17'
+    sequence: !!float '23'
   WH_PRESS:
     columnName: WH_PRESS
     typeName: NUMBER
@@ -1975,7 +2023,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '18'
+    sequence: !!float '24'
   WH_TEMP:
     columnName: WH_TEMP
     typeName: NUMBER
@@ -1983,7 +2031,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '19'
+    sequence: !!float '25'
   WH_USC_PRESS:
     columnName: WH_USC_PRESS
     typeName: NUMBER
@@ -1991,7 +2039,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '14'
+    sequence: !!float '20'
   WH_USC_TEMP:
     columnName: WH_USC_TEMP
     typeName: NUMBER
@@ -1999,7 +2047,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '15'
+    sequence: !!float '21'
   WOR:
     columnName: WOR
     typeName: NUMBER
@@ -2007,7 +2055,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '123'
+    sequence: !!float '129'
   WT_MULTISELECT:
     columnName: WT_MULTISELECT
     typeName: VARCHAR2(1)
@@ -2015,7 +2063,7 @@ columns:
     isGenerated: UNKNOWN
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
-    sequence: !!float '132'
+    sequence: !!float '138'
 cnstUniqueKeys:
   UK_PWEL_RESULT_1:
     columns:

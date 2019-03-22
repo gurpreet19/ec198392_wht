@@ -281,6 +281,14 @@ columns:
     isAutoIncrement: UNKNOWN
     status: UNDEFINED
     sequence: !!float '13'
+cnstUniqueKeys:
+  UK_CALENDAR_COLL_SETUP_1:
+    columns:
+    - OBJECT_ID
+    - CALENDAR_COLLECTION_ID
+    name: UK_CALENDAR_COLL_SETUP_1
+    type: UNIQUEKEY
+    status: UNDEFINED
 cnstForeignKeys:
   FK_CALENDAR_COLL_SETUP_1:
     updateAction: UNKNOWN

@@ -4242,7 +4242,6 @@ CURSOR c_Max(cp_contract_id           VARCHAR2,
   FROM ifac_cargo_value cv
   WHERE cv.contract_id = cp_contract_id
     AND cv.vendor_id = cp_vendor_id
-    AND NVL(cv.customer_Id,'X')= NVL(cp_customer_Id,'X')
     AND cv.cargo_no = cp_cargo_no
     AND cv.parcel_no = cp_parcel_no
     AND cv.qty_type = cp_qty_type
@@ -5197,6 +5196,14 @@ BEGIN
                                             icvRec.customer_id));
 
       IF icvRec.Preceding_Doc_Key IS NOT NULL THEN --This will rerun it with the new preceding document that was just created
+
+        IF icvRec.CUSTOMER_CODE = 'UNDEFINED' AND ec_cont_document.customer_id(icvRec.Preceding_Doc_Key) != icvRec.CUSTOMER_ID THEN
+          icvRec.CUSTOMER_ID := ec_cont_document.customer_id(icvRec.Preceding_Doc_Key);
+          icvRec.CUSTOMER_CODE := ec_company.object_code(icvRec.CUSTOMER_ID);
+          WriteRevnLogInterface_P(EcDp_Revn_Log.LOG_STATUS_ITEM_INFO, 'Customer sat to ' || icvRec.CUSTOMER_CODE || ' based on Preceding Document Key.');
+
+        END IF;
+
           icvRec := ResolveCargoRecord_P(icvRec,p_daytime);
           RETURN icvRec;
        END IF;
@@ -6900,6 +6907,10 @@ END UpdateTransTempCodeOvrd;
       lrec_rscr_r := ec_ifac_cargo_value.row_by_pk(p_sample_source_entry_no);
       If p_customer_id <> lrec_rscr_r.customer_id and
          p_customer_id is not null then
+
+         If lrec_rscr_r.customer_code != 'UNDEFINED' and lrec_rscr_r.preceding_doc_key is not null THEN
+           RAISE_APPLICATION_ERROR(-20001,'The customer must match the customer on the preceding document.');
+         End if;
 
          for pending in c_Pending_Cargos(lrec_rscr_r) loop
 

@@ -5,6 +5,7 @@ keys:
   T: CTRL_MEASUREMENT_TYPE
 parentKeys: {}
 properties:
+  DB_UNIT: null
   DESCRIPTION: Injectivity index
   FORMAT_MASK: '###,##0.00'
   MEASUREMENT_TYPE: PRODUCTIVITY_INDEX

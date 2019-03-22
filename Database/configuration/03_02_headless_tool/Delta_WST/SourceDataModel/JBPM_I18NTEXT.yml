@@ -3,7 +3,7 @@ name: JBPM_I18NTEXT
 cnstPrimaryKey:
   columns:
   - ID
-  name: SYS_C008656
+  name: PK_JBPM_I18NTEXT
   type: PRIMARYKEY
   status: UNDEFINED
 columns:
