@@ -1,6 +1,8 @@
 begin
     EXECUTE immediate 'ALTER PACKAGE ECDP_TIMESTAMP compile';
 	EXECUTE immediate 'ALTER PACKAGE ECDP_TIMESTAMP compile body';
+    EXECUTE immediate 'ALTER PACKAGE ECDP_DATE_TIME compile';
+	EXECUTE immediate 'ALTER PACKAGE ECDP_DATE_TIME compile body';
     EXCEPTION
 		WHEN OTHERS THEN
 		NULL;      
