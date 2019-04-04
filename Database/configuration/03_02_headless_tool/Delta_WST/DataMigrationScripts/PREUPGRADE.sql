@@ -138,13 +138,63 @@ BEGIN
 	IF check_sequence('HIBERNATE_SEQUENCE') THEN
 		EXECUTE IMMEDIATE 'CREATE SEQUENCE HIBERNATE_SEQUENCE' ;
 	END IF ;	
-
+	
+	IF check_sequence('TASK_ID_SEQ') THEN
+		EXECUTE IMMEDIATE 'CREATE SEQUENCE TASK_ID_SEQ';
+	END IF ;
 
 END;
 --~^UTDELIM^~--	
 
 DROP FUNCTION check_sequence
 --~^UTDELIM^~--	
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'DEPLOY_STORE_ID_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence DEPLOY_STORE_ID_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'BPM_DATA_SET_USAGE_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence BPM_DATA_SET_USAGE_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'BPM_NODE_INSTANCE_STATE_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence BPM_NODE_INSTANCE_STATE_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'BPM_PROCESS_INSTANCE_STATE_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence BPM_PROCESS_INSTANCE_STATE_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'BPM_RELATION_STORE_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence BPM_RELATION_STORE_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
 BEGIN
   EXECUTE IMMEDIATE 'DROP MATERIALIZED VIEW MV_OBJECTS';
 EXCEPTION
@@ -5904,5 +5954,60 @@ BEGIN
   COMMIT;
 
   ecdp_generate.generate(NULL, ecdp_generate.AP_TRIGGERS);
+END;
+--~^UTDELIM^~--
+
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'PROCESS_LOG_ID_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence PROCESS_LOG_ID_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'JBPM_BPM_DATA_SET_USAGE_WS_SEQ';
+    IF seqs = 1 THEN
+        EXECUTE IMMEDIATE 'rename JBPM_BPM_DATA_SET_USAGE_WS_SEQ to BPM_DATA_SET_USAGE_WS_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'CASE_ID_INFO_ID_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence CASE_ID_INFO_ID_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'CASE_ROLE_ASSIGN_LOG_ID_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence CASE_ROLE_ASSIGN_LOG_ID_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'CASE_FILE_DATA_LOG_ID_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence CASE_FILE_DATA_LOG_ID_SEQ';
+    END IF;
+END;
+--~^UTDELIM^~--
+DECLARE
+    seqs NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO seqs FROM user_sequences WHERE sequence_name = 'EXEC_ERROR_INFO_ID_SEQ';
+    IF seqs = 0 THEN
+        EXECUTE IMMEDIATE 'create sequence EXEC_ERROR_INFO_ID_SEQ';
+    END IF;
 END;
 --~^UTDELIM^~--

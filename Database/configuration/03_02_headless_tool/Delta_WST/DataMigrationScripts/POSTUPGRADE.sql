@@ -1,3 +1,548 @@
+-- Loading ./ECPD21876_UPGRADE_SCRIPT...
+DECLARE 
+HASENTRY NUMBER;
+BEGIN
+	-- The script will perform the followings in the sequence below:-
+	--1.Create stream set for the stream that has grs Vol method=MEASURED_TRUCKED_LOAD. 
+	--Important: This can only be run after there's an entry for PO.0056_U in stream set.
+
+	INSERT INTO TV_STREAM_SET_LIST (STREAM_ID,CODE,FROM_DATE, END_DATE, CREATED_BY, CREATED_DATE) 
+	SELECT SV.OBJECT_ID, 'PO.0056_U',SV.DAYTIME,SV.END_DATE, NVL(ECDP_PINC.getInstallModeTag(), USER), TRUNC(SYSDATE) FROM STRM_VERSION SV WHERE SV.GRS_VOL_METHOD = 'MEASURED_TRUCKED_UNLOAD' ;
+	 
+	--2.Grs vol method in STRM_VERSION table needs to be updated accordingly as MEASURED_TRUCKED_LOAD,MEASURED_TRUCKED_UNLOAD
+	--are no longer valid methods.
+	--update STRM_VERSION  set  GRS_VOL_METHOD = 'MEASURED_TRUCKED' where GRS_VOL_METHOD in ('MEASURED_TRUCKED_LOAD','MEASURED_TRUCKED_UNLOAD');
+	--3. Move data from net_vol to net_vol_adj and set the net_vol to null. This is because NET_VOL_ADJ will have priority 1 and --not be adjusted by VCF later, while NET_VOL will be priority 2 --and will be adjusted by VCF if available.
+
+	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_STRM_TRANSPORT_EVENT'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_TRANSPORT_EVENT DISABLE';
+		END IF;
+	
+	UPDATE STRM_TRANSPORT_EVENT SET NET_VOL_ADJ = NET_VOL, NET_VOL = NULL WHERE DATA_CLASS_NAME IN ('STRM_TRUCK_UNLOAD_VOL', 'STRM_TRUCK_UNLOAD_MASS');
+
+	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_STRM_TRANSPORT_EVENT'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_TRANSPORT_EVENT ENABLE';
+		END IF;
+EXCEPTION
+   WHEN OTHERS 
+     THEN
+       
+       IF HASENTRY > 0 THEN 
+           EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_TRANSPORT_EVENT ENABLE';
+       END IF;
+        
+        raise_application_error(-20000,
+                            'ERROR: Some Other fatal error occured :- '||SQLERRM);
+
+
+END;
+--~^UTDELIM^~--	
+-- ECPD25492_WELL_CHRONOLOGY_UPGRADE...
+BEGIN
+
+	UPDATE DV_WELL_CHRONOLOGY T SET WELL_CHRON_CODE = 'INPRODUCTION' WHERE T.WELL_CHRON_CODE = 'IN PRODUCTION';
+
+END;
+--~^UTDELIM^~--
+DECLARE 
+HASENTRY NUMBER; 	
+BEGIN
+	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_STRM_VERSION'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_VERSION DISABLE';
+		END IF;
+
+	UPDATE STRM_VERSION SET GCV_METHOD ='REF_VALUE' WHERE GCV_METHOD = 'GCV';
+	
+	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_STRM_VERSION'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_VERSION ENABLE';
+		END IF;
+EXCEPTION
+   WHEN OTHERS 
+     THEN
+
+       IF HASENTRY > 0 THEN 
+           EXECUTE IMMEDIATE 'ALTER TRIGGER IU_STRM_VERSION ENABLE';
+       END IF;
+        
+        raise_application_error(-20000,
+                            'ERROR: Some Other fatal error occured :- '||SQLERRM);
+
+
+END;
+--~^UTDELIM^~--	
+-- ECPD-30871
+/*This is to update all the records having object_type as 'EQPM' instead of 'Chiller,Compressor,Co2 Removal Unit and so on*/ 
+DECLARE 
+HASENTRY NUMBER;
+BEGIN
+	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_WELL_EQUIP_DOWNTIME'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_WELL_EQUIP_DOWNTIME DISABLE';
+		END IF;
+		
+	UPDATE WELL_EQUIP_DOWNTIME 
+	SET object_type=ec_equipment.eqpm_type(OBJECT_ID) 
+	WHERE object_type='EQPM';
+	Commit;
+	
+	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_WELL_EQUIP_DOWNTIME'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_WELL_EQUIP_DOWNTIME ENABLE';
+		END IF;
+EXCEPTION
+   WHEN OTHERS 
+     THEN
+
+       IF HASENTRY > 0 THEN 
+           EXECUTE IMMEDIATE 'ALTER TRIGGER IU_WELL_EQUIP_DOWNTIME ENABLE';
+       END IF;
+        
+        raise_application_error(-20000,
+                            'ERROR: Some Other fatal error occured :- '||SQLERRM);
+
+END;
+--~^UTDELIM^~--
+
+-- ECPD-30308
+
+-- Block 1 : For migration of Prosty Code
+-- Query will skip any Reason code which already exists in prosty_code
+BEGIN
+    INSERT INTO PROSTY_CODES
+        (CODE_TYPE, CODE, CODE_TEXT, IS_SYSTEM_CODE, IS_DEFAULT, IS_ACTIVE, SORT_ORDER, DESCRIPTION
+        )
+    SELECT 'WEL_DT_REAS_1' code_type,
+           rc.reason_code code,
+           initcap(rc.reason_code) code_text,
+           'N' is_system_code,
+           'N' is_default,
+           'Y' is_active,
+           (SELECT nvl(MAX(a.sort_order), 0)
+              FROM prosty_codes a
+             WHERE a.code_type = 'WELL_DT_REAS_1') + (rownum * 10) sort_order,
+           INITCAP(rc.reason_code) description
+      FROM (SELECT DISTINCT UPPER(TRIM(reason_code_1)) reason_code
+              FROM well_equip_downtime
+             WHERE reason_code_1 IS NOT NULL
+               AND UPPER(TRIM(reason_code_1)) NOT IN
+                   (SELECT upper(TRIM(code))
+                      FROM prosty_codes
+                     WHERE code_type = 'WELL_DT_REAS_1')) rc
+    UNION ALL
+    SELECT 'WEL_DT_REAS_2' code_type,
+           rc.reason_code code,
+           initcap(rc.reason_code) code_text,
+           'N' is_system_code,
+           'N' is_default,
+           'Y' is_active,
+           (SELECT nvl(MAX(a.sort_order), 0)
+              FROM prosty_codes a
+             WHERE a.code_type = 'WELL_DT_REAS_2') + (rownum * 10) sort_order,
+           INITCAP(rc.reason_code) description
+      FROM (SELECT DISTINCT UPPER(TRIM(reason_code_2)) reason_code
+              FROM well_equip_downtime
+             WHERE reason_code_2 IS NOT NULL
+               AND UPPER(TRIM(reason_code_2)) NOT IN
+                   (SELECT upper(TRIM(code))
+                      FROM prosty_codes
+                     WHERE code_type = 'WELL_DT_REAS_2')) rc
+    UNION ALL
+    SELECT 'WEL_DT_REAS_3' code_type,
+           rc.reason_code code,
+           initcap(rc.reason_code) code_text,
+           'N' is_system_code,
+           'N' is_default,
+           'Y' is_active,
+           (SELECT nvl(MAX(a.sort_order), 0)
+              FROM prosty_codes a
+             WHERE a.code_type = 'WELL_DT_REAS_3') + (rownum * 10) sort_order,
+           INITCAP(rc.reason_code) description
+      FROM (SELECT DISTINCT UPPER(TRIM(reason_code_3)) reason_code
+              FROM well_equip_downtime
+             WHERE reason_code_3 IS NOT NULL
+               AND UPPER(TRIM(reason_code_3)) NOT IN
+                   (SELECT upper(TRIM(code))
+                      FROM prosty_codes
+                     WHERE code_type = 'WELL_DT_REAS_3')) rc
+    UNION ALL
+    SELECT 'WEL_DT_REAS_4' code_type,
+           rc.reason_code code,
+           initcap(rc.reason_code) code_text,
+           'N' is_system_code,
+           'N' is_default,
+           'Y' is_active,
+           (SELECT nvl(MAX(a.sort_order), 0)
+              FROM prosty_codes a
+             WHERE a.code_type = 'WELL_DT_REAS_4') + (rownum * 10) sort_order,
+           INITCAP(rc.reason_code) description
+      FROM (SELECT DISTINCT UPPER(TRIM(reason_code_4)) reason_code
+              FROM well_equip_downtime
+             WHERE reason_code_4 IS NOT NULL
+               AND UPPER(TRIM(reason_code_4)) NOT IN
+                   (SELECT upper(TRIM(code))
+                      FROM prosty_codes
+                     WHERE code_type = 'WELL_DT_REAS_4')) rc;
+    COMMIT;
+END;
+--~^UTDELIM^~--
+
+-- Block 2 : For data upgrade from well downtime screen to well deferment
+DECLARE
+-- Cursor Declaration
+-- Pull data for D/T Type Group and Single
+CURSOR c_parent_well_downtime_rec
+IS
+SELECT
+       object_id, object_type, event_no, parent_event_no, downtime_type
+       ,downtime_categ, daytime, end_date, downtime_class_type, master_event_id
+       ,parent_daytime, parent_master_event_id, parent_object_id
+       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
+       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
+       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
+       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
+       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
+       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
+       ,date_3, date_4, date_5, rev_text
+  FROM well_equip_downtime wd
+ WHERE (wd.downtime_categ='WELL_OFF' AND wd.downtime_class_type IN ('GROUP','SINGLE'));
+
+-- Pull data for D/T Type Group Child
+CURSOR c_child_well_downtime_rec(pn_parent_event_no NUMBER)
+IS
+SELECT
+       object_id, object_type, event_no, parent_event_no, downtime_type
+       ,downtime_categ, daytime, end_date, downtime_class_type, master_event_id
+       ,parent_daytime, parent_master_event_id, parent_object_id
+       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
+       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
+       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
+       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
+       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
+       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
+       ,date_3, date_4, date_5, rev_text
+  FROM well_equip_downtime wd
+ WHERE wd.downtime_categ='WELL_OFF'
+   AND wd.downtime_class_type = 'GROUP_CHILD'
+   AND parent_event_no = pn_parent_event_no;
+
+-- Local variable declaration
+ln_event_no well_deferment.event_no%TYPE;
+
+BEGIN
+
+  FOR cpr IN c_parent_well_downtime_rec
+  LOOP
+    INSERT INTO well_deferment
+        (
+            object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
+          , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
+          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+          , cond_loss_rate, cond_loss_volume
+          , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
+          , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
+          , steam_inj_loss_volume, water_inj_loss_rate
+          , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+          , comments, value_1, value_2, value_3
+          , value_4, value_5, value_6, value_7, value_8, value_9
+          , value_10, text_1, text_2, text_3, text_4, text_5, text_6
+          , text_7, text_8, text_9
+          , text_10, date_1, date_2, date_3, date_4, date_5
+          , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
+          , rev_text, equipment_id
+        )
+    VALUES
+        (
+            cpr.object_id, cpr.object_type, NULL, 'DOWN', cpr.downtime_class_type, 'N'
+          , cpr.daytime, cpr.end_date, cpr.master_event_id, NULL, NULL, NULL
+          , UPPER(TRIM(cpr.reason_code_1)),  UPPER(TRIM(cpr.reason_code_2)), UPPER(TRIM(cpr.reason_code_3)), UPPER(TRIM(cpr.reason_code_4))
+          , cpr.cond_loss_rate, cpr.cond_loss_volume
+          , cpr.gas_loss_rate, cpr.gas_loss_volume, cpr.gas_inj_loss_rate, cpr.gas_inj_loss_volume
+          , cpr.oil_loss_rate, cpr.oil_loss_volume, cpr.steam_inj_loss_rate
+          , cpr.steam_inj_loss_volume, cpr.water_inj_loss_rate
+          , cpr.water_inj_loss_volume, cpr.water_loss_rate, cpr.water_loss_volume, cpr.status
+          , cpr.comments, cpr.value_1, cpr.value_2, cpr.value_3
+          , cpr.value_4, cpr.value_5, cpr.value_6, cpr.value_7, cpr.value_8, cpr.value_9
+          , cpr.value_10, cpr.text_1, cpr.text_2, cpr.text_3, cpr.text_4, cpr.text_5, cpr.text_6
+          , cpr.text_7, cpr.text_8, cpr.text_9
+          , cpr.text_10, cpr.date_1, cpr.date_2, cpr.date_3, cpr.date_4, cpr.date_5
+          , NVL2(cpr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(cpr.reason_code_2,'WELL_DT_REAS_2',NULL)
+          , NVL2(cpr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(cpr.reason_code_4,'WELL_DT_REAS_4',NULL)
+          , cpr.rev_text, cpr.equipment_id
+        ) RETURNING event_no INTO ln_event_no;
+
+    IF cpr.downtime_class_type <> 'SINGLE' THEN
+
+        FOR ccr IN c_child_well_downtime_rec(cpr.event_no)
+        LOOP
+
+          INSERT INTO well_deferment
+              (
+                  object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
+                , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
+                , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+                , cond_loss_rate, cond_loss_volume
+                , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
+                , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
+                , steam_inj_loss_volume, water_inj_loss_rate
+                , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+                , comments, value_1, value_2, value_3
+                , value_4, value_5, value_6, value_7, value_8, value_9
+                , value_10, text_1, text_2, text_3, text_4, text_5, text_6
+                , text_7, text_8, text_9
+                , text_10, date_1, date_2, date_3, date_4, date_5
+                , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
+                , rev_text, equipment_id
+              )
+          VALUES
+              (
+                  ccr.object_id, ccr.object_type, ln_event_no, 'DOWN', ccr.downtime_class_type, 'N'
+                , ccr.daytime, ccr.end_date, ccr.master_event_id, ccr.parent_daytime, ccr.parent_master_event_id, ccr.parent_object_id
+                , UPPER(TRIM(ccr.reason_code_1)),  UPPER(TRIM(ccr.reason_code_2)), UPPER(TRIM(ccr.reason_code_3)), UPPER(TRIM(ccr.reason_code_4))
+                , ccr.cond_loss_rate, ccr.cond_loss_volume
+                , ccr.gas_loss_rate, ccr.gas_loss_volume, ccr.gas_inj_loss_rate, ccr.gas_inj_loss_volume
+                , ccr.oil_loss_rate, ccr.oil_loss_volume, ccr.steam_inj_loss_rate
+                , ccr.steam_inj_loss_volume, ccr.water_inj_loss_rate
+                , ccr.water_inj_loss_volume, ccr.water_loss_rate, ccr.water_loss_volume, ccr.status
+                , ccr.comments, ccr.value_1, ccr.value_2, ccr.value_3
+                , ccr.value_4, ccr.value_5, ccr.value_6, ccr.value_7, ccr.value_8, ccr.value_9
+                , ccr.value_10, ccr.text_1, ccr.text_2, ccr.text_3, ccr.text_4, ccr.text_5, ccr.text_6
+                , ccr.text_7, ccr.text_8, ccr.text_9
+                , ccr.text_10, ccr.date_1, ccr.date_2, ccr.date_3, ccr.date_4, ccr.date_5
+                , NVL2(ccr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(ccr.reason_code_2,'WELL_DT_REAS_2',NULL)
+                , NVL2(ccr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(ccr.reason_code_4,'WELL_DT_REAS_4',NULL)
+                , ccr.rev_text, ccr.equipment_id
+              );
+        END LOOP;
+    END IF;
+  END LOOP;
+  COMMIT;
+END;
+--~^UTDELIM^~--
+
+-- Block 3 : For data upgrade from well constraint screen to well deferment
+DECLARE
+-- Cursor Declaration
+-- Pull data for D/T Type Group and Single
+CURSOR c_parent_well_downtime_rec
+IS
+SELECT
+       object_id, object_type, event_no, parent_event_no, downtime_type
+       ,downtime_categ, daytime, end_date, downtime_class_type, master_event_id
+       ,parent_daytime, parent_master_event_id, parent_object_id
+       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
+       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
+       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
+       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
+       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
+       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
+       ,date_3, date_4, date_5, rev_text
+  FROM well_equip_downtime wd
+ WHERE (wd.downtime_categ='WELL_LOW' AND wd.downtime_class_type IN ('GROUP','SINGLE'));
+
+-- Pull data for D/T Type Group Child
+CURSOR c_child_well_downtime_rec(pn_parent_event_no NUMBER)
+IS
+SELECT
+       object_id, object_type, event_no, parent_event_no, downtime_type
+       ,downtime_categ, daytime, end_date, downtime_class_type, master_event_id
+       ,parent_daytime, parent_master_event_id, parent_object_id
+       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
+       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
+       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
+       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
+       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
+       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
+       ,date_3, date_4, date_5, rev_text
+  FROM well_equip_downtime wd
+ WHERE wd.downtime_categ='WELL_LOW'
+   AND wd.downtime_class_type = 'GROUP_CHILD'
+   AND parent_event_no = pn_parent_event_no;
+
+-- Local variable declaration
+ln_event_no well_deferment.event_no%TYPE;
+
+BEGIN
+
+  FOR cpr IN c_parent_well_downtime_rec
+  LOOP
+    INSERT INTO well_deferment
+        (
+            object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
+          , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
+          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+          , cond_loss_rate, cond_loss_volume
+          , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
+          , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
+          , steam_inj_loss_volume, water_inj_loss_rate
+          , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+          , comments, value_1, value_2, value_3
+          , value_4, value_5, value_6, value_7, value_8, value_9
+          , value_10, text_1, text_2, text_3, text_4, text_5, text_6
+          , text_7, text_8, text_9
+          , text_10, date_1, date_2, date_3, date_4, date_5
+          , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
+          , rev_text, equipment_id
+         )
+    VALUES
+        (
+            cpr.object_id, cpr.object_type, NULL, 'CONSTRAINT', cpr.downtime_class_type, 'N'
+          , cpr.daytime, cpr.end_date, cpr.master_event_id, NULL, NULL, NULL
+          , UPPER(TRIM(cpr.reason_code_1)),  UPPER(TRIM(cpr.reason_code_2)), UPPER(TRIM(cpr.reason_code_3)), UPPER(TRIM(cpr.reason_code_4))
+          , cpr.cond_loss_rate, cpr.cond_loss_volume
+          , cpr.gas_loss_rate, cpr.gas_loss_volume, cpr.gas_inj_loss_rate, cpr.gas_inj_loss_volume
+          , cpr.oil_loss_rate, cpr.oil_loss_volume, cpr.steam_inj_loss_rate
+          , cpr.steam_inj_loss_volume, cpr.water_inj_loss_rate
+          , cpr.water_inj_loss_volume, cpr.water_loss_rate, cpr.water_loss_volume, cpr.status
+          , cpr.comments, cpr.value_1, cpr.value_2, cpr.value_3
+          , cpr.value_4, cpr.value_5, cpr.value_6, cpr.value_7, cpr.value_8, cpr.value_9
+          , cpr.value_10, cpr.text_1, cpr.text_2, cpr.text_3, cpr.text_4, cpr.text_5, cpr.text_6
+          , cpr.text_7, cpr.text_8, cpr.text_9
+          , cpr.text_10, cpr.date_1, cpr.date_2, cpr.date_3, cpr.date_4, cpr.date_5
+          , NVL2(cpr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(cpr.reason_code_2,'WELL_DT_REAS_2',NULL)
+          , NVL2(cpr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(cpr.reason_code_4,'WELL_DT_REAS_4',NULL)
+          , cpr.rev_text, cpr.equipment_id
+        ) RETURNING event_no INTO ln_event_no;
+
+    IF cpr.downtime_class_type <> 'SINGLE' THEN
+
+        FOR ccr IN c_child_well_downtime_rec(cpr.event_no)
+        LOOP
+
+          INSERT INTO well_deferment
+              (
+                  object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
+                , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
+                , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+                , cond_loss_rate, cond_loss_volume
+                , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
+                , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
+                , steam_inj_loss_volume, water_inj_loss_rate
+                , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+                , comments, value_1, value_2, value_3
+                , value_4, value_5, value_6, value_7, value_8, value_9
+                , value_10, text_1, text_2, text_3, text_4, text_5, text_6
+                , text_7, text_8, text_9
+                , text_10, date_1, date_2, date_3, date_4, date_5
+                , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
+                , rev_text, equipment_id
+              )
+          VALUES
+              (
+                  ccr.object_id, ccr.object_type, ln_event_no, 'CONSTRAINT', ccr.downtime_class_type, 'N'
+                , ccr.daytime, ccr.end_date, ccr.master_event_id, ccr.parent_daytime, ccr.parent_master_event_id, ccr.parent_object_id
+                , UPPER(TRIM(ccr.reason_code_1)),  UPPER(TRIM(ccr.reason_code_2)), UPPER(TRIM(ccr.reason_code_3)), UPPER(TRIM(ccr.reason_code_4))
+                , ccr.cond_loss_rate, ccr.cond_loss_volume
+                , ccr.gas_loss_rate, ccr.gas_loss_volume, ccr.gas_inj_loss_rate, ccr.gas_inj_loss_volume
+                , ccr.oil_loss_rate, ccr.oil_loss_volume, ccr.steam_inj_loss_rate
+                , ccr.steam_inj_loss_volume, ccr.water_inj_loss_rate
+                , ccr.water_inj_loss_volume, ccr.water_loss_rate, ccr.water_loss_volume, ccr.status
+                , ccr.comments, ccr.value_1, ccr.value_2, ccr.value_3
+                , ccr.value_4, ccr.value_5, ccr.value_6, ccr.value_7, ccr.value_8, ccr.value_9
+                , ccr.value_10, ccr.text_1, ccr.text_2, ccr.text_3, ccr.text_4, ccr.text_5, ccr.text_6
+                , ccr.text_7, ccr.text_8, ccr.text_9
+                , ccr.text_10, ccr.date_1, ccr.date_2, ccr.date_3, ccr.date_4, ccr.date_5
+                , NVL2(ccr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(ccr.reason_code_2,'WELL_DT_REAS_2',NULL)
+                , NVL2(ccr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(ccr.reason_code_4,'WELL_DT_REAS_4',NULL)
+                , ccr.rev_text, ccr.equipment_id
+              );
+        END LOOP;
+    END IF;
+  END LOOP;
+  COMMIT;
+END;
+--~^UTDELIM^~--
+
+-- Block 4 : For data upgrade from Equipment Downtime screen to well deferment
+DECLARE
+-- Cursor Declaration
+-- Pull data for D/T Type Group and Group_Child
+-- Ignore data for Group record as we are moving all Group_child row as Group D/T
+CURSOR c_well_eqpm_downtime_rec
+IS
+SELECT
+       object_id, DECODE(downtime_type,'EQPM_DT','EQPM',object_type) object_type, event_no,NULL parent_event_no, downtime_type
+       ,downtime_categ, daytime, end_date, DECODE(downtime_type,'EQPM_DT','GROUP',downtime_class_type) downtime_class_type, master_event_id
+       ,NULL parent_daytime,NULL parent_master_event_id,NULL parent_object_id
+       ,reason_code_1, reason_code_2, reason_code_3, reason_code_4
+       ,cond_loss_rate, cond_loss_volume, gas_loss_rate, gas_loss_volume, gas_inj_loss_rate
+       ,gas_inj_loss_volume, oil_loss_rate, oil_loss_volume, steam_inj_loss_rate, steam_inj_loss_volume
+       ,water_inj_loss_rate, water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+       ,equipment_id, comments, value_1, value_2, value_3, value_4, value_5
+       ,value_6, value_7, value_8, value_9, value_10, text_1, text_2
+       ,text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10, date_1, date_2
+       ,date_3, date_4, date_5, rev_text
+  FROM well_equip_downtime wd
+ WHERE (wd.downtime_categ='EQPM_OFF' AND wd.downtime_class_type IN ('GROUP_CHILD','SINGLE'));
+
+BEGIN
+
+  FOR cpr IN c_well_eqpm_downtime_rec
+  LOOP
+    INSERT INTO well_deferment
+        (
+            object_id, object_type, parent_event_no, event_type, deferment_type, scheduled
+          , daytime, end_date, master_event_id, parent_daytime, parent_master_event_id, parent_object_id
+          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+          , cond_loss_rate, cond_loss_volume
+          , gas_loss_rate, gas_loss_volume, gas_inj_loss_rate, gas_inj_loss_volume
+          , oil_loss_rate, oil_loss_volume, steam_inj_loss_rate
+          , steam_inj_loss_volume, water_inj_loss_rate
+          , water_inj_loss_volume, water_loss_rate, water_loss_volume, status
+          , comments, value_1, value_2, value_3
+          , value_4, value_5, value_6, value_7, value_8, value_9
+          , value_10, text_1, text_2, text_3, text_4, text_5, text_6
+          , text_7, text_8, text_9
+          , text_10, date_1, date_2, date_3, date_4, date_5
+          , reason_code_type_1 , reason_code_type_2, reason_code_type_3, reason_code_type_4
+          , rev_text, equipment_id
+        )
+    VALUES
+        (
+            cpr.object_id, cpr.object_type, cpr.parent_event_no, 'DOWN', cpr.downtime_class_type, 'N'
+          , cpr.daytime, cpr.end_date, cpr.master_event_id, cpr.parent_daytime, cpr.parent_master_event_id, cpr.parent_object_id
+          , UPPER(TRIM(cpr.reason_code_1)),  UPPER(TRIM(cpr.reason_code_2)), UPPER(TRIM(cpr.reason_code_3)), UPPER(TRIM(cpr.reason_code_4))
+          , cpr.cond_loss_rate, cpr.cond_loss_volume
+          , cpr.gas_loss_rate, cpr.gas_loss_volume, cpr.gas_inj_loss_rate, cpr.gas_inj_loss_volume
+          , cpr.oil_loss_rate, cpr.oil_loss_volume, cpr.steam_inj_loss_rate
+          , cpr.steam_inj_loss_volume, cpr.water_inj_loss_rate
+          , cpr.water_inj_loss_volume, cpr.water_loss_rate, cpr.water_loss_volume, cpr.status
+          , cpr.comments, cpr.value_1, cpr.value_2, cpr.value_3
+          , cpr.value_4, cpr.value_5, cpr.value_6, cpr.value_7, cpr.value_8, cpr.value_9
+          , cpr.value_10, cpr.text_1, cpr.text_2, cpr.text_3, cpr.text_4, cpr.text_5, cpr.text_6
+          , cpr.text_7, cpr.text_8, cpr.text_9
+          , cpr.text_10, cpr.date_1, cpr.date_2, cpr.date_3, cpr.date_4, cpr.date_5
+          , NVL2(cpr.reason_code_1,'WELL_DT_REAS_1',NULL), NVL2(cpr.reason_code_2,'WELL_DT_REAS_2',NULL)
+          , NVL2(cpr.reason_code_3,'WELL_DT_REAS_3',NULL), NVL2(cpr.reason_code_4,'WELL_DT_REAS_4',NULL)
+          , cpr.rev_text, cpr.equipment_id
+        );
+  END LOOP;
+  COMMIT;
+END;
+--~^UTDELIM^~--
+
+BEGIN 
+
+UPDATE CTRL_TV_PRESENTATION 
+SET COMPONENT_EXT_NAME = REGEXP_REPLACE(COMPONENT_EXT_NAME,'^../','/') 
+WHERE  COMPONENT_EXT_NAME LIKE '../%';
+
+END;
+
+--~^UTDELIM^~--	
 select EcDp_System_key.assignNextNumber('MHM_MSG') from dual
 --~^UTDELIM^~--	
 
@@ -742,6 +1287,275 @@ END;
 BEGIN
 	ecdp_classmeta.RefreshMViews;
 END;
+--~^UTDELIM^~--
+-- Purpose of script : It will migrate data from Equipment Downtime (PD.0007) to Equipment Downtime (PD.0022)
+-- Created  : 01-JUL-2017  (Gaurav Chaudhary)
+--
+-- Modification history:
+-- Date         Whom      Change description:
+-- ----         -----     -----------------------------------
+-- 01-JUL-2017  chaudgau  Initial Version
+--
+
+-- PL/SQL Block : For data upgrade from Equipment Downtime screen (PD.0007) to Equipment Downtime (PD.0022)
+-- EC Code for child record will be considered as group_child
+
+DECLARE
+
+-- Cursor Declaration
+-- Pull data for D/T Type Group, Single and Group child
+-- Move data for parent data section with new event_no and use it to migrate child data section data, along with updation of parent_event_no
+-- EC Ccode Data from downtime_type will be moved to equip_downtime.downtime_class_type column
+-- Production day and end day will be generated for each record
+
+CURSOR c_parent_eqpm_downtime_rec
+IS
+SELECT
+       object_id, object_type, event_no, master_event_id
+     , NULL parent_event_no, NULL parent_object_id, NULL parent_daytime
+     , downtime_type, downtime_class_type, daytime, end_date
+     , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+     , comments
+     , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
+     , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
+     , date_1, date_2, date_3, date_4, date_5
+     , rev_text, record_status
+  FROM well_equip_downtime wd
+ WHERE (wd.downtime_categ='EQPM_OFF' AND wd.downtime_class_type IN ('GROUP','SINGLE'));
+ 
+CURSOR c_child_eqpm_downtime_rec(pn_parent_event_no NUMBER)
+IS
+SELECT
+       object_id, object_type, event_no, master_event_id
+     , parent_event_no, parent_object_id, parent_daytime
+     , downtime_type, downtime_class_type, daytime, end_date
+     , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+     , comments
+     , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
+     , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
+     , date_1, date_2, date_3, date_4, date_5
+     , rev_text, record_status
+  FROM well_equip_downtime wd
+ WHERE (wd.downtime_categ='EQPM_OFF' AND wd.downtime_class_type = 'GROUP_CHILD')
+   AND parent_event_no = pn_parent_event_no;
+
+ ln_event_no equip_downtime.event_no%TYPE;
+
+BEGIN
+
+  FOR cpr IN c_parent_eqpm_downtime_rec
+  LOOP
+    INSERT INTO equip_downtime
+        (
+            object_id, object_type, master_event_id
+          , parent_event_no, parent_daytime, parent_object_id
+          , downtime_class_type, daytime, end_date
+          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+          , comments
+          , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
+          , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
+          , date_1, date_2, date_3, date_4, date_5
+          , rev_text, record_status
+        )
+    VALUES
+        (
+            cpr.object_id, cpr.object_type, cpr.master_event_id
+          , cpr.parent_event_no, cpr.parent_daytime, cpr.parent_object_id
+          , cpr.downtime_type, cpr.daytime, cpr.end_date
+          , cpr.reason_code_1, cpr.reason_code_2, cpr.reason_code_3, cpr.reason_code_4
+          , cpr.comments
+          , cpr.value_1, cpr.value_2, cpr.value_3, cpr.value_4, cpr.value_5, cpr.value_6, cpr.value_7, cpr.value_8, cpr.value_9, cpr.value_10
+          , cpr.text_1, cpr.text_2, cpr.text_3, cpr.text_4, cpr.text_5, cpr.text_6, cpr.text_7, cpr.text_8, cpr.text_9, cpr.text_10
+          , cpr.date_1, cpr.date_2, cpr.date_3, cpr.date_4, cpr.date_5
+          , cpr.rev_text, cpr.record_status
+        ) RETURNING event_no INTO ln_event_no;
+
+        IF cpr.downtime_class_type = 'GROUP' THEN
+             FOR ccr IN c_child_eqpm_downtime_rec(cpr.event_no)
+             LOOP
+                 INSERT INTO equip_downtime
+                (
+                    object_id, object_type, master_event_id
+                  , parent_event_no, parent_daytime, parent_object_id
+                  , downtime_class_type, daytime, end_date
+                  , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+                  , comments
+                  , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
+                  , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
+                  , date_1, date_2, date_3, date_4, date_5
+                  , rev_text, record_status
+                )
+            VALUES
+                (
+                    ccr.object_id, ccr.object_type, ccr.master_event_id
+                  , ln_event_no, ccr.parent_daytime, ccr.parent_object_id 
+                  , 'GROUP_CHILD', ccr.daytime, ccr.end_date
+                  , ccr.reason_code_1, ccr.reason_code_2, ccr.reason_code_3, ccr.reason_code_4
+                  , ccr.comments
+                  , ccr.value_1, ccr.value_2, ccr.value_3, ccr.value_4, ccr.value_5, ccr.value_6, ccr.value_7, ccr.value_8, ccr.value_9, ccr.value_10
+                  , ccr.text_1, ccr.text_2, ccr.text_3, ccr.text_4, ccr.text_5, ccr.text_6, ccr.text_7, ccr.text_8, ccr.text_9, ccr.text_10
+                  , ccr.date_1, ccr.date_2, ccr.date_3, ccr.date_4, ccr.date_5
+                  , ccr.rev_text, ccr.record_status
+                );
+             END LOOP;
+        END IF;
+  END LOOP;
+  COMMIT;
+END;
+--~^UTDELIM^~--
+
+-- Purpose of script : It will migrate data from Equipment Downtime tab on Deferment screen(PD.0020) to Equipment Downtime (PD.0022)
+-- Created  : 01-JUL-2017  (Gaurav Chaudhary)
+--
+-- Modification history:
+-- Date         Whom      Change description:
+-- ----         -----     -----------------------------------
+-- 01-JUL-2017  chaudgau  Initial Version
+--
+
+-- PL/SQL Block : For data upgrade from Equipment Downtime tab on Deferment screen(PD.0020) to Equipment Downtime (PD.0022)
+-- EC Code for downtime_class_type will be considered as EQPM_DT
+
+
+-- Cursor Declaration
+-- Pull data for D/T Type Group, Single and Group child
+-- Move data for parent data section with new event_no and use it to migrate child data section data, along with updation of parent_event_no
+-- EC Ccode Data from downtime_type will be moved to equip_downtime.downtime_class_type column
+-- Production day and end day will be generated for each record
+ 
+BEGIN
+
+    INSERT INTO equip_downtime
+        (
+            object_id, object_type, master_event_id
+          , parent_event_no, parent_daytime, parent_object_id
+          , downtime_class_type, daytime, end_date, day, end_day
+          , reason_code_1, reason_code_2, reason_code_3, reason_code_4
+          , comments
+          , value_1, value_2, value_3, value_4, value_5, value_6, value_7, value_8, value_9, value_10
+          , text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8, text_9, text_10
+          , date_1, date_2, date_3, date_4, date_5
+          , rev_text, record_status
+        )
+    SELECT
+		   wd.object_id, wd.object_type, wd.master_event_id
+		 , NULL parent_event_no, NULL parent_daytime, NULL parent_object_id
+		 , 'EQPM_DT' downtime_type, wd.daytime, wd.end_date, wd.day, wd.end_day
+		 , wd.reason_code_type_1, wd.reason_code_type_2, wd.reason_code_type_3, wd.reason_code_type_4
+		 , wd.comments
+		 , wd.value_1, wd.value_2, wd.value_3, wd.value_4, wd.value_5, wd.value_6, wd.value_7, wd.value_8, wd.value_9, wd.value_10
+		 , wd.text_1, wd.text_2, wd.text_3, wd.text_4, wd.text_5, wd.text_6, wd.text_7, wd.text_8, wd.text_9, wd.text_10
+		 , wd.date_1, wd.date_2, wd.date_3, wd.date_4, wd.date_5
+		 , wd.rev_text, wd.record_status
+	  FROM well_deferment wd
+	  JOIN eqpm_version oa ON oa.object_id = wd.object_id
+	 WHERE wd.deferment_type = 'SINGLE'
+     AND wd.daytime >= oa.daytime
+     AND (oa.end_date is NULL OR wd.daytime < oa.end_date);
+
+  COMMIT;
+END;
+--~^UTDELIM^~--
+
+DECLARE
+      HASENTRY NUMBER;
+     sqlQuery clob:='UPDATE ALLOC_JOB_PASS SET METHOD = ''DISPATCHING_SCHD''  WHERE JOB_NO = (select job_no from alloc_job_definition where code = ''DAILY_DISP_SCH_CALC'') and JOB_PASS_NO = ''5''';
+BEGIN
+
+   SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS DISABLE';
+		END IF;
+		
+     EXECUTE IMMEDIATE sqlQuery;
+	 
+	  SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
+		END IF;
+	 
+	 
+     dbms_output.put_line('SUCCESS: ' || sqlQuery);
+     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
+     EXCEPTION
+        WHEN OTHERS THEN
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
+		END IF;
+         --UPDATE_MILESTONE_WITH_ERROR('post_add_table_column');
+         raise_application_error(-20000, 'ERROR: Some Other fatal error occured' || SQLERRM);
+ END;
+--~^UTDELIM^~--
+
+DECLARE
+     HASENTRY NUMBER;
+     sqlQuery clob:='UPDATE ALLOC_JOB_PASS SET METHOD = ''DISPATCHING_SCHD''  WHERE JOB_NO = (select job_no from alloc_job_definition where code = ''SUB_DAILY_DISP_SCH_CALC'') and JOB_PASS_NO = ''8''';
+BEGIN
+    
+	  SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS DISABLE';
+		END IF;
+		
+     EXECUTE IMMEDIATE sqlQuery;
+	 
+	 	  SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
+		END IF;
+	 
+     dbms_output.put_line('SUCCESS: ' || sqlQuery);
+     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
+     EXCEPTION
+        WHEN OTHERS THEN
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
+		END IF;
+         --UPDATE_MILESTONE_WITH_ERROR('post_add_table_column');
+         raise_application_error(-20000, 'ERROR: Some Other fatal error occured' || SQLERRM);
+ END;
+--~^UTDELIM^~--
+
+DECLARE
+ HASENTRY NUMBER;
+	 sqlQuery clob  :='UPDATE ALLOC_JOB_PASS SET METHOD = ''DISPATCHING_SCHD'' where METHOD = ''DISPATCHING_SCH''';
+	 sqlQuery2 clob :='UPDATE ALLOC_JOB_PASS SET METHOD_CODE=''ALLOC_PASS_METHOD'' WHERE METHOD_CODE IS NULL';
+	 
+BEGIN
+    
+	  SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS DISABLE';
+		END IF;
+
+     EXECUTE IMMEDIATE sqlQuery;
+	 dbms_output.put_line('SUCCESS: ' || sqlQuery);
+     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
+	 
+	 EXECUTE IMMEDIATE sqlQuery2;
+	 dbms_output.put_line('SUCCESS: ' || sqlQuery2);
+     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
+	 
+	SELECT COUNT(*) INTO HASENTRY FROM USER_TRIGGERS 
+		WHERE TRIGGER_NAME = 'IU_ALLOC_JOB_PASS'; 
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
+		END IF;
+	 
+     
+     EXCEPTION
+        WHEN OTHERS THEN
+		IF HASENTRY > 0 THEN 
+		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_ALLOC_JOB_PASS ENABLE';
+		END IF;
+         --UPDATE_MILESTONE_WITH_ERROR('post_add_table_column');
+         raise_application_error(-20000, 'ERROR: Some Other fatal error occured' || SQLERRM);
+ END;
 --~^UTDELIM^~--
 BEGIN
 ecdp_viewlayer.BuildViewLayer('FIN_ITEM_DATASET_MATRIX',p_force => 'Y'); 
@@ -5341,3 +6155,105 @@ begin
 execute immediate 'drop package populate_utc_timezone';
 end ;
 --~^UTDELIM^~--
+
+-- Script is targeted to set Production Day value as Daytime.
+-- Script will pick each records from table and check the format mask for given class and its daytime attribute_name
+-- If the daytime attribute viewformatmask does not have hour and minute then the daytime value be assigned as is to production_day field
+BEGIN
+UPDATE object_plan o
+   SET production_day = daytime,
+       rev_no = rev_no +1,
+       last_updated_by = 'UPGD-12.1'
+ WHERE 0 = (SELECT CASE
+                       WHEN instr(lower(property_value), 'hh') = 0
+                            AND instr(property_value, 'mm') = 0 THEN
+                        0
+                       ELSE
+                        1
+                   END
+              FROM (SELECT property_value
+                      FROM class_attr_property_cnfg
+                     WHERE class_name = o.class_name
+                           AND attribute_name = 'DAYTIME'
+                           AND property_code = 'viewformatmask'
+                     ORDER BY owner_cntx DESC) d
+             WHERE rownum <= 1)
+       AND production_day <> daytime;
+END;
+--~^UTDELIM^~--
+
+BEGIN
+	UPDATE flwl_version
+	   SET flw_calc_gas_mtd = 'MPM_NET'
+		  ,rev_no           = rev_no + 1
+		  ,last_updated_by  = 'UPGD-12.1'
+	 WHERE flw_calc_gas_mtd = 'MPM';
+END;
+--~^UTDELIM^~-- 
+	   
+DECLARE
+    unknown_job EXCEPTION;
+    PRAGMA EXCEPTION_INIT(unknown_job, -27475);
+BEGIN
+    DBMS_SCHEDULER.drop_job(job_name => 'ec_bs_inst_new_day_start');
+EXCEPTION
+    WHEN unknown_job THEN
+        NULL;
+END;
+--~^UTDELIM^~--
+
+BEGIN
+  DBMS_SCHEDULER.create_job(job_name        => 'ec_bs_inst_new_day_start',
+                            job_type        => 'PLSQL_BLOCK',
+                            job_action      => 'BEGIN ec_Bs_Instantiate.new_day_start(trunc(SYSDATE)); END;',
+                            start_date      => TRUNC(SYSDATE)+1/24/3600,
+                            repeat_interval => 'freq=daily;byhour=0;byminute=0;bysecond=1',
+                            enabled         => TRUE,
+                            comments        => 'EC instantiate new day start.');
+END;
+--~^UTDELIM^~--
+
+DECLARE
+    unknown_job EXCEPTION;
+    PRAGMA EXCEPTION_INIT(unknown_job, -27475);
+BEGIN
+    DBMS_SCHEDULER.drop_job(job_name => 'ec_bs_inst_new_day_end');
+EXCEPTION
+    WHEN unknown_job THEN
+        NULL;
+END;
+--~^UTDELIM^~--
+
+BEGIN
+  DBMS_SCHEDULER.create_job(job_name        => 'ec_bs_inst_new_day_end',
+                            job_type        => 'PLSQL_BLOCK',
+                            job_action      => 'BEGIN ec_Bs_Instantiate.new_day_end(trunc(SYSDATE)); END;',
+                            start_date      => TRUNC(SYSDATE)+1/24/60,
+                            repeat_interval => 'freq=daily;byhour=0;byminute=1;bysecond=0',
+                            enabled         => TRUE,
+                            comments        => 'EC instantiate new day end.');
+END;
+--~^UTDELIM^~--
+
+DECLARE
+    unknown_job EXCEPTION;
+    PRAGMA EXCEPTION_INIT(unknown_job, -27475);
+BEGIN
+    DBMS_SCHEDULER.drop_job(job_name => 'ue_bs_inst_new_day_end');
+EXCEPTION
+    WHEN unknown_job THEN
+        NULL;
+END;
+--~^UTDELIM^~--
+
+BEGIN
+  DBMS_SCHEDULER.create_job(job_name        => 'ue_bs_inst_new_day_end',
+                            job_type        => 'PLSQL_BLOCK',
+                            job_action      => 'BEGIN ue_bs_instantiate.new_day_end(trunc(SYSDATE)); END;',
+                            start_date      => TRUNC(SYSDATE)+1/24/60,
+                            repeat_interval => 'freq=daily;byhour=0;byminute=1;bysecond=0',
+                            enabled         => TRUE,
+                            comments        => 'UE instantiate new day end.');
+END;
+--~^UTDELIM^~--
+ 

@@ -1,7 +1,0 @@
-Failed: Changing column nullability as not null for column LIFTING_EVENT from table LIFTING_ACTIVITY_JN
-Failed: Adding foreign key constraint FK_CLASS_ATTRIBUTE_CNFG_1 on table CLASS_ATTRIBUTE_CNFG which references APP_SPACE_CNTX
-Failed: Adding foreign key constraint FK_CLASS_CNFG_1 on table CLASS_CNFG which references APP_SPACE_CNTX
-Failed: Adding foreign key constraint FK_CLASS_DEPENDENCY_CNFG_1 on table CLASS_DEPENDENCY_CNFG which references APP_SPACE_CNTX
-Failed: Adding foreign key constraint FK_CLASS_RELATION_CNFG_1 on table CLASS_RELATION_CNFG which references APP_SPACE_CNTX
-Failed: Adding foreign key constraint FK_CLASS_TRIGGER_ACTN_CNFG_2 on table CLASS_TRIGGER_ACTN_CNFG which references APP_SPACE_CNTX
-Failed: Adding unique key constraint UK_T_BASIS_OBJECT_1 on table T_BASIS_OBJECT
