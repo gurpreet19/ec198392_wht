@@ -1,0 +1,31 @@
+Failed: Step 1 - Migrating data for column EDITABLE_IND from table CONSTANT_STANDARD_VERSION  after adding new column as nullable.
+Failed: Step 1 - Migrating data for column BALANCING_USAGE from table STRM_SET_LIST  after adding new column as nullable.
+Failed: Step 1 - Migrating data for column BALANCING_USAGE from table STRM_SET_LIST_JN  after adding new column as nullable.
+Failed: Changing column nullability as not null for column LIFTING_EVENT from table LIFTING_ACTIVITY_JN
+Failed: Changing column nullability as not null for column PRIORITY from table QRTZ_FIRED_TRIGGERS
+Failed: Adding unique key constraint UK_T_BASIS_OBJECT_1 on table T_BASIS_OBJECT
+Failed: Adding foreign key constraint FK_CLASS_ATTRIBUTE_CNFG_1 on table CLASS_ATTRIBUTE_CNFG which references APP_SPACE_CNTX
+Failed: Adding foreign key constraint FK_CLASS_CNFG_1 on table CLASS_CNFG which references APP_SPACE_CNTX
+Failed: Adding foreign key constraint FK_CLASS_DEPENDENCY_CNFG_1 on table CLASS_DEPENDENCY_CNFG which references APP_SPACE_CNTX
+Failed: Adding foreign key constraint FK_CLASS_RELATION_CNFG_1 on table CLASS_RELATION_CNFG which references APP_SPACE_CNTX
+Failed: Adding foreign key constraint FK_CLASS_TRIGGER_ACTN_CNFG_2 on table CLASS_TRIGGER_ACTN_CNFG which references APP_SPACE_CNTX
+Failed: Step 1 - Migrating data for all to be dropped columns
+Failed: Step 36 - Migrating data after data model changes
+Failed: Step 37 - Migrating data after data model changes
+Failed: Step 38 - Migrating data after data model changes
+Failed: Creating or replacing trigger IUV_DT_DEF_STATUS_LOG_WELL definition
+Failed: Creating or replacing trigger IUV_DT_FCTY_PLAN_BUDGET definition
+Failed: Creating or replacing trigger IUV_DT_FCTY_PLAN_POTENTIAL definition
+Failed: Creating or replacing trigger IUV_DT_FCTY_PLAN_TARGET definition
+Failed: Creating or replacing trigger IUV_DT_STRM_MTH_LIQ definition
+Failed: Creating or replacing trigger IUV_DT_STRM_PT_CONVERSION definition
+Failed: Creating or replacing trigger IUV_DT_TESTDEVICE_DAY_STATUS definition
+Failed: Creating or replacing trigger IUV_DT_WBI_SAMPLE definition
+Failed: Creating or replacing trigger IUV_DT_WELL_TEST_RAW_DATA definition
+Failed: Creating or replacing trigger IUV_MAPPINGS_TRANS_CONFIG definition
+Failed: Creating or replacing trigger I_TRANS_INV_LINE_OVERRIDE definition
+Failed: Creating or replacing trigger I_TRANS_INV_LI_PR_VAR_OVER definition
+Failed: Step 26 - Executing post upgrade script (data migration, package modification etc.)
+Failed: Step 40 - Executing post upgrade script (data migration, package modification etc.)
+Failed: Building view layer, this operation may take a long time to finish.
+Failed: Compiling invalid objects
