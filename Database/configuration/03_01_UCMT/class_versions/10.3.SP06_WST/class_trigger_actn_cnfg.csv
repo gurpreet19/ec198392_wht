@@ -985,4 +985,3 @@
 "WELL_TEST_DEF";"DELETING";"BEFORE";"2000";"EcDp_Performance_Test.removeGraphDefParameters(n_OBJECT_ID,n_TEST_NO);";"EC_PROD";
 "WELL_TEST_DEF";"INSERTING";"AFTER";"700";"EcDp_Performance_Test.setWbiTestDefine(n_OBJECT_ID,ec_ptst_definition.daytime(n_TEST_NO),n_TEST_NO,'DIACS',n_CREATED_BY);";"EC_PROD";
 "WELL_TEST_DEF";"INSERTING";"AFTER";"1000";"EcDp_Performance_Test.createGraphDefParameters(n_OBJECT_ID,n_TEST_NO,n_CREATED_BY);";"EC_PROD";
-Elapsed: 00:00:00.58

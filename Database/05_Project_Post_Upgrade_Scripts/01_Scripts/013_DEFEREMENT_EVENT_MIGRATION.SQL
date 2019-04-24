@@ -17,8 +17,8 @@ BEGIN
 		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_WELL_DEFERMENT ENABLE';
 		END IF;
 		
-     dbms_output.put_line('SUCCESS: ' || sqlQuery);
-     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
+    -- dbms_output.put_line('SUCCESS: ' || sqlQuery);
+    -- dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
      EXCEPTION
         WHEN OTHERS THEN
 		IF HASENTRY > 0 THEN 
@@ -50,8 +50,8 @@ BEGIN
 		EXECUTE IMMEDIATE 'ALTER TRIGGER IU_WELL_DEFERMENT_JN ENABLE';
 		END IF;
 		
-     dbms_output.put_line('SUCCESS: ' || sqlQuery);
-     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
+   --  dbms_output.put_line('SUCCESS: ' || sqlQuery);
+  --   dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
      EXCEPTION
         WHEN OTHERS THEN
 		IF HASENTRY > 0 THEN 
@@ -83,8 +83,8 @@ BEGIN
 		END IF;
 		
 	 
-     dbms_output.put_line('SUCCESS: ' || sqlQuery);
-     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
+    -- dbms_output.put_line('SUCCESS: ' || sqlQuery);
+    -- dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
      EXCEPTION
         WHEN OTHERS THEN
 		IF HASENTRY > 0 THEN 
@@ -116,8 +116,8 @@ BEGIN
 		END IF;
 		
 	 
-     dbms_output.put_line('SUCCESS: ' || sqlQuery);
-     dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
+   --  dbms_output.put_line('SUCCESS: ' || sqlQuery);
+    -- dbms_output.put_line('No of Rows Updated:' || sql%rowcount);
      EXCEPTION
         WHEN OTHERS THEN
 		IF HASENTRY > 0 THEN 
