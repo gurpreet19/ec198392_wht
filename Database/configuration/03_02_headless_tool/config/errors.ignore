@@ -22,5 +22,15 @@ Failed: Compiling invalid objects
 Failed: Step 2 - Executing post code generation data migration script
 Failed: DUMMY_OBJECT_VERSION: Inserting Dummy Object Version  having key DAYTIME=Mon Jan 01 00:00:00 UTC 1900;OBJECT_ID=(SELECT O.OBJECT_ID FROM OBJECTS O WHERE (O.CLASS_NAME='DUMMY_OBJECT' OR O.CLASS_NAME IN (SELECT CHILD_CLASS FROM CLASS_DEPENDENCY_CNFG WHERE PARENT_CLASS ='DUMMY_OBJECT' AND DEPENDENCY_TYPE = 'IMPLEMENTS')) AND O.CODE ='DUMMY_OBJECT' AND ROWNUM < 2);T=DUMMY_OBJECT_VERSION
 Failed: BUSINESS_FUNCTION: Deleting Business Function  having key /com.ec.tran.to.screens/cargo_document
-Failed: Step 23 - Executing post upgrade script (data migration, package modification etc.)
-Failed: Step 37 - Executing post upgrade script (data migration, package modification etc.)
+Failed: Step 23 - Executing post upgrade script
+Failed: Step 37 - Executing post upgrade script
+Failed: Creating or replacing trigger IUV_DT_DEF_STATUS_LOG_WELL definition
+Failed: Creating or replacing trigger IUV_DT_FCTY_PLAN_BUDGET definition
+Failed: Creating or replacing trigger IUV_DT_FCTY_PLAN_POTENTIAL definition
+Failed: Creating or replacing trigger IUV_DT_FCTY_PLAN_TARGET definition
+Failed: Creating or replacing trigger IUV_DT_STRM_MTH_LIQ definition
+Failed: Creating or replacing trigger IUV_DT_STRM_PT_CONVERSION definition
+Failed: Creating or replacing trigger IUV_DT_TESTDEVICE_DAY_STATUS definition
+Failed: Creating or replacing trigger IUV_DT_WBI_SAMPLE definition
+Failed: Creating or replacing trigger IUV_DT_WELL_TEST_RAW_DATA definition
+Failed: Creating or replacing trigger IUV_MAPPINGS_TRANS_CONFIG definition
