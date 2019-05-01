@@ -28,9 +28,9 @@ FUNCTION GetDemurrage(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_ev
 
 FUNCTION GetDemurrageRate(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2) RETURN NUMBER;
 
-FUNCTION GetCurrencyUnit(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2, p_daytime date) RETURN VARCHAR2;
+FUNCTION GetCurrencyUnit(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2) RETURN VARCHAR2;
 
-FUNCTION GetJDEAccountCode(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2, p_daytime date) RETURN VARCHAR2;
+FUNCTION GetJDEAccountCode(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2) RETURN VARCHAR2;
 
 PROCEDURE auCargoTransport(p_cargo_no NUMBER, p_old_cargo_status VARCHAR2, p_new_cargo_status VARCHAR2, p_updated_by VARCHAR2);
 
@@ -386,28 +386,28 @@ BEGIN
 
 END GetDemurrageRate;
 
-FUNCTION GetCurrencyUnit(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2, p_daytime date) RETURN VARCHAR2
+FUNCTION GetCurrencyUnit(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2) RETURN VARCHAR2
 IS
 BEGIN
 
     IF p_demurrage_type IN ('EBO','DEMURRAGE') THEN
-        RETURN ec_harbour_dues.text_7('LNG_EBC',p_daytime);
+        RETURN ec_harbour_dues.text_7('LNG_EBC', sysdate, '<=');--Item 125800: Modified ec_harbour_dues package to pass extra parameter daytime and '<='
     ELSIF p_demurrage_type IN ('COND_EBO','COND_DEMURRAGE') THEN
-        RETURN ec_harbour_dues.text_7('COND_EBC',p_daytime);
+        RETURN ec_harbour_dues.text_7('COND_EBC', sysdate, '<='); --Item 125800: Modified ec_harbour_dues package to pass extra parameter daytime and '<='
     END IF;
 
     RETURN NULL;
 
 END GetCurrencyUnit;
 
-FUNCTION GetJDEAccountCode(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2,p_daytime date) RETURN VARCHAR2
+FUNCTION GetJDEAccountCode(p_cargo_no NUMBER, p_demurrage_type VARCHAR2, p_lifting_event VARCHAR2) RETURN VARCHAR2
 IS
 BEGIN
 
     IF p_demurrage_type IN ('EBO','DEMURRAGE') THEN
-        RETURN ec_harbour_dues.text_8('LNG_EBC',p_daytime);
+        RETURN ec_harbour_dues.text_8('LNG_EBC',sysdate, '<='); --Item 125800: Modified ec_harbour_dues package to pass extra parameter daytime and '<='
     ELSIF p_demurrage_type IN ('COND_EBO','COND_DEMURRAGE') THEN
-        RETURN ec_harbour_dues.text_8('COND_EBC',p_daytime);
+        RETURN ec_harbour_dues.text_8('COND_EBC',sysdate, '<='); --Item 125800: Modified ec_harbour_dues package to pass extra parameter daytime and '<='
     END IF;
 
 END GetJDEAccountCode;
