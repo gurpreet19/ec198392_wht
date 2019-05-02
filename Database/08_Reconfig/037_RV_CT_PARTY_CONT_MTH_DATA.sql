@@ -92,3 +92,4 @@ AND oa.daytime = (
    AND   cv_dates_party_contract.DAYTIME >= trunc(oa2.daytime,'MONTH')
 AND cv_dates_party_contract.DAYTIME < nvl(oa2.end_date,cv_dates_party_contract.DAYTIME + 1))
 ;
+/
