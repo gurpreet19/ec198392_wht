@@ -23,3 +23,7 @@ UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX='CASE WHEN cv_msg_enq.nomination_t
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX='CASE WHEN cv_msg_enq.nomination_type = ''TRAN_INPUT'' AND cv_msg_enq.contract_level = ''UPG'' THEN ROUND(EcDp_Unit.ConvertValue(VALUE_60, EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value(''CT_MSG_ENQ'',''UNMET_AMOUNT_ENE'',''UOM_CODE'',''VIEWLAYER'',2500,''/'')), ''TJ''), 2) END' WHERE CLASS_NAME='CT_MSG_ENQ' AND ATTRIBUTE_NAME='NGI_ADJ_OUTLET_ENE';
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX='CASE WHEN cv_msg_enq.nomination_type = ''TRAN_INPUT'' AND cv_msg_enq.contract_level = ''UPG'' THEN ROUND(EcDp_Unit.ConvertValue( VALUE_52, EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value(''CT_MSG_ENQ'',''UNMET_AMOUNT_ENE'',''UOM_CODE'',''VIEWLAYER'',2500,''/'')), ''TJ''), 2) END' WHERE CLASS_NAME='CT_MSG_ENQ' AND ATTRIBUTE_NAME='UNMET_AMOUNT_ENE';
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX='CASE WHEN cv_msg_enq.nomination_type = ''TRAN_INPUT'' AND cv_msg_enq.contract_level = ''UPG'' THEN ROUND(EcDp_Unit.ConvertValue( VALUE_32, EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value(''CT_MSG_ENQ'',''WPT_ENE_ENQ'',''UOM_CODE'',''VIEWLAYER'',2500,''/'')), ''TJ''), 2) END' WHERE CLASS_NAME='CT_MSG_ENQ' AND ATTRIBUTE_NAME='WPT_ENE_ENQ';
+
+--UE_CT_WELL_EQPM_DOWNTIME--IV_EQUIPMENT_JN
+DROP VIEW IV_EQUIPMENT_JN;
+DROP PACKAGE UE_CT_WELL_EQPM_DOWNTIME;
