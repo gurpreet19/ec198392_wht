@@ -1,0 +1,133 @@
+
+ -- START PKG_GEN_PKGS.sf_get_functions at:05/07/2019 06.26.28 AM
+
+
+CREATE or REPLACE PACKAGE RP_STRM_SET
+IS
+
+   FUNCTION APPROVAL_BY(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2;
+   FUNCTION APPROVAL_STATE(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2;
+   FUNCTION RECORD_STATUS(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2;
+   FUNCTION APPROVAL_DATE(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN DATE;
+   FUNCTION DESCRIPTION(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2;
+      TYPE REC_ROW_BY_PK IS RECORD (
+         STREAM_SET VARCHAR2 (16) ,
+         DESCRIPTION VARCHAR2 (240) ,
+         RECORD_STATUS VARCHAR2 (1) ,
+         CREATED_BY VARCHAR2 (30) ,
+         CREATED_DATE  DATE ,
+         LAST_UPDATED_BY VARCHAR2 (30) ,
+         LAST_UPDATED_DATE  DATE ,
+         REV_NO NUMBER ,
+         REV_TEXT VARCHAR2 (2000) ,
+         APPROVAL_BY VARCHAR2 (30) ,
+         APPROVAL_DATE  DATE ,
+         APPROVAL_STATE VARCHAR2 (1) ,
+         REC_ID VARCHAR2 (32)  );
+   FUNCTION ROW_BY_PK(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN REC_ROW_BY_PK;
+   FUNCTION REC_ID(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2;
+
+END RP_STRM_SET;
+
+/
+
+
+
+CREATE or REPLACE PACKAGE BODY RP_STRM_SET
+IS
+
+   FUNCTION APPROVAL_BY(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2
+   IS
+      ret_value   VARCHAR2 (30) ;
+   BEGIN
+      ret_value := EC_STRM_SET.APPROVAL_BY      (
+         P_STREAM_SET );
+         RETURN ret_value;
+   END APPROVAL_BY;
+   FUNCTION APPROVAL_STATE(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2
+   IS
+      ret_value   VARCHAR2 (1) ;
+   BEGIN
+      ret_value := EC_STRM_SET.APPROVAL_STATE      (
+         P_STREAM_SET );
+         RETURN ret_value;
+   END APPROVAL_STATE;
+   FUNCTION RECORD_STATUS(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2
+   IS
+      ret_value   VARCHAR2 (1) ;
+   BEGIN
+      ret_value := EC_STRM_SET.RECORD_STATUS      (
+         P_STREAM_SET );
+         RETURN ret_value;
+   END RECORD_STATUS;
+   FUNCTION APPROVAL_DATE(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN DATE
+   IS
+      ret_value    DATE ;
+   BEGIN
+      ret_value := EC_STRM_SET.APPROVAL_DATE      (
+         P_STREAM_SET );
+         RETURN ret_value;
+   END APPROVAL_DATE;
+   FUNCTION DESCRIPTION(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2
+   IS
+      ret_value   VARCHAR2 (240) ;
+   BEGIN
+      ret_value := EC_STRM_SET.DESCRIPTION      (
+         P_STREAM_SET );
+         RETURN ret_value;
+   END DESCRIPTION;
+   FUNCTION ROW_BY_PK(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN REC_ROW_BY_PK
+   IS
+      ret_value    REC_ROW_BY_PK ;
+   BEGIN
+      ret_value := EC_STRM_SET.ROW_BY_PK      (
+         P_STREAM_SET );
+         RETURN ret_value;
+   END ROW_BY_PK;
+   FUNCTION REC_ID(
+      P_STREAM_SET IN VARCHAR2)
+      RETURN VARCHAR2
+   IS
+      ret_value   VARCHAR2 (32) ;
+   BEGIN
+      ret_value := EC_STRM_SET.REC_ID      (
+         P_STREAM_SET );
+         RETURN ret_value;
+   END REC_ID;
+
+END RP_STRM_SET;
+
+/
+--GRANT EXECUTE ON ECKERNEL_WST.RP_STRM_SET TO REPORT_ROLE_XXX;
+
+
+
+ -- FINISH PKG_GEN_PKGS.sf_get_functions at:05/07/2019 06.26.36 AM
+
+
