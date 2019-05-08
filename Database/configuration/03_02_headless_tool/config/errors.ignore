@@ -34,3 +34,5 @@ Failed: Creating or replacing trigger IUV_DT_TESTDEVICE_DAY_STATUS definition
 Failed: Creating or replacing trigger IUV_DT_WBI_SAMPLE definition
 Failed: Creating or replacing trigger IUV_DT_WELL_TEST_RAW_DATA definition
 Failed: Creating or replacing trigger IUV_MAPPINGS_TRANS_CONFIG definition
+Error while preparing Config violation Report
+Failed: DUMMY_OBJECT_VERSION: Inserting Dummy Object Version  having key
