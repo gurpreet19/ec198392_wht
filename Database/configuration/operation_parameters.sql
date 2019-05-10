@@ -52,7 +52,15 @@ define headlesstool='headless-5.2.0'
 -- ## Simulate query will only generate the queries but not execute the queries when set to 1 (possible values 1 or 0)
 -- ## Delete gen files will delete the generated SQL files once executed when set to 1        (possible values 1 or 0)
 -- ## Never stop on error will continue the script even when there are errors when set to 1   (possible values 1 or 0)
+
 define SIMULATE_QUERY='0'
 define DELETE_GEN_FILES='0'
 define NEVER_STOP_ON_ERROR='1'
-define INCL_Patches_and_POPs='1'
+define INCL_Patches_and_POPs='0'
+define INCL_GlobalTemlate='1'
+define Prod_Diff_script='1' 
+define INCL_DQ_TOOL='0'
+define INCL_HPDI_TOOL='0'
+define INCL_RP_PKGS='1'
+define INCL_BBO_SCRIPTS='0'
+define INCL_Releases='0'
