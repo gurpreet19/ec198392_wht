@@ -1,0 +1,1 @@
+sqlplus /nolog @collection_point_install.sql
