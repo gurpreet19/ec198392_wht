@@ -2,7 +2,7 @@
 UPDATE CTRL_PROPERTY_META SET DEFAULT_VALUE_STRING='PRODUCTIONUNIT' WHERE  key ='CUSTOM_TARGET_MANDATORY_OP'; 
 
 --WELL_DEFERMENT AND WELL_EQPM_LOW
-Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT','COND_EVENT_LOSS_V','WST','','NUMBER','FUNCTION','EcBp_Well_Eqpm_Deferment.getParentEventLossRate(event_no, ''COND'', downtime_type) / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(daytime,''LPO_COND_DEN'',''<='')' from dual;
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT','COND_EVENT_LOSS_V','WST','','NUMBER','FUNCTION','EcBp_Deferment.getParentEventLossRate(event_no, ''COND'', deferment_type) / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(daytime,''LPO_COND_DEN'',''<='')' from dual;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','COND_EVENT_LOSS_V','DISABLED_IND',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','COND_EVENT_LOSS_V','IS_MANDATORY',2500,'/','VIEWLAYER','' from dual;
@@ -32,7 +32,7 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','COND_LOSS_RATE_V','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','COND_LOSS_RATE_V','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
 
-Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT','COND_POTENTIAL_V','WST','','NUMBER','FUNCTION','EcBp_Well_Eqpm_Deferment.getPotentialRate(event_no, ''COND'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(daytime,''LPO_COND_DEN'',''<='')' from dual;
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT','COND_POTENTIAL_V','WST','','NUMBER','FUNCTION','EcBp_Deferment.getPotentialRate(event_no, ''COND'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(daytime,''LPO_COND_DEN'',''<='')' from dual;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','COND_POTENTIAL_V','DISABLED_IND',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','COND_POTENTIAL_V','IS_MANDATORY',2500,'/','VIEWLAYER','' from dual;
@@ -47,7 +47,7 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','COND_POTENTIAL_V','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','COND_POTENTIAL_V','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
 
-Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT','GAS_EVENT_LOSS_V','WST','','NUMBER','FUNCTION','EcBp_Well_Eqpm_Deferment.getParentEventLossRate(event_no, ''GAS'', downtime_type) / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(daytime,''LPO_GAS_DEN'',''<='')' from dual;
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT','GAS_EVENT_LOSS_V','WST','','NUMBER','FUNCTION','EcBp_Deferment.getParentEventLossRate(event_no, ''GAS'', deferment_type) / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(daytime,''LPO_GAS_DEN'',''<='')' from dual;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','GAS_EVENT_LOSS_V','DISABLED_IND',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','GAS_EVENT_LOSS_V','IS_MANDATORY',2500,'/','VIEWLAYER','' from dual;
@@ -77,7 +77,7 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','GAS_LOSS_RATE_V','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','GAS_LOSS_RATE_V','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
 
-Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT','GAS_POTENTIAL_V','WST','','NUMBER','FUNCTION','EcBp_Well_Eqpm_Deferment.getPotentialRate(event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(daytime,''LPO_GAS_DEN'',''<='')' from dual;
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT','GAS_POTENTIAL_V','WST','','NUMBER','FUNCTION','EcBp_Deferment.getPotentialRate(event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(daytime,''LPO_GAS_DEN'',''<='')' from dual;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','GAS_POTENTIAL_V','DISABLED_IND',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','GAS_POTENTIAL_V','IS_MANDATORY',2500,'/','VIEWLAYER','' from dual;
@@ -109,7 +109,7 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','NO_LOSS_FLAG','viewlabelhead',2500,'/EC','STATIC_PRESENTATION','No' from dual;
 
 --WELL_EQPM_OFF_CHILD AND WELL_EQPM_LOW_CHILD
-Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT_CHILD','COND_EVENT_LOSS_V','WST','','NUMBER','FUNCTION','EcBp_Well_Eqpm_Deferment.getEventLossRate(WELL_EQUIP_DOWNTIME.event_no, ''COND'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(well_equip_downtime.daytime,''LPO_COND_DEN'',''<='')' from dual;
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT_CHILD','COND_EVENT_LOSS_V','WST','','NUMBER','FUNCTION','EcBp_Deferment.getEventLossRate(WELL_EQUIP_DOWNTIME.event_no, ''COND'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(well_equip_downtime.daytime,''LPO_COND_DEN'',''<='')' from dual;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','COND_EVENT_LOSS_V','DISABLED_IND',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','COND_EVENT_LOSS_V','IS_MANDATORY',2500,'/','VIEWLAYER','' from dual;
@@ -139,7 +139,7 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','COND_LOSS_RATE_V','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','COND_LOSS_RATE_V','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
 
-Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT_CHILD','COND_POTENTIAL_V','WST','','NUMBER','FUNCTION','EcBp_Well_Eqpm_Deferment.getPotentialRate(event_no, ''COND'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(well_equip_downtime.daytime,''LPO_COND_DEN'',''<='')' from dual;
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT_CHILD','COND_POTENTIAL_V','WST','','NUMBER','FUNCTION','EcBp_Deferment.getPotentialRate(event_no, ''COND'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(well_equip_downtime.daytime,''LPO_COND_DEN'',''<='')' from dual;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','COND_POTENTIAL_V','DISABLED_IND',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','COND_POTENTIAL_V','IS_MANDATORY',2500,'/','VIEWLAYER','' from dual;
@@ -154,7 +154,7 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','COND_POTENTIAL_V','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','COND_POTENTIAL_V','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
 
-Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT_CHILD','GAS_EVENT_LOSS_V','WST','','NUMBER','FUNCTION','EcBp_Well_Eqpm_Deferment.getEventLossRate(WELL_EQUIP_DOWNTIME.event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(well_equip_downtime.daytime,''LPO_GAS_DEN'',''<='')' from dual;
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT_CHILD','GAS_EVENT_LOSS_V','WST','','NUMBER','FUNCTION','EcBp_Deferment.getEventLossRate(WELL_EQUIP_DOWNTIME.event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(well_equip_downtime.daytime,''LPO_GAS_DEN'',''<='')' from dual;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','GAS_EVENT_LOSS_V','DISABLED_IND',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','GAS_EVENT_LOSS_V','IS_MANDATORY',2500,'/','VIEWLAYER','' from dual;
@@ -184,7 +184,7 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','GAS_LOSS_RATE_V','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','GAS_LOSS_RATE_V','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
 
-Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT_CHILD','GAS_POTENTIAL_V','WST','','NUMBER','FUNCTION','EcBp_Well_Eqpm_Deferment.getPotentialRate(event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(well_equip_downtime.daytime,''LPO_GAS_DEN'',''<='')' from dual;
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax) select 'WELL_DEFERMENT_CHILD','GAS_POTENTIAL_V','WST','','NUMBER','FUNCTION','EcBp_Deferment.getPotentialRate(event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(well_equip_downtime.daytime,''LPO_GAS_DEN'',''<='')' from dual;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','GAS_POTENTIAL_V','DISABLED_IND',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT_CHILD','GAS_POTENTIAL_V','IS_MANDATORY',2500,'/','VIEWLAYER','' from dual;
@@ -279,19 +279,19 @@ insert into class_attr_property_cnfg (class_name, attribute_name, property_code,
 values ('WELL_DEFERMENT', 'GAS_LIFT_POTENTIAL', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'STEAM_INJ_LOSS_RATE', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'STEAM_INJ_LOSS_RATE',  'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'WATER_INJ_LOSS_RATE', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'WATER_INJ_LOSS_RATE',  'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'WATER_LOSS_RATE', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'WATER_LOSS_RATE', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'GAS_INJ_LOSS_RATE', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'GAS_INJ_LOSS_RATE', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'OIL_LOSS_RATE', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'OIL_LOSS_RATE', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
 values ('WELL_DEFERMENT', 'DILUENT_LOSS_RATE', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');

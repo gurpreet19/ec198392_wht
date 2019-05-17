@@ -5,6 +5,7 @@
 -- ## Enter password for the main EC user (eckernel)
 -- ## For example: define ec_schema_password='energy'
 define ec_schema_password='energy'
+define kc_schema_password='energy'
 
 -- ## Enter password for the EC application users (energyx,reporting,transfer)
 -- ## For example: define ec_application_password='energy'

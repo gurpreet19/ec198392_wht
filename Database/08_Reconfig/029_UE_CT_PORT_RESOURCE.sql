@@ -375,7 +375,7 @@ IS
                                                                     FROM   DV_STORAGE_LIFT_NOMINATION noms
                                                                     WHERE  noms.CARGO_NO = p_cargo_no))
       OR       (SELECT COUNT(*)
-                FROM   class_relation rel
+                FROM   class_relation_cnfg rel
                 WHERE  rel.to_class_name = p_port_resource_type
                 AND    rel.group_type IS NOT NULL) = 0)
       ORDER BY port_resource.name;
