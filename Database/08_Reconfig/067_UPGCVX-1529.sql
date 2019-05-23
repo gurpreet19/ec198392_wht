@@ -1,0 +1,1 @@
+update TV_REPORT_PARAM set USER_VISIBLE_IND ='Y';
