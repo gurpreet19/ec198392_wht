@@ -322,3 +322,11 @@ values ('WELL_DEFERMENT', 'GAS_LIFT_EVENT_LOSS', 'viewhidden', 2500, '/EC', 'STA
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
 values ('WELL_DEFERMENT', 'STATUS', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+
+--WELL_DEFERMENT_CHILD
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='EcBp_Deferment.getEventLossRate(DEFERMENT_EVENT.event_no, ''COND'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_COND_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='COND_EVENT_LOSS_V';
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='EcBp_Deferment.getPotentialRate(event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_GAS_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='GAS_POTENTIAL_V';
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='EcBp_Deferment.getPotentialRate(event_no, ''COND'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_COND_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='COND_POTENTIAL_V';
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='deferment_event.GAS_LOSS_RATE / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_GAS_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='GAS_LOSS_RATE_V';
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='EcBp_Deferment.getEventLossRate(DEFERMENT_EVENT.event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_GAS_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='GAS_EVENT_LOSS_V';
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='deferment_event.COND_LOSS_RATE / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_COND_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='COND_LOSS_RATE_V';
