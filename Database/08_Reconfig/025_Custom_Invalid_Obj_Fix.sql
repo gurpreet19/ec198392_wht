@@ -31,3 +31,38 @@ DROP PACKAGE UE_CT_WELL_EQPM_DOWNTIME;
 --PRICE_INDEX_YR_VALUE
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX='ec_price_in_item_version.text_1(PRICE_IN_ITEM_VALUE.object_id, PRICE_IN_ITEM_VALUE.daytime, ''<='')' WHERE CLASS_NAME='PRICE_INDEX_YR_VALUE' AND ATTRIBUTE_NAME='PRICE_INDEX_TYPE'; 
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX='ec_currency.object_code(ec_price_in_item_version.currency_id(PRICE_IN_ITEM_VALUE.object_id, PRICE_IN_ITEM_VALUE.daytime, ''<='')) ' WHERE CLASS_NAME='PRICE_INDEX_YR_VALUE' AND ATTRIBUTE_NAME='UNIT'; 
+
+--IUD_CT_MSG_FORECAST_ENTS
+CREATE OR REPLACE VIEW "CV_FCST_STORAGE_GRAPH" ("OBJECT_ID", "DAYTIME", "FORECAST_ID", "PROD_FCST_ID", "RECORD_STATUS", "CREATED_BY", "CREATED_DATE", "LAST_UPDATED_BY", "LAST_UPDATED_DATE", "REV_NO", "REV_TEXT", "APPROVAL_STATE", "APPROVAL_BY", "APPROVAL_DATE", "REC_ID") AS 
+  (SELECT s.OBJECT_ID AS STORAGE_ID,
+           sd.daytime,
+           fv.OBJECT_ID,
+           fv.REF_OBJECT_ID_1 AS PROD_FCST_ID,
+           NULL AS RECORD_STATUS,
+           NULL AS CREATED_BY,
+           NULL AS CREATED_DATE,
+           NULL AS LAST_UPDATED_BY,
+           NULL AS LAST_UPDATED_DATE,
+           NULL AS REV_NO,
+           NULL AS REV_TEXT,
+           NULL AS APPROVAL_STATE,
+           NULL AS APPROVAL_BY,
+           NULL AS APPROVAL_DATE,
+           NULL AS REC_ID
+      FROM FORECAST f
+           INNER JOIN FORECAST_VERSION fv ON f.object_id = fv.object_id
+           INNER JOIN
+           STORAGE s
+              ON (   f.STORAGE_ID = s.OBJECT_ID
+                  OR (    f.STORAGE_ID IS NULL
+                      AND s.OBJECT_ID IN
+                             (SELECT DISTINCT STORAGE_ID FROM LIFTING_ACCOUNT)))
+           INNER JOIN
+           (SELECT (SELECT MIN (START_DATE) FROM FORECAST) + ROWNUM - 1
+                      AS DAYTIME
+              FROM user_objects
+             WHERE ROWNUM <=
+                      (SELECT MAX (END_DATE) - MIN (START_DATE) FROM FORECAST)) sd
+              ON     sd.daytime >= fv.daytime
+                 AND sd.daytime < NVL (fv.end_date, f.end_date));
+/
