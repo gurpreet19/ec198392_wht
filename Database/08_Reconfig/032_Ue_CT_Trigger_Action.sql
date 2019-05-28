@@ -377,6 +377,7 @@ CURSOR components_in_analysis(cp_analysis_no NUMBER) IS
 
     ln_tot_mass_frac   NUMBER :=0;
     ln_count_blank_mol NUMBER :=0;
+    ln_calc_comp_mass_frac NUMBER :=0;
 
 
 BEGIN
@@ -391,16 +392,16 @@ BEGIN
 
 
        FOR comp_rec IN components_in_analysis(p_analysis_no) LOOP
-
-         IF ln_count_blank_mol = 0 THEN
-           IF ln_tot_mass_frac > 0 THEN
-             UPDATE   fluid_analysis_component
-               SET      wt_pct = 100 * (EcBp_Comp_Analysis.calcCompMassFrac(ec_object_fluid_analysis.object_id(p_analysis_no),
+     ln_calc_comp_mass_frac := EcBp_Comp_Analysis.calcCompMassFrac(ec_object_fluid_analysis.object_id(p_analysis_no),
                                                                     ec_object_fluid_analysis.daytime(p_analysis_no),
                                                                     comp_rec.component_no,
                                                                     ec_object_fluid_analysis.analysis_type(p_analysis_no),
                                                                     ec_object_fluid_analysis.sampling_method(p_analysis_no),
-                                                                    comp_rec.mol_pct) / ln_tot_mass_frac)
+                                                                    comp_rec.mol_pct);
+         IF ln_count_blank_mol = 0 THEN
+           IF ln_tot_mass_frac > 0 THEN
+             UPDATE   fluid_analysis_component
+               SET      wt_pct = 100 * (ln_calc_comp_mass_frac / ln_tot_mass_frac)
 
 
                WHERE analysis_no=p_analysis_no and component_no=comp_rec.component_no;

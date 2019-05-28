@@ -335,19 +335,19 @@ dbms_output.put_line('Class Attribute Properties - WELL_DEFERMENT - STEAM_INJ_PO
 end;
 /
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'STEAM_INJ_POTENTIAL', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'STEAM_INJ_POTENTIAL', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'WATER_INJ_POTENTIAL', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'GAS_INJ_POTENTIAL', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'WATER_POTENTIAL', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'WATER_INJ_POTENTIAL', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'GAS_INJ_POTENTIAL', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'WATER_POTENTIAL', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'OIL_POTENTIAL', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
+values ('WELL_DEFERMENT', 'OIL_POTENTIAL', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 begin
 dbms_output.put_line('Class Attribute Properties - WELL_DEFERMENT - DILUENT_POTENTIAL/GAS_LIFT_POTENTIAL/STEAM_INJ_LOSS_RATE/WATER_INJ_LOSS_RATE/WATER_LOSS_RATE');
