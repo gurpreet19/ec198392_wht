@@ -1,0 +1,12 @@
+alter table component_constant disable all triggers;
+  delete component_constant where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no in ('C6','C7+');
+  update component_constant set mol_wt = 16.043, sum_factor = 0.0447, gcvm = 55.574, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'C1';
+  update component_constant set mol_wt = 30.07,  sum_factor = 0.0922, gcvm = 51.95, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'C2';
+  update component_constant set mol_wt = 44.097, sum_factor = 0.1338, gcvm = 50.37, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'C3';
+  update component_constant set mol_wt = 44.01,  sum_factor = 0.0748, gcvm = 0, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'CO2';
+  update component_constant set sum_factor = 0.1789, gcvm = 49.39, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'IC4';
+  update component_constant set mol_wt = 72.15, sum_factor = 0.2258, gcvm = 48.95, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'IC5';
+  update component_constant set mol_wt = 28.0135, sum_factor = 0.0173, gcvm = 0, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'N2';
+  update component_constant set sum_factor = 0.1871, gcvm = 49.55, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'NC4';
+  update component_constant set mol_wt = 72.15, sum_factor = 0.251, gcvm = 49.04, ideal_gcv = null where ecdp_objects.GetObjCode(object_id) = 'ISO6976_STD' and component_no = 'NC5';
+alter table component_constant enable all triggers;
