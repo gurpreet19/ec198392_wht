@@ -1,5 +1,5 @@
 update prosty_codes set alt_code='/com.ec.wheatstone.screens/layout/cond_demurrage.xml' where code='COND_DEMURRAGE';
-update prosty_codes set alt_code='/com.ec.wheatstone.screens/layout/cond_ebo' where code='COND_EBO';
+update prosty_codes set alt_code='/com.ec.wheatstone.screens/layout/cond_ebo.xml' where code='COND_EBO';
 
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX='NVL(EC_LIFTING_ACTIVITY.TO_daytime(CARGO_NO, UE_CT_DEMURRAGE.GetDemurrageActivityCode(CARGO_NO, DEMURRAGE_TYPE, ''END''), 1,''LOAD''), EC_LIFTING_ACTIVITY.from_daytime(CARGO_NO, UE_CT_DEMURRAGE.GetDemurrageActivityCode(CARGO_NO, DEMURRAGE_TYPE, ''END''), 1,''LOAD''))-EC_LIFTING_ACTIVITY.from_daytime(CARGO_NO, UE_CT_DEMURRAGE.GetDemurrageActivityCode(CARGO_NO, DEMURRAGE_TYPE, ''START''), 1,''LOAD'')'
 WHERE CLASS_NAME='DEMURRAGE' AND ATTRIBUTE_NAME='INTERMEDIATE_LAYTIME';
