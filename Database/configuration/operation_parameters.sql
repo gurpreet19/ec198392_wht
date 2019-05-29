@@ -16,10 +16,10 @@ define ec_reporting_password='energy'
 -- ## Enter the Database name
 -- ## This argument defines the connect string to use.
 -- ## For example: define database_name='ec_db.myCompany.world'
-define database_name='db.wstci.chevron.eccloud-tieto.com:1521/wstci'
-define db_hostname='db.wstci.chevron.eccloud-tieto.com'
+define database_name='db.wstci2.chevron.eccloud-tieto.com:1521/ecdb'
+define db_hostname='db.wstci2.chevron.eccloud-tieto.com'
 define db_port='1521'
-define db_service_name='wstci'
+define db_service_name='ecdb'
 
 -- ## Enter the Operation name
 -- ## This will create a user called: "eckernel_<operation>"
@@ -39,7 +39,7 @@ define ts_index='INDEX02_WST'
 define oracle_edition='EE'
 
 -- ## Give the name of the environment (will be used for the lable) for example Production or Acceptance
-define environment='CI'
+define environment='CI2'
 
 -- ## Main configuration for the upgrade script
 define NLS_LANG='AMERICAN'

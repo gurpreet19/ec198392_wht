@@ -1,4 +1,4 @@
-CREATE OR REPLACE package Ue_Stream_Fluid is
+create or replace package Ue_Stream_Fluid is
 
 /****************************************************************
 ** Package        :  Ue_Stream_Fluid
@@ -116,9 +116,7 @@ RETURN NUMBER;
 
 end Ue_Stream_Fluid;
 /
-
-
-CREATE OR REPLACE package body Ue_Stream_Fluid is
+create or replace package body Ue_Stream_Fluid is
 /****************************************************************
 ** Package        :  Ue_Stream_Fluid, body part
 **
@@ -204,7 +202,7 @@ RETURN NUMBER
 --</EC-DOC>
 IS
     v_return_value NUMBER;
-	lv2_stream_phase VARCHAR2(32);						  
+	lv2_stream_phase VARCHAR2(32);
 
 BEGIN
 	lv2_stream_phase := EC_STRM_VERSION.STREAM_PHASE(p_object_id, p_daytime, '<=');
@@ -453,7 +451,7 @@ BEGIN
 		END CASE;
 
 
- RETURN lv_Load;	
+ RETURN lv_Load;
 END getNetStdMass;
 
 --<EC-DOC>
@@ -603,7 +601,7 @@ BEGIN
 
 
 RETURN lv_Load;
---end edit		 
+--end edit
 END getNetStdVol;
 
 --<EC-DOC>
@@ -739,7 +737,7 @@ BEGIN
 			IF lv_delta_vol + lv_load_vol = 0 THEN
 				ln_return_val := 0;
 			ELSE
-				SELECT UOM_CODE INTO lv_from_uom FROM CLASS_ATTR_PRESENTATION WHERE CLASS_NAME = 'STRM_DAY_STREAM_DER_OIL' AND ATTRIBUTE_NAME = 'NET_MASS';
+				SELECT PROPERTY_VALUE INTO lv_from_uom FROM CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME = 'STRM_DAY_STREAM_DER_OIL' AND ATTRIBUTE_NAME = 'NET_MASS' AND PROPERTY_CODE='UOM_CODE';
 				ln_return_val := ROUND(ECDP_UNIT.CONVERTVALUE((lv_delta_mass + lv_load_mass) / (lv_delta_vol + lv_load_vol), ECDP_UNIT.GETUNITFROMLOGICAL(lv_from_uom), 'KG'),3);
 
 			END IF;
@@ -764,7 +762,7 @@ BEGIN
 
 
 
-   RETURN ln_return_val;		
+   RETURN ln_return_val;
 END getStdDens;
 
 --<EC-DOC>
@@ -782,7 +780,7 @@ RETURN NUMBER
 IS
 	ln_grs_mass NUMBER;
 	ln_bsw_wt NUMBER;
-	ln_return_val NUMBER;					  
+	ln_return_val NUMBER;
 
 BEGIN
 
@@ -816,36 +814,36 @@ BEGIN
 	lv2_phase := Ec_Strm_Version.stream_phase(p_object_id,p_daytime, '<=');
 	code      := EcDp_Objects.GetObjCode(p_object_id);
 
-																								   
-						  
-									 
-																								   
-				
-										  
-						
-			 
-		   
-  
+
+
+
+
+
+
+
+
+
+
 
 	IF lv2_phase = 'WAT' THEN
-			   
-		   
+
+
 
 		lv2_ref_stream := EcBp_Stream.findRefAnalysisStream(p_object_id, p_daytime);
 
 		ln_return_val := ec_strm_reference_value.value_30(nvl(lv2_ref_stream,p_object_id), p_daytime, '<=') / 1000;
 
 	END IF;
-									   
-												  
-																								   
-							 
-										  
-						
-									  
-			 
-		   
-  
+
+
+
+
+
+
+
+
+
+
 
 
 	RETURN ln_return_val;

@@ -1041,7 +1041,7 @@ FUNCTION cargoWarnings(p_cargo_no NUMBER, p_attribute VARCHAR2)
 
     v_stream_id stream.object_id%TYPE;
     v_analysis_type object_fluid_analysis.analysis_type%TYPE;
-    v_class_name class.class_name%TYPE;
+    v_class_name class_cnfg.class_name%TYPE;
     v_component_set object_fluid_analysis.component_set%TYPE;
 
     v_existing_no_by_cargo NUMBER;

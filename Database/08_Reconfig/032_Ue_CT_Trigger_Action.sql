@@ -800,9 +800,9 @@ IS
     PRAGMA AUTONOMOUS_TRANSACTION;
     CURSOR attributes_to_clean IS
     SELECT attribute_name
-    FROM class_attribute
+    FROM class_attr_property_cnfg
     WHERE class_name = 'CT_STAGE_COMP_ANALY_TXT'
-    AND description = 'CONVERT';
+    AND PROPERTY_CODE='DESCRIPTION' and PROPERTY_VALUE = 'CONVERT';
 
     v_intermediate VARCHAR2(256);
     v_first VARCHAR2(256);
