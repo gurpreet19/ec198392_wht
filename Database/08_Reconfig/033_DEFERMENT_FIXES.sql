@@ -324,6 +324,8 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_3','viewwidth',2500,'/EC','STATIC_PRESENTATION','130' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_3','PopupQueryURL',2500,'/EC','STATIC_PRESENTATION','/com.ec.frmw.co.screens/query/ec_code_dep_popup.xml' from dual;
 
+UPDATE PROSTY_CODES SET IS_ACTIVE='N' WHERE CODE_TYPE='DEFER_CAUSE_CAT' AND CODE not in ('GAS_INJECTION','GAS_LIFT','GAS_SUPPLY','GAS_TREAT','EXPORT_STORAGE');
+
 
 --Class Attribute Properties
 begin
