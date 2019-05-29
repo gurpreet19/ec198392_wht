@@ -274,11 +274,30 @@ dbms_output.put_line('REASON_CODE_1-REASON_CODE_1');
 end;
 /
 
-Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_1','PopupDependency',2500,'/EC','STATIC_PRESENTATION','Screen.this.currentRow.REASON_CODE_1=ReturnField.CODE' from dual;
+
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_1','PopupReturnColumn',2500,'/EC','STATIC_PRESENTATION','1' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_1','PopupWhereValue',2500,'/EC','STATIC_PRESENTATION','DEFER_SYS_GRP' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_1','PopupWhereColumn',2500,'/EC','STATIC_PRESENTATION','CODE_TYPE' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_1','viewwidth',2500,'/EC','STATIC_PRESENTATION','130' from dual;
+
+-- REASON_CODE_1
+
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='EXTERNAL';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='S_SUBSEA';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_CASING';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_ESP';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_GAS_LIFT';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_PACKER';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_PROG_CAVITY';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_RESERVOIR';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_ROD_PUMP';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_RODS_BEAM';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_RODS_PCP';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_SAND';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_MEASURE';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_VALVE_CHOKE';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_TUBING';
+UPDATE PROSTY_CODES SET IS_ACTIVE='Y' WHERE CODE_TYPE='DEFER_SYS_GRP' AND CODE ='SS_OTHER';
 
 begin
 dbms_output.put_line('REASON_CODE_1-REASON_CODE_2');
@@ -303,6 +322,8 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_3','PopupWhereValue',2500,'/EC','STATIC_PRESENTATION','DEFER_CAUSE_CAT' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_3','PopupWhereColumn',2500,'/EC','STATIC_PRESENTATION','CODE_TYPE' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_3','viewwidth',2500,'/EC','STATIC_PRESENTATION','130' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_3','PopupQueryURL',2500,'/EC','STATIC_PRESENTATION','/com.ec.frmw.co.screens/query/ec_code_dep_popup.xml' from dual;
+
 
 --Class Attribute Properties
 begin
@@ -410,8 +431,8 @@ begin
 dbms_output.put_line('Class Attribute Properties - WELL_DEFERMENT - GAS_LIFT_EVENT_LOSS/STATUS');
 end;
 /
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'GAS_LIFT_EVENT_LOSS', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'GAS_LIFT_EVENT_LOSS', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
 values ('WELL_DEFERMENT', 'STATUS', 'DISABLED_IND', 2500, '/', 'VIEWLAYER','Y');
@@ -423,3 +444,14 @@ UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='EcBp_Deferment.getPotentialRate(
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='deferment_event.GAS_LOSS_RATE / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_GAS_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='GAS_LOSS_RATE_V';
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='EcBp_Deferment.getEventLossRate(DEFERMENT_EVENT.event_no, ''GAS'') / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_GAS_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='GAS_EVENT_LOSS_V';
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX ='deferment_event.COND_LOSS_RATE / EC_CTRL_SYSTEM_ATTRIBUTE.attribute_value(deferment_event.daytime,''LPO_COND_DEN'',''<='')' WHERE CLASS_NAME='WELL_DEFERMENT_CHILD' AND ATTRIBUTE_NAME='COND_LOSS_RATE_V';
+
+--Object Type dropdown
+update prosty_codes set is_active='N' where code_type='DEFER_OBJECT_TYPES' and code in ('OPERATOR_ROUTE','COLLECTION_POINT','WELL_HOOKUP');
+update prosty_codes set sort_order=30 where code_type='DEFER_OBJECT_TYPES' and code='PROD_SUB_UNIT';
+update prosty_codes set sort_order='60' where code_type='DEFER_OBJECT_TYPES' and code='SUB_AREA';
+update prosty_codes set is_active='Y' where code_type='DEFER_OBJECT_TYPES' and code in ('FCTY_CLASS_2');
+
+
+insert into ctrl_code_dependency (dependency_type,code_type1,code1,code_type2,code2) values ('WHATEVER','DEFER_GROUP_TYPES','operational','DEFER_OBJECT_TYPES','PROD_SUB_UNIT');
+insert into ctrl_code_dependency (dependency_type,code_type1,code1,code_type2,code2) values ('WHATEVER','DEFER_GROUP_TYPES','operational','DEFER_OBJECT_TYPES','AREA');
+insert into ctrl_code_dependency (dependency_type,code_type1,code1,code_type2,code2) values ('WHATEVER','DEFER_GROUP_TYPES','operational','DEFER_OBJECT_TYPES','SUB_AREA');
