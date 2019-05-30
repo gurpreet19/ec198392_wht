@@ -24,7 +24,6 @@ PROCEDURE EXECUTE(
 
 END ue_cargo_action;
 /
-
 create or replace PACKAGE BODY ue_cargo_action IS
 /******************************************************************************
 ** Package        :  ue_cargo_action, body part
@@ -1176,7 +1175,7 @@ PROCEDURE execute(
   p_parcel_no     NUMBER default -1,
   p_parameter     VARCHAR2 default ''
 )
-IS
+as pragma autonomous_transaction;
     v_action VARCHAR2(32);
     v_cargo_no NUMBER;
     v_parcel_no NUMBER;
