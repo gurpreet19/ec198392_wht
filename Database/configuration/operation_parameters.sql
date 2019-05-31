@@ -16,10 +16,10 @@ define ec_reporting_password='energy'
 -- ## Enter the Database name
 -- ## This argument defines the connect string to use.
 -- ## For example: define database_name='ec_db.myCompany.world'
-define database_name='db.wstci2.chevron.eccloud-tieto.com:1521/ecdb'
+define database_name='db.wstci2.chevron.eccloud-tieto.com:1521/wstci2'
 define db_hostname='db.wstci2.chevron.eccloud-tieto.com'
 define db_port='1521'
-define db_service_name='ecdb'
+define db_service_name='wstci2'
 
 -- ## Enter the Operation name
 -- ## This will create a user called: "eckernel_<operation>"
