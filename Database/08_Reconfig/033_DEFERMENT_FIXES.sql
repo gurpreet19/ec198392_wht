@@ -506,30 +506,30 @@ select 'WELL_DEFERMENT','COND_EVENT_LOSS','UOM_CODE',2500,'/','VIEWLAYER','LIQ_M
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
 values ('WELL_DEFERMENT', 'EVENT_TAG', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'COND_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
-
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'DILUENT_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
-
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'GAS_INJ_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
-
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'GAS_LIFT_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
-
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'GAS_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
-
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'OIL_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
-
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'STEAM_INJ_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
-
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'WATER_INJ_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
-
-insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
-values ('WELL_DEFERMENT', 'WATER_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'COND_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'DILUENT_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'GAS_INJ_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'GAS_LIFT_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'GAS_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'OIL_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'STEAM_INJ_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'WATER_INJ_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+--
+--insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+--values ('WELL_DEFERMENT', 'WATER_LOSS_VOLUME', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
