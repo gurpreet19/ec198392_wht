@@ -79,6 +79,7 @@ FUNCTION calculateVCF(p_cargo_no NUMBER) RETURN NUMBER;
 
 END UE_CT_STRM_DAY_PC_UPG_ALLOC;
 /
+
 create or replace PACKAGE BODY UE_CT_STRM_DAY_PC_UPG_ALLOC
 IS
 -------------------------------------------------------------------------
@@ -922,7 +923,7 @@ BEGIN
 
 							ln_denl_vol_lifter := round(ln_denl_vol * ln_lifter_split,2);
 
-							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_LNG_ANALYSIS', 'DENSITY','UOM_CODE','VIEWLAYER',2500,'/'));
+							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_LNG_ANALYSIS', 'DENSITY'));
 							lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MASS') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_M3');
 
 							lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_LNG_CARGO'), 'STRM_LNG_COMP', NULL, p_daytime, 'LNG');
@@ -987,7 +988,7 @@ BEGIN
 
 							ln_denl_vol_lifter := round(ln_denl_vol * ln_lifter_split,2);
 
-							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_OIL_ANALYSIS', 'DENSITY','UOM_CODE','VIEWLAYER',2500,'/'));
+							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_OIL_ANALYSIS', 'DENSITY'));
 							lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_COND_MASS_NET') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_COND_VOL_NET');
 
 							lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_COND_CARGO'), 'STRM_OIL_COMP', NULL, p_daytime, 'COND');
@@ -1041,14 +1042,14 @@ BEGIN
 
 		IF p_storage_code = 'STW_LNG' THEN
 
-			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_LNG_ANALYSIS', 'DENSITY','UOM_CODE','VIEWLAYER',2500,'/'));
+			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_LNG_ANALYSIS', 'DENSITY'));
 			lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MASS') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_M3');
 			lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_LNG_CARGO'), 'STRM_LNG_COMP', NULL, ld_daytime, 'LNG');
 
 		END IF;
 		IF p_storage_code = 'STW_COND' THEN
 
-			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_OIL_ANALYSIS', 'DENSITY','UOM_CODE','VIEWLAYER',2500,'/'));
+			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_OIL_ANALYSIS', 'DENSITY'));
 			lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_COND_MASS_NET') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_COND_VOL_NET');
 			lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_COND_CARGO'), 'STRM_OIL_COMP', NULL, ld_daytime, 'COND');
 
@@ -1081,7 +1082,7 @@ IS
 
 		IF p_storage_code = 'STW_LNG' THEN
 
-			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_LNG_ANALYSIS', 'DENSITY','UOM_CODE','VIEWLAYER',2500,'/'));
+			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_LNG_ANALYSIS', 'DENSITY'));
 			lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MASS') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_M3');
 			lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_LNG_CARGO'), 'STRM_LNG_COMP', NULL, p_daytime, 'LNG');
 
@@ -1089,7 +1090,7 @@ IS
 
 		IF p_storage_code = 'STW_COND' THEN
 
-			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_OIL_ANALYSIS', 'DENSITY','UOM_CODE','VIEWLAYER',2500,'/'));
+			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_OIL_ANALYSIS', 'DENSITY'));
 			lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_COND_MASS_NET') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_COND_VOL_NET');
 			lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_COND_CARGO'), 'STRM_OIL_COMP', NULL, p_daytime, 'COND');
 
@@ -1189,12 +1190,12 @@ BEGIN
 
 							lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_LNG_CARGO'), 'STRM_LNG_COMP', NULL, p_daytime, 'LNG');
 
-							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_LNG_ANALYSIS', 'DENSITY','UOM_CODE','VIEWLAYER',2500,'/'));
+							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_LNG_ANALYSIS', 'DENSITY'));
 							lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MASS') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_M3');
 
 							ln_denl_mass_lifter := ln_denl_vol_lifter * EcDp_Unit.ConvertValue(lofa_sample_row.density, lv2_analysis_unit, lv2_target_unit);
 
-							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_LNG_ANALYSIS', 'GCV_LNG','UOM_CODE','VIEWLAYER',2500,'/'));
+							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_LNG_ANALYSIS', 'GCV_LNG'));
 							lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MMBTU') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MASS');
 
 							ln_denl_energy_lifter := ln_denl_mass_lifter * EcDp_Unit.ConvertValue(lofa_sample_row.VALUE_46, lv2_analysis_unit, lv2_target_unit);
@@ -1253,7 +1254,7 @@ BEGIN
 
 		IF p_storage_code = 'STW_LNG' THEN
 
-			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_LNG_ANALYSIS', 'GCV_LNG','UOM_CODE','VIEWLAYER',2500,'/'));
+			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_LNG_ANALYSIS', 'GCV_LNG'));
 			lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MMBTU') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MASS');
 			lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_LNG_CARGO'), 'STRM_LNG_COMP', NULL, ld_daytime, 'LNG');
 
@@ -1285,7 +1286,7 @@ IS
 
 		IF p_storage_code = 'STW_LNG' THEN
 
-			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_LNG_ANALYSIS', 'GCV_LNG','UOM_CODE','VIEWLAYER',2500,'/'));
+			lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_LNG_ANALYSIS', 'GCV_LNG'));
 			lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MMBTU') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MASS');
 			lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_LNG_CARGO'), 'STRM_LNG_COMP', NULL, p_daytime, 'LNG');
 
@@ -1851,7 +1852,7 @@ BEGIN
 
 							ln_denl_vol_lifter := round(ln_denl_vol * ln_lifter_split,2);
 
-							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(ec_class_attr_property_cnfg.property_value('STRM_LNG_ANALYSIS', 'DENSITY','UOM_CODE','VIEWLAYER',2500,'/'));
+							lv2_analysis_unit := EcDp_Unit.GetUnitFromLogical(EcDp_ClassMeta_cnfg.getUomCode('STRM_LNG_ANALYSIS', 'DENSITY'));
 							lv2_target_unit := EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_PAA_MASS') || 'PER' || EC_LIFTING_MEASUREMENT_ITEM.UNIT('LIFT_NET_M3');
 
 							lofa_sample_row := Ecdp_Fluid_Analysis.getLastAnalysisSample(ec_stream.object_id_by_uk('SW_GP_LNG_CARGO'), 'STRM_LNG_COMP', NULL, p_daytime, 'LNG');
