@@ -9,3 +9,6 @@ commit;
 execute dbms_utility.compile_schema(user,false);
 
 GRANT EXECUTE ON ECDB_BUILDUTILS_ASUSER TO REPORT_ROLE_&operation;
+
+---refresh ACL---
+execute ecdp_acl.refreshall();

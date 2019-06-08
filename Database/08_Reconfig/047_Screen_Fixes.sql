@@ -8,7 +8,7 @@ SET ESCAPE OFF;
 INSERT INTO CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) VALUES ('TANK_DAY_INV_OIL','BSW_VOL','viewunit',2500,'/EC','STATIC_PRESENTATION','PCT');
 Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) values ('TANK_DAY_INV_OIL','BSW_VOL','viewwidth',2500,'/EC','STATIC_PRESENTATION',70);
 Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) values ('TANK_DAY_INV_OIL','BSW_VOL','viewformatmask',2500,'/EC','STATIC_PRESENTATION','##0.00');
-Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) values ('TANK_DAY_INV_OIL','BSW_VOL','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','DECODE(Ec_tank_version.bs_w_vol_method(DV_TANK_DAY_INV_SINGLE_DIP.OBJECT_ID,DV_TANK_DAY_INV_SINGLE_DIP.DAYTIME,''<=''),''MEASURED'',''vieweditable=true'',''vieweditable=false'')');
+Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) values ('TANK_DAY_INV_OIL','BSW_VOL','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','DECODE(Ec_tank_version.bs_w_vol_method(DV_TANK_DAY_INV_OIL.OBJECT_ID,DV_TANK_DAY_INV_OIL.DAYTIME,''<=''),''MEASURED'',''vieweditable=true'',''vieweditable=false'')');
 Insert into CLASS_ATTR_PROPERTY_CNFG (CLASS_NAME,ATTRIBUTE_NAME,PROPERTY_CODE,OWNER_CNTX,PRESENTATION_CNTX,PROPERTY_TYPE,PROPERTY_VALUE) values ('TANK_DAY_INV_OIL','BSW_VOL','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION',350);
 
 Insert into CLASS_ATTRIBUTE_CNFG (CLASS_NAME,ATTRIBUTE_NAME,APP_SPACE_CNTX,IS_KEY,DATA_TYPE,DB_MAPPING_TYPE,DB_SQL_SYNTAX) values ('TANK_DAY_INV_OIL','CALC_DENSITY','WST','N','NUMBER','FUNCTION','(ECBP_TANK.findStdDens(TANK_MEASUREMENT.OBJECT_ID,TANK_MEASUREMENT.MEASUREMENT_EVENT_TYPE,TANK_MEASUREMENT.DAYTIME)*1000)');
@@ -28,6 +28,52 @@ INSERT INTO T_BASIS_ACCESS (ROLE_ID, APP_ID, LEVEL_ID, OBJECT_ID) VALUES ('PA.P.
 INSERT INTO T_BASIS_ACCESS (ROLE_ID, APP_ID, LEVEL_ID, OBJECT_ID) VALUES ('PA.V.DATA.WRITE',1,50,(SELECT OBJECT_ID FROM T_BASIS_OBJECT WHERE OBJECT_NAME LIKE '%/com.ec.prod.po.screens/daily_tank_status_1%'));
 
 UPDATE TANK_VERSION SET  BF_USAGE='PO.0005' WHERE  BF_USAGE='PO.0005.04'; 
+
+--UPGCVX-1760
+DELETE FROM CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='DIP_UOM' AND PROPERTY_CODE='viewhidden' AND PROPERTY_VALUE='true';
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_UOM','DESCRIPTION',2500,'/EC','APPLICATION','Dip UOM' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_UOM','DB_SORT_ORDER',2500,'/','VIEWLAYER','300' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_UOM','LABEL',2500,'/EC','APPLICATION','UOM' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_UOM','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','300' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_UOM','viewwidth',2500,'/EC','STATIC_PRESENTATION','30' from dual;
+
+DELETE FROM CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='DIP_LEVEL' AND PROPERTY_CODE='viewhidden' AND PROPERTY_VALUE='true';
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_LEVEL','DESCRIPTION',2500,'/EC','APPLICATION','Total dip height' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_LEVEL','DB_SORT_ORDER',2500,'/','VIEWLAYER','200' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_LEVEL','LABEL',2500,'/EC','APPLICATION','Dip' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_LEVEL','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','200' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_LEVEL','viewwidth',2500,'/EC','STATIC_PRESENTATION','50' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','DIP_LEVEL','viewformatmask',2500,'/EC','DYNAMIC_PRESENTATION','decode(DIP_UOM,''PCT'', ''#,##0.00'',''M'', ''#,##0.000'',''CM'', ''#,##0'', ''RC'', ''#,##0'', ''inch::f'''' i" n/4'')' from dual;
+
+DELETE FROM CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='BSW_VOL' AND PROPERTY_CODE='DISABLED_IND' AND OWNER_CNTX=2500 AND PROPERTY_VALUE='Y';
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','BSW_VOL','DB_SORT_ORDER',2500,'/','VIEWLAYER','350' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','TANK_METER_FREQ','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','150' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_VOL','DESCRIPTION',2500,'/EC','APPLICATION','Opening Grs Volume' from dual;
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_SQL_SYNTAX='EcBp_Tank.findOpeningGrsVol(TANK_MEASUREMENT.object_id, ''DAY_CLOSING'', TANK_MEASUREMENT.daytime)' WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='OPENING_GRS_VOL';
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_VOL','LABEL',2500,'/EC','APPLICATION','Opening Grs Vol' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_VOL','viewwidth',2500,'/EC','STATIC_PRESENTATION','70' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_VOL','UOM_CODE',2500,'/','VIEWLAYER','STD_LNG_VOL' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_VOL','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','400' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','DESCRIPTION',2500,'/EC','APPLICATION','Closing Grs Volume' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','LABEL',2500,'/EC','APPLICATION','Closing Grs Vol' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','viewwidth',2500,'/EC','STATIC_PRESENTATION','70' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','UOM_CODE',2500,'/','VIEWLAYER','STD_LNG_VOL' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','500' from dual;
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_MAPPING_TYPE='FUNCTION',DB_SQL_SYNTAX='EcBp_Tank.findGrsVol(TANK_MEASUREMENT.object_id, ''DAY_CLOSING'', TANK_MEASUREMENT.daytime)' WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='CLOSING_GRS_VOL';
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_MASS','LABEL',2500,'/EC','APPLICATION','Opening Grs Mass' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_MASS','UOM_CODE',2500,'/','VIEWLAYER','OIL_MASS' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_MASS','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','800' from dual;
+
+delete from CLASS_ATTR_PROPERTY_CNFG where CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='CLOSING_GRS_MASS' and property_code='LABEL' and  owner_cntx=2500 and property_value='Closing';
+UPDATE CLASS_ATTRIBUTE_CNFG SET DB_MAPPING_TYPE='FUNCTION',DB_SQL_SYNTAX='EcBp_Tank.findGrsMass(TANK_MEASUREMENT.object_id, ''DAY_CLOSING'', TANK_MEASUREMENT.daytime)' WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='CLOSING_GRS_MASS';
+UPDATE CLASS_ATTR_PROPERTY_CNFG SET property_value='OIL_MASS' WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='CLOSING_GRS_MASS' and property_code='UOM_CODE' and  owner_cntx=2500 and property_value='LIQ_MASS';
+UPDATE CLASS_ATTR_PROPERTY_CNFG SET property_value=900 WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='CLOSING_GRS_MASS' and property_code='SCREEN_SORT_ORDER' and  owner_cntx=2500 and property_value=1600;
+
+insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+values ('TANK_DAY_INV_OIL', 'CALC_CLOSING_OIL_VOL', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
 --Schedule Lifting Chart
 INSERT INTO T_BASIS_ACCESS (ROLE_ID, APP_ID, LEVEL_ID, OBJECT_ID) VALUES ('CP.ORIGINAL.READ',1,10,(SELECT OBJECT_ID FROM T_BASIS_OBJECT WHERE OBJECT_NAME LIKE '%/com.ec.tran.cp.screens/schedule_lifting_jsf/CLASS1/STOR_DAY_BALANCE_GRAPH/CLASS2/STOR_BERTH_DAY_RESTR/CLASS3/STORAGE_LIFT_NOM_SCHED%'));

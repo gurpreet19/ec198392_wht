@@ -72,3 +72,8 @@ UPDATE TV_UOM_SETUP SET DB_UNIT='N',REPORT_UNIT='Y',VIEW_UNIT='N' WHERE MEASUREM
 alter table ctrl_system_attribute disable all triggers;
   update ctrl_system_attribute set ATTRIBUTE_TEXT = '''ECKERNEL_WST'',''ENERGYX_WST'',''ecistag''' where attribute_type = 'DT_OVERWRITE' ;
 alter table ctrl_system_attribute enable all triggers;
+
+--UPGCVX-1757
+UPDATE TV_UOM_SETUP SET VIEW_UNIT = 'Y' where measurement_type = 'LNG_ENERGY' and UNIT = 'MMBTU';
+UPDATE TV_UOM_SETUP SET VIEW_UNIT = 'N' where measurement_type = 'LNG_ENERGY' and UNIT = 'GJ';
+COMMIT;
