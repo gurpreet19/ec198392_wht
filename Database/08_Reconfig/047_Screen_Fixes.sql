@@ -59,9 +59,10 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','DESCRIPTION',2500,'/EC','APPLICATION','Closing Grs Volume' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','LABEL',2500,'/EC','APPLICATION','Closing Grs Vol' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','viewwidth',2500,'/EC','STATIC_PRESENTATION','70' from dual;
-Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','UOM_CODE',2500,'/','VIEWLAYER','STD_LNG_VOL' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','CLOSING_GRS_VOL','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','500' from dual;
 UPDATE CLASS_ATTRIBUTE_CNFG SET DB_MAPPING_TYPE='FUNCTION',DB_SQL_SYNTAX='EcBp_Tank.findGrsVol(TANK_MEASUREMENT.object_id, ''DAY_CLOSING'', TANK_MEASUREMENT.daytime)' WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='CLOSING_GRS_VOL';
+
+UPDATE CLASS_ATTR_PROPERTY_CNFG SET property_value='STD_LNG_VOL' WHERE CLASS_NAME='TANK_DAY_INV_OIL' AND ATTRIBUTE_NAME='CLOSING_GRS_VOL' and property_code='UOM_CODE' and  owner_cntx=2500 and property_value='STD_LIQ_VOL';
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_MASS','LABEL',2500,'/EC','APPLICATION','Opening Grs Mass' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'TANK_DAY_INV_OIL','OPENING_GRS_MASS','UOM_CODE',2500,'/','VIEWLAYER','OIL_MASS' from dual;
