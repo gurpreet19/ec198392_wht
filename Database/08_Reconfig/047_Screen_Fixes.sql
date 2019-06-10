@@ -76,6 +76,8 @@ UPDATE CLASS_ATTR_PROPERTY_CNFG SET property_value=900 WHERE CLASS_NAME='TANK_DA
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
 values ('TANK_DAY_INV_OIL', 'CALC_CLOSING_OIL_VOL', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
 
+UPDATE TV_UOM_SETUP SET DB_UNIT='N',REPORT_UNIT='N',VIEW_UNIT='N' WHERE MEASUREMENT_TYPE='STD_LNG_DENS' AND UNIT='KGPERSM3';
+
 --Schedule Lifting Chart
 INSERT INTO T_BASIS_ACCESS (ROLE_ID, APP_ID, LEVEL_ID, OBJECT_ID) VALUES ('CP.ORIGINAL.READ',1,10,(SELECT OBJECT_ID FROM T_BASIS_OBJECT WHERE OBJECT_NAME LIKE '%/com.ec.tran.cp.screens/schedule_lifting_jsf/CLASS1/STOR_DAY_BALANCE_GRAPH/CLASS2/STOR_BERTH_DAY_RESTR/CLASS3/STORAGE_LIFT_NOM_SCHED%'));
 
