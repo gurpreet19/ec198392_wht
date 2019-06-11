@@ -31,6 +31,8 @@ DECLARE
   ln_t_basis_object_id NUMBER;
   ln_app_id NUMBER;
 BEGIN
+
+	ECDP_CLASSMETA_CNFG.FLUSHCACHE(); 
     execute immediate 'ALTER TRIGGER BI_T_BASIS_OBJECT_PARTITION DISABLE';
     
     FOR cur_policy in c_policy LOOP
