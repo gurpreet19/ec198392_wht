@@ -310,7 +310,6 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_2','PopupDependency',2500,'/EC','STATIC_PRESENTATION','RetrieveArg.CODE_TYPE1=DEFER_SYS_GRP$RetrieveArg.CODE1=Screen.this.currentRow.REASON_CODE_1$Screen.this.currentRow.REASON_CODE_2=ReturnField.CODE' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_2','PopupQueryURL',2500,'/EC','STATIC_PRESENTATION','/com.ec.frmw.co.screens/query/ec_code_dep_popup.xml' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_2','viewwidth',2500,'/EC','STATIC_PRESENTATION','130' from dual;
-Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','REASON_CODE_2','LABEL',2500,'/EC','APPLICATION','Activity Type' from dual;
 
 begin
 dbms_output.put_line('REASON_CODE_1-REASON_CODE_3');
@@ -335,7 +334,6 @@ end;
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','EQUIPMENT_ID','viewlabelhead',2500,'/EC','STATIC_PRESENTATION','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','EQUIPMENT_ID','PopupDependency',2500,'/EC','STATIC_PRESENTATION','Screen.this.currentRow.EQUIPMENT_ID=ReturnField.OBJECT_ID' from dual;
-Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'WELL_DEFERMENT','EQUIPMENT_ID','LABEL',2500,'/EC','APPLICATION','Equipment' from dual;
 
 begin
 dbms_output.put_line('Class Attribute Properties - WELL_DEFERMENT - MASTER_EVENT_ID/CVX_CONTROL/WORK_ORDER/NEED_REVIEW/STATUS');
@@ -615,3 +613,7 @@ select 'WELL_DEFERMENT_CHILD','GAS_EVENT_LOSS','UOM_CODE',2500,'/','VIEWLAYER','
 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
 select 'WELL_DEFERMENT_CHILD','COND_EVENT_LOSS','UOM_CODE',2500,'/','VIEWLAYER','LIQ_MASS' from dual;
+
+--BBO Changes
+insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+values ('WELL_DEFERMENT', 'NEED_REVIEW', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');

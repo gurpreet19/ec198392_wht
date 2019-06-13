@@ -90,4 +90,6 @@ END;
 ---refresh ACL---
 execute ecdp_acl.refreshall();
 
+DELETE FROM T_BASIS_USERROLE WHERE USER_ID='sysadmin' AND ROLE_ID='eDAC_CONTRACT_GROUP';
+
 commit;
