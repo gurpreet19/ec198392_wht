@@ -89,7 +89,7 @@ EXECUTE ecdp_pinc.disableInstallMode
 
 disc
 
-connect energyx_&operation/&ec_application_password@&database_name
+connect energyx_&operation/&ec_energyx_password@&database_name
 
 PROMPT [SYNC SYNONYMS FOR_ENERGYX_USER]
 @utils\sync_private_synonyms.sql

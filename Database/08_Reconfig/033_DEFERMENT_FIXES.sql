@@ -617,3 +617,48 @@ select 'WELL_DEFERMENT_CHILD','COND_EVENT_LOSS','UOM_CODE',2500,'/','VIEWLAYER',
 --BBO Changes
 insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
 values ('WELL_DEFERMENT', 'NEED_REVIEW', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'WELL_DEFERMENT','EVENT_TYPE','LABEL',2500,'/EC','APPLICATION','LPO Type' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'WELL_DEFERMENT_BY_WELL','EVENT_TYPE','LABEL',2500,'/EC','APPLICATION','LPO Type' from dual;
+
+insert into class_attr_property_cnfg (class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+values ('WELL_DEFERMENT_BY_WELL', 'NEED_REVIEW', 'viewhidden', 2500, '/EC', 'STATIC_PRESENTATION','true');
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'EQUIP_DOWNTIME','DOWNTIME_CLASS_TYPE','LABEL',2100,'/EC','APPLICATION','LPO Type' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'EQUIP_DOWNTIME','DOWNTIME_CLASS_TYPE','viewlabelhead',2100,'/EC','STATIC_PRESENTATION',null from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'EQUIP_DOWNTIME','OBJECT_TYPE','LABEL',2100,'/EC','APPLICATION','Asset Type' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'EQUIP_DOWNTIME','OBJECT_TYPE','viewlabelhead',2100,'/EC','STATIC_PRESENTATION','Production Asset Impacted by Event' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'EQUIP_DOWNTIME','OBJECT_ID','LABEL',2100,'/EC','APPLICATION','Asset Name' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'EQUIP_DOWNTIME','OBJECT_ID','viewlabelhead',2100,'/EC','STATIC_PRESENTATION','Production Asset Impacted by Event' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) 
+select 'EQUIP_DOWNTIME','REASON_CODE_2','LABEL',2100,'/EC','APPLICATION','What' from dual;
+
+
+Insert into CLASS_ATTRIBUTE_CNFG(class_name, attribute_name,  app_space_cntx, is_key, data_type, db_mapping_type, db_sql_syntax)
+select 'EQUIP_DOWNTIME','NEED_REVIEW','CVX_ENH','','STRING','COLUMN','TEXT_9' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'EQUIP_DOWNTIME','NEED_REVIEW','DISABLED_IND',2100,'/','VIEWLAYER','N' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'EQUIP_DOWNTIME','NEED_REVIEW','DB_SORT_ORDER',2100,'/','VIEWLAYER','1220' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'EQUIP_DOWNTIME','NEED_REVIEW','IS_MANDATORY',2100,'/','VIEWLAYER','N' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'EQUIP_DOWNTIME','NEED_REVIEW','LABEL',2100,'/EC','APPLICATION','Codes Need Review' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'EQUIP_DOWNTIME','NEED_REVIEW','SCREEN_SORT_ORDER',2100,'/EC','APPLICATION','1220' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'EQUIP_DOWNTIME','NEED_REVIEW','viewtype',2100,'/EC','STATIC_PRESENTATION','checkbox' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'EQUIP_DOWNTIME','NEED_REVIEW','viewwidth',2100,'/EC','STATIC_PRESENTATION','100' from dual;
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'EQUIP_DOWNTIME','NEED_REVIEW','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
+
+UPDATE PROSTY_CODES SET SORT_ORDER=45 WHERE CODE_TYPE='EQPM_TYPE' AND CODE='EQUIPMENT_OTHER';
