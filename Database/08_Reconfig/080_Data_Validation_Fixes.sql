@@ -76,4 +76,13 @@ alter table ctrl_system_attribute enable all triggers;
 --UPGCVX-1757
 UPDATE TV_UOM_SETUP SET VIEW_UNIT = 'Y' where measurement_type = 'LNG_ENERGY' and UNIT = 'MMBTU';
 UPDATE TV_UOM_SETUP SET VIEW_UNIT = 'N' where measurement_type = 'LNG_ENERGY' and UNIT = 'GJ';
+
+--dv_contract_account
+alter table contract_account disable all triggers;
+
+update contract_account set end_date=ec_contract.end_date(CONTRACT_ACCOUNT.OBJECT_ID);
+
+commit;
+-- Turn on the triggers
+alter table contract_account enable all triggers;
 COMMIT;
