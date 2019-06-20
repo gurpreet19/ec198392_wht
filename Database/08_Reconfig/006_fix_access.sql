@@ -137,3 +137,10 @@ begin
   end loop;  
 end;
 /
+
+--Yearly Price Index
+INSERT INTO T_BASIS_ACCESS (ROLE_ID, APP_ID, LEVEL_ID, OBJECT_ID) VALUES ('CPP.A.DATA.WRITE',1,60,(select object_id from t_basis_object where OBJECT_NAME like '/com.ec.sale.pr.screens/price_index_yearly/CLASS/PRICE_INDEX_YR_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self'));
+INSERT INTO T_BASIS_ACCESS (ROLE_ID, APP_ID, LEVEL_ID, OBJECT_ID) VALUES ('CPP.DATA.READ',1,10,(select object_id from t_basis_object where OBJECT_NAME like '/com.ec.sale.pr.screens/price_index_yearly/CLASS/PRICE_INDEX_YR_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self'));
+INSERT INTO T_BASIS_ACCESS (ROLE_ID, APP_ID, LEVEL_ID, OBJECT_ID) VALUES ('CPP.P.DATA.WRITE',1,20,(select object_id from t_basis_object where OBJECT_NAME like '/com.ec.sale.pr.screens/price_index_yearly/CLASS/PRICE_INDEX_YR_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self'));
+INSERT INTO T_BASIS_ACCESS (ROLE_ID, APP_ID, LEVEL_ID, OBJECT_ID) VALUES ('CPP.PRICE.WRITE',1,40,(select object_id from t_basis_object where OBJECT_NAME like '/com.ec.sale.pr.screens/price_index_yearly/CLASS/PRICE_INDEX_YR_VALUE/NAV_MODEL/FINANCIAL/TARGET/PRICE_INDEX/TARGET_TYPE/self'));
+
