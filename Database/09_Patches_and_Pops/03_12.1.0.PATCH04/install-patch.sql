@@ -99,7 +99,7 @@ disc
 
 connect reporting_&operation/&ec_reporting_password@&database_name
 PROMPT [SYNC SYNONYMS FOR_REPORTING_USER]
-@utils\sync_private_synonyms.sql
+--@utils\sync_private_synonyms.sql
 @utils\recompile_synonyms.sql
 
 disc

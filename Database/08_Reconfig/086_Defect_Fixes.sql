@@ -4,9 +4,9 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 
 UPDATE TV_EC_CODES SET IS_ACTIVE='N' WHERE CODE_TYPE='WELL_STATUS' AND CODE='PLANNED';
 
---UPGCVX-1819
-Update tv_ctrl_tv_presentation SET  COmponent_EXT_NAME = '/com.ec.wheatstone.screens/sale_calc_day'
-where COmponent_LABEL like 'Daily Contract Calculation' and COmponent_ID = 'SA0001_SALE_CALC_DAY'; 
+--UPDATE T_BASIS_OBJECT SET OBJECT_NAME='/com.ec.wheatstone.screens/sale_calc_day' WHERE OBJECT_NAME='/com.ec.sale.sa.screens/sale_calc_day' ;
+Update tv_ctrl_tv_presentation SET  COmponent_EXT_NAME = '/com.ec.sale.sa.screens/sale_calc_day' where COmponent_LABEL like 'Daily Contract Calculation' and COmponent_ID = 'SA0001_SALE_CALC_DAY'; 
+
 
 --UPGCVX-1820
 DELETE FROM CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='STORAGE_LIFT_NOMINATION' AND ATTRIBUTE_NAME='PROFIT_CENTRE_NAME' AND PROPERTY_CODE='viewhidden' AND OWNER_CNTX=2500 AND PROPERTY_VALUE='true';
@@ -37,3 +37,6 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)select 'EQPM_DAY_STATUS','AVG_PRESS','UOM_CODE',2500,'/','VIEWLAYER','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)select 'EQPM_DAY_STATUS','AVG_TEMP','UOM_CODE',2500,'/','VIEWLAYER','' from dual;
 
+--UPGCVX-1820
+INSERT INTO CLASS_REL_PROPERTY_CNFG (FROM_CLASS_NAME, TO_CLASS_NAME, ROLE_NAME, PROPERTY_CODE, OWNER_CNTX, PRESENTATION_CNTX, PROPERTY_TYPE, PROPERTY_VALUE)
+VALUES ('PROFIT_CENTRE','STORAGE_LIFT_NOMINATION','PROFIT_CENTRE','viewhidden',2500,'/EC','STATIC_PRESENTATION','false');
