@@ -143,4 +143,10 @@ DELETE CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='STRM_DAY_STREAM_DER_GAS' AND A
 --Stream Daily Overview
 DELETE CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='STRM_DAY_OVERVIEW_GAS' AND ATTRIBUTE_NAME='ALLOC_ENERGY' AND PROPERTY_CODE='viewhidden' AND OWNER_CNTX=2500;
 
+--Port Resource Availability
+UPDATE class_attr_property_cnfg SET PROPERTY_VALUE='ecdp_classmeta_cnfg.getLabel(DV_CT_PORT_RESOURCE_OFF.PORT_RESOURCE_TYPE)' where class_name='CT_PORT_RESOURCE_OFF' and attribute_name='PORT_RESOURCE_TYPE' AND property_code='DB_PRES_SYNTAX' AND PROPERTY_TYPE='APPLICATION' AND OWNER_CNTX=2500 AND presentation_cntx='/EC'; 
+UPDATE class_attr_property_cnfg SET PROPERTY_VALUE='ecdp_classmeta_cnfg.getLabel(PORT_RESOURCE_TYPE)' where class_name='CT_PORT_RES_USAGE' and attribute_name='PORT_RESOURCE_TYPE' AND property_code='DB_PRES_SYNTAX' AND PROPERTY_TYPE='APPLICATION' AND OWNER_CNTX=2500 AND presentation_cntx='/EC'; 
+UPDATE class_attr_property_cnfg SET PROPERTY_VALUE='ecdp_classmeta_cnfg.getLabel(PORT_RESOURCE_TYPE)' where class_name='CT_PORT_RES_USE_TMPL' and attribute_name='PORT_RESOURCE_TYPE' AND property_code='DB_PRES_SYNTAX' AND PROPERTY_TYPE='APPLICATION' AND OWNER_CNTX=2500 AND presentation_cntx='/EC'; 
+
+
 COMMIT;
