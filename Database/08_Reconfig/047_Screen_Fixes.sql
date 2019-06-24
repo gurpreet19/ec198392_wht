@@ -126,4 +126,21 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'AGA_CONSTANT','CONDITION_FACTOR','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'AGA_CONSTANT','EFF_CORR_FACTOR','viewhidden',2500,'/EC','STATIC_PRESENTATION','true' from dual;
 
+--Stream Reference Value
+DELETE CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='STRM_REFERENCE_VALUE' AND ATTRIBUTE_NAME='GCV' AND PROPERTY_CODE='viewhidden' AND OWNER_CNTX=2500;
+--Gas Stream Monthly DATA
+DELETE CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='STRM_MTH_STREAM_DER_GAS' AND ATTRIBUTE_NAME='NET_MASS_GAS' AND PROPERTY_CODE='viewhidden' AND OWNER_CNTX=2500;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+select 'STRM_MTH_STREAM_DER_GAS','GRS_VOL_GAS','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','500' from dual;
+
+Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value)
+select 'STRM_MTH_STREAM_DER_GAS','STREAM_TYPE','SCREEN_SORT_ORDER',2500,'/EC','APPLICATION','600' from dual;
+
+--Gas Stream Daily DATA
+DELETE CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='STRM_DAY_STREAM_DER_GAS' AND ATTRIBUTE_NAME='NET_MASS_GAS' AND PROPERTY_CODE='viewhidden' AND OWNER_CNTX=2500;
+
+--Stream Daily Overview
+DELETE CLASS_ATTR_PROPERTY_CNFG WHERE CLASS_NAME='STRM_DAY_OVERVIEW_GAS' AND ATTRIBUTE_NAME='ALLOC_ENERGY' AND PROPERTY_CODE='viewhidden' AND OWNER_CNTX=2500;
+
 COMMIT;
