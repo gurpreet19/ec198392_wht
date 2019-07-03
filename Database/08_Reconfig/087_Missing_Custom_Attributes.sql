@@ -2112,3 +2112,6 @@ Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, 
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'FCST_STREAM_DAY_STATUS','DOMGAS_OPMAX_RATE','PresentationSyntax',2500,'/EC','DYNAMIC_PRESENTATION','' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'FCST_STREAM_DAY_STATUS','DOMGAS_OPMAX_RATE','viewwidth',2500,'/EC','STATIC_PRESENTATION','70' from dual;
 Insert into CLASS_ATTR_PROPERTY_CNFG(class_name, attribute_name, property_code, owner_cntx, presentation_cntx, property_type, property_value) select 'FCST_STREAM_DAY_STATUS','DOMGAS_OPMAX_RATE','viewlabelhead',2500,'/EC','STATIC_PRESENTATION','Daily Rate' from dual;
+
+ALTER TABLE FORECAST_GROUP ADD TEXT_5 VARCHAR2(240) ;
+ALTER TABLE FORECAST_GROUP_JN ADD TEXT_5 VARCHAR2(240) ;
