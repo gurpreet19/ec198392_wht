@@ -37,3 +37,7 @@ update TV_UNIT_CONVERSION set mult_fact =.001 where from_unit='BBLPERMSCF' and t
 update TV_UNIT_CONVERSION set mult_fact =1000000 where from_unit='BBLPERMMSCF' and to_unit='BBLPERSCF' and daytime='01-JAN-60';
 update TV_UNIT_CONVERSION set mult_fact =1000 where from_unit='BBLPERMMSCF' and to_unit='BBLPERMSCF' and daytime='01-JAN-60';
 update TV_UNIT_CONVERSION set mult_fact =.1589873 where from_unit='BBLPERDAY' and to_unit='M3PERDAY' and daytime='01-JAN-60';
+INSERT INTO TV_UNIT_CONVERSION (FROM_UNIT, TO_UNIT, DAYTIME, MULT_FACT) VALUES ('KGPERSM3','TONNESPERSM3','01-JAN-11','0.001');
+INSERT INTO TV_UNIT_CONVERSION (FROM_UNIT, TO_UNIT, DAYTIME, MULT_FACT) VALUES ('TONNESPERSM3','KGPERM3','01-JAN-60','1000');
+
+set define on;
