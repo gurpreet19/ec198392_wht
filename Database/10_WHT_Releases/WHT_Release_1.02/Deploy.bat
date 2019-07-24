@@ -6,11 +6,11 @@ set homepath=%cd%
 
 
 Echo **************************************************
-Echo Running WHT release 1 scripts..
+Echo Running WHT release 2 scripts..
 Echo **************************************************
 
 Echo ****************************************************
-Echo Running WHT release 1 database defect scripts
+Echo Running WHT release 2 database defect scripts
 Echo ****************************************************
 
 sqlplus /nolog @ InstallScript.sql
@@ -24,7 +24,7 @@ Echo Execution Completed for database defect scripts
 Echo ****************************************************
 
 Echo ****************************************************
-Echo Execution Completed WHT release 1 scripts..
+Echo Execution Completed WHT release 2 scripts..
 Echo ****************************************************
 
 				
