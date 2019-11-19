@@ -1,4 +1,4 @@
-create or replace PACKAGE UE_CT_CARGO_INFO
+CREATE OR REPLACE PACKAGE UE_CT_CARGO_INFO
 /****************************************************************
 ** Package        :  UE_CT_CARGO_INFO
 **
@@ -20,6 +20,9 @@ create or replace PACKAGE UE_CT_CARGO_INFO
 ** 29-aug-2013   swgn             Added cargo analysis transfer
 ** 11-Nov-2013   tlxt              Added getProdMeasNo to get the Meas No from the actual lifting
 ** 08-Jun-2018   gedv             Item 128043: INC000016970606 - Added Function to calculate split_pct
+** 31-Aug-2018   gedv             Item 129174: ISWR02739: Function getInvoiceAmount added to calculated invoice amount handling remainder.
+** 08-Feb-2019   rjfv             Item 131306: ISWR02716: Added new Function getJDEBatchNo to update JDE Batch No format
+** 23-jul-2019   wvic			  Item 132473: ISWR03114: Added a function getLiftActStartDate to be called within transferCargoAnalysis and BoL calc
 *****************************************************************/
 IS
   /*FUNCTION DeterminePrimaryParcelNo(p_object_id VARCHAR2, p_cargo_no NUMBER)
@@ -84,9 +87,21 @@ IS
   FUNCTION getSplitPct(split_vol number, p_cargo_no NUMBER) RETURN NUMBER;
   -- Item_128043 End
 
+  --Begin Item 129174 gedv/fitq
+  FUNCTION getInvoiceAmount(p_total_amount number, p_cargo_no NUMBER, p_parcel_no NUMBER) RETURN NUMBER;
+  --End Item 129174 gedv/fitq
+
+  --Item 131306 Begin
+  FUNCTION getJDEBatchNo(p_cargo_no NUMBER, p_batch_no VARCHAR2) RETURN VARCHAR2;
+  --Item 131306 End
+  
+  -- Item 132473: new function to retrieve the Lifting Activity start date for a given parcel.
+  FUNCTION getLiftActStartDate (p_parcel_no NUMBER) RETURN DATE;
+  -- End Item 132473
+  
   END UE_CT_CARGO_INFO;
   /
-  create or replace PACKAGE BODY UE_CT_CARGO_INFO
+create or replace PACKAGE BODY UE_CT_CARGO_INFO
 /****************************************************************
 ** Package        :  UE_CT_CARGO_INFO
 **
@@ -113,8 +128,19 @@ IS
 ** 22-DEC-2017   tlxt             Item 125742: updated CargoWarning to include validation for Fix_ind etc ISWR02148
 ** 15-may-2018   eseq             Item 127686: ISWR02347-WHS PA - Purge Quantity For Allocation
 ** 08-Jun-2018   gedv             Item 128043: INC000016970606 - Added Function to calculate spilt_pct
+** 25-Jul-2018   kawf             Item 128651: cargoWarnings() - Added warning condition
+** 31-Aug-2018   gedv/fitq        Item 129174: ISWR02739: Function getInvoiceAmount added to calculated invoice amount handling remainder.
+** 08-Feb-2019   rjfv             Item 131306: ISWR02716: Added new Function getJDEBatchNo to update JDE Batch No format
+** 20-jun-2019	 hqep			  Item 132473: ISWR03114: Added logic in procedure transferCargoAnalysis to get valid_from_date from Cargo Activity Timesheet
+** 23-jul-2019   wvic			  Item 132473: ISWR03114: Added a function getLiftActStartDate to be called within transferCargoAnalysis and BoL calc
+** 17-Sep-2019   hygf             Item 132473: ISWR03114: If we have two different analysis on same date (VALID_FROM date) then we need to consider latest analysis (DAYTIME) record. So the previous analysis record should be REJECTED and latest record should get inserted.            
 *****************************************************************/
 IS
+-- Item 132374 Begin: new global variables
+	gv_lift_act_code_lng VARCHAR2(32) := 'LNG_RAMP_UP_COMPLETE';
+	gv_lift_act_code_cond VARCHAR2(32) := 'COND_RAMP_UP';
+-- Item 132374 End
+
   -------------------------------------------------------------------------------------------------------------
   --
   -- Returns the parcel number of the primary parcel
@@ -630,6 +656,7 @@ FUNCTION cargoWarnings(p_cargo_no NUMBER, p_attribute VARCHAR2)
     v_count NUMBER;
     v_sum NUMBER;
     v_ALL_count NUMBER;
+    v_tot_vol NUMBER;
     v_ETA DATE;
     v_ETD DATE;
 
@@ -722,11 +749,26 @@ FUNCTION cargoWarnings(p_cargo_no NUMBER, p_attribute VARCHAR2)
 		FROM DV_STORAGE_LIFT_NOM_INFO WHERE CARGO_NO = p_cargo_no ;
 
 		IF (v_sum <> v_ALL_count)THEN
+		   -- Item 128651: Begin
+		   SELECT NVL(MAX(NVL(l.LOAD_VALUE, 0)),0) -- This is to make sure that the error message shows up in Cargo Info - LC, Cargo Info - Marine, Bill of Lading screens
+		     INTO v_tot_vol
+			 FROM DV_STORAGE_LIFT_NOM_INFO i
+			 INNER JOIN dv_storage_lifting l ON l.parcel_no = i.parcel_no
+			 INNER JOIN dv_prod_meas_setup s ON s.product_meas_no = l.product_meas_no
+			                                AND s.meas_item IN ( 'LIFT_TOT_COND_VOL_GRS', 'LIFT_TOT_LNG_VOL_NET')
+			WHERE i.cargo_no = p_cargo_no;
+
+		   -- Item 128651: added another condition condition
+		   IF (v_sum <> v_tot_vol) THEN
+		   -- Item 128651: End
             IF LENGTH(v_return_value) > 0  THEN
-                v_return_value := v_return_value || CHR(10)|| 'The sum of volume splits for a cargo must equal the sum of SLV for the cargo;';
+                 v_return_value := v_return_value || CHR(10)|| 'The sum of volume splits for a cargo must equal the sum of SLV or the actual loaded volume for the cargo;';
 			ELSE
-                v_return_value := 'verificationStatus=error;verificationText=The sum of volume splits for a cargo must equal the sum of SLV for the cargo;';
+                 v_return_value := 'verificationStatus=error;verificationText=The sum of volume splits for a cargo must equal the sum of SLV or the actual loaded volume for the cargo;';
 			END IF;
+		   -- Item 128651: Begin
+		   END IF;
+		   -- Item 128651: End
 		END IF;
 
 		END IF;
@@ -1049,6 +1091,9 @@ FUNCTION cargoWarnings(p_cargo_no NUMBER, p_attribute VARCHAR2)
 
     v_count NUMBER;
     v_COND_analysis_no VARCHAR2(32);
+	-- hqep - Item 132473: ISWR03114 : added a variable for adding a logic in procedure transferCargoAnalysis to get valid_from_date from Cargo Activity Timesheet
+	v_activity_start_date date;
+	--  end - Item 132473: ISWR03114
 
     CURSOR analysis
     IS
@@ -1113,12 +1158,21 @@ FUNCTION cargoWarnings(p_cargo_no NUMBER, p_attribute VARCHAR2)
       v_class_name := 'STRM_OIL_ANALYSIS';
     END IF;
 
-    -- Get existing records
-    FOR item IN existing_analysis_by_cargo_no(v_stream_id, v_cargo_no) LOOP
-        v_existing_no_by_cargo := item.analysis_no;
-    END LOOP;
+    -- Item 132473: ISWR03114 -- get valid_from_date from cargo activity timesheet
+    v_activity_start_date := getLiftActStartDate(p_parcel_no);
 
-    FOR item IN existing_analysis_by_vfd(v_stream_id, trunc(ec_storage_lift_nomination.date_9(p_parcel_no)), v_cargo_no) LOOP
+    IF v_activity_start_date IS NULL THEN
+        p_response_code := 2;
+        p_response_text := 'Missing ' || (CASE v_product_code WHEN 'LNG' THEN ec_lifting_activity_code.activity_name(gv_lift_act_code_lng,'LOAD')
+                                                              WHEN 'COND' THEN ec_lifting_activity_code.activity_name(gv_lift_act_code_cond,'LOAD')
+                                          END) || ' activity for cargo no ' || v_cargo_no;
+    END IF;
+    -- end--  Item 132473: ISWR03114 -- get valid_from_date from cargo activity timesheet
+
+	-- Item 132473: ISWR03114 : Use activity start date for comparison
+    --FOR item IN existing_analysis_by_vfd(v_stream_id, trunc(ec_storage_lift_nomination.bl_date_time(p_parcel_no)), v_cargo_no) LOOP
+    FOR item IN existing_analysis_by_vfd(v_stream_id, trunc(v_activity_start_date), v_cargo_no) LOOP
+    --Item 132473: ISWR03114 End
         v_existing_no_by_date := item.analysis_no;
     END LOOP;
 
@@ -1131,18 +1185,33 @@ FUNCTION cargoWarnings(p_cargo_no NUMBER, p_attribute VARCHAR2)
             DELETE FROM fluid_analysis_component WHERE analysis_no = v_existing_no_by_date;
             DELETE FROM object_fluid_analysis WHERE analysis_no = v_existing_no_by_date;
 
+	    -- Item 132473: ISWR03114 : Compare equality
+        ELSIF ec_object_fluid_analysis.daytime(v_existing_no_by_date) = ec_storage_lift_nomination.DATE_9(p_parcel_no) THEN
+
+            -- If this record is equal, then it must be the same cargo, update the cargo no
+            UPDATE object_fluid_analysis set text_42 = v_cargo_no where analysis_no = v_existing_no_by_date;
+	    -- Item 132473: ISWR03114
+			
         ELSE
             -- If this record is older than the existing record, we do _nothing_
             RETURN;
         END IF;
     END IF;
 
+    -- Get existing records
+    FOR item IN existing_analysis_by_cargo_no(v_stream_id, v_cargo_no) LOOP
+        v_existing_no_by_cargo := item.analysis_no;
+    END LOOP;
+       
     -- Do we have an analysis for this cargo already?
     IF v_existing_no_by_cargo IS NOT NULL THEN
 
         UPDATE object_fluid_analysis
-        SET daytime = ec_storage_lift_nomination.date_9(p_parcel_no),
-            valid_from_date = trunc(ec_storage_lift_nomination.date_9(p_parcel_no)),
+        SET daytime = ec_storage_lift_nomination.DATE_9(p_parcel_no),
+            -- hqep - Item 132473: ISWR03114 -- get valid_from_date from cargo activity timesheet
+            -- valid_from_date = trunc(ec_storage_lift_nomination.bl_date_time(p_parcel_no)),
+            valid_from_date = trunc(v_activity_start_date),
+            -- end - Item 132473: ISWR03114 -- get valid_from_date from cargo activity timesheet
             gcv = convertUnitInner(ec_cargo_analysis_item.analysis_value(v_analysis_no, 'VOLUME_GHV'), 'VOLUME_GHV', v_class_name, 'GCV'),
             density = convertUnitInner(ec_cargo_analysis_item.analysis_value(v_analysis_no, DECODE(v_product_code, 'LNG', 'LNG_DENSITY_PAA', 'DENSITY')), DECODE(v_product_code, 'LNG', 'LNG_DENSITY_PAA', 'DENSITY'), v_class_name, 'DENSITY'),
             salt = convertUnitInner(ec_cargo_analysis_item.analysis_value(v_analysis_no, 'SALT'), 'SALT', v_class_name, 'SALT'),
@@ -1155,11 +1224,26 @@ FUNCTION cargoWarnings(p_cargo_no NUMBER, p_attribute VARCHAR2)
         v_strm_analysis_no := v_existing_no_by_cargo;
 
     ELSE
-
-        INSERT INTO object_fluid_analysis (OBJECT_ID, DAYTIME, ANALYSIS_TYPE, SAMPLING_METHOD, PHASE, COMPONENT_SET,ANALYSIS_STATUS, DENSITY, SALT,
-                                           BS_W, GCV, RVP, API, VALUE_46, VALID_FROM_DATE, TEXT_42, RECORD_STATUS)
+        -- Insert latest record
+        INSERT INTO object_fluid_analysis (OBJECT_ID, 
+                                           DAYTIME, 
+                                           ANALYSIS_TYPE, 
+                                           SAMPLING_METHOD, 
+                                           PHASE, 
+                                           COMPONENT_SET,
+                                           ANALYSIS_STATUS, 
+                                           DENSITY, 
+                                           SALT,
+                                           BS_W, 
+                                           GCV, 
+                                           RVP, 
+                                           API, 
+                                           VALUE_46, 
+                                           VALID_FROM_DATE, 
+                                           TEXT_42, 
+                                           RECORD_STATUS)
         VALUES (v_stream_id,
-               ec_storage_lift_nomination.date_9(p_parcel_no),
+                ec_storage_lift_nomination.DATE_9(p_parcel_no),
                v_analysis_type,
                'SPOT',
                DECODE(v_product_code, 'LNG', 'LNG', 'COND'),
@@ -1172,7 +1256,10 @@ FUNCTION cargoWarnings(p_cargo_no NUMBER, p_attribute VARCHAR2)
                convertUnitInner(ec_cargo_analysis_item.analysis_value(v_analysis_no, 'RVP'), 'RVP', v_class_name, 'RVP'),
                convertUnitInner(ec_cargo_analysis_item.analysis_value(v_analysis_no, 'API'), 'API', v_class_name, 'API'),
                EcDp_Unit.ConvertValue(ec_storage_lifting.load_value(p_parcel_no, getProdMeasNo(ec_product.object_id_by_uk(v_product_code), 'LIFT_GHV_MASS_PAA', 'LOAD')), ec_lifting_measurement_item.unit('LIFT_GHV_MASS_PAA'), EcDp_Unit.GetUnitFromLogical('CALORIFIC_VALUE_MASS'), sysdate),
-               trunc(ec_storage_lift_nomination.date_9(p_parcel_no)),
+                -- hqep - Item 132473: ISWR03114 -- changed valid_from_date to get start time from cargo activity timesheet
+                -- trunc(ec_storage_lift_nomination.DATE_9(p_parcel_no)),
+                trunc(v_activity_start_date),
+                -- end - Item 132473: ISWR03114 --
                v_cargo_no,
                'A');
 
@@ -1773,6 +1860,111 @@ BEGIN
 
 END getSplitPct;
 -- gedv : Item_128043: INC000016970606 Ends
+
+--begin Item_129174 GEDV
+FUNCTION getInvoiceAmount(p_total_amount number, p_cargo_no NUMBER, p_parcel_no NUMBER) RETURN NUMBER
+IS
+    v_max_parcel NUMBER:=NULL;
+    v_invoiceAmount NUMBER:=NULL;
+    v_otherTotal number:=null;
+	
+CURSOR c_splitPct IS
+    SELECT PARCEL_NO FROM STORAGE_LIFT_NOMINATION WHERE CARGO_NO=p_cargo_no AND PARCEL_NO<>p_parcel_no;
+
+BEGIN
+
+    --begin Item_129174 FR ensure query return one row in case split_pct is equal among parcels
+    /**
+    SELECT DISTINCT PARCEL_NO INTO v_max_parcel FROM STORAGE_LIFT_NOMINATION WHERE CARGO_NO=p_cargo_no
+    AND VALUE_11= (SELECT MAX(VALUE_11) FROM STORAGE_LIFT_NOMINATION WHERE CARGO_NO=p_cargo_no);
+    **/
+    SELECT MAX(PARCEL_NO)INTO v_max_parcel FROM STORAGE_LIFT_NOMINATION WHERE CARGO_NO=p_cargo_no
+    AND VALUE_11= (SELECT MAX(VALUE_11) FROM STORAGE_LIFT_NOMINATION WHERE CARGO_NO=p_cargo_no);
+    --end Item_129174 FR
+
+    IF v_max_parcel<>p_parcel_no THEN
+        v_invoiceAmount:=ROUND(p_total_amount * NVL(EC_STORAGE_LIFT_NOMINATION.VALUE_11(p_parcel_no), 100)/ 100,2);
+    ELSE
+        v_otherTotal:=0;
+        FOR cur_SplitPct in c_splitPct LOOP
+            v_otherTotal:=v_otherTotal+(ROUND(p_total_amount*NVL (EC_STORAGE_LIFT_NOMINATION.VALUE_11(cur_SplitPct.PARCEL_NO), 100)/ 100,2));
+        END LOOP;
+        v_invoiceAmount:=p_total_amount - v_otherTotal;
+    END IF;
+
+    RETURN v_invoiceAmount;
+
+END getInvoiceAmount;
+--end Item_129174 GEDV
+
+--Item 131306 Begin
+/* Update JDE Batch No format to [EW][YYMMDD][XXXXX]
+1. First 2 characters will be 'EW'
+2. Next 6 characters will be Year Month Day in YYMMDD format. Example 180924 for 24-SEP-2018
+3. Last 5 characters will be cargo number. Example 00658 for Cargo number 658*/
+
+FUNCTION getJDEBatchNo(p_cargo_no NUMBER, p_batch_no VARCHAR2) RETURN VARCHAR2
+IS
+    v_jde_batch_no  VARCHAR2(32);
+BEGIN
+
+    IF p_batch_no is not null THEN
+        v_jde_batch_no := 'EW' || SUBSTR(p_batch_no, 5, 6) || LPAD(p_cargo_no,5,'0');
+    ELSE
+        v_jde_batch_no := NULL;
+    END IF;
+    RETURN v_jde_batch_no;
+
+END getJDEBatchNo;
+-- Item 131306 End
+
+-- Item 132473: ISWR03114 : new function to retrieve the Lifting Activity start date for a given parcel.
+--                          This will be used in both the transferCargoAnalysis and BLMR class for use within the BoL calc
+FUNCTION getLiftActStartDate (p_parcel_no NUMBER)
+   RETURN DATE
+IS
+   CURSOR cLiftActStartDate (
+      cp_cargo_no         NUMBER,
+      cp_activity_code    VARCHAR2)
+   IS
+      SELECT a.from_daytime
+        FROM LIFTING_ACTIVITY a
+       WHERE     a.cargo_no = cp_cargo_no
+             AND a.activity_code = cp_activity_code
+             AND a.run_no =
+                    (SELECT MIN (b.run_no)
+                       FROM LIFTING_ACTIVITY b
+                      WHERE     b.cargo_no = cp_cargo_no
+                            AND b.activity_code = cp_activity_code);
+
+   lv_cargo_no        NUMBER := ec_storage_lift_nomination.cargo_no (p_parcel_no);
+   lv_cargo_daytime   DATE := ec_storage_lift_nomination.nom_firm_date (p_parcel_no);
+
+   lv_storage_id      storage_lift_nomination.object_id%TYPE;
+   lv_product_code    product.object_code%TYPE;
+   lv_activity_code   VARCHAR2 (32);
+   ld_return_val      DATE := NULL;
+BEGIN
+   -- Determine storage from parcel
+   lv_storage_id := ec_storage_lift_nomination.object_id (p_parcel_no);
+
+   -- Determine product from storage
+   lv_product_code := ec_product.object_code (ec_stor_version.product_id (lv_storage_id, lv_cargo_daytime, '<='));
+
+   lv_activity_code :=
+      CASE lv_product_code
+         WHEN 'LNG' THEN gv_lift_act_code_lng
+         WHEN 'COND' THEN gv_lift_act_code_cond
+         ELSE NULL
+      END;
+
+   FOR rec IN cLiftActStartDate (lv_cargo_no, lv_activity_code)
+   LOOP
+      ld_return_val := rec.from_daytime;
+   END LOOP;
+
+   RETURN ld_return_val;
+END getLiftActStartDate;-- end Item 132473: ISWR03114
 
 END UE_CT_CARGO_INFO;
 /

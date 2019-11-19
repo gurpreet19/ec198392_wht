@@ -1,3 +1,70 @@
+CREATE OR REPLACE TYPE UE_CT_CARGO_BOL_REC_TYPE FORCE   
+    IS OBJECT (cargo_doc_ttl            VARCHAR2(4000)
+              , lifting_account_id      VARCHAR2(32)
+              , lifting_account_name    VARCHAR2(4000)
+              , bl_no                   VARCHAR2(4000)
+              , bl_date                 VARCHAR2(4000)
+              , consignor_name          VARCHAR2(4000)
+              , lc_lifting_number       VARCHAR2(4000)
+              , consignee_name          VARCHAR2(4000)
+              , notify_party            VARCHAR2(4000)
+              , vessel_name             VARCHAR2(4000)
+              , charterparty            VARCHAR2(4000)
+              , edn                     VARCHAR2(4000)
+              , local_port              VARCHAR2(4000)
+              , discharge_Port          VARCHAR2(4000)
+              , scac_uic                VARCHAR2(4000)
+              , freight                 VARCHAR2(4000)
+              , no_bol                  NUMBER
+              , master                  VARCHAR2(4000)
+              , carrier_name            VARCHAR2(4000)
+              , agent                   VARCHAR2(4000)
+              , bol_date                VARCHAR2(4000)
+              , arrived_loadport        VARCHAR2(4000)
+              , sailed_loadport         VARCHAR2(4000)
+              , bol_comments            VARCHAR2(4000)
+              , product_note            VARCHAR2(4000)
+              , cargo_no                VARCHAR2(32)); --Item 132627
+/
+
+CREATE OR REPLACE TYPE UE_CT_CARGO_MAN_REC_TYPE FORCE
+    IS OBJECT (rec_type                VARCHAR2(240)
+             , vessel_name             VARCHAR2(4000)
+             , captain                 VARCHAR2(4000)
+             , arrived_loadport        VARCHAR2(4000)
+             , sailed_loadport         VARCHAR2(4000)
+             , ports_of_loading        VARCHAR2(4000)
+             , ports_of_discharge      VARCHAR2(4000)
+             , lifting_account_id      VARCHAR2(32)
+             , lifting_account_name    VARCHAR2(240)
+             , consignor               VARCHAR2(4000)
+             , consignee               VARCHAR2(4000)
+             , lc_lifting_no           VARCHAR2(4000)
+             , bl_no                   VARCHAR2(4000)
+             , edn                     VARCHAR2(4000)
+             , product_note            VARCHAR2(4000)
+             , scac_uic                VARCHAR2(4000)
+             , notify_party            VARCHAR2(4000)
+             , bol_date                VARCHAR2(4000)
+             , doc_header              VARCHAR2(240)
+             , cargo_no                VARCHAR2(32)); --Item 132627
+/
+
+CREATE OR REPLACE TYPE UE_CT_CARGO_QLY_REC_TYPE FORCE 
+    IS OBJECT (rec_type                VARCHAR2(240)
+             , vessel_name             VARCHAR2(4000)
+             , sample_datetime         VARCHAR2(4000)
+             , sample_number           VARCHAR2(4000)
+             , sample_id               VARCHAR2(2000)
+             , lc_lifting_number       VARCHAR2(4000)
+             , product                 VARCHAR2(240)
+             , sampling_method         VARCHAR2(240)
+             , show_chevron_logo       VARCHAR2(1)
+             , sample_source           VARCHAR2(4000)
+             , analysis_method         VARCHAR2(4000)
+             , bol_date                VARCHAR2(4000)
+             , cargo_no                VARCHAR2(32)); --Item 132627
+/
 create or replace PACKAGE UE_CT_CARGO_DOCS AS
 /****************************************************************
 ** Package        :  UE_CT_CARGO_DOCS
@@ -134,6 +201,9 @@ create or replace PACKAGE BODY UE_CT_CARGO_DOCS AS
 ** 23-MAY-2018   dfix             127719 - Modified cargo_auth_neg() to return cargo_no instead of cargo_name
 ** 28-MAY-2018   wvic             127718 - Modified cargo_parcels_func to add BBLS @ 60 DEG F
 ** 03-JUL-2018   wvic             127719 - Modified cargo_sum_parcels_function to apply 2dp formatting for BBLs
+** 01-JUL-2019   gjkz             132627 - Modified cargo_sum_parcels_func to apply 3 decimal point for tonnes and U.S. Barrels @ 60 Deg F.
+**                                       - Modified cargo_bol_func, cargo_man_func and cargo_qly_func to add cargo_no.
+**                                       - Fixed typo for LIQUEFIED 
 *****************************************************************/
 
 
@@ -828,7 +898,7 @@ IS
    /*
    out_rec   ue_ct_cargo_qly_rec_type  := ue_ct_cargo_qly_rec_type(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
    */
-   out_rec   ue_ct_cargo_qly_rec_type  := ue_ct_cargo_qly_rec_type(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+   out_rec   ue_ct_cargo_qly_rec_type  := ue_ct_cargo_qly_rec_type(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);  --Item 132627
    -- End
    cargo_doc prosty_codes.code_text%TYPE;
    n_cargo_no storage_lift_nomination.cargo_no%TYPE;
@@ -891,6 +961,7 @@ BEGIN
            , ec_prosty_codes.CODE_TEXT(ANALYSIS_TYPE, 'CARGO_ANALYSIS_TYPE') AS analysis_method
            , v_bol_date AS bol_date
            -- End
+		   , n_cargo_no AS cargo_no  --Item 132627
       FROM   dv_cargo_analysis
       WHERE  cargo_no = n_cargo_no AND NVL (official_ind, 'N') = 'Y';
 
@@ -908,9 +979,9 @@ BEGIN
             -- Begin
             , out_rec.sample_source
             , out_rec.analysis_method
-            , out_rec.bol_date;
+            , out_rec.bol_date
             -- End
-
+            , out_rec.cargo_no;  --Item 132627
       EXIT WHEN myCursor%NOTFOUND;
       PIPE ROW (out_rec);
    END LOOP;
@@ -924,7 +995,7 @@ EXCEPTION
       v_errm := SUBSTR (SQLERRM, 1, 64);
 
       OPEN myCursor FOR
-         SELECT 'Internal EC System Error "'||v_errm||'"',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL from dual;
+         SELECT 'Internal EC System Error "'||v_errm||'"',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL from dual; --Item 132627
 
       LOOP
          FETCH myCursor
@@ -940,9 +1011,9 @@ EXCEPTION
                -- Begin
                , out_rec.sample_source
                , out_rec.analysis_method
-               , out_rec.bol_date;
+               , out_rec.bol_date
                -- End
-
+               , out_rec.cargo_no;  --Item 132627
          EXIT WHEN myCursor%NOTFOUND;
          PIPE ROW (out_rec);
       END LOOP;
@@ -985,7 +1056,7 @@ IS
    /*
    out_rec   ue_ct_cargo_man_rec_type  := ue_ct_cargo_man_rec_type(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
    */
-   out_rec ue_ct_cargo_man_rec_type := ue_ct_cargo_man_rec_type(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+   out_rec ue_ct_cargo_man_rec_type := ue_ct_cargo_man_rec_type(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL); --Item 132627: Added cargo_no
    -- End
    cargo_doc prosty_codes.code_text%TYPE;
    product_type product.object_code%TYPE;
@@ -994,7 +1065,7 @@ IS
    sailed_loadport VARCHAR2 (240);
    product_note VARCHAR2 (240);
    lv_company_code VARCHAR2 (32);
-
+   n_cargo_no storage_lift_nomination.cargo_no%TYPE;  --Item 132627
    -- Begin
    v_count NUMBER := 0;
    v_bol_date VARCHAR2(4000);
@@ -1011,6 +1082,7 @@ BEGIN
    --Determine product type
    product_type :=  ec_product.object_code (ec_stor_version.product_id (ec_storage_lift_nomination.object_id (n_parcel_no), ec_storage_lift_nomination.bl_date (n_parcel_no), '<='));
 
+   n_cargo_no := ec_storage_lift_nomination.cargo_no (n_parcel_no);  --Item 132627
   --Determine Lifting Company Code
   lv_company_code :=  ECDP_OBJECTS.GETOBJCODE(EC_LIFTING_ACCOUNT.COMPANY_ID(ec_storage_lift_nomination.lifting_account_id (n_parcel_no)));
 
@@ -1034,7 +1106,7 @@ BEGIN
       /*
       product_note := 'LNG';
       */
-      product_note := 'LIQUIFIED NATURAL GAS (LNG)';
+      product_note := 'LIQUEFIED NATURAL GAS (LNG)';
       v_bol_date := TO_CHAR (ec_lifting_activity.from_daytime (ec_storage_lift_nomination.cargo_no (n_parcel_no), 'LNG_MANIFOLD_CLOSE', 1,'LOAD'), 'DD/MON/YYYY');
       -- End
 
@@ -1079,6 +1151,7 @@ BEGIN
                   ELSE 'Main Manifest'
               END AS doc_header
            -- End
+		   , n_cargo_no AS cargo_no   --Item 132627
       FROM   dv_ct_msg_cargo
      --        INNER JOIN dv_ct_msg_cargo_detail mcd -- dv_ct_msg_cargo_split mcs
      --           ON msh.parcel_no = mcd.parcel_no
@@ -1105,8 +1178,9 @@ BEGIN
             , out_rec.scac_uic
             , out_rec.notify_party
             , out_rec.bol_date
-            , out_rec.doc_header;
+            , out_rec.doc_header
             -- End
+            , out_rec.cargo_no;  --Item 132627
 
       EXIT WHEN myCursor%NOTFOUND;
       PIPE ROW (out_rec);
@@ -1125,7 +1199,7 @@ EXCEPTION
          /*
          SELECT 'Internal EC System Error "'||v_errm||'"',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL from dual;
         */
-          SELECT 'Internal EC System Error "'||v_errm||'"',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL from dual;
+          SELECT 'Internal EC System Error "'||v_errm||'"',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL from dual; --Item 132627: Added cargo_no
       -- End
 
       LOOP
@@ -1149,9 +1223,9 @@ EXCEPTION
                , out_rec.scac_uic
                , out_rec.notify_party
                , out_rec.bol_date
-               , out_rec.doc_header;
+               , out_rec.doc_header
                -- End
-
+               , out_rec.cargo_no;   --Item 132627
          EXIT WHEN myCursor%NOTFOUND;
          PIPE ROW (out_rec);
       END LOOP;
@@ -1264,7 +1338,7 @@ BEGIN
       /*
       product_note := 'LNG';
       */
-      product_note := 'LIQUIFIED NATURAL GAS (LNG)';
+      product_note := 'LIQUEFIED NATURAL GAS (LNG)';  --Item 132627
       -- End
 
    ELSIF product_type = 'COND'   THEN
@@ -1784,6 +1858,10 @@ BEGIN
              , CASE WHEN (unit = ec_ctrl_unit.label('M3') OR (product_code = 'COND' and unit <> ec_ctrl_unit.label('BBL'))) THEN
              -- Item 127719 End
                     TO_CHAR(SUM (gross), 'FM9,999,999.990')
+             -- Item 132627 Added trailing zero for Cond-BBL and LNG-tonnes
+               WHEN (product_code = 'COND' and unit = ec_ctrl_unit.label('BBL')) OR (product_code = 'LNG' and unit = ec_ctrl_unit.label('TONNES')) THEN
+                    TO_CHAR(SUM (gross), 'FM9,999,999.00')
+             -- Item 132627 End                   
                     ELSE TRIM(TRAILING '.' FROM TO_CHAR(SUM (gross), 'FM9,999,999.999'))
                 END
                      AS gross
@@ -1792,6 +1870,9 @@ BEGIN
              , CASE WHEN (unit = ec_ctrl_unit.label('M3') OR (product_code = 'COND' and unit <> ec_ctrl_unit.label('BBL'))) THEN
              -- Item 127719 End
                     TO_CHAR(SUM (net), 'FM9,999,999.990')
+             --Item 132627 Added trailing zero for Cond-BBL
+               WHEN (product_code = 'COND' and unit = ec_ctrl_unit.label('BBL')) THEN
+                    TO_CHAR(SUM (net), 'FM9,999,999.00')               
                     ELSE TRIM(TRAILING '.' FROM TO_CHAR(SUM (net), 'FM9,999,999.999'))
                 END AS net
              -- End
@@ -1894,7 +1975,7 @@ IS
                         ,NULL,NULL,NULL,NULL
                         ,NULL,NULL,NULL,NULL
                         ,NULL,NULL,NULL,NULL
-                        ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+                        ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);   --Item 132627: Added cargo no 
     -- End
 
 	-- Item 125161 Begin
@@ -1920,11 +2001,14 @@ IS
    v_bol_date VARCHAR2(4000);
    product_note VARCHAR2 (240);
    -- End
+   n_cargo_no storage_lift_nomination.cargo_no%TYPE;  --Item 132627
 
 BEGIN
    IF ecbp_cargo_status.getECCargoStatus (ec_cargo_transport.cargo_status (ec_storage_lift_nomination.cargo_no (n_parcel_no))) NOT IN ('A', 'C')   THEN
       RAISE LOGIN_DENIED;
    END IF;
+
+   n_cargo_no := ec_storage_lift_nomination.cargo_no (n_parcel_no);  --Item 132627
 
    --Determine lifting company code
    lv_company_code :=  ECDP_OBJECTS.GETOBJCODE(EC_LIFTING_ACCOUNT.COMPANY_ID(ec_storage_lift_nomination.lifting_account_id (n_parcel_no)));
@@ -1958,7 +2042,7 @@ BEGIN
          arrived_loadport :=  TO_CHAR (ec_lifting_activity.from_daytime (ec_storage_lift_nomination.cargo_no (n_parcel_no), 'LNG_PILOT_STATION', 1,'LOAD'), 'dd-Mon-yyyy HH24:MI');
          sailed_loadport := TO_CHAR (ec_lifting_activity.from_daytime (ec_storage_lift_nomination.cargo_no (n_parcel_no), 'LNG_SHIP_DEPARTS', 1,'LOAD'), 'dd-Mon-yyyy HH24:MI');
          v_bol_date := TO_CHAR (ec_lifting_activity.from_daytime (ec_storage_lift_nomination.cargo_no (n_parcel_no), 'LNG_MANIFOLD_CLOSE', 1,'LOAD'), 'DD/MON/YYYY');
-         product_note := 'LIQUIFIED NATURAL GAS (LNG)';
+         product_note := 'LIQUEFIED NATURAL GAS (LNG)';
          -- End
       WHEN v_product_type = 'COND'      THEN
          v_doc_code := 'BOL_COND';
@@ -2019,6 +2103,7 @@ BEGIN
            , bol_comments
            , product_note
            -- End
+		   , n_cargo_no AS cargo_no   --Item 132627
       FROM   dv_ct_msg_cargo
           --   INNER JOIN  dv_ct_msg_cargo_detail mcd ON msh.parcel_no = mcd.parcel_no -- EQYP updated from dv_ct_msg_cargo_split mcs  ON msh.parcel_no = mcs.parcel_no
       WHERE  parcel_no = n_parcel_no;
@@ -2050,8 +2135,9 @@ BEGIN
             , out_rec.arrived_loadport
             , out_rec.sailed_loadport
             , out_rec.bol_comments
-            , out_rec.product_note;
+            , out_rec.product_note
             -- End
+			, out_rec.cargo_no;  --Item 132627
 
       EXIT WHEN myCursor%NOTFOUND;
       PIPE ROW (out_rec);
@@ -2073,7 +2159,7 @@ EXCEPTION
               /*
               , NULL, NULL, NULL, NULL
              */
-              , NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL
+              , NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL  --Item 132627: Added cargo no 
               -- End
          FROM   DUAL;
 
@@ -2104,8 +2190,9 @@ EXCEPTION
                , out_rec.arrived_loadport
                , out_rec.sailed_loadport
                , out_rec.bol_comments
-               , out_rec.product_note;
+               , out_rec.product_note
                -- End
+               , out_rec.cargo_no;   --Item 132627
 
          EXIT WHEN myCursor%NOTFOUND;
          PIPE ROW (out_rec);

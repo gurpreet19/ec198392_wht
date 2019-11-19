@@ -11,6 +11,8 @@ IS
 -- 12-apr-2018    gedv  Item 127642: ISWR02420: added CalcPartliftVol60F for conversion purposes
 -- 15-MAY-2018    eseq  Item_127690: Modified the function GetPartialLiftedMassByDay,GetPartialLiftedEnergyByDay,GetPartialLiftedVolumeByDay
 -- 24-May-2018    wvic  Item 127718: Added calculateVCF
+-- 12-Aug-2019    gedv  ISWR03176: Added function getIfLatestFcst to mark the forecast being used for a day
+-- 22-Oct-2019    kajy  ISWR03176: Added function TechMaxBusinessPlan to fetch Techmax from Business plan for a day
 -------------------------------------------------------------------------
 
 FUNCTION UPGRatio(p_object_id STRING, p_daytime DATE, p_profit_centre_id STRING) RETURN NUMBER;
@@ -77,6 +79,14 @@ FUNCTION CalcPartliftVol60F(p_daytime DATE, p_profit_centre_id STRING, p_lifting
 FUNCTION calculateVCF(p_cargo_no NUMBER) RETURN NUMBER;
 -- Item 127718 End
 
+--FUNCTION LNGRefProdVolSDS(p_object_id STRING, p_daytime DATE, p_profit_centre_id STRING) RETURN NUMBER;
+-- Item ISWR03176
+
+FUNCTION TechMaxBusinessPlan(p_object_id STRING, p_daytime DATE) RETURN NUMBER;
+
+-- ISWR03176: Added to mark the forecast being used for that day
+FUNCTION getIfLatestFcst(p_forecast_id STRING, p_forecast_type STRING, p_scenario STRING, p_daytime DATE) RETURN STRING;
+
 END UE_CT_STRM_DAY_PC_UPG_ALLOC;
 /
 
@@ -96,6 +106,8 @@ IS
 -- 15-MAY-2018    eseq  Item_127690: Modified the code to handle when we have mulitple parcels for same campany for a Cargo,hence
 -- 15-MAY-2018    eseq  Item_127690: Modified the function GetPartialLiftedMassByDay,GetPartialLiftedEnergyByDay,GetPartialLiftedVolumeByDay
 -- 24-May-2018    wvic  Item 127718: Added calculateVCF
+-- 12-Aug-2019    gedv  ISWR03176: Added function getIfLatestFcst to mark the forecast being used for a day
+-- 22-Oct-2019    kajy  ISWR03176: Added function TechMaxBusinessPlan to fetch Techmax from Business plan for a day
 -------------------------------------------------------------------------
 
 FUNCTION UPGRatio(p_object_id STRING, p_daytime DATE, p_profit_centre_id STRING)
@@ -1977,6 +1989,110 @@ BEGIN
    RETURN ln_vcf;
 END calculateVCF;
 -- Item 127718 End
+
+
+/**FUNCTION LNGRefProdVolSDS(p_object_id STRING, p_daytime DATE, p_profit_centre_id STRING)
+RETURN NUMBER
+IS
+
+ lv2_stream_code VARCHAR2(32);
+ ln_lng_ref_prod NUMBER;
+
+BEGIN
+    lv2_stream_code := ecdp_objects.getobjcode(p_object_id);
+    IF lv2_stream_code = 'SW_GP_LNG_FORECAST' THEN
+         SELECT LNG_VOL_RATE INTO ln_lng_ref_prod FROM DV_CT_PROD_STRM_PC_FORECAST WHERE OBJECT_CODE = 'SW_GP_LNG_FORECAST' AND FORECAST_TYPE = 'SDS_PLAN' AND SCENARIO = 'MED_CONF' AND PROFIT_CENTRE_ID = p_profit_centre_id AND DAYTIME = p_daytime;
+              IF ln_lng_ref_prod IS NULL THEN
+            ln_lng_ref_prod := 0;
+        END IF;
+    END IF;
+    return ln_lng_ref_prod;
+
+END LNGRefProdVolSDS;
+
+
+ FUNCTION LNGRefProdTotEnergy(p_object_id STRING, p_daytime DATE)
+RETURN NUMBER
+IS
+
+ lv2_stream_code VARCHAR2(32);
+ ln_lng_ref_prod_temp NUMBER :=0;
+ ln_lng_ref_tot_prod NUMBER :=0;
+ profit_centre_id VARCHAR2(32);
+
+
+
+BEGIN
+      lv2_stream_code := ecdp_objects.getobjcode(p_object_id);
+    IF lv2_stream_code = 'SW_GP_LNG_FORECAST' THEN
+
+    For rec in (SELECT distinct profit_centre_id from  dv_CNTR_PROFIT_CENTRE) loop
+         ln_lng_ref_prod_temp :=LNGRefProdEnergy(p_object_id , p_daytime , profit_centre_id);
+         ln_lng_ref_tot_prod := ln_lng_ref_tot_prod + ln_lng_ref_prod_temp;
+     end loop;
+
+    END IF;
+    return ln_lng_ref_tot_prod;
+
+END LNGRefProdTotEnergy;
+**/
+
+-- ISWR03176: Added to fetch Techmax from Business plan for a day
+FUNCTION TechMaxBusinessPlan(p_object_id STRING, p_daytime DATE)
+RETURN NUMBER
+IS
+
+ lv2_stream_code VARCHAR2(32);
+ ln_lng_techmax NUMBER;
+ ln_lng_density NUMBER;
+ lv_forecast_object_id VARCHAR2(32);
+
+BEGIN
+    lv2_stream_code := ecdp_objects.getobjcode(p_object_id);
+    IF lv2_stream_code = 'SW_GP_LNG_FORECAST' THEN
+        SELECT object_id INTO lv_forecast_object_id FROM OV_CT_PROD_FORECAST WHERE FORECAST_TYPE = 'BUSINESS_PLAN' AND SCENARIO = 'MED_CONF' AND RECORD_STATUS = 'A' AND LAST_UPD_DATE = (SELECT MAX(LAST_UPD_DATE) FROM OV_CT_PROD_FORECAST WHERE FORECAST_TYPE = 'BUSINESS_PLAN' AND SCENARIO = 'MED_CONF' AND RECORD_STATUS = 'A' AND OBJECT_START_DATE <= p_daytime AND OBJECT_END_DATE - 1 >= p_daytime);
+        IF lv_forecast_object_id IS NOT NULL THEN
+            SELECT LNG_MASS_SMPP INTO ln_lng_techmax FROM DV_CT_PROD_STRM_FORECAST WHERE OBJECT_CODE = 'SW_GP_LNG_FORECAST' AND FORECAST_TYPE = 'BUSINESS_PLAN' AND SCENARIO = 'MED_CONF' AND RECORD_STATUS = 'A' AND DAYTIME = p_daytime AND FORECAST_OBJECT_ID = lv_forecast_object_id;
+            SELECT LNG_DENSITY INTO ln_lng_density FROM DV_CT_PROD_STRM_FORECAST WHERE OBJECT_CODE = 'SW_GP_LNG_FORECAST' AND FORECAST_TYPE = 'BUSINESS_PLAN' AND SCENARIO = 'MED_CONF' AND RECORD_STATUS = 'A' AND DAYTIME = p_daytime AND FORECAST_OBJECT_ID = lv_forecast_object_id;
+            ln_lng_techmax := ln_lng_techmax / ln_lng_density * 1000 ;
+        ELSE
+            ln_lng_techmax := 0;
+        END IF;
+    END IF;
+    return round(ln_lng_techmax,2);
+
+
+END TechMaxBusinessPlan;
+
+-- ISWR03176: Added to mark the forecast being used for that day
+FUNCTION getIfLatestFcst(p_forecast_id STRING, p_forecast_type STRING, p_scenario STRING, p_daytime DATE) RETURN STRING IS
+
+    v_forecast_id VARCHAR2(32);
+    v_isLatest VARCHAR2 (1);
+
+BEGIN
+    IF p_forecast_type='ADP_PLAN' AND p_scenario='REF_PROD' THEN
+
+        SELECT object_id INTO v_forecast_id FROM OV_CT_PROD_FORECAST WHERE FORECAST_TYPE = 'ADP_PLAN' AND SCENARIO = 'REF_PROD' AND RECORD_STATUS = 'A' AND
+        NVL(LAST_UPDATED_DATE, CREATED_DATE) = (SELECT MAX(NVL(LAST_UPDATED_DATE, CREATED_DATE)) FROM OV_CT_PROD_FORECAST WHERE FORECAST_TYPE = 'ADP_PLAN' AND
+        SCENARIO = 'REF_PROD' AND RECORD_STATUS = 'A' AND OBJECT_START_DATE <= p_daytime AND NVL(OBJECT_END_DATE - 1, p_daytime) >= p_daytime);
+
+    ELSE
+        SELECT object_id INTO v_forecast_id FROM OV_CT_PROD_FORECAST WHERE FORECAST_TYPE = p_forecast_type AND SCENARIO = p_scenario AND
+        NVL(LAST_UPDATED_DATE, CREATED_DATE) = (SELECT MAX(NVL(LAST_UPDATED_DATE, CREATED_DATE)) FROM OV_CT_PROD_FORECAST WHERE FORECAST_TYPE = p_forecast_type AND SCENARIO = p_scenario AND
+                OBJECT_START_DATE <= p_daytime AND NVL(OBJECT_END_DATE - 1, p_daytime) >= p_daytime);
+
+    END IF;
+
+    IF v_forecast_id=p_forecast_id THEN
+        v_isLatest:='Y';
+    ELSE
+        v_isLatest:='N';
+    END IF;
+
+    RETURN v_isLatest;
+
+END getIfLatestFcst;
 
 END UE_CT_STRM_DAY_PC_UPG_ALLOC;
 /
