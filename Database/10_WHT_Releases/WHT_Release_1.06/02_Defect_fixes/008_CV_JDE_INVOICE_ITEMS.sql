@@ -139,7 +139,7 @@ BEGIN
 				SET JDE_BATCH_TIMESTAMP = :new.JDE_BATCH_NO, -- Item 131306
 					JDE_BATCH_NO = ue_ct_cargo_info.getJDEBatchNo ( :old.CARGO_NO, :new.JDE_BATCH_NO) -- Item 131306
             WHERE 	CARGO_NO = :old.CARGO_NO
-            AND 	EC_HARBOUR_DUES.TEXT_8(DUE_CODE) = :old.JDE_ACCOUNT_CODE;
+            AND 	EC_HARBOUR_DUES.TEXT_8(DUE_CODE,sysdate, '<=') = :old.JDE_ACCOUNT_CODE;
 
         ELSIF :old.INVOICE_TYPE = 'EC-REBC' THEN
 

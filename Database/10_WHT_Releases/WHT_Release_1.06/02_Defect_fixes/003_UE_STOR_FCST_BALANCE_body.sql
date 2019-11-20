@@ -1493,3 +1493,4 @@ BEGIN
 END getSumOutInDayEnergy;*/
 
 END UE_STOR_FCST_BALANCE;
+/
