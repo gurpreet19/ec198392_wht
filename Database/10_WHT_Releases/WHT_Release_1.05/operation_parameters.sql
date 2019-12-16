@@ -17,8 +17,8 @@ define ec_reporting_password='energy'
 -- ## Enter the Database name
 -- ## This argument defines the connect string to use.
 -- ## For example: define database_name='ec_db.myCompany.world'
-define database_name='wstsci.cf3rn6yo39gg.us-east-1.rds.amazonaws.com:1521/wstsci'
-define db_hostname='wstsci.cf3rn6yo39gg.us-east-1.rds.amazonaws.com'
+define database_name='wstsci.chxjb9iea7ey.us-east-1.rds.amazonaws.com:1521/wstsci'					  
+define db_hostname='wstsci.chxjb9iea7ey.us-east-1.rds.amazonaws.com'
 define db_port='1521'
 define db_service_name='wstsci'
 
