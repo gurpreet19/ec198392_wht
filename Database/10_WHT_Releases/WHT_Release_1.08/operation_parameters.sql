@@ -42,18 +42,3 @@ define oracle_edition='EE'
 -- ## Give the name of the environment (will be used for the lable) for example Production or Acceptance
 define environment='CI'
 
--- ## Main configuration for the upgrade script
-define NLS_LANG='AMERICAN'
-define version_from='10.3.SP06_WST'
-define version_to='12.1'
-define DELTA_FOLDER_NAME='Delta_WST'
-define headlesstool='headless-5.2.0'
-
--- ## Parameters how to run the upgrade script
--- ## Simulate query will only generate the queries but not execute the queries when set to 1 (possible values 1 or 0)
--- ## Delete gen files will delete the generated SQL files once executed when set to 1        (possible values 1 or 0)
--- ## Never stop on error will continue the script even when there are errors when set to 1   (possible values 1 or 0)
-define SIMULATE_QUERY='0'
-define DELETE_GEN_FILES='0'
-define NEVER_STOP_ON_ERROR='1'
-define INCL_Patches_and_POPs='1'
