@@ -24,4 +24,4 @@ Insert into t_basis_access (ROLE_ID,APP_ID,LEVEL_ID,OBJECT_ID) values ('PA.P.DAT
 Insert into t_basis_access (ROLE_ID,APP_ID,LEVEL_ID,OBJECT_ID) values ('MA.BL.CARDOCS',1,40,(select object_id from t_basis_object where object_name='/com.ec.tran.to.screens/cargo_document/COLUMN_SORT/RUN_DATE/SORT_TYPE/DESC'));
 Insert into t_basis_access (ROLE_ID,APP_ID,LEVEL_ID,OBJECT_ID) values ('MA.READ.ALL',1,10,(select object_id from t_basis_object where object_name='/com.ec.tran.to.screens/cargo_document/COLUMN_SORT/RUN_DATE/SORT_TYPE/DESC'));
 
---COMMIT;
+COMMIT;
