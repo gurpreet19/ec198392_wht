@@ -16,3 +16,8 @@ call "BuildScript.bat"
 call "Deploy.bat"
 cd..
 cd..
+cd "10_WHT_Releases\WHT_Release_1.10"
+call "BuildScript.bat"
+call "Deploy.bat"
+cd..
+cd..
