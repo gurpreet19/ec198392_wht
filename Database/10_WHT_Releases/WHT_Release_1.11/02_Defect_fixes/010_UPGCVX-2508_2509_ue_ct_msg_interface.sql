@@ -296,7 +296,7 @@ BEGIN
 
         ELSIF (v_status = 'APPROVED') THEN
 
-            UPDATE forecast_version SET text_5 = 'A', RECORD_STATUS = 'A', DATE_5 = trunc(sysdate, 'DD')
+            UPDATE forecast_version SET text_5 = 'A', RECORD_STATUS = 'A', DATE_5 = sysdate
             WHERE object_id = v_lifting_program_id
             AND text_5 = 'V'; -- Approved messages go to A, and approval date gets set
                                                                                                                                                                                     -- Imperative that the approval date is not sub daily otherwise calc rule breaks
