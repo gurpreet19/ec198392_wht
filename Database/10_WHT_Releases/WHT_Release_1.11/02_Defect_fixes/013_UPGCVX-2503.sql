@@ -71,7 +71,7 @@ BEGIN
   sys.dbms_job.submit(job => x,
                       what => 'ec_Bs_Instantiate.new_day_end(trunc(EcDp_Date_Time.getCurrentSysdate));',
                       next_date => trunc(sysdate) + 23/24 + 50/1440,
-                      interval => 'TRUNC(sysdate) + 1 + 23/24 + 50/1440'
+                      interval => 'TRUNC(sysdate) + 1 + 23/24 + 50/1440',
 					  no_parse  => FALSE);
   commit;
     SYS.DBMS_OUTPUT.PUT_LINE('Job Number is: ' || to_char(x));
