@@ -36,6 +36,7 @@ create or replace PACKAGE BODY UE_CT_CARGO_DOCS AS
 ** 01-JUL-2019   gjkz             132627 - Modified cargo_sum_parcels_func to apply 3 decimal point for tonnes and U.S. Barrels @ 60 Deg F.
 **                                       - Modified cargo_bol_func, cargo_man_func and cargo_qly_func to add cargo_no.
 **                                       - Fixed typo for LIQUEFIED 
+** 24-JAN-2020   jagadeesh             EXCEPTION part corrected for other exception 
 *****************************************************************/
 
 
