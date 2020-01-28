@@ -21,8 +21,8 @@ call "BuildScript.bat"
 call "Deploy.bat"
 cd..
 cd..
-cd "10_WHT_Releases\WHT_Release_1.11"
-call "BuildScript.bat"
-call "Deploy.bat"
-cd..
-cd..
+REM cd "10_WHT_Releases\WHT_Release_1.11"
+REM call "BuildScript.bat"
+REM call "Deploy.bat"
+REM cd..
+REM cd..
