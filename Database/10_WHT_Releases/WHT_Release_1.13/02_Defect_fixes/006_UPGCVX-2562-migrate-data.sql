@@ -1,4 +1,4 @@
---disable trigger on main and journal table first 
+--disable trigger on main
 ALTER TABLE STORAGE_LIFT_NOMINATION DISABLE ALL TRIGGERS;
 
 UPDATE STORAGE_LIFT_NOMINATION SET DATE_8 = NULL;
