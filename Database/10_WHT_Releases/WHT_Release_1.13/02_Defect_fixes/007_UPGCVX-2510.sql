@@ -33,3 +33,77 @@ commit;
 
 execute ecdp_viewlayer.buildviewlayer('FCST_STOR_LIFT_NOM', p_force => 'Y'); 
 execute ecdp_viewlayer.buildreportlayer('FCST_STOR_LIFT_NOM', p_force => 'Y'); 
+
+
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax = 'DECODE ( ECDP_OBJECTS.GETOBJCODE (STORAGE_LIFT_NOMINATION.OBJECT_ID),''STW_COND'', (trunc(STORAGE_LIFT_NOMINATION.START_LIFTING_DATE) + (EC_PROSTY_CODES.ALT_CODE(STORAGE_LIFT_NOMINATION.NOM_FIRM_DATE_RANGE,''CARGO_RANGE_MIDDLE'')) + 1-(1/(24*60))))'
+where class_name = 'STORAGE_LIFT_NOM_SCHED'
+and attribute_name = 'LDR_FINISH';
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax ='nvl(STORAGE_LIFT_NOMINATION.DATE_3,START_LIFTING_DATE - UE_CT_LEADTIME.calc_ETA_LT(STORAGE_LIFT_NOMINATION.OBJECT_ID,STORAGE_LIFT_NOMINATION.PARCEL_NO,NULL,''STOR''))'
+where class_name = 'STORAGE_LIFT_NOM_SCHED'
+and attribute_name = 'ETA';
+
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax ='DECODE (ECDP_OBJECTS.GETOBJCODE (STORAGE_LIFT_NOMINATION.OBJECT_ID),''STW_COND'', trunc(STORAGE_LIFT_NOMINATION.START_LIFTING_DATE)+(1/(24*60)))'
+where class_name = 'STORAGE_LIFT_NOM_SCHED'
+and attribute_name = 'LDR_START';
+
+execute ecdp_viewlayer.buildviewlayer('STORAGE_LIFT_NOM_SCHED', p_force => 'Y'); 
+execute ecdp_viewlayer.buildreportlayer('STORAGE_LIFT_NOM_SCHED', p_force => 'Y'); 
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax ='ROUND(((DECODE(ECDP_OBJECTS.GETOBJCODE(STORAGE_LIFT_NOMINATION.OBJECT_ID), ''STW_LNG'',EC_LIFTING_ACTIVITY.FROM_DAYTIME(CARGO_NO,''LNG_PILOT_ABOARD'',1,''LOAD''),EC_LIFTING_ACTIVITY.FROM_DAYTIME(CARGO_NO,''COND_PILOT_ABOARD'',1,''LOAD''))) - (START_LIFTING_DATE - UE_CT_LEADTIME.calc_ETA_LT(STORAGE_LIFT_NOMINATION.OBJECT_ID,STORAGE_LIFT_NOMINATION.PARCEL_NO,NULL,''STOR'')) ) * 24,2)'
+where class_name = 'STORAGE_LIFT_NOMINATION'
+and attribute_name = 'ETA_VARIANCE';
+execute ecdp_viewlayer.buildviewlayer('STORAGE_LIFT_NOMINATION', p_force => 'Y'); 
+execute ecdp_viewlayer.buildreportlayer('STORAGE_LIFT_NOMINATION', p_force => 'Y'); 
+
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax ='DECODE ( ECDP_OBJECTS.GETOBJCODE (STOR_FCST_LIFT_NOM.OBJECT_ID),''STW_COND'', (trunc(STOR_FCST_LIFT_NOM.START_LIFTING_DATE) + (EC_PROSTY_CODES.ALT_CODE(STOR_FCST_LIFT_NOM.NOM_FIRM_DATE_RANGE,''CARGO_RANGE_MIDDLE'')) + 1-(1/(24*60))))'
+where class_name = 'FCST_STOR_LIFT_NOM_SCHED'
+and attribute_name = 'LDR_FINISH';
+
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax ='DECODE (ECDP_OBJECTS.GETOBJCODE (STOR_FCST_LIFT_NOM.OBJECT_ID),''STW_COND'', trunc(STOR_FCST_LIFT_NOM.START_LIFTING_DATE)+(1/(24*60)))'
+where class_name = 'FCST_STOR_LIFT_NOM_SCHED'
+and attribute_name = 'LDR_START';
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax ='decode(ec_forecast_version.TEXT_5(STOR_FCST_LIFT_NOM.FORECAST_ID, STOR_FCST_LIFT_NOM.NOM_FIRM_DATE , ''<=''),''V'',STOR_FCST_LIFT_NOM.DATE_5,''A'',STOR_FCST_LIFT_NOM.DATE_5,nvl( STOR_FCST_LIFT_NOM.DATE_3,START_LIFTING_DATE - UE_CT_LEADTIME.calc_ETA_LT(STOR_FCST_LIFT_NOM.OBJECT_ID,STOR_FCST_LIFT_NOM.PARCEL_NO,STOR_FCST_LIFT_NOM.FORECAST_ID)))'
+where class_name = 'FCST_STOR_LIFT_NOM_SCHED'
+and attribute_name = 'ETA';
+
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax ='EC_CARRIER_VERSION.VALUE_19(STOR_FCST_LIFT_NOM.CARRIER_ID,STOR_FCST_LIFT_NOM.START_LIFTING_DATE,''<='')'
+where class_name = 'FCST_STOR_LIFT_NOM_SCHED'
+and attribute_name = 'EST_ROUND_TRIP_TIME';
+commit;
+execute ecdp_viewlayer.buildviewlayer('FCST_STOR_LIFT_NOM_SCHED', p_force => 'Y'); 
+execute ecdp_viewlayer.buildreportlayer('FCST_STOR_LIFT_NOM_SCHED', p_force => 'Y'); 
+
+
+update CLASS_ATTRIBUTE_CNFG
+set db_sql_syntax ='decode(ec_forecast_version.TEXT_5(STOR_FCST_LIFT_NOM.FORECAST_ID, STOR_FCST_LIFT_NOM.NOM_FIRM_DATE , ''<=''),''V'',STOR_FCST_LIFT_NOM.DATE_5,''A'',STOR_FCST_LIFT_NOM.DATE_5,nvl(STOR_FCST_LIFT_NOM.DATE_3,START_LIFTING_DATE - UE_CT_LEADTIME.calc_ETA_LT(STOR_FCST_LIFT_NOM.OBJECT_ID,STOR_FCST_LIFT_NOM.PARCEL_NO,STOR_FCST_LIFT_NOM.FORECAST_ID)))'
+where class_name = 'CT_MSG_FORECAST_LIFTINGS'
+and attribute_name = 'EST_ARRIVAL_TIME';
+commit;
+execute ecdp_viewlayer.buildviewlayer('CT_MSG_FORECAST_LIFTINGS', p_force => 'Y'); 
+execute ecdp_viewlayer.buildreportlayer('CT_MSG_FORECAST_LIFTINGS', p_force => 'Y'); 
+
+commit;
+
+
+
+
+
+
+
+
+
